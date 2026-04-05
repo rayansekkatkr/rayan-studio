@@ -160,6 +160,7 @@ const sectorSwap = {
 
 export function Hero() {
   const [activeSector, setActiveSector] = useState<SectorKey>("restaurant");
+  const [isMobile, setIsMobile] = useState(false);
   const reducedMotion = useReducedMotion();
   const pointerX = useMotionValue(0);
   const pointerY = useMotionValue(0);
@@ -176,6 +177,14 @@ export function Hero() {
   const currentSector = sectorScenarios[activeSector];
 
   useEffect(() => {
+    const media = window.matchMedia("(max-width: 768px)");
+    const handleMedia = () => setIsMobile(media.matches);
+    handleMedia();
+    media.addEventListener("change", handleMedia);
+    return () => media.removeEventListener("change", handleMedia);
+  }, []);
+
+  useEffect(() => {
     const interval = setInterval(() => {
       setActiveSector((previous) => {
         const index = sectorOrder.indexOf(previous);
@@ -188,6 +197,7 @@ export function Hero() {
   }, []);
 
   const handleMove = (event: MouseEvent<HTMLDivElement>) => {
+    if (isMobile || reducedMotion) return;
     const rect = event.currentTarget.getBoundingClientRect();
     const x = (event.clientX - rect.left) / rect.width - 0.5;
     const y = (event.clientY - rect.top) / rect.height - 0.5;
@@ -211,7 +221,7 @@ export function Hero() {
       <motion.div
         className="absolute -left-20 top-16 z-0 h-[24rem] w-[24rem] rounded-full bg-[#9dc3ff]/45 blur-[120px]"
         animate={
-          reducedMotion
+          reducedMotion || isMobile
             ? undefined
             : {
                 x: [0, 40, 0],
@@ -224,7 +234,7 @@ export function Hero() {
       <motion.div
         className="absolute -right-24 top-12 z-0 h-[28rem] w-[28rem] rounded-full bg-[#dcecff]/80 blur-[132px]"
         animate={
-          reducedMotion
+          reducedMotion || isMobile
             ? undefined
             : {
                 x: [0, -36, 0],
@@ -351,7 +361,7 @@ export function Hero() {
             className="absolute right-0 top-4 z-40"
             style={reducedMotion ? undefined : { x: layerFarX, y: layerFarY }}
             animate={
-              reducedMotion
+              reducedMotion || isMobile
                 ? undefined
                 : {
                     y: [0, -12, 0],
@@ -380,7 +390,7 @@ export function Hero() {
 
           <motion.div
             className="absolute left-1/2 top-1/2 -z-10 h-[22rem] w-[22rem] -translate-x-1/2 -translate-y-1/2 rounded-full border border-white/50"
-            animate={reducedMotion ? undefined : { rotate: 360 }}
+            animate={reducedMotion || isMobile ? undefined : { rotate: 360 }}
             transition={{ duration: 24, repeat: Infinity, ease: "linear" }}
           />
 

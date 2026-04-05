@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import { motion } from "motion/react";
 import { TestimonialsColumn, type TestimonialsColumnItem } from "@/components/ui/testimonials-columns-1";
 import { Reveal } from "./Reveal";
@@ -53,6 +54,7 @@ const testimonials: TestimonialsColumnItem[] = [
 const firstColumn = testimonials.slice(0, 2);
 const secondColumn = testimonials.slice(2, 4);
 const thirdColumn = testimonials.slice(4, 6);
+const mobileCards = testimonials.slice(0, 3);
 
 export function Testimonials() {
   return (
@@ -78,7 +80,31 @@ export function Testimonials() {
             <div className="pointer-events-none absolute -left-16 top-8 h-44 w-44 rounded-full bg-[#9fc4ff]/36 blur-[80px]" />
             <div className="pointer-events-none absolute -right-16 bottom-8 h-56 w-56 rounded-full bg-white/54 blur-[92px]" />
 
-            <div className="[mask-image:linear-gradient(to_bottom,transparent,black_20%,black_80%,transparent)]">
+            <div className="grid gap-3 md:hidden">
+              {mobileCards.map((item) => (
+                <article
+                  key={`mobile-${item.name}`}
+                  className="rounded-2xl border border-white/90 bg-white/82 p-4 shadow-[0_10px_18px_rgba(123,157,217,0.14)]"
+                >
+                  <p className="text-sm leading-relaxed text-slate-700">“{item.text}”</p>
+                  <div className="mt-3 flex items-center gap-2.5">
+                    <Image
+                      src={item.image}
+                      alt={item.name}
+                      width={36}
+                      height={36}
+                      className="h-9 w-9 rounded-full object-cover ring-2 ring-white/85"
+                    />
+                    <div>
+                      <p className="text-sm font-semibold text-slate-900">{item.name}</p>
+                      <p className="text-xs text-slate-500">{item.role}</p>
+                    </div>
+                  </div>
+                </article>
+              ))}
+            </div>
+
+            <div className="hidden [mask-image:linear-gradient(to_bottom,transparent,black_20%,black_80%,transparent)] md:block">
               <div className="flex justify-center gap-4 overflow-hidden py-1 md:gap-5">
                 <TestimonialsColumn testimonials={firstColumn} duration={16} />
                 <TestimonialsColumn testimonials={secondColumn} className="hidden md:block" duration={19} />

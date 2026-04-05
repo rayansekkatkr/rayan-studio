@@ -52,6 +52,27 @@ const projects = [
   },
 ];
 
+const caseStudies = [
+  {
+    title: "Hôtel indépendant",
+    context: "Refonte d'un site vitrine daté avec peu de demandes directes.",
+    action: "Hiérarchie clarifiée, CTA visibles, parcours mobile simplifié.",
+    result: "+41% de demandes sur 30 jours",
+  },
+  {
+    title: "Café de quartier",
+    context: "Site peu différenciant, informations clés difficiles à trouver.",
+    action: "Nouveau storytelling, sections utiles au-dessus de la ligne de flottaison.",
+    result: "+24 messages WhatsApp sur 30 jours",
+  },
+  {
+    title: "Boulangerie artisanale",
+    context: "Produits et savoir-faire mal mis en valeur.",
+    action: "Vitrine produit plus visuelle, navigation orientée conversion.",
+    result: "+26% de commandes / demandes traiteur",
+  },
+];
+
 function ProjectThumb({
   index,
   image,
@@ -98,6 +119,22 @@ export function Showcase() {
             title="Réalisations: transformations concrètes, avant / après visibles"
             description="Un portfolio centré commerces locaux, complété par quelques références B2B pour montrer le niveau d'exécution."
           />
+        </Reveal>
+
+        <Reveal delay={0.04} y={12}>
+          <div className="mt-5 grid gap-3 md:grid-cols-3">
+            {caseStudies.map((study) => (
+              <article
+                key={study.title}
+                className="rounded-2xl border border-white/85 bg-white/76 p-4 backdrop-blur-xl shadow-[0_12px_24px_rgba(122,157,220,0.14)]"
+              >
+                <p className="text-[11px] font-semibold uppercase tracking-[0.12em] text-[#2f6dff]">{study.title}</p>
+                <p className="mt-2 text-xs text-slate-600">{study.context}</p>
+                <p className="mt-2 text-xs text-slate-600">{study.action}</p>
+                <p className="mt-3 text-sm font-semibold text-slate-900">{study.result}</p>
+              </article>
+            ))}
+          </div>
         </Reveal>
 
         <Reveal delay={0.05} y={16} className="mt-6 md:mt-8">
