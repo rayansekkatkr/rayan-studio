@@ -1,6 +1,7 @@
 "use client";
 
 import {
+  AnimatePresence,
   motion,
   useMotionValue,
   useReducedMotion,
@@ -151,6 +152,12 @@ const introItem = {
   },
 };
 
+const sectorSwap = {
+  initial: { opacity: 0, y: 8, filter: "blur(3px)" },
+  animate: { opacity: 1, y: 0, filter: "blur(0px)" },
+  exit: { opacity: 0, y: -8, filter: "blur(3px)" },
+};
+
 export function Hero() {
   const [activeSector, setActiveSector] = useState<SectorKey>("restaurant");
   const reducedMotion = useReducedMotion();
@@ -259,9 +266,21 @@ export function Hero() {
             </span>
           </motion.h1>
 
-          <motion.p variants={introItem} className="mt-7 max-w-xl text-base leading-relaxed text-slate-600 sm:text-lg">
-            {currentSector.subtitle}
-          </motion.p>
+          <motion.div variants={introItem} className="mt-7 max-w-xl">
+            <AnimatePresence mode="wait">
+              <motion.p
+                key={`subtitle-${activeSector}`}
+                variants={sectorSwap}
+                initial="initial"
+                animate="animate"
+                exit="exit"
+                transition={{ duration: 0.28, ease: [0.22, 1, 0.36, 1] }}
+                className="text-base leading-relaxed text-slate-600 sm:text-lg"
+              >
+                {currentSector.subtitle}
+              </motion.p>
+            </AnimatePresence>
+          </motion.div>
 
           <motion.div variants={introItem} className="mt-10 flex flex-wrap gap-4">
             <Button asChild size="lg" className="group relative overflow-hidden shimmer-btn">
@@ -322,8 +341,19 @@ export function Hero() {
           >
             <Card className="w-56 border-[#d4e5ff] bg-white/84 p-4 backdrop-blur-xl">
               <p className="text-[11px] font-semibold uppercase tracking-[0.14em] text-[#2f6dff]">Résultat réel</p>
-              <p className="mt-2 text-lg font-semibold text-slate-900">{currentSector.proofMain}</p>
-              <p className="mt-1 text-xs text-slate-500">{currentSector.proofNote}</p>
+              <AnimatePresence mode="wait">
+                <motion.div
+                  key={`proof-${activeSector}`}
+                  variants={sectorSwap}
+                  initial="initial"
+                  animate="animate"
+                  exit="exit"
+                  transition={{ duration: 0.26, ease: [0.22, 1, 0.36, 1] }}
+                >
+                  <p className="mt-2 text-lg font-semibold text-slate-900">{currentSector.proofMain}</p>
+                  <p className="mt-1 text-xs text-slate-500">{currentSector.proofNote}</p>
+                </motion.div>
+              </AnimatePresence>
             </Card>
           </motion.div>
 
@@ -353,9 +383,19 @@ export function Hero() {
                     <div className="h-2 w-4/5 rounded-full bg-slate-700" />
                     <div className="h-2 w-3/5 rounded-full bg-slate-700" />
                   </div>
-                  <div className="mt-5 rounded-xl border border-slate-700 bg-slate-800/80 p-3 text-xs text-slate-300">
-                    {currentSector.before}
-                  </div>
+                  <AnimatePresence mode="wait">
+                    <motion.div
+                      key={`before-${activeSector}`}
+                      variants={sectorSwap}
+                      initial="initial"
+                      animate="animate"
+                      exit="exit"
+                      transition={{ duration: 0.24, ease: [0.22, 1, 0.36, 1] }}
+                      className="mt-5 rounded-xl border border-slate-700 bg-slate-800/80 p-3 text-xs text-slate-300"
+                    >
+                      {currentSector.before}
+                    </motion.div>
+                  </AnimatePresence>
                 </div>
 
                 <div className="rounded-2xl border border-[#d7e6ff] bg-gradient-to-br from-white to-[#e8f2ff] p-5">
@@ -366,16 +406,36 @@ export function Hero() {
                     <div className="h-2 w-4/5 rounded-full bg-[#ccdeff]" />
                     <div className="h-2 w-3/5 rounded-full bg-[#ccdeff]" />
                   </div>
-                  <div className="mt-5 rounded-xl border border-[#d5e5ff] bg-white/90 p-3 text-xs text-slate-600">
-                    {currentSector.after}
-                  </div>
+                  <AnimatePresence mode="wait">
+                    <motion.div
+                      key={`after-${activeSector}`}
+                      variants={sectorSwap}
+                      initial="initial"
+                      animate="animate"
+                      exit="exit"
+                      transition={{ duration: 0.24, ease: [0.22, 1, 0.36, 1] }}
+                      className="mt-5 rounded-xl border border-[#d5e5ff] bg-white/90 p-3 text-xs text-slate-600"
+                    >
+                      {currentSector.after}
+                    </motion.div>
+                  </AnimatePresence>
                 </div>
               </div>
 
-              <div className="mt-4 rounded-xl border border-white/90 bg-white/80 px-3 py-3 backdrop-blur-sm">
-                <p className="text-[11px] uppercase tracking-[0.13em] text-slate-500">Action mesurée</p>
-                <p className="mt-1 text-base font-semibold text-slate-900">{currentSector.actionKpi}</p>
-              </div>
+              <AnimatePresence mode="wait">
+                <motion.div
+                  key={`kpi-${activeSector}`}
+                  variants={sectorSwap}
+                  initial="initial"
+                  animate="animate"
+                  exit="exit"
+                  transition={{ duration: 0.25, ease: [0.22, 1, 0.36, 1] }}
+                  className="mt-4 rounded-xl border border-white/90 bg-white/80 px-3 py-3 backdrop-blur-sm"
+                >
+                  <p className="text-[11px] uppercase tracking-[0.13em] text-slate-500">Action mesurée</p>
+                  <p className="mt-1 text-base font-semibold text-slate-900">{currentSector.actionKpi}</p>
+                </motion.div>
+              </AnimatePresence>
             </Card>
           </motion.div>
         </motion.div>

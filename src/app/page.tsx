@@ -6,7 +6,6 @@ import { Navbar } from "@/components/site/Navbar";
 import { Pricing } from "@/components/site/Pricing";
 import { ProblemSolution } from "@/components/site/ProblemSolution";
 import { Process } from "@/components/site/Process";
-import { SoapBubbles } from "@/components/site/SoapBubbles";
 import { Services } from "@/components/site/Services";
 import { Showcase } from "@/components/site/Showcase";
 import { Testimonials } from "@/components/site/Testimonials";
@@ -38,7 +37,6 @@ export default function Home() {
       />
       <div className="pointer-events-none fixed inset-0 -z-20 hero-aurora" />
       <div className="pointer-events-none fixed inset-0 -z-10 hero-vignette" />
-      <SoapBubbles className="fixed inset-0 z-0 opacity-75" variant="hero" />
 
       <div className="relative z-10">
         <Navbar />
