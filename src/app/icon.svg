@@ -1,0 +1,31 @@
+<svg width="512" height="512" viewBox="0 0 512 512" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg" x1="64" y1="56" x2="448" y2="456" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#9BBEFF"/>
+      <stop offset="1" stop-color="#3A67E8"/>
+    </linearGradient>
+    <radialGradient id="gloss" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(170 126) rotate(38) scale(236 214)">
+      <stop stop-color="white" stop-opacity="0.72"/>
+      <stop offset="1" stop-color="white" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="stroke" x1="88" y1="80" x2="424" y2="432" gradientUnits="userSpaceOnUse">
+      <stop stop-color="white" stop-opacity="0.9"/>
+      <stop offset="1" stop-color="white" stop-opacity="0.24"/>
+    </linearGradient>
+    <linearGradient id="ink" x1="140" y1="150" x2="374" y2="374" gradientUnits="userSpaceOnUse">
+      <stop stop-color="white"/>
+      <stop offset="1" stop-color="#F3F7FF"/>
+    </linearGradient>
+  </defs>
+
+  <rect x="40" y="40" width="432" height="432" rx="108" fill="url(#bg)"/>
+  <rect x="40" y="40" width="432" height="432" rx="108" fill="url(#gloss)"/>
+  <rect x="40.5" y="40.5" width="431" height="431" rx="107.5" stroke="url(#stroke)"/>
+
+  <g fill="url(#ink)">
+    <!-- R -->
+    <path d="M132 148H238C289 148 319 177 319 220C319 253 301 276 270 287L325 364H278L231 296H186V364H132V148ZM186 255H232C255 255 267 243 267 223C267 203 255 191 232 191H186V255Z"/>
+    <!-- S -->
+    <path d="M380 205C372 194 357 186 340 186C322 186 307 194 307 210C307 226 321 232 346 239C384 249 408 265 408 304C408 346 374 368 334 368C305 368 278 358 261 338L295 303C305 317 321 326 338 326C356 326 371 318 371 301C371 282 354 276 324 267C289 257 270 241 270 208C270 168 304 145 343 145C367 145 393 154 409 172L380 205Z"/>
+  </g>
+</svg>

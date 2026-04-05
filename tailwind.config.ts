@@ -8,6 +8,25 @@ const config: Config = {
   ],
   theme: {
     extend: {
+      keyframes: {
+        "accordion-down": {
+          from: { height: "0" },
+          to: { height: "var(--radix-accordion-content-height)" },
+        },
+        "accordion-up": {
+          from: { height: "var(--radix-accordion-content-height)" },
+          to: { height: "0" },
+        },
+        shimmer: {
+          "0%": { transform: "translateX(-150%) skewX(-22deg)" },
+          "100%": { transform: "translateX(220%) skewX(-22deg)" },
+        },
+      },
+      animation: {
+        "accordion-down": "accordion-down 0.28s ease-out",
+        "accordion-up": "accordion-up 0.24s ease-out",
+        shimmer: "shimmer 2.6s ease-in-out infinite",
+      },
       backgroundImage: {
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
         "gradient-conic":

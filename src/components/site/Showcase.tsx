@@ -1,0 +1,178 @@
+"use client";
+
+import Image from "next/image";
+import { useRef, useState } from "react";
+import { ArrowUpRight, ExternalLink } from "lucide-react";
+import { TextRotate, type TextRotateRef } from "@/components/ui/text-rotate";
+import { Button } from "@/components/ui/button";
+import { Reveal } from "./Reveal";
+import { SectionHeading } from "./SectionHeading";
+
+const projects = [
+  {
+    id: "manteigaria",
+    name: "Manteigaria - Refonte Premium",
+    designation: "Avant/Après - Boulangerie iconique",
+    quote:
+      "Passage d'un site très dense à une expérience premium, plus claire et plus narrative. Résultat: une perception plus haut de gamme et un parcours plus fluide vers l'action.",
+    projectUrl: "https://manteigaria-redesign.vercel.app/",
+    beforeUrl: "https://manteigaria.com/fr/",
+    src: "/realisations/manteigaria-before.png",
+  },
+  {
+    id: "pick4me",
+    name: "Pick4Me",
+    designation: "Produit web - Conversion orientée",
+    quote:
+      "Refonte visuelle orientée clarté: positionnement plus instantané, sections plus lisibles et storytelling produit plus convaincant dès les premières secondes.",
+    projectUrl: "https://pick4me.be/",
+    src: "/realisations/pick4me.png",
+  },
+  {
+    id: "docextract",
+    name: "DocExtract",
+    designation: "SaaS B2B - Démo et preuve produit",
+    quote:
+      "Mise en scène plus premium pour présenter la valeur métier rapidement: meilleure hiérarchie d'information, meilleure crédibilité, meilleure intention de démo.",
+    projectUrl: "https://www.getdocextract.com/",
+    src: "/realisations/docextract.png",
+  },
+  {
+    id: "facturx",
+    name: "Pont Factur-X",
+    designation: "B2B Finance - Crédibilité immédiate",
+    quote:
+      "Optimisation du design pour rendre l'expertise plus tangible: structure éditoriale plus propre, points de confiance mieux visibles et contacts facilités.",
+    projectUrl: "https://www.pont-facturx.com/",
+    src: "/realisations/pont-facturx.png",
+  },
+];
+
+function ProjectThumb({
+  index,
+  image,
+  title,
+  onClick,
+}: {
+  index: number;
+  image: string;
+  title: string;
+  onClick: (index: number) => void;
+}) {
+  return (
+    <div className="snap-center py-3">
+      <button
+        type="button"
+        onClick={() => onClick(index)}
+        className="group relative h-24 w-full overflow-hidden rounded-2xl border border-white/85 bg-white/70 text-left shadow-[0_10px_22px_rgba(123,157,217,0.22)]"
+        aria-label={`Afficher ${title}`}
+      >
+        <Image src={image} alt={title} fill className="object-cover transition duration-500 group-hover:scale-105" />
+        <div className="absolute inset-0 bg-gradient-to-r from-slate-900/44 via-slate-900/10 to-transparent" />
+        <div className="absolute bottom-2 left-3 right-3 text-xs font-semibold uppercase tracking-[0.12em] text-white">{title}</div>
+      </button>
+    </div>
+  );
+}
+
+export function Showcase() {
+  const textRotateRef = useRef<TextRotateRef>(null);
+  const [activeIndex, setActiveIndex] = useState(0);
+  const activeProject = projects[activeIndex];
+
+  const handleSelect = (index: number) => {
+    setActiveIndex(index);
+    textRotateRef.current?.jumpTo(index);
+  };
+
+  return (
+    <section id="realisations" className="section-screen px-4 md:px-8">
+      <div className="mx-auto max-w-7xl">
+        <Reveal>
+          <SectionHeading
+            eyebrow="Réalisations"
+            title="Réalisations: une vitrine animée de transformations concrètes"
+            description="Chaque slide montre un projet réel, sa montée en gamme visuelle, et l'impact direct sur la perception du commerce."
+          />
+        </Reveal>
+
+        <Reveal delay={0.05} y={16} className="mt-6 md:mt-8">
+          <div className="relative overflow-hidden rounded-[34px] border border-white/85 bg-[linear-gradient(145deg,rgba(255,255,255,0.87),rgba(227,240,255,0.66))] p-4 shadow-[0_36px_64px_rgba(122,157,220,0.28)] md:p-6">
+            <div className="pointer-events-none absolute -left-16 top-8 h-44 w-44 rounded-full bg-[#a4c7ff]/34 blur-[78px]" />
+            <div className="pointer-events-none absolute -right-14 bottom-5 h-48 w-48 rounded-full bg-white/50 blur-[88px]" />
+            <div className="absolute left-5 top-5 z-20 rounded-full border border-white/85 bg-white/90 px-3 py-1 text-[11px] font-semibold uppercase tracking-[0.13em] text-[#2f6dff] shadow-[0_10px_20px_rgba(122,157,220,0.22)] backdrop-blur-xl">
+              Projet actif
+            </div>
+
+            <div className="relative grid gap-5 lg:grid-cols-[1.2fr_0.8fr]">
+              <div className="overflow-hidden rounded-[28px] border border-white/85 bg-white/72 p-3 backdrop-blur-2xl">
+                <div className="relative h-[340px] overflow-hidden rounded-2xl border border-white/80 md:h-[390px]">
+                  <Image src={activeProject.src} alt={activeProject.name} fill className="object-cover" />
+                  <div className="absolute inset-0 bg-gradient-to-t from-slate-900/52 via-slate-900/12 to-transparent" />
+                </div>
+
+                <div className="mt-4">
+                  <p className="text-xs font-semibold uppercase tracking-[0.14em] text-slate-500">Projet en focus</p>
+                  <TextRotate
+                    ref={textRotateRef}
+                    texts={projects.map((project) => project.name)}
+                    mainClassName="mt-2 text-2xl md:text-3xl font-display font-semibold text-slate-900"
+                    splitLevelClassName="overflow-hidden pb-1"
+                    staggerFrom="first"
+                    staggerDuration={0.005}
+                    animatePresenceMode="wait"
+                    auto={false}
+                    loop={false}
+                    initial={{ opacity: 0, y: 40 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    exit={{ opacity: 0, y: -40 }}
+                    transition={{ type: "spring", duration: 0.58, bounce: 0 }}
+                  />
+                  <p className="mt-1.5 text-sm font-medium text-slate-600">{activeProject.designation}</p>
+                  <p className="mt-3 text-sm leading-relaxed text-slate-600">{activeProject.quote}</p>
+                  <div className="mt-4 flex flex-wrap gap-2.5">
+                    {activeProject.beforeUrl ? (
+                      <Button asChild variant="outline" size="sm" className="h-9">
+                        <a href={activeProject.beforeUrl} target="_blank" rel="noreferrer">
+                          Voir avant
+                        </a>
+                      </Button>
+                    ) : null}
+                    <Button asChild size="sm" className="h-9">
+                      <a href={activeProject.projectUrl} target="_blank" rel="noreferrer">
+                        Voir le projet
+                        <ExternalLink size={14} className="ml-2" />
+                      </a>
+                    </Button>
+                  </div>
+                </div>
+              </div>
+
+              <div className="rounded-[26px] border border-white/80 bg-white/66 p-3 backdrop-blur-2xl">
+                <div className="mb-2 flex items-center justify-between px-1">
+                  <p className="text-[11px] font-semibold uppercase tracking-[0.14em] text-slate-500">Sélection visuelle</p>
+                  <span className="inline-flex items-center gap-1 text-[11px] font-semibold uppercase tracking-[0.12em] text-[#2f6dff]">
+                    Cliquer pour changer
+                    <ArrowUpRight size={12} />
+                  </span>
+                </div>
+
+                <div className="h-[470px] overflow-y-auto rounded-2xl px-1 snap-y snap-mandatory">
+                  {projects.map((project, index) => (
+                    <ProjectThumb
+                      key={project.id}
+                      index={index}
+                      image={project.src}
+                      title={project.name}
+                      onClick={handleSelect}
+                    />
+                  ))}
+                </div>
+              </div>
+            </div>
+          </div>
+        </Reveal>
+      </div>
+    </section>
+  );
+}
