@@ -19,6 +19,7 @@
 
 html {
   scroll-behavior: smooth;
+  scroll-padding-top: 6.5rem;
 }
 
 body {
@@ -201,6 +202,10 @@ body::after {
     padding-top: clamp(6.25rem, 9vh, 7.25rem);
     padding-bottom: clamp(2.5rem, 5vh, 4rem);
   }
+}
+
+section[id] {
+  scroll-margin-top: 6.5rem;
 }
 
 @media (prefers-reduced-motion: reduce) {

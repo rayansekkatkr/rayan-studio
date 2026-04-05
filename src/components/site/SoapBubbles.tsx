@@ -64,6 +64,7 @@ export function SoapBubbles({
             width: bubble.size,
             height: bubble.size,
             opacity: bubble.opacity,
+            willChange: "transform",
           }}
           animate={
             reducedMotion

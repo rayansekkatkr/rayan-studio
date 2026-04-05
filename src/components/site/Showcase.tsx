@@ -64,7 +64,7 @@ function ProjectThumb({
   onClick: (index: number) => void;
 }) {
   return (
-    <div className="snap-center py-3">
+    <div className="py-3">
       <button
         type="button"
         onClick={() => onClick(index)}
@@ -164,7 +164,7 @@ export function Showcase() {
                   </span>
                 </div>
 
-                <div className="h-[470px] overflow-y-auto rounded-2xl px-1 snap-y snap-mandatory">
+                <div className="rounded-2xl px-1">
                   {projects.map((project, index) => (
                     <ProjectThumb
                       key={project.id}
