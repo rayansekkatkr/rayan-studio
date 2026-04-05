@@ -17,7 +17,7 @@ export default function Home() {
     "@type": "ProfessionalService",
     name: "Rayan Studio",
     description:
-      "Freelance web spécialisé en création et refonte de sites vitrines premium pour commerces locaux français.",
+      "Freelance web spécialisé en création et refonte de sites vitrines haut de gamme pour commerces locaux français.",
     url: process.env.NEXT_PUBLIC_SITE_URL || "https://rayanstudio.fr",
     areaServed: "France",
     email: "rayan.sekkat@gmail.com",
@@ -25,7 +25,7 @@ export default function Home() {
     serviceType: [
       "Création de site internet",
       "Refonte de site existant",
-      "Web design premium",
+      "Web design haut de gamme",
       "UX orientée conversion",
     ],
   };

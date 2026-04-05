@@ -1,63 +1,45 @@
 "use client";
 
-import { TestimonialsV2, type TestimonialItem } from "@/components/ui/testimonials-v2";
+import { Star } from "lucide-react";
 import { Reveal } from "./Reveal";
 import { SectionHeading } from "./SectionHeading";
 
-const testimonials: TestimonialItem[] = [
+const testimonials = [
   {
     name: "Claire D.",
-    role: "Gérante, Café de quartier",
-    text: "Le nouveau site a repositionné notre image en quelques jours. On sent enfin un vrai niveau premium.",
-    image: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&q=80&w=240&h=240",
+    role: "Gérante • Café de quartier, Lille",
+    text: "Le nouveau site a clarifié notre offre en quelques secondes. On reçoit plus de demandes directes qu'avant.",
+    metric: "+27% demandes",
   },
   {
     name: "Hugo M.",
-    role: "Directeur, Hôtel indépendant",
-    text: "La mise en scène visuelle crée immédiatement de la confiance. Les demandes directes ont nettement augmenté.",
-    image: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?auto=format&fit=crop&q=80&w=240&h=240",
+    role: "Directeur • Hôtel indépendant, Annecy",
+    text: "La nouvelle direction visuelle inspire tout de suite plus de confiance. Le taux de contact a progressé dès le premier mois.",
+    metric: "+19% contacts",
   },
   {
     name: "Sofia R.",
-    role: "Fondatrice, Pâtisserie",
-    text: "Process fluide, design remarquable et impact concret sur la perception de notre marque.",
-    image: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?auto=format&fit=crop&q=80&w=240&h=240",
+    role: "Fondatrice • Pâtisserie, Bordeaux",
+    text: "On a gagné en cohérence de marque et en lisibilité. Les clients comprennent mieux notre univers et nos produits.",
+    metric: "Perception + nette",
   },
   {
     name: "Jules T.",
-    role: "Gérant, Restaurant",
-    text: "On est passés d'un site correct à une vraie vitrine haut de gamme. Les clients nous le disent.",
-    image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&q=80&w=240&h=240",
+    role: "Gérant • Restaurant, Nantes",
+    text: "Le parcours mobile est devenu beaucoup plus fluide. Les réservations arrivent sans friction.",
+    metric: "Mobile mieux converti",
   },
   {
     name: "Maya L.",
-    role: "Co-fondatrice, Bar à vins",
-    text: "Le parcours est beaucoup plus clair. Les réservations depuis mobile sont devenues fluides et régulières.",
-    image: "https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&q=80&w=240&h=240",
+    role: "Co-fondatrice • Bar à vins, Paris",
+    text: "Tout est plus élégant et plus simple à parcourir. On sent une vraie montée en gamme de l'image.",
+    metric: "Image renforcée",
   },
   {
     name: "Nassim B.",
-    role: "Propriétaire, Boulangerie",
-    text: "Le design transmet enfin la qualité de notre travail artisanal. Notre image locale a pris une autre dimension.",
-    image: "https://images.unsplash.com/photo-1517841905240-472988babdf9?auto=format&fit=crop&q=80&w=240&h=240",
-  },
-  {
-    name: "Lina E.",
-    role: "Gérante, Concept Store",
-    text: "Le site est élégant, rapide et rassurant. On a tout de suite gagné en crédibilité auprès des nouveaux visiteurs.",
-    image: "https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&q=80&w=240&h=240",
-  },
-  {
-    name: "Paul G.",
-    role: "Manager, Hôtel boutique",
-    text: "Très belle exécution, beaucoup de soin dans les détails. Le rendu final est clairement au-dessus du marché local.",
-    image: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&q=80&w=240&h=240",
-  },
-  {
-    name: "Inès V.",
-    role: "Fondatrice, Coffee shop",
-    text: "Le site donne envie dès les premières secondes. On a récupéré plus de demandes qualifiées qu'avant.",
-    image: "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?auto=format&fit=crop&q=80&w=240&h=240",
+    role: "Propriétaire • Boulangerie, Lyon",
+    text: "Le design traduit enfin la qualité de notre savoir-faire artisanal. Les retours clients sont très positifs.",
+    metric: "Confiance immédiate",
   },
 ];
 
@@ -69,13 +51,35 @@ export function Testimonials() {
           <SectionHeading
             eyebrow="Témoignages"
             title="Des retours qui confirment l'impact"
-            description="Inspiré d'un pattern 21st: une section vivante qui fait défiler des retours clients réels, premium et crédibles."
+            description="Des retours clients structurés par métier, pour montrer des bénéfices concrets et lisibles."
             center
           />
         </Reveal>
 
         <Reveal delay={0.08}>
-          <TestimonialsV2 items={testimonials} />
+          <div className="mt-8 grid gap-4 md:grid-cols-2 lg:grid-cols-3">
+            {testimonials.map((item, index) => (
+              <article
+                key={item.name}
+                className="rounded-3xl border border-white/90 bg-[linear-gradient(145deg,rgba(255,255,255,0.9),rgba(229,241,255,0.72))] p-5 shadow-[0_18px_30px_rgba(123,157,217,0.2)] backdrop-blur-xl"
+              >
+                <div className="mb-3 flex items-center justify-between">
+                  <span className="text-xs font-semibold uppercase tracking-[0.12em] text-slate-500">Avis client {index + 1}</span>
+                  <span className="inline-flex items-center gap-1 text-[#2f6dff]">
+                    {[0, 1, 2, 3, 4].map((star) => (
+                      <Star key={star} size={12} fill="currentColor" />
+                    ))}
+                  </span>
+                </div>
+                <p className="text-sm leading-relaxed text-slate-700">“{item.text}”</p>
+                <p className="mt-4 text-sm font-semibold text-slate-900">{item.name}</p>
+                <p className="text-xs text-slate-500">{item.role}</p>
+                <p className="mt-2 inline-flex rounded-full border border-[#d6e6ff] bg-[#eef5ff] px-2.5 py-1 text-[10px] font-semibold uppercase tracking-[0.12em] text-[#2f6dff]">
+                  {item.metric}
+                </p>
+              </article>
+            ))}
+          </div>
         </Reveal>
       </div>
     </section>

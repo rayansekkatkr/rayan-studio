@@ -12,9 +12,9 @@ const services = [
   {
     icon: Layers3,
     title: "Création de site internet",
-    subtitle: "Lancement d'un site premium de zéro",
+    subtitle: "Lancement d'un site de zéro",
     description:
-      "Un site vitrine haut de gamme conçu pour donner instantanément une image plus crédible et plus désirable.",
+      "Un site vitrine haut de gamme conçu pour donner une image plus crédible et plus désirable dès les premières secondes.",
     outcomes: ["Direction artistique signature", "Structure UX conversion", "Développement Next.js fluide"],
     cta: "Créer mon site",
   },
@@ -23,13 +23,13 @@ const services = [
     title: "Refonte de site existant",
     subtitle: "Montée en gamme de votre image digitale",
     description:
-      "Je transforme votre site actuel en expérience premium: plus claire, plus moderne, plus rassurante dès les premières secondes.",
-    outcomes: ["Audit perception & conversion", "Refonte UI premium", "Parcours plus lisible et vendeur"],
+      "Je transforme votre site actuel en expérience plus claire, plus moderne, plus rassurante dès les premières secondes.",
+    outcomes: ["Audit perception & conversion", "Refonte UI haut de gamme", "Parcours plus lisible et vendeur"],
     cta: "Refondre mon site",
   },
 ];
 
-const trustPills = ["+120 commerces accompagnés", "Prototype premium en 72h", "4,9/5 de satisfaction"];
+const trustPills = ["+120 commerces accompagnés", "Prototype en 72h", "4,9/5 de satisfaction"];
 
 export function Services() {
   const reducedMotion = useReducedMotion();
@@ -44,7 +44,7 @@ export function Services() {
           <SectionHeading
             eyebrow="Services"
             title="Deux offres, un même objectif: faire monter votre commerce en gamme"
-            description="Une section pensée comme une pièce premium: visuelle, claire, et orientée impact concret sur votre perception client."
+            description="Deux offres lisibles, orientées résultat: meilleure perception, message plus clair et conversion mieux guidée."
           />
         </Reveal>
 
@@ -97,7 +97,7 @@ export function Services() {
                     <div className="mt-6 flex items-center justify-between">
                       <Badge variant="neutral" className="border-white/80 bg-white/78 text-slate-700">
                         <Sparkles size={12} className="mr-1 text-[#2f6dff]" />
-                        Positionnement premium
+                        Positionnement haut de gamme
                       </Badge>
 
                       <Button asChild size="sm" className="h-10 px-5">

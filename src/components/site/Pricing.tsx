@@ -12,7 +12,7 @@ const plans = [
     name: "Essentiel",
     price: "500€",
     description: "Pour lancer une présence propre et crédible rapidement.",
-    features: ["One-page premium", "Design sur-mesure", "Responsive complet", "Mise en ligne"],
+    features: ["One-page soignée", "Design sur-mesure", "Responsive complet", "Mise en ligne"],
     featured: false,
   },
   {
@@ -21,7 +21,7 @@ const plans = [
     description: "L'offre idéale pour transformer l'image d'un commerce local.",
     features: [
       "Structure avancée",
-      "Animations premium",
+      "Animations soignées",
       "Avant/Après intégré",
       "Optimisation conversion",
       "Support lancement",
@@ -44,7 +44,7 @@ export function Pricing() {
         <Reveal>
           <SectionHeading
             eyebrow="Tarifs"
-            title="Des offres claires, premium et transparentes"
+            title="Des offres claires et transparentes"
             description="Pas de formule floue : un cadre net pour obtenir un site qui améliore réellement votre image et vos conversions."
             center
           />

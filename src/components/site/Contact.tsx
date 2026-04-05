@@ -20,7 +20,7 @@ export function Contact() {
               <SectionHeading
                 eyebrow="Contact"
                 title="Discutons de votre projet"
-                description="Je vous propose une première direction claire pour créer ou refondre votre site avec un niveau premium. Réponse en moins de 24h."
+                description="Je vous propose une première direction claire pour créer ou refondre votre site. Réponse en moins de 24h."
               />
             </CardHeader>
             <CardContent className="space-y-4">

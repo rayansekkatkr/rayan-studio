@@ -23,7 +23,7 @@ const problems = [
 
 const solutions = [
   {
-    title: "Direction visuelle premium",
+    title: "Direction visuelle signature",
     detail: "Une identité claire qui élève instantanément la perception.",
   },
   {
@@ -51,8 +51,8 @@ export function ProblemSolution() {
         <Reveal>
           <SectionHeading
             eyebrow="Problème / Solution"
-            title="Du site standard au site premium, la différence est immédiate"
-            description="Cette section vient juste après le Hero pour transformer l'intérêt en conviction, avec une lecture visuelle instantanée."
+            title="Du site correct au site qui inspire confiance"
+            description="Une lecture visuelle simple: ce qui freine aujourd'hui, ce qui change après refonte, et pourquoi cela agit sur la perception."
           />
         </Reveal>
 

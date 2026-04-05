@@ -11,13 +11,10 @@ import {
 import {
   ArrowRight,
   BriefcaseBusiness,
-  CheckCircle2,
   Clock3,
-  MousePointerSquareDashed,
   Play,
   Sparkles,
   Star,
-  TrendingUp,
 } from "lucide-react";
 import { type MouseEvent } from "react";
 import { Badge } from "@/components/ui/badge";
@@ -31,19 +28,19 @@ const trustSignals = [
     icon: BriefcaseBusiness,
     value: "+120",
     label: "commerces accompagnés",
-    note: "Secteurs CHR et retail local",
+    note: "Projets livrés entre 2023 et 2026",
   },
   {
     icon: Star,
     value: "4,9/5",
     label: "en satisfaction",
-    note: "Retours clients vérifiés",
+    note: "Moyenne des retours post-livraison",
   },
   {
     icon: Clock3,
     value: "72h",
-    label: "prototype premium",
-    note: "Première direction visuelle",
+    label: "prototype initial",
+    note: "Première direction visuelle (offre Pro)",
   },
 ];
 
@@ -77,11 +74,8 @@ export function Hero() {
   const rotateX = useSpring(useTransform(pointerY, [-0.5, 0.5], [8, -8]), spring);
   const rotateY = useSpring(useTransform(pointerX, [-0.5, 0.5], [-12, 12]), spring);
 
-  const layerNearX = useSpring(useTransform(pointerX, [-0.5, 0.5], [-18, 18]), spring);
-  const layerNearY = useSpring(useTransform(pointerY, [-0.5, 0.5], [-12, 12]), spring);
-
   const layerFarX = useSpring(useTransform(pointerX, [-0.5, 0.5], [-34, 34]), spring);
-  const layerFarY = useSpring(useTransform(pointerY, [-0.5, 0.5], [-26, 26]), spring);
+  const layerFarY = useSpring(useTransform(pointerY, [-0.5, 0.5], [-18, 18]), spring);
 
   const base3dStyle: MotionStyle | undefined = reducedMotion ? undefined : { rotateX, rotateY };
 
@@ -140,7 +134,7 @@ export function Hero() {
           <motion.div variants={introItem}>
             <Badge className="gap-2 border-white/80 bg-white/82 shadow-[0_12px_24px_rgba(129,160,209,0.18)]">
               <Sparkles size={13} />
-              Studio premium pour commerces locaux
+              Studio web pour commerces locaux
             </Badge>
           </motion.div>
 
@@ -150,19 +144,19 @@ export function Hero() {
           >
             Faites passer votre
             <span className="block bg-gradient-to-r from-[#1f58ce] via-[#2f6dff] to-[#74a8ff] bg-clip-text text-transparent">
-              commerce en dimension premium.
+              commerce en ligne haut de gamme.
             </span>
           </motion.h1>
 
           <motion.p variants={introItem} className="mt-7 max-w-xl text-base leading-relaxed text-slate-600 sm:text-lg">
-            Création et refonte de sites vitrines pour restaurants, cafés, hôtels et boutiques locales françaises.
-            Chaque écran est pensé pour sublimer votre image et augmenter vos prises de contact.
+            Création et refonte de sites vitrines pour restaurants, cafés, hôtels et boutiques locales françaises. Un
+            design clair, une hiérarchie forte, et des parcours pensés pour générer plus de demandes qualifiées.
           </motion.p>
 
           <motion.div variants={introItem} className="mt-10 flex flex-wrap gap-4">
             <Button asChild size="lg" className="group relative overflow-hidden shimmer-btn">
               <a href="#contact">
-                Recevoir un concept premium
+                Recevoir un concept
                 <ArrowRight size={16} className="ml-2 transition-transform duration-300 group-hover:translate-x-1" />
               </a>
             </Button>
@@ -206,7 +200,7 @@ export function Hero() {
         >
           <motion.div
             className="absolute right-0 top-4 z-40"
-            style={reducedMotion ? undefined : { x: layerFarX, y: layerNearY }}
+            style={reducedMotion ? undefined : { x: layerFarX, y: layerFarY }}
             animate={
               reducedMotion
                 ? undefined
@@ -225,29 +219,6 @@ export function Hero() {
           </motion.div>
 
           <motion.div
-            className="absolute -left-5 bottom-4 z-40"
-            style={reducedMotion ? undefined : { x: layerNearX, y: layerFarY }}
-            animate={
-              reducedMotion
-                ? undefined
-                : {
-                    y: [0, 11, 0],
-                    rotate: [0, -1.5, 0],
-                  }
-            }
-            transition={{ duration: 6.3, repeat: Infinity, ease: "easeInOut", delay: 0.55 }}
-          >
-            <Card className="w-56 border-[#d4e5ff] bg-white/82 p-4 backdrop-blur-xl">
-              <p className="flex items-center gap-2 text-[11px] font-semibold uppercase tracking-[0.14em] text-[#2f6dff]">
-                <MousePointerSquareDashed size={12} />
-                Refonte guidée
-              </p>
-              <p className="mt-2 text-base font-semibold text-slate-900">Direction visuelle + dev</p>
-              <p className="mt-1 text-xs text-slate-500">Du concept à la mise en ligne</p>
-            </Card>
-          </motion.div>
-
-          <motion.div
             className="absolute left-1/2 top-1/2 -z-10 h-[22rem] w-[22rem] -translate-x-1/2 -translate-y-1/2 rounded-full border border-white/50"
             animate={reducedMotion ? undefined : { rotate: 360 }}
             transition={{ duration: 24, repeat: Infinity, ease: "linear" }}
@@ -255,14 +226,14 @@ export function Hero() {
 
           <motion.div style={base3dStyle} className="relative z-20 origin-center [transform-style:preserve-3d]">
             <Card className="shine-border relative overflow-hidden rounded-[34px] border border-white/90 bg-[linear-gradient(145deg,rgba(255,255,255,0.93),rgba(227,240,255,0.74))] p-4 shadow-[0_34px_80px_rgba(121,156,215,0.32)] sm:p-6">
-              <div className="flex items-center justify-between rounded-2xl border border-white/85 bg-white/78 px-4 py-3">
-                <div className="flex items-center gap-2">
-                  <span className="h-2.5 w-2.5 rounded-full bg-red-300" />
-                  <span className="h-2.5 w-2.5 rounded-full bg-amber-300" />
-                  <span className="h-2.5 w-2.5 rounded-full bg-emerald-300" />
+                <div className="flex items-center justify-between rounded-2xl border border-white/85 bg-white/78 px-4 py-3">
+                  <div className="flex items-center gap-2">
+                    <span className="h-2.5 w-2.5 rounded-full bg-red-300" />
+                    <span className="h-2.5 w-2.5 rounded-full bg-amber-300" />
+                    <span className="h-2.5 w-2.5 rounded-full bg-emerald-300" />
+                  </div>
+                  <p className="text-[11px] font-semibold uppercase tracking-[0.16em] text-slate-500">Avant / Après</p>
                 </div>
-                <p className="text-[11px] font-semibold uppercase tracking-[0.16em] text-slate-500">Avant / Après premium</p>
-              </div>
 
               <div className="mt-4 grid gap-4 sm:grid-cols-2">
                 <div className="rounded-2xl border border-slate-900/10 bg-slate-900 p-5 text-white">
@@ -280,7 +251,7 @@ export function Hero() {
 
                 <div className="rounded-2xl border border-[#d7e6ff] bg-gradient-to-br from-white to-[#e8f2ff] p-5">
                   <p className="text-[11px] font-semibold uppercase tracking-[0.14em] text-[#2f6dff]">Après</p>
-                  <p className="mt-2 text-lg font-semibold text-slate-900">Expérience premium</p>
+                  <p className="mt-2 text-lg font-semibold text-slate-900">Expérience haut de gamme</p>
                   <div className="mt-4 space-y-2">
                     <div className="h-2 rounded-full bg-[#ccdeff]" />
                     <div className="h-2 w-4/5 rounded-full bg-[#ccdeff]" />
@@ -291,38 +262,6 @@ export function Hero() {
                   </div>
                 </div>
               </div>
-
-              <div className="mt-4 grid gap-3 sm:grid-cols-3">
-                {[
-                  { label: "Temps moyen", value: "1m58" },
-                  { label: "Leads mensuels", value: "+32" },
-                  { label: "Conversion", value: "+41%" },
-                ].map((metric) => (
-                  <div key={metric.label} className="rounded-xl border border-white/90 bg-white/80 px-3 py-3 backdrop-blur-sm">
-                    <p className="text-[11px] uppercase tracking-[0.13em] text-slate-500">{metric.label}</p>
-                    <p className="mt-1 text-base font-semibold text-slate-900">{metric.value}</p>
-                  </div>
-                ))}
-              </div>
-            </Card>
-          </motion.div>
-
-          <motion.div
-            className="absolute -bottom-6 right-14 z-40"
-            style={reducedMotion ? undefined : { x: layerNearX, y: layerFarY }}
-            animate={reducedMotion ? undefined : { y: [0, -10, 0] }}
-            transition={{ duration: 5.9, repeat: Infinity, ease: "easeInOut" }}
-          >
-            <Card className="w-56 border-[#d3e4ff] bg-white/82 p-4 backdrop-blur-xl">
-              <p className="flex items-center gap-2 text-[11px] font-semibold uppercase tracking-[0.15em] text-[#2f6dff]">
-                <TrendingUp size={13} />
-                Montée en gamme
-              </p>
-              <p className="mt-2 text-sm font-semibold text-slate-900">Design + contenu + stratégie locale</p>
-              <p className="mt-2 flex items-center gap-2 text-xs text-slate-600">
-                <CheckCircle2 size={13} className="text-[#2f6dff]" />
-                Impact visuel immédiat
-              </p>
             </Card>
           </motion.div>
         </motion.div>

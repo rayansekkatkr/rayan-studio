@@ -11,40 +11,44 @@ import { SectionHeading } from "./SectionHeading";
 const projects = [
   {
     id: "manteigaria",
-    name: "Manteigaria - Refonte Premium",
-    designation: "Avant/Après - Boulangerie iconique",
+    name: "Manteigaria — Avant / Après",
+    designation: "Boulangerie artisanale • Commerce local",
     quote:
-      "Passage d'un site très dense à une expérience premium, plus claire et plus narrative. Résultat: une perception plus haut de gamme et un parcours plus fluide vers l'action.",
+      "Passage d'un site très dense à une expérience plus claire et plus narrative. Résultat: une meilleure perception de marque et un parcours plus fluide vers l'action.",
     projectUrl: "https://manteigaria-redesign.vercel.app/",
     beforeUrl: "https://manteigaria.com/fr/",
     src: "/realisations/manteigaria-before.png",
+    segment: "Cœur de cible CHR",
   },
   {
     id: "pick4me",
     name: "Pick4Me",
-    designation: "Produit web - Conversion orientée",
+    designation: "Plateforme locale • Mobilité & commerces",
     quote:
-      "Refonte visuelle orientée clarté: positionnement plus instantané, sections plus lisibles et storytelling produit plus convaincant dès les premières secondes.",
+      "Refonte visuelle orientée clarté: positionnement immédiat, sections plus lisibles et storytelling plus convaincant dès les premières secondes.",
     projectUrl: "https://pick4me.be/",
     src: "/realisations/pick4me.png",
+    segment: "Cœur de cible local",
   },
   {
     id: "docextract",
     name: "DocExtract",
-    designation: "SaaS B2B - Démo et preuve produit",
+    designation: "SaaS B2B • Référence d'exécution",
     quote:
-      "Mise en scène plus premium pour présenter la valeur métier rapidement: meilleure hiérarchie d'information, meilleure crédibilité, meilleure intention de démo.",
+      "Mise en scène plus structurée pour présenter la valeur métier rapidement: meilleure hiérarchie d'information et crédibilité renforcée.",
     projectUrl: "https://www.getdocextract.com/",
     src: "/realisations/docextract.png",
+    segment: "Référence hors CHR",
   },
   {
     id: "facturx",
     name: "Pont Factur-X",
-    designation: "B2B Finance - Crédibilité immédiate",
+    designation: "B2B Finance • Référence d'exécution",
     quote:
       "Optimisation du design pour rendre l'expertise plus tangible: structure éditoriale plus propre, points de confiance mieux visibles et contacts facilités.",
     projectUrl: "https://www.pont-facturx.com/",
     src: "/realisations/pont-facturx.png",
+    segment: "Référence hors CHR",
   },
 ];
 
@@ -91,8 +95,8 @@ export function Showcase() {
         <Reveal>
           <SectionHeading
             eyebrow="Réalisations"
-            title="Réalisations: une vitrine animée de transformations concrètes"
-            description="Chaque slide montre un projet réel, sa montée en gamme visuelle, et l'impact direct sur la perception du commerce."
+            title="Réalisations: transformations concrètes, avant / après visibles"
+            description="Un portfolio centré commerces locaux, complété par quelques références B2B pour montrer le niveau d'exécution."
           />
         </Reveal>
 
@@ -129,6 +133,9 @@ export function Showcase() {
                     transition={{ type: "spring", duration: 0.58, bounce: 0 }}
                   />
                   <p className="mt-1.5 text-sm font-medium text-slate-600">{activeProject.designation}</p>
+                  <p className="mt-2 inline-flex w-fit rounded-full border border-[#d6e6ff] bg-[#eef5ff] px-2.5 py-1 text-[10px] font-semibold uppercase tracking-[0.12em] text-[#2f6dff]">
+                    {activeProject.segment}
+                  </p>
                   <p className="mt-3 text-sm leading-relaxed text-slate-600">{activeProject.quote}</p>
                   <div className="mt-4 flex flex-wrap gap-2.5">
                     {activeProject.beforeUrl ? (
