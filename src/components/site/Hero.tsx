@@ -16,7 +16,7 @@ import {
   Sparkles,
   Star,
 } from "lucide-react";
-import { type MouseEvent, useState } from "react";
+import { type MouseEvent, useEffect, useState } from "react";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
@@ -175,6 +175,18 @@ export function Hero() {
   const base3dStyle: MotionStyle | undefined = reducedMotion ? undefined : { rotateX, rotateY };
   const currentSector = sectorScenarios[activeSector];
 
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setActiveSector((previous) => {
+        const index = sectorOrder.indexOf(previous);
+        const nextIndex = (index + 1) % sectorOrder.length;
+        return sectorOrder[nextIndex];
+      });
+    }, 2600);
+
+    return () => clearInterval(interval);
+  }, []);
+
   const handleMove = (event: MouseEvent<HTMLDivElement>) => {
     const rect = event.currentTarget.getBoundingClientRect();
     const x = (event.clientX - rect.left) / rect.width - 0.5;
@@ -256,15 +268,24 @@ export function Hero() {
             })}
           </motion.div>
 
-          <motion.h1
-            variants={introItem}
-            className="font-display mt-7 text-4xl font-semibold leading-[1.01] text-slate-900 sm:text-5xl md:text-6xl"
-          >
-            Votre {currentSector.label.toLowerCase()} mérite un site qui
-            <span className="block bg-gradient-to-r from-[#1f58ce] via-[#2f6dff] to-[#74a8ff] bg-clip-text text-transparent">
-              inspire confiance en 3 secondes.
-            </span>
-          </motion.h1>
+          <motion.div variants={introItem} className="mt-7">
+            <AnimatePresence mode="wait">
+              <motion.h1
+                key={`title-${activeSector}`}
+                variants={sectorSwap}
+                initial="initial"
+                animate="animate"
+                exit="exit"
+                transition={{ duration: 0.28, ease: [0.22, 1, 0.36, 1] }}
+                className="font-display text-4xl font-semibold leading-[1.01] text-slate-900 sm:text-5xl md:text-6xl"
+              >
+                Votre {currentSector.label.toLowerCase()} mérite un site qui
+                <span className="block bg-gradient-to-r from-[#1f58ce] via-[#2f6dff] to-[#74a8ff] bg-clip-text text-transparent">
+                  inspire confiance en 3 secondes.
+                </span>
+              </motion.h1>
+            </AnimatePresence>
+          </motion.div>
 
           <motion.div variants={introItem} className="mt-7 max-w-xl">
             <AnimatePresence mode="wait">
