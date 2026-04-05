@@ -12,11 +12,10 @@ import {
   ArrowRight,
   BriefcaseBusiness,
   Clock3,
-  Play,
   Sparkles,
   Star,
 } from "lucide-react";
-import { type MouseEvent } from "react";
+import { type MouseEvent, useState } from "react";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
@@ -39,10 +38,98 @@ const trustSignals = [
   {
     icon: Clock3,
     value: "72h",
-    label: "prototype initial",
-    note: "Première direction visuelle (offre Pro)",
+    label: "première maquette",
+    note: "Direction visuelle livrée rapidement",
   },
 ];
+
+type SectorKey =
+  | "restaurant"
+  | "cafe"
+  | "hotel"
+  | "boulangerie"
+  | "patisserie"
+  | "bar"
+  | "commerce";
+
+const sectorOrder: SectorKey[] = ["restaurant", "cafe", "hotel", "boulangerie", "patisserie", "bar", "commerce"];
+
+const sectorScenarios: Record<
+  SectorKey,
+  {
+    label: string;
+    subtitle: string;
+    proofMain: string;
+    proofNote: string;
+    before: string;
+    after: string;
+    actionKpi: string;
+  }
+> = {
+  restaurant: {
+    label: "Restaurant",
+    subtitle: "Un site qui donne faim, rassure vite, et déclenche la réservation.",
+    proofMain: "+28% de réservations",
+    proofNote: "Sur 30 jours après refonte",
+    before: "Carte peu lisible, réservation cachée",
+    after: "Carte claire, réservation visible en 1 clic",
+    actionKpi: "+31 appels / mois",
+  },
+  cafe: {
+    label: "Café",
+    subtitle: "Un site chaleureux qui met en avant votre ambiance et vos produits.",
+    proofMain: "+22% de demandes",
+    proofNote: "Sur 30 jours après refonte",
+    before: "Concept flou, infos dispersées",
+    after: "Concept clair, infos utiles en premier",
+    actionKpi: "+24 messages WhatsApp",
+  },
+  hotel: {
+    label: "Hôtel",
+    subtitle: "Un site plus premium pour inspirer confiance avant même l'arrivée.",
+    proofMain: "+41% de demandes",
+    proofNote: "Cas réel sur hôtel indépendant",
+    before: "Image standard, faible différenciation",
+    after: "Présentation haut de gamme, parcours fluide",
+    actionKpi: "+19 contacts qualifiés",
+  },
+  boulangerie: {
+    label: "Boulangerie",
+    subtitle: "Un site qui valorise votre savoir-faire artisanal et vos spécialités.",
+    proofMain: "+26% de commandes",
+    proofNote: "Sur 30 jours après refonte",
+    before: "Produits peu mis en valeur",
+    after: "Produits hero, navigation simple",
+    actionKpi: "+18 demandes traiteur",
+  },
+  patisserie: {
+    label: "Pâtisserie",
+    subtitle: "Une vitrine digitale raffinée qui donne envie en quelques secondes.",
+    proofMain: "+29% de prises de contact",
+    proofNote: "Sur 30 jours après refonte",
+    before: "Univers de marque peu lisible",
+    after: "Univers visuel cohérent et désirable",
+    actionKpi: "+27 demandes événement",
+  },
+  bar: {
+    label: "Bar",
+    subtitle: "Un site qui met l'ambiance en avant et facilite les réservations de groupe.",
+    proofMain: "+23% de réservations",
+    proofNote: "Sur 30 jours après refonte",
+    before: "Infos horaires/events noyées",
+    after: "Events, horaires et CTA très visibles",
+    actionKpi: "+21 réservations groupe",
+  },
+  commerce: {
+    label: "Commerce local",
+    subtitle: "Un site clair et crédible pour transformer les visites en demandes.",
+    proofMain: "+25% de demandes",
+    proofNote: "Moyenne observée après refonte",
+    before: "Offre peu claire, message trop neutre",
+    after: "Offre explicite, bénéfices immédiats",
+    actionKpi: "+30 leads / mois",
+  },
+};
 
 const intro = {
   hidden: { opacity: 0 },
@@ -65,6 +152,7 @@ const introItem = {
 };
 
 export function Hero() {
+  const [activeSector, setActiveSector] = useState<SectorKey>("restaurant");
   const reducedMotion = useReducedMotion();
   const pointerX = useMotionValue(0);
   const pointerY = useMotionValue(0);
@@ -78,6 +166,7 @@ export function Hero() {
   const layerFarY = useSpring(useTransform(pointerY, [-0.5, 0.5], [-18, 18]), spring);
 
   const base3dStyle: MotionStyle | undefined = reducedMotion ? undefined : { rotateX, rotateY };
+  const currentSector = sectorScenarios[activeSector];
 
   const handleMove = (event: MouseEvent<HTMLDivElement>) => {
     const rect = event.currentTarget.getBoundingClientRect();
@@ -134,36 +223,56 @@ export function Hero() {
           <motion.div variants={introItem}>
             <Badge className="gap-2 border-white/80 bg-white/82 shadow-[0_12px_24px_rgba(129,160,209,0.18)]">
               <Sparkles size={13} />
-              Studio web pour commerces locaux
+              Sites vitrines pour commerces locaux
             </Badge>
+          </motion.div>
+
+          <motion.div variants={introItem} className="mt-5 flex flex-wrap gap-2">
+            {sectorOrder.map((sector) => {
+              const item = sectorScenarios[sector];
+              const isActive = sector === activeSector;
+
+              return (
+                <button
+                  key={sector}
+                  type="button"
+                  onClick={() => setActiveSector(sector)}
+                  className={`rounded-full border px-3 py-1.5 text-xs font-semibold uppercase tracking-[0.11em] transition ${
+                    isActive
+                      ? "border-[#b6d0ff] bg-[#eaf2ff] text-[#2f6dff]"
+                      : "border-white/85 bg-white/78 text-slate-600 hover:bg-white hover:text-slate-900"
+                  }`}
+                >
+                  {item.label}
+                </button>
+              );
+            })}
           </motion.div>
 
           <motion.h1
             variants={introItem}
             className="font-display mt-7 text-4xl font-semibold leading-[1.01] text-slate-900 sm:text-5xl md:text-6xl"
           >
-            Faites passer votre
+            Votre {currentSector.label.toLowerCase()} mérite un site qui
             <span className="block bg-gradient-to-r from-[#1f58ce] via-[#2f6dff] to-[#74a8ff] bg-clip-text text-transparent">
-              commerce en ligne haut de gamme.
+              inspire confiance en 3 secondes.
             </span>
           </motion.h1>
 
           <motion.p variants={introItem} className="mt-7 max-w-xl text-base leading-relaxed text-slate-600 sm:text-lg">
-            Création et refonte de sites vitrines pour restaurants, cafés, hôtels et boutiques locales françaises. Un
-            design clair, une hiérarchie forte, et des parcours pensés pour générer plus de demandes qualifiées.
+            {currentSector.subtitle}
           </motion.p>
 
           <motion.div variants={introItem} className="mt-10 flex flex-wrap gap-4">
             <Button asChild size="lg" className="group relative overflow-hidden shimmer-btn">
               <a href="#contact">
-                Recevoir un concept
+                Voir une maquette de mon commerce
                 <ArrowRight size={16} className="ml-2 transition-transform duration-300 group-hover:translate-x-1" />
               </a>
             </Button>
             <Button asChild variant="outline" size="lg" className="group">
-              <a href="#realisations">
-                <Play size={15} className="mr-2" />
-                Voir les avant/après
+              <a href="https://wa.me/33636365696" target="_blank" rel="noreferrer">
+                Parler sur WhatsApp
               </a>
             </Button>
           </motion.div>
@@ -213,8 +322,8 @@ export function Hero() {
           >
             <Card className="w-56 border-[#d4e5ff] bg-white/84 p-4 backdrop-blur-xl">
               <p className="text-[11px] font-semibold uppercase tracking-[0.14em] text-[#2f6dff]">Résultat réel</p>
-              <p className="mt-2 text-lg font-semibold text-slate-900">+41% de demandes</p>
-              <p className="mt-1 text-xs text-slate-500">Refonte d&apos;un hôtel indépendant</p>
+              <p className="mt-2 text-lg font-semibold text-slate-900">{currentSector.proofMain}</p>
+              <p className="mt-1 text-xs text-slate-500">{currentSector.proofNote}</p>
             </Card>
           </motion.div>
 
@@ -245,7 +354,7 @@ export function Hero() {
                     <div className="h-2 w-3/5 rounded-full bg-slate-700" />
                   </div>
                   <div className="mt-5 rounded-xl border border-slate-700 bg-slate-800/80 p-3 text-xs text-slate-300">
-                    Peu rassurant, faible conversion
+                    {currentSector.before}
                   </div>
                 </div>
 
@@ -258,9 +367,14 @@ export function Hero() {
                     <div className="h-2 w-3/5 rounded-full bg-[#ccdeff]" />
                   </div>
                   <div className="mt-5 rounded-xl border border-[#d5e5ff] bg-white/90 p-3 text-xs text-slate-600">
-                    Message clair + image haut de gamme
+                    {currentSector.after}
                   </div>
                 </div>
+              </div>
+
+              <div className="mt-4 rounded-xl border border-white/90 bg-white/80 px-3 py-3 backdrop-blur-sm">
+                <p className="text-[11px] uppercase tracking-[0.13em] text-slate-500">Action mesurée</p>
+                <p className="mt-1 text-base font-semibold text-slate-900">{currentSector.actionKpi}</p>
               </div>
             </Card>
           </motion.div>
