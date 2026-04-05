@@ -1,47 +1,58 @@
 "use client";
 
-import { Star } from "lucide-react";
+import { motion } from "motion/react";
+import { TestimonialsColumn, type TestimonialsColumnItem } from "@/components/ui/testimonials-columns-1";
 import { Reveal } from "./Reveal";
 import { SectionHeading } from "./SectionHeading";
 
-const testimonials = [
+const testimonials: TestimonialsColumnItem[] = [
   {
-    name: "Claire D.",
+    name: "Claire Dubois",
     role: "Gérante • Café de quartier, Lille",
     text: "Le nouveau site a clarifié notre offre en quelques secondes. On reçoit plus de demandes directes qu'avant.",
-    metric: "+27% demandes",
+    image:
+      "https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&q=80&w=240&h=240",
   },
   {
-    name: "Hugo M.",
+    name: "Hugo Martin",
     role: "Directeur • Hôtel indépendant, Annecy",
     text: "La nouvelle direction visuelle inspire tout de suite plus de confiance. Le taux de contact a progressé dès le premier mois.",
-    metric: "+19% contacts",
+    image:
+      "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?auto=format&fit=crop&q=80&w=240&h=240",
   },
   {
-    name: "Sofia R.",
+    name: "Sofia Ribeiro",
     role: "Fondatrice • Pâtisserie, Bordeaux",
     text: "On a gagné en cohérence de marque et en lisibilité. Les clients comprennent mieux notre univers et nos produits.",
-    metric: "Perception + nette",
+    image:
+      "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?auto=format&fit=crop&q=80&w=240&h=240",
   },
   {
-    name: "Jules T.",
+    name: "Jules Tardieu",
     role: "Gérant • Restaurant, Nantes",
     text: "Le parcours mobile est devenu beaucoup plus fluide. Les réservations arrivent sans friction.",
-    metric: "Mobile mieux converti",
+    image:
+      "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&q=80&w=240&h=240",
   },
   {
-    name: "Maya L.",
+    name: "Maya Laurent",
     role: "Co-fondatrice • Bar à vins, Paris",
     text: "Tout est plus élégant et plus simple à parcourir. On sent une vraie montée en gamme de l'image.",
-    metric: "Image renforcée",
+    image:
+      "https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&q=80&w=240&h=240",
   },
   {
-    name: "Nassim B.",
+    name: "Nassim Benali",
     role: "Propriétaire • Boulangerie, Lyon",
     text: "Le design traduit enfin la qualité de notre savoir-faire artisanal. Les retours clients sont très positifs.",
-    metric: "Confiance immédiate",
+    image:
+      "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&q=80&w=240&h=240",
   },
 ];
+
+const firstColumn = testimonials.slice(0, 2);
+const secondColumn = testimonials.slice(2, 4);
+const thirdColumn = testimonials.slice(4, 6);
 
 export function Testimonials() {
   return (
@@ -57,29 +68,24 @@ export function Testimonials() {
         </Reveal>
 
         <Reveal delay={0.08}>
-          <div className="mt-8 grid gap-4 md:grid-cols-2 lg:grid-cols-3">
-            {testimonials.map((item, index) => (
-              <article
-                key={item.name}
-                className="rounded-3xl border border-white/90 bg-[linear-gradient(145deg,rgba(255,255,255,0.9),rgba(229,241,255,0.72))] p-5 shadow-[0_18px_30px_rgba(123,157,217,0.2)] backdrop-blur-xl"
-              >
-                <div className="mb-3 flex items-center justify-between">
-                  <span className="text-xs font-semibold uppercase tracking-[0.12em] text-slate-500">Avis client {index + 1}</span>
-                  <span className="inline-flex items-center gap-1 text-[#2f6dff]">
-                    {[0, 1, 2, 3, 4].map((star) => (
-                      <Star key={star} size={12} fill="currentColor" />
-                    ))}
-                  </span>
-                </div>
-                <p className="text-sm leading-relaxed text-slate-700">“{item.text}”</p>
-                <p className="mt-4 text-sm font-semibold text-slate-900">{item.name}</p>
-                <p className="text-xs text-slate-500">{item.role}</p>
-                <p className="mt-2 inline-flex rounded-full border border-[#d6e6ff] bg-[#eef5ff] px-2.5 py-1 text-[10px] font-semibold uppercase tracking-[0.12em] text-[#2f6dff]">
-                  {item.metric}
-                </p>
-              </article>
-            ))}
-          </div>
+          <motion.div
+            initial={{ opacity: 0, y: 14 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
+            viewport={{ once: true }}
+            className="relative mt-8 overflow-hidden rounded-[34px] border border-white/85 bg-[linear-gradient(145deg,rgba(255,255,255,0.87),rgba(227,240,255,0.68))] p-4 shadow-[0_34px_56px_rgba(122,157,220,0.24)] md:p-6"
+          >
+            <div className="pointer-events-none absolute -left-16 top-8 h-44 w-44 rounded-full bg-[#9fc4ff]/36 blur-[80px]" />
+            <div className="pointer-events-none absolute -right-16 bottom-8 h-56 w-56 rounded-full bg-white/54 blur-[92px]" />
+
+            <div className="[mask-image:linear-gradient(to_bottom,transparent,black_20%,black_80%,transparent)]">
+              <div className="flex justify-center gap-4 overflow-hidden py-1 md:gap-5">
+                <TestimonialsColumn testimonials={firstColumn} duration={16} />
+                <TestimonialsColumn testimonials={secondColumn} className="hidden md:block" duration={19} />
+                <TestimonialsColumn testimonials={thirdColumn} className="hidden lg:block" duration={17} />
+              </div>
+            </div>
+          </motion.div>
         </Reveal>
       </div>
     </section>
