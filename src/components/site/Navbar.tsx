@@ -29,11 +29,8 @@ export function Navbar() {
       >
         <a
           href="#hero"
-          className="group inline-flex items-center gap-2.5 font-display text-sm font-semibold uppercase tracking-[0.16em] text-slate-800 md:text-base"
+          className="group inline-flex items-center font-display text-sm font-semibold uppercase tracking-[0.16em] text-slate-800 md:text-base"
         >
-          <span className="inline-flex h-7 w-7 items-center justify-center rounded-full border border-white/90 bg-white/88 text-[10px] tracking-[0.08em] text-[#2f6dff] shadow-[0_8px_16px_rgba(123,157,217,0.24)]">
-            RS
-          </span>
           <span className="transition-colors duration-300 group-hover:text-slate-950">Rayan Studio</span>
         </a>
 
