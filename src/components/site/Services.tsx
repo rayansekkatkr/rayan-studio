@@ -11,6 +11,7 @@ import { SectionHeading } from "./SectionHeading";
 const services = [
   {
     icon: Layers3,
+    tag: "Création",
     title: "Création de site internet",
     subtitle: "Lancement d'un site de zéro",
     description:
@@ -20,6 +21,7 @@ const services = [
   },
   {
     icon: RefreshCw,
+    tag: "Refonte",
     title: "Refonte de site existant",
     subtitle: "Montée en gamme de votre image digitale",
     description:
@@ -66,7 +68,9 @@ export function Services() {
                           <service.icon size={19} />
                         </span>
                         <div>
-                          <p className="text-[11px] font-semibold uppercase tracking-[0.14em] text-[#2f6dff]">Service {index + 1}</p>
+                          <p className="text-[11px] font-semibold uppercase tracking-[0.14em] text-[#2f6dff]">
+                            {service.tag}
+                          </p>
                           <h3 className="font-display mt-1 text-2xl font-semibold text-slate-900">{service.title}</h3>
                         </div>
                       </div>

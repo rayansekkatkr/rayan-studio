@@ -7,19 +7,19 @@ import { SectionHeading } from "./SectionHeading";
 const faq = [
   {
     q: "Combien de temps prend un projet ?",
-    a: "La plupart des projets sont livrés entre 1 et 3 semaines selon le périmètre. Un prototype visuel est souvent prêt très vite.",
+    a: "La plupart des projets sont livrés entre 1 et 3 semaines selon le périmètre. Une première direction visuelle est généralement présentée sous 72h.",
   },
   {
     q: "Puis-je garder certains contenus de mon site actuel ?",
-    a: "Oui. On conserve les contenus utiles et on retravaille la structure, la hiérarchie et le ton pour les rendre plus efficaces.",
+    a: "Oui. Je conserve les contenus pertinents et je retravaille la structure, la hiérarchie et le ton pour améliorer la lisibilité et l'impact.",
   },
   {
     q: "Le site est-il optimisé mobile ?",
-    a: "Oui. L'expérience mobile est traitée en priorité pour garantir lisibilité, rapidité et interactions fluides.",
+    a: "Oui. L'expérience mobile est traitée en priorité: lisibilité, rapidité, boutons d'action visibles et parcours fluide.",
   },
   {
     q: "Travaillez-vous avec quels types de commerces ?",
-    a: "Restaurants, cafés, hôtels, boulangeries, pâtisseries, bars et commerces locaux qui veulent monter en gamme.",
+    a: "Principalement restaurants, cafés, hôtels, boulangeries, pâtisseries, bars et commerces locaux qui veulent renforcer leur image en ligne.",
   },
 ];
 
@@ -31,7 +31,7 @@ export function Faq() {
           <SectionHeading
             eyebrow="FAQ"
             title="Questions fréquentes"
-            description="Réponses directes pour savoir comment se déroule la collaboration."
+            description="Des réponses concrètes pour savoir exactement comment se déroule la collaboration."
             center
           />
         </Reveal>
