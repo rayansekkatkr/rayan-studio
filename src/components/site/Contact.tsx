@@ -35,8 +35,8 @@ export function Contact({ locale = "fr" }: { locale?: Locale }) {
                 title={en ? "Let's discuss your project" : "Discutons de votre projet"}
                 description={
                   en
-                    ? "I'll provide a clear first direction to create or redesign your website. Reply within 24h."
-                    : "Je vous propose une première direction claire pour créer ou refondre votre site. Réponse en moins de 24h."
+                    ? "You can explain your needs with simple words. No technical vocabulary is required. Reply within 24h."
+                    : "Vous pouvez expliquer votre besoin avec des mots simples. Aucun vocabulaire technique n'est nécessaire. Réponse en moins de 24h."
                 }
               />
             </CardHeader>
@@ -86,7 +86,7 @@ export function Contact({ locale = "fr" }: { locale?: Locale }) {
 
                     if (!response.ok) {
                       const data = (await response.json()) as { error?: string };
-                      throw new Error(data.error || "Envoi impossible pour le moment.");
+                      throw new Error(data.error || (en ? "Unable to send for now." : "Envoi impossible pour le moment."));
                     }
 
                     trackEvent("form_submit", { location: "contact", form: "lead_contact" });
@@ -99,7 +99,13 @@ export function Contact({ locale = "fr" }: { locale?: Locale }) {
                       website: "",
                     });
                   } catch (error) {
-                    setErrorMessage(error instanceof Error ? error.message : "Une erreur inattendue est survenue.");
+                    setErrorMessage(
+                      error instanceof Error
+                        ? error.message
+                        : en
+                          ? "An unexpected error occurred."
+                          : "Une erreur inattendue est survenue.",
+                    );
                   } finally {
                     setIsSubmitting(false);
                   }
@@ -124,7 +130,7 @@ export function Contact({ locale = "fr" }: { locale?: Locale }) {
                     </label>
                     <Input
                       id="businessType"
-                      placeholder={en ? "Restaurant, hotel, cafe..." : "Restaurant, hôtel, café..."}
+                      placeholder={en ? "Example: restaurant, hotel, bakery..." : "Exemple : restaurant, hôtel, boulangerie..."}
                       value={formData.businessType}
                       onChange={(event) => setFormData((prev) => ({ ...prev, businessType: event.target.value }))}
                       required
@@ -155,8 +161,8 @@ export function Contact({ locale = "fr" }: { locale?: Locale }) {
                     rows={5}
                     placeholder={
                       en
-                        ? "Creation or redesign? Your goals? Your timeline?"
-                        : "Création ou refonte ? Vos objectifs ? Votre délai ?"
+                        ? "Example: I need a new website. I want more calls and WhatsApp messages."
+                        : "Exemple : j'ai besoin d'un nouveau site. Je veux plus d'appels et de messages WhatsApp."
                     }
                     value={formData.message}
                     onChange={(event) => setFormData((prev) => ({ ...prev, message: event.target.value }))}
@@ -181,8 +187,8 @@ export function Contact({ locale = "fr" }: { locale?: Locale }) {
 
                 <p className="text-xs uppercase tracking-[0.12em] text-slate-500">
                   {en
-                    ? "No commitment • Reply within 24h • Direct WhatsApp available"
-                    : "Sans engagement • Réponse sous 24h • WhatsApp direct disponible"}
+                    ? "No commitment • Reply within 24h • Clear guidance step by step"
+                    : "Sans engagement • Réponse sous 24h • Accompagnement clair étape par étape"}
                 </p>
 
                 {isSent ? (

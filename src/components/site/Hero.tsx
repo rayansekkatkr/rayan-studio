@@ -456,6 +456,11 @@ export function Hero({ locale = "fr" }: { locale?: Locale }) {
               ? "No commitment • Reply within 24h • Free express audit"
               : "Sans engagement • Réponse sous 24h • Audit express offert"}
           </motion.p>
+          <motion.p variants={introItem} className="mt-1 text-xs text-slate-500">
+            {en
+              ? "No technical language required: you explain your business, I handle the rest."
+              : "Aucun langage technique requis : vous expliquez votre activité, je m'occupe du reste."}
+          </motion.p>
 
           <motion.div variants={introItem} className="mt-6 grid gap-2.5 sm:grid-cols-3">
             {trustSignals.map((signal) => (

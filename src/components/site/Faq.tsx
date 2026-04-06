@@ -22,6 +22,10 @@ const faqFr = [
     q: "Travaillez-vous avec quels types de commerces ?",
     a: "Principalement restaurants, cafés, hôtels, boulangeries, pâtisseries, bars et commerces locaux qui veulent renforcer leur image en ligne.",
   },
+  {
+    q: "Je ne connais rien au web, est-ce un problème ?",
+    a: "Pas du tout. Je vous explique chaque étape simplement et je m'occupe de toute la partie technique.",
+  },
 ];
 
 const faqEn = [
@@ -40,6 +44,10 @@ const faqEn = [
   {
     q: "Which businesses do you work with?",
     a: "Mainly restaurants, cafes, hotels, bakeries, pastry shops, bars, and local businesses looking to upgrade their online image.",
+  },
+  {
+    q: "I do not know anything about websites. Is that a problem?",
+    a: "Not at all. I explain each step in simple words and handle all technical parts for you.",
   },
 ];
 

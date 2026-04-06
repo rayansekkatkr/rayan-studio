@@ -17,8 +17,8 @@ export function Process({ locale = "fr" }: { locale?: Locale }) {
             title={en ? "A clear 4-step process" : "Un process clair en 4 étapes"}
             description={
               en
-                ? "From discovery to launch: each step includes a concrete deliverable, a clear objective, and shared validation."
-                : "De la découverte à la mise en ligne: chaque étape a un livrable concret, un objectif précis et une validation commune."
+                ? "You always know what happens next. Each step is simple, concrete, and validated with you."
+                : "Vous savez toujours ce qui se passe ensuite. Chaque étape est simple, concrète, et validée avec vous."
             }
           />
         </Reveal>

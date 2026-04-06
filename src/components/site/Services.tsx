@@ -16,8 +16,8 @@ const servicesFr = [
     title: "Création de site internet",
     subtitle: "Lancement d'un site de zéro",
     description:
-      "Un site vitrine haut de gamme conçu pour donner une image plus crédible et plus désirable dès les premières secondes.",
-    outcomes: ["Direction artistique signature", "Structure UX conversion", "Développement Next.js fluide"],
+      "Je crée votre site de A à Z pour présenter clairement votre activité et faciliter la prise de contact.",
+    outcomes: ["Message simple et clair", "Design professionnel qui rassure", "Boutons contact faciles à trouver"],
     cta: "Créer mon site",
   },
   {
@@ -26,8 +26,8 @@ const servicesFr = [
     title: "Refonte de site existant",
     subtitle: "Montée en gamme de votre image digitale",
     description:
-      "Je transforme votre site actuel en expérience plus claire, plus moderne, plus rassurante dès les premières secondes.",
-    outcomes: ["Audit perception & conversion", "Refonte UI haut de gamme", "Parcours plus lisible et vendeur"],
+      "Je reprends votre site actuel pour le rendre plus moderne, plus compréhensible et plus efficace.",
+    outcomes: ["Structure simplifiée pour vos clients", "Image plus premium et cohérente", "Plus de demandes qualifiées"],
     cta: "Refondre mon site",
   },
 ];
@@ -39,8 +39,8 @@ const servicesEn = [
     title: "New website creation",
     subtitle: "Launch your website from scratch",
     description:
-      "A premium showcase website designed to make your business feel more credible and desirable from the very first seconds.",
-    outcomes: ["Signature art direction", "Conversion-focused UX structure", "Smooth Next.js development"],
+      "I build your website from zero so your business is clearly presented and easy to contact.",
+    outcomes: ["Simple and clear message", "Professional design that builds trust", "Easy-to-find contact actions"],
     cta: "Create my website",
   },
   {
@@ -49,8 +49,8 @@ const servicesEn = [
     title: "Existing website redesign",
     subtitle: "Upgrade your digital image",
     description:
-      "I transform your current website into a clearer, more modern, and more reassuring experience from the first screen.",
-    outcomes: ["Perception & conversion audit", "Premium UI redesign", "Clearer and more persuasive journey"],
+      "I redesign your current website to make it more modern, easier to understand, and more effective.",
+    outcomes: ["Simpler structure for your customers", "More premium and coherent image", "More qualified inquiries"],
     cta: "Redesign my website",
   },
 ];
@@ -76,8 +76,8 @@ export function Services({ locale = "fr" }: { locale?: Locale }) {
             title={en ? "Two offers, one objective: elevate your business image" : "Deux offres, un même objectif: faire monter votre commerce en gamme"}
             description={
               en
-                ? "Two clear offers focused on outcomes: better perception, clearer messaging, and stronger conversion."
-                : "Deux offres lisibles, orientées résultat: meilleure perception, message plus clair et conversion mieux guidée."
+                ? "Two easy-to-understand options. No technical language, only business outcomes."
+                : "Deux options faciles à comprendre. Pas de langage technique, uniquement des résultats concrets."
             }
           />
         </Reveal>

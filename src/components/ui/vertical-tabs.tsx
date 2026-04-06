@@ -19,28 +19,28 @@ const PROCESS_STEPS_FR: ProcessItem[] = [
     id: "01",
     title: "Découverte",
     description:
-      "On aligne vos objectifs business, votre cible locale et la perception haut de gamme que votre site doit transmettre.",
+      "On échange sur votre activité avec des mots simples: vos clients, vos objectifs et vos priorités.",
     image: "/process/discovery.webp",
   },
   {
     id: "02",
     title: "Direction visuelle",
     description:
-      "Je crée une direction art claire, des maquettes premium et une hiérarchie visuelle pensée pour convaincre vite.",
+      "Je prépare une maquette claire pour vous montrer exactement le rendu avant la mise en ligne.",
     image: "/process/direction.webp",
   },
   {
     id: "03",
     title: "Développement",
     description:
-      "Intégration Next.js avec animations raffinées, performances solides et expérience fluide sur desktop et mobile.",
+      "Je construis le site pour qu'il soit rapide, lisible sur mobile, et agréable à utiliser.",
     image: "/process/development.webp",
   },
   {
     id: "04",
     title: "Mise en ligne",
     description:
-      "Déploiement propre, vérifications finales et suivi pour transformer le lancement en vrai levier commercial.",
+      "Je mets le site en ligne et je reste disponible pour les derniers ajustements.",
     image: "/process/launch.webp",
   },
 ];
@@ -50,27 +50,27 @@ const PROCESS_STEPS_EN: ProcessItem[] = [
     id: "01",
     title: "Discovery",
     description:
-      "We align your business goals, local audience, and the premium perception your website must communicate.",
+      "We discuss your business in simple terms: your customers, goals, and priorities.",
     image: "/process/discovery.webp",
   },
   {
     id: "02",
     title: "Visual direction",
     description:
-      "I build a clear art direction, premium mockups, and a visual hierarchy designed to convince fast.",
+      "I create a clear mockup so you can see the exact result before launch.",
     image: "/process/direction.webp",
   },
   {
     id: "03",
     title: "Development",
     description:
-      "Next.js integration with refined animations, strong performance, and a smooth experience on desktop and mobile.",
+      "I build the site to be fast, readable on mobile, and easy to use.",
     image: "/process/development.webp",
   },
   {
     id: "04",
     title: "Launch",
-    description: "Clean deployment, final checks, and follow-up so launch becomes a real business lever.",
+    description: "I publish the site and stay available for final adjustments.",
     image: "/process/launch.webp",
   },
 ];
@@ -265,4 +265,3 @@ export function VerticalTabs({ locale = "fr", items }: { locale?: Locale; items?
 }
 
 export default VerticalTabs;
-
