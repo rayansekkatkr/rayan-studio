@@ -11,6 +11,15 @@ import { SectionHeading } from "./SectionHeading";
 
 export function Contact() {
   const [isSent, setIsSent] = useState(false);
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [errorMessage, setErrorMessage] = useState<string | null>(null);
+  const [formData, setFormData] = useState({
+    firstName: "",
+    businessType: "",
+    email: "",
+    message: "",
+    website: "",
+  });
 
   return (
     <section id="contact" className="section-screen px-4 md:px-8">
@@ -53,10 +62,40 @@ export function Contact() {
             <CardContent>
               <form
                 className="space-y-4"
-                onSubmit={(event) => {
+                onSubmit={async (event) => {
                   event.preventDefault();
-                  trackEvent("form_submit", { location: "contact", form: "lead_contact" });
-                  setIsSent(true);
+                  setErrorMessage(null);
+                  setIsSent(false);
+                  setIsSubmitting(true);
+
+                  try {
+                    const response = await fetch("/api/contact", {
+                      method: "POST",
+                      headers: {
+                        "Content-Type": "application/json",
+                      },
+                      body: JSON.stringify(formData),
+                    });
+
+                    if (!response.ok) {
+                      const data = (await response.json()) as { error?: string };
+                      throw new Error(data.error || "Envoi impossible pour le moment.");
+                    }
+
+                    trackEvent("form_submit", { location: "contact", form: "lead_contact" });
+                    setIsSent(true);
+                    setFormData({
+                      firstName: "",
+                      businessType: "",
+                      email: "",
+                      message: "",
+                      website: "",
+                    });
+                  } catch (error) {
+                    setErrorMessage(error instanceof Error ? error.message : "Une erreur inattendue est survenue.");
+                  } finally {
+                    setIsSubmitting(false);
+                  }
                 }}
               >
                 <div className="grid gap-4 md:grid-cols-2">
@@ -64,13 +103,25 @@ export function Contact() {
                     <label htmlFor="firstName" className="text-sm font-semibold text-slate-800">
                       Prénom
                     </label>
-                    <Input id="firstName" placeholder="Marie" />
+                    <Input
+                      id="firstName"
+                      placeholder="Marie"
+                      value={formData.firstName}
+                      onChange={(event) => setFormData((prev) => ({ ...prev, firstName: event.target.value }))}
+                      required
+                    />
                   </div>
                   <div className="space-y-2">
                     <label htmlFor="businessType" className="text-sm font-semibold text-slate-800">
                       Type de commerce
                     </label>
-                    <Input id="businessType" placeholder="Restaurant, hôtel, café..." />
+                    <Input
+                      id="businessType"
+                      placeholder="Restaurant, hôtel, café..."
+                      value={formData.businessType}
+                      onChange={(event) => setFormData((prev) => ({ ...prev, businessType: event.target.value }))}
+                      required
+                    />
                   </div>
                 </div>
 
@@ -78,7 +129,14 @@ export function Contact() {
                   <label htmlFor="email" className="text-sm font-semibold text-slate-800">
                     Email
                   </label>
-                  <Input id="email" type="email" placeholder="vous@commerce.fr" />
+                  <Input
+                    id="email"
+                    type="email"
+                    placeholder="vous@commerce.fr"
+                    value={formData.email}
+                    onChange={(event) => setFormData((prev) => ({ ...prev, email: event.target.value }))}
+                    required
+                  />
                 </div>
 
                 <div className="space-y-2">
@@ -89,11 +147,24 @@ export function Contact() {
                     id="message"
                     rows={5}
                     placeholder="Création ou refonte ? Vos objectifs ? Votre délai ?"
+                    value={formData.message}
+                    onChange={(event) => setFormData((prev) => ({ ...prev, message: event.target.value }))}
+                    required
                   />
                 </div>
 
-                <Button type="submit" className="w-full">
-                  Envoyer ma demande
+                <input
+                  tabIndex={-1}
+                  autoComplete="off"
+                  name="website"
+                  value={formData.website}
+                  onChange={(event) => setFormData((prev) => ({ ...prev, website: event.target.value }))}
+                  className="hidden"
+                  aria-hidden="true"
+                />
+
+                <Button type="submit" className="w-full" disabled={isSubmitting}>
+                  {isSubmitting ? "Envoi en cours..." : "Envoyer ma demande"}
                   <ArrowRight size={15} className="ml-2" />
                 </Button>
 
@@ -104,6 +175,11 @@ export function Contact() {
                 {isSent ? (
                   <p className="rounded-xl border border-[#d5e5ff] bg-[#edf4ff] px-3 py-2 text-sm font-medium text-[#1f5ed4]">
                     Merci, votre demande est bien envoyée. Je vous réponds très vite.
+                  </p>
+                ) : null}
+                {errorMessage ? (
+                  <p className="rounded-xl border border-rose-200 bg-rose-50 px-3 py-2 text-sm font-medium text-rose-700">
+                    {errorMessage}
                   </p>
                 ) : null}
               </form>
