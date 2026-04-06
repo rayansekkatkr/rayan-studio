@@ -21,7 +21,6 @@ import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { HeroLiquidShader } from "@/components/ui/hero-liquid-shader";
-import { Logos3 } from "@/components/ui/logos3";
 
 const trustSignals = [
   {
@@ -470,10 +469,6 @@ export function Hero() {
             </Card>
           </motion.div>
         </motion.div>
-      </div>
-
-      <div className="mx-auto mt-16 w-full max-w-7xl border-t border-white/50 pt-5">
-        <Logos3 heading="Commerces accompagnés" />
       </div>
     </section>
   );
