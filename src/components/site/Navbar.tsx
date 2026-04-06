@@ -80,40 +80,53 @@ export function Navbar({ locale = "fr" }: { locale?: Locale }) {
 
         <AnimatePresence>
           {mobileOpen ? (
-            <motion.div
-              initial={{ opacity: 0, y: -8 }}
-              animate={{ opacity: 1, y: 0 }}
-              exit={{ opacity: 0, y: -8 }}
-              transition={{ duration: 0.2, ease: [0.22, 1, 0.36, 1] }}
-              className="absolute left-0 right-0 top-[calc(100%+10px)] max-h-[75svh] overflow-y-auto rounded-2xl border border-white/95 bg-white/97 p-3 shadow-[0_24px_44px_rgba(74,105,161,0.28)] backdrop-blur-xl lg:hidden"
-            >
-              <ul className="space-y-1.5">
-                {links.map((link) => (
-                  <li key={link.href}>
-                    <a
-                      href={link.href}
-                      onClick={closeMenu}
-                      className="block rounded-xl px-3 py-2 text-sm font-medium text-slate-700 transition-colors hover:bg-white/85 hover:text-slate-900"
-                    >
-                      {link.label}
-                    </a>
-                  </li>
-                ))}
-              </ul>
-              <Link
-                href={`/${switchTo}`}
-                className="mt-1 block rounded-xl border border-white/80 bg-white/80 px-3 py-2 text-center text-xs font-semibold uppercase tracking-[0.12em] text-slate-700"
+            <>
+              <motion.button
+                type="button"
+                aria-label={en ? "Close menu overlay" : "Fermer l'arriere-plan du menu"}
                 onClick={closeMenu}
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                exit={{ opacity: 0 }}
+                transition={{ duration: 0.18 }}
+                className="fixed inset-0 z-[60] bg-slate-900/18 lg:hidden"
+              />
+
+              <motion.div
+                initial={{ opacity: 0, y: -8 }}
+                animate={{ opacity: 1, y: 0 }}
+                exit={{ opacity: 0, y: -8 }}
+                transition={{ duration: 0.2, ease: [0.22, 1, 0.36, 1] }}
+                className="fixed inset-x-4 top-[6.2rem] z-[70] max-h-[72svh] overflow-y-auto rounded-2xl border border-slate-200 bg-white p-3 shadow-[0_28px_48px_rgba(34,58,98,0.28)] lg:hidden"
               >
-                {en ? "Passer en français" : "Switch to English"}
-              </Link>
-              <Button asChild size="sm" className="mt-2.5 w-full">
-                <a href={`/${locale}#contact`} onClick={closeMenu}>
-                  {en ? "Start now" : "Démarrer"}
-                  <ArrowUpRight size={15} className="ml-1" />
-                </a>
-              </Button>
-            </motion.div>
+                <ul className="space-y-1.5">
+                  {links.map((link) => (
+                    <li key={link.href}>
+                      <a
+                        href={link.href}
+                        onClick={closeMenu}
+                        className="block rounded-xl px-3 py-2 text-sm font-medium text-slate-700 transition-colors hover:bg-slate-100 hover:text-slate-900"
+                      >
+                        {link.label}
+                      </a>
+                    </li>
+                  ))}
+                </ul>
+                <Link
+                  href={`/${switchTo}`}
+                  className="mt-2 block rounded-xl border border-slate-200 bg-slate-100 px-3 py-2 text-center text-xs font-semibold uppercase tracking-[0.12em] text-slate-700"
+                  onClick={closeMenu}
+                >
+                  {en ? "Passer en français" : "Switch to English"}
+                </Link>
+                <Button asChild size="sm" className="mt-2.5 w-full">
+                  <a href={`/${locale}#contact`} onClick={closeMenu}>
+                    {en ? "Start now" : "Démarrer"}
+                    <ArrowUpRight size={15} className="ml-1" />
+                  </a>
+                </Button>
+              </motion.div>
+            </>
           ) : null}
         </AnimatePresence>
       </motion.nav>

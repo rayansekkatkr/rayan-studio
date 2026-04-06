@@ -1,0 +1,183 @@
+RAYAN STUDIO - PACK COMMERCIAL (MODELES PRETS A L'EMPLOI)
+Date: 2026-04-07
+
+CONTACT RAYAN STUDIO
+- Nom commercial: Rayan Studio
+- Contact: Rayan Sekkat
+- Email: rayan.sekkat@gmail.com
+- WhatsApp: +33 6 36 36 56 96
+- Site: https://rayanstudios.com
+
+INFORMATIONS LEGALES A COMPLETER UNE FOIS
+- Forme juridique: [A COMPLETER]
+- Adresse de facturation: [A COMPLETER]
+- SIREN/SIRET: [A COMPLETER]
+- TVA intracommunautaire (si applicable): [A COMPLETER]
+- Mention TVA (franchise/base/taux): [A COMPLETER]
+
+============================================================
+1) MESSAGE D'ENVOI DE DEVIS (EMAIL / WHATSAPP)
+============================================================
+Objet: Devis - Creation/Refonte de site - Rayan Studio
+
+Bonjour [Prenom],
+
+Merci pour votre retour.
+Voici votre devis pour [creation/refonte] de votre site.
+
+- Montant total: [X EUR HT/TTC]
+- Acompte au demarrage: 50%
+- Solde avant mise en ligne: 50%
+- Delai estime: [X jours / X semaines]
+
+Paiement possible par:
+- Lien carte securise (Stripe)
+- Virement bancaire (Revolut Business)
+
+Des reception de l'acompte, je lance le projet.
+Je reste disponible si vous souhaitez ajuster un point du devis.
+
+Rayan Studio
+rayan.sekkat@gmail.com
++33 6 36 36 56 96
+https://rayanstudios.com
+
+============================================================
+2) MODELE DEVIS
+============================================================
+Numero devis: DEV-2026-001
+Date d'emission: [JJ/MM/AAAA]
+Validite: 30 jours
+
+Prestataire:
+Rayan Studio
+Contact: Rayan Sekkat
+Email: rayan.sekkat@gmail.com
+WhatsApp: +33 6 36 36 56 96
+Site: https://rayanstudios.com
+
+Infos legales:
+Forme juridique: [A COMPLETER]
+Adresse: [A COMPLETER]
+SIREN/SIRET: [A COMPLETER]
+TVA: [A COMPLETER]
+
+Client:
+- Raison sociale: [A COMPLETER]
+- Adresse: [A COMPLETER]
+- Contact: [A COMPLETER]
+- Email: [A COMPLETER]
+
+Objet:
+Creation / Refonte site vitrine
+
+Lignes:
+1. Prestation principale (Pack Essentiel / Pro / Premium): [X EUR]
+2. Option page d'administration facile (si choisie): [X EUR]
+3. Options additionnelles (multilingue, maintenance, etc.): [X EUR]
+
+Total HT: [X EUR]
+TVA: [X EUR]
+Total TTC: [X EUR]
+
+Conditions:
+- 50% a la commande, 50% avant mise en ligne
+- Delai de paiement: 7 jours
+- Demarrage apres reception de l'acompte
+- Revisions incluses: [ex: 2 allers-retours]
+- Penalites de retard: [A PRECISER DANS CGV]
+- Indemnite forfaitaire recouvrement B2B (France): 40 EUR
+
+Bon pour accord:
+Nom + Date + Signature + mention "Bon pour accord"
+
+============================================================
+3) FACTURE D'ACOMPTE (50%)
+============================================================
+Numero: FAC-2026-001-AC
+Reference devis: DEV-2026-001
+Date d'emission: [JJ/MM/AAAA]
+Echeance: [JJ/MM/AAAA]
+
+Objet:
+Acompte 50% - Projet site [Nom client]
+
+Montant acompte: [X EUR]
+
+Paiement:
+- Stripe: [LIEN DE PAIEMENT]
+- Virement Revolut Business: [IBAN + BIC]
+- Reference obligatoire de virement: FAC-2026-001-AC
+
+Mention:
+Acompte encaisse avant demarrage du projet.
+
+============================================================
+4) FACTURE FINALE (50%)
+============================================================
+Numero: FAC-2026-001
+Reference devis: DEV-2026-001
+Date d'emission: [JJ/MM/AAAA]
+Echeance: [JJ/MM/AAAA]
+
+Objet:
+Solde 50% - Projet site [Nom client]
+
+Montant solde: [X EUR]
+
+Paiement:
+- Stripe: [LIEN DE PAIEMENT]
+- Virement Revolut Business: [IBAN + BIC]
+- Reference obligatoire de virement: FAC-2026-001
+
+Mention:
+Livraison finale / mise en ligne apres reglement du solde.
+
+============================================================
+5) MESSAGE DE PAIEMENT ACOMPTE
+============================================================
+Bonjour [Prenom],
+
+Top, on peut lancer le projet.
+Voici le lien de paiement de l'acompte (50%): [LIEN STRIPE]
+
+Si vous preferez le virement:
+IBAN: [IBAN REVOLUT]
+Reference: FAC-2026-001-AC
+
+Des reception, je demarre et je vous envoie la premiere etape.
+
+============================================================
+6) MESSAGE RELANCE DOUCE
+============================================================
+Bonjour [Prenom],
+
+Petit rappel concernant le reglement de [FAC-XXXX] (echeance: [DATE]).
+Je vous renvoie le lien de paiement: [LIEN STRIPE]
+
+Ou virement:
+IBAN: [IBAN REVOLUT]
+Reference: [FAC-XXXX]
+
+Merci beaucoup.
+
+============================================================
+7) CHECKLIST OPERATIONNELLE
+============================================================
+Avant d'envoyer un devis:
+- Verifier CGV a jour
+- Verifier numerotation devis/facture
+- Verifier statut TVA
+- Verifier methode de paiement proposee
+
+Avant de demarrer un projet:
+- Accord ecrit recu
+- Acompte 50% recu
+- Perimetre valide
+- Delai valide
+
+Avant mise en ligne:
+- Solde 50% recu
+- Validation finale client recu
+
+FIN DU DOCUMENT
