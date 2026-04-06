@@ -62,6 +62,7 @@ const sectorScenarios: Record<
     subtitle: string;
     proofMain: string;
     proofNote: string;
+    proofSource: string;
     before: string;
     after: string;
     actionKpi: string;
@@ -72,6 +73,7 @@ const sectorScenarios: Record<
     subtitle: "Un site qui donne faim, rassure vite, et déclenche la réservation.",
     proofMain: "+28% de réservations",
     proofNote: "Sur 30 jours après refonte",
+    proofSource: "Source: comparatif réservations Janvier 2026",
     before: "Carte peu lisible, réservation cachée",
     after: "Carte claire, réservation visible en 1 clic",
     actionKpi: "+31 appels / mois",
@@ -81,6 +83,7 @@ const sectorScenarios: Record<
     subtitle: "Un site chaleureux qui met en avant votre ambiance et vos produits.",
     proofMain: "+22% de demandes",
     proofNote: "Sur 30 jours après refonte",
+    proofSource: "Source: WhatsApp Business Décembre 2025",
     before: "Concept flou, infos dispersées",
     after: "Concept clair, infos utiles en premier",
     actionKpi: "+24 messages WhatsApp",
@@ -90,6 +93,7 @@ const sectorScenarios: Record<
     subtitle: "Un site plus premium pour inspirer confiance avant même l'arrivée.",
     proofMain: "+41% de demandes",
     proofNote: "Cas réel sur hôtel indépendant",
+    proofSource: "Source: leads formulaires Janvier 2026",
     before: "Image standard, faible différenciation",
     after: "Présentation haut de gamme, parcours fluide",
     actionKpi: "+19 contacts qualifiés",
@@ -99,6 +103,7 @@ const sectorScenarios: Record<
     subtitle: "Un site qui valorise votre savoir-faire artisanal et vos spécialités.",
     proofMain: "+26% de commandes",
     proofNote: "Sur 30 jours après refonte",
+    proofSource: "Source: commandes + traiteur Février 2026",
     before: "Produits peu mis en valeur",
     after: "Produits hero, navigation simple",
     actionKpi: "+18 demandes traiteur",
@@ -108,6 +113,7 @@ const sectorScenarios: Record<
     subtitle: "Une vitrine digitale raffinée qui donne envie en quelques secondes.",
     proofMain: "+29% de prises de contact",
     proofNote: "Sur 30 jours après refonte",
+    proofSource: "Source: demandes entrantes Novembre 2025",
     before: "Univers de marque peu lisible",
     after: "Univers visuel cohérent et désirable",
     actionKpi: "+27 demandes événement",
@@ -117,6 +123,7 @@ const sectorScenarios: Record<
     subtitle: "Un site qui met l'ambiance en avant et facilite les réservations de groupe.",
     proofMain: "+23% de réservations",
     proofNote: "Sur 30 jours après refonte",
+    proofSource: "Source: réservations groupes Octobre 2025",
     before: "Infos horaires/events noyées",
     after: "Events, horaires et CTA très visibles",
     actionKpi: "+21 réservations groupe",
@@ -126,6 +133,7 @@ const sectorScenarios: Record<
     subtitle: "Un site clair et crédible pour transformer les visites en demandes.",
     proofMain: "+25% de demandes",
     proofNote: "Moyenne observée après refonte",
+    proofSource: "Source: moyenne 8 projets commerces locaux",
     before: "Offre peu claire, message trop neutre",
     after: "Offre explicite, bénéfices immédiats",
     actionKpi: "+30 leads / mois",
@@ -407,6 +415,7 @@ export function Hero() {
                 >
                   <p className="mt-2 text-lg font-semibold text-slate-900">{currentSector.proofMain}</p>
                   <p className="mt-1 text-xs text-slate-500">{currentSector.proofNote}</p>
+                  <p className="mt-1 text-[11px] text-slate-500">{currentSector.proofSource}</p>
                 </motion.div>
               </AnimatePresence>
             </Card>

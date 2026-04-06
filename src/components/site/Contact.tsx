@@ -7,6 +7,7 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { trackEvent } from "@/lib/analytics";
+import { BRAND } from "@/lib/brand";
 import { SectionHeading } from "./SectionHeading";
 
 export function Contact() {
@@ -35,22 +36,22 @@ export function Contact() {
             </CardHeader>
             <CardContent className="space-y-4">
               <a
-                href="mailto:rayan.sekkat@gmail.com"
+                href={`mailto:${BRAND.email}`}
                 onClick={() => trackEvent("email_click", { location: "contact" })}
                 className="flex items-center gap-3 rounded-2xl border border-white/85 bg-white/80 px-4 py-3 text-sm font-medium text-slate-700"
               >
                 <Mail size={16} className="text-[#2f6dff]" />
-                rayan.sekkat@gmail.com
+                {BRAND.email}
               </a>
               <a
-                href="https://wa.me/33636365696"
+                href={BRAND.whatsappUrl}
                 target="_blank"
                 rel="noreferrer"
                 onClick={() => trackEvent("whatsapp_click", { location: "contact" })}
                 className="flex items-center gap-3 rounded-2xl border border-white/85 bg-white/80 px-4 py-3 text-sm font-medium text-slate-700"
               >
                 <Phone size={16} className="text-[#2f6dff]" />
-                +33 6 36 36 56 96 (WhatsApp)
+                {BRAND.phoneDisplay} (WhatsApp)
               </a>
             </CardContent>
           </Card>

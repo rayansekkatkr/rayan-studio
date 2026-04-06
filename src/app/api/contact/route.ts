@@ -1,4 +1,5 @@
 import { NextRequest, NextResponse } from "next/server";
+import { BRAND } from "@/lib/brand";
 
 type ContactPayload = {
   firstName?: string;
@@ -76,9 +77,9 @@ export async function POST(request: NextRequest) {
 
   const brevoApiKey = process.env.BREVO_API_KEY;
   const senderEmail = process.env.BREVO_SENDER_EMAIL;
-  const senderName = process.env.BREVO_SENDER_NAME || "Rayan Studio";
+  const senderName = process.env.BREVO_SENDER_NAME || BRAND.name;
   const toEmail = process.env.BREVO_TO_EMAIL;
-  const subject = process.env.BREVO_SUBJECT || "Nouveau lead qualifié — Rayan Studio";
+  const subject = process.env.BREVO_SUBJECT || `Nouveau lead qualifié — ${BRAND.name}`;
 
   if (!brevoApiKey || !senderEmail || !toEmail) {
     return NextResponse.json({ error: "Configuration email manquante côté serveur." }, { status: 500 });
@@ -90,7 +91,7 @@ export async function POST(request: NextRequest) {
   const safeMessage = escapeHtml(message).replaceAll("\n", "<br/>");
 
   const textContent = [
-    "Nouveau lead Rayan Studio",
+    `Nouveau lead ${BRAND.name}`,
     `Prénom: ${firstName}`,
     `Type de commerce: ${businessType}`,
     `Email: ${email}`,
@@ -100,7 +101,7 @@ export async function POST(request: NextRequest) {
   ].join("\n");
 
   const htmlContent = `
-    <h2>Nouveau lead Rayan Studio</h2>
+    <h2>Nouveau lead ${BRAND.name}</h2>
     <p><strong>Prénom:</strong> ${safeFirstName}</p>
     <p><strong>Type de commerce:</strong> ${safeBusinessType}</p>
     <p><strong>Email:</strong> ${safeEmail}</p>
@@ -131,4 +132,3 @@ export async function POST(request: NextRequest) {
 
   return NextResponse.json({ ok: true }, { status: 200 });
 }
-

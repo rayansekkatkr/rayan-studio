@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useState, useEffect, useCallback } from "react";
-import { motion, AnimatePresence } from "framer-motion";
+import { motion, AnimatePresence, useInView, useReducedMotion } from "framer-motion";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 import Image from "next/image";
 import { cn } from "@/lib/utils";
@@ -19,32 +19,28 @@ const PROCESS_STEPS: ProcessItem[] = [
     title: "Découverte",
     description:
       "On aligne vos objectifs business, votre cible locale et la perception haut de gamme que votre site doit transmettre.",
-    image:
-      "https://images.unsplash.com/photo-1552664730-d307ca884978?q=80&w=1200&auto=format&fit=crop",
+    image: "/process/discovery.webp",
   },
   {
     id: "02",
     title: "Direction visuelle",
     description:
       "Je crée une direction art claire, des maquettes premium et une hiérarchie visuelle pensée pour convaincre vite.",
-    image:
-      "https://images.unsplash.com/photo-1523726491678-bf852e717f6a?q=80&w=1200&auto=format&fit=crop",
+    image: "/process/direction.webp",
   },
   {
     id: "03",
     title: "Développement",
     description:
       "Intégration Next.js avec animations raffinées, performances solides et expérience fluide sur desktop et mobile.",
-    image:
-      "https://images.unsplash.com/photo-1517180102446-f3ece451e9d8?q=80&w=1200&auto=format&fit=crop",
+    image: "/process/development.webp",
   },
   {
     id: "04",
     title: "Mise en ligne",
     description:
       "Déploiement propre, vérifications finales et suivi pour transformer le lancement en vrai levier commercial.",
-    image:
-      "https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=1200&auto=format&fit=crop",
+    image: "/process/launch.webp",
   },
 ];
 
@@ -54,6 +50,9 @@ export function VerticalTabs({ items = PROCESS_STEPS }: { items?: ProcessItem[] 
   const [activeIndex, setActiveIndex] = useState(0);
   const [direction, setDirection] = useState(0);
   const [isPaused, setIsPaused] = useState(false);
+  const reducedMotion = useReducedMotion();
+  const containerRef = React.useRef<HTMLDivElement | null>(null);
+  const isInView = useInView(containerRef, { amount: 0.45 });
 
   const handleNext = useCallback(() => {
     setDirection(1);
@@ -73,14 +72,14 @@ export function VerticalTabs({ items = PROCESS_STEPS }: { items?: ProcessItem[] 
   };
 
   useEffect(() => {
-    if (isPaused) return;
+    if (isPaused || reducedMotion || !isInView) return;
 
     const interval = setInterval(() => {
       handleNext();
     }, AUTO_PLAY_DURATION);
 
     return () => clearInterval(interval);
-  }, [activeIndex, isPaused, handleNext]);
+  }, [activeIndex, isPaused, handleNext, isInView, reducedMotion]);
 
   const variants = {
     enter: (dir: number) => ({
@@ -100,7 +99,7 @@ export function VerticalTabs({ items = PROCESS_STEPS }: { items?: ProcessItem[] 
   };
 
   return (
-    <div className="w-full py-1 md:py-3">
+    <div ref={containerRef} className="w-full py-1 md:py-3">
       <div className="mx-auto w-full max-w-7xl px-0">
         <div className="grid grid-cols-1 items-start gap-8 lg:grid-cols-12 lg:gap-12">
           <div className="order-2 flex flex-col justify-center pt-2 lg:order-1 lg:col-span-5">

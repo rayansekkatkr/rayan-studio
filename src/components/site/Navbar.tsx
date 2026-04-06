@@ -4,6 +4,7 @@ import { AnimatePresence, motion } from "framer-motion";
 import { ArrowUpRight, Menu, X } from "lucide-react";
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
+import { BRAND } from "@/lib/brand";
 
 const links = [
   { label: "Problème / Solution", href: "#probleme-solution" },
@@ -11,6 +12,7 @@ const links = [
   { label: "Réalisations", href: "#realisations" },
   { label: "Process", href: "#process" },
   { label: "Tarifs", href: "#tarifs" },
+  { label: "À propos", href: "/a-propos-methodologie-preuves" },
   { label: "Contact", href: "#contact" },
 ];
 
@@ -31,7 +33,7 @@ export function Navbar() {
           href="#hero"
           className="group inline-flex items-center font-display text-sm font-semibold uppercase tracking-[0.16em] text-slate-800 md:text-base"
         >
-          <span className="transition-colors duration-300 group-hover:text-slate-950">Rayan Studio</span>
+          <span className="transition-colors duration-300 group-hover:text-slate-950">{BRAND.name}</span>
         </a>
 
         <ul className="hidden items-center gap-4 lg:flex">

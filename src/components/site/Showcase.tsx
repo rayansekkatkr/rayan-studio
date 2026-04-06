@@ -5,6 +5,7 @@ import { useRef, useState } from "react";
 import { ArrowUpRight, ExternalLink } from "lucide-react";
 import { TextRotate, type TextRotateRef } from "@/components/ui/text-rotate";
 import { Button } from "@/components/ui/button";
+import { trackEvent } from "@/lib/analytics";
 import { Reveal } from "./Reveal";
 import { SectionHeading } from "./SectionHeading";
 
@@ -58,18 +59,24 @@ const caseStudies = [
     context: "Refonte d'un site vitrine daté avec peu de demandes directes.",
     action: "Hiérarchie clarifiée, CTA visibles, parcours mobile simplifié.",
     result: "+41% de demandes sur 30 jours",
+    period: "Janvier 2026",
+    source: "Comparatif leads formulaire + WhatsApp",
   },
   {
     title: "Café de quartier",
     context: "Site peu différenciant, informations clés difficiles à trouver.",
     action: "Nouveau storytelling, sections utiles au-dessus de la ligne de flottaison.",
     result: "+24 messages WhatsApp sur 30 jours",
+    period: "Décembre 2025",
+    source: "Export WhatsApp Business",
   },
   {
     title: "Boulangerie artisanale",
     context: "Produits et savoir-faire mal mis en valeur.",
     action: "Vitrine produit plus visuelle, navigation orientée conversion.",
     result: "+26% de commandes / demandes traiteur",
+    period: "Février 2026",
+    source: "Suivi commandes + demandes entrantes",
   },
 ];
 
@@ -114,6 +121,7 @@ export function Showcase() {
   const handleSelect = (index: number) => {
     setActiveIndex(index);
     textRotateRef.current?.jumpTo(index);
+    trackEvent("project_select", { project_id: projects[index].id, source: "showcase_thumb" });
   };
 
   return (
@@ -138,6 +146,8 @@ export function Showcase() {
                 <p className="mt-2 text-xs text-slate-600">{study.context}</p>
                 <p className="mt-2 text-xs text-slate-600">{study.action}</p>
                 <p className="mt-3 text-sm font-semibold text-slate-900">{study.result}</p>
+                <p className="mt-1 text-[11px] text-slate-500">{study.period}</p>
+                <p className="mt-1 text-[11px] text-slate-500">{study.source}</p>
               </article>
             ))}
           </div>
@@ -192,13 +202,23 @@ export function Showcase() {
                   <div className="mt-4 flex flex-wrap gap-2.5">
                     {activeProject.beforeUrl ? (
                       <Button asChild variant="outline" size="sm" className="h-9">
-                        <a href={activeProject.beforeUrl} target="_blank" rel="noreferrer">
+                        <a
+                          href={activeProject.beforeUrl}
+                          target="_blank"
+                          rel="noreferrer"
+                          onClick={() => trackEvent("project_before_click", { project_id: activeProject.id })}
+                        >
                           Voir avant
                         </a>
                       </Button>
                     ) : null}
                     <Button asChild size="sm" className="h-9">
-                      <a href={activeProject.projectUrl} target="_blank" rel="noreferrer">
+                      <a
+                        href={activeProject.projectUrl}
+                        target="_blank"
+                        rel="noreferrer"
+                        onClick={() => trackEvent("project_view_click", { project_id: activeProject.id })}
+                      >
                         Voir le projet
                         <ExternalLink size={14} className="ml-2" />
                       </a>

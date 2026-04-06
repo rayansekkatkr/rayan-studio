@@ -1,7 +1,8 @@
 import type { MetadataRoute } from "next";
+import { getSiteUrl } from "@/lib/brand";
 
 export default function robots(): MetadataRoute.Robots {
-  const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://rayanstudio.fr";
+  const baseUrl = getSiteUrl();
 
   return {
     rules: {
