@@ -191,7 +191,7 @@ export function Hero() {
         const nextIndex = (index + 1) % sectorOrder.length;
         return sectorOrder[nextIndex];
       });
-    }, 2600);
+    }, 3600);
 
     return () => clearInterval(interval);
   }, []);
