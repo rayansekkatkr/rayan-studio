@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Plus_Jakarta_Sans, Sora } from "next/font/google";
+import Script from "next/script";
 import "./globals.css";
 
 const bodyFont = Plus_Jakarta_Sans({
@@ -95,9 +96,25 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  const gaId = process.env.NEXT_PUBLIC_GA_ID;
+
   return (
-    <html lang="fr" suppressHydrationWarning>
-      <body suppressHydrationWarning className={`${bodyFont.variable} ${displayFont.variable} antialiased`}>
+    <html lang="fr">
+      <body className={`${bodyFont.variable} ${displayFont.variable} antialiased`}>
+        {gaId ? (
+          <>
+            <Script src={`https://www.googletagmanager.com/gtag/js?id=${gaId}`} strategy="afterInteractive" />
+            <Script id="google-analytics" strategy="afterInteractive">
+              {`
+                window.dataLayer = window.dataLayer || [];
+                function gtag(){dataLayer.push(arguments);}
+                window.gtag = gtag;
+                gtag('js', new Date());
+                gtag('config', '${gaId}');
+              `}
+            </Script>
+          </>
+        ) : null}
         {children}
       </body>
     </html>

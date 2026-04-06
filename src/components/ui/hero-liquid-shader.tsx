@@ -4,7 +4,11 @@ import { Warp } from "@paper-design/shaders-react";
 import { useReducedMotion } from "framer-motion";
 import { useEffect, useState } from "react";
 
-export function HeroLiquidShader() {
+type HeroLiquidShaderProps = {
+  disabled?: boolean;
+};
+
+export function HeroLiquidShader({ disabled = false }: HeroLiquidShaderProps) {
   const [isMobile, setIsMobile] = useState(false);
   const reducedMotion = useReducedMotion();
 
@@ -16,7 +20,7 @@ export function HeroLiquidShader() {
     return () => media.removeEventListener("change", onChange);
   }, []);
 
-  if (reducedMotion || isMobile) {
+  if (disabled || reducedMotion || isMobile) {
     return null;
   }
 

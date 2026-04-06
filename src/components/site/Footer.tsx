@@ -17,7 +17,7 @@ export function Footer() {
             Mentions légales
           </a>
           <a href="/politique-confidentialite" className="transition-colors hover:text-slate-800">
-            Privacy
+            Politique de confidentialité
           </a>
           <a href="/cgv" className="transition-colors hover:text-slate-800">
             CGV

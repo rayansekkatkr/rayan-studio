@@ -42,6 +42,12 @@ export default function Home() {
     availableLanguage: ["fr"],
     email: "rayan.sekkat@gmail.com",
     telephone: "+33636365696",
+    priceRange: "€€",
+    founder: {
+      "@type": "Person",
+      name: "Rayan Sekkat",
+    },
+    sameAs: ["https://wa.me/33636365696"],
     serviceType: [
       "Création de site internet",
       "Refonte de site existant",

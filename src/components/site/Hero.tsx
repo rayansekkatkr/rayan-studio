@@ -21,6 +21,7 @@ import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { HeroLiquidShader } from "@/components/ui/hero-liquid-shader";
+import { trackEvent } from "@/lib/analytics";
 
 const trustSignals = [
   {
@@ -160,6 +161,7 @@ const sectorSwap = {
 export function Hero() {
   const [activeSector, setActiveSector] = useState<SectorKey>("restaurant");
   const [isMobile, setIsMobile] = useState(false);
+  const [isLowPowerDevice, setIsLowPowerDevice] = useState(false);
   const reducedMotion = useReducedMotion();
   const pointerX = useMotionValue(0);
   const pointerY = useMotionValue(0);
@@ -172,7 +174,8 @@ export function Hero() {
   const layerFarX = useSpring(useTransform(pointerX, [-0.5, 0.5], [-34, 34]), spring);
   const layerFarY = useSpring(useTransform(pointerY, [-0.5, 0.5], [-18, 18]), spring);
 
-  const base3dStyle: MotionStyle | undefined = reducedMotion ? undefined : { rotateX, rotateY };
+  const shouldAnimate = !reducedMotion && !isMobile && !isLowPowerDevice;
+  const base3dStyle: MotionStyle | undefined = shouldAnimate ? { rotateX, rotateY } : undefined;
   const currentSector = sectorScenarios[activeSector];
 
   useEffect(() => {
@@ -195,8 +198,14 @@ export function Hero() {
     return () => clearInterval(interval);
   }, []);
 
+  useEffect(() => {
+    const cores = navigator.hardwareConcurrency ?? 8;
+    const memory = (navigator as Navigator & { deviceMemory?: number }).deviceMemory ?? 8;
+    setIsLowPowerDevice(cores <= 4 || memory <= 4);
+  }, []);
+
   const handleMove = (event: MouseEvent<HTMLDivElement>) => {
-    if (isMobile || reducedMotion) return;
+    if (!shouldAnimate) return;
     const rect = event.currentTarget.getBoundingClientRect();
     const x = (event.clientX - rect.left) / rect.width - 0.5;
     const y = (event.clientY - rect.top) / rect.height - 0.5;
@@ -215,31 +224,31 @@ export function Hero() {
       id="hero"
       className="relative min-h-[100svh] overflow-hidden px-4 pb-14 pt-28 md:px-8 md:pb-16 md:pt-32"
     >
-      <HeroLiquidShader />
+      <HeroLiquidShader disabled={isLowPowerDevice} />
 
       <motion.div
         className="absolute -left-20 top-16 z-0 h-[24rem] w-[24rem] rounded-full bg-[#9dc3ff]/45 blur-[120px]"
         animate={
-          reducedMotion || isMobile
-            ? undefined
-            : {
+          shouldAnimate
+            ? {
                 x: [0, 40, 0],
                 y: [0, -30, 0],
                 scale: [1, 1.14, 1],
               }
+            : undefined
         }
         transition={{ duration: 15, repeat: Infinity, ease: "easeInOut" }}
       />
       <motion.div
         className="absolute -right-24 top-12 z-0 h-[28rem] w-[28rem] rounded-full bg-[#dcecff]/80 blur-[132px]"
         animate={
-          reducedMotion || isMobile
-            ? undefined
-            : {
+          shouldAnimate
+            ? {
                 x: [0, -36, 0],
                 y: [0, 32, 0],
                 scale: [1, 1.18, 1],
               }
+            : undefined
         }
         transition={{ duration: 17, repeat: Infinity, ease: "easeInOut", delay: 0.4 }}
       />
@@ -314,17 +323,30 @@ export function Hero() {
 
           <motion.div variants={introItem} className="mt-10 flex flex-wrap gap-4">
             <Button asChild size="lg" className="group relative overflow-hidden shimmer-btn">
-              <a href="#contact">
+              <a
+                href="#contact"
+                onClick={() =>
+                  trackEvent("cta_click", { location: "hero", cta: "voir_maquette", sector: activeSector })
+                }
+              >
                 Voir une maquette de mon commerce
                 <ArrowRight size={16} className="ml-2 transition-transform duration-300 group-hover:translate-x-1" />
               </a>
             </Button>
             <Button asChild variant="outline" size="lg" className="group">
-              <a href="https://wa.me/33636365696" target="_blank" rel="noreferrer">
+              <a
+                href="https://wa.me/33636365696"
+                target="_blank"
+                rel="noreferrer"
+                onClick={() => trackEvent("whatsapp_click", { location: "hero", sector: activeSector })}
+              >
                 Parler sur WhatsApp
               </a>
             </Button>
           </motion.div>
+          <motion.p variants={introItem} className="mt-3 text-xs uppercase tracking-[0.12em] text-slate-500">
+            Sans engagement • Réponse sous 24h • Audit express offert
+          </motion.p>
 
           <motion.div variants={introItem} className="mt-6 grid gap-2.5 sm:grid-cols-3">
             {trustSignals.map((signal) => (
@@ -346,6 +368,9 @@ export function Hero() {
               </div>
             ))}
           </motion.div>
+          <motion.p variants={introItem} className="mt-2 text-[11px] text-slate-500">
+            Données issues de projets clients livrés entre 2023 et 2026.
+          </motion.p>
         </motion.div>
 
         <motion.div
@@ -358,14 +383,14 @@ export function Hero() {
         >
           <motion.div
             className="absolute right-0 top-4 z-40"
-            style={reducedMotion ? undefined : { x: layerFarX, y: layerFarY }}
+            style={shouldAnimate ? { x: layerFarX, y: layerFarY } : undefined}
             animate={
-              reducedMotion || isMobile
-                ? undefined
-                : {
+              shouldAnimate
+                ? {
                     y: [0, -12, 0],
                     rotate: [0, 1.8, 0],
                   }
+                : undefined
             }
             transition={{ duration: 7.2, repeat: Infinity, ease: "easeInOut" }}
           >
@@ -389,7 +414,7 @@ export function Hero() {
 
           <motion.div
             className="absolute left-1/2 top-1/2 -z-10 h-[22rem] w-[22rem] -translate-x-1/2 -translate-y-1/2 rounded-full border border-white/50"
-            animate={reducedMotion || isMobile ? undefined : { rotate: 360 }}
+            animate={shouldAnimate ? { rotate: 360 } : undefined}
             transition={{ duration: 24, repeat: Infinity, ease: "linear" }}
           />
 

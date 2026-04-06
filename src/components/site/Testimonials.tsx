@@ -1,7 +1,7 @@
 "use client";
 
 import Image from "next/image";
-import { motion } from "motion/react";
+import { motion } from "framer-motion";
 import { TestimonialsColumn, type TestimonialsColumnItem } from "@/components/ui/testimonials-columns-1";
 import { Reveal } from "./Reveal";
 import { SectionHeading } from "./SectionHeading";

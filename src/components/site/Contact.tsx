@@ -6,6 +6,7 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
+import { trackEvent } from "@/lib/analytics";
 import { SectionHeading } from "./SectionHeading";
 
 export function Contact() {
@@ -26,6 +27,7 @@ export function Contact() {
             <CardContent className="space-y-4">
               <a
                 href="mailto:rayan.sekkat@gmail.com"
+                onClick={() => trackEvent("email_click", { location: "contact" })}
                 className="flex items-center gap-3 rounded-2xl border border-white/85 bg-white/80 px-4 py-3 text-sm font-medium text-slate-700"
               >
                 <Mail size={16} className="text-[#2f6dff]" />
@@ -35,6 +37,7 @@ export function Contact() {
                 href="https://wa.me/33636365696"
                 target="_blank"
                 rel="noreferrer"
+                onClick={() => trackEvent("whatsapp_click", { location: "contact" })}
                 className="flex items-center gap-3 rounded-2xl border border-white/85 bg-white/80 px-4 py-3 text-sm font-medium text-slate-700"
               >
                 <Phone size={16} className="text-[#2f6dff]" />
@@ -52,6 +55,7 @@ export function Contact() {
                 className="space-y-4"
                 onSubmit={(event) => {
                   event.preventDefault();
+                  trackEvent("form_submit", { location: "contact", form: "lead_contact" });
                   setIsSent(true);
                 }}
               >

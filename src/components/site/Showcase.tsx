@@ -141,6 +141,9 @@ export function Showcase() {
               </article>
             ))}
           </div>
+          <p className="mt-3 text-xs text-slate-500">
+            Exemples synthétisés à partir de cas projets et retours clients sur 30 jours post-livraison.
+          </p>
         </Reveal>
 
         <Reveal delay={0.05} y={16} className="mt-6 md:mt-8">
