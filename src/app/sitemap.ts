@@ -22,6 +22,18 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 1,
     },
     {
+      url: `${baseUrl}/fr`,
+      lastModified,
+      changeFrequency: "weekly",
+      priority: 1,
+    },
+    {
+      url: `${baseUrl}/en`,
+      lastModified,
+      changeFrequency: "weekly",
+      priority: 1,
+    },
+    {
       url: `${baseUrl}/mentions-legales`,
       lastModified,
       changeFrequency: "monthly",
@@ -41,6 +53,18 @@ export default function sitemap(): MetadataRoute.Sitemap {
     },
     {
       url: `${baseUrl}/a-propos-methodologie-preuves`,
+      lastModified,
+      changeFrequency: "monthly",
+      priority: 0.8,
+    },
+    {
+      url: `${baseUrl}/fr/a-propos-methodologie-preuves`,
+      lastModified,
+      changeFrequency: "monthly",
+      priority: 0.8,
+    },
+    {
+      url: `${baseUrl}/en/a-propos-methodologie-preuves`,
       lastModified,
       changeFrequency: "monthly",
       priority: 0.8,

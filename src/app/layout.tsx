@@ -55,6 +55,10 @@ export const metadata: Metadata = {
   },
   alternates: {
     canonical: "/",
+    languages: {
+      fr: "/fr",
+      en: "/en",
+    },
   },
   robots: {
     index: true,

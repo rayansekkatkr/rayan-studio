@@ -1,9 +1,10 @@
 "use client";
 
-import React, { useState, useEffect, useCallback } from "react";
-import { motion, AnimatePresence, useInView, useReducedMotion } from "framer-motion";
+import React, { useCallback, useEffect, useState } from "react";
+import { AnimatePresence, motion, useInView, useReducedMotion } from "framer-motion";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 import Image from "next/image";
+import { isEnglish, type Locale } from "@/lib/i18n";
 import { cn } from "@/lib/utils";
 
 type ProcessItem = {
@@ -13,7 +14,7 @@ type ProcessItem = {
   image: string;
 };
 
-const PROCESS_STEPS: ProcessItem[] = [
+const PROCESS_STEPS_FR: ProcessItem[] = [
   {
     id: "01",
     title: "Découverte",
@@ -44,9 +45,41 @@ const PROCESS_STEPS: ProcessItem[] = [
   },
 ];
 
+const PROCESS_STEPS_EN: ProcessItem[] = [
+  {
+    id: "01",
+    title: "Discovery",
+    description:
+      "We align your business goals, local audience, and the premium perception your website must communicate.",
+    image: "/process/discovery.webp",
+  },
+  {
+    id: "02",
+    title: "Visual direction",
+    description:
+      "I build a clear art direction, premium mockups, and a visual hierarchy designed to convince fast.",
+    image: "/process/direction.webp",
+  },
+  {
+    id: "03",
+    title: "Development",
+    description:
+      "Next.js integration with refined animations, strong performance, and a smooth experience on desktop and mobile.",
+    image: "/process/development.webp",
+  },
+  {
+    id: "04",
+    title: "Launch",
+    description: "Clean deployment, final checks, and follow-up so launch becomes a real business lever.",
+    image: "/process/launch.webp",
+  },
+];
+
 const AUTO_PLAY_DURATION = 5000;
 
-export function VerticalTabs({ items = PROCESS_STEPS }: { items?: ProcessItem[] }) {
+export function VerticalTabs({ locale = "fr", items }: { locale?: Locale; items?: ProcessItem[] }) {
+  const en = isEnglish(locale);
+  const resolvedItems = items || (en ? PROCESS_STEPS_EN : PROCESS_STEPS_FR);
   const [activeIndex, setActiveIndex] = useState(0);
   const [direction, setDirection] = useState(0);
   const [isPaused, setIsPaused] = useState(false);
@@ -56,13 +89,13 @@ export function VerticalTabs({ items = PROCESS_STEPS }: { items?: ProcessItem[] 
 
   const handleNext = useCallback(() => {
     setDirection(1);
-    setActiveIndex((prev) => (prev + 1) % items.length);
-  }, [items.length]);
+    setActiveIndex((prev) => (prev + 1) % resolvedItems.length);
+  }, [resolvedItems.length]);
 
   const handlePrev = useCallback(() => {
     setDirection(-1);
-    setActiveIndex((prev) => (prev - 1 + items.length) % items.length);
-  }, [items.length]);
+    setActiveIndex((prev) => (prev - 1 + resolvedItems.length) % resolvedItems.length);
+  }, [resolvedItems.length]);
 
   const handleTabClick = (index: number) => {
     if (index === activeIndex) return;
@@ -105,7 +138,7 @@ export function VerticalTabs({ items = PROCESS_STEPS }: { items?: ProcessItem[] 
           <div className="order-2 flex flex-col justify-center pt-2 lg:order-1 lg:col-span-5">
             <div className="mb-6 space-y-1">
               <h3 className="font-display text-balance text-2xl font-medium tracking-tight text-slate-900 md:text-3xl lg:text-4xl">
-                Comment je vous accompagne
+                {en ? "How I support your business" : "Comment je vous accompagne"}
               </h3>
               <span className="ml-0.5 block text-[10px] font-medium uppercase tracking-[0.3em] text-slate-500">
                 (PROCESS)
@@ -113,7 +146,7 @@ export function VerticalTabs({ items = PROCESS_STEPS }: { items?: ProcessItem[] 
             </div>
 
             <div className="flex flex-col">
-              {items.map((item, index) => {
+              {resolvedItems.map((item, index) => {
                 const isActive = activeIndex === index;
 
                 return (
@@ -172,11 +205,7 @@ export function VerticalTabs({ items = PROCESS_STEPS }: { items?: ProcessItem[] 
           </div>
 
           <div className="order-1 flex h-full flex-col justify-end lg:order-2 lg:col-span-7">
-            <div
-              className="relative"
-              onMouseEnter={() => setIsPaused(true)}
-              onMouseLeave={() => setIsPaused(false)}
-            >
+            <div className="relative" onMouseEnter={() => setIsPaused(true)} onMouseLeave={() => setIsPaused(false)}>
               <div className="relative aspect-[4/5] overflow-hidden rounded-3xl border border-white/70 bg-white/40 shadow-[0_24px_44px_rgba(123,156,206,0.2)] md:aspect-[4/3] md:rounded-[2.5rem] lg:aspect-[16/11]">
                 <AnimatePresence initial={false} custom={direction} mode="popLayout">
                   <motion.div
@@ -194,13 +223,12 @@ export function VerticalTabs({ items = PROCESS_STEPS }: { items?: ProcessItem[] 
                     onClick={handleNext}
                   >
                     <Image
-                      src={items[activeIndex].image}
-                      alt={items[activeIndex].title}
+                      src={resolvedItems[activeIndex].image}
+                      alt={resolvedItems[activeIndex].title}
                       fill
                       sizes="(max-width: 1024px) 100vw, 66vw"
                       className="block h-full w-full object-cover transition-transform duration-700 hover:scale-105"
                     />
-
                     <div className="absolute inset-x-0 bottom-0 h-1/3 bg-gradient-to-t from-black/30 via-transparent to-transparent opacity-70" />
                   </motion.div>
                 </AnimatePresence>
@@ -212,7 +240,7 @@ export function VerticalTabs({ items = PROCESS_STEPS }: { items?: ProcessItem[] 
                       handlePrev();
                     }}
                     className="flex h-10 w-10 items-center justify-center rounded-full border border-white/75 bg-white/80 text-slate-900 backdrop-blur-md transition-all hover:bg-white active:scale-90 md:h-12 md:w-12"
-                    aria-label="Étape précédente"
+                    aria-label={en ? "Previous step" : "Étape précédente"}
                   >
                     <ChevronLeft size={20} />
                   </button>
@@ -222,7 +250,7 @@ export function VerticalTabs({ items = PROCESS_STEPS }: { items?: ProcessItem[] 
                       handleNext();
                     }}
                     className="flex h-10 w-10 items-center justify-center rounded-full border border-white/75 bg-white/80 text-slate-900 backdrop-blur-md transition-all hover:bg-white active:scale-90 md:h-12 md:w-12"
-                    aria-label="Étape suivante"
+                    aria-label={en ? "Next step" : "Étape suivante"}
                   >
                     <ChevronRight size={20} />
                   </button>
@@ -237,3 +265,4 @@ export function VerticalTabs({ items = PROCESS_STEPS }: { items?: ProcessItem[] 
 }
 
 export default VerticalTabs;
+

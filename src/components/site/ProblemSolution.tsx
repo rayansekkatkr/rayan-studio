@@ -4,10 +4,11 @@ import { motion, useReducedMotion } from "framer-motion";
 import { AlertTriangle, BrainCircuit, ShieldCheck, TrendingUp, WandSparkles } from "lucide-react";
 import { useEffect, useState } from "react";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { isEnglish, type Locale } from "@/lib/i18n";
 import { Reveal } from "./Reveal";
 import { SectionHeading } from "./SectionHeading";
 
-const problems = [
+const problemsFr = [
   {
     title: "Image perçue trop standard",
     detail: "Le design ne reflète pas la qualité réelle du lieu.",
@@ -22,7 +23,22 @@ const problems = [
   },
 ];
 
-const solutions = [
+const problemsEn = [
+  {
+    title: "Perceived image feels too generic",
+    detail: "The design does not reflect the actual quality of the business.",
+  },
+  {
+    title: "Message is too unclear",
+    detail: "The offer is not understood immediately.",
+  },
+  {
+    title: "Journey lacks engagement",
+    detail: "Booking, calling, or inquiring remains too difficult.",
+  },
+];
+
+const solutionsFr = [
   {
     title: "Direction visuelle signature",
     detail: "Une identité claire qui élève instantanément la perception.",
@@ -37,13 +53,38 @@ const solutions = [
   },
 ];
 
-const miniObjects = [
+const solutionsEn = [
+  {
+    title: "Signature visual direction",
+    detail: "A clear identity that instantly elevates perception.",
+  },
+  {
+    title: "Structured storytelling",
+    detail: "Each section reassures, proves value, and drives action.",
+  },
+  {
+    title: "Conversion-focused UX",
+    detail: "Key actions become natural and fast.",
+  },
+];
+
+const miniObjectsFr = [
   { label: "Clarté", value: "x2", icon: BrainCircuit, position: "left-2 top-3" },
   { label: "Confiance", value: "+64%", icon: ShieldCheck, position: "right-0 top-16" },
   { label: "Conversion", value: "+41%", icon: TrendingUp, position: "left-5 bottom-4" },
 ];
 
-export function ProblemSolution() {
+const miniObjectsEn = [
+  { label: "Clarity", value: "x2", icon: BrainCircuit, position: "left-2 top-3" },
+  { label: "Trust", value: "+64%", icon: ShieldCheck, position: "right-0 top-16" },
+  { label: "Conversion", value: "+41%", icon: TrendingUp, position: "left-5 bottom-4" },
+];
+
+export function ProblemSolution({ locale = "fr" }: { locale?: Locale }) {
+  const en = isEnglish(locale);
+  const problems = en ? problemsEn : problemsFr;
+  const solutions = en ? solutionsEn : solutionsFr;
+  const miniObjects = en ? miniObjectsEn : miniObjectsFr;
   const [isMobile, setIsMobile] = useState(false);
   const reducedMotion = useReducedMotion();
   const shouldAnimate = !reducedMotion && !isMobile;
@@ -61,9 +102,13 @@ export function ProblemSolution() {
       <div className="mx-auto max-w-7xl">
         <Reveal>
           <SectionHeading
-            eyebrow="Problème / Solution"
-            title="Du site correct au site qui inspire confiance"
-            description="Une lecture visuelle simple: ce qui freine aujourd'hui, ce qui change après refonte, et pourquoi cela agit sur la perception."
+            eyebrow={en ? "Problem / Solution" : "Problème / Solution"}
+            title={en ? "From a decent site to a trust-building website" : "Du site correct au site qui inspire confiance"}
+            description={
+              en
+                ? "A simple visual read: what slows growth today, what changes after redesign, and why it improves perception."
+                : "Une lecture visuelle simple: ce qui freine aujourd'hui, ce qui change après refonte, et pourquoi cela agit sur la perception."
+            }
           />
         </Reveal>
 
@@ -77,7 +122,7 @@ export function ProblemSolution() {
                   <CardHeader className="pb-3">
                     <CardTitle className="flex items-center gap-2 text-lg text-white md:text-xl">
                       <AlertTriangle size={17} className="text-rose-300" />
-                      Avant : ce qui freine
+                      {en ? "Before: what blocks growth" : "Avant : ce qui freine"}
                     </CardTitle>
                   </CardHeader>
                   <CardContent className="space-y-2.5">
@@ -127,14 +172,14 @@ export function ProblemSolution() {
 
                 <motion.div
                   className="glass-panel-strong relative z-20 mt-16 rounded-[26px] px-6 py-7 text-center shadow-[0_24px_40px_rgba(119,154,217,0.3)]"
-                  animate={
-                    shouldAnimate ? { y: [0, -7, 0], scale: [1, 1.01, 1] } : undefined
-                  }
+                  animate={shouldAnimate ? { y: [0, -7, 0], scale: [1, 1.01, 1] } : undefined}
                   transition={{ duration: 5.3, repeat: Infinity, ease: "easeInOut" }}
                 >
                   <p className="text-[11px] font-semibold uppercase tracking-[0.16em] text-[#2f6dff]">AI Design Uplift</p>
-                  <p className="font-display mt-2 text-2xl font-semibold text-slate-900">Transformation</p>
-                  <p className="mt-2 text-sm text-slate-600">Design + stratégie + conversion</p>
+                  <p className="font-display mt-2 text-2xl font-semibold text-slate-900">{en ? "Transformation" : "Transformation"}</p>
+                  <p className="mt-2 text-sm text-slate-600">
+                    {en ? "Design + strategy + conversion" : "Design + stratégie + conversion"}
+                  </p>
                 </motion.div>
               </div>
             </Reveal>
@@ -145,7 +190,7 @@ export function ProblemSolution() {
                   <CardHeader className="pb-3">
                     <CardTitle className="flex items-center gap-2 text-lg text-slate-900 md:text-xl">
                       <WandSparkles size={17} className="text-[#2f6dff]" />
-                      Après : ce qui change
+                      {en ? "After: what changes" : "Après : ce qui change"}
                     </CardTitle>
                   </CardHeader>
                   <CardContent className="space-y-2.5">

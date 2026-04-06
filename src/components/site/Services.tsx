@@ -4,11 +4,12 @@ import { motion, useReducedMotion } from "framer-motion";
 import { ArrowUpRight, CheckCircle2, Layers3, RefreshCw, Sparkles } from "lucide-react";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
+import { isEnglish, type Locale } from "@/lib/i18n";
 import { Card } from "@/components/ui/card";
 import { Reveal } from "./Reveal";
 import { SectionHeading } from "./SectionHeading";
 
-const services = [
+const servicesFr = [
   {
     icon: Layers3,
     tag: "Création",
@@ -31,9 +32,36 @@ const services = [
   },
 ];
 
-const trustPills = ["+120 commerces accompagnés", "Prototype en 72h", "4,9/5 de satisfaction"];
+const servicesEn = [
+  {
+    icon: Layers3,
+    tag: "Creation",
+    title: "New website creation",
+    subtitle: "Launch your website from scratch",
+    description:
+      "A premium showcase website designed to make your business feel more credible and desirable from the very first seconds.",
+    outcomes: ["Signature art direction", "Conversion-focused UX structure", "Smooth Next.js development"],
+    cta: "Create my website",
+  },
+  {
+    icon: RefreshCw,
+    tag: "Redesign",
+    title: "Existing website redesign",
+    subtitle: "Upgrade your digital image",
+    description:
+      "I transform your current website into a clearer, more modern, and more reassuring experience from the first screen.",
+    outcomes: ["Perception & conversion audit", "Premium UI redesign", "Clearer and more persuasive journey"],
+    cta: "Redesign my website",
+  },
+];
 
-export function Services() {
+const trustPillsFr = ["+120 commerces accompagnés", "Prototype en 72h", "4,9/5 de satisfaction"];
+const trustPillsEn = ["120+ businesses supported", "Prototype in 72h", "4.9/5 satisfaction"];
+
+export function Services({ locale = "fr" }: { locale?: Locale }) {
+  const en = isEnglish(locale);
+  const services = en ? servicesEn : servicesFr;
+  const trustPills = en ? trustPillsEn : trustPillsFr;
   const reducedMotion = useReducedMotion();
 
   return (
@@ -45,8 +73,12 @@ export function Services() {
         <Reveal>
           <SectionHeading
             eyebrow="Services"
-            title="Deux offres, un même objectif: faire monter votre commerce en gamme"
-            description="Deux offres lisibles, orientées résultat: meilleure perception, message plus clair et conversion mieux guidée."
+            title={en ? "Two offers, one objective: elevate your business image" : "Deux offres, un même objectif: faire monter votre commerce en gamme"}
+            description={
+              en
+                ? "Two clear offers focused on outcomes: better perception, clearer messaging, and stronger conversion."
+                : "Deux offres lisibles, orientées résultat: meilleure perception, message plus clair et conversion mieux guidée."
+            }
           />
         </Reveal>
 
@@ -101,11 +133,11 @@ export function Services() {
                     <div className="mt-6 flex items-center justify-between">
                       <Badge variant="neutral" className="border-white/80 bg-white/78 text-slate-700">
                         <Sparkles size={12} className="mr-1 text-[#2f6dff]" />
-                        Positionnement haut de gamme
+                        {en ? "Premium positioning" : "Positionnement haut de gamme"}
                       </Badge>
 
                       <Button asChild size="sm" className="h-10 px-5">
-                        <a href="#contact">{service.cta}</a>
+                        <a href={`/${locale}#contact`}>{service.cta}</a>
                       </Button>
                     </div>
                   </div>

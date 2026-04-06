@@ -1,10 +1,11 @@
 "use client";
 
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
+import { isEnglish, type Locale } from "@/lib/i18n";
 import { Reveal } from "./Reveal";
 import { SectionHeading } from "./SectionHeading";
 
-const faq = [
+const faqFr = [
   {
     q: "Combien de temps prend un projet ?",
     a: "La plupart des projets sont livrés entre 1 et 3 semaines selon le périmètre. Une première direction visuelle est généralement présentée sous 72h.",
@@ -23,15 +24,41 @@ const faq = [
   },
 ];
 
-export function Faq() {
+const faqEn = [
+  {
+    q: "How long does a project take?",
+    a: "Most projects are delivered in 1 to 3 weeks depending on scope. A first visual direction is usually shared within 72 hours.",
+  },
+  {
+    q: "Can we keep content from my current site?",
+    a: "Yes. I keep relevant content and rework structure, hierarchy, and tone to improve clarity and impact.",
+  },
+  {
+    q: "Is the site mobile-optimized?",
+    a: "Yes. Mobile experience is a priority: readability, performance, and clear conversion actions.",
+  },
+  {
+    q: "Which businesses do you work with?",
+    a: "Mainly restaurants, cafes, hotels, bakeries, pastry shops, bars, and local businesses looking to upgrade their online image.",
+  },
+];
+
+export function Faq({ locale = "fr" }: { locale?: Locale }) {
+  const en = isEnglish(locale);
+  const faq = en ? faqEn : faqFr;
+
   return (
     <section id="faq" className="section-screen px-4 md:px-8">
       <div className="mx-auto max-w-7xl">
         <Reveal>
           <SectionHeading
             eyebrow="FAQ"
-            title="Questions fréquentes"
-            description="Des réponses concrètes pour savoir exactement comment se déroule la collaboration."
+            title={en ? "Frequently asked questions" : "Questions fréquentes"}
+            description={
+              en
+                ? "Clear answers so you understand exactly how collaboration works."
+                : "Des réponses concrètes pour savoir exactement comment se déroule la collaboration."
+            }
             center
           />
         </Reveal>

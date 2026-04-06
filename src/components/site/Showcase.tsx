@@ -6,10 +6,11 @@ import { ArrowUpRight, ExternalLink } from "lucide-react";
 import { TextRotate, type TextRotateRef } from "@/components/ui/text-rotate";
 import { Button } from "@/components/ui/button";
 import { trackEvent } from "@/lib/analytics";
+import { isEnglish, type Locale } from "@/lib/i18n";
 import { Reveal } from "./Reveal";
 import { SectionHeading } from "./SectionHeading";
 
-const projects = [
+const projectsFr = [
   {
     id: "manteigaria",
     name: "Manteigaria — Avant / Après",
@@ -53,7 +54,51 @@ const projects = [
   },
 ];
 
-const caseStudies = [
+const projectsEn = [
+  {
+    id: "manteigaria",
+    name: "Manteigaria — Before / After",
+    designation: "Artisan bakery • Local business",
+    quote:
+      "From a dense website to a clearer and more narrative experience. Result: stronger brand perception and a smoother path to action.",
+    projectUrl: "https://manteigaria-redesign.vercel.app/",
+    beforeUrl: "https://manteigaria.com/fr/",
+    src: "/realisations/manteigaria-before.png",
+    segment: "Core food & hospitality target",
+  },
+  {
+    id: "pick4me",
+    name: "Pick4Me",
+    designation: "Local platform • Mobility & businesses",
+    quote:
+      "Visual redesign focused on clarity: immediate positioning, cleaner sections, and more convincing storytelling from the first seconds.",
+    projectUrl: "https://pick4me.be/",
+    src: "/realisations/pick4me.png",
+    segment: "Core local target",
+  },
+  {
+    id: "docextract",
+    name: "DocExtract",
+    designation: "B2B SaaS • Execution reference",
+    quote:
+      "More structured presentation to communicate business value quickly: better information hierarchy and stronger credibility.",
+    projectUrl: "https://www.getdocextract.com/",
+    src: "/realisations/docextract.png",
+    segment: "Non-hospitality reference",
+  },
+  {
+    id: "facturx",
+    name: "Pont Factur-X",
+    designation: "B2B Finance • Execution reference",
+    quote:
+      "Design optimization to make expertise more tangible: cleaner editorial structure, more visible trust signals, and easier contact actions.",
+    projectUrl: "https://www.pont-facturx.com/",
+    src: "/realisations/pont-facturx.png",
+    segment: "Non-hospitality reference",
+  },
+];
+
+const caseStudiesFr = [
   {
     title: "Hôtel indépendant",
     context: "Refonte d'un site vitrine daté avec peu de demandes directes.",
@@ -80,15 +125,44 @@ const caseStudies = [
   },
 ];
 
+const caseStudiesEn = [
+  {
+    title: "Independent hotel",
+    context: "Redesign of an outdated showcase site with low direct inquiries.",
+    action: "Clearer hierarchy, visible CTAs, and simplified mobile journey.",
+    result: "+41% inquiries over 30 days",
+    period: "January 2026",
+    source: "Form leads + WhatsApp comparison",
+  },
+  {
+    title: "Neighborhood cafe",
+    context: "Low differentiation and key information hard to find.",
+    action: "New storytelling with useful sections above the fold.",
+    result: "+24 WhatsApp messages over 30 days",
+    period: "December 2025",
+    source: "WhatsApp Business export",
+  },
+  {
+    title: "Artisan bakery",
+    context: "Products and craftsmanship were not highlighted enough.",
+    action: "More visual product showcase and conversion-focused navigation.",
+    result: "+26% orders / catering requests",
+    period: "February 2026",
+    source: "Orders + inbound requests tracking",
+  },
+];
+
 function ProjectThumb({
   index,
   image,
   title,
+  ariaPrefix,
   onClick,
 }: {
   index: number;
   image: string;
   title: string;
+  ariaPrefix: string;
   onClick: (index: number) => void;
 }) {
   return (
@@ -97,7 +171,7 @@ function ProjectThumb({
         type="button"
         onClick={() => onClick(index)}
         className="group relative h-24 w-full overflow-hidden rounded-2xl border border-white/85 bg-white/70 text-left shadow-[0_10px_22px_rgba(123,157,217,0.22)]"
-        aria-label={`Afficher ${title}`}
+        aria-label={`${ariaPrefix} ${title}`}
       >
         <Image
           src={image}
@@ -113,7 +187,10 @@ function ProjectThumb({
   );
 }
 
-export function Showcase() {
+export function Showcase({ locale = "fr" }: { locale?: Locale }) {
+  const en = isEnglish(locale);
+  const projects = en ? projectsEn : projectsFr;
+  const caseStudies = en ? caseStudiesEn : caseStudiesFr;
   const textRotateRef = useRef<TextRotateRef>(null);
   const [activeIndex, setActiveIndex] = useState(0);
   const activeProject = projects[activeIndex];
@@ -121,7 +198,7 @@ export function Showcase() {
   const handleSelect = (index: number) => {
     setActiveIndex(index);
     textRotateRef.current?.jumpTo(index);
-    trackEvent("project_select", { project_id: projects[index].id, source: "showcase_thumb" });
+    trackEvent("project_select", { project_id: projects[index].id, source: "showcase_thumb", locale });
   };
 
   return (
@@ -129,9 +206,17 @@ export function Showcase() {
       <div className="mx-auto max-w-7xl">
         <Reveal>
           <SectionHeading
-            eyebrow="Réalisations"
-            title="Réalisations: transformations concrètes, avant / après visibles"
-            description="Un portfolio centré commerces locaux, complété par quelques références B2B pour montrer le niveau d'exécution."
+            eyebrow={en ? "Work" : "Réalisations"}
+            title={
+              en
+                ? "Work: concrete transformations with visible before/after"
+                : "Réalisations: transformations concrètes, avant / après visibles"
+            }
+            description={
+              en
+                ? "A portfolio focused on local businesses, completed with selected B2B references to show execution quality."
+                : "Un portfolio centré commerces locaux, complété par quelques références B2B pour montrer le niveau d'exécution."
+            }
           />
         </Reveal>
 
@@ -152,7 +237,9 @@ export function Showcase() {
             ))}
           </div>
           <p className="mt-3 text-xs text-slate-500">
-            Exemples synthétisés à partir de cas projets et retours clients sur 30 jours post-livraison.
+            {en
+              ? "Examples synthesized from project cases and client feedback over 30 days post-delivery."
+              : "Exemples synthétisés à partir de cas projets et retours clients sur 30 jours post-livraison."}
           </p>
         </Reveal>
 
@@ -161,7 +248,7 @@ export function Showcase() {
             <div className="pointer-events-none absolute -left-16 top-8 h-44 w-44 rounded-full bg-[#a4c7ff]/34 blur-[78px]" />
             <div className="pointer-events-none absolute -right-14 bottom-5 h-48 w-48 rounded-full bg-white/50 blur-[88px]" />
             <div className="absolute left-5 top-5 z-20 rounded-full border border-white/85 bg-white/90 px-3 py-1 text-[11px] font-semibold uppercase tracking-[0.13em] text-[#2f6dff] shadow-[0_10px_20px_rgba(122,157,220,0.22)] backdrop-blur-xl">
-              Projet actif
+              {en ? "Active project" : "Projet actif"}
             </div>
 
             <div className="relative grid gap-5 lg:grid-cols-[1.2fr_0.8fr]">
@@ -178,7 +265,9 @@ export function Showcase() {
                 </div>
 
                 <div className="mt-4">
-                  <p className="text-xs font-semibold uppercase tracking-[0.14em] text-slate-500">Projet en focus</p>
+                  <p className="text-xs font-semibold uppercase tracking-[0.14em] text-slate-500">
+                    {en ? "Project in focus" : "Projet en focus"}
+                  </p>
                   <TextRotate
                     ref={textRotateRef}
                     texts={projects.map((project) => project.name)}
@@ -202,13 +291,13 @@ export function Showcase() {
                   <div className="mt-4 flex flex-wrap gap-2.5">
                     {activeProject.beforeUrl ? (
                       <Button asChild variant="outline" size="sm" className="h-9">
-                        <a
-                          href={activeProject.beforeUrl}
-                          target="_blank"
-                          rel="noreferrer"
-                          onClick={() => trackEvent("project_before_click", { project_id: activeProject.id })}
-                        >
-                          Voir avant
+                      <a
+                        href={activeProject.beforeUrl}
+                        target="_blank"
+                        rel="noreferrer"
+                        onClick={() => trackEvent("project_before_click", { project_id: activeProject.id, locale })}
+                      >
+                          {en ? "View before" : "Voir avant"}
                         </a>
                       </Button>
                     ) : null}
@@ -217,9 +306,9 @@ export function Showcase() {
                         href={activeProject.projectUrl}
                         target="_blank"
                         rel="noreferrer"
-                        onClick={() => trackEvent("project_view_click", { project_id: activeProject.id })}
+                        onClick={() => trackEvent("project_view_click", { project_id: activeProject.id, locale })}
                       >
-                        Voir le projet
+                        {en ? "View project" : "Voir le projet"}
                         <ExternalLink size={14} className="ml-2" />
                       </a>
                     </Button>
@@ -229,9 +318,11 @@ export function Showcase() {
 
               <div className="rounded-[26px] border border-white/80 bg-white/66 p-3 backdrop-blur-2xl">
                 <div className="mb-2 flex items-center justify-between px-1">
-                  <p className="text-[11px] font-semibold uppercase tracking-[0.14em] text-slate-500">Sélection visuelle</p>
+                  <p className="text-[11px] font-semibold uppercase tracking-[0.14em] text-slate-500">
+                    {en ? "Visual selection" : "Sélection visuelle"}
+                  </p>
                   <span className="inline-flex items-center gap-1 text-[11px] font-semibold uppercase tracking-[0.12em] text-[#2f6dff]">
-                    Cliquer pour changer
+                    {en ? "Click to switch" : "Cliquer pour changer"}
                     <ArrowUpRight size={12} />
                   </span>
                 </div>
@@ -243,6 +334,7 @@ export function Showcase() {
                       index={index}
                       image={project.src}
                       title={project.name}
+                      ariaPrefix={en ? "Show" : "Afficher"}
                       onClick={handleSelect}
                     />
                   ))}

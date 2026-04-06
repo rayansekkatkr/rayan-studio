@@ -3,10 +3,11 @@
 import Image from "next/image";
 import { motion } from "framer-motion";
 import { TestimonialsColumn, type TestimonialsColumnItem } from "@/components/ui/testimonials-columns-1";
+import { isEnglish, type Locale } from "@/lib/i18n";
 import { Reveal } from "./Reveal";
 import { SectionHeading } from "./SectionHeading";
 
-const testimonials: TestimonialsColumnItem[] = [
+const testimonialsFr: TestimonialsColumnItem[] = [
   {
     name: "Claire Dubois",
     role: "Gérante • Café de quartier, Lille",
@@ -51,20 +52,71 @@ const testimonials: TestimonialsColumnItem[] = [
   },
 ];
 
-const firstColumn = testimonials.slice(0, 2);
-const secondColumn = testimonials.slice(2, 4);
-const thirdColumn = testimonials.slice(4, 6);
-const mobileCards = testimonials.slice(0, 3);
+const testimonialsEn: TestimonialsColumnItem[] = [
+  {
+    name: "Claire Dubois",
+    role: "Owner • Neighborhood cafe, Lille",
+    text: "The new website made our offer clear in seconds. We now get more direct inquiries than before.",
+    image:
+      "https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&q=80&w=240&h=240",
+  },
+  {
+    name: "Hugo Martin",
+    role: "Manager • Independent hotel, Annecy",
+    text: "The new visual direction instantly builds more trust. Contact rate increased from the first month.",
+    image:
+      "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?auto=format&fit=crop&q=80&w=240&h=240",
+  },
+  {
+    name: "Sofia Ribeiro",
+    role: "Founder • Pastry shop, Bordeaux",
+    text: "We gained brand consistency and clarity. Clients now understand our world and products much better.",
+    image:
+      "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?auto=format&fit=crop&q=80&w=240&h=240",
+  },
+  {
+    name: "Jules Tardieu",
+    role: "Owner • Restaurant, Nantes",
+    text: "The mobile journey is far smoother now. Reservations come in without friction.",
+    image:
+      "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&q=80&w=240&h=240",
+  },
+  {
+    name: "Maya Laurent",
+    role: "Co-founder • Wine bar, Paris",
+    text: "Everything feels more elegant and easier to browse. You can clearly feel the premium shift in our image.",
+    image:
+      "https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&q=80&w=240&h=240",
+  },
+  {
+    name: "Nassim Benali",
+    role: "Owner • Bakery, Lyon",
+    text: "The design finally reflects the quality of our craft. Client feedback has been excellent.",
+    image:
+      "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&q=80&w=240&h=240",
+  },
+];
 
-export function Testimonials() {
+export function Testimonials({ locale = "fr" }: { locale?: Locale }) {
+  const en = isEnglish(locale);
+  const testimonials = en ? testimonialsEn : testimonialsFr;
+  const firstColumn = testimonials.slice(0, 2);
+  const secondColumn = testimonials.slice(2, 4);
+  const thirdColumn = testimonials.slice(4, 6);
+  const mobileCards = testimonials.slice(0, 3);
+
   return (
     <section id="temoignages" className="section-screen px-4 md:px-8">
       <div className="mx-auto max-w-7xl">
         <Reveal>
           <SectionHeading
-            eyebrow="Témoignages"
-            title="Des retours qui confirment l'impact"
-            description="Des retours clients structurés par métier, pour montrer des bénéfices concrets et lisibles."
+            eyebrow={en ? "Testimonials" : "Témoignages"}
+            title={en ? "Client feedback that confirms impact" : "Des retours qui confirment l'impact"}
+            description={
+              en
+                ? "Client feedback structured by business type, showing concrete and measurable benefits."
+                : "Des retours clients structurés par métier, pour montrer des bénéfices concrets et lisibles."
+            }
             center
           />
         </Reveal>

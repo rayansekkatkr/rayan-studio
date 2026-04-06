@@ -18,8 +18,10 @@ function updateConsent(granted: boolean) {
 
 export function CookieConsent() {
   const [visible, setVisible] = useState(false);
+  const [isEnglish, setIsEnglish] = useState(false);
 
   useEffect(() => {
+    setIsEnglish(window.location.pathname.startsWith("/en"));
     const saved = window.localStorage.getItem(CONSENT_KEY);
     if (saved === "accepted") {
       updateConsent(true);
@@ -37,11 +39,12 @@ export function CookieConsent() {
   return (
     <aside className="fixed inset-x-3 bottom-3 z-[80] mx-auto w-full max-w-4xl rounded-2xl border border-white/85 bg-white/92 p-4 shadow-[0_20px_40px_rgba(109,141,196,0.25)] backdrop-blur-xl">
       <p className="text-sm text-slate-700">
-        Nous utilisons des cookies de mesure d&apos;audience pour améliorer le site. Tu peux accepter ou refuser ces
-        cookies.
+        {isEnglish
+          ? "We use analytics cookies to improve the website. You can accept or decline these cookies."
+          : "Nous utilisons des cookies de mesure d'audience pour améliorer le site. Vous pouvez accepter ou refuser ces cookies."}
         {" "}
         <Link href="/politique-confidentialite" className="font-semibold text-[#2f6dff] underline underline-offset-2">
-          En savoir plus
+          {isEnglish ? "Learn more" : "En savoir plus"}
         </Link>
       </p>
       <div className="mt-3 flex flex-wrap gap-2.5">
@@ -55,7 +58,7 @@ export function CookieConsent() {
             setVisible(false);
           }}
         >
-          Accepter
+          {isEnglish ? "Accept" : "Accepter"}
         </button>
         <button
           type="button"
@@ -67,7 +70,7 @@ export function CookieConsent() {
             setVisible(false);
           }}
         >
-          Refuser
+          {isEnglish ? "Decline" : "Refuser"}
         </button>
       </div>
     </aside>

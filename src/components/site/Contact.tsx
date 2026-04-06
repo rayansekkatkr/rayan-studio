@@ -8,9 +8,11 @@ import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { trackEvent } from "@/lib/analytics";
 import { BRAND } from "@/lib/brand";
+import { isEnglish, type Locale } from "@/lib/i18n";
 import { SectionHeading } from "./SectionHeading";
 
-export function Contact() {
+export function Contact({ locale = "fr" }: { locale?: Locale }) {
+  const en = isEnglish(locale);
   const [isSent, setIsSent] = useState(false);
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [errorMessage, setErrorMessage] = useState<string | null>(null);
@@ -29,9 +31,13 @@ export function Contact() {
           <Card className="h-full">
             <CardHeader>
               <SectionHeading
-                eyebrow="Contact"
-                title="Discutons de votre projet"
-                description="Je vous propose une première direction claire pour créer ou refondre votre site. Réponse en moins de 24h."
+                eyebrow={en ? "Contact" : "Contact"}
+                title={en ? "Let's discuss your project" : "Discutons de votre projet"}
+                description={
+                  en
+                    ? "I'll provide a clear first direction to create or redesign your website. Reply within 24h."
+                    : "Je vous propose une première direction claire pour créer ou refondre votre site. Réponse en moins de 24h."
+                }
               />
             </CardHeader>
             <CardContent className="space-y-4">
@@ -58,7 +64,7 @@ export function Contact() {
 
           <Card>
             <CardHeader>
-              <CardTitle>Parlez-moi de votre besoin</CardTitle>
+              <CardTitle>{en ? "Tell me about your needs" : "Parlez-moi de votre besoin"}</CardTitle>
             </CardHeader>
             <CardContent>
               <form
@@ -102,11 +108,11 @@ export function Contact() {
                 <div className="grid gap-4 md:grid-cols-2">
                   <div className="space-y-2">
                     <label htmlFor="firstName" className="text-sm font-semibold text-slate-800">
-                      Prénom
+                      {en ? "First name" : "Prénom"}
                     </label>
                     <Input
                       id="firstName"
-                      placeholder="Marie"
+                      placeholder={en ? "Marie" : "Marie"}
                       value={formData.firstName}
                       onChange={(event) => setFormData((prev) => ({ ...prev, firstName: event.target.value }))}
                       required
@@ -114,11 +120,11 @@ export function Contact() {
                   </div>
                   <div className="space-y-2">
                     <label htmlFor="businessType" className="text-sm font-semibold text-slate-800">
-                      Type de commerce
+                      {en ? "Business type" : "Type de commerce"}
                     </label>
                     <Input
                       id="businessType"
-                      placeholder="Restaurant, hôtel, café..."
+                      placeholder={en ? "Restaurant, hotel, cafe..." : "Restaurant, hôtel, café..."}
                       value={formData.businessType}
                       onChange={(event) => setFormData((prev) => ({ ...prev, businessType: event.target.value }))}
                       required
@@ -133,7 +139,7 @@ export function Contact() {
                   <Input
                     id="email"
                     type="email"
-                    placeholder="vous@commerce.fr"
+                    placeholder={en ? "you@business.com" : "vous@commerce.fr"}
                     value={formData.email}
                     onChange={(event) => setFormData((prev) => ({ ...prev, email: event.target.value }))}
                     required
@@ -142,12 +148,16 @@ export function Contact() {
 
                 <div className="space-y-2">
                   <label htmlFor="message" className="text-sm font-semibold text-slate-800">
-                    Votre besoin
+                    {en ? "Your request" : "Votre besoin"}
                   </label>
                   <Textarea
                     id="message"
                     rows={5}
-                    placeholder="Création ou refonte ? Vos objectifs ? Votre délai ?"
+                    placeholder={
+                      en
+                        ? "Creation or redesign? Your goals? Your timeline?"
+                        : "Création ou refonte ? Vos objectifs ? Votre délai ?"
+                    }
                     value={formData.message}
                     onChange={(event) => setFormData((prev) => ({ ...prev, message: event.target.value }))}
                     required
@@ -165,17 +175,21 @@ export function Contact() {
                 />
 
                 <Button type="submit" className="w-full" disabled={isSubmitting}>
-                  {isSubmitting ? "Envoi en cours..." : "Envoyer ma demande"}
+                  {isSubmitting ? (en ? "Sending..." : "Envoi en cours...") : en ? "Send my request" : "Envoyer ma demande"}
                   <ArrowRight size={15} className="ml-2" />
                 </Button>
 
                 <p className="text-xs uppercase tracking-[0.12em] text-slate-500">
-                  Sans engagement • Réponse sous 24h • WhatsApp direct disponible
+                  {en
+                    ? "No commitment • Reply within 24h • Direct WhatsApp available"
+                    : "Sans engagement • Réponse sous 24h • WhatsApp direct disponible"}
                 </p>
 
                 {isSent ? (
                   <p className="rounded-xl border border-[#d5e5ff] bg-[#edf4ff] px-3 py-2 text-sm font-medium text-[#1f5ed4]">
-                    Merci, votre demande est bien envoyée. Je vous réponds très vite.
+                    {en
+                      ? "Thank you, your request has been sent successfully. I'll reply very soon."
+                      : "Merci, votre demande est bien envoyée. Je vous réponds très vite."}
                   </p>
                 ) : null}
                 {errorMessage ? (

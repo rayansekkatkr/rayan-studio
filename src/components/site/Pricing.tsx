@@ -3,11 +3,12 @@
 import { motion } from "framer-motion";
 import { Check, Sparkles } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { isEnglish, type Locale } from "@/lib/i18n";
 import { Card, CardContent, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
 import { Reveal } from "./Reveal";
 import { SectionHeading } from "./SectionHeading";
 
-const plans = [
+const plansFr = [
   {
     name: "Essentiel",
     price: "500€",
@@ -37,15 +38,46 @@ const plans = [
   },
 ];
 
-export function Pricing() {
+const plansEn = [
+  {
+    name: "Essential",
+    price: "€500",
+    description: "Launch a clean and credible online presence quickly.",
+    features: ["Polished one-page website", "Custom design", "Fully responsive", "Go-live setup"],
+    featured: false,
+  },
+  {
+    name: "Pro",
+    price: "€1000",
+    description: "Ideal offer to elevate the image of a local business.",
+    features: ["Advanced structure", "Refined animations", "Before/After section", "Conversion optimization", "Launch support"],
+    featured: true,
+  },
+  {
+    name: "Premium",
+    price: "Custom quote",
+    description: "For ambitious projects with specific requirements.",
+    features: ["Advanced creative direction", "Strategic content", "Custom integrations", "Dedicated support"],
+    featured: false,
+  },
+];
+
+export function Pricing({ locale = "fr" }: { locale?: Locale }) {
+  const en = isEnglish(locale);
+  const plans = en ? plansEn : plansFr;
+
   return (
     <section id="tarifs" className="section-screen px-4 md:px-8">
       <div className="mx-auto max-w-7xl">
         <Reveal>
           <SectionHeading
-            eyebrow="Tarifs"
-            title="Des offres claires et transparentes"
-            description="Pas de formule floue : un cadre net pour obtenir un site qui améliore réellement votre image et vos conversions."
+            eyebrow={en ? "Pricing" : "Tarifs"}
+            title={en ? "Clear and transparent offers" : "Des offres claires et transparentes"}
+            description={
+              en
+                ? "No vague package: a clear framework to get a website that genuinely improves your image and conversions."
+                : "Pas de formule floue : un cadre net pour obtenir un site qui améliore réellement votre image et vos conversions."
+            }
             center
           />
         </Reveal>
@@ -65,7 +97,7 @@ export function Pricing() {
                     {plan.featured && (
                       <div className="inline-flex w-fit items-center gap-2 rounded-full border border-[#d4e4ff] bg-white/82 px-3 py-1 text-xs font-semibold uppercase tracking-[0.14em] text-[#2f6dff]">
                         <Sparkles size={12} />
-                        Le plus choisi
+                        {en ? "Most chosen" : "Le plus choisi"}
                       </div>
                     )}
                     <CardTitle className="mt-3">{plan.name}</CardTitle>
@@ -88,7 +120,7 @@ export function Pricing() {
 
                   <CardFooter className="mt-auto">
                     <Button asChild variant={plan.featured ? "default" : "glass"} className="w-full">
-                      <a href="#contact">Choisir {plan.name}</a>
+                      <a href={`/${locale}#contact`}>{en ? "Choose" : "Choisir"} {plan.name}</a>
                     </Button>
                   </CardFooter>
                 </Card>

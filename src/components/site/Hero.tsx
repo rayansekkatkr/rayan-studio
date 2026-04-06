@@ -9,21 +9,27 @@ import {
   useTransform,
   type MotionStyle,
 } from "framer-motion";
-import {
-  ArrowRight,
-  BriefcaseBusiness,
-  Clock3,
-  Sparkles,
-  Star,
-} from "lucide-react";
+import { ArrowRight, BriefcaseBusiness, Clock3, Sparkles, Star } from "lucide-react";
 import { type MouseEvent, useEffect, useState } from "react";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { HeroLiquidShader } from "@/components/ui/hero-liquid-shader";
 import { trackEvent } from "@/lib/analytics";
+import { isEnglish, type Locale } from "@/lib/i18n";
 
-const trustSignals = [
+type SectorKey =
+  | "restaurant"
+  | "cafe"
+  | "hotel"
+  | "boulangerie"
+  | "patisserie"
+  | "bar"
+  | "commerce";
+
+const sectorOrder: SectorKey[] = ["restaurant", "cafe", "hotel", "boulangerie", "patisserie", "bar", "commerce"];
+
+const trustSignalsFr = [
   {
     icon: BriefcaseBusiness,
     value: "+120",
@@ -44,18 +50,28 @@ const trustSignals = [
   },
 ];
 
-type SectorKey =
-  | "restaurant"
-  | "cafe"
-  | "hotel"
-  | "boulangerie"
-  | "patisserie"
-  | "bar"
-  | "commerce";
+const trustSignalsEn = [
+  {
+    icon: BriefcaseBusiness,
+    value: "120+",
+    label: "businesses supported",
+    note: "Projects delivered between 2023 and 2026",
+  },
+  {
+    icon: Star,
+    value: "4.9/5",
+    label: "satisfaction",
+    note: "Average post-delivery client feedback",
+  },
+  {
+    icon: Clock3,
+    value: "72h",
+    label: "first mockup",
+    note: "First visual direction delivered quickly",
+  },
+];
 
-const sectorOrder: SectorKey[] = ["restaurant", "cafe", "hotel", "boulangerie", "patisserie", "bar", "commerce"];
-
-const sectorScenarios: Record<
+const sectorScenariosFr: Record<
   SectorKey,
   {
     label: string;
@@ -140,6 +156,79 @@ const sectorScenarios: Record<
   },
 };
 
+const sectorScenariosEn: Record<SectorKey, (typeof sectorScenariosFr)[SectorKey]> = {
+  restaurant: {
+    label: "Restaurant",
+    subtitle: "A website that creates appetite, builds trust fast, and drives bookings.",
+    proofMain: "+28% bookings",
+    proofNote: "Measured over 30 days after redesign",
+    proofSource: "Source: booking comparison, January 2026",
+    before: "Hard-to-read menu, hidden reservation action",
+    after: "Clear menu, booking visible in 1 click",
+    actionKpi: "+31 calls / month",
+  },
+  cafe: {
+    label: "Cafe",
+    subtitle: "A warm website that highlights your atmosphere and your products.",
+    proofMain: "+22% inquiries",
+    proofNote: "Measured over 30 days after redesign",
+    proofSource: "Source: WhatsApp Business, December 2025",
+    before: "Unclear concept, scattered information",
+    after: "Clear positioning, key info shown first",
+    actionKpi: "+24 WhatsApp messages",
+  },
+  hotel: {
+    label: "Hotel",
+    subtitle: "A more premium website that builds trust before guests even arrive.",
+    proofMain: "+41% inquiries",
+    proofNote: "Real case on an independent hotel",
+    proofSource: "Source: form leads, January 2026",
+    before: "Generic image, weak differentiation",
+    after: "Premium presentation, smooth journey",
+    actionKpi: "+19 qualified contacts",
+  },
+  boulangerie: {
+    label: "Bakery",
+    subtitle: "A website that elevates your craft and your signature products.",
+    proofMain: "+26% orders",
+    proofNote: "Measured over 30 days after redesign",
+    proofSource: "Source: orders + catering requests, February 2026",
+    before: "Products not highlighted enough",
+    after: "Products featured in hero, simpler navigation",
+    actionKpi: "+18 catering requests",
+  },
+  patisserie: {
+    label: "Pastry shop",
+    subtitle: "A refined digital storefront that creates desire in a few seconds.",
+    proofMain: "+29% contact requests",
+    proofNote: "Measured over 30 days after redesign",
+    proofSource: "Source: inbound requests, November 2025",
+    before: "Brand universe not clearly expressed",
+    after: "Consistent and desirable visual identity",
+    actionKpi: "+27 event requests",
+  },
+  bar: {
+    label: "Bar",
+    subtitle: "A website that showcases your vibe and makes group bookings easy.",
+    proofMain: "+23% bookings",
+    proofNote: "Measured over 30 days after redesign",
+    proofSource: "Source: group reservations, October 2025",
+    before: "Hours/events information buried",
+    after: "Events, opening hours and CTAs clearly visible",
+    actionKpi: "+21 group bookings",
+  },
+  commerce: {
+    label: "Local business",
+    subtitle: "A clear and credible website that turns visits into inquiries.",
+    proofMain: "+25% inquiries",
+    proofNote: "Average observed after redesign",
+    proofSource: "Source: average across 8 local business projects",
+    before: "Unclear offer, message too generic",
+    after: "Explicit offer, immediate benefits",
+    actionKpi: "+30 leads / month",
+  },
+};
+
 const intro = {
   hidden: { opacity: 0 },
   show: {
@@ -166,7 +255,8 @@ const sectorSwap = {
   exit: { opacity: 0, y: -8, filter: "blur(3px)" },
 };
 
-export function Hero() {
+export function Hero({ locale = "fr" }: { locale?: Locale }) {
+  const en = isEnglish(locale);
   const [activeSector, setActiveSector] = useState<SectorKey>("restaurant");
   const [isMobile, setIsMobile] = useState(false);
   const [isLowPowerDevice, setIsLowPowerDevice] = useState(false);
@@ -184,7 +274,9 @@ export function Hero() {
 
   const shouldAnimate = !reducedMotion && !isMobile && !isLowPowerDevice;
   const base3dStyle: MotionStyle | undefined = shouldAnimate ? { rotateX, rotateY } : undefined;
+  const sectorScenarios = en ? sectorScenariosEn : sectorScenariosFr;
   const currentSector = sectorScenarios[activeSector];
+  const trustSignals = en ? trustSignalsEn : trustSignalsFr;
 
   useEffect(() => {
     const media = window.matchMedia("(max-width: 768px)");
@@ -268,7 +360,7 @@ export function Hero() {
           <motion.div variants={introItem}>
             <Badge className="gap-2 border-white/80 bg-white/82 shadow-[0_12px_24px_rgba(129,160,209,0.18)]">
               <Sparkles size={13} />
-              Sites vitrines pour commerces locaux
+              {en ? "Showcase websites for local businesses" : "Sites vitrines pour commerces locaux"}
             </Badge>
           </motion.div>
 
@@ -297,7 +389,7 @@ export function Hero() {
           <motion.div variants={introItem} className="mt-7">
             <AnimatePresence mode="wait">
               <motion.h1
-                key={`title-${activeSector}`}
+                key={`title-${activeSector}-${locale}`}
                 variants={sectorSwap}
                 initial="initial"
                 animate="animate"
@@ -305,9 +397,11 @@ export function Hero() {
                 transition={{ duration: 0.28, ease: [0.22, 1, 0.36, 1] }}
                 className="font-display text-4xl font-semibold leading-[1.01] text-slate-900 sm:text-5xl md:text-6xl"
               >
-                Votre {currentSector.label.toLowerCase()} mérite un site qui
+                {en
+                  ? `Your ${currentSector.label.toLowerCase()} deserves a website that`
+                  : `Votre ${currentSector.label.toLowerCase()} mérite un site qui`}
                 <span className="block bg-gradient-to-r from-[#1f58ce] via-[#2f6dff] to-[#74a8ff] bg-clip-text text-transparent">
-                  inspire confiance en 3 secondes.
+                  {en ? "builds trust in 3 seconds." : "inspire confiance en 3 secondes."}
                 </span>
               </motion.h1>
             </AnimatePresence>
@@ -316,7 +410,7 @@ export function Hero() {
           <motion.div variants={introItem} className="mt-7 max-w-xl">
             <AnimatePresence mode="wait">
               <motion.p
-                key={`subtitle-${activeSector}`}
+                key={`subtitle-${activeSector}-${locale}`}
                 variants={sectorSwap}
                 initial="initial"
                 animate="animate"
@@ -332,12 +426,17 @@ export function Hero() {
           <motion.div variants={introItem} className="mt-10 flex flex-wrap gap-4">
             <Button asChild size="lg" className="group relative overflow-hidden shimmer-btn">
               <a
-                href="#contact"
+                href={`/${locale}#contact`}
                 onClick={() =>
-                  trackEvent("cta_click", { location: "hero", cta: "voir_maquette", sector: activeSector })
+                  trackEvent("cta_click", {
+                    location: "hero",
+                    cta: en ? "see_mockup" : "voir_maquette",
+                    sector: activeSector,
+                    locale,
+                  })
                 }
               >
-                Voir une maquette de mon commerce
+                {en ? "See a mockup of my business" : "Voir une maquette de mon commerce"}
                 <ArrowRight size={16} className="ml-2 transition-transform duration-300 group-hover:translate-x-1" />
               </a>
             </Button>
@@ -346,14 +445,16 @@ export function Hero() {
                 href="https://wa.me/33636365696"
                 target="_blank"
                 rel="noreferrer"
-                onClick={() => trackEvent("whatsapp_click", { location: "hero", sector: activeSector })}
+                onClick={() => trackEvent("whatsapp_click", { location: "hero", sector: activeSector, locale })}
               >
-                Parler sur WhatsApp
+                {en ? "Talk on WhatsApp" : "Parler sur WhatsApp"}
               </a>
             </Button>
           </motion.div>
           <motion.p variants={introItem} className="mt-3 text-xs uppercase tracking-[0.12em] text-slate-500">
-            Sans engagement • Réponse sous 24h • Audit express offert
+            {en
+              ? "No commitment • Reply within 24h • Free express audit"
+              : "Sans engagement • Réponse sous 24h • Audit express offert"}
           </motion.p>
 
           <motion.div variants={introItem} className="mt-6 grid gap-2.5 sm:grid-cols-3">
@@ -377,7 +478,9 @@ export function Hero() {
             ))}
           </motion.div>
           <motion.p variants={introItem} className="mt-2 text-[11px] text-slate-500">
-            Données issues de projets clients livrés entre 2023 et 2026.
+            {en
+              ? "Data based on delivered client projects between 2023 and 2026."
+              : "Données issues de projets clients livrés entre 2023 et 2026."}
           </motion.p>
         </motion.div>
 
@@ -403,10 +506,12 @@ export function Hero() {
             transition={{ duration: 7.2, repeat: Infinity, ease: "easeInOut" }}
           >
             <Card className="w-56 border-[#d4e5ff] bg-white/84 p-4 backdrop-blur-xl">
-              <p className="text-[11px] font-semibold uppercase tracking-[0.14em] text-[#2f6dff]">Résultat réel</p>
+              <p className="text-[11px] font-semibold uppercase tracking-[0.14em] text-[#2f6dff]">
+                {en ? "Real result" : "Résultat réel"}
+              </p>
               <AnimatePresence mode="wait">
                 <motion.div
-                  key={`proof-${activeSector}`}
+                  key={`proof-${activeSector}-${locale}`}
                   variants={sectorSwap}
                   initial="initial"
                   animate="animate"
@@ -429,19 +534,21 @@ export function Hero() {
 
           <motion.div style={base3dStyle} className="relative z-20 origin-center [transform-style:preserve-3d]">
             <Card className="shine-border relative overflow-hidden rounded-[34px] border border-white/90 bg-[linear-gradient(145deg,rgba(255,255,255,0.93),rgba(227,240,255,0.74))] p-4 shadow-[0_34px_80px_rgba(121,156,215,0.32)] sm:p-6">
-                <div className="flex items-center justify-between rounded-2xl border border-white/85 bg-white/78 px-4 py-3">
-                  <div className="flex items-center gap-2">
-                    <span className="h-2.5 w-2.5 rounded-full bg-red-300" />
-                    <span className="h-2.5 w-2.5 rounded-full bg-amber-300" />
-                    <span className="h-2.5 w-2.5 rounded-full bg-emerald-300" />
-                  </div>
-                  <p className="text-[11px] font-semibold uppercase tracking-[0.16em] text-slate-500">Avant / Après</p>
+              <div className="flex items-center justify-between rounded-2xl border border-white/85 bg-white/78 px-4 py-3">
+                <div className="flex items-center gap-2">
+                  <span className="h-2.5 w-2.5 rounded-full bg-red-300" />
+                  <span className="h-2.5 w-2.5 rounded-full bg-amber-300" />
+                  <span className="h-2.5 w-2.5 rounded-full bg-emerald-300" />
                 </div>
+                <p className="text-[11px] font-semibold uppercase tracking-[0.16em] text-slate-500">
+                  {en ? "Before / After" : "Avant / Après"}
+                </p>
+              </div>
 
               <div className="mt-4 grid gap-4 sm:grid-cols-2">
                 <div className="rounded-2xl border border-slate-900/10 bg-slate-900 p-5 text-white">
-                  <p className="text-[11px] uppercase tracking-[0.14em] text-slate-400">Avant</p>
-                  <p className="mt-2 text-lg font-semibold">Site standard</p>
+                  <p className="text-[11px] uppercase tracking-[0.14em] text-slate-400">{en ? "Before" : "Avant"}</p>
+                  <p className="mt-2 text-lg font-semibold">{en ? "Generic website" : "Site standard"}</p>
                   <div className="mt-4 space-y-2">
                     <div className="h-2 rounded-full bg-slate-700" />
                     <div className="h-2 w-4/5 rounded-full bg-slate-700" />
@@ -449,7 +556,7 @@ export function Hero() {
                   </div>
                   <AnimatePresence mode="wait">
                     <motion.div
-                      key={`before-${activeSector}`}
+                      key={`before-${activeSector}-${locale}`}
                       variants={sectorSwap}
                       initial="initial"
                       animate="animate"
@@ -463,8 +570,10 @@ export function Hero() {
                 </div>
 
                 <div className="rounded-2xl border border-[#d7e6ff] bg-gradient-to-br from-white to-[#e8f2ff] p-5">
-                  <p className="text-[11px] font-semibold uppercase tracking-[0.14em] text-[#2f6dff]">Après</p>
-                  <p className="mt-2 text-lg font-semibold text-slate-900">Expérience haut de gamme</p>
+                  <p className="text-[11px] font-semibold uppercase tracking-[0.14em] text-[#2f6dff]">{en ? "After" : "Après"}</p>
+                  <p className="mt-2 text-lg font-semibold text-slate-900">
+                    {en ? "Premium experience" : "Expérience haut de gamme"}
+                  </p>
                   <div className="mt-4 space-y-2">
                     <div className="h-2 rounded-full bg-[#ccdeff]" />
                     <div className="h-2 w-4/5 rounded-full bg-[#ccdeff]" />
@@ -472,7 +581,7 @@ export function Hero() {
                   </div>
                   <AnimatePresence mode="wait">
                     <motion.div
-                      key={`after-${activeSector}`}
+                      key={`after-${activeSector}-${locale}`}
                       variants={sectorSwap}
                       initial="initial"
                       animate="animate"
@@ -488,7 +597,7 @@ export function Hero() {
 
               <AnimatePresence mode="wait">
                 <motion.div
-                  key={`kpi-${activeSector}`}
+                  key={`kpi-${activeSector}-${locale}`}
                   variants={sectorSwap}
                   initial="initial"
                   animate="animate"
@@ -496,7 +605,9 @@ export function Hero() {
                   transition={{ duration: 0.25, ease: [0.22, 1, 0.36, 1] }}
                   className="mt-4 rounded-xl border border-white/90 bg-white/80 px-3 py-3 backdrop-blur-sm"
                 >
-                  <p className="text-[11px] uppercase tracking-[0.13em] text-slate-500">Action mesurée</p>
+                  <p className="text-[11px] uppercase tracking-[0.13em] text-slate-500">
+                    {en ? "Measured action" : "Action mesurée"}
+                  </p>
                   <p className="mt-1 text-base font-semibold text-slate-900">{currentSector.actionKpi}</p>
                 </motion.div>
               </AnimatePresence>
