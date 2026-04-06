@@ -96,8 +96,10 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="fr">
-      <body className={`${bodyFont.variable} ${displayFont.variable} antialiased`}>{children}</body>
+    <html lang="fr" suppressHydrationWarning>
+      <body suppressHydrationWarning className={`${bodyFont.variable} ${displayFont.variable} antialiased`}>
+        {children}
+      </body>
     </html>
   );
 }

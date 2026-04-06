@@ -2,11 +2,21 @@
 
 import { Warp } from "@paper-design/shaders-react";
 import { useReducedMotion } from "framer-motion";
+import { useEffect, useState } from "react";
 
 export function HeroLiquidShader() {
+  const [isMobile, setIsMobile] = useState(false);
   const reducedMotion = useReducedMotion();
 
-  if (reducedMotion) {
+  useEffect(() => {
+    const media = window.matchMedia("(max-width: 1024px)");
+    const onChange = () => setIsMobile(media.matches);
+    onChange();
+    media.addEventListener("change", onChange);
+    return () => media.removeEventListener("change", onChange);
+  }, []);
+
+  if (reducedMotion || isMobile) {
     return null;
   }
 
@@ -19,20 +29,20 @@ export function HeroLiquidShader() {
         style={{
           width: "100%",
           height: "100%",
-          opacity: 0.36,
+          opacity: 0.28,
           transform: "scale(1.14)",
-          filter: "saturate(104%) contrast(102%) brightness(1.02)",
+          filter: "saturate(102%) contrast(101%) brightness(1.01)",
         }}
         proportion={0.5}
         softness={0.95}
-        distortion={0.28}
-        swirl={0.78}
-        swirlIterations={12}
+        distortion={0.22}
+        swirl={0.6}
+        swirlIterations={8}
         shape="checks"
         shapeScale={0.12}
         scale={1}
         rotation={8}
-        speed={0.42}
+        speed={0.28}
         colors={[
           "hsl(219, 100%, 78%)",
           "hsl(203, 100%, 94%)",

@@ -92,7 +92,13 @@ function ProjectThumb({
         className="group relative h-24 w-full overflow-hidden rounded-2xl border border-white/85 bg-white/70 text-left shadow-[0_10px_22px_rgba(123,157,217,0.22)]"
         aria-label={`Afficher ${title}`}
       >
-        <Image src={image} alt={title} fill className="object-cover transition duration-500 group-hover:scale-105" />
+        <Image
+          src={image}
+          alt={title}
+          fill
+          sizes="(max-width: 768px) 100vw, (max-width: 1280px) 48vw, 30vw"
+          className="object-cover transition duration-500 group-hover:scale-105"
+        />
         <div className="absolute inset-0 bg-gradient-to-r from-slate-900/44 via-slate-900/10 to-transparent" />
         <div className="absolute bottom-2 left-3 right-3 text-xs font-semibold uppercase tracking-[0.12em] text-white">{title}</div>
       </button>
@@ -148,7 +154,13 @@ export function Showcase() {
             <div className="relative grid gap-5 lg:grid-cols-[1.2fr_0.8fr]">
               <div className="overflow-hidden rounded-[28px] border border-white/85 bg-white/72 p-3 backdrop-blur-2xl">
                 <div className="relative h-[340px] overflow-hidden rounded-2xl border border-white/80 md:h-[390px]">
-                  <Image src={activeProject.src} alt={activeProject.name} fill className="object-cover" />
+                  <Image
+                    src={activeProject.src}
+                    alt={activeProject.name}
+                    fill
+                    sizes="(max-width: 1024px) 100vw, 62vw"
+                    className="object-cover"
+                  />
                   <div className="absolute inset-0 bg-gradient-to-t from-slate-900/52 via-slate-900/12 to-transparent" />
                 </div>
 

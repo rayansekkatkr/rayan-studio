@@ -2,6 +2,7 @@
 
 import { motion, useReducedMotion } from "framer-motion";
 import { AlertTriangle, BrainCircuit, ShieldCheck, TrendingUp, WandSparkles } from "lucide-react";
+import { useEffect, useState } from "react";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Reveal } from "./Reveal";
 import { SectionHeading } from "./SectionHeading";
@@ -43,7 +44,17 @@ const miniObjects = [
 ];
 
 export function ProblemSolution() {
+  const [isMobile, setIsMobile] = useState(false);
   const reducedMotion = useReducedMotion();
+  const shouldAnimate = !reducedMotion && !isMobile;
+
+  useEffect(() => {
+    const media = window.matchMedia("(max-width: 1024px)");
+    const onChange = () => setIsMobile(media.matches);
+    onChange();
+    media.addEventListener("change", onChange);
+    return () => media.removeEventListener("change", onChange);
+  }, []);
 
   return (
     <section id="probleme-solution" className="section-screen relative px-4 md:px-8">
@@ -86,12 +97,12 @@ export function ProblemSolution() {
               <div className="relative mx-auto h-[280px] w-full max-w-[320px]">
                 <motion.div
                   className="absolute left-1/2 top-1/2 h-48 w-48 -translate-x-1/2 -translate-y-1/2 rounded-full border border-[#cce1ff]"
-                  animate={reducedMotion ? undefined : { rotate: 360 }}
+                  animate={shouldAnimate ? { rotate: 360 } : undefined}
                   transition={{ duration: 22, repeat: Infinity, ease: "linear" }}
                 />
                 <motion.div
                   className="absolute left-1/2 top-1/2 h-36 w-36 -translate-x-1/2 -translate-y-1/2 rounded-full border border-[#dceaff]"
-                  animate={reducedMotion ? undefined : { rotate: -360 }}
+                  animate={shouldAnimate ? { rotate: -360 } : undefined}
                   transition={{ duration: 17, repeat: Infinity, ease: "linear" }}
                 />
 
@@ -100,12 +111,9 @@ export function ProblemSolution() {
                     key={item.label}
                     className={`absolute ${item.position} z-10 rounded-2xl border border-white/80 bg-white/82 px-3 py-2 backdrop-blur-xl`}
                     animate={
-                      reducedMotion
-                        ? undefined
-                        : {
-                            y: [0, index % 2 === 0 ? -7 : 7, 0],
-                            x: [0, index === 1 ? 3 : -3, 0],
-                          }
+                      shouldAnimate
+                        ? { y: [0, index % 2 === 0 ? -7 : 7, 0], x: [0, index === 1 ? 3 : -3, 0] }
+                        : undefined
                     }
                     transition={{ duration: 4.2 + index * 0.7, repeat: Infinity, ease: "easeInOut" }}
                   >
@@ -120,12 +128,7 @@ export function ProblemSolution() {
                 <motion.div
                   className="glass-panel-strong relative z-20 mt-16 rounded-[26px] px-6 py-7 text-center shadow-[0_24px_40px_rgba(119,154,217,0.3)]"
                   animate={
-                    reducedMotion
-                      ? undefined
-                      : {
-                          y: [0, -7, 0],
-                          scale: [1, 1.01, 1],
-                        }
+                    shouldAnimate ? { y: [0, -7, 0], scale: [1, 1.01, 1] } : undefined
                   }
                   transition={{ duration: 5.3, repeat: Infinity, ease: "easeInOut" }}
                 >
