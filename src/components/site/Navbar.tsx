@@ -35,9 +35,9 @@ export function Navbar({ locale = "fr" }: { locale?: Locale }) {
       >
         <Link
           href={`/${locale}#hero`}
-          className="group inline-flex items-center font-display text-sm font-semibold uppercase tracking-[0.16em] text-slate-800 md:text-base"
+          className="group inline-flex max-w-[72vw] items-center truncate font-display text-xs font-semibold uppercase tracking-[0.08em] text-slate-800 sm:max-w-none sm:text-sm sm:tracking-[0.16em] md:text-base"
         >
-          <span className="transition-colors duration-300 group-hover:text-slate-950">{BRAND.name}</span>
+          <span className="truncate transition-colors duration-300 group-hover:text-slate-950">{BRAND.name}</span>
         </Link>
 
         <ul className="hidden items-center gap-4 lg:flex">
@@ -70,7 +70,7 @@ export function Navbar({ locale = "fr" }: { locale?: Locale }) {
 
         <button
           type="button"
-          className="inline-flex h-10 w-10 items-center justify-center rounded-full border border-white/80 bg-white/80 text-slate-700 lg:hidden"
+          className="inline-flex h-9 w-9 items-center justify-center rounded-full border border-white/80 bg-white/80 text-slate-700 lg:hidden"
           onClick={() => setMobileOpen((prev) => !prev)}
           aria-label={mobileOpen ? "Fermer le menu" : "Ouvrir le menu"}
           aria-expanded={mobileOpen}
@@ -85,7 +85,7 @@ export function Navbar({ locale = "fr" }: { locale?: Locale }) {
               animate={{ opacity: 1, y: 0 }}
               exit={{ opacity: 0, y: -8 }}
               transition={{ duration: 0.2, ease: [0.22, 1, 0.36, 1] }}
-              className="absolute left-0 right-0 top-[calc(100%+10px)] rounded-2xl border border-white/90 bg-white/88 p-3 shadow-[0_20px_35px_rgba(123,157,217,0.22)] backdrop-blur-2xl lg:hidden"
+              className="absolute left-0 right-0 top-[calc(100%+10px)] max-h-[75svh] overflow-y-auto rounded-2xl border border-white/95 bg-white/97 p-3 shadow-[0_24px_44px_rgba(74,105,161,0.28)] backdrop-blur-xl lg:hidden"
             >
               <ul className="space-y-1.5">
                 {links.map((link) => (

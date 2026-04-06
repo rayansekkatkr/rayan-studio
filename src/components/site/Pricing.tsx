@@ -180,7 +180,7 @@ export function Pricing({ locale = "fr" }: { locale?: Locale }) {
                       </div>
                     )}
                     <CardTitle className="mt-3">{plan.name}</CardTitle>
-                    <p className="font-display mt-3 text-4xl font-semibold text-slate-900">{plan.price}</p>
+                    <p className="font-display mt-3 text-3xl font-semibold text-slate-900 sm:text-4xl">{plan.price}</p>
                     <p className="text-sm text-slate-600">{plan.description}</p>
                     <p className="mt-2 rounded-xl border border-white/90 bg-white/70 px-3 py-2 text-sm text-slate-700">
                       <span className="font-semibold text-slate-900">{en ? "For who:" : "Pour qui :"}</span> {plan.forWho}
@@ -218,11 +218,11 @@ export function Pricing({ locale = "fr" }: { locale?: Locale }) {
         </div>
 
         <Reveal delay={0.14}>
-          <div className="mt-7 rounded-3xl border border-[#d5e5ff] bg-[linear-gradient(145deg,rgba(237,244,255,0.95),rgba(255,255,255,0.92))] p-5 shadow-[0_20px_36px_rgba(121,156,214,0.16)]">
+          <div className="mt-7 rounded-3xl border border-[#d5e5ff] bg-[linear-gradient(145deg,rgba(237,244,255,0.95),rgba(255,255,255,0.92))] p-4 shadow-[0_20px_36px_rgba(121,156,214,0.16)] sm:p-5">
             <p className="text-xs font-semibold uppercase tracking-[0.12em] text-[#2f6dff]">
               {en ? "Optional add-on" : "Option complémentaire"}
             </p>
-            <h3 className="font-display mt-2 text-2xl font-semibold text-slate-900">{adminOption.title}</h3>
+            <h3 className="font-display mt-2 text-xl font-semibold text-slate-900 sm:text-2xl">{adminOption.title}</h3>
             <p className="mt-2 text-sm text-slate-700">{adminOption.subtitle}</p>
             <p className="mt-3 text-sm font-semibold text-slate-900">
               {en ? "Budget:" : "Budget :"} {adminOption.price}

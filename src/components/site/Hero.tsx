@@ -322,7 +322,7 @@ export function Hero({ locale = "fr" }: { locale?: Locale }) {
   return (
     <section
       id="hero"
-      className="relative min-h-[100svh] overflow-hidden px-4 pb-14 pt-28 md:px-8 md:pb-16 md:pt-32"
+      className="relative min-h-[100svh] overflow-hidden px-4 pb-14 pt-24 md:px-8 md:pb-16 md:pt-32"
     >
       <HeroLiquidShader disabled={isLowPowerDevice} />
 
@@ -358,7 +358,7 @@ export function Hero({ locale = "fr" }: { locale?: Locale }) {
           <div className="pointer-events-none absolute -left-8 -top-8 -z-10 h-[28rem] w-[28rem] rounded-[42px] bg-[radial-gradient(circle_at_25%_20%,rgba(255,255,255,0.85),rgba(245,250,255,0.55)_42%,rgba(230,241,255,0.06)_75%)] blur-2xl" />
 
           <motion.div variants={introItem}>
-            <Badge className="gap-2 border-white/80 bg-white/82 shadow-[0_12px_24px_rgba(129,160,209,0.18)]">
+            <Badge className="gap-2 border-white/80 bg-white/82 text-[11px] shadow-[0_12px_24px_rgba(129,160,209,0.18)] sm:text-xs">
               <Sparkles size={13} />
               {en ? "Showcase websites for local businesses" : "Sites vitrines pour commerces locaux"}
             </Badge>
@@ -374,7 +374,7 @@ export function Hero({ locale = "fr" }: { locale?: Locale }) {
                   key={sector}
                   type="button"
                   onClick={() => setActiveSector(sector)}
-                  className={`rounded-full border px-3 py-1.5 text-xs font-semibold uppercase tracking-[0.11em] transition ${
+                  className={`rounded-full border px-2.5 py-1.5 text-[10px] font-semibold uppercase tracking-[0.1em] transition sm:px-3 sm:text-xs sm:tracking-[0.11em] ${
                     isActive
                       ? "border-[#b6d0ff] bg-[#eaf2ff] text-[#2f6dff]"
                       : "border-white/85 bg-white/78 text-slate-600 hover:bg-white hover:text-slate-900"
@@ -395,7 +395,7 @@ export function Hero({ locale = "fr" }: { locale?: Locale }) {
                 animate="animate"
                 exit="exit"
                 transition={{ duration: 0.28, ease: [0.22, 1, 0.36, 1] }}
-                className="font-display text-4xl font-semibold leading-[1.01] text-slate-900 sm:text-5xl md:text-6xl"
+                className="font-display text-3xl font-semibold leading-[1.04] text-slate-900 sm:text-5xl md:text-6xl"
               >
                 {en
                   ? `Your ${currentSector.label.toLowerCase()} deserves a website that`
@@ -423,8 +423,8 @@ export function Hero({ locale = "fr" }: { locale?: Locale }) {
             </AnimatePresence>
           </motion.div>
 
-          <motion.div variants={introItem} className="mt-10 flex flex-wrap gap-4">
-            <Button asChild size="lg" className="group relative overflow-hidden shimmer-btn">
+          <motion.div variants={introItem} className="mt-9 flex flex-col gap-3 sm:mt-10 sm:flex-row sm:flex-wrap sm:gap-4">
+            <Button asChild size="lg" className="group relative w-full overflow-hidden shimmer-btn sm:w-auto">
               <a
                 href={`/${locale}#contact`}
                 onClick={() =>
@@ -440,7 +440,7 @@ export function Hero({ locale = "fr" }: { locale?: Locale }) {
                 <ArrowRight size={16} className="ml-2 transition-transform duration-300 group-hover:translate-x-1" />
               </a>
             </Button>
-            <Button asChild variant="outline" size="lg" className="group">
+            <Button asChild variant="outline" size="lg" className="group w-full sm:w-auto">
               <a
                 href="https://wa.me/33636365696"
                 target="_blank"
@@ -451,6 +451,23 @@ export function Hero({ locale = "fr" }: { locale?: Locale }) {
               </a>
             </Button>
           </motion.div>
+          <AnimatePresence mode="wait">
+            <motion.div
+              key={`proof-mobile-${activeSector}-${locale}`}
+              variants={sectorSwap}
+              initial="initial"
+              animate="animate"
+              exit="exit"
+              transition={{ duration: 0.24, ease: [0.22, 1, 0.36, 1] }}
+              className="mt-4 rounded-2xl border border-[#d4e5ff] bg-white/84 p-3.5 backdrop-blur-xl sm:hidden"
+            >
+              <p className="text-[11px] font-semibold uppercase tracking-[0.14em] text-[#2f6dff]">
+                {en ? "Real result" : "Résultat réel"}
+              </p>
+              <p className="mt-1.5 text-base font-semibold text-slate-900">{currentSector.proofMain}</p>
+              <p className="mt-1 text-xs text-slate-500">{currentSector.proofNote}</p>
+            </motion.div>
+          </AnimatePresence>
           <motion.p variants={introItem} className="mt-3 text-xs uppercase tracking-[0.12em] text-slate-500">
             {en
               ? "No commitment • Reply within 24h • Free express audit"
@@ -498,7 +515,7 @@ export function Hero({ locale = "fr" }: { locale?: Locale }) {
           onMouseLeave={handleLeave}
         >
           <motion.div
-            className="absolute right-0 top-4 z-40"
+            className="absolute right-0 top-4 z-40 hidden sm:block"
             style={shouldAnimate ? { x: layerFarX, y: layerFarY } : undefined}
             animate={
               shouldAnimate
@@ -538,7 +555,7 @@ export function Hero({ locale = "fr" }: { locale?: Locale }) {
           />
 
           <motion.div style={base3dStyle} className="relative z-20 origin-center [transform-style:preserve-3d]">
-            <Card className="shine-border relative overflow-hidden rounded-[34px] border border-white/90 bg-[linear-gradient(145deg,rgba(255,255,255,0.93),rgba(227,240,255,0.74))] p-4 shadow-[0_34px_80px_rgba(121,156,215,0.32)] sm:p-6">
+            <Card className="shine-border relative overflow-hidden rounded-[26px] border border-white/90 bg-[linear-gradient(145deg,rgba(255,255,255,0.93),rgba(227,240,255,0.74))] p-3 shadow-[0_34px_80px_rgba(121,156,215,0.32)] sm:rounded-[34px] sm:p-6">
               <div className="flex items-center justify-between rounded-2xl border border-white/85 bg-white/78 px-4 py-3">
                 <div className="flex items-center gap-2">
                   <span className="h-2.5 w-2.5 rounded-full bg-red-300" />

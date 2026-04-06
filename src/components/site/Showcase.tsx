@@ -166,11 +166,11 @@ function ProjectThumb({
   onClick: (index: number) => void;
 }) {
   return (
-    <div className="py-3">
+    <div className="py-1.5 md:py-3">
       <button
         type="button"
         onClick={() => onClick(index)}
-        className="group relative h-24 w-full overflow-hidden rounded-2xl border border-white/85 bg-white/70 text-left shadow-[0_10px_22px_rgba(123,157,217,0.22)]"
+        className="group relative h-20 w-full overflow-hidden rounded-2xl border border-white/85 bg-white/70 text-left shadow-[0_10px_22px_rgba(123,157,217,0.22)] md:h-24"
         aria-label={`${ariaPrefix} ${title}`}
       >
         <Image
@@ -247,13 +247,13 @@ export function Showcase({ locale = "fr" }: { locale?: Locale }) {
           <div className="relative overflow-hidden rounded-[34px] border border-white/85 bg-[linear-gradient(145deg,rgba(255,255,255,0.87),rgba(227,240,255,0.66))] p-4 shadow-[0_36px_64px_rgba(122,157,220,0.28)] md:p-6">
             <div className="pointer-events-none absolute -left-16 top-8 h-44 w-44 rounded-full bg-[#a4c7ff]/34 blur-[78px]" />
             <div className="pointer-events-none absolute -right-14 bottom-5 h-48 w-48 rounded-full bg-white/50 blur-[88px]" />
-            <div className="absolute left-5 top-5 z-20 rounded-full border border-white/85 bg-white/90 px-3 py-1 text-[11px] font-semibold uppercase tracking-[0.13em] text-[#2f6dff] shadow-[0_10px_20px_rgba(122,157,220,0.22)] backdrop-blur-xl">
+            <div className="absolute left-5 top-5 z-20 hidden rounded-full border border-white/85 bg-white/90 px-3 py-1 text-[11px] font-semibold uppercase tracking-[0.13em] text-[#2f6dff] shadow-[0_10px_20px_rgba(122,157,220,0.22)] backdrop-blur-xl sm:block">
               {en ? "Active project" : "Projet actif"}
             </div>
 
             <div className="relative grid gap-5 lg:grid-cols-[1.2fr_0.8fr]">
               <div className="overflow-hidden rounded-[28px] border border-white/85 bg-white/72 p-3 backdrop-blur-2xl">
-                <div className="relative h-[340px] overflow-hidden rounded-2xl border border-white/80 md:h-[390px]">
+                <div className="relative h-[260px] overflow-hidden rounded-2xl border border-white/80 sm:h-[310px] md:h-[390px]">
                   <Image
                     src={activeProject.src}
                     alt={activeProject.name}
@@ -271,7 +271,7 @@ export function Showcase({ locale = "fr" }: { locale?: Locale }) {
                   <TextRotate
                     ref={textRotateRef}
                     texts={projects.map((project) => project.name)}
-                    mainClassName="mt-2 text-2xl md:text-3xl font-display font-semibold text-slate-900"
+                    mainClassName="mt-2 text-xl font-display font-semibold text-slate-900 sm:text-2xl md:text-3xl"
                     splitLevelClassName="overflow-hidden pb-1"
                     staggerFrom="first"
                     staggerDuration={0.005}
@@ -327,7 +327,7 @@ export function Showcase({ locale = "fr" }: { locale?: Locale }) {
                   </span>
                 </div>
 
-                <div className="rounded-2xl px-1">
+                <div className="grid grid-cols-2 gap-2 rounded-2xl px-1 md:block md:gap-0">
                   {projects.map((project, index) => (
                     <ProjectThumb
                       key={project.id}
