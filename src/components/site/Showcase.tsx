@@ -12,6 +12,16 @@ import { SectionHeading } from "./SectionHeading";
 
 const projectsFr = [
   {
+    id: "stampeo",
+    name: "Stampeo",
+    designation: "SaaS local • Fidélisation clients",
+    quote:
+      "Landing orientée conversion avec un message immédiatement compréhensible: proposition de valeur claire, preuve visuelle forte et parcours fluide vers l'essai.",
+    projectUrl: "https://stampeo.app/",
+    src: "/realisations/stampeo.png",
+    segment: "Cœur de cible CHR",
+  },
+  {
     id: "manteigaria",
     name: "Manteigaria — Avant / Après",
     designation: "Boulangerie artisanale • Commerce local",
@@ -55,6 +65,16 @@ const projectsFr = [
 ];
 
 const projectsEn = [
+  {
+    id: "stampeo",
+    name: "Stampeo",
+    designation: "Local SaaS • Customer loyalty",
+    quote:
+      "Conversion-focused landing with immediate clarity: a clear value proposition, strong visual proof, and a smooth journey toward trial.",
+    projectUrl: "https://stampeo.app/",
+    src: "/realisations/stampeo.png",
+    segment: "Core food & hospitality target",
+  },
   {
     id: "manteigaria",
     name: "Manteigaria — Before / After",
