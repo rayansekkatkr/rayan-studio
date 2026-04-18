@@ -1,0 +1,44 @@
+name: Daily Outreach
+
+on:
+  schedule:
+    # 10h heure française (CEST = UTC+2 en été, CET = UTC+1 en hiver)
+    # En été : 08h UTC = 10h Paris | En hiver : 09h UTC = 10h Paris
+    - cron: '0 8 * * 1-5'
+  workflow_dispatch: # Déclenchement manuel pour tester
+
+permissions:
+  contents: write
+
+jobs:
+  outreach:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Install dependencies
+        working-directory: scripts
+        run: npm install
+
+      - name: Run outreach script
+        working-directory: scripts
+        run: node outreach.js
+        env:
+          GOOGLE_PLACES_API_KEY: ${{ secrets.GOOGLE_PLACES_API_KEY }}
+          GMAIL_USER: ${{ secrets.GMAIL_USER }}
+          GMAIL_APP_PASSWORD: ${{ secrets.GMAIL_APP_PASSWORD }}
+
+      - name: Commit updated contacts list
+        run: |
+          git config --local user.email "github-actions@github.com"
+          git config --local user.name "GitHub Actions"
+          git add scripts/contacted.json
+          git diff --staged --quiet || git commit -m "chore: update contacted companies list [$(date +'%Y-%m-%d')]"
+          git push
