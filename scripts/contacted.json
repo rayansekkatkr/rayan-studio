@@ -1,4 +1,85 @@
 {
-  "contacted": [],
-  "lastUpdated": null
+  "contacted": [
+    {
+      "placeId": "ChIJoSh2JnGt9UcRnd2TmK-FRk4",
+      "name": "LAHAYE & CO Expert-comptable à Saint-Étienne",
+      "email": "j.lahaye@cabinet-lahaye.fr",
+      "website": "https://cabinet-lahaye.fr/",
+      "address": "35 Rue de la Télématique, 42000 Saint-Étienne, France",
+      "sentAt": "2026-04-20T08:39:32.787Z"
+    },
+    {
+      "placeId": "ChIJheg8G7Ct9UcRj37QNtKxw9g",
+      "name": "Fenyx Conseil",
+      "email": "maxime.gibert@fenyx-conseil.fr",
+      "website": "https://www.fenyx-conseil.fr/",
+      "address": "133 Rue de la Montat, 42100 Saint-Étienne, France",
+      "sentAt": "2026-04-20T08:39:38.272Z"
+    },
+    {
+      "placeId": "ChIJiWk-2JWt9UcRvauvpmV0Oxg",
+      "name": "Expert Comptable SAINT ETIENNE : AURUS",
+      "email": "contact@aurus-compta.fr",
+      "website": "http://www.aurus-compta.fr/",
+      "address": "5 Rue de la Productique, 42000 Saint-Étienne, France",
+      "sentAt": "2026-04-20T08:39:47.134Z"
+    },
+    {
+      "placeId": "ChIJTdvGmU6p9UcRWcLCnFVnuS8",
+      "name": "In Extenso Saint-Etienne",
+      "email": "flags@2x.png",
+      "website": "https://www.inextenso.fr/agence/expert-comptable-saint-etienne/",
+      "address": "immeuble le quatre, 24 Rue des Aciéries BP 20172, 42000 Saint-Étienne, France",
+      "sentAt": "2026-04-20T08:39:51.973Z"
+    },
+    {
+      "placeId": "ChIJ4xBDhAqs9UcRkdvoH_aW_iQ",
+      "name": "Aliantis Saint-Etienne",
+      "email": "grc@aliantis.net",
+      "website": "https://www.aliantis.net/",
+      "address": "1 Rue de la Presse, 42000 Saint-Étienne, France",
+      "sentAt": "2026-04-20T08:39:59.229Z"
+    },
+    {
+      "placeId": "ChIJ2aghaNKt9UcRFarCs8iyE_8",
+      "name": "Cabinet Pierre Alles",
+      "email": "st.etienne@cabinetlagier.fr",
+      "website": "http://www.cabinetpierrealles.fr/",
+      "address": "5 Rue de la Télématique, 42000 Saint-Étienne, France",
+      "sentAt": "2026-04-20T08:40:09.209Z"
+    },
+    {
+      "placeId": "ChIJ5bCc1WWr9UcRQjRW3khFc64",
+      "name": "VISIO COMPTE - EXPERT COMPTABLE",
+      "email": "contact@visiocompte.pro",
+      "website": "http://www.visiocompte.pro/",
+      "address": "17B Rue de la Presse, 42000 Saint-Étienne, France",
+      "sentAt": "2026-04-20T08:40:14.366Z"
+    },
+    {
+      "placeId": "ChIJbSYq6Qqs9UcRU1A4mPUP5dM",
+      "name": "Cabinet Tamet",
+      "email": "contact@cabinet-tamet.com",
+      "website": "http://www.cabinet-tamet.com/",
+      "address": "7 All. de l'Informatique, 42000 Saint-Étienne, France",
+      "sentAt": "2026-04-20T08:40:21.196Z"
+    },
+    {
+      "placeId": "ChIJR1hqnquu9UcRerATT4Z1ujo",
+      "name": "Cabinet Royet Sa",
+      "email": "cr@cabinet-royet.fr",
+      "website": "https://cabinet-royet.com/",
+      "address": "9 Pl. Jean Moulin, 42000 Saint-Étienne, France",
+      "sentAt": "2026-04-20T08:40:27.245Z"
+    },
+    {
+      "placeId": "ChIJF0lJ0vip9UcRaAu9fYvjHvg",
+      "name": "Cabinet NAMYSL",
+      "email": "contact@cabinet-namysl.com",
+      "website": "https://cabinet-namysl.com/",
+      "address": "Immeuble Le Delta, 1 All. de l'Électronique, 42000 Saint-Étienne, France",
+      "sentAt": "2026-04-20T08:40:33.706Z"
+    }
+  ],
+  "lastUpdated": "2026-04-20T08:40:38.152Z"
 }
