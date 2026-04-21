@@ -79,7 +79,87 @@
       "website": "https://cabinet-namysl.com/",
       "address": "Immeuble Le Delta, 1 All. de l'Électronique, 42000 Saint-Étienne, France",
       "sentAt": "2026-04-20T08:40:33.706Z"
+    },
+    {
+      "placeId": "ChIJKfk-yli5FkgR5o_vh_gb30Q",
+      "name": "Agence Havas Voyages Brest Clemenceau",
+      "email": "exemple@domaine.fr",
+      "website": "https://agences.havas-voyages.fr/66-havas-voyages-brest-clemenceau#lf-location-main-forms",
+      "address": "23 Av. Georges Clemenceau, 29200 Brest, France",
+      "sentAt": "2026-04-21T08:30:45.882Z"
+    },
+    {
+      "placeId": "ChIJ1Q8P9SG7FkgRMVKIXlQgiFc",
+      "name": "Agence de voyage Promovacances Brest le Phare",
+      "email": "agence-brestlephare@promovacances.com",
+      "website": "https://www.promovacances.com/agences-de-voyages/agence-de-voyage-brestlephare-29200/",
+      "address": "Le Phare de l'Europe, 29 Rue de Gouesnou, 29200 Brest, France",
+      "sentAt": "2026-04-21T08:30:50.069Z"
+    },
+    {
+      "placeId": "ChIJXxDD__25FkgRq027VV7IDJs",
+      "name": "Agence de voyages Promovacances Brest",
+      "email": "agence-brest@promovacances.com",
+      "website": "https://www.promovacances.com/agences-de-voyages/agence-de-voyage-brest-29000/",
+      "address": "87 Rue de Siam, 29200 Brest, France",
+      "sentAt": "2026-04-21T08:30:53.934Z"
+    },
+    {
+      "placeId": "ChIJ3ZeKTFi5FkgREOV10gSpmUA",
+      "name": "Selectour - Sun 7 Voyages",
+      "email": "mail@mail.com",
+      "website": "https://www.histoiredevoyages.fr/",
+      "address": "78 Rue de Siam, 29200 Brest, France",
+      "sentAt": "2026-04-21T08:30:58.151Z"
+    },
+    {
+      "placeId": "ChIJOQr7blm5FkgRDQiNQ8Zhbk8",
+      "name": "Selectour - Histoires de Voyages",
+      "email": "mail@mail.com",
+      "website": "https://www.histoiredevoyages.fr/",
+      "address": "14 Rue de Lyon, 29200 Brest, France",
+      "sentAt": "2026-04-21T08:31:01.868Z"
+    },
+    {
+      "placeId": "ChIJ_foyFlm5FkgRIrZAiN-x4F0",
+      "name": "Selectour - Armor Voyages",
+      "email": "mail@mail.com",
+      "website": "https://www.histoiredevoyages.fr/",
+      "address": "6 bis Rue Colbert, 29200 Brest, France",
+      "sentAt": "2026-04-21T08:31:06.596Z"
+    },
+    {
+      "placeId": "ChIJyVPI7lm5FkgR-br7aDx1o7k",
+      "name": "Agence de voyage TUI STORE Brest",
+      "email": "agencebrest@tuifrance.com",
+      "website": "https://agences-de-voyages.tui.fr/brest/agence-de-voyage-tui-store-brest-9",
+      "address": "40 Rue Jean Macé, 29200 Brest, France",
+      "sentAt": "2026-04-21T08:31:17.952Z"
+    },
+    {
+      "placeId": "ChIJabmJklm5FkgRvJ0b40JNsrY",
+      "name": "Faces of the World",
+      "email": "exemple@domaine.fr",
+      "website": "https://agence.visagesdumonde.fr/5-visages-du-monde-brest?utm_source=gmb",
+      "address": "44 Rue Emile Zola, 29200 Brest, France",
+      "sentAt": "2026-04-21T08:31:22.888Z"
+    },
+    {
+      "placeId": "ChIJ___Twlm5FkgR_9LvOsITnpY",
+      "name": "FRAM",
+      "email": "ambassade@frambrest.com",
+      "website": "https://www.fram.fr/agence-de-voyage/agence-ambassade-fram-brest-29200/agence-brest-voyages/",
+      "address": "67 Rue de Siam, 29200 Brest, France",
+      "sentAt": "2026-04-21T08:31:27.126Z"
+    },
+    {
+      "placeId": "ChIJIyAQVIO5FkgRbTQtbLmCPv0",
+      "name": "Brest Walking Tours",
+      "email": "brestwalkingtours@gmail.com",
+      "website": "http://brestwalkingtours.fr/",
+      "address": "18 Rpe du Merle Blanc, 29200 Brest, France",
+      "sentAt": "2026-04-21T08:31:35.180Z"
     }
   ],
-  "lastUpdated": "2026-04-20T08:40:38.152Z"
+  "lastUpdated": "2026-04-21T08:31:42.949Z"
 }
