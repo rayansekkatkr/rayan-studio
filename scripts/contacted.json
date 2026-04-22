@@ -159,7 +159,39 @@
       "website": "http://brestwalkingtours.fr/",
       "address": "18 Rpe du Merle Blanc, 29200 Brest, France",
       "sentAt": "2026-04-21T08:31:35.180Z"
+    },
+    {
+      "placeId": "ChIJr6omujfU_EcRvkqVd8VxNHU",
+      "name": "ART O Zoir",
+      "email": "contact@sessile.fr",
+      "website": "https://www.sessile.fr/trouvez-votre-fleuriste/lart-o-zoir/?utm_source=google_my_business&utm_medium=organic&utm_campaign=website",
+      "address": "138 Rue de la Fuye, 37000 Tours, France",
+      "sentAt": "2026-04-22T08:29:35.433Z"
+    },
+    {
+      "placeId": "ChIJcyWKsWTV_EcRaVyW-uhiOlc",
+      "name": "Jungle Urbaine",
+      "email": "jungleurbaine37@gmail.com",
+      "website": "http://jungleurbainetours.com/",
+      "address": "24 Rue Charles Gille, 37000 Tours, France",
+      "sentAt": "2026-04-22T08:29:50.819Z"
+    },
+    {
+      "placeId": "ChIJA3JrDxDV_EcRmoNza_tzbwM",
+      "name": "L'atelier d'Iris | Fleuriste Tours",
+      "email": "contact@sessile.fr",
+      "website": "https://www.sessile.fr/trouvez-votre-fleuriste/latelier-diris/?utm_source=google_my_business&utm_medium=organic&utm_campaign=website",
+      "address": "15 Pl. de la Tranchée, 37100 Tours, France",
+      "sentAt": "2026-04-22T08:29:59.458Z"
+    },
+    {
+      "placeId": "ChIJmU4HTcDV_EcR0prCJWEgv0c",
+      "name": "Plantain Maison Fleurie",
+      "email": "contact@plantainmaisonfleurie.com",
+      "website": "https://www.plantainmaisonfleurie.com/",
+      "address": "2 Pass. Margueron, 37000 Tours, France",
+      "sentAt": "2026-04-22T08:30:12.303Z"
     }
   ],
-  "lastUpdated": "2026-04-21T08:31:42.949Z"
+  "lastUpdated": "2026-04-22T08:30:16.107Z"
 }
