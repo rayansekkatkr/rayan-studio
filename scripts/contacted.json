@@ -191,7 +191,55 @@
       "website": "https://www.plantainmaisonfleurie.com/",
       "address": "2 Pass. Margueron, 37000 Tours, France",
       "sentAt": "2026-04-22T08:30:12.303Z"
+    },
+    {
+      "placeId": "ChIJ00IhkUuE50cRsV3L1aud8Rg",
+      "name": "Studio Devisse - Photographe & Location Borne Selfie",
+      "email": "devissestudio@gmail.com",
+      "website": "http://www.studiodevisse.com/",
+      "address": "71 Rue Jules Barni, 80000 Amiens, France",
+      "sentAt": "2026-04-23T08:30:31.536Z"
+    },
+    {
+      "placeId": "ChIJ2WPY8jiE50cRxCu9zA0elDg",
+      "name": "Studio Borel",
+      "email": "studioborel@yahoo.fr",
+      "website": "http://studioborel.com/",
+      "address": "26 Rue Dusevel, 80000 Amiens, France",
+      "sentAt": "2026-04-23T08:30:38.359Z"
+    },
+    {
+      "placeId": "ChIJnebTFDuE50cRnHzdmzVSTxY",
+      "name": "Studio Nisso Portraits d'art",
+      "email": "nissofoto@wanadoo.fr",
+      "website": "http://photo-nisso.wifeo.com/",
+      "address": "5 Chau. Saint-Pierre, 80080 Amiens, France",
+      "sentAt": "2026-04-23T08:30:42.482Z"
+    },
+    {
+      "placeId": "ChIJpxCiMTiE50cRFQ-rJ5eOJY8",
+      "name": "Yoann Legros Photographie",
+      "email": "contact@yoannlegros.com",
+      "website": "https://www.yoannlegros.com/",
+      "address": "62 Rue l'Abbé de l'Épée, 80000 Amiens, France",
+      "sentAt": "2026-04-23T08:30:49.099Z"
+    },
+    {
+      "placeId": "ChIJq3QU5LqD50cRSoheyzyWQ94",
+      "name": "Prestige Studio",
+      "email": "utilisateur@domaine.com",
+      "website": "https://www.prestigestudio.fr/",
+      "address": "11 All. des Marronniers, 80480 Pont-de-Metz, France",
+      "sentAt": "2026-04-23T08:30:56.067Z"
+    },
+    {
+      "placeId": "ChIJq-mftqGF50cRlNWNfV76AAc",
+      "name": "LIBERTY LOVE",
+      "email": "studio.liberty.love@gmail.com",
+      "website": "https://studiolibertylove.wordpress.com/",
+      "address": "Le QG, 77 Rte de Paris Box 27, 80000 Amiens, France",
+      "sentAt": "2026-04-23T08:31:01.119Z"
     }
   ],
-  "lastUpdated": "2026-04-22T08:30:16.107Z"
+  "lastUpdated": "2026-04-23T08:31:15.884Z"
 }
