@@ -239,7 +239,87 @@
       "website": "https://studiolibertylove.wordpress.com/",
       "address": "Le QG, 77 Rte de Paris Box 27, 80000 Amiens, France",
       "sentAt": "2026-04-23T08:31:01.119Z"
+    },
+    {
+      "placeId": "ChIJ1YiaVUIz-UcRedM7cV6ds3E",
+      "name": "Entreprise Blanchon Sa",
+      "email": "blanchon@blanchon.fr",
+      "website": "https://blanchon.fr/",
+      "address": "7 Rue Fernand Malinvaud, 87000 Limoges, France",
+      "sentAt": "2026-04-24T08:36:08.308Z"
+    },
+    {
+      "placeId": "ChIJd8lQxbw0-UcR6BcpnLPiN0Y",
+      "name": "ACR",
+      "email": "contact@acr-constructions.fr",
+      "website": "https://www.acr-constructions.fr/",
+      "address": "7 Rue du Maupas, 87000 Limoges, France",
+      "sentAt": "2026-04-24T08:36:17.864Z"
+    },
+    {
+      "placeId": "ChIJ9W5DQUw1-UcR_34URNYP7vU",
+      "name": "MIKIT",
+      "email": "charlie@mikit.fr",
+      "website": "https://limoges.mikit.fr/",
+      "address": "63 Rue Montmailler, 87000 Limoges, France",
+      "sentAt": "2026-04-24T08:36:28.922Z"
+    },
+    {
+      "placeId": "ChIJH2Z58u81-UcRpiwkhzSLnwg",
+      "name": "R2S CONSTRUCTIONS",
+      "email": "support@webador.fr",
+      "website": "https://www.r2s-constructions.fr/",
+      "address": "1 Rue Aristide Maillol, 87350 Panazol, France",
+      "sentAt": "2026-04-24T08:36:34.503Z"
+    },
+    {
+      "placeId": "ChIJX71FhEXL_kcRSZrPav9RJ9I",
+      "name": "T L B SARL",
+      "email": "contact@tlb87.fr",
+      "website": "https://www.tlb-maconnerie.fr/",
+      "address": "90 Rue Meissonier, 87000 Limoges, France",
+      "sentAt": "2026-04-24T08:36:47.374Z"
+    },
+    {
+      "placeId": "ChIJnUwxcV3L_kcRzRC67CuEuCs",
+      "name": "Bâtisseurs d'ici LIMOGES",
+      "email": "2@2x-3.jpg.webp",
+      "website": "http://www.batisseursdici.com/",
+      "address": "310 Rue François Perrin, 87000 Limoges, France",
+      "sentAt": "2026-04-24T08:36:54.195Z"
+    },
+    {
+      "placeId": "ChIJJbgQ2z7L_kcRgsoECmS_nmI",
+      "name": "NÉO Habitat Stores, Pergolas et Fermetures",
+      "email": "contact@neo-habitat87.com",
+      "website": "https://neo-habitat87.com/",
+      "address": "6 Rue de l'Amphithéâtre, 87000 Limoges, France",
+      "sentAt": "2026-04-24T08:36:59.106Z"
+    },
+    {
+      "placeId": "ChIJCwDmLRbP_kcRY79CGvCxZeM",
+      "name": "GUILLAUMIE CONSTRUCTION BOIS LIMOGES",
+      "email": "contact@guillaumie.com",
+      "website": "https://www.guillaumie.com/",
+      "address": "Zone Industrielle Le Moulin Cheyroux, 87700 Aixe-sur-Vienne, France",
+      "sentAt": "2026-04-24T08:37:05.073Z"
+    },
+    {
+      "placeId": "ChIJ10chA3c1-UcRnnB5IsCMeUo",
+      "name": "Coren Limousin",
+      "email": "contact@coren-renovation.fr",
+      "website": "https://www.coren-renovation.com/",
+      "address": "10 Rue Panhard Levassor, 87280 Limoges, France",
+      "sentAt": "2026-04-24T08:37:12.301Z"
+    },
+    {
+      "placeId": "ChIJbTowZRDL_kcR0UToie8Jw9k",
+      "name": "Sarl Kolat",
+      "email": "tw-share-facebook@2x.png",
+      "website": "http://sarlkolat.free.fr/",
+      "address": "46 Rue du Fraud, 87100 Limoges, France",
+      "sentAt": "2026-04-24T08:37:17.264Z"
     }
   ],
-  "lastUpdated": "2026-04-23T08:31:15.884Z"
+  "lastUpdated": "2026-04-24T08:37:20.267Z"
 }
