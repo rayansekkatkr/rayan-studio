@@ -319,7 +319,63 @@
       "website": "http://sarlkolat.free.fr/",
       "address": "46 Rue du Fraud, 87100 Limoges, France",
       "sentAt": "2026-04-24T08:37:17.264Z"
+    },
+    {
+      "placeId": "ChIJq64EGhZjjUcRz-y3mPSq-R0",
+      "name": "Driving School Acces Permis",
+      "email": "autoecoleaccespermis@orange.fr",
+      "website": "https://www.auto-ecole-acces-permis.com/?utm_source=gmb",
+      "address": "7 Rue du Lycée, 25000 Besançon, France",
+      "sentAt": "2026-04-27T08:45:24.556Z"
+    },
+    {
+      "placeId": "ChIJCT4gwBFjjUcRjAnc7T_Ea1c",
+      "name": "Driving School Acces Permis",
+      "email": "autoecoleaccespermis@orange.fr",
+      "website": "http://www.auto-ecole-acces-permis.fr/",
+      "address": "36 bis Av. Georges Clémenceau, 25000 Besançon, France",
+      "sentAt": "2026-04-27T08:45:30.964Z"
+    },
+    {
+      "placeId": "ChIJ3QbqPw9jjUcRqZyKBfoKnR0",
+      "name": "School Driving 25",
+      "email": "ecoledeconduite25@gmail.com",
+      "website": "https://ecoledeconduite25.fr/",
+      "address": "13 Rue de Belfort, 25000 Besançon, France",
+      "sentAt": "2026-04-27T08:45:38.733Z"
+    },
+    {
+      "placeId": "ChIJBzXzbcxijUcRxzTGezitgRw",
+      "name": "Driving School Personeni Clerc",
+      "email": "ste-nouv-personeni-clerc@orange.fr",
+      "website": "http://www.auto-ecole-personeni.fr/",
+      "address": "10 Rue des Courtils, 25000 Besançon, France",
+      "sentAt": "2026-04-27T08:45:55.937Z"
+    },
+    {
+      "placeId": "ChIJn7FsnY1jjUcR4kUEIbOec6M",
+      "name": "School Of Driving Drivexpérience",
+      "email": "contact@drivexperience.fr",
+      "website": "https://drivexperience.fr/?utm_source=gmb",
+      "address": "17 Rue de la Mouillère, 25000 Besançon, France",
+      "sentAt": "2026-04-27T08:46:10.220Z"
+    },
+    {
+      "placeId": "ChIJT4XD8RBjjUcR0OILdYOJ1MQ",
+      "name": "Driving School Bourgeois",
+      "email": "info@autoecolebourgeois.com",
+      "website": "http://www.autoecolebourgeois.com/",
+      "address": "12 D Av. Georges Clémenceau, 25000 Besançon, France",
+      "sentAt": "2026-04-27T08:46:17.314Z"
+    },
+    {
+      "placeId": "ChIJO4a8vWNnjUcR52cMaCMAICE",
+      "name": "Auto Ecole F.baud",
+      "email": "contact@autoecole-baud.fr",
+      "website": "http://www.autoecole-baud.fr/",
+      "address": "85 Chem. des Champs Michel, 25410 Saint-Vit, France",
+      "sentAt": "2026-04-27T08:46:33.677Z"
     }
   ],
-  "lastUpdated": "2026-04-24T08:37:20.267Z"
+  "lastUpdated": "2026-04-27T08:46:38.636Z"
 }
