@@ -535,7 +535,63 @@
       "website": "http://www.optiquedesfamilles.fr/",
       "address": "17 Rue Beauvoisine, 76000 Rouen, France",
       "sentAt": "2026-04-29T08:42:16.964Z"
+    },
+    {
+      "placeId": "ChIJ0Y7Uk_lv5kcRxQMuMKFtVmc",
+      "name": "Le Marais Restaurant Paris",
+      "email": "contact@privateaser.com",
+      "website": "https://www.privateaser.com/lieu/44897-le-marais-restaurant",
+      "address": "47 R. de Turbigo, 75003 Paris, France",
+      "sentAt": "2026-04-30T08:41:21.966Z"
+    },
+    {
+      "placeId": "ChIJHwzjqZJv5kcRCir2RjPAaKE",
+      "name": "Chouchou",
+      "email": "restauchouchou@gmail.com",
+      "website": "http://www.restaurantchouchouparis.fr/",
+      "address": "23 Bd de Sébastopol, 75001 Paris, France",
+      "sentAt": "2026-04-30T08:41:26.000Z"
+    },
+    {
+      "placeId": "ChIJf-oe7Wdu5kcRRto099RQ9Fc",
+      "name": "Sacrée Fleur Montmartre",
+      "email": "restosacreefleur@gmail.com",
+      "website": "http://www.sacreefleur.fr/",
+      "address": "50 Rue de Clignancourt, 75018 Paris, France",
+      "sentAt": "2026-04-30T08:41:30.956Z"
+    },
+    {
+      "placeId": "ChIJD6B9d1Rx5kcRqX4XYd8yP2E",
+      "name": "St Germain Restaurant notre dame Paris 5",
+      "email": "cafebdsaintgermain@gmail.com",
+      "website": "https://cafesaintgermain.metro.bar/?lang=fr",
+      "address": "18 Bd Saint-Germain, 75005 Paris, France",
+      "sentAt": "2026-04-30T08:41:34.926Z"
+    },
+    {
+      "placeId": "ChIJ5U4GPz9v5kcRStPGOYpHOGs",
+      "name": "Magnolia",
+      "email": "contact@restaurant-magnolia.fr",
+      "website": "https://www.restaurant-magnolia.fr/",
+      "address": "5 Rue Henry Monnier, 75009 Paris, France",
+      "sentAt": "2026-04-30T08:41:39.316Z"
+    },
+    {
+      "placeId": "ChIJF81Lvo5v5kcR34BLAZe2U1o",
+      "name": "La Scène",
+      "email": "contact@la-scene.paris",
+      "website": "https://www.la-scene.paris/",
+      "address": "32 Av. Matignon, 75008 Paris, France",
+      "sentAt": "2026-04-30T08:41:43.889Z"
+    },
+    {
+      "placeId": "ChIJXyUgvjlv5kcRmhx7R3xmFX8",
+      "name": "ROOF Paris",
+      "email": "roof@madamereve.com",
+      "website": "https://madamereve.com/restaurants/roof/",
+      "address": "43 Rue Étienne Marcel, 75001 Paris, France",
+      "sentAt": "2026-04-30T08:41:56.197Z"
     }
   ],
-  "lastUpdated": "2026-04-29T08:42:19.964Z"
+  "lastUpdated": "2026-04-30T08:42:10.812Z"
 }
