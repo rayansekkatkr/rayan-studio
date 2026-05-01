@@ -591,7 +591,23 @@
       "website": "https://madamereve.com/restaurants/roof/",
       "address": "43 Rue Étienne Marcel, 75001 Paris, France",
       "sentAt": "2026-04-30T08:41:56.197Z"
+    },
+    {
+      "placeId": "ChIJ0e8QDrnAyRIR3Q4AwY3U1C0",
+      "name": "Boulangerie Aixoise",
+      "email": "contact@biscuiteriemarseillaise.fr",
+      "website": "http://www.biscuiteriemarseillaise.fr/",
+      "address": "45 Rue Francis Davso, 13001 Marseille, France",
+      "sentAt": "2026-05-01T08:34:22.191Z"
+    },
+    {
+      "placeId": "ChIJJXDgBs7AyRIRAaCFerMfPck",
+      "name": "Maison Saint-Honoré",
+      "email": "m.sthonore@gmail.com",
+      "website": "https://maisonsaint-honore.com/",
+      "address": "131 Rue d'Endoume, 13007 Marseille, France",
+      "sentAt": "2026-05-01T08:34:35.217Z"
     }
   ],
-  "lastUpdated": "2026-04-30T08:42:10.812Z"
+  "lastUpdated": "2026-05-01T08:34:38.284Z"
 }
