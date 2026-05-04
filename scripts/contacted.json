@@ -607,7 +607,71 @@
       "website": "https://maisonsaint-honore.com/",
       "address": "131 Rue d'Endoume, 13007 Marseille, France",
       "sentAt": "2026-05-01T08:34:35.217Z"
+    },
+    {
+      "placeId": "ChIJobjHeQrQzRIRl-E48HKQCKE",
+      "name": "Pharmacie Anglo American",
+      "email": "pharmacie@angloamericaine.fr",
+      "website": "https://french-pharmacy.fr/",
+      "address": "2 Rue de France, 06000 Nice, France",
+      "sentAt": "2026-05-04T08:45:30.095Z"
+    },
+    {
+      "placeId": "ChIJ8XQN2aDazRIRnU0ZWWqD9H0",
+      "name": "La Grande Pharmacie Principale",
+      "email": "pharmacieprincipale@mesoigner.fr",
+      "website": "https://grandepharmacieprincipale06.pharmavie.fr/",
+      "address": "10 Rue Massena, 06000 Nice, France",
+      "sentAt": "2026-05-04T08:45:36.848Z"
+    },
+    {
+      "placeId": "ChIJEROsKR_RzRIRWogno87Mki4",
+      "name": "Pharmacie Nice Gare du Sud",
+      "email": "pharmacienicegaredusud@gmail.com",
+      "website": "https://pharmacienicegaredusud.universpharmacie.com/",
+      "address": "3 All. Philippe Seguin, 06000 Nice, France",
+      "sentAt": "2026-05-04T08:45:43.175Z"
+    },
+    {
+      "placeId": "ChIJh2tC_qbazRIRE1WpEVabIis",
+      "name": "Centre Commercial NICETOILE",
+      "email": "nom@domain.com",
+      "website": "https://www.nicetoile.com/?utm_medium=GMB&utm_source=Partoo",
+      "address": "30 Av. Jean Médecin, 06000 Nice, France",
+      "sentAt": "2026-05-04T08:45:50.072Z"
+    },
+    {
+      "placeId": "ChIJITv5JKHazRIRWN1raJ51XgU",
+      "name": "Grande Pharmacie Masséna",
+      "email": "contact.dataprivacy@doctolib.com",
+      "website": "https://www.doctolib.fr/pharmacie/nice/pharmacie-massena",
+      "address": "5 Rue Massena, 06000 Nice, France",
+      "sentAt": "2026-05-04T08:45:56.717Z"
+    },
+    {
+      "placeId": "ChIJ33CdYuPPzRIRJzhE-GFvpqU",
+      "name": "Grande Pharmacie de l'Horloge",
+      "email": "pharmacie.horloge@offisecure.com",
+      "website": "https://grandepharmaciedel-horloge.fr/",
+      "address": "98 Bd de Cessole, 06100 Nice, France",
+      "sentAt": "2026-05-04T08:46:13.234Z"
+    },
+    {
+      "placeId": "ChIJ319DFArRzRIRWhOfsw6jqb0",
+      "name": "Pharmacie Nikaia",
+      "email": "contact@pharmacienikaia.fr",
+      "website": "https://leadersante-pharmacie.fr/pharmacie/view/detail/id/358/?_gl=1*me2epy*_up*MQ..*_ga*Mjc3OTE4NTcuMTc0MjIwODE2MA..*_ga_HF25FHL4PN*MTc0MjIwODE1OS4xLjEuMTc0MjIwODE2NC4wLjAuMA..",
+      "address": "5 Trav. de la Digue des Français, 06200 Nice, France",
+      "sentAt": "2026-05-04T08:46:18.716Z"
+    },
+    {
+      "placeId": "ChIJje4LHqjazRIRjLJVmIxPFr4",
+      "name": "Pharmacie de l'Avenue",
+      "email": "monadresse@email.com",
+      "website": "https://www.pharmacie-avenue-nice.fr/",
+      "address": "45 Av. Jean Médecin, 06000 Nice, France",
+      "sentAt": "2026-05-04T08:46:24.164Z"
     }
   ],
-  "lastUpdated": "2026-05-01T08:34:38.284Z"
+  "lastUpdated": "2026-05-04T08:46:27.165Z"
 }
