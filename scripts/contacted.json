@@ -671,7 +671,79 @@
       "website": "https://www.pharmacie-avenue-nice.fr/",
       "address": "45 Av. Jean Médecin, 06000 Nice, France",
       "sentAt": "2026-05-04T08:46:24.164Z"
+    },
+    {
+      "placeId": "ChIJozKmMq3tBUgRTgmqDCPuYP8",
+      "name": "Cabinet dentaire Nantes Sainte-Anne",
+      "email": "contact.dataprivacy@doctolib.com",
+      "website": "https://www.doctolib.fr/cabinet-dentaire/nantes/cabinet-dentaire-nantes-sainte-anne",
+      "address": "132 Bd Saint-Aignan, 44100 Nantes, France",
+      "sentAt": "2026-05-05T08:39:09.248Z"
+    },
+    {
+      "placeId": "ChIJGeZHQcrvBUgRMlQK1Bfyfz0",
+      "name": "Vertuo",
+      "email": "athis@vertuo-sante.com",
+      "website": "https://www.vertuo-sante.com/dentiste/nantes-beaujoire-44/",
+      "address": "Centre commercial Carrefour, Rte de Paris, 44300 Nantes, France",
+      "sentAt": "2026-05-05T08:39:23.024Z"
+    },
+    {
+      "placeId": "ChIJaxkqjqfuBUgRsGBtSqvaeLk",
+      "name": "Cabinet Dentaire Contrescarpe - Dr Thierry VIVION - Dr Corentin VIVION - Dr Alice CASTEUBLE - Dr Estelle BIZOT",
+      "email": "contact.dataprivacy@doctolib.com",
+      "website": "https://www.doctolib.fr/cabinet-dentaire/nantes/cabinet-dentaire-contrescarpe-docteur-thierry-vivion-docteur-corentin-vivion",
+      "address": "11 Rue Contrescarpe, 44000 Nantes, France",
+      "sentAt": "2026-05-05T08:39:28.672Z"
+    },
+    {
+      "placeId": "ChIJGUZ-SsntBUgRNZnBCUzzb7M",
+      "name": "Dr Laura QUINTON",
+      "email": "contact.dataprivacy@doctolib.com",
+      "website": "https://www.doctolib.fr/dentiste/nantes/laura-quinton",
+      "address": "28 bis Bd Gabriel Guist'Hau, 44000 Nantes, France",
+      "sentAt": "2026-05-05T08:39:36.546Z"
+    },
+    {
+      "placeId": "ChIJuQKCXbyXB0ERwj0kJkZKSmM",
+      "name": "Dental Practice Dr. Carlos Fuentes",
+      "email": "contact.dataprivacy@doctolib.com",
+      "website": "https://www.doctolib.fr/cabinet-dentaire/nantes/cabinet-dentaire-monselet",
+      "address": "3 Pl. Emile Sarradin, 44000 Nantes, France",
+      "sentAt": "2026-05-05T08:39:41.708Z"
+    },
+    {
+      "placeId": "ChIJyaPUUOTvBUgRWI7oardcc7I",
+      "name": "Centre Dentaire de l'Eraudière",
+      "email": "contact.dataprivacy@doctolib.com",
+      "website": "https://www.doctolib.fr/centre-dentaire/nantes/centre-dentaire-de-l-eraudiere?utm_campaign=google-maps&utm_content=nantes&utm_medium=organic&utm_source=google&utm_term=centre-dentaire",
+      "address": "22 Rue des Marsauderies, 44300 Nantes, France",
+      "sentAt": "2026-05-05T08:39:46.964Z"
+    },
+    {
+      "placeId": "ChIJjbtmOrfvBUgR8FlINbS_b4M",
+      "name": "Dr Fanny PRIMAULT - Chirurgien-Dentiste",
+      "email": "contact.dataprivacy@doctolib.com",
+      "website": "https://www.doctolib.fr/dentiste/nantes/fanny-primault",
+      "address": "2 All. du Héron, 44000 Nantes, France",
+      "sentAt": "2026-05-05T08:39:52.360Z"
+    },
+    {
+      "placeId": "ChIJz17YuRHsBUgRk1KFS-mMx-E",
+      "name": "Docteur Florence Chartier-Martin",
+      "email": "contact.dataprivacy@doctolib.com",
+      "website": "https://www.doctolib.fr/dentiste/nantes/florence-chartier-martin",
+      "address": "44 Rue de Gigant, 44000 Nantes, France",
+      "sentAt": "2026-05-05T08:39:59.082Z"
+    },
+    {
+      "placeId": "ChIJAdVRIivtBUgRgo6BjXMlwwY",
+      "name": "Centre dentaire Vertuo Saint-Herblain",
+      "email": "accueil-herblain@vertuo-sante.com",
+      "website": "https://www.vertuo-sante.com/dentiste/nantes-saint-herblain-44/",
+      "address": "Bd Charles-Gautier, 44800 Saint-Herblain, France",
+      "sentAt": "2026-05-05T08:40:05.049Z"
     }
   ],
-  "lastUpdated": "2026-05-04T08:46:27.165Z"
+  "lastUpdated": "2026-05-05T08:40:09.200Z"
 }
