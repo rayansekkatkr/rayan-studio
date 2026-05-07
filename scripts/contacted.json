@@ -823,7 +823,111 @@
       "website": "http://guyon-avocat.fr/",
       "address": "4 Bd Ledru Rollin, 34000 Montpellier, France",
       "sentAt": "2026-05-06T08:45:58.843Z"
+    },
+    {
+      "placeId": "ChIJC4z1L7PJlkcR8RSCAwdowOQ",
+      "name": "Agence immobilière Laforêt Strasbourg",
+      "email": "strasbourg@laforet.com",
+      "website": "https://www.laforet.com/agence-immobiliere/strasbourg",
+      "address": "41 Rue Finkwiller, 67000 Strasbourg, France",
+      "sentAt": "2026-05-07T08:49:27.643Z"
+    },
+    {
+      "placeId": "ChIJA_4W-izIlkcRbirWqQP73o8",
+      "name": "Ethiqu'immo",
+      "email": "228j3nug9gvg@320x212.webp",
+      "website": "https://www.ethiqu-immo.fr/",
+      "address": "61 Rue du Lazaret, 67100 Strasbourg, France",
+      "sentAt": "2026-05-07T08:49:34.597Z"
+    },
+    {
+      "placeId": "ChIJSazpYefJlkcRl0pc9Xyoq90",
+      "name": "Gael STURTZ Agence Immobilière, Strasbourg",
+      "email": "photo_agence@640x337.jpg",
+      "website": "https://www.agence-gaelsturtz.com/",
+      "address": "4 Rue Friese, 67000 Strasbourg, France",
+      "sentAt": "2026-05-07T08:49:39.643Z"
+    },
+    {
+      "placeId": "ChIJffW1eHXJlkcRxysL5XiKA1s",
+      "name": "NOVÉO IMMO Strasbourg",
+      "email": "portrait-xavier@2x.webp",
+      "website": "https://www.noveo-immo.fr/",
+      "address": "40 Rue Pertois, 67100 Strasbourg, France",
+      "sentAt": "2026-05-07T08:49:45.142Z"
+    },
+    {
+      "placeId": "ChIJf6keo27JlkcRh5cjTqSurCA",
+      "name": "Bintz Immobilier - Vente, Location & Gestion immobilière",
+      "email": "contact@bintzimmobilier.fr",
+      "website": "https://www.bintzimmobilier.fr/",
+      "address": "1 Rue Saint-Arbogast, 67000 Strasbourg, France",
+      "sentAt": "2026-05-07T08:49:50.242Z"
+    },
+    {
+      "placeId": "ChIJsWU_zKjJlkcRsIcrUIeiu3A",
+      "name": "Innovimmo Strasbourg",
+      "email": "f80004eb1752065401@2560x1706.jpg",
+      "website": "https://www.innovimmo-strasbourg.fr/",
+      "address": "1 Rue de Belfort, 67100 Strasbourg, France",
+      "sentAt": "2026-05-07T08:49:57.121Z"
+    },
+    {
+      "placeId": "ChIJkYfl9VjIlkcRTK7-x9bbSSs",
+      "name": "L'Agence Immobilière à Strasbourg",
+      "email": "lagencestrasbourg@gmail.com",
+      "website": "https://www.immobiliere-agence-strasbourg.fr/contact",
+      "address": "9 Rue des Arquebusiers, 67000 Strasbourg, France",
+      "sentAt": "2026-05-07T08:50:03.626Z"
+    },
+    {
+      "placeId": "ChIJ-wgoap_JlkcRypp8NDZQiLg",
+      "name": "Agence Strasbourg Immobilière",
+      "email": "b02e89c41667555318@5180x3453.jpg",
+      "website": "https://www.asi67.com/",
+      "address": "200 Av. de Colmar, 67100 Strasbourg, France",
+      "sentAt": "2026-05-07T08:50:11.499Z"
+    },
+    {
+      "placeId": "ChIJfbVlwtzJlkcRqr8ghZrdeKE",
+      "name": "L'immobilière de Sarah",
+      "email": "7n81j4l5l930@320x256.webp",
+      "website": "http://www.limmobilieredesarah.fr/",
+      "address": "Rue de Verdun, 67000 Strasbourg, France",
+      "sentAt": "2026-05-07T08:50:18.773Z"
+    },
+    {
+      "placeId": "ChIJTeZ0ntrJlkcRIiegIetlpOA",
+      "name": "Immoval - Agence Immobilière Strasbourg",
+      "email": "immoval@immoval.com",
+      "website": "https://www.immoval.com/?utm_campaign=agence_paix&utm_medium=organic&utm_source=GMB",
+      "address": "26B Av. de la Paix, 67000 Strasbourg, France",
+      "sentAt": "2026-05-07T08:50:22.951Z"
+    },
+    {
+      "placeId": "ChIJUZ2ZMknIlkcRWVp4qTk2MVg",
+      "name": "Angsthelm Immobilier",
+      "email": "annecamille@angsthelm-immobilier.com",
+      "website": "http://angsthelm-immobilier.com/",
+      "address": "32 All. de la Robertsau, 67000 Strasbourg, France",
+      "sentAt": "2026-05-07T08:50:29.548Z"
+    },
+    {
+      "placeId": "ChIJPwQ_N_HIlkcRhSydbcRYDm0",
+      "name": "Immobiliere Vauban",
+      "email": "zuchner@immobilier-vauban.com",
+      "website": "http://www.immobilier-vauban.com/",
+      "address": "67 All. de la Robertsau, 67000 Strasbourg, France",
+      "sentAt": "2026-05-07T08:50:33.817Z"
+    },
+    {
+      "placeId": "ChIJJWgusw3JlkcR2fKlyXm2OLw",
+      "name": "Agence immobilière Laforêt Strasbourg Orangerie",
+      "email": "reclamations@stpierreassurances.com",
+      "website": "https://www.laforet.com/agence-immobiliere/strasbourg-orangerie?utm_source=google&utm_medium=mybusiness",
+      "address": "16 Av. de la Forêt-Noire, 67000 Strasbourg, France",
+      "sentAt": "2026-05-07T08:50:38.135Z"
     }
   ],
-  "lastUpdated": "2026-05-06T08:46:01.842Z"
+  "lastUpdated": "2026-05-07T08:50:41.138Z"
 }
