@@ -1223,7 +1223,87 @@
       "website": "https://www.bbgarchitectes.com/",
       "address": "145A Rue Alexandre Borelly, 83000 Toulon, France",
       "sentAt": "2026-05-13T08:56:45.284Z"
+    },
+    {
+      "placeId": "ChIJnTTeb5r0ikcRlaDvCukMup4",
+      "name": "Arcalys conseil et expert-comptable",
+      "email": "contact@arcalys.co",
+      "website": "https://www.arcalys.co/",
+      "address": "26 Rue Colonel Dumont, 38000 Grenoble, France",
+      "sentAt": "2026-05-14T08:51:17.190Z"
+    },
+    {
+      "placeId": "ChIJu4kEzJ70ikcR5K1x4Dy1WW0",
+      "name": "Cabinet Chekhar | Expert Comptable Grenoble",
+      "email": "contact@cabinet-chekhar.fr",
+      "website": "http://www.cabinet-chekhar.fr/",
+      "address": "11 Rue Charles Péguy, 38100 Grenoble, France",
+      "sentAt": "2026-05-14T08:51:25.852Z"
+    },
+    {
+      "placeId": "ChIJmROBzov0ikcR9YPJtqUL4B8",
+      "name": "MCA Expert - Expert-Comptable Grenoble",
+      "email": "contact@mca-expert.com",
+      "website": "https://www.mca-expert.com/",
+      "address": "3 Rue de la République, 38000 Grenoble, France",
+      "sentAt": "2026-05-14T08:51:39.536Z"
+    },
+    {
+      "placeId": "ChIJ4bx4JoD0ikcRCOLNV5S411M",
+      "name": "Cabinet Comptable Pépin",
+      "email": "contact@cabinet-pepin.fr",
+      "website": "https://cabinet-pepin.fr/",
+      "address": "23 Av. Doyen Louis Weil, 38000 Grenoble, France",
+      "sentAt": "2026-05-14T08:51:45.584Z"
+    },
+    {
+      "placeId": "ChIJmbcOy4H0ikcRNT4b_TlBIN4",
+      "name": "Cabinet Meunier",
+      "email": "contact@meunier-expert-conseil.fr",
+      "website": "https://meunier-expert-conseil.fr/",
+      "address": "4 Av. Doyen Louis Weil, 38000 Grenoble, France",
+      "sentAt": "2026-05-14T08:51:57.002Z"
+    },
+    {
+      "placeId": "ChIJeX4k45X1ikcR-MARXQKP3vM",
+      "name": "YTHAK | Expert - Comptable | Grenoble",
+      "email": "ythak2@ythak.fr",
+      "website": "http://ythak.fr/",
+      "address": "26 Rue Colonel Dumont, 38000 Grenoble, France",
+      "sentAt": "2026-05-14T08:52:02.751Z"
+    },
+    {
+      "placeId": "ChIJQ_Psm8P1ikcRyImZma-Sgtg",
+      "name": "AdQuo Grenoble - Cabinet d'Expertise Comptable et Commissaire aux Comptes",
+      "email": "contact@adquo.fr",
+      "website": "http://www.adquo.fr/",
+      "address": "26 Rue Colonel Dumont, 38000 Grenoble, France",
+      "sentAt": "2026-05-14T08:52:08.264Z"
+    },
+    {
+      "placeId": "ChIJwRown670ikcRPV6qOVXY53k",
+      "name": "FIDUXIA",
+      "email": "info@fiduxia.net",
+      "website": "http://fiduxia.net/",
+      "address": "91 Rue Général Mangin, 38100 Grenoble, France",
+      "sentAt": "2026-05-14T08:52:15.736Z"
+    },
+    {
+      "placeId": "ChIJX_juDVT0ikcR47wCfr3sfUg",
+      "name": "In Extenso Grenoble",
+      "email": "flags@2x.png",
+      "website": "https://www.inextenso.fr/agence/expert-comptable-grenoble/",
+      "address": "1 bis Bd de la Chantourne, 38700 La Tronche, France",
+      "sentAt": "2026-05-14T08:52:25.290Z"
+    },
+    {
+      "placeId": "ChIJ1aN506H0ikcRoZ7tktwEf88",
+      "name": "SODEGE",
+      "email": "contact@sodege.com",
+      "website": "http://www.sodege.com/",
+      "address": "6 Bd Roger Salengro, 38100 Grenoble, France",
+      "sentAt": "2026-05-14T08:52:30.399Z"
     }
   ],
-  "lastUpdated": "2026-05-13T08:56:48.285Z"
+  "lastUpdated": "2026-05-14T08:52:33.399Z"
 }
