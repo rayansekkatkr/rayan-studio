@@ -1303,7 +1303,87 @@
       "website": "http://www.sodege.com/",
       "address": "6 Bd Roger Salengro, 38100 Grenoble, France",
       "sentAt": "2026-05-14T08:52:30.399Z"
+    },
+    {
+      "placeId": "ChIJASvqdeud8kcRaOZ_sCcqzCU",
+      "name": "Prêt à Partir Dijon (Ambassade FRAM)",
+      "email": "recrutement@pretapartir.fr",
+      "website": "https://www.pretapartir.fr/nos-agences/pret-a-partir-dijon.html",
+      "address": "10 Rue de la Liberté, 21000 Dijon, France",
+      "sentAt": "2026-05-15T08:57:52.846Z"
+    },
+    {
+      "placeId": "ChIJtWSlS-qd8kcRJg-hGF6NZoY",
+      "name": "Selectour Voyages Girardot",
+      "email": "mail@mail.com",
+      "website": "https://www.selectour-voyages-girardot.com/",
+      "address": "18 Rue du Chapeau Rouge, 21000 Dijon, France",
+      "sentAt": "2026-05-15T08:57:57.921Z"
+    },
+    {
+      "placeId": "ChIJtzPSfRhi7UcRlJjf5pLhQDI",
+      "name": "Agence de voyages Promovacances Dijon",
+      "email": "agence-dijon@promovacances.com",
+      "website": "https://www.promovacances.com/agences-de-voyages/agence-de-voyage-toison-d-or-dijon-21000/",
+      "address": "Parc Commercial de la Toison d'Or, N/A Rte de Langres, 21000 Dijon, France",
+      "sentAt": "2026-05-15T08:58:02.045Z"
+    },
+    {
+      "placeId": "ChIJJxDfJuqd8kcR8ZBw_Aapl7c",
+      "name": "Agence de voyage TUI STORE Dijon",
+      "email": "agencedijon@tuifrance.com",
+      "website": "https://agences-de-voyages.tui.fr/dijon/agence-de-voyage-tui-store-dijon-6",
+      "address": "18 Rue Piron, 21000 Dijon, France",
+      "sentAt": "2026-05-15T08:58:07.159Z"
+    },
+    {
+      "placeId": "ChIJ3bLVKuid8kcR8WRPRk5cAT0",
+      "name": "Voyage Conseil Bourgogne SARL",
+      "email": "agence@voyageconseilbourgogne.fr",
+      "website": "http://www.voyageconseilbourgogne.fr/?utm_source=gmb",
+      "address": "1 Pl. des Cordeliers, 21000 Dijon, France",
+      "sentAt": "2026-05-15T08:58:12.031Z"
+    },
+    {
+      "placeId": "ChIJCxppze-oi0cRV8ddM36tl_A",
+      "name": "France-Makkah by Omra & Hajj",
+      "email": "contact@france-makkah.com",
+      "website": "https://www.france-makkah.com/",
+      "address": "52 Rue d'Auxonne, 21000 Dijon, France",
+      "sentAt": "2026-05-15T08:58:18.848Z"
+    },
+    {
+      "placeId": "ChIJBSwsfK-d8kcRASddbWN3sCk",
+      "name": "Agence de Voyages Club Med Dijon",
+      "email": "agence.dijon@clubmed.com",
+      "website": "https://agence.clubmed.fr/fr/france/bourgogne-franche-comte/cote-dor/dijon/agence-de-voyages-club-med-dijon-50",
+      "address": "20 Rue des Forges, 21000 Dijon, France",
+      "sentAt": "2026-05-15T08:58:22.912Z"
+    },
+    {
+      "placeId": "ChIJ2-PdRkUqcUURSstTrQT0YZM",
+      "name": "Omra Hajj Family",
+      "email": "omrahajjfamily@hotmail.com",
+      "website": "https://omra-hajj-family.com/",
+      "address": "14 Rue Pierre de Coubertin, 21000 Dijon, France",
+      "sentAt": "2026-05-15T08:58:26.889Z"
+    },
+    {
+      "placeId": "ChIJI4xMiyWd8kcRhU6xOssqn2Y",
+      "name": "ACTIVE TOURS DIJON",
+      "email": "info@active-tours.fr",
+      "website": "https://active-tours.fr/",
+      "address": "78 Rue Monge, 21000 Dijon, France",
+      "sentAt": "2026-05-15T08:58:31.159Z"
+    },
+    {
+      "placeId": "ChIJI6Q5tW_AB0ERAGiPzfxEeMA",
+      "name": "Vision d'Ailleurs Voyages",
+      "email": "contact@visiondailleurs.fr",
+      "website": "https://visiondailleurs.fr/?utm_source=gmb",
+      "address": "31 Rue de la Libération, 21240 Talant, France",
+      "sentAt": "2026-05-15T08:58:39.389Z"
     }
   ],
-  "lastUpdated": "2026-05-14T08:52:33.399Z"
+  "lastUpdated": "2026-05-15T08:58:50.457Z"
 }
