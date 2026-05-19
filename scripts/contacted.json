@@ -1431,7 +1431,71 @@
       "website": "http://fcrbatimrenov.fr/",
       "address": "3 Rue du Puits Neuf, 13100 Aix-en-Provence, France",
       "sentAt": "2026-05-18T09:03:10.525Z"
+    },
+    {
+      "placeId": "ChIJ605_Bdkd90cRi_F5io7C658",
+      "name": "Agence Vingt Deux",
+      "email": "contact@vingtdeux.fr",
+      "website": "https://www.vingtdeux.fr/",
+      "address": "22 All. Alan Turing, 63000 Clermont-Ferrand, France",
+      "sentAt": "2026-05-19T09:01:07.614Z"
+    },
+    {
+      "placeId": "ChIJLQW_Cg4d90cRzeZG-3dDcKs",
+      "name": "AGENCE DA'COM",
+      "email": "contact@agence-dacom.fr",
+      "website": "https://www.agence-dacom.fr/",
+      "address": "10 All. Evariste Galois, 63000 Clermont-Ferrand, France",
+      "sentAt": "2026-05-19T09:01:13.114Z"
+    },
+    {
+      "placeId": "ChIJURggIXcZ90cRJC9d3Ue6ugk",
+      "name": "Floricom | Agence de communication",
+      "email": "agence@floricom.fr",
+      "website": "https://www.floricom.fr/",
+      "address": "126 Rue Sully, 63100 Clermont-Ferrand, France",
+      "sentAt": "2026-05-19T09:01:20.473Z"
+    },
+    {
+      "placeId": "ChIJk4eyNkgZ90cRKlms7yunBIk",
+      "name": "Agence MKF",
+      "email": "contact@agencemkf.fr",
+      "website": "https://agencemkf.fr/",
+      "address": "8 Rue Eric de Cromières, 63000 Clermont-Ferrand, France",
+      "sentAt": "2026-05-19T09:01:25.833Z"
+    },
+    {
+      "placeId": "ChIJUZis5QMc90cRE2lsSpXbO6U",
+      "name": "Scopika agence digitale",
+      "email": "contact@scopika.com",
+      "website": "https://www.scopika.com/",
+      "address": "15, Autre entrée :, 17 Rue du Pré la Reine, 63100 Clermont-Ferrand, France",
+      "sentAt": "2026-05-19T09:01:31.031Z"
+    },
+    {
+      "placeId": "ChIJuXkJeOgb90cRXOmSpte-Yac",
+      "name": "SAS Communication",
+      "email": "recrutement@sas-communication.fr",
+      "website": "http://www.sas-communication.fr/",
+      "address": "17 Rue Saint-Arthème, 63000 Clermont-Ferrand, France",
+      "sentAt": "2026-05-19T09:01:44.699Z"
+    },
+    {
+      "placeId": "ChIJabax8q4e90cRze3MkvgX17o",
+      "name": "LEMON",
+      "email": "hello@hellolemon.fr",
+      "website": "https://hellolemon.fr/",
+      "address": "29 Rue des Jacobins, 63000 Clermont-Ferrand, France",
+      "sentAt": "2026-05-19T09:01:53.607Z"
+    },
+    {
+      "placeId": "ChIJE2tIZUdVE4oROzYME8ZEq_Q",
+      "name": "VESPERIART",
+      "email": "contact@vesperiart.com",
+      "website": "https://vesperiart.com/",
+      "address": "7 Rue Paul Verlaine, 49000 Angers, France",
+      "sentAt": "2026-05-19T09:01:58.549Z"
     }
   ],
-  "lastUpdated": "2026-05-18T09:03:13.565Z"
+  "lastUpdated": "2026-05-19T09:02:05.381Z"
 }
