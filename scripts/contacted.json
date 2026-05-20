@@ -1495,7 +1495,79 @@
       "website": "https://vesperiart.com/",
       "address": "7 Rue Paul Verlaine, 49000 Angers, France",
       "sentAt": "2026-05-19T09:01:58.549Z"
+    },
+    {
+      "placeId": "ChIJCUvZoSGv9UcR-HvaBEXp2ig",
+      "name": "Eric Favier réception",
+      "email": "info@website.com",
+      "website": "http://traiteur-st-etienne.fr/",
+      "address": "10 Rue Émile, 42100 Saint-Étienne, France",
+      "sentAt": "2026-05-20T09:00:27.301Z"
+    },
+    {
+      "placeId": "ChIJCeUXgBqs9UcRL-5ldHgpqOM",
+      "name": "Traiteur Faye J-M",
+      "email": "traiteur.faye@gmail.com",
+      "website": "https://traiteurfayejm.eatbu.com/",
+      "address": "3 Rue Edmond Charpentier, 42000 Saint-Étienne, France",
+      "sentAt": "2026-05-20T09:00:34.987Z"
+    },
+    {
+      "placeId": "ChIJ48fMGjCp9UcRqO047JehWHs",
+      "name": "Ethic Table - Traiteur & Restauration Collective",
+      "email": "phone@2x.png",
+      "website": "http://www.ethic-table.fr/",
+      "address": "12 Imp. Côte Thiollière, 42100 Saint-Étienne, France",
+      "sentAt": "2026-05-20T09:00:43.578Z"
+    },
+    {
+      "placeId": "ChIJ83cHkhCu9UcRonh6smHQXpM",
+      "name": "Aux Rendez-vous des Saveurs",
+      "email": "contact@auxrendez-vousdessaveurs.com",
+      "website": "https://www.auxrendez-vousdessaveurs.com/",
+      "address": "20 Rue Sadi Carnot, 42230 Roche-la-Molière, France",
+      "sentAt": "2026-05-20T09:00:53.870Z"
+    },
+    {
+      "placeId": "ChIJAQAQpryu9UcRULcydZw6-Bw",
+      "name": "Artisans traiteur rotisseur à Saint-Etienne",
+      "email": "kampoulet@hotmail.fr",
+      "website": "https://ketmplatscuisines.fr/",
+      "address": "7 Rue de Montmartre, 42000 Saint-Étienne, France",
+      "sentAt": "2026-05-20T09:01:02.808Z"
+    },
+    {
+      "placeId": "ChIJR8EaP3iv9UcRoU-1aZL7nXk",
+      "name": "Pause Traiteur",
+      "email": "pausetraiteur@outlook.fr",
+      "website": "http://pause-traiteur.fr/",
+      "address": "87 Rue Désiré Claude, 42100 Saint-Étienne, France",
+      "sentAt": "2026-05-20T09:01:10.767Z"
+    },
+    {
+      "placeId": "ChIJA3LgfVKp9UcR4ttVijb3hJ4",
+      "name": "Pause et Plaisir",
+      "email": "contact@pauseetplaisir.fr",
+      "website": "https://www.pauseetplaisir.fr/",
+      "address": "7 Imp. Fauriat, 42000 Saint-Étienne, France",
+      "sentAt": "2026-05-20T09:01:19.224Z"
+    },
+    {
+      "placeId": "ChIJBdetRu-v9UcRPCNBR9-R8H0",
+      "name": "Kitchen Street",
+      "email": "ezgif.com-webp-to-png_1_100x@2x.png",
+      "website": "https://www.kitchenstreet.fr/",
+      "address": "1 Bd Dalgabio, 42000 Saint-Étienne, France",
+      "sentAt": "2026-05-20T09:01:23.886Z"
+    },
+    {
+      "placeId": "ChIJZ5XQSd-t9UcR_kGHeE3Yb04",
+      "name": "TRAITEUR SEBASTIEN DERAIL",
+      "email": "traiteur.derail2008@gmail.com",
+      "website": "https://traiteur-sebastien-derail-saint-etienne.eatbu.com/",
+      "address": "41 Rue Charles de Gaulle, 42000 Saint-Étienne, France",
+      "sentAt": "2026-05-20T09:01:30.970Z"
     }
   ],
-  "lastUpdated": "2026-05-19T09:02:05.381Z"
+  "lastUpdated": "2026-05-20T09:01:36.978Z"
 }
