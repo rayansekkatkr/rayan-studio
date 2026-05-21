@@ -1567,7 +1567,103 @@
       "website": "https://traiteur-sebastien-derail-saint-etienne.eatbu.com/",
       "address": "41 Rue Charles de Gaulle, 42000 Saint-Étienne, France",
       "sentAt": "2026-05-20T09:01:30.970Z"
+    },
+    {
+      "placeId": "ChIJw6_BYPu9FkgRVed2cC1G89Y",
+      "name": "Lines Of Driving Driving School Brest",
+      "email": "lignesdeconduite29@gmail.com",
+      "website": "https://www.lignesdeconduite29.com/",
+      "address": "87 Rue Général Gallieni, 29200 Brest, France",
+      "sentAt": "2026-05-21T09:00:50.961Z"
+    },
+    {
+      "placeId": "ChIJU3CMElG5FkgRnsDf1yVebwo",
+      "name": "CONDUITE 29",
+      "email": "conduite29@orange.fr",
+      "website": "http://www.conduite29.fr/",
+      "address": "7 Rue de Siam, 29200 Brest, France",
+      "sentAt": "2026-05-21T09:00:56.298Z"
+    },
+    {
+      "placeId": "ChIJYzCURZK7FkgRCQ5XrP-kre8",
+      "name": "Lambé Conduite",
+      "email": "web@lambeconduite.com",
+      "website": "http://lambeconduite.com/",
+      "address": "15 Rue Robespierre, 29200 Brest, France",
+      "sentAt": "2026-05-21T09:01:02.259Z"
+    },
+    {
+      "placeId": "ChIJgVgeGFO5FkgRNStmwJFeCL0",
+      "name": "ECF - French Driving School",
+      "email": "ecf.brestguipavas@ecf-roudaut.fr",
+      "website": "https://www.ecf.asso.fr/Auto-ecole/ROUDAUT/ECF-ROUDAUT-Brest-Recouvrance-BREST",
+      "address": "22 Rue de la Porte, 29200 Brest, France",
+      "sentAt": "2026-05-21T09:01:07.679Z"
+    },
+    {
+      "placeId": "ChIJ4zIaDgm8FkgRmnB2_92ur2s",
+      "name": "French Driving School",
+      "email": "ecf.brestbellevue@ecf-roudaut.fr",
+      "website": "https://www.ecf.asso.fr/Auto-ecole/ROUDAUT/ECF-ROUDAUT-Brest-Bellevue-BREST",
+      "address": "24 Pl. Napoléon III, 29200 Brest, France",
+      "sentAt": "2026-05-21T09:01:13.766Z"
+    },
+    {
+      "placeId": "ChIJdUDYd--7FkgRtnjj49gUHkA",
+      "name": "Campus Conduite",
+      "email": "campusconduitebrest@gmail.com",
+      "website": "https://auto-ecole.codesrousseau.fr/annuaire-auto-ecoles/brest/campus-conduite-brest/20307",
+      "address": "Halles de Kérinou, 66 Rue Auguste Kervern, 29200 Brest, France",
+      "sentAt": "2026-05-21T09:01:21.853Z"
+    },
+    {
+      "placeId": "ChIJH1GrhK--FkgRAneE3y2_djc",
+      "name": "School Of Driving Contact",
+      "email": "contact@eccontact.fr",
+      "website": "http://www.eccontact.fr/",
+      "address": "255 Rue Anatole France, 29200 Brest, France",
+      "sentAt": "2026-05-21T09:01:27.071Z"
+    },
+    {
+      "placeId": "ChIJ4954VZK7FkgRyhKCxEniISs",
+      "name": "Armor Conduite Auto Moto School",
+      "email": "armor.conduite.brest@gmail.com",
+      "website": "https://armor-conduite.com/",
+      "address": "20 Rue Robespierre, 29200 Brest, France",
+      "sentAt": "2026-05-21T09:01:32.984Z"
+    },
+    {
+      "placeId": "ChIJiZQ21dG7FkgROf7P9-d8qfY",
+      "name": "Driving School Cer",
+      "email": "cerrichardthomas270@orange.fr",
+      "website": "http://www.auto-ecole-cer.com/",
+      "address": "8 Pl. de Strasbourg, 29200 Brest, France",
+      "sentAt": "2026-05-21T09:01:41.362Z"
+    },
+    {
+      "placeId": "ChIJwZ9DN2q6FkgR-SeE8Ds2dDU",
+      "name": "ECF - French Driving School",
+      "email": "ecf.brestguipavas@ecf-roudaut.fr",
+      "website": "https://www.ecf.asso.fr/Auto-ecole/ROUDAUT/ECF-ROUDAUT-Centre-de-formation-professionnelle-BREST-GUIPAVAS",
+      "address": "245 Rue du Froutven, 29490 Guipavas, France",
+      "sentAt": "2026-05-21T09:01:46.525Z"
+    },
+    {
+      "placeId": "ChIJNTZPm-C7FkgRaXf8qvT6pJA",
+      "name": "Education A La Route",
+      "email": "education-a-la-route@orange.fr",
+      "website": "http://www.ifsr.fr/",
+      "address": "6 Pl. Maurice Gillet, 29200 Brest, France",
+      "sentAt": "2026-05-21T09:01:52.387Z"
+    },
+    {
+      "placeId": "ChIJt6JIXve7FkgRehkast01wJQ",
+      "name": "Auto Progress",
+      "email": "autoprogress29@gmail.com",
+      "website": "http://autoprogress.fr/",
+      "address": "63 Rue Professeur Langevin, 29200 Brest, France",
+      "sentAt": "2026-05-21T09:01:56.491Z"
     }
   ],
-  "lastUpdated": "2026-05-20T09:01:36.978Z"
+  "lastUpdated": "2026-05-21T09:02:02.495Z"
 }
