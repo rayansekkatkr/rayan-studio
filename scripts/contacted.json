@@ -1775,7 +1775,95 @@
       "website": "https://www.hairitagemetz.com/",
       "address": "12 Av. Sébastopol, 57070 Metz, France",
       "sentAt": "2026-05-26T09:02:25.206Z"
+    },
+    {
+      "placeId": "ChIJjUqXj4pjjUcRxQZCQpbNRyw",
+      "name": "Salle de sport - ON AIR Besançon",
+      "email": "besancon@onair-fitness.fr",
+      "website": "https://onair-fitness.fr/club/besancon/",
+      "address": "ZAC de la chaufferie Bois, 226C Rue de Dole, 25000 Besançon, France",
+      "sentAt": "2026-05-27T09:01:15.828Z"
+    },
+    {
+      "placeId": "ChIJhbnojvtijUcR7suPB5eMi90",
+      "name": "Snatch Fitness Club",
+      "email": "contact@snatchfitnessclub.fr",
+      "website": "https://www.snatchfitnessclub.fr/",
+      "address": "101 Rue de Vesoul, 25000 Besançon, France",
+      "sentAt": "2026-05-27T09:01:21.270Z"
+    },
+    {
+      "placeId": "ChIJ2xOR2z1jjUcR_n8MoZLnCg8",
+      "name": "Salle de sport Besançon Centre - Liberty GYM",
+      "email": "besancon-centre-ville@libertygym.fr",
+      "website": "https://libertygym.fr/salle-de-sport/besancon-centre/",
+      "address": "3 Rue Jean Jacques Rousseau, 25000 Besançon, France",
+      "sentAt": "2026-05-27T09:01:26.515Z"
+    },
+    {
+      "placeId": "ChIJ9YXhEQ9jjUcRnycee3jwhJQ",
+      "name": "Liberty Gym",
+      "email": "besancon-marmier@libertygym.fr",
+      "website": "https://libertygym.fr/besancon-marmier/",
+      "address": "9 Rue Xavier Marmier, 25000 Besançon, France",
+      "sentAt": "2026-05-27T09:01:33.351Z"
+    },
+    {
+      "placeId": "ChIJA5zQsiNjjUcRIrCtsVy1Nls",
+      "name": "Le Local Transformation physique",
+      "email": "jose@lelocalbesancon.com",
+      "website": "http://www.lelocalbesancon.com/",
+      "address": "Rue Weiss, 25000 Besançon, France",
+      "sentAt": "2026-05-27T09:01:44.564Z"
+    },
+    {
+      "placeId": "ChIJKXXvR7djjUcRkcj572cQ6cg",
+      "name": "Everest Sport Club",
+      "email": "everest.besancon@monsportclub.fr",
+      "website": "https://www.everest-sportclub.fr/",
+      "address": "4 Rue de l'Escale, 25000 Besançon, France",
+      "sentAt": "2026-05-27T09:01:49.940Z"
+    },
+    {
+      "placeId": "ChIJlYqVAABjjUcRkqSmwoZtnrE",
+      "name": "Warrior Mind - SPORT CLUB",
+      "email": "contact@warrior-mind.fr",
+      "website": "https://warrior-mind.fr/",
+      "address": "41 Rue Thomas Edison, 25000 Besançon, France",
+      "sentAt": "2026-05-27T09:01:58.151Z"
+    },
+    {
+      "placeId": "ChIJuyE8z6JjjUcRw8kG0Gq30DU",
+      "name": "Crossfit Besançon 958 Hyrox Club Training Gym",
+      "email": "crossfitbesancon958@gmail.com",
+      "website": "https://crossfitbesancon.com/",
+      "address": "29 Bd Président John Fitzgerald Kennedy, 25000 Besançon, France",
+      "sentAt": "2026-05-27T09:02:04.071Z"
+    },
+    {
+      "placeId": "ChIJVVVVVWhijUcRKrGEaZJ68Zg",
+      "name": "Liberty Gym Besançon Valentin - Liberty GYM Salle de sport",
+      "email": "besancon-valentin@libertygym.fr",
+      "website": "https://libertygym.fr/salle-de-sport/besancon-valentin/",
+      "address": "51 Rue de Châtillon, 25480 École-Valentin, France",
+      "sentAt": "2026-05-27T09:02:12.079Z"
+    },
+    {
+      "placeId": "ChIJeVHtKcZijUcRZ-ys7oftii0",
+      "name": "COP'S - Besançon Fitness",
+      "email": "votre@email.fr",
+      "website": "http://cops25.com/",
+      "address": "56 Chem. des Montarmots, 25000 Besançon, France",
+      "sentAt": "2026-05-27T09:02:18.203Z"
+    },
+    {
+      "placeId": "ChIJuRcb_X9jjUcR_uy7wRRZaCI",
+      "name": "So'Fitness Besançon",
+      "email": "sofitnessbesancon@gmail.com",
+      "website": "http://www.sofitness-studio.fr/",
+      "address": "21 B Rue de la République, 25000 Besançon, France",
+      "sentAt": "2026-05-27T09:02:24.191Z"
     }
   ],
-  "lastUpdated": "2026-05-26T09:02:30.210Z"
+  "lastUpdated": "2026-05-27T09:02:27.193Z"
 }
