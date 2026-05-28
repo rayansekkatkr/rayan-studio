@@ -1863,7 +1863,103 @@
       "website": "http://www.sofitness-studio.fr/",
       "address": "21 B Rue de la République, 25000 Besançon, France",
       "sentAt": "2026-05-27T09:02:24.191Z"
+    },
+    {
+      "placeId": "ChIJdadSmdTk5EcREQm0KPRXM2o",
+      "name": "Pharmacie Centrale Orléans",
+      "email": "support@valwin.fr",
+      "website": "https://pharmacie-centrale-orleans.epharmacie.pro/",
+      "address": "19 Rue de la République, 45000 Orléans, France",
+      "sentAt": "2026-05-28T09:06:25.731Z"
+    },
+    {
+      "placeId": "ChIJezwCUDbl5EcRSIv_DL9fL5Q",
+      "name": "PHARMACY PHARMAVANCE Orleans",
+      "email": "compharmavance@gmail.com",
+      "website": "https://www.pharmavance.com/",
+      "address": "103 Rue du Faubourg Madeleine, 45000 Orléans, France",
+      "sentAt": "2026-05-28T09:06:30.468Z"
+    },
+    {
+      "placeId": "ChIJ2dTfE6lx5kcRSCqwMfqsUww",
+      "name": "Pharmacie Principale de la Porte d'Orléans",
+      "email": "pharmaman75@gmail.com",
+      "website": "https://pharmacie-porte-orleans.mesoigner.fr/",
+      "address": "4 Pl. du 25 Août 1944, 75014 Paris, France",
+      "sentAt": "2026-05-28T09:06:36.183Z"
+    },
+    {
+      "placeId": "ChIJ8Uraxgjk5EcRN6A2-IC7qm4",
+      "name": "Rond Point Pharmacy",
+      "email": "support@valwin.fr",
+      "website": "https://pharmacie-du-rond-point-orleans.epharmacie.pro/",
+      "address": "16 Av. de la Bolière, 45100 Orléans, France",
+      "sentAt": "2026-05-28T09:06:45.663Z"
+    },
+    {
+      "placeId": "ChIJfc-9Y0775EcRMXmlCyeMl_M",
+      "name": "Marie Stuart Pharmacy",
+      "email": "phmariestuart@gmail.com",
+      "website": "https://pharmaciemariestuart.mesoigner.fr/",
+      "address": "53 Bd Marie Stuart, 45000 Orléans, France",
+      "sentAt": "2026-05-28T09:06:53.837Z"
+    },
+    {
+      "placeId": "ChIJLbDPjejk5EcRPvv-Zvpm-5I",
+      "name": "Pharmacy Loire Valley",
+      "email": "contact.dataprivacy@doctolib.com",
+      "website": "https://www.doctolib.fr/pharmacie/orleans/pharmacie-du-val-de-loire-orleans",
+      "address": "77 Av. de la Mouillère, 45100 Orléans, France",
+      "sentAt": "2026-05-28T09:07:01.105Z"
+    },
+    {
+      "placeId": "ChIJd6TrA9Tk5EcRkmZg64BpeDI",
+      "name": "The Pharmacy Bolière",
+      "email": "contact.dataprivacy@doctolib.com",
+      "website": "https://www.doctolib.fr/pharmacie/orleans/pharmacie-de-la-boliere",
+      "address": "24 Av. de la Bolière, 45100 Orléans, France",
+      "sentAt": "2026-05-28T09:07:15.829Z"
+    },
+    {
+      "placeId": "ChIJDXG7LNTk5EcR41Awp-1iuVk",
+      "name": "Pharmacie de la Poste",
+      "email": "contact.dataprivacy@doctolib.com",
+      "website": "https://www.doctolib.fr/pharmacie/orleans/pharmacie-de-la-poste-orleans",
+      "address": "6 Rue des Carmes, 45000 Orléans, France",
+      "sentAt": "2026-05-28T09:07:20.740Z"
+    },
+    {
+      "placeId": "ChIJiST_ntT65EcRsIwdi77fmmQ",
+      "name": "Pharmacie Dunois",
+      "email": "spdunois@orange.fr",
+      "website": "https://pharmacie-dunois.pharmaciereference.fr/",
+      "address": "1 Pl. Dunois, 45000 Orléans, France",
+      "sentAt": "2026-05-28T09:07:25.975Z"
+    },
+    {
+      "placeId": "ChIJDRVz5Sr75EcRVnZKNNfTchA",
+      "name": "Pharmacie Gambetta",
+      "email": "phie.gambetta@yahoo.fr",
+      "website": "https://pharmacie-gambetta-orleans.pharmacorp.fr/",
+      "address": "8 Pl. Gambetta, 45000 Orléans, France",
+      "sentAt": "2026-05-28T09:07:32.652Z"
+    },
+    {
+      "placeId": "ChIJPflBsQnk5EcR4l8QQAieUxc",
+      "name": "Pharmacie de l'Indien",
+      "email": "phiedelindien@yahoo.fr",
+      "website": "https://pharmaciedelindien-orleans.pharmavie.fr/",
+      "address": "12 Av. du Président John Kennedy, 45100 Orléans, France",
+      "sentAt": "2026-05-28T09:07:39.036Z"
+    },
+    {
+      "placeId": "ChIJ_1fZiC775EcRwG6gW2ZFvWQ",
+      "name": "Pharmacie Emile Zola",
+      "email": "pharmacieemilezola450@gmail.com",
+      "website": "https://pharmacie-emilezola-orleans.pharmacorp.fr/",
+      "address": "All. Anne du Bourg, 45000 Orléans, France",
+      "sentAt": "2026-05-28T09:07:45.769Z"
     }
   ],
-  "lastUpdated": "2026-05-27T09:02:27.193Z"
+  "lastUpdated": "2026-05-28T09:07:48.769Z"
 }
