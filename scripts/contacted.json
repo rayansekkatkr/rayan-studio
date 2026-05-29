@@ -1959,7 +1959,47 @@
       "website": "https://pharmacie-emilezola-orleans.pharmacorp.fr/",
       "address": "All. Anne du Bourg, 45000 Orléans, France",
       "sentAt": "2026-05-28T09:07:45.769Z"
+    },
+    {
+      "placeId": "ChIJCVqmEQUPUysR1yyeRppuXJk",
+      "name": "Centre dentaire Elbeuf : Dentiste Elbeuf - Dentego",
+      "email": "43@2x.png",
+      "website": "https://dentego.fr/nos-centres/normandie",
+      "address": "90 Rue des Martyrs, 76500 Elbeuf, France",
+      "sentAt": "2026-05-29T09:01:55.915Z"
+    },
+    {
+      "placeId": "ChIJCWf3fNDd4EcRsGxwf-Vxq9Q",
+      "name": "Cabinet Dentaire La Luciline - Docteur Élodie Miray - Chirurgien-dentiste",
+      "email": "contact.drmiray@gmail.com",
+      "website": "https://dr-elodie-miray.chirurgiens-dentistes.fr/",
+      "address": "31 Mail Andrée Putman, 76000 Rouen, France",
+      "sentAt": "2026-05-29T09:02:01.126Z"
+    },
+    {
+      "placeId": "ChIJl77I4_Pd4EcRtdWKqJCH26c",
+      "name": "Dr Julie Meuleman",
+      "email": "contact@docteur-elie.fr",
+      "website": "https://dr-elie-romain.chirurgiens-dentistes.fr/",
+      "address": "15 Rue de Crosne, 76000 Rouen, France",
+      "sentAt": "2026-05-29T09:02:10.526Z"
+    },
+    {
+      "placeId": "ChIJryQgP5Xd4EcRKb1jYdkhVfs",
+      "name": "Dr Romain ELIE",
+      "email": "contact@docteur-elie.fr",
+      "website": "http://www.docteur-elie.fr/",
+      "address": "15 Rue de Crosne, 76000 Rouen, France",
+      "sentAt": "2026-05-29T09:02:17.673Z"
+    },
+    {
+      "placeId": "ChIJjx7X8n7e4EcRLPOxXSEMu2w",
+      "name": "Dr GRAINDORGE Charles - ORTHODONTISTE ROUEN",
+      "email": "rdv.ch.graindorge@iortho.fr",
+      "website": "https://dr-charles-graindorge.chirurgiens-dentistes.fr/",
+      "address": "24 Rue des Arpents, 76000 Rouen, France",
+      "sentAt": "2026-05-29T09:02:26.512Z"
     }
   ],
-  "lastUpdated": "2026-05-28T09:07:48.769Z"
+  "lastUpdated": "2026-05-29T09:02:29.512Z"
 }
