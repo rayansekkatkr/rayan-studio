@@ -1999,7 +1999,87 @@
       "website": "https://dr-charles-graindorge.chirurgiens-dentistes.fr/",
       "address": "24 Rue des Arpents, 76000 Rouen, France",
       "sentAt": "2026-05-29T09:02:26.512Z"
+    },
+    {
+      "placeId": "ChIJn6jIk7Lr9EcRiVvGW06DHDw",
+      "name": "Hôtel Vaubecour",
+      "email": "contact@hotelvaubecour-lyon.com",
+      "website": "http://www.hotelvaubecour-lyon.com/",
+      "address": "28 Rue Vaubecour 2é étage, 69002 Lyon, France",
+      "sentAt": "2026-06-01T09:42:53.297Z"
+    },
+    {
+      "placeId": "ChIJuyL0JlTq9EcRhmUqkkypx_k",
+      "name": "Hôtel Mercure Lyon Centre Beaux Arts",
+      "email": "h2949@accor.com",
+      "website": "https://all.accor.com/lien_externe.svlt?goto=fiche_hotel&code_hotel=2949&merchantid=seo-maps-FR-2949&sourceid=aw-cen&utm_medium=seo%20maps&utm_source=google%20Maps&utm_campaign=seo%20maps",
+      "address": "73-75 Rue du Président Édouard Herriot, 69002 Lyon, France",
+      "sentAt": "2026-06-01T09:43:01.612Z"
+    },
+    {
+      "placeId": "ChIJf51bMmXq9EcRLsjk2d3kbp8",
+      "name": "Hôtel Première Classe Lyon Centre - Gare Part Dieu",
+      "email": "dpo@groupedulouvre.com",
+      "website": "https://lyon-centre-gare-part-dieu.premiereclasse.com/fr-fr/",
+      "address": "75 Bd Marius Vivier Merle, 69003 Lyon, France",
+      "sentAt": "2026-06-01T09:43:07.234Z"
+    },
+    {
+      "placeId": "ChIJxdy5lXfp9EcRoGKfr8kZ2oo",
+      "name": "hotelF1 Lyon Sud Oullins",
+      "email": "h2255@accor.com",
+      "website": "https://all.accor.com/lien_externe.svlt?goto=fiche_hotel&code_hotel=2255&merchantid=seo-maps-FR-2255&sourceid=aw-cen&utm_medium=seo%20maps&utm_source=google%20Maps&utm_campaign=seo%20maps",
+      "address": "10/12 Rue Elisée Reclus, 69600 Oullins-Pierre-Bénite, France",
+      "sentAt": "2026-06-01T09:43:12.920Z"
+    },
+    {
+      "placeId": "ChIJy6NMV3zr9EcRGI8vnMAn9L4",
+      "name": "ResidHotel Lyon Lamartine",
+      "email": "lamartine@residhotel.com",
+      "website": "https://www.residhotel.com/lyon-lamartine",
+      "address": "11 Av. Victor Hugo, 69130 Tassin-la-Demi-Lune, France",
+      "sentAt": "2026-06-01T09:43:17.991Z"
+    },
+    {
+      "placeId": "ChIJu3vpHk7q9EcRAtdpUqNwmHw",
+      "name": "Sofitel Lyon Bellecour",
+      "email": "h0553@sofitel.com",
+      "website": "http://sofitel.accor.com/hotels/0553?merchantid=seo-maps-FR-0553&sourceid=aw-cen&utm_source=google+Maps&utm_medium=seo+maps&utm_campaign=seo+maps&utm_term=Sofitel-Launch",
+      "address": "20 Quai du Dr Gailleton, 69002 Lyon, France",
+      "sentAt": "2026-06-01T09:43:22.900Z"
+    },
+    {
+      "placeId": "ChIJb-N5pL_B9EcR8S1x6afajnM",
+      "name": "Hôtel Maison Lacassagne",
+      "email": "contact@hotel-lacassagne.fr",
+      "website": "http://www.hotel-maisonlacassagne.fr/",
+      "address": "245 Av. Lacassagne, 69003 Lyon, France",
+      "sentAt": "2026-06-01T09:43:31.483Z"
+    },
+    {
+      "placeId": "ChIJh9SOPDbr9EcRL1YsIQcBk80",
+      "name": "Boscolo Lyon Hotel & Spa",
+      "email": "contact.lyon@boscolocollection.com",
+      "website": "https://boscolocollection.com/lyon/",
+      "address": "11 Quai Jules Courmont, 69002 Lyon, France",
+      "sentAt": "2026-06-01T09:43:38.399Z"
+    },
+    {
+      "placeId": "ChIJn_S4DOHB9EcRBgmLoymEuC0",
+      "name": "Villa 216",
+      "email": "audrey@villa216.com",
+      "website": "http://www.villa216.com/",
+      "address": "216 Av. Félix Faure, 69003 Lyon, France",
+      "sentAt": "2026-06-01T09:43:45.191Z"
+    },
+    {
+      "placeId": "ChIJDRPusv_q9EcR_wtDJenVCZc",
+      "name": "Grand Hôtel Des Terreaux",
+      "email": "ght@hotel-lyon.fr",
+      "website": "http://www.hotel-lyon-grandhoteldesterreaux.fr/",
+      "address": "16 Rue Lanterne, 69001 Lyon, France",
+      "sentAt": "2026-06-01T09:43:51.655Z"
     }
   ],
-  "lastUpdated": "2026-05-29T09:02:29.512Z"
+  "lastUpdated": "2026-06-01T09:43:55.476Z"
 }
