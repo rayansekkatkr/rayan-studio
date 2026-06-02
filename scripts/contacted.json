@@ -2079,7 +2079,71 @@
       "website": "http://www.hotel-lyon-grandhoteldesterreaux.fr/",
       "address": "16 Rue Lanterne, 69001 Lyon, France",
       "sentAt": "2026-06-01T09:43:51.655Z"
+    },
+    {
+      "placeId": "ChIJFSAsZ528rhIRfUm4oiPj16k",
+      "name": "Les Traits Français",
+      "email": "annesophie@lestraitsfrancais.com",
+      "website": "http://les-traits-francais.fr/",
+      "address": "8 Rue Jules Chalande, 31000 Toulouse, France",
+      "sentAt": "2026-06-02T09:19:58.072Z"
+    },
+    {
+      "placeId": "ChIJP8I4fFK9rhIRrKVxUH12BTU",
+      "name": "Les Sisterettes",
+      "email": "serviceclients.lessisterettes@gmail.com",
+      "website": "https://www.lessisterettes.fr/",
+      "address": "6 Rue Baronie, 31000 Toulouse, France",
+      "sentAt": "2026-06-02T09:20:05.899Z"
+    },
+    {
+      "placeId": "ChIJsQbzsOq9rhIRiZZRW0i_mOs",
+      "name": "INDIES Toulouse",
+      "email": "contact@indies.fr",
+      "website": "http://www.indies.fr/",
+      "address": "1 bis Rue Cantegril, 31000 Toulouse, France",
+      "sentAt": "2026-06-02T09:20:13.411Z"
+    },
+    {
+      "placeId": "ChIJ2ysIrJ28rhIRsteBC4A20TY",
+      "name": "Maison 123",
+      "email": "valeriedupont@gmail.com",
+      "website": "https://www.maison123.com/nos-boutiques/villes/boutiques?storeid=0181&utm_campaign=google_my_business&utm_medium=organic&utm_source=google",
+      "address": "27 Rue d'Alsace Lorraine, 31000 Toulouse, France",
+      "sentAt": "2026-06-02T09:20:19.161Z"
+    },
+    {
+      "placeId": "ChIJq923n_G9rhIR9cFopF9NT48",
+      "name": "Les Piplettes",
+      "email": "contact@lespiplettesstore.fr",
+      "website": "http://www.lespiplettesstore.fr/",
+      "address": "63 Rue de la Pomme, 31000 Toulouse, France",
+      "sentAt": "2026-06-02T09:20:24.200Z"
+    },
+    {
+      "placeId": "ChIJ7T4IXqK9rhIRhNgjE-a6qkM",
+      "name": "YAYA Toulouse",
+      "email": "contact@cosy-concept.fr",
+      "website": "https://cosy-concept.fr/",
+      "address": "9 Pl. Roger Salengro, 31000 Toulouse, France",
+      "sentAt": "2026-06-02T09:20:35.266Z"
+    },
+    {
+      "placeId": "ChIJy87brYK8rhIR0xXFQm6fvpU",
+      "name": "NEIWA",
+      "email": "neiwa-logo-black_100x@2x.png",
+      "website": "https://www.neiwa.fr/",
+      "address": "7 Rue Sainte-Ursule, 31000 Toulouse, France",
+      "sentAt": "2026-06-02T09:20:42.545Z"
+    },
+    {
+      "placeId": "ChIJZaknmZy8rhIRefx2ZNc3n0E",
+      "name": "Devernois Toulouse",
+      "email": "nom_utilisateur@exemple.com",
+      "website": "https://www.devernois.com/pages/devernois-toulouse",
+      "address": "27 Rue Boulbonne, 31000 Toulouse, France",
+      "sentAt": "2026-06-02T09:20:47.222Z"
     }
   ],
-  "lastUpdated": "2026-06-01T09:43:55.476Z"
+  "lastUpdated": "2026-06-02T09:20:50.224Z"
 }
