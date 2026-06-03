@@ -2143,7 +2143,63 @@
       "website": "https://www.devernois.com/pages/devernois-toulouse",
       "address": "27 Rue Boulbonne, 31000 Toulouse, France",
       "sentAt": "2026-06-02T09:20:47.222Z"
+    },
+    {
+      "placeId": "ChIJy93nsXnbzRIRAHnQ8xiJYlQ",
+      "name": "La Claque Coffee Shop",
+      "email": "contact@laclaquecafe.com",
+      "website": "https://www.laclaquecafe.com/",
+      "address": "8 Rue du Pont Vieux, 06300 Nice, France",
+      "sentAt": "2026-06-03T09:29:14.937Z"
+    },
+    {
+      "placeId": "ChIJc2NzglPRzRIRgKXqhO-h2Vc",
+      "name": "Le Kawa - Brunch & Coffee Shop Nice",
+      "email": "nom@domain.com",
+      "website": "https://lekawanice.fr/",
+      "address": "23 Rue de Belgique, 06000 Nice, France",
+      "sentAt": "2026-06-03T09:29:23.359Z"
+    },
+    {
+      "placeId": "ChIJI8Z7lLjbzRIRYJGHwsADUY4",
+      "name": "Brume Coffee Nice",
+      "email": "contact@brumecoffeenice.fr",
+      "website": "https://www.brumecoffeenice.fr/",
+      "address": "34 Rue Pairolière, 06300 Nice, France",
+      "sentAt": "2026-06-03T09:29:30.802Z"
+    },
+    {
+      "placeId": "ChIJVd4DbI3RzRIRHzC7sSpWytU",
+      "name": "Atelier Alfred café",
+      "email": "atelieralfred13@gmail.com",
+      "website": "https://www.atelier-alfred.fr/",
+      "address": "13 Rue Vernier, 06000 Nice, France",
+      "sentAt": "2026-06-03T09:29:35.330Z"
+    },
+    {
+      "placeId": "ChIJO6fzjQvRzRIRRwQerV9_gqI",
+      "name": "Selah Atelier",
+      "email": "logo_selah_atelier_200x@2x.png",
+      "website": "http://www.selah-atelier.com/",
+      "address": "23 Rue de Dijon, 06000 Nice, France",
+      "sentAt": "2026-06-03T09:29:40.400Z"
+    },
+    {
+      "placeId": "ChIJ34qM7orbzRIR6wq4Ou3LO8k",
+      "name": "Chez Les Garçons",
+      "email": "contact@chezlesgarcons.fr",
+      "website": "https://www.chezlesgarcons.fr/",
+      "address": "1 Rue Niepce, 06000 Nice, France",
+      "sentAt": "2026-06-03T09:29:48.990Z"
+    },
+    {
+      "placeId": "ChIJ9b-Jl6DazRIRUfzIXKQBIyA",
+      "name": "Café de Nice",
+      "email": "lecafedenice@gmail.com",
+      "website": "http://www.lecafedenice.fr/",
+      "address": "1 Rue Maurice Jaubert, 06000 Nice, France",
+      "sentAt": "2026-06-03T09:29:54.838Z"
     }
   ],
-  "lastUpdated": "2026-06-02T09:20:50.224Z"
+  "lastUpdated": "2026-06-03T09:29:57.838Z"
 }
