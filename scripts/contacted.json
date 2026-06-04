@@ -2199,7 +2199,87 @@
       "website": "http://www.lecafedenice.fr/",
       "address": "1 Rue Maurice Jaubert, 06000 Nice, France",
       "sentAt": "2026-06-03T09:29:54.838Z"
+    },
+    {
+      "placeId": "ChIJ_____w_vBUgR5iumPfAM6y4",
+      "name": "AB Plomberie",
+      "email": "gael@abplomberie.com",
+      "website": "http://www.abplomberie.com/?utm_source=gmb",
+      "address": "33 Rue du Plessis Tison, 44300 Nantes, France",
+      "sentAt": "2026-06-04T09:13:35.148Z"
+    },
+    {
+      "placeId": "ChIJpcSw8ZvuBUgRwP0fCIVj_BQ",
+      "name": "Ze Plombier - Nantes",
+      "email": "contact@zeplombier.fr",
+      "website": "https://www.zeplombier.fr/",
+      "address": "25 Rue Petite Biesse, 44200 Nantes, France",
+      "sentAt": "2026-06-04T09:13:42.160Z"
+    },
+    {
+      "placeId": "ChIJzZ_gdR3sBUgRxlaSlY7EpMs",
+      "name": "AMS Services - Spécialiste en Dépannage Plomberie et Remplacement de Chauffe Eau",
+      "email": "contact@ams-nantes.fr",
+      "website": "http://www.ams-nantes.fr/",
+      "address": "1 Rue la Fayette, 44000 Nantes, France",
+      "sentAt": "2026-06-04T09:13:48.375Z"
+    },
+    {
+      "placeId": "ChIJY3l_I4ftBUgRbvGADyjRfmM",
+      "name": "DU’EAU PLOMBERIE CHAUFFAGE - plombier Nantes",
+      "email": "dpc.nantes@gmail.com",
+      "website": "https://dueau-plomberie-chauffage.fr/",
+      "address": "2 Av. des Renoncules, 44300 Nantes, France",
+      "sentAt": "2026-06-04T09:13:53.512Z"
+    },
+    {
+      "placeId": "ChIJt9w5Nc3vBUgRG3i6T04qX90",
+      "name": "Plombier Nantes MATTOS VINCENT",
+      "email": "consommation@atlantique-mediation.org",
+      "website": "https://www.plombier-chauffagiste-vm.fr/",
+      "address": "17 Rue de la Planche au Gué, 44300 Nantes, France",
+      "sentAt": "2026-06-04T09:14:02.232Z"
+    },
+    {
+      "placeId": "ChIJJT3k0EztBUgR2ll-rHpwUUY",
+      "name": "C'est le Plombier",
+      "email": "g.palide@orange.fr",
+      "website": "http://www.plombier-serrurier-vitrier-nantes.fr/",
+      "address": "9 Rue Kléber, 44000 Nantes, France",
+      "sentAt": "2026-06-04T09:14:09.347Z"
+    },
+    {
+      "placeId": "ChIJf4M4hJ7tBUgRmqY-kcQHbvo",
+      "name": "Eco Detect - Recherche de Fuite Nantes",
+      "email": "contact@eco-detect.fr",
+      "website": "https://www.eco-detect.fr/",
+      "address": "39 Rue des Dervallières Etage 3, 44000 Nantes, France",
+      "sentAt": "2026-06-04T09:14:15.335Z"
+    },
+    {
+      "placeId": "ChIJjQ6IzFKe36kRiZXq4BHrnb8",
+      "name": "Service Dépannage Plomberie Chauffage",
+      "email": "contact@serf-plomberie-chauffagiste.fr",
+      "website": "https://serf-plomberie-chauffagiste.fr/",
+      "address": "19 Rue Claude et Simone Millot, 44300 Nantes, France",
+      "sentAt": "2026-06-04T09:14:22.748Z"
+    },
+    {
+      "placeId": "ChIJx15VXuW2JE4RZ6IMIILgH_w",
+      "name": "DL PLOMBIER CHAUFFAGISTE NANTES",
+      "email": "contact.dlplombier@gmail.com",
+      "website": "http://dlplombiernantes.fr/",
+      "address": "9 Rue de l'Enclos, 44700 Orvault, France",
+      "sentAt": "2026-06-04T09:14:31.031Z"
+    },
+    {
+      "placeId": "ChIJf8-LrGHtBUgRXVc-vf4K7U0",
+      "name": "Chauffage And Co",
+      "email": "chauffageandco@outlook.fr",
+      "website": "https://chauffageandco.fr/",
+      "address": "18 Rue du Calvaire de Grillaud, 44100 Nantes, France",
+      "sentAt": "2026-06-04T09:14:37.992Z"
     }
   ],
-  "lastUpdated": "2026-06-03T09:29:57.838Z"
+  "lastUpdated": "2026-06-04T09:14:44.452Z"
 }
