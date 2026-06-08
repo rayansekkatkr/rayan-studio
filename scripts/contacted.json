@@ -2327,7 +2327,79 @@
       "website": "https://lumyos.fr/?utm_source=google&utm_medium=organic&utm_campaign=gbp_website",
       "address": "33 Rue de Lipari, 34080 Montpellier, France",
       "sentAt": "2026-06-05T09:01:58.075Z"
+    },
+    {
+      "placeId": "ChIJGUhFlp_VwkcRbWeUq0aNTgQ",
+      "name": "Selectour - Solair Travel",
+      "email": "mail@mail.com",
+      "website": "https://www.solairvoyages.fr/",
+      "address": "2 Rue du Faubourg des Postes, 59000 Lille, France",
+      "sentAt": "2026-06-08T09:28:08.899Z"
+    },
+    {
+      "placeId": "ChIJy24KtUDVwkcR-1VmScmXr54",
+      "name": "Agence de voyages Fram Lille",
+      "email": "votre-email@merci.com",
+      "website": "https://www.fram.fr/agence-de-voyage/agence-lille-59000/",
+      "address": "35 Rue Neuve, 59800 Lille, France",
+      "sentAt": "2026-06-08T09:28:13.643Z"
+    },
+    {
+      "placeId": "ChIJkcl6fY_VwkcRS0Vb7d8NVbc",
+      "name": "Selectour - Travelil",
+      "email": "mail@mail.com",
+      "website": "https://www.travelil.fr/",
+      "address": "7 Pl. Richebé, 59000 Lille, France",
+      "sentAt": "2026-06-08T09:28:20.115Z"
+    },
+    {
+      "placeId": "ChIJszscZLvVwkcR-WG65mC2Rmk",
+      "name": "Terres De Cultures - Agence de voyages Lille",
+      "email": "contact@terresdecultures.fr",
+      "website": "http://www.terresdecultures.fr/",
+      "address": "24 Rue Eugène Vermersch, 59000 Lille, France",
+      "sentAt": "2026-06-08T09:28:30.506Z"
+    },
+    {
+      "placeId": "ChIJXzDDkPfVwkcRPhrPrGejsGc",
+      "name": "Promovacances Lille (Euralille)",
+      "email": "agence-euralille@promovacances.com",
+      "website": "https://www.promovacances.com/agences-de-voyages/agence-de-voyage-euralille-lille-59777/",
+      "address": "Centre Commercial, 100 Av. Willy Brandt, 59777 Lille, France",
+      "sentAt": "2026-06-08T09:28:34.692Z"
+    },
+    {
+      "placeId": "ChIJj3bs-4fVwkcRxtwIkWbgXPc",
+      "name": "Agence de voyage SC Travel",
+      "email": "info@sctravel.fr",
+      "website": "https://www.sctravel.fr/",
+      "address": "1 Rue du Plat, 59800 Lille, France",
+      "sentAt": "2026-06-08T09:28:45.291Z"
+    },
+    {
+      "placeId": "ChIJc240BHYqw0cRj4YLNYTBj1A",
+      "name": "Selectour - Génération Voyages",
+      "email": "mail@mail.com",
+      "website": "http://www.generationvoyages.com/",
+      "address": "62 Bd Carnot, 59000 Lille, France",
+      "sentAt": "2026-06-08T09:28:50.156Z"
+    },
+    {
+      "placeId": "ChIJVUDfO1_VwkcRts5FwkRB8hg",
+      "name": "Selectour - Océane Voyages",
+      "email": "mail@mail.com",
+      "website": "https://www.oceanevoyages-selectour.com/",
+      "address": "291 A Av. de Dunkerque, 59160 Lille, France",
+      "sentAt": "2026-06-08T09:28:54.475Z"
+    },
+    {
+      "placeId": "ChIJB_VIWInVwkcRna7vdE11O3Y",
+      "name": "Selectour - Soleil Voyages",
+      "email": "mail@mail.com",
+      "website": "https://www.soleil-selectour.com/",
+      "address": "45 Rue du Molinel, 59800 Lille, France",
+      "sentAt": "2026-06-08T09:28:58.826Z"
     }
   ],
-  "lastUpdated": "2026-06-05T09:02:07.916Z"
+  "lastUpdated": "2026-06-08T09:29:02.663Z"
 }
