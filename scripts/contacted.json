@@ -2399,7 +2399,39 @@
       "website": "https://www.soleil-selectour.com/",
       "address": "45 Rue du Molinel, 59800 Lille, France",
       "sentAt": "2026-06-08T09:28:58.826Z"
+    },
+    {
+      "placeId": "ChIJTYbsi6DfDkgRptPHTWKALoc",
+      "name": "Maison Tulipe | Fleuriste Rennes",
+      "email": "contact@sessile.fr",
+      "website": "https://www.sessile.fr/trouvez-votre-fleuriste/maison-tulipe/?utm_source=google_my_business&utm_medium=organic&utm_campaign=website",
+      "address": "9 Rue du Chapitre, 35000 Rennes, France",
+      "sentAt": "2026-06-09T09:01:16.088Z"
+    },
+    {
+      "placeId": "ChIJf7Ukwd_fDkgRVwUKnAh_mCY",
+      "name": "Le Bazar à Pétales",
+      "email": "lebazarapetales@gmail.com",
+      "website": "http://www.lebazarapetales.com/",
+      "address": "43 Rue Saint-Hélier, 35000 Rennes, France",
+      "sentAt": "2026-06-09T09:01:28.813Z"
+    },
+    {
+      "placeId": "ChIJh3SshCTDDkgR-9HHYLnsR0A",
+      "name": "Les Herbes Sauvages",
+      "email": "herbessauvages@gmail.com",
+      "website": "http://lesherbessauvages.fr/",
+      "address": "16 Rue Pont aux Foulons, 35000 Rennes, France",
+      "sentAt": "2026-06-09T09:01:35.790Z"
+    },
+    {
+      "placeId": "ChIJF6QASdnfDkgRduoGZ7lu1Io",
+      "name": "Monceau Fleurs",
+      "email": "service.consommateurs@monceaufleurs.com",
+      "website": "https://www.monceaufleurs.com/fleuriste/ille-et-vilaine/monceau-fleurs-rennes-nantes?utm_source=google&utm_medium=organic&utm_campaign=mybusiness-website",
+      "address": "252 ter Rue de Nantes, 35136 Saint-Jacques-de-la-Lande, France",
+      "sentAt": "2026-06-09T09:01:41.092Z"
     }
   ],
-  "lastUpdated": "2026-06-08T09:29:02.663Z"
+  "lastUpdated": "2026-06-09T09:01:56.260Z"
 }
