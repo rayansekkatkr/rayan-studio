@@ -2495,7 +2495,79 @@
       "website": "http://www.studio-vingtrois.com/",
       "address": "14 Rue Simon, 51100 Reims, France",
       "sentAt": "2026-06-10T09:08:08.127Z"
+    },
+    {
+      "placeId": "ChIJgdAe3Qgv4EcRkLuy2dRHZ-E",
+      "name": "Allain Rénovation",
+      "email": "allainrenovation@gmail.com",
+      "website": "https://allainrenovation.wixsite.com/allain-renovation",
+      "address": "55 Rue de Neustrie, 76600 Le Havre, France",
+      "sentAt": "2026-06-11T09:21:58.109Z"
+    },
+    {
+      "placeId": "ChIJcRbyyMov4EcRNhpsRW_uoeo",
+      "name": "BK BATIMENT 93 - Entreprise au Havre Façadier spécialiste du ravalement de façade et rejointoiement de brique - LE HAVRE",
+      "email": "bkbati93@gmail.com",
+      "website": "http://www.bkbatiment.com/",
+      "address": "57 Rue Suzanne Valadon, 76620 Le Havre, France",
+      "sentAt": "2026-06-11T09:22:03.304Z"
+    },
+    {
+      "placeId": "ChIJWQCCBSAv4EcRdkrNgaHRp78",
+      "name": "Océane Construction",
+      "email": "construction.oceane@wanadoo.fr",
+      "website": "http://www.oceane-construction.fr/",
+      "address": "6 Pl. du Vieux Marché, 76600 Le Havre, France",
+      "sentAt": "2026-06-11T09:22:08.409Z"
+    },
+    {
+      "placeId": "ChIJc6ZKNN5mh6kRweZOpbaFUfo",
+      "name": "DELTA BATIMENT - Façadier Spécialiste du Ravalement, Enduit projeté ,ITE, Rejointoiement de brique au Havre",
+      "email": "deltabatiment@outlook.fr",
+      "website": "https://www.delta-batiment.com/",
+      "address": "116 Rue Florimond Laurent, 76620 Le Havre, France",
+      "sentAt": "2026-06-11T09:22:13.384Z"
+    },
+    {
+      "placeId": "ChIJvXKQ5A0v4EcR5CrHmcDHlQE",
+      "name": "GMB - Maîtrise d'oeuvre & Conception",
+      "email": "gilles.barre@gmb76.fr",
+      "website": "http://www.gmb76.fr/?utm_source=gmb",
+      "address": "Le, 104 Rue Voltaire, 76600 Le Havre, France",
+      "sentAt": "2026-06-11T09:22:18.354Z"
+    },
+    {
+      "placeId": "ChIJDzHPbNgu4EcR7yUd4ybn_iw",
+      "name": "Gueudry Constructions - LE HAVRE (constructeur maisons)",
+      "email": "secretariat@gueudry.fr",
+      "website": "http://www.gueudry.fr/",
+      "address": "18 Rue Saint-Jacques, 76600 Le Havre, France",
+      "sentAt": "2026-06-11T09:22:24.126Z"
+    },
+    {
+      "placeId": "ChIJs6SXhT4v4EcRIqq7hbWJjc4",
+      "name": "Océane rénovations et services père et fils",
+      "email": "contact@oceane-renovations-services.fr",
+      "website": "https://www.oceane-renovations-services.fr/",
+      "address": "191 Rue du Bois au Coq, 76620 Le Havre, France",
+      "sentAt": "2026-06-11T09:22:34.579Z"
+    },
+    {
+      "placeId": "ChIJl3VDEh4v4EcR-peHSZUb4RI",
+      "name": "Mon Plafond Tendu - Travaux, rénovation, pose plafond - Le Havre",
+      "email": "loic.lacorne@gmail.com",
+      "website": "http://www.mon-plafondtendu.fr/",
+      "address": "30 Rue Bougainville, 76600 Le Havre, France",
+      "sentAt": "2026-06-11T09:22:42.158Z"
+    },
+    {
+      "placeId": "ChIJ09jZIIEv4EcR2xA7MJ9sG9o",
+      "name": "ASR Habitat",
+      "email": "contact@asrhabitat.fr",
+      "website": "http://www.asrhabitat.fr/",
+      "address": "6 Rue Berthelot, 76600 Le Havre, France",
+      "sentAt": "2026-06-11T09:22:46.465Z"
     }
   ],
-  "lastUpdated": "2026-06-10T09:08:13.413Z"
+  "lastUpdated": "2026-06-11T09:22:52.389Z"
 }
