@@ -105,6 +105,7 @@ Direction actuelle:
 - Hero niveau 2: dossier de refonte, plan de relance web, audit visuel, SEO/DNS/deploiement, hebergement/VPS et technique prise en charge visibles dans le premier ecran.
 - Realisations niveau 2: cartes transformees en mini dossiers client avec probleme, intervention, resultat, preuve, et scopes de travail sur le projet actif.
 - Process niveau 2: passage a 5 etapes avec diagnostic, structure/maquette, design/dev, SEO/DNS/VPS, deploiement/support.
+- Tarifs niveau 2: chaque offre ouvre une modale de demande rapide contextualisee, avec l'offre preselectionnee et un message pre-rempli selon la langue.
 - Favicon remplace par un monogramme `RS` en encre/corail.
 - Assets portfolio: `public/realisations/*.png`.
 
@@ -160,6 +161,8 @@ Variables d'environnement attendues:
 - `BREVO_SENDER_NAME`
 - `BREVO_TO_EMAIL`
 - `BREVO_SUBJECT`
+
+Point de debug connu: si `/api/contact` retourne 502 en local avec Brevo, verifier les IP autorisees dans Brevo. Le compte peut refuser l'appel API avec `unrecognised IP address` si l'IP actuelle ou l'IP du serveur n'est pas whitelist.
 
 ### Tracking
 
