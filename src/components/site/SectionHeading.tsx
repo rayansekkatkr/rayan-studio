@@ -15,13 +15,11 @@ export function SectionHeading({
 }: SectionHeadingProps) {
   return (
     <div className={center ? "mx-auto max-w-3xl text-center" : "max-w-3xl"}>
-      <Badge className="shadow-[0_8px_20px_rgba(120,149,207,0.18)]">
-        {eyebrow}
-      </Badge>
-      <h2 className="font-display mt-5 text-3xl font-semibold leading-tight text-slate-900 md:text-4xl">
+      <Badge>{eyebrow}</Badge>
+      <h2 className="font-display mt-5 text-3xl font-semibold leading-tight text-[#17120f] md:text-4xl">
         {title}
       </h2>
-      <p className="mt-4 text-base leading-relaxed text-slate-600 md:text-lg">{description}</p>
+      <p className="mt-4 text-base leading-relaxed text-[#63584d] md:text-lg">{description}</p>
     </div>
   );
 }

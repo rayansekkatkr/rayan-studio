@@ -37,20 +37,20 @@ export function CookieConsent() {
   if (!visible) return null;
 
   return (
-    <aside className="fixed inset-x-3 bottom-3 z-[80] mx-auto w-full max-w-4xl rounded-2xl border border-white/85 bg-white/92 p-4 shadow-[0_20px_40px_rgba(109,141,196,0.25)] backdrop-blur-xl">
-      <p className="text-sm text-slate-700">
+    <aside className="fixed inset-x-3 bottom-3 z-[80] mx-auto max-w-[calc(100vw-1.5rem)] rounded-none border border-[#2a231d]/14 bg-[#fffaf0]/94 p-4 shadow-[6px_6px_0_rgba(42,35,29,0.1)] backdrop-blur-xl sm:max-w-4xl">
+      <p className="text-sm text-[#63584d]">
         {isEnglish
           ? "We use analytics cookies to improve the website. You can accept or decline these cookies."
           : "Nous utilisons des cookies de mesure d'audience pour améliorer le site. Vous pouvez accepter ou refuser ces cookies."}
         {" "}
-        <Link href="/politique-confidentialite" className="font-semibold text-[#2f6dff] underline underline-offset-2">
+        <Link href="/politique-confidentialite" className="font-black text-[#d94f2b] underline underline-offset-2">
           {isEnglish ? "Learn more" : "En savoir plus"}
         </Link>
       </p>
       <div className="mt-3 flex flex-wrap gap-2.5">
         <button
           type="button"
-          className="rounded-full border border-[#d6e6ff] bg-[#eef5ff] px-4 py-2 text-sm font-semibold text-[#2f6dff]"
+          className="rounded-none border border-[#17120f] bg-[#17120f] px-4 py-2 text-sm font-black text-[#fffaf0]"
           onClick={() => {
             window.localStorage.setItem(CONSENT_KEY, "accepted");
             updateConsent(true);
@@ -62,7 +62,7 @@ export function CookieConsent() {
         </button>
         <button
           type="button"
-          className="rounded-full border border-white/80 bg-white px-4 py-2 text-sm font-semibold text-slate-700"
+          className="rounded-none border border-[#2a231d]/14 bg-[#fffaf0] px-4 py-2 text-sm font-black text-[#63584d]"
           onClick={() => {
             window.localStorage.setItem(CONSENT_KEY, "declined");
             updateConsent(false);

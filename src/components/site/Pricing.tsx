@@ -3,55 +3,56 @@
 import { motion } from "framer-motion";
 import { Check, Sparkles } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import { isEnglish, type Locale } from "@/lib/i18n";
 import { Card, CardContent, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
+import { isEnglish, type Locale } from "@/lib/i18n";
 import { Reveal } from "./Reveal";
 import { SectionHeading } from "./SectionHeading";
 
 const plansFr = [
   {
-    name: "Essentiel",
-    price: "500€",
-    description: "Pour lancer un site simple, propre et rassurant.",
-    forWho: "Idéal si vous démarrez ou si vous n'avez pas encore de vrai site.",
-    result: "Vous obtenez une présence en ligne claire qui donne confiance dès la première visite.",
+    name: "Creation Express",
+    price: "A partir de 700 EUR",
+    description: "Pour creer un premier site simple, propre et rassurant.",
+    forWho: "Ideal si votre entreprise n'a pas encore de vraie presence en ligne.",
+    result: "Vous obtenez une vitrine claire, mobile et prete a etre partagee a vos clients.",
     features: [
-      "1 page complète (présentation, services, contact)",
-      "Design adapté à votre activité",
-      "Version mobile incluse",
-      "Mise en ligne prête à l'emploi",
-      "Page d'administration facile: non incluse",
+      "Page principale ou petit site simple",
+      "Design responsive adapte a votre activite",
+      "SEO de base pour etre trouvable",
+      "Formulaire ou WhatsApp visible",
+      "Domaine, DNS, hebergement et mise en ligne accompagnes",
     ],
     featured: false,
   },
   {
-    name: "Pro",
-    price: "1000€",
-    description: "Pour améliorer fortement votre image et obtenir plus de demandes.",
-    forWho: "Idéal pour un commerce déjà lancé qui veut passer un cap.",
-    result: "Votre site devient plus clair, plus convaincant, et pousse davantage à vous contacter.",
+    name: "Refonte Pro",
+    price: "A partir de 1200 EUR",
+    description: "Pour remplacer un site date par une vitrine plus credible.",
+    forWho: "Ideal si votre site existe deja mais ne reflete plus la qualite de votre entreprise.",
+    result: "Votre site devient plus clair, plus moderne, et donne davantage envie de vous contacter.",
     features: [
-      "Structure plus complète et plus persuasive",
-      "Sections de preuve (avis, résultats, avant/après)",
-      "Boutons d'action visibles pour appeler/écrire",
-      "Parcours pensé pour convertir davantage",
-      "Aide au lancement",
-      "Page d'administration facile: en option",
+      "Diagnostic rapide du site actuel",
+      "Nouvelle direction visuelle",
+      "Structure et messages retravailles",
+      "SEO local ou SEO de base",
+      "DNS, hebergement, VPS si besoin et deploiement inclus",
+      "Suivi court apres livraison",
     ],
     featured: true,
   },
   {
-    name: "Premium",
-    price: "Sur devis",
-    description: "Pour un projet sur mesure avec besoins spécifiques.",
-    forWho: "Idéal si vous voulez une approche très personnalisée.",
-    result: "Vous obtenez un site unique, aligné à 100% avec votre positionnement.",
+    name: "Sur mesure",
+    price: "Devis",
+    description: "Pour un projet plus complet avec besoins specifiques.",
+    forWho: "Ideal si vous avez plusieurs pages, une administration, ou des fonctionnalites precises.",
+    result: "Vous obtenez une solution plus complete, alignee avec votre activite et votre organisation.",
     features: [
-      "Accompagnement stratégique complet",
-      "Direction créative avancée",
-      "Contenus et messages retravaillés",
-      "Fonctionnalités spécifiques selon vos besoins",
-      "Page d'administration facile: incluse",
+      "Audit et cadrage plus approfondis",
+      "Direction creative avancee",
+      "Pages ou parcours supplementaires",
+      "Administration simple si necessaire",
+      "Fonctionnalites specifiques selon besoin",
+      "Architecture, deploiement et VPS cadres selon le projet",
     ],
     featured: false,
   },
@@ -59,83 +60,79 @@ const plansFr = [
 
 const plansEn = [
   {
-    name: "Essential",
-    price: "€500",
-    description: "Launch a simple, clean, and trust-building website.",
-    forWho: "Best if you are just starting or still do not have a solid website.",
-    result: "You get a clear online presence that builds trust from the first visit.",
+    name: "Express Creation",
+    price: "From EUR 700",
+    description: "Create a simple, clean, trust-building first website.",
+    forWho: "Best if your business does not yet have a proper online presence.",
+    result: "You get a clear mobile storefront ready to share with customers.",
     features: [
-      "1 complete page (about, services, contact)",
-      "Design adapted to your business",
-      "Mobile version included",
-      "Go-live setup included",
-      "Easy admin page: not included",
+      "Main page or small simple website",
+      "Responsive design adapted to your activity",
+      "Basic SEO to be findable",
+      "Visible form or WhatsApp contact",
+      "Domain, DNS, hosting and launch guidance",
     ],
     featured: false,
   },
   {
-    name: "Pro",
-    price: "€1000",
-    description: "Improve your image significantly and get more inquiries.",
-    forWho: "Best for established local businesses that want to level up.",
-    result: "Your website becomes clearer, more convincing, and drives more contact requests.",
+    name: "Pro Redesign",
+    price: "From EUR 1200",
+    description: "Replace a dated website with a more credible storefront.",
+    forWho: "Best if your website exists but no longer reflects the quality of your business.",
+    result: "Your website becomes clearer, more modern, and makes people more likely to contact you.",
     features: [
-      "Stronger and more persuasive structure",
-      "Proof sections (testimonials, results, before/after)",
-      "Clear call-to-action buttons",
-      "Journey optimized for conversion",
-      "Launch support",
-      "Easy admin page: optional add-on",
+      "Quick diagnosis of the current website",
+      "New visual direction",
+      "Structure and messaging refinement",
+      "Local or basic SEO",
+      "DNS, hosting, VPS if needed and deployment included",
+      "Short post-delivery follow-up",
     ],
     featured: true,
   },
   {
-    name: "Premium",
-    price: "Custom quote",
-    description: "For custom projects with specific requirements.",
-    forWho: "Best if you want a highly tailored approach.",
-    result: "You get a unique website fully aligned with your positioning.",
+    name: "Custom",
+    price: "Quote",
+    description: "For a more complete project with specific requirements.",
+    forWho: "Best if you need several pages, admin editing, or precise functionality.",
+    result: "You get a more complete solution aligned with your business and workflow.",
     features: [
-      "Full strategic support",
+      "Deeper audit and scoping",
       "Advanced creative direction",
-      "Messaging and content refinement",
-      "Custom features based on your needs",
-      "Easy admin page: included",
+      "Additional pages or journeys",
+      "Simple admin if needed",
+      "Custom features based on needs",
+      "Architecture, deployment and VPS scoped around the project",
     ],
     featured: false,
   },
 ];
 
-const adminOptionFr = {
-  title: "Option page d'administration facile (sans coder)",
-  subtitle: "Permet de modifier le site en autonomie avec une interface simple.",
-  price: "À partir de 300€ + hébergement mensuel si CMS externe",
+const maintenanceFr = {
+  title: "Maintenance legere apres livraison",
+  subtitle: "Pour garder le site propre sans devoir reprendre la technique vous-meme.",
+  price: "49 a 99 EUR/mois selon le besoin",
   includes: [
-    "Modifier les textes et rubriques",
-    "Ajouter / remplacer / supprimer des images",
-    "Créer, modifier et supprimer des événements",
-    "Petite formation de prise en main (30 min)",
+    "Petites modifications de textes",
+    "Remplacement ponctuel d'images",
+    "Surveillance basique et sauvegardes",
+    "Support simple par message",
   ],
-  note: "Recommandé pour les commerces qui mettent à jour leur contenu régulièrement.",
+  note: "Propose apres livraison pour construire un revenu recurrent sans alourdir le projet initial.",
 };
 
-const adminOptionEn = {
-  title: "Easy Admin Panel Add-on (no coding)",
-  subtitle: "Lets you edit your website yourself with a simple interface.",
-  price: "From €300 + monthly hosting if external CMS is used",
-  includes: [
-    "Edit text and sections",
-    "Add / replace / remove images",
-    "Create, edit, and remove events",
-    "Quick onboarding session (30 min)",
-  ],
-  note: "Recommended for businesses that update content regularly.",
+const maintenanceEn = {
+  title: "Light maintenance after launch",
+  subtitle: "Keep the website clean without handling the technical side yourself.",
+  price: "EUR 49 to 99/month depending on needs",
+  includes: ["Small text updates", "Occasional image replacement", "Basic monitoring and backups", "Simple message support"],
+  note: "Offered after delivery to build recurring revenue without making the initial project heavier.",
 };
 
 export function Pricing({ locale = "fr" }: { locale?: Locale }) {
   const en = isEnglish(locale);
   const plans = en ? plansEn : plansFr;
-  const adminOption = en ? adminOptionEn : adminOptionFr;
+  const maintenance = en ? maintenanceEn : maintenanceFr;
 
   return (
     <section id="tarifs" className="section-screen px-4 md:px-8">
@@ -143,21 +140,21 @@ export function Pricing({ locale = "fr" }: { locale?: Locale }) {
         <Reveal>
           <SectionHeading
             eyebrow={en ? "Pricing" : "Tarifs"}
-            title={en ? "Clear and transparent offers" : "Des offres claires et transparentes"}
+            title={en ? "Simple offers built for a one-person studio" : "Des offres simples, pensees pour vendre sans se disperser"}
             description={
               en
-                ? "Simple words, no technical jargon: you quickly understand what is included, who each offer is for, and what result to expect."
-                : "Des mots simples, sans jargon technique: vous comprenez rapidement ce qui est inclus, pour qui c'est fait, et le résultat attendu."
+                ? "The goal is not to sell cheap websites. It is to sell clear transformations that a small business can understand."
+                : "Le but n'est pas de vendre des sites au rabais. Le but est de vendre une transformation claire, comprehensible par une TPE."
             }
             center
           />
         </Reveal>
 
         <Reveal delay={0.04}>
-          <p className="mx-auto mt-4 max-w-4xl rounded-2xl border border-white/85 bg-white/75 px-4 py-3 text-sm text-slate-700">
+          <p className="mx-auto mt-4 max-w-4xl rounded-none border border-[#2a231d]/14 bg-[#fffaf0]/82 px-4 py-3 text-sm font-semibold text-[#63584d]">
             {en
-              ? "No technical skills needed on your side. I guide you step by step with clear explanations."
-              : "Aucune compétence technique n'est nécessaire de votre côté. Je vous guide étape par étape avec des explications claires."}
+              ? "No technical skills needed on your side: design, SEO, DNS, hosting and launch can be handled in one place."
+              : "Aucune competence technique necessaire de votre cote: design, SEO, DNS, hebergement et mise en ligne peuvent etre geres au meme endroit."}
           </p>
         </Reveal>
 
@@ -166,43 +163,44 @@ export function Pricing({ locale = "fr" }: { locale?: Locale }) {
             <Reveal key={plan.name} delay={index * 0.08}>
               <motion.div whileHover={{ y: -9 }} transition={{ duration: 0.35, ease: [0.22, 1, 0.36, 1] }}>
                 <Card
-                  className={`relative h-full ${
+                  className={`relative h-full rounded-none ${
                     plan.featured
-                      ? "shine-border border-[#cfe1ff] bg-[linear-gradient(145deg,rgba(255,255,255,0.96),rgba(229,241,255,0.86))] shadow-[0_30px_52px_rgba(124,159,221,0.28)]"
-                      : ""
+                      ? "shine-border border-[#17120f] bg-[linear-gradient(145deg,rgba(255,250,240,0.98),rgba(245,241,232,0.9))] shadow-[10px_10px_0_rgba(217,79,43,0.38)]"
+                      : "border-[#2a231d]/14 bg-[#fffaf0]/82"
                   }`}
                 >
                   <CardHeader>
-                    {plan.featured && (
-                      <div className="inline-flex w-fit items-center gap-2 rounded-full border border-[#d4e4ff] bg-white/82 px-3 py-1 text-xs font-semibold uppercase tracking-[0.14em] text-[#2f6dff]">
+                    {plan.featured ? (
+                      <div className="inline-flex w-fit items-center gap-2 rounded-none border border-[#2a231d]/14 bg-[#17120f] px-3 py-1 text-xs font-black uppercase tracking-[0.14em] text-[#fffaf0]">
                         <Sparkles size={12} />
-                        {en ? "Most chosen" : "Le plus choisi"}
+                        {en ? "Main offer" : "Offre principale"}
                       </div>
-                    )}
+                    ) : null}
                     <CardTitle className="mt-3">{plan.name}</CardTitle>
-                    <p className="font-display mt-3 text-3xl font-semibold text-slate-900 sm:text-4xl">{plan.price}</p>
-                    <p className="text-sm text-slate-600">{plan.description}</p>
-                    <p className="mt-2 rounded-xl border border-white/90 bg-white/70 px-3 py-2 text-sm text-slate-700">
-                      <span className="font-semibold text-slate-900">{en ? "For who:" : "Pour qui :"}</span> {plan.forWho}
+                    <p className="font-display mt-3 text-3xl font-semibold text-[#17120f] sm:text-4xl">{plan.price}</p>
+                    <p className="text-sm text-[#63584d]">{plan.description}</p>
+                    <p className="mt-2 rounded-none border border-[#2a231d]/12 bg-[#f5f1e8] px-3 py-2 text-sm text-[#63584d]">
+                      <span className="font-black text-[#17120f]">{en ? "For who:" : "Pour qui :"}</span> {plan.forWho}
                     </p>
                   </CardHeader>
 
                   <CardContent>
                     <div className="space-y-3">
-                      <p className="text-xs font-semibold uppercase tracking-[0.12em] text-slate-500">
+                      <p className="text-xs font-black uppercase tracking-[0.12em] text-[#63584d]">
                         {en ? "What is included" : "Ce qui est inclus"}
                       </p>
                       {plan.features.map((feature) => (
-                        <div key={feature} className="flex items-start gap-2 text-sm text-slate-700">
-                          <span className="mt-0.5 rounded-full bg-[#eaf2ff] p-1 text-[#2f6dff]">
+                        <div key={feature} className="flex items-start gap-2 text-sm text-[#63584d]">
+                          <span className="mt-0.5 rounded-none bg-[#17120f] p-1 text-[#fffaf0]">
                             <Check size={11} />
                           </span>
                           <span>{feature}</span>
                         </div>
                       ))}
                     </div>
-                    <div className="mt-4 rounded-xl border border-[#d5e5ff] bg-[#edf4ff] px-3 py-2 text-sm text-slate-700">
-                      <span className="font-semibold text-slate-900">{en ? "Expected result:" : "Résultat attendu :"}</span> {plan.result}
+                    <div className="mt-4 rounded-none border border-[#2a231d]/12 bg-[#f5f1e8] px-3 py-2 text-sm text-[#63584d]">
+                      <span className="font-black text-[#17120f]">{en ? "Expected result:" : "Resultat attendu :"}</span>{" "}
+                      {plan.result}
                     </div>
                   </CardContent>
 
@@ -218,26 +216,26 @@ export function Pricing({ locale = "fr" }: { locale?: Locale }) {
         </div>
 
         <Reveal delay={0.14}>
-          <div className="mt-7 rounded-3xl border border-[#d5e5ff] bg-[linear-gradient(145deg,rgba(237,244,255,0.95),rgba(255,255,255,0.92))] p-4 shadow-[0_20px_36px_rgba(121,156,214,0.16)] sm:p-5">
-            <p className="text-xs font-semibold uppercase tracking-[0.12em] text-[#2f6dff]">
-              {en ? "Optional add-on" : "Option complémentaire"}
+          <div className="mt-7 rounded-none border border-[#2a231d]/14 bg-[linear-gradient(145deg,rgba(255,250,240,0.95),rgba(232,224,210,0.78))] p-4 shadow-[8px_8px_0_rgba(42,35,29,0.09)] sm:p-5">
+            <p className="text-xs font-black uppercase tracking-[0.12em] text-[#d94f2b]">
+              {en ? "Optional recurring support" : "Support recurrent optionnel"}
             </p>
-            <h3 className="font-display mt-2 text-xl font-semibold text-slate-900 sm:text-2xl">{adminOption.title}</h3>
-            <p className="mt-2 text-sm text-slate-700">{adminOption.subtitle}</p>
-            <p className="mt-3 text-sm font-semibold text-slate-900">
-              {en ? "Budget:" : "Budget :"} {adminOption.price}
+            <h3 className="font-display mt-2 text-xl font-semibold text-[#17120f] sm:text-2xl">{maintenance.title}</h3>
+            <p className="mt-2 text-sm text-[#63584d]">{maintenance.subtitle}</p>
+            <p className="mt-3 text-sm font-black text-[#17120f]">
+              {en ? "Budget:" : "Budget :"} {maintenance.price}
             </p>
             <div className="mt-4 grid gap-2 md:grid-cols-2">
-              {adminOption.includes.map((item) => (
-                <div key={item} className="flex items-start gap-2 rounded-xl border border-white/90 bg-white/80 px-3 py-2 text-sm text-slate-700">
-                  <span className="mt-0.5 rounded-full bg-[#eaf2ff] p-1 text-[#2f6dff]">
+              {maintenance.includes.map((item) => (
+                <div key={item} className="flex items-start gap-2 rounded-none border border-[#2a231d]/12 bg-[#fffaf0]/78 px-3 py-2 text-sm text-[#63584d]">
+                  <span className="mt-0.5 rounded-none bg-[#17120f] p-1 text-[#fffaf0]">
                     <Check size={11} />
                   </span>
                   <span>{item}</span>
                 </div>
               ))}
             </div>
-            <p className="mt-3 text-xs text-slate-600">{adminOption.note}</p>
+            <p className="mt-3 text-xs text-[#63584d]">{maintenance.note}</p>
           </div>
         </Reveal>
       </div>

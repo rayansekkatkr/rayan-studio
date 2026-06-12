@@ -17,30 +17,37 @@ type ProcessItem = {
 const PROCESS_STEPS_FR: ProcessItem[] = [
   {
     id: "01",
-    title: "Découverte",
+    title: "Diagnostic",
     description:
-      "On échange sur votre activité avec des mots simples: vos clients, vos objectifs et vos priorités.",
+      "On regarde votre situation actuelle: image, clarté du message, mobile, SEO, nom de domaine et hébergement.",
     image: "/process/discovery.webp",
   },
   {
     id: "02",
-    title: "Direction visuelle",
+    title: "Structure et maquette",
     description:
-      "Je prépare une maquette claire pour vous montrer exactement le rendu avant la mise en ligne.",
+      "Je clarifie les sections, les priorités et les appels à l'action avant de construire le site.",
     image: "/process/direction.webp",
   },
   {
     id: "03",
-    title: "Développement",
+    title: "Design et développement",
     description:
-      "Je construis le site pour qu'il soit rapide, lisible sur mobile, et agréable à utiliser.",
+      "Je crée une interface plus crédible, rapide, lisible sur mobile et cohérente avec votre activité.",
     image: "/process/development.webp",
   },
   {
     id: "04",
-    title: "Mise en ligne",
+    title: "SEO, DNS et VPS",
     description:
-      "Je mets le site en ligne et je reste disponible pour les derniers ajustements.",
+      "Je pose les bases SEO, configure le domaine, l'hébergement, et le VPS si le projet le nécessite.",
+    image: "/process/development.webp",
+  },
+  {
+    id: "05",
+    title: "Déploiement et support",
+    description:
+      "Je mets le site en ligne proprement, vérifie les points clés et reste disponible pour les derniers ajustements.",
     image: "/process/launch.webp",
   },
 ];
@@ -48,29 +55,35 @@ const PROCESS_STEPS_FR: ProcessItem[] = [
 const PROCESS_STEPS_EN: ProcessItem[] = [
   {
     id: "01",
-    title: "Discovery",
+    title: "Diagnosis",
     description:
-      "We discuss your business in simple terms: your customers, goals, and priorities.",
+      "We review your current situation: image, message clarity, mobile, SEO, domain name and hosting.",
     image: "/process/discovery.webp",
   },
   {
     id: "02",
-    title: "Visual direction",
+    title: "Structure and mockup",
     description:
-      "I create a clear mockup so you can see the exact result before launch.",
+      "I clarify the sections, priorities and calls to action before building the site.",
     image: "/process/direction.webp",
   },
   {
     id: "03",
-    title: "Development",
+    title: "Design and development",
     description:
-      "I build the site to be fast, readable on mobile, and easy to use.",
+      "I create a more credible interface that is fast, mobile-readable and consistent with your business.",
     image: "/process/development.webp",
   },
   {
     id: "04",
-    title: "Launch",
-    description: "I publish the site and stay available for final adjustments.",
+    title: "SEO, DNS and VPS",
+    description: "I set SEO foundations, configure the domain, hosting, and VPS when the project needs it.",
+    image: "/process/development.webp",
+  },
+  {
+    id: "05",
+    title: "Deployment and support",
+    description: "I publish the site cleanly, check the key points and stay available for final adjustments.",
     image: "/process/launch.webp",
   },
 ];
@@ -137,10 +150,10 @@ export function VerticalTabs({ locale = "fr", items }: { locale?: Locale; items?
         <div className="grid grid-cols-1 items-start gap-8 lg:grid-cols-12 lg:gap-12">
           <div className="order-2 flex flex-col justify-center pt-2 lg:order-1 lg:col-span-5">
             <div className="mb-6 space-y-1">
-              <h3 className="font-display text-balance text-2xl font-medium tracking-tight text-slate-900 md:text-3xl lg:text-4xl">
+              <h3 className="font-display text-balance text-2xl font-medium tracking-tight text-[#17120f] md:text-3xl lg:text-4xl">
                 {en ? "How I support your business" : "Comment je vous accompagne"}
               </h3>
-              <span className="ml-0.5 block text-[10px] font-medium uppercase tracking-[0.3em] text-slate-500">
+              <span className="ml-0.5 block text-[10px] font-black uppercase tracking-[0.3em] text-[#d94f2b]">
                 (PROCESS)
               </span>
             </div>
@@ -154,15 +167,15 @@ export function VerticalTabs({ locale = "fr", items }: { locale?: Locale; items?
                     key={item.id}
                     onClick={() => handleTabClick(index)}
                     className={cn(
-                      "group relative flex items-start gap-4 border-t border-slate-300/40 py-4 text-left transition-all duration-500 first:border-0 md:py-5",
-                      isActive ? "text-slate-900" : "text-slate-500 hover:text-slate-900",
+                      "group relative flex items-start gap-4 border-t border-[#2a231d]/12 py-4 text-left transition-all duration-500 first:border-0 md:py-5",
+                      isActive ? "text-[#17120f]" : "text-[#8a7d6f] hover:text-[#17120f]",
                     )}
                   >
-                    <div className="absolute -left-4 bottom-0 top-0 w-[2px] bg-slate-300/50 md:-left-6">
+                    <div className="absolute -left-4 bottom-0 top-0 w-[2px] bg-[#2a231d]/12 md:-left-6">
                       {isActive && (
                         <motion.div
                           key={`progress-${index}-${isPaused}`}
-                          className="absolute left-0 top-0 w-full origin-top bg-[#2f6dff]"
+                          className="absolute left-0 top-0 w-full origin-top bg-[#d94f2b]"
                           initial={{ height: "0%" }}
                           animate={isPaused ? { height: "0%" } : { height: "100%" }}
                           transition={{ duration: AUTO_PLAY_DURATION / 1000, ease: "linear" }}
@@ -176,7 +189,7 @@ export function VerticalTabs({ locale = "fr", items }: { locale?: Locale; items?
                       <span
                         className={cn(
                           "text-xl font-normal tracking-tight transition-colors duration-500 md:text-2xl lg:text-3xl",
-                          isActive ? "text-slate-900" : "",
+                          isActive ? "text-[#17120f]" : "",
                         )}
                       >
                         {item.title}
@@ -191,7 +204,7 @@ export function VerticalTabs({ locale = "fr", items }: { locale?: Locale; items?
                             transition={{ duration: 0.3, ease: [0.23, 1, 0.32, 1] }}
                             className="overflow-hidden"
                           >
-                            <p className="max-w-sm pb-2 text-sm font-normal leading-relaxed text-slate-600 md:text-base">
+                            <p className="max-w-sm pb-2 text-sm font-normal leading-relaxed text-[#63584d] md:text-base">
                               {item.description}
                             </p>
                           </motion.div>
@@ -206,7 +219,7 @@ export function VerticalTabs({ locale = "fr", items }: { locale?: Locale; items?
 
           <div className="order-1 flex h-full flex-col justify-end lg:order-2 lg:col-span-7">
             <div className="relative" onMouseEnter={() => setIsPaused(true)} onMouseLeave={() => setIsPaused(false)}>
-              <div className="relative aspect-[4/5] overflow-hidden rounded-3xl border border-white/70 bg-white/40 shadow-[0_24px_44px_rgba(123,156,206,0.2)] md:aspect-[4/3] md:rounded-[2.5rem] lg:aspect-[16/11]">
+              <div className="relative aspect-[4/5] overflow-hidden rounded-none border border-[#2a231d]/14 bg-[#fffaf0]/70 shadow-[8px_8px_0_rgba(42,35,29,0.08)] md:aspect-[4/3] lg:aspect-[16/11]">
                 <AnimatePresence initial={false} custom={direction} mode="popLayout">
                   <motion.div
                     key={activeIndex}
@@ -239,7 +252,7 @@ export function VerticalTabs({ locale = "fr", items }: { locale?: Locale; items?
                       event.stopPropagation();
                       handlePrev();
                     }}
-                    className="flex h-10 w-10 items-center justify-center rounded-full border border-white/75 bg-white/80 text-slate-900 backdrop-blur-md transition-all hover:bg-white active:scale-90 md:h-12 md:w-12"
+                    className="flex h-10 w-10 items-center justify-center rounded-none border border-[#2a231d]/14 bg-[#fffaf0]/88 text-[#17120f] backdrop-blur-md transition-all hover:bg-[#fffaf0] active:scale-90 md:h-12 md:w-12"
                     aria-label={en ? "Previous step" : "Étape précédente"}
                   >
                     <ChevronLeft size={20} />
@@ -249,7 +262,7 @@ export function VerticalTabs({ locale = "fr", items }: { locale?: Locale; items?
                       event.stopPropagation();
                       handleNext();
                     }}
-                    className="flex h-10 w-10 items-center justify-center rounded-full border border-white/75 bg-white/80 text-slate-900 backdrop-blur-md transition-all hover:bg-white active:scale-90 md:h-12 md:w-12"
+                    className="flex h-10 w-10 items-center justify-center rounded-none border border-[#2a231d]/14 bg-[#fffaf0]/88 text-[#17120f] backdrop-blur-md transition-all hover:bg-[#fffaf0] active:scale-90 md:h-12 md:w-12"
                     aria-label={en ? "Next step" : "Étape suivante"}
                   >
                     <ChevronRight size={20} />

@@ -13,10 +13,12 @@ export function generateMetadata({ params }: { params: { locale: string } }): Me
   const en = isEnglish(locale);
 
   return {
-    title: en ? `${BRAND.name} | Premium website creation & redesign` : `${BRAND.name} | Création et refonte de sites premium`,
+    title: en
+      ? `${BRAND.name} | Website redesign for small businesses`
+      : `${BRAND.name} | Refonte de sites pour petites entreprises`,
     description: en
-      ? "Freelance web specialist in premium website creation and redesign for local businesses in France."
-      : "Freelance web spécialisé en création et refonte de sites vitrines premium pour commerces locaux français.",
+      ? "Independent studio for redesigning dated websites or creating a first proper website: design, local SEO, DNS, hosting, VPS and launch."
+      : "Studio indépendant pour refondre un site daté ou créer le premier vrai site d'une petite entreprise: design, SEO local, DNS, hébergement, VPS et mise en ligne.",
     alternates: {
       canonical: `/${locale}`,
       languages: {

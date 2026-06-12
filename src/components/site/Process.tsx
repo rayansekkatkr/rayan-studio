@@ -14,11 +14,11 @@ export function Process({ locale = "fr" }: { locale?: Locale }) {
         <Reveal>
           <SectionHeading
             eyebrow="Process"
-            title={en ? "A clear 4-step process" : "Un process clair en 4 étapes"}
+            title={en ? "A clear 5-step process" : "Un process clair en 5 étapes"}
             description={
               en
-                ? "You always know what happens next. Each step is simple, concrete, and validated with you."
-                : "Vous savez toujours ce qui se passe ensuite. Chaque étape est simple, concrète, et validée avec vous."
+                ? "From diagnosis to deployment, you always know what happens next. I handle the technical parts without making you manage them."
+                : "Du diagnostic au deploiement, vous savez toujours ce qui se passe ensuite. Je gere la partie technique sans vous la faire porter."
             }
           />
         </Reveal>

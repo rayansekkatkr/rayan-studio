@@ -5,7 +5,38 @@ on:
     # 10h heure française (CEST = UTC+2 en été, CET = UTC+1 en hiver)
     # En été : 08h UTC = 10h Paris | En hiver : 09h UTC = 10h Paris
     - cron: '0 8 * * 1-5'
-  workflow_dispatch: # Déclenchement manuel pour tester
+  workflow_dispatch:
+    inputs:
+      dry_run:
+        description: "Tester sans envoyer d'email"
+        required: false
+        default: true
+        type: boolean
+      max_emails:
+        description: "Nombre maximum de prospects pour ce run"
+        required: false
+        default: "3"
+        type: string
+      target_market_groups:
+        description: "Groupes de marches: francophone,english"
+        required: false
+        default: "francophone,english"
+        type: string
+      search_targets_per_run:
+        description: "Nombre de recherches categorie + marche"
+        required: false
+        default: "12"
+        type: string
+      max_places_to_scan:
+        description: "Nombre maximum de fiches Google Places a scanner"
+        required: false
+        default: "80"
+        type: string
+      max_emails_to_extract:
+        description: "Nombre maximum d'emails a extraire dans le rapport"
+        required: false
+        default: "40"
+        type: string
 
 permissions:
   contents: write
@@ -34,11 +65,17 @@ jobs:
           GOOGLE_PLACES_API_KEY: ${{ secrets.GOOGLE_PLACES_API_KEY }}
           GMAIL_USER: ${{ secrets.GMAIL_USER }}
           GMAIL_APP_PASSWORD: ${{ secrets.GMAIL_APP_PASSWORD }}
+          DRY_RUN: ${{ github.event_name == 'workflow_dispatch' && inputs.dry_run || 'false' }}
+          MAX_EMAILS_PER_DAY: ${{ github.event_name == 'workflow_dispatch' && inputs.max_emails || '20' }}
+          TARGET_MARKET_GROUPS: ${{ github.event_name == 'workflow_dispatch' && inputs.target_market_groups || 'francophone,english' }}
+          SEARCH_TARGETS_PER_RUN: ${{ github.event_name == 'workflow_dispatch' && inputs.search_targets_per_run || '12' }}
+          MAX_PLACES_TO_SCAN: ${{ github.event_name == 'workflow_dispatch' && inputs.max_places_to_scan || '160' }}
+          MAX_EMAILS_TO_EXTRACT: ${{ github.event_name == 'workflow_dispatch' && inputs.max_emails_to_extract || '80' }}
 
       - name: Commit updated contacts list
         run: |
           git config --local user.email "github-actions@github.com"
           git config --local user.name "GitHub Actions"
-          git add scripts/contacted.json
+          git add scripts/contacted.json scripts/outreach-report.json
           git diff --staged --quiet || git commit -m "chore: update contacted companies list [$(date +'%Y-%m-%d')]"
           git push

@@ -1,7 +1,7 @@
 "use client";
 
 import { motion, useReducedMotion } from "framer-motion";
-import { ArrowUpRight, CheckCircle2, Layers3, RefreshCw, Sparkles } from "lucide-react";
+import { ArrowUpRight, CheckCircle2, Layers3, RefreshCw } from "lucide-react";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { isEnglish, type Locale } from "@/lib/i18n";
@@ -11,52 +11,52 @@ import { SectionHeading } from "./SectionHeading";
 
 const servicesFr = [
   {
-    icon: Layers3,
-    tag: "Création",
-    title: "Création de site internet",
-    subtitle: "Lancement d'un site de zéro",
+    icon: RefreshCw,
+    tag: "Offre principale",
+    title: "Refonte Pro",
+    subtitle: "Pour remplacer un site date par une vitrine qui inspire confiance",
     description:
-      "Je crée votre site de A à Z pour présenter clairement votre activité et faciliter la prise de contact.",
-    outcomes: ["Message simple et clair", "Design professionnel qui rassure", "Boutons contact faciles à trouver"],
-    cta: "Créer mon site",
+      "Je reprends votre site actuel pour clarifier le message, moderniser l'image, optimiser le parcours et gerer la mise en ligne proprement.",
+    outcomes: ["Audit rapide du site actuel", "Nouvelle direction visuelle", "SEO, DNS et deploiement inclus"],
+    cta: "Demander un diagnostic",
   },
   {
-    icon: RefreshCw,
-    tag: "Refonte",
-    title: "Refonte de site existant",
-    subtitle: "Montée en gamme de votre image digitale",
+    icon: Layers3,
+    tag: "Premier site",
+    title: "Creation Express",
+    subtitle: "Pour exister en ligne sans devoir gerer la technique",
     description:
-      "Je reprends votre site actuel pour le rendre plus moderne, plus compréhensible et plus efficace.",
-    outcomes: ["Structure simplifiée pour vos clients", "Image plus premium et cohérente", "Plus de demandes qualifiées"],
-    cta: "Refondre mon site",
+      "Je cree une presence simple, professionnelle et rapide pour les petites entreprises qui n'ont pas encore de vrai site.",
+    outcomes: ["Page claire et responsive", "Contact WhatsApp ou formulaire", "Mise en ligne accompagnee"],
+    cta: "Creer mon premier site",
   },
 ];
 
 const servicesEn = [
   {
-    icon: Layers3,
-    tag: "Creation",
-    title: "New website creation",
-    subtitle: "Launch your website from scratch",
+    icon: RefreshCw,
+    tag: "Main offer",
+    title: "Pro Redesign",
+    subtitle: "Replace a dated website with a storefront that builds trust",
     description:
-      "I build your website from zero so your business is clearly presented and easy to contact.",
-    outcomes: ["Simple and clear message", "Professional design that builds trust", "Easy-to-find contact actions"],
-    cta: "Create my website",
+      "I redesign your current website to clarify the message, modernize the image, improve the journey, and handle a clean launch.",
+    outcomes: ["Quick audit of the current site", "New visual direction", "SEO, DNS and launch included"],
+    cta: "Request a diagnosis",
   },
   {
-    icon: RefreshCw,
-    tag: "Redesign",
-    title: "Existing website redesign",
-    subtitle: "Upgrade your digital image",
+    icon: Layers3,
+    tag: "First website",
+    title: "Express Creation",
+    subtitle: "Get online without managing the technical parts",
     description:
-      "I redesign your current website to make it more modern, easier to understand, and more effective.",
-    outcomes: ["Simpler structure for your customers", "More premium and coherent image", "More qualified inquiries"],
-    cta: "Redesign my website",
+      "I create a simple, professional, fast online presence for small businesses that do not yet have a proper website.",
+    outcomes: ["Clear responsive page", "WhatsApp or form contact", "Launch guidance included"],
+    cta: "Create my first website",
   },
 ];
 
-const trustPillsFr = ["+120 commerces accompagnés", "Prototype en 72h", "4,9/5 de satisfaction"];
-const trustPillsEn = ["120+ businesses supported", "Prototype in 72h", "4.9/5 satisfaction"];
+const trustPillsFr = ["Interlocuteur unique", "Diagnostic gratuit", "Technique prise en charge"];
+const trustPillsEn = ["Single point of contact", "Free diagnosis", "Technical setup handled"];
 
 export function Services({ locale = "fr" }: { locale?: Locale }) {
   const en = isEnglish(locale);
@@ -67,54 +67,54 @@ export function Services({ locale = "fr" }: { locale?: Locale }) {
   return (
     <section id="services" className="section-screen px-4 md:px-8">
       <div className="relative mx-auto max-w-7xl">
-        <div className="pointer-events-none absolute -left-12 top-24 h-56 w-56 rounded-full bg-[#9fc6ff]/35 blur-[88px]" />
-        <div className="pointer-events-none absolute -right-16 top-40 h-64 w-64 rounded-full bg-white/55 blur-[96px]" />
+        <div className="pointer-events-none absolute -left-8 top-24 h-px w-28 bg-[#d94f2b]/28" />
 
         <Reveal>
           <SectionHeading
             eyebrow="Services"
-            title={en ? "Two offers, one objective: elevate your business image" : "Deux offres, un même objectif: faire monter votre commerce en gamme"}
+            title={en ? "Two offers, one objective: make your business look credible online" : "Deux offres, un objectif: rendre votre entreprise credible en ligne"}
             description={
               en
-                ? "Two easy-to-understand options. No technical language, only business outcomes."
-                : "Deux options faciles à comprendre. Pas de langage technique, uniquement des résultats concrets."
+                ? "For dated websites and businesses that still do not have a proper site."
+                : "Pour les sites dates et les entreprises qui n'ont pas encore de vraie presence en ligne."
             }
           />
         </Reveal>
 
-        <div className="mt-8 grid gap-6 lg:grid-cols-2">
+        <div className="mt-8 grid items-stretch gap-6 lg:grid-cols-2">
           {services.map((service, index) => (
-            <Reveal key={service.title} delay={index * 0.08}>
+            <Reveal key={service.title} delay={index * 0.08} className="h-full">
               <motion.div
                 whileHover={reducedMotion ? undefined : { y: -9, rotateX: 0.8, rotateY: index === 0 ? -0.8 : 0.8 }}
                 transition={{ duration: 0.45, ease: [0.22, 1, 0.36, 1] }}
-                className="[perspective:1400px]"
+                className="h-full [perspective:1400px]"
               >
-                <Card className="relative h-full overflow-hidden p-6 md:p-7">
-                  <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_14%_18%,rgba(166,201,255,0.24),transparent_44%),radial-gradient(circle_at_82%_82%,rgba(255,255,255,0.45),transparent_42%)]" />
+                <Card className="relative h-full overflow-hidden rounded-none border-[#2a231d]/14 ![background:linear-gradient(145deg,rgba(255,250,240,0.98),rgba(241,232,217,0.92))] p-6 shadow-[8px_8px_0_rgba(42,35,29,0.08)] md:p-7">
+                  <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_18%_14%,rgba(217,79,43,0.08),transparent_30%),linear-gradient(180deg,rgba(255,252,246,0.52),rgba(255,252,246,0)_48%)]" />
+                  <div className="pointer-events-none absolute inset-x-0 top-0 h-1 bg-[#d94f2b]" />
 
                   <div className="relative flex h-full flex-col">
                     <div className="flex items-start justify-between gap-4">
                       <div className="flex items-center gap-3">
-                        <span className="inline-flex rounded-2xl border border-[#d2e3ff] bg-[#ecf3ff] p-2.5 text-[#2f6dff]">
+                        <span className="inline-flex rounded-none border border-[#2a231d]/16 bg-[#17120f] p-2.5 text-[#fffaf0]">
                           <service.icon size={19} />
                         </span>
                         <div>
-                          <p className="text-[11px] font-semibold uppercase tracking-[0.14em] text-[#2f6dff]">
+                          <p className="text-[11px] font-black uppercase tracking-[0.14em] text-[#d94f2b]">
                             {service.tag}
                           </p>
-                          <h3 className="font-display mt-1 text-2xl font-semibold text-slate-900">{service.title}</h3>
+                          <h3 className="font-display mt-1 text-2xl font-semibold text-[#17120f]">{service.title}</h3>
                         </div>
                       </div>
-                      <span className="rounded-full border border-white/85 bg-white/80 p-2 text-slate-500">
+                      <span className="rounded-none border border-[#2a231d]/14 bg-[#f5f1e8] p-2 text-[#63584d]">
                         <ArrowUpRight size={16} />
                       </span>
                     </div>
 
-                    <p className="mt-5 text-sm font-semibold uppercase tracking-[0.12em] text-slate-500">{service.subtitle}</p>
-                    <p className="mt-3 text-sm leading-relaxed text-slate-600">{service.description}</p>
+                    <p className="mt-5 text-sm font-black uppercase tracking-[0.12em] text-[#63584d]">{service.subtitle}</p>
+                    <p className="mt-3 text-sm leading-relaxed text-[#63584d]">{service.description}</p>
 
-                    <div className="mt-6 space-y-2.5">
+                    <div className="mt-6 flex-1 space-y-2.5">
                       {service.outcomes.map((outcome, itemIndex) => (
                         <motion.div
                           key={outcome}
@@ -122,18 +122,17 @@ export function Services({ locale = "fr" }: { locale?: Locale }) {
                           whileInView={{ opacity: 1, y: 0 }}
                           viewport={{ once: true, amount: 0.4 }}
                           transition={{ duration: 0.45, delay: itemIndex * 0.06, ease: [0.22, 1, 0.36, 1] }}
-                          className="flex items-center gap-2.5 rounded-xl border border-white/90 bg-white/78 px-4 py-3 text-sm font-medium text-slate-700"
+                          className="flex items-center gap-2.5 rounded-none border border-[#2a231d]/12 bg-[#f5f1e8] px-4 py-3 text-sm font-bold text-[#342b24]"
                         >
-                          <CheckCircle2 size={16} className="text-[#2f6dff]" />
+                          <CheckCircle2 size={16} className="text-[#d94f2b]" />
                           {outcome}
                         </motion.div>
                       ))}
                     </div>
 
                     <div className="mt-6 flex items-center justify-between">
-                      <Badge variant="neutral" className="border-white/80 bg-white/78 text-slate-700">
-                        <Sparkles size={12} className="mr-1 text-[#2f6dff]" />
-                        {en ? "Premium positioning" : "Positionnement haut de gamme"}
+                      <Badge variant="neutral" className="rounded-none border-[#2a231d]/14 bg-[#f5f1e8] text-[#63584d]">
+                        {en ? "Built for small business" : "Pensé TPE"}
                       </Badge>
 
                       <Button asChild size="sm" className="h-10 px-5">
@@ -152,7 +151,7 @@ export function Services({ locale = "fr" }: { locale?: Locale }) {
             {trustPills.map((pill) => (
               <div
                 key={pill}
-                className="rounded-full border border-white/85 bg-white/74 px-4 py-2 text-xs font-semibold uppercase tracking-[0.12em] text-slate-600 backdrop-blur-xl"
+                className="rounded-none border border-[#2a231d]/14 bg-[#fffaf0]/74 px-4 py-2 text-xs font-black uppercase tracking-[0.12em] text-[#63584d] backdrop-blur-xl"
               >
                 {pill}
               </div>

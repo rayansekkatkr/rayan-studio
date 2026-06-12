@@ -20,6 +20,7 @@ const projectsFr = [
     projectUrl: "https://stampeo.app/",
     src: "/realisations/stampeo.png",
     segment: "Cœur de cible CHR",
+    scope: ["Message hero", "Preuve visuelle", "Parcours essai"],
   },
   {
     id: "manteigaria",
@@ -31,6 +32,7 @@ const projectsFr = [
     beforeUrl: "https://manteigaria.com/fr/",
     src: "/realisations/manteigaria-before.png",
     segment: "Cœur de cible CHR",
+    scope: ["Avant / après", "Storytelling", "Image artisanale"],
   },
   {
     id: "pick4me",
@@ -41,6 +43,7 @@ const projectsFr = [
     projectUrl: "https://pick4me.be/",
     src: "/realisations/pick4me.png",
     segment: "Cœur de cible local",
+    scope: ["Positionnement", "Sections plus lisibles", "CTA clarifiés"],
   },
   {
     id: "docextract",
@@ -51,6 +54,7 @@ const projectsFr = [
     projectUrl: "https://www.getdocextract.com/",
     src: "/realisations/docextract.png",
     segment: "Référence hors CHR",
+    scope: ["Hiérarchie B2B", "Crédibilité", "Lecture rapide"],
   },
   {
     id: "facturx",
@@ -61,6 +65,7 @@ const projectsFr = [
     projectUrl: "https://www.pont-facturx.com/",
     src: "/realisations/pont-facturx.png",
     segment: "Référence hors CHR",
+    scope: ["Structure éditoriale", "Signaux de confiance", "Contact facilité"],
   },
 ];
 
@@ -74,6 +79,7 @@ const projectsEn = [
     projectUrl: "https://stampeo.app/",
     src: "/realisations/stampeo.png",
     segment: "Core food & hospitality target",
+    scope: ["Hero message", "Visual proof", "Trial journey"],
   },
   {
     id: "manteigaria",
@@ -85,6 +91,7 @@ const projectsEn = [
     beforeUrl: "https://manteigaria.com/fr/",
     src: "/realisations/manteigaria-before.png",
     segment: "Core food & hospitality target",
+    scope: ["Before / after", "Storytelling", "Artisan image"],
   },
   {
     id: "pick4me",
@@ -95,6 +102,7 @@ const projectsEn = [
     projectUrl: "https://pick4me.be/",
     src: "/realisations/pick4me.png",
     segment: "Core local target",
+    scope: ["Positioning", "Cleaner sections", "Clearer CTAs"],
   },
   {
     id: "docextract",
@@ -105,6 +113,7 @@ const projectsEn = [
     projectUrl: "https://www.getdocextract.com/",
     src: "/realisations/docextract.png",
     segment: "Non-hospitality reference",
+    scope: ["B2B hierarchy", "Credibility", "Fast reading"],
   },
   {
     id: "facturx",
@@ -115,6 +124,7 @@ const projectsEn = [
     projectUrl: "https://www.pont-facturx.com/",
     src: "/realisations/pont-facturx.png",
     segment: "Non-hospitality reference",
+    scope: ["Editorial structure", "Trust signals", "Easier contact"],
   },
 ];
 
@@ -190,7 +200,7 @@ function ProjectThumb({
       <button
         type="button"
         onClick={() => onClick(index)}
-        className="group relative h-20 w-full overflow-hidden rounded-2xl border border-white/85 bg-white/70 text-left shadow-[0_10px_22px_rgba(123,157,217,0.22)] md:h-24"
+        className="group relative h-20 w-full overflow-hidden rounded-none border border-[#2a231d]/14 bg-[#fffaf0]/78 text-left shadow-[4px_4px_0_rgba(42,35,29,0.08)] md:h-24"
         aria-label={`${ariaPrefix} ${title}`}
       >
         <Image
@@ -214,6 +224,9 @@ export function Showcase({ locale = "fr" }: { locale?: Locale }) {
   const textRotateRef = useRef<TextRotateRef>(null);
   const [activeIndex, setActiveIndex] = useState(0);
   const activeProject = projects[activeIndex];
+  const caseLabels = en
+    ? { file: "Case file", problem: "Problem", intervention: "Intervention", result: "Result", proof: "Proof" }
+    : { file: "Dossier client", problem: "Probleme", intervention: "Intervention", result: "Resultat", proof: "Preuve" };
 
   const handleSelect = (index: number) => {
     setActiveIndex(index);
@@ -242,21 +255,36 @@ export function Showcase({ locale = "fr" }: { locale?: Locale }) {
 
         <Reveal delay={0.04} y={12}>
           <div className="mt-5 grid gap-3 md:grid-cols-3">
-            {caseStudies.map((study) => (
+            {caseStudies.map((study, index) => (
               <article
                 key={study.title}
-                className="rounded-2xl border border-white/85 bg-white/76 p-4 backdrop-blur-xl shadow-[0_12px_24px_rgba(122,157,220,0.14)]"
+                className="relative rounded-none border border-[#2a231d]/18 bg-[#fffaf0]/86 p-4 shadow-[5px_5px_0_rgba(42,35,29,0.1)]"
               >
-                <p className="text-[11px] font-semibold uppercase tracking-[0.12em] text-[#2f6dff]">{study.title}</p>
-                <p className="mt-2 text-xs text-slate-600">{study.context}</p>
-                <p className="mt-2 text-xs text-slate-600">{study.action}</p>
-                <p className="mt-3 text-sm font-semibold text-slate-900">{study.result}</p>
-                <p className="mt-1 text-[11px] text-slate-500">{study.period}</p>
-                <p className="mt-1 text-[11px] text-slate-500">{study.source}</p>
+                <div className="mb-4 flex items-start justify-between gap-3 border-b border-[#2a231d]/12 pb-3">
+                  <div>
+                    <p className="text-[10px] font-black uppercase tracking-[0.16em] text-[#d94f2b]">
+                      {caseLabels.file} 0{index + 1}
+                    </p>
+                    <h3 className="font-display mt-1 text-lg font-semibold text-[#17120f]">{study.title}</h3>
+                  </div>
+                  <span className="border border-[#2a231d]/14 bg-[#17120f] px-2 py-1 text-[10px] font-black text-[#fffaf0]">
+                    30j
+                  </span>
+                </div>
+                <div className="space-y-2.5">
+                  <CaseLine label={caseLabels.problem} text={study.context} />
+                  <CaseLine label={caseLabels.intervention} text={study.action} />
+                  <div className="border border-[#2a231d]/12 bg-[#f5f1e8] p-3">
+                    <p className="text-[10px] font-black uppercase tracking-[0.12em] text-[#d94f2b]">{caseLabels.result}</p>
+                    <p className="mt-1 text-base font-black text-[#17120f]">{study.result}</p>
+                    <p className="mt-1 text-[11px] text-[#8a7d6f]">{study.period}</p>
+                  </div>
+                  <CaseLine label={caseLabels.proof} text={study.source} />
+                </div>
               </article>
             ))}
           </div>
-          <p className="mt-3 text-xs text-slate-500">
+          <p className="mt-3 text-xs text-[#8a7d6f]">
             {en
               ? "Examples synthesized from project cases and client feedback over 30 days post-delivery."
               : "Exemples synthétisés à partir de cas projets et retours clients sur 30 jours post-livraison."}
@@ -264,16 +292,14 @@ export function Showcase({ locale = "fr" }: { locale?: Locale }) {
         </Reveal>
 
         <Reveal delay={0.05} y={16} className="mt-6 md:mt-8">
-          <div className="relative overflow-hidden rounded-[34px] border border-white/85 bg-[linear-gradient(145deg,rgba(255,255,255,0.87),rgba(227,240,255,0.66))] p-4 shadow-[0_36px_64px_rgba(122,157,220,0.28)] md:p-6">
-            <div className="pointer-events-none absolute -left-16 top-8 h-44 w-44 rounded-full bg-[#a4c7ff]/34 blur-[78px]" />
-            <div className="pointer-events-none absolute -right-14 bottom-5 h-48 w-48 rounded-full bg-white/50 blur-[88px]" />
-            <div className="absolute left-5 top-5 z-20 hidden rounded-full border border-white/85 bg-white/90 px-3 py-1 text-[11px] font-semibold uppercase tracking-[0.13em] text-[#2f6dff] shadow-[0_10px_20px_rgba(122,157,220,0.22)] backdrop-blur-xl sm:block">
+          <div className="relative overflow-hidden rounded-none border border-[#2a231d]/14 bg-[linear-gradient(145deg,rgba(255,250,240,0.9),rgba(239,231,217,0.72))] p-4 shadow-[8px_8px_0_rgba(42,35,29,0.08)] md:p-6">
+            <div className="absolute left-5 top-5 z-20 hidden rounded-none border border-[#2a231d]/14 bg-[#17120f] px-3 py-1 text-[11px] font-black uppercase tracking-[0.13em] text-[#fffaf0] shadow-[4px_4px_0_rgba(217,79,43,0.28)] backdrop-blur-xl sm:block">
               {en ? "Active project" : "Projet actif"}
             </div>
 
             <div className="relative grid gap-5 lg:grid-cols-[1.2fr_0.8fr]">
-              <div className="overflow-hidden rounded-[28px] border border-white/85 bg-white/72 p-3 backdrop-blur-2xl">
-                <div className="relative h-[260px] overflow-hidden rounded-2xl border border-white/80 sm:h-[310px] md:h-[390px]">
+              <div className="overflow-hidden rounded-none border border-[#2a231d]/14 bg-[#fffaf0]/78 p-3 backdrop-blur-2xl">
+                <div className="relative h-[260px] overflow-hidden rounded-none border border-[#2a231d]/12 sm:h-[310px] md:h-[390px]">
                   <Image
                     src={activeProject.src}
                     alt={activeProject.name}
@@ -285,13 +311,13 @@ export function Showcase({ locale = "fr" }: { locale?: Locale }) {
                 </div>
 
                 <div className="mt-4">
-                  <p className="text-xs font-semibold uppercase tracking-[0.14em] text-slate-500">
+                  <p className="text-xs font-black uppercase tracking-[0.14em] text-[#8a7d6f]">
                     {en ? "Project in focus" : "Projet en focus"}
                   </p>
                   <TextRotate
                     ref={textRotateRef}
                     texts={projects.map((project) => project.name)}
-                    mainClassName="mt-2 text-xl font-display font-semibold text-slate-900 sm:text-2xl md:text-3xl"
+                    mainClassName="mt-2 text-xl font-display font-semibold text-[#17120f] sm:text-2xl md:text-3xl"
                     splitLevelClassName="overflow-hidden pb-1"
                     staggerFrom="first"
                     staggerDuration={0.005}
@@ -303,11 +329,26 @@ export function Showcase({ locale = "fr" }: { locale?: Locale }) {
                     exit={{ opacity: 0, y: -40 }}
                     transition={{ type: "spring", duration: 0.58, bounce: 0 }}
                   />
-                  <p className="mt-1.5 text-sm font-medium text-slate-600">{activeProject.designation}</p>
-                  <p className="mt-2 inline-flex w-fit rounded-full border border-[#d6e6ff] bg-[#eef5ff] px-2.5 py-1 text-[10px] font-semibold uppercase tracking-[0.12em] text-[#2f6dff]">
+                  <p className="mt-1.5 text-sm font-medium text-[#63584d]">{activeProject.designation}</p>
+                  <p className="mt-2 inline-flex w-fit rounded-none border border-[#2a231d]/14 bg-[#f5f1e8] px-2.5 py-1 text-[10px] font-black uppercase tracking-[0.12em] text-[#d94f2b]">
                     {activeProject.segment}
                   </p>
-                  <p className="mt-3 text-sm leading-relaxed text-slate-600">{activeProject.quote}</p>
+                  <p className="mt-3 text-sm leading-relaxed text-[#63584d]">{activeProject.quote}</p>
+                  <div className="mt-3">
+                    <p className="text-[10px] font-black uppercase tracking-[0.14em] text-[#8a7d6f]">
+                      {en ? "What was worked on" : "Ce qui a ete travaille"}
+                    </p>
+                    <div className="mt-2 flex flex-wrap gap-2">
+                      {activeProject.scope.map((item) => (
+                        <span
+                          key={item}
+                          className="border border-[#2a231d]/12 bg-[#fffaf0] px-2.5 py-1 text-[10px] font-black uppercase tracking-[0.08em] text-[#63584d]"
+                        >
+                          {item}
+                        </span>
+                      ))}
+                    </div>
+                  </div>
                   <div className="mt-4 flex flex-wrap gap-2.5">
                     {activeProject.beforeUrl ? (
                       <Button asChild variant="outline" size="sm" className="h-9">
@@ -336,18 +377,18 @@ export function Showcase({ locale = "fr" }: { locale?: Locale }) {
                 </div>
               </div>
 
-              <div className="rounded-[26px] border border-white/80 bg-white/66 p-3 backdrop-blur-2xl">
+              <div className="rounded-none border border-[#2a231d]/14 bg-[#fffaf0]/66 p-3 backdrop-blur-2xl">
                 <div className="mb-2 flex items-center justify-between px-1">
-                  <p className="text-[11px] font-semibold uppercase tracking-[0.14em] text-slate-500">
+                  <p className="text-[11px] font-black uppercase tracking-[0.14em] text-[#8a7d6f]">
                     {en ? "Visual selection" : "Sélection visuelle"}
                   </p>
-                  <span className="inline-flex items-center gap-1 text-[11px] font-semibold uppercase tracking-[0.12em] text-[#2f6dff]">
+                  <span className="inline-flex items-center gap-1 text-[11px] font-black uppercase tracking-[0.12em] text-[#d94f2b]">
                     {en ? "Click to switch" : "Cliquer pour changer"}
                     <ArrowUpRight size={12} />
                   </span>
                 </div>
 
-                <div className="grid grid-cols-2 gap-2 rounded-2xl px-1 md:block md:gap-0">
+                <div className="grid grid-cols-2 gap-2 rounded-none px-1 md:block md:gap-0">
                   {projects.map((project, index) => (
                     <ProjectThumb
                       key={project.id}
@@ -365,5 +406,14 @@ export function Showcase({ locale = "fr" }: { locale?: Locale }) {
         </Reveal>
       </div>
     </section>
+  );
+}
+
+function CaseLine({ label, text }: { label: string; text: string }) {
+  return (
+    <div className="border border-[#2a231d]/10 bg-[#fffaf0]/72 p-3">
+      <p className="text-[10px] font-black uppercase tracking-[0.12em] text-[#8a7d6f]">{label}</p>
+      <p className="mt-1 text-xs leading-relaxed text-[#63584d]">{text}</p>
+    </div>
   );
 }
