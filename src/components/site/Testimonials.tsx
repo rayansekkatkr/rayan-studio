@@ -127,29 +127,26 @@ export function Testimonials({ locale = "fr" }: { locale?: Locale }) {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
             viewport={{ once: true }}
-            className="relative mt-8 overflow-hidden rounded-[34px] border border-white/85 bg-[linear-gradient(145deg,rgba(255,255,255,0.87),rgba(227,240,255,0.68))] p-4 shadow-[0_34px_56px_rgba(122,157,220,0.24)] md:p-6"
+            className="relative mt-8 overflow-hidden rounded-none border border-[#2a231d]/14 bg-[linear-gradient(145deg,rgba(255,250,240,0.9),rgba(239,231,217,0.72))] p-4 shadow-[8px_8px_0_rgba(42,35,29,0.08)] md:p-6"
           >
-            <div className="pointer-events-none absolute -left-16 top-8 h-44 w-44 rounded-full bg-[#9fc4ff]/36 blur-[80px]" />
-            <div className="pointer-events-none absolute -right-16 bottom-8 h-56 w-56 rounded-full bg-white/54 blur-[92px]" />
-
             <div className="grid gap-3 md:hidden">
               {mobileCards.map((item) => (
                 <article
                   key={`mobile-${item.name}`}
-                  className="rounded-2xl border border-white/90 bg-white/82 p-4 shadow-[0_10px_18px_rgba(123,157,217,0.14)]"
+                  className="rounded-none border border-[#2a231d]/14 bg-[#fffaf0]/82 p-4 shadow-[4px_4px_0_rgba(42,35,29,0.08)]"
                 >
-                  <p className="text-sm leading-relaxed text-slate-700">“{item.text}”</p>
+                  <p className="text-sm leading-relaxed text-[#63584d]">“{item.text}”</p>
                   <div className="mt-3 flex items-center gap-2.5">
                     <Image
                       src={item.image}
                       alt={item.name}
                       width={36}
                       height={36}
-                      className="h-9 w-9 rounded-full object-cover ring-2 ring-white/85"
+                      className="h-9 w-9 rounded-none object-cover ring-2 ring-[#fffaf0]/85"
                     />
                     <div>
-                      <p className="text-sm font-semibold text-slate-900">{item.name}</p>
-                      <p className="text-xs text-slate-500">{item.role}</p>
+                      <p className="text-sm font-black text-[#17120f]">{item.name}</p>
+                      <p className="text-xs text-[#8a7d6f]">{item.role}</p>
                     </div>
                   </div>
                 </article>

@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import { Plus_Jakarta_Sans, Sora } from "next/font/google";
 import Script from "next/script";
 import { CookieConsent } from "@/components/site/CookieConsent";
@@ -20,16 +20,22 @@ const displayFont = Sora({
 export const metadata: Metadata = {
   metadataBase: new URL(getSiteUrl()),
   title: {
-    default: `${BRAND.name} | Création et refonte de sites premium`,
+    default: `${BRAND.name} | Refonte de sites pour petites entreprises`,
     template: `%s | ${BRAND.name}`,
   },
   description:
-    "Freelance web spécialisé dans la création et la refonte de sites vitrines premium pour commerces locaux français (restaurants, cafés, hôtels, boulangeries, pâtisseries, bars).",
+    "Studio indépendant pour refondre un site daté ou créer le premier site d'une petite entreprise: design, SEO local, DNS, hébergement, VPS et mise en ligne.",
   applicationName: BRAND.name,
   keywords: [
     "freelance web",
     "création site vitrine",
     "refonte site internet",
+    "refonte site web petite entreprise",
+    "site internet TPE",
+    "site vitrine artisan",
+    "audit site internet",
+    "deploiement site web",
+    "hebergement vps site",
     "site commerce local",
     "site restaurant",
     "site café",
@@ -50,7 +56,7 @@ export const metadata: Metadata = {
   publisher: BRAND.name,
   icons: {
     icon: [{ url: "/icon.svg", type: "image/svg+xml" }],
-    shortcut: ["/favicon.ico"],
+    shortcut: [{ url: "/icon.svg", type: "image/svg+xml" }],
     apple: [{ url: "/icon.svg", type: "image/svg+xml" }],
   },
   alternates: {
@@ -75,26 +81,31 @@ export const metadata: Metadata = {
     type: "website",
     locale: "fr_FR",
     url: "/",
-    title: `${BRAND.name} | Création et refonte de sites premium`,
+    title: `${BRAND.name} | Refonte de sites pour petites entreprises`,
     description:
-      "Création et refonte de sites premium pour commerces locaux français. Direction visuelle, UX orientée conversion, développement Next.js.",
+      "Refonte et création de sites pour petites entreprises: direction visuelle, SEO local, DNS, hébergement, VPS et mise en ligne.",
     siteName: BRAND.name,
     images: [
       {
         url: "/og-image",
         width: 1200,
         height: 630,
-        alt: `${BRAND.name} - Création et refonte de sites premium`,
+        alt: `${BRAND.name} - Refonte de sites pour petites entreprises`,
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: `${BRAND.name} | Création et refonte de sites premium`,
+    title: `${BRAND.name} | Refonte de sites pour petites entreprises`,
     description:
-      "Freelance web pour commerces locaux: création/refonte de sites premium, design haut de gamme et conversion.",
+      "Studio indépendant pour petites entreprises: refonte de site daté, SEO local, DNS, hébergement, VPS et déploiement.",
     images: ["/twitter-image"],
   },
+};
+
+export const viewport: Viewport = {
+  width: "device-width",
+  initialScale: 1,
 };
 
 export default function RootLayout({

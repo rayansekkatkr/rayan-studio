@@ -1,6 +1,6 @@
 # Rayan Studio - Memoire Projet
 
-Derniere mise a jour: 2026-06-09
+Derniere mise a jour: 2026-06-12
 
 Ce fichier sert de memoire vivante pour le projet. A chaque chantier important, le mettre a jour avant de terminer: etat du site, decisions, points techniques, risques, prochaine etape.
 
@@ -24,7 +24,7 @@ Spec de refonte active: `docs/superpowers/specs/2026-06-09-rayan-studio-refonte-
 - Framework: Next.js 14.2.5 avec App Router.
 - Langage: TypeScript strict, React 18.
 - Styling: Tailwind CSS, classes globales dans `src/app/globals.css`.
-- UI: composants locaux type shadcn dans `src/components/ui`, Radix Accordion, lucide-react.
+- UI: composants locaux type shadcn dans `src/components/ui`, Radix Accordion, lucide-react, Embla carousel.
 - Motion: framer-motion.
 - Tracking: Google Analytics via `NEXT_PUBLIC_GA_ID`, consentement cookies, evenements custom.
 - Contact entrant: route API Next.js vers Brevo.
@@ -98,19 +98,22 @@ Source: `src/lib/i18n.ts`
 
 Direction actuelle:
 
-- Fond clair bleu, glassmorphism, surfaces blanches translucides.
-- Accent principal bleu `#2f6dff`.
-- Typographies Google: Plus Jakarta Sans et Sora.
-- Beaucoup de cartes arrondies, borders blanches, blur, ombres bleutees.
-- Hero video: `public/hero/blue-atmosphere.mp4`.
+- Direction "atelier de refonte web": papier chaud, grille discrete, encre noire, accent corail, aplats francs.
+- Typographies Google: Plus Jakarta Sans et Sora, avec un wordmark `Rayan Studio` en serif italique via `.brand-wordmark`.
+- Navbar papier pleine, monogramme `RS`, boutons francs avec ombre corail.
+- Hero editorial compact: promesse de refonte, CTA diagnostic, bloc avant/apres et diagnostic inclus visibles dans le premier ecran desktop.
+- Hero niveau 2: dossier de refonte, plan de relance web, audit visuel, SEO/DNS/deploiement, hebergement/VPS et technique prise en charge visibles dans le premier ecran.
+- Realisations niveau 2: cartes transformees en mini dossiers client avec probleme, intervention, resultat, preuve, et scopes de travail sur le projet actif.
+- Process niveau 2: passage a 5 etapes avec diagnostic, structure/maquette, design/dev, SEO/DNS/VPS, deploiement/support.
+- Favicon remplace par un monogramme `RS` en encre/corail.
 - Assets portfolio: `public/realisations/*.png`.
 
 Diagnostic:
 
-- Le site est coherent et propre, mais l'ensemble lit comme un template premium generique.
-- Le langage visuel repose trop sur les codes AI frequents: glass cards, gradients bleus, blur, arrondis, pills, sections en cartes.
-- La refonte doit changer le systeme visuel global, pas seulement remplacer le hero.
-- Le message commercial "agence de refonte de site internet" existe deja, mais il doit etre rendu plus tangible: audit, avant/apres, SEO, DNS, deploiement, VPS, preuves et process technique clair.
+- Le site a quitte l'ancien langage bleu/glassmorphism sur les sections principales de la home.
+- Le fond doit rester doux: grille et chaleur subtiles, sans rupture trop radicale entre hero et sections.
+- Les cartes doivent rester coherentes avec la DA: moins d'arrondis, moins de blur bleu, plus de papier, bordures encre et accent corail.
+- Deux composants UI non utilises sur la home peuvent encore contenir des couleurs bleues historiques: `src/components/ui/logos3.tsx` et `src/components/ui/carousel-embla.tsx`.
 
 Principes de refonte a garder:
 
@@ -322,4 +325,49 @@ Quand un changement important est fait:
 - Cible clarifiee: petites entreprises/TPE avec site date ou sans site, en gardant les commerces locaux dans la cible mais sans limiter le positionnement au CHR.
 - Objectif business clarifie: viser au minimum 1000 a 1500 EUR de revenus mensuels nets/viables.
 - Spec de refonte positionnement creee: `docs/superpowers/specs/2026-06-09-rayan-studio-refonte-positionnement-design.md`.
+- Premiere passe visible de refonte locale: hero repositionne sur "Votre site date", fond papier/grille, accent corail, navigation "Diagnostic", offres `Refonte Pro` et `Creation Express`, tarifs alignes 700/1200 EUR, contact enrichi avec URL de site actuel.
+- Verification premiere passe: `curl -I http://localhost:3000/fr` retourne 200, navigateur integre confirme le nouveau hero/offres et aucune erreur console au chargement.
 - Verification principale: lecture des pages, composants site, routes SEO/contact, workflow GitHub Action et script outreach.
+- Deuxieme passe suite aux captures utilisateur: hero compacte pour voir le premier ecran complet en desktop, fond global adouci, sections sorties du `min-height: 100svh`, badges/cartes harmonises en papier/encre/corail, navbar rendue plus visible, wordmark serif italique et favicon `RS` remplace.
+- Verification deuxieme passe: `git diff --check` OK, `curl -I --max-time 8 http://localhost:3000/fr` retourne 200, `npm run lint` OK, scan DOM sans bleu historique calcule et sans overflow horizontal.
+- Point non bloqueur: `npx tsc --noEmit` echoue encore sur deux composants non utilises/non suivis (`src/components/ui/carousel-embla.tsx`, `src/components/ui/logos3.tsx`) qui importent `embla-carousel-react` et `embla-carousel-auto-scroll` absents.
+
+### 2026-06-10
+
+- Passe "direction artistique niveau 2" lancee apres validation utilisateur.
+- Hero renforce en bloc atelier/diagnostic: `Dossier de refonte`, `Plan de relance web`, audit visuel, parcours mobile, SEO/DNS/deploiement, hebergement/VPS et deploiement propre.
+- Realisations transformees en dossiers client plus credibles: probleme, intervention, resultat, preuve, et scopes de travail pour chaque projet actif.
+- Process passe a 5 etapes avec signal technique explicite: diagnostic, structure/maquette, design/developpement, SEO/DNS/VPS, deploiement/support.
+- Tarifs/contact/metadata rapproches du positionnement refonte TPE: site date, premier site, SEO local, DNS, hebergement, VPS, mise en ligne.
+- Page `a-propos-methodologie-preuves` et `LocalSeoLanding` harmonisees pour eviter un retour aux anciens bleus/arrondis.
+- Verification: `git diff --check` OK, `npm run lint` OK, `curl -I --max-time 8 http://localhost:3000/fr` retourne 200, scan DOM confirme les marqueurs de contenu et pas d'overflow horizontal.
+- Point non bloqueur maintenu: `npx tsc --noEmit` echoue sur les imports Embla absents dans `src/components/ui/carousel-embla.tsx` et `src/components/ui/logos3.tsx`.
+- Limite outil: la capture screenshot du navigateur integre a timeoute cote CDP, mais les checks DOM/rendu texte confirment le chargement des sections modifiees.
+- Micro-correction hero apres capture utilisateur: hero reduit a `84dvh`, titre raccourci et limite a `4.45rem`, grille/panneaux/diagnostic compactes pour voir davantage de page dans le premier ecran.
+- Micro-correction Services apres capture utilisateur: cards `Refonte Pro` et `Creation Express` forcees en hauteur egale via wrappers `h-full`, et fond damier remplace par un fond papier plus sobre.
+- Correction navigation navbar: les liens d'ancre utilisent maintenant un scroll controle dans `Navbar.tsx` pour tenir compte de la navbar fixe, centrer les sections quand elles rentrent dans le viewport, et mieux cadrer les grandes sections desktop/mobile.
+- Correction navigation navbar v2: le scroll controle vise maintenant le debut du contenu reel des sections (`padding-top` exclu), afin d'eviter le grand vide sous la navbar. Lien `FAQ` ajoute a la navbar desktop/mobile.
+
+### 2026-06-12
+
+- Stabilisation technique apres refonte: `npx tsc --noEmit` reproduisait une erreur sur deux composants UI presents dans `src/components/ui` mais dependants de paquets Embla absents.
+- Cause racine: `tsconfig.json` inclut tous les fichiers `*.tsx`; meme si `src/components/ui/carousel-embla.tsx` et `src/components/ui/logos3.tsx` ne sont pas encore utilises dans la homepage, ils cassent le typecheck tant que leurs dependances ne sont pas dans `package.json`.
+- Correctif applique: ajout de `embla-carousel-react` et `embla-carousel-auto-scroll` dans les dependances pour conserver ces composants sans casser TypeScript.
+- Verification: `npx tsc --noEmit` OK, `npm run lint` OK, `npm run build` OK, `git diff --check` OK.
+- Point a surveiller: `npm install` signale 8 vulnerabilites dans l'arbre npm global du projet. Ne pas lancer `npm audit fix --force` sans verifier les effets sur Next.js.
+- Prochaine etape recommandee: QA finale desktop/mobile puis chantier outreach (scoring prospects, personnalisation email, suivi des relances).
+- Outreach v1 sites dates: le script `scripts/outreach.js` vise maintenant explicitement les prospects avec site existant + email trouvable, ajoute `DRY_RUN=true`, `MAX_EMAILS_PER_DAY`, `DELAY_BETWEEN_EMAILS_MS`, un scoring simple et un rapport `scripts/outreach-report.json`.
+- Email outreach repositionne sur le diagnostic gratuit d'un site date: clarte du message, mobile, SEO local, contact/conversion, DNS, hebergement et deploiement.
+- Securite: en `DRY_RUN=true`, aucun email n'est envoye et `scripts/contacted.json` n'est pas modifie.
+- GitHub Action outreach: le rapport quotidien `scripts/outreach-report.json` est ajoute au commit automatique avec `scripts/contacted.json`. Le declenchement manuel `workflow_dispatch` a maintenant `dry_run=true` par defaut et un input `max_emails`, pour tester sans envoyer d'emails reels.
+- Verification outreach: `node --check scripts/outreach.js` OK, `GOOGLE_PLACES_API_KEY=dummy DRY_RUN=true MAX_EMAILS_PER_DAY=1 node outreach.js` OK depuis `scripts/` avec 0 resultat attendu, car cle Google factice.
+- Point a surveiller: `npm install` dans `scripts/` signale 1 vulnerabilite high. Ne pas lancer `npm audit fix --force` sans verifier l'impact sur `nodemailer`/`axios`.
+- Outreach v2 ton humain: le mail envoye est maintenant plus court, plus personnel et moins "agence/IA". Ajout d'une version texte (`text`) en plus du HTML, objets variables (`Petite question sur votre site`, `Au sujet du site de ...`, `Votre site web`) et HTML volontairement simple pour ressembler a un vrai email.
+- Test ajoute: `scripts/outreach.test.js` verifie que `buildEmailContent` produit un message texte court, humain, avec mention du prospect, formule de sortie simple et sans vocabulaire marketing trop generique.
+- Outreach v3 extraction nationale: la recherche ne choisit plus une ville. Le script cherche maintenant plusieurs categories au niveau national avec des requetes comme `restaurant France`, `boulangerie France`, etc., pagine Google Places, deduplique les fiches et scanne davantage de sites.
+- Separation extraction/envoi: `MAX_EMAILS_TO_EXTRACT` et `MAX_PLACES_TO_SCAN` controlent le volume de leads extraits dans le rapport, tandis que `MAX_EMAILS_PER_DAY` garde une limite stricte sur le nombre d'emails reellement envoyes/prepares.
+- GitHub Action outreach enrichie: le declenchement manuel permet maintenant de regler `search_targets_per_run`, `target_market_groups`, `max_places_to_scan` et `max_emails_to_extract`, en plus de `dry_run` et `max_emails`.
+- Outreach v4 marches francophones/anglophones: le script ne s'arrete plus a la France. Il cible des marches francophones (France, Belgique francophone, Suisse romande, Luxembourg, Quebec) et anglophones (United Kingdom, Ireland, United States, Canada, Australia, New Zealand).
+- Categories localisees: les requetes utilisent les categories francaises pour les marches francophones et les categories anglaises pour les marches anglophones.
+- Emails bilingues: `buildEmailContent` produit maintenant un email francais pour `language=fr` et anglais pour `language=en`, avec liens vers `/fr` ou `/en`.
+- GitHub Action outreach: ajout de `target_market_groups` et `search_targets_per_run` pour choisir les groupes (`francophone,english`) et le nombre de recherches `categorie + marche` par run.

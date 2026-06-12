@@ -2,6 +2,7 @@
 
 # dependencies
 /node_modules
+node_modules/
 /.pnp
 .pnp.js
 .yarn/install-state.gz
@@ -38,3 +39,7 @@ next-env.d.ts
 #claude
 .claude
 .claude*
+
+# local agent tooling
+.agents/
+.codex/

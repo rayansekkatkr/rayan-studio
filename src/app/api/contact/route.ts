@@ -3,10 +3,12 @@ import { BRAND } from "@/lib/brand";
 
 type ContactPayload = {
   firstName?: string;
+  projectType?: string;
   businessType?: string;
   email?: string;
+  siteUrl?: string;
   message?: string;
-  website?: string;
+  companyWebsite?: string;
 };
 
 const RATE_WINDOW_MS = 10 * 60 * 1000;
@@ -58,13 +60,15 @@ export async function POST(request: NextRequest) {
     return NextResponse.json({ error: "Requête invalide." }, { status: 400 });
   }
 
-  if ((payload.website || "").trim() !== "") {
+  if ((payload.companyWebsite || "").trim() !== "") {
     return NextResponse.json({ ok: true }, { status: 200 });
   }
 
   const firstName = sanitize(payload.firstName || "", 80);
+  const projectType = sanitize(payload.projectType || "", 80);
   const businessType = sanitize(payload.businessType || "", 120);
   const email = sanitize(payload.email || "", 160);
+  const siteUrl = sanitize(payload.siteUrl || "", 300);
   const message = sanitize(payload.message || "", 4000);
 
   if (!firstName || !businessType || !email || !message) {
@@ -86,15 +90,19 @@ export async function POST(request: NextRequest) {
   }
 
   const safeFirstName = escapeHtml(firstName);
+  const safeProjectType = escapeHtml(projectType || "Non précisé");
   const safeBusinessType = escapeHtml(businessType);
   const safeEmail = escapeHtml(email);
+  const safeSiteUrl = escapeHtml(siteUrl || "Non fourni");
   const safeMessage = escapeHtml(message).replaceAll("\n", "<br/>");
 
   const textContent = [
     `Nouveau lead ${BRAND.name}`,
     `Prénom: ${firstName}`,
+    `Besoin principal: ${projectType || "Non précisé"}`,
     `Type de commerce: ${businessType}`,
     `Email: ${email}`,
+    `URL du site actuel: ${siteUrl || "Non fourni"}`,
     "",
     "Message:",
     message,
@@ -103,8 +111,10 @@ export async function POST(request: NextRequest) {
   const htmlContent = `
     <h2>Nouveau lead ${BRAND.name}</h2>
     <p><strong>Prénom:</strong> ${safeFirstName}</p>
+    <p><strong>Besoin principal:</strong> ${safeProjectType}</p>
     <p><strong>Type de commerce:</strong> ${safeBusinessType}</p>
     <p><strong>Email:</strong> ${safeEmail}</p>
+    <p><strong>URL du site actuel:</strong> ${safeSiteUrl}</p>
     <p><strong>Message:</strong><br/>${safeMessage}</p>
   `;
 

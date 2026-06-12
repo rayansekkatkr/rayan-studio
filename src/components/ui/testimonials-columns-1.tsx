@@ -34,23 +34,23 @@ export function TestimonialsColumn(props: {
               <article
                 key={`${dupIndex}-${i}-${name}`}
                 className={cn(
-                  "w-full max-w-xs rounded-3xl border border-white/90",
-                  "bg-[linear-gradient(145deg,rgba(255,255,255,0.92),rgba(229,241,255,0.72))]",
-                  "p-5 shadow-[0_18px_30px_rgba(123,157,217,0.2)] backdrop-blur-xl",
+                  "w-full max-w-xs rounded-none border border-[#2a231d]/14",
+                  "bg-[linear-gradient(145deg,rgba(255,250,240,0.94),rgba(239,231,217,0.74))]",
+                  "p-5 shadow-[6px_6px_0_rgba(42,35,29,0.08)] backdrop-blur-xl",
                 )}
               >
-                <p className="text-sm leading-relaxed text-slate-700">“{text}”</p>
+                <p className="text-sm leading-relaxed text-[#63584d]">“{text}”</p>
                 <div className="mt-4 flex items-center gap-3">
                   <Image
                     src={image}
                     alt={name}
                     width={40}
                     height={40}
-                    className="h-10 w-10 rounded-full object-cover ring-2 ring-white/80"
+                    className="h-10 w-10 rounded-none object-cover ring-2 ring-[#fffaf0]/80"
                   />
                   <div className="flex flex-col">
-                    <p className="text-sm font-semibold leading-5 text-slate-900">{name}</p>
-                    <p className="text-xs leading-5 text-slate-500">{role}</p>
+                    <p className="text-sm font-black leading-5 text-[#17120f]">{name}</p>
+                    <p className="text-xs leading-5 text-[#8a7d6f]">{role}</p>
                   </div>
                 </div>
               </article>

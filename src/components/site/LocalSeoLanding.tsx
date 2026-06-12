@@ -32,30 +32,30 @@ export function LocalSeoLanding({ city, sector, title, subtitle, kpi }: LocalSeo
     <main className="min-h-screen px-4 pb-12 pt-28 md:px-8">
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }} />
       <div className="mx-auto max-w-5xl">
-        <p className="inline-flex rounded-full border border-[#d6e6ff] bg-[#eef5ff] px-3 py-1 text-xs font-semibold uppercase tracking-[0.12em] text-[#2f6dff]">
+        <p className="inline-flex rounded-none border border-[#2a231d]/14 bg-[#fffaf0]/84 px-3 py-1 text-xs font-black uppercase tracking-[0.12em] text-[#d94f2b]">
           {city} • {sector}
         </p>
-        <h1 className="font-display mt-5 text-4xl font-semibold leading-tight text-slate-900 md:text-5xl">{title}</h1>
-        <p className="mt-5 max-w-3xl text-lg text-slate-600">{subtitle}</p>
+        <h1 className="font-display mt-5 text-4xl font-semibold leading-tight text-[#17120f] md:text-5xl">{title}</h1>
+        <p className="mt-5 max-w-3xl text-lg text-[#63584d]">{subtitle}</p>
 
-        <div className="mt-8 grid gap-4 rounded-3xl border border-white/85 bg-white/80 p-5 shadow-[0_20px_36px_rgba(121,156,214,0.18)] md:grid-cols-3">
+        <div className="mt-8 grid gap-4 rounded-none border border-[#2a231d]/14 bg-[#fffaf0]/80 p-5 shadow-[6px_6px_0_rgba(42,35,29,0.08)] md:grid-cols-3">
           <div>
-            <p className="text-[11px] uppercase tracking-[0.12em] text-slate-500">Objectif</p>
-            <p className="mt-2 text-sm font-semibold text-slate-900">Plus de demandes locales qualifiées</p>
+            <p className="text-[11px] font-black uppercase tracking-[0.12em] text-[#8a7d6f]">Objectif</p>
+            <p className="mt-2 text-sm font-semibold text-[#17120f]">Plus de demandes locales qualifiées</p>
           </div>
           <div>
-            <p className="text-[11px] uppercase tracking-[0.12em] text-slate-500">Délai</p>
-            <p className="mt-2 text-sm font-semibold text-slate-900">Première direction en 72h</p>
+            <p className="text-[11px] font-black uppercase tracking-[0.12em] text-[#8a7d6f]">Délai</p>
+            <p className="mt-2 text-sm font-semibold text-[#17120f]">Première direction en 72h</p>
           </div>
           <div>
-            <p className="text-[11px] uppercase tracking-[0.12em] text-slate-500">Résultat observé</p>
-            <p className="mt-2 text-sm font-semibold text-slate-900">{kpi}</p>
+            <p className="text-[11px] font-black uppercase tracking-[0.12em] text-[#8a7d6f]">Résultat observé</p>
+            <p className="mt-2 text-sm font-semibold text-[#17120f]">{kpi}</p>
           </div>
         </div>
 
         <div className="mt-8 flex flex-wrap gap-3">
           <Button asChild>
-            <a href="/#contact">Recevoir une maquette adaptée à mon commerce</a>
+            <a href="/fr#contact">Recevoir un diagnostic adapté à mon activité</a>
           </Button>
           <Button asChild variant="outline">
             <a href={BRAND.whatsappUrl} target="_blank" rel="noreferrer">
