@@ -177,26 +177,46 @@ SEO existant:
 
 - Metadata globale dans `src/app/layout.tsx`.
 - Metadata localisee dans `src/app/[locale]/page.tsx`.
+- Pages services SEO phase 1:
+  - `/fr/refonte-site-internet`
+  - `/fr/creation-site-vitrine`
+  - `/fr/site-internet-petite-entreprise`
+  - `/en/website-redesign`
+  - `/en/small-business-website`
 - Schema.org homepage.
+- Schema.org `Service` + `FAQPage` sur les pages services.
 - Sitemap dynamique avec pages locales.
+- Sitemap enrichi avec les pages services et alternates localisees quand une page equivalente existe.
 - Pages locales generees a partir de:
   - `src/lib/local-seo.ts`
+  - `src/lib/local-seo-content.js`
   - `src/components/site/LocalSeoLanding.tsx`
+- Pages services generees a partir de:
+  - `src/lib/service-seo.js`
+  - `src/app/[locale]/[service]/page.tsx`
+  - `src/components/site/ServiceSeoPage.tsx`
 
 Cibles locales actuelles:
 
 - Villes: Paris, Marseille, Lyon, Toulouse, Nice, Nantes, Montpellier, Strasbourg, Bordeaux, Lille.
 - Secteurs: restaurant, cafe, hotel, boulangerie, patisserie, bar, commerce local.
 
+SEO local phase 2:
+
+- Les pages `/site/[sector]/[city]` utilisent maintenant un contenu enrichi par ville et par secteur: contexte local, intention commerciale, points a corriger, checklist et preuve adaptee.
+- Les metadata title/description sont generees par `buildLocalSeoContent` pour eviter des pages trop proches.
+- Objectif: rendre les 70 pages locales plus utiles et moins fines avant de travailler les pages geographiques ou les backlinks.
+
 Preuves actuelles:
 
 - Page methode/preuves avec cas synthetises: hotel, cafe, boulangerie.
-- Showcase avec Stampeo, Manteigaria, Pick4Me, DocExtract, Pont Factur-X.
+- Showcase avec Pick4Me en premier, puis Manteigaria, DocExtract, Pont Factur-X. Stampeo a ete retire de la selection "Projet actif".
 - Pack commercial dans `docs/pack-commercial-rayan-studio.txt`.
 
 Point a surveiller:
 
 - Les preuves chiffrees doivent rester defendables. Si elles sont synthetiques ou issues de retours clients, garder une formulation prudente et ne pas presenter comme analytics audites si ce n'est pas le cas.
+- Les 70 pages locales peuvent etre utiles, mais leur contenu reste proche. Priorite suivante SEO: enrichir les pages locales les plus importantes ou reduire l'indexation des combinaisons faibles pour eviter le contenu trop fin.
 
 ## Outreach Email
 
@@ -363,6 +383,10 @@ Quand un changement important est fait:
 - Correctif applique: ajout de `embla-carousel-react` et `embla-carousel-auto-scroll` dans les dependances pour conserver ces composants sans casser TypeScript.
 - Verification: `npx tsc --noEmit` OK, `npm run lint` OK, `npm run build` OK, `git diff --check` OK.
 - Point a surveiller: `npm install` signale 8 vulnerabilites dans l'arbre npm global du projet. Ne pas lancer `npm audit fix --force` sans verifier les effets sur Next.js.
+
+### 2026-06-13
+
+- Ajustement showcase: Pick4Me devient le premier projet actif FR/EN et Stampeo est retire de la selection visuelle du bloc "Projet actif".
 - Prochaine etape recommandee: QA finale desktop/mobile puis chantier outreach (scoring prospects, personnalisation email, suivi des relances).
 - Outreach v1 sites dates: le script `scripts/outreach.js` vise maintenant explicitement les prospects avec site existant + email trouvable, ajoute `DRY_RUN=true`, `MAX_EMAILS_PER_DAY`, `DELAY_BETWEEN_EMAILS_MS`, un scoring simple et un rapport `scripts/outreach-report.json`.
 - Email outreach repositionne sur le diagnostic gratuit d'un site date: clarte du message, mobile, SEO local, contact/conversion, DNS, hebergement et deploiement.

@@ -12,15 +12,15 @@ import { SectionHeading } from "./SectionHeading";
 
 const projectsFr = [
   {
-    id: "stampeo",
-    name: "Stampeo",
-    designation: "SaaS local • Fidélisation clients",
+    id: "pick4me",
+    name: "Pick4Me",
+    designation: "Plateforme locale • Mobilité & commerces",
     quote:
-      "Landing orientée conversion avec un message immédiatement compréhensible: proposition de valeur claire, preuve visuelle forte et parcours fluide vers l'essai.",
-    projectUrl: "https://stampeo.app/",
-    src: "/realisations/stampeo.png",
-    segment: "Cœur de cible CHR",
-    scope: ["Message hero", "Preuve visuelle", "Parcours essai"],
+      "Refonte visuelle orientée clarté: positionnement immédiat, sections plus lisibles et storytelling plus convaincant dès les premières secondes.",
+    projectUrl: "https://pick4me.be/",
+    src: "/realisations/pick4me.png",
+    segment: "Cœur de cible local",
+    scope: ["Positionnement", "Sections plus lisibles", "CTA clarifiés"],
   },
   {
     id: "manteigaria",
@@ -33,17 +33,6 @@ const projectsFr = [
     src: "/realisations/manteigaria-before.png",
     segment: "Cœur de cible CHR",
     scope: ["Avant / après", "Storytelling", "Image artisanale"],
-  },
-  {
-    id: "pick4me",
-    name: "Pick4Me",
-    designation: "Plateforme locale • Mobilité & commerces",
-    quote:
-      "Refonte visuelle orientée clarté: positionnement immédiat, sections plus lisibles et storytelling plus convaincant dès les premières secondes.",
-    projectUrl: "https://pick4me.be/",
-    src: "/realisations/pick4me.png",
-    segment: "Cœur de cible local",
-    scope: ["Positionnement", "Sections plus lisibles", "CTA clarifiés"],
   },
   {
     id: "docextract",
@@ -71,15 +60,15 @@ const projectsFr = [
 
 const projectsEn = [
   {
-    id: "stampeo",
-    name: "Stampeo",
-    designation: "Local SaaS • Customer loyalty",
+    id: "pick4me",
+    name: "Pick4Me",
+    designation: "Local platform • Mobility & businesses",
     quote:
-      "Conversion-focused landing with immediate clarity: a clear value proposition, strong visual proof, and a smooth journey toward trial.",
-    projectUrl: "https://stampeo.app/",
-    src: "/realisations/stampeo.png",
-    segment: "Core food & hospitality target",
-    scope: ["Hero message", "Visual proof", "Trial journey"],
+      "Visual redesign focused on clarity: immediate positioning, cleaner sections, and more convincing storytelling from the first seconds.",
+    projectUrl: "https://pick4me.be/",
+    src: "/realisations/pick4me.png",
+    segment: "Core local target",
+    scope: ["Positioning", "Cleaner sections", "Clearer CTAs"],
   },
   {
     id: "manteigaria",
@@ -92,17 +81,6 @@ const projectsEn = [
     src: "/realisations/manteigaria-before.png",
     segment: "Core food & hospitality target",
     scope: ["Before / after", "Storytelling", "Artisan image"],
-  },
-  {
-    id: "pick4me",
-    name: "Pick4Me",
-    designation: "Local platform • Mobility & businesses",
-    quote:
-      "Visual redesign focused on clarity: immediate positioning, cleaner sections, and more convincing storytelling from the first seconds.",
-    projectUrl: "https://pick4me.be/",
-    src: "/realisations/pick4me.png",
-    segment: "Core local target",
-    scope: ["Positioning", "Cleaner sections", "Clearer CTAs"],
   },
   {
     id: "docextract",

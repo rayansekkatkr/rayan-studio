@@ -8,6 +8,7 @@ import {
   type LocalSeoCitySlug,
   type LocalSeoSectorSlug,
 } from "@/lib/local-seo";
+import { buildLocalSeoContent } from "@/lib/local-seo-content";
 
 type Params = {
   sector: LocalSeoSectorSlug;
@@ -29,12 +30,11 @@ export function generateMetadata({ params }: { params: Params }): Metadata {
     return {};
   }
 
-  const title = `${sector.title} à ${city.label}`;
-  const description = `Création et refonte de site ${sector.label.toLowerCase()} à ${city.label}: design premium, UX conversion et accompagnement local.`;
+  const content = getLocalSeoContent(sector, city);
 
   return {
-    title,
-    description,
+    title: content.metaTitle,
+    description: content.metaDescription,
     alternates: {
       canonical: `/site/${sector.slug}/${city.slug}`,
     },
@@ -51,6 +51,19 @@ const kpiBySector: Record<LocalSeoSectorSlug, string> = {
   "commerce-local": "+25% de demandes qualifiées",
 };
 
+function getLocalSeoContent(
+  sector: NonNullable<ReturnType<typeof getSectorBySlug>>,
+  city: NonNullable<ReturnType<typeof getCityBySlug>>,
+) {
+  return buildLocalSeoContent({
+    citySlug: city.slug,
+    cityLabel: city.label,
+    sectorSlug: sector.slug,
+    sectorLabel: sector.label,
+    kpi: kpiBySector[sector.slug],
+  });
+}
+
 export default function Page({ params }: { params: Params }) {
   const sector = getSectorBySlug(params.sector);
   const city = getCityBySlug(params.city);
@@ -63,10 +76,7 @@ export default function Page({ params }: { params: Params }) {
     <LocalSeoLanding
       city={city.label}
       sector={sector.label}
-      title={`${sector.title} à ${city.label}`}
-      subtitle={`Un site vitrine ${sector.label.toLowerCase()} pensé pour ${city.label}: image premium, message clair et demandes locales plus qualifiées.`}
-      kpi={kpiBySector[sector.slug]}
+      content={getLocalSeoContent(sector, city)}
     />
   );
 }
-
