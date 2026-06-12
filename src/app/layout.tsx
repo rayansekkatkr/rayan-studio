@@ -3,6 +3,7 @@ import { Plus_Jakarta_Sans, Sora } from "next/font/google";
 import Script from "next/script";
 import { CookieConsent } from "@/components/site/CookieConsent";
 import { BRAND, getSiteUrl } from "@/lib/brand";
+import { getGoogleSiteVerification } from "@/lib/seo-verification";
 import "./globals.css";
 
 const bodyFont = Plus_Jakarta_Sans({
@@ -76,6 +77,9 @@ export const metadata: Metadata = {
       "max-image-preview": "large",
       "max-video-preview": -1,
     },
+  },
+  verification: {
+    google: getGoogleSiteVerification(),
   },
   openGraph: {
     type: "website",

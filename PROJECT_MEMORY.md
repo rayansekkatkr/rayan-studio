@@ -207,6 +207,12 @@ SEO local phase 2:
 - Les metadata title/description sont generees par `buildLocalSeoContent` pour eviter des pages trop proches.
 - Objectif: rendre les 70 pages locales plus utiles et moins fines avant de travailler les pages geographiques ou les backlinks.
 
+SEO phase 3:
+
+- Verification Google Search Console preparee via `NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION` et `metadata.verification.google`.
+- Checklist post-deploiement creee dans `docs/seo-search-console-checklist.md`: verification, sitemap, pages prioritaires, requetes a suivre, rythme de suivi.
+- Objectif: mesurer impressions, indexation et CTR avant de produire davantage de contenu.
+
 Preuves actuelles:
 
 - Page methode/preuves avec cas synthetises: hotel, cafe, boulangerie.
@@ -387,6 +393,7 @@ Quand un changement important est fait:
 ### 2026-06-13
 
 - Ajustement showcase: Pick4Me devient le premier projet actif FR/EN et Stampeo est retire de la selection visuelle du bloc "Projet actif".
+- Phase SEO mesure/indexation: ajout du support Search Console par variable d'environnement et checklist d'audit post-deploiement.
 - Prochaine etape recommandee: QA finale desktop/mobile puis chantier outreach (scoring prospects, personnalisation email, suivi des relances).
 - Outreach v1 sites dates: le script `scripts/outreach.js` vise maintenant explicitement les prospects avec site existant + email trouvable, ajoute `DRY_RUN=true`, `MAX_EMAILS_PER_DAY`, `DELAY_BETWEEN_EMAILS_MS`, un scoring simple et un rapport `scripts/outreach-report.json`.
 - Email outreach repositionne sur le diagnostic gratuit d'un site date: clarte du message, mobile, SEO local, contact/conversion, DNS, hebergement et deploiement.
