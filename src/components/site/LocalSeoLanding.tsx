@@ -63,6 +63,22 @@ export function LocalSeoLanding({ city, sector, title, subtitle, kpi }: LocalSeo
             </a>
           </Button>
         </div>
+
+        <div className="mt-10 grid gap-3 border border-[#2a231d]/14 bg-[#fffaf0]/80 p-4 md:grid-cols-3">
+          {[
+            { href: "/fr/refonte-site-internet", label: "Refonte de site internet" },
+            { href: "/fr/creation-site-vitrine", label: "Création de site vitrine" },
+            { href: "/fr/site-internet-petite-entreprise", label: "Site internet petite entreprise" },
+          ].map((link) => (
+            <a
+              key={link.href}
+              href={link.href}
+              className="rounded-none border border-[#2a231d]/12 bg-[#f5f1e8] px-3 py-3 text-sm font-black text-[#17120f] transition hover:-translate-y-0.5 hover:text-[#d94f2b]"
+            >
+              {link.label}
+            </a>
+          ))}
+        </div>
       </div>
     </main>
   );

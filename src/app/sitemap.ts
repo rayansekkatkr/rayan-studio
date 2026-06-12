@@ -1,6 +1,7 @@
 import type { MetadataRoute } from "next";
 import { getSiteUrl } from "@/lib/brand";
 import { getAllLocalSeoCombos } from "@/lib/local-seo";
+import { getAllServiceSeoPages } from "@/lib/service-seo";
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const baseUrl = getSiteUrl();
@@ -13,6 +14,25 @@ export default function sitemap(): MetadataRoute.Sitemap {
     changeFrequency: "weekly" as const,
     priority: 0.8,
   }));
+  const serviceRoutes = getAllServiceSeoPages().map((page) => {
+    const languages: Record<string, string> = {
+      [page.locale]: `${baseUrl}${page.path}`,
+    };
+
+    if (page.alternatePath) {
+      languages[page.locale === "fr" ? "en" : "fr"] = `${baseUrl}${page.alternatePath}`;
+    }
+
+    return {
+      url: `${baseUrl}${page.path}`,
+      lastModified,
+      changeFrequency: "monthly" as const,
+      priority: 0.9,
+      alternates: {
+        languages,
+      },
+    };
+  });
 
   return [
     {
@@ -69,6 +89,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: "monthly",
       priority: 0.8,
     },
+    ...serviceRoutes,
     ...localSeoRoutes,
   ];
 }

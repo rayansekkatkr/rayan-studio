@@ -177,11 +177,23 @@ SEO existant:
 
 - Metadata globale dans `src/app/layout.tsx`.
 - Metadata localisee dans `src/app/[locale]/page.tsx`.
+- Pages services SEO phase 1:
+  - `/fr/refonte-site-internet`
+  - `/fr/creation-site-vitrine`
+  - `/fr/site-internet-petite-entreprise`
+  - `/en/website-redesign`
+  - `/en/small-business-website`
 - Schema.org homepage.
+- Schema.org `Service` + `FAQPage` sur les pages services.
 - Sitemap dynamique avec pages locales.
+- Sitemap enrichi avec les pages services et alternates localisees quand une page equivalente existe.
 - Pages locales generees a partir de:
   - `src/lib/local-seo.ts`
   - `src/components/site/LocalSeoLanding.tsx`
+- Pages services generees a partir de:
+  - `src/lib/service-seo.js`
+  - `src/app/[locale]/[service]/page.tsx`
+  - `src/components/site/ServiceSeoPage.tsx`
 
 Cibles locales actuelles:
 
@@ -197,6 +209,7 @@ Preuves actuelles:
 Point a surveiller:
 
 - Les preuves chiffrees doivent rester defendables. Si elles sont synthetiques ou issues de retours clients, garder une formulation prudente et ne pas presenter comme analytics audites si ce n'est pas le cas.
+- Les 70 pages locales peuvent etre utiles, mais leur contenu reste proche. Priorite suivante SEO: enrichir les pages locales les plus importantes ou reduire l'indexation des combinaisons faibles pour eviter le contenu trop fin.
 
 ## Outreach Email
 

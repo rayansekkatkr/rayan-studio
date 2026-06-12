@@ -14,6 +14,7 @@ const servicesFr = [
     icon: RefreshCw,
     tag: "Offre principale",
     title: "Refonte Pro",
+    href: "/fr/refonte-site-internet",
     subtitle: "Pour remplacer un site date par une vitrine qui inspire confiance",
     description:
       "Je reprends votre site actuel pour clarifier le message, moderniser l'image, optimiser le parcours et gerer la mise en ligne proprement.",
@@ -24,6 +25,7 @@ const servicesFr = [
     icon: Layers3,
     tag: "Premier site",
     title: "Creation Express",
+    href: "/fr/creation-site-vitrine",
     subtitle: "Pour exister en ligne sans devoir gerer la technique",
     description:
       "Je cree une presence simple, professionnelle et rapide pour les petites entreprises qui n'ont pas encore de vrai site.",
@@ -37,6 +39,7 @@ const servicesEn = [
     icon: RefreshCw,
     tag: "Main offer",
     title: "Pro Redesign",
+    href: "/en/website-redesign",
     subtitle: "Replace a dated website with a storefront that builds trust",
     description:
       "I redesign your current website to clarify the message, modernize the image, improve the journey, and handle a clean launch.",
@@ -47,6 +50,7 @@ const servicesEn = [
     icon: Layers3,
     tag: "First website",
     title: "Express Creation",
+    href: "/en/small-business-website",
     subtitle: "Get online without managing the technical parts",
     description:
       "I create a simple, professional, fast online presence for small businesses that do not yet have a proper website.",
@@ -107,7 +111,9 @@ export function Services({ locale = "fr" }: { locale?: Locale }) {
                         </div>
                       </div>
                       <span className="rounded-none border border-[#2a231d]/14 bg-[#f5f1e8] p-2 text-[#63584d]">
-                        <ArrowUpRight size={16} />
+                        <a href={service.href} aria-label={en ? `Read more about ${service.title}` : `En savoir plus sur ${service.title}`}>
+                          <ArrowUpRight size={16} />
+                        </a>
                       </span>
                     </div>
 
@@ -135,9 +141,14 @@ export function Services({ locale = "fr" }: { locale?: Locale }) {
                         {en ? "Built for small business" : "Pensé TPE"}
                       </Badge>
 
-                      <Button asChild size="sm" className="h-10 px-5">
-                        <a href={`/${locale}#contact`}>{service.cta}</a>
-                      </Button>
+                      <div className="flex flex-wrap justify-end gap-2">
+                        <Button asChild size="sm" variant="glass" className="h-10 px-4">
+                          <a href={service.href}>{en ? "Details" : "Détails"}</a>
+                        </Button>
+                        <Button asChild size="sm" className="h-10 px-5">
+                          <a href={`/${locale}#contact`}>{service.cta}</a>
+                        </Button>
+                      </div>
                     </div>
                   </div>
                 </Card>
