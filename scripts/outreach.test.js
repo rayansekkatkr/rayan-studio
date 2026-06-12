@@ -5,6 +5,8 @@ const {
   buildEmailContent,
   buildSearchQuery,
   getSearchTargets,
+  extractEmailCandidates,
+  isLikelyDeliverableEmail,
 } = require('./outreach');
 
 test('buildEmailContent creates a short human plain-text outreach email', () => {
@@ -71,4 +73,42 @@ test('getSearchTargets rotates across francophone and English-speaking markets',
   assert.ok(languages.has('en'));
   assert.ok(queries.some((query) => query.includes('France')));
   assert.ok(queries.some((query) => query.includes('United Kingdom') || query.includes('United States')));
+});
+
+test('isLikelyDeliverableEmail rejects image asset false positives', () => {
+  const falsePositives = [
+    'icn_social_linkedin_footer@2x.png',
+    'digital-next-digital-marketing-agency-melbourne@2x-1024x878.jpg',
+    'image-14@2x.png',
+    'sprite@2x.webp',
+  ];
+
+  for (const email of falsePositives) {
+    assert.equal(isLikelyDeliverableEmail(email).valid, false, email);
+  }
+});
+
+test('isLikelyDeliverableEmail rejects common placeholder emails', () => {
+  const placeholders = [
+    'alex@clearbit.com',
+    'name@email.com',
+    'jean.dupont@gmail.com',
+    'john.doe@gmail.com',
+    'test@example.com',
+  ];
+
+  for (const email of placeholders) {
+    assert.equal(isLikelyDeliverableEmail(email).valid, false, email);
+  }
+});
+
+test('extractEmailCandidates keeps business emails and removes noisy matches', () => {
+  const html = `
+    <a href="mailto:contact@boulangerie-martin.fr">Email</a>
+    <img src="/assets/sprite@2x.webp" />
+    <img src="/assets/image-14@2x.png" />
+    <span>name@email.com</span>
+  `;
+
+  assert.deepEqual(extractEmailCandidates(html), ['contact@boulangerie-martin.fr']);
 });
