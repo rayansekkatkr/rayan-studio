@@ -1,5 +1,6 @@
 const axios = require('axios');
 const nodemailer = require('nodemailer');
+const dns = require('dns').promises;
 const fs = require('fs');
 const path = require('path');
 
@@ -31,6 +32,51 @@ const TARGET_MARKET_GROUPS = (process.env.TARGET_MARKET_GROUPS || 'francophone,e
 
 const CONTACTED_FILE = path.join(__dirname, 'contacted.json');
 const REPORT_FILE = path.join(__dirname, 'outreach-report.json');
+
+const BLOCKED_EMAIL_TLDS = new Set([
+  'png', 'jpg', 'jpeg', 'webp', 'gif', 'svg', 'avif', 'ico',
+  'css', 'js', 'json', 'xml', 'pdf', 'mp4', 'webm',
+  'woff', 'woff2', 'ttf', 'eot',
+]);
+
+const BLOCKED_PLACEHOLDER_DOMAINS = new Set([
+  'email.com',
+  'example.com',
+  'example.fr',
+  'example.org',
+  'domain.com',
+  'yourdomain.com',
+  'test.com',
+]);
+
+const BLOCKED_THIRD_PARTY_DOMAINS = new Set([
+  'clearbit.com',
+  'schema.org',
+  'sentry.io',
+]);
+
+const BLOCKED_EXACT_EMAILS = new Set([
+  'name@email.com',
+  'jean.dupont@gmail.com',
+  'john.doe@gmail.com',
+  'jane.doe@gmail.com',
+  'test@example.com',
+]);
+
+const BLOCKED_LOCAL_PARTS = new Set([
+  'name',
+  'email',
+  'test',
+  'example',
+  'john.doe',
+  'jane.doe',
+  'jean.dupont',
+  'firstname.lastname',
+  'first.last',
+  'yourname',
+]);
+
+const ASSET_LOCAL_PART_PATTERN = /(^|[._-])(asset|assets|avatar|banner|bg|background|footer|header|icn|icon|image|img|linkedin|logo|retina|social|sprite)([._-]|$)/;
 
 // Catégories métiers qui ont souvent besoin d'un site web
 const FRENCH_BUSINESS_CATEGORIES = [
@@ -245,6 +291,152 @@ async function getPlaceDetails(placeId) {
   }
 }
 
+function normalizeEmailCandidate(value) {
+  if (!value) return null;
+
+  let email = String(value).trim();
+  email = email.replace(/^mailto:/i, '').split(/[?#]/)[0].trim();
+
+  try {
+    email = decodeURIComponent(email);
+  } catch {
+    // Garde la valeur brute si l'URL contient un encodage incomplet.
+  }
+
+  email = email
+    .replace(/^["'<([{]+/, '')
+    .replace(/[>"')\]}.,;:]+$/, '')
+    .toLowerCase();
+
+  return email || null;
+}
+
+function splitEmail(email) {
+  const normalizedEmail = normalizeEmailCandidate(email);
+  if (!normalizedEmail || normalizedEmail.split('@').length !== 2) return null;
+
+  const [localPart, domain] = normalizedEmail.split('@');
+  return { email: normalizedEmail, localPart, domain };
+}
+
+function invalidEmail(email, reason) {
+  return { valid: false, email: normalizeEmailCandidate(email), reason };
+}
+
+function isLikelyDeliverableEmail(value) {
+  const parts = splitEmail(value);
+  if (!parts) return invalidEmail(value, 'invalid_format');
+
+  const { email, localPart, domain } = parts;
+  const labels = domain.split('.');
+  const tld = labels[labels.length - 1];
+
+  if (email.length > 254) return invalidEmail(email, 'too_long');
+  if (!/^[a-z0-9._%+\-]+@[a-z0-9.\-]+\.[a-z]{2,}$/i.test(email)) {
+    return invalidEmail(email, 'invalid_format');
+  }
+  if (!localPart || !domain || localPart.includes('..') || domain.includes('..')) {
+    return invalidEmail(email, 'invalid_format');
+  }
+  if (
+    labels.some((label) => (
+      !label ||
+      label.length > 63 ||
+      label.startsWith('-') ||
+      label.endsWith('-')
+    ))
+  ) {
+    return invalidEmail(email, 'invalid_domain');
+  }
+  if (BLOCKED_EMAIL_TLDS.has(tld)) return invalidEmail(email, 'asset_extension');
+  if (BLOCKED_EXACT_EMAILS.has(email)) return invalidEmail(email, 'placeholder_email');
+  if (BLOCKED_PLACEHOLDER_DOMAINS.has(domain)) return invalidEmail(email, 'placeholder_domain');
+  if (BLOCKED_THIRD_PARTY_DOMAINS.has(domain)) return invalidEmail(email, 'third_party_domain');
+  if (BLOCKED_LOCAL_PARTS.has(localPart)) return invalidEmail(email, 'placeholder_local_part');
+  if (/(^|[._-])(no-?reply|do-?not-?reply|sentry|schema|google)([._-]|$)/.test(localPart)) {
+    return invalidEmail(email, 'technical_email');
+  }
+  if (/^2x([.-]|$)/.test(domain) || /(^|[.-])\d+x\d+([.-]|$)/.test(domain)) {
+    return invalidEmail(email, 'asset_domain');
+  }
+  if (
+    ASSET_LOCAL_PART_PATTERN.test(localPart) ||
+    /^(image|img|sprite|icon|icn|logo)-?\d*$/.test(localPart)
+  ) {
+    return invalidEmail(email, 'asset_local_part');
+  }
+
+  return { valid: true, email };
+}
+
+function extractEmailCandidates(html) {
+  if (!html) return [];
+
+  const source = String(html);
+  const candidates = [];
+  const mailtoRegex = /mailto:([^"'<>\\\s]+)/gi;
+  const emailRegex = /\b([a-zA-Z0-9._%+\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,})\b/g;
+
+  for (const match of source.matchAll(mailtoRegex)) {
+    candidates.push(match[1]);
+  }
+
+  for (const match of source.matchAll(emailRegex)) {
+    candidates.push(match[1]);
+  }
+
+  const seen = new Set();
+  const filtered = [];
+
+  for (const candidate of candidates) {
+    const validation = isLikelyDeliverableEmail(candidate);
+    if (!validation.valid || seen.has(validation.email)) continue;
+
+    seen.add(validation.email);
+    filtered.push(validation.email);
+  }
+
+  return filtered;
+}
+
+async function hasDeliverableDomain(email) {
+  const parts = splitEmail(email);
+  if (!parts) return false;
+
+  try {
+    const mxRecords = await dns.resolveMx(parts.domain);
+    if (mxRecords.length > 0) return true;
+  } catch {
+    // Certains petits domaines acceptent encore le mail via A/AAAA sans MX explicite.
+  }
+
+  try {
+    const addressRecords = await dns.resolve4(parts.domain);
+    if (addressRecords.length > 0) return true;
+  } catch {
+    try {
+      const addressRecords = await dns.resolve6(parts.domain);
+      return addressRecords.length > 0;
+    } catch {
+      return false;
+    }
+  }
+
+  return false;
+}
+
+async function validateEmailBeforeSend(email) {
+  const localValidation = isLikelyDeliverableEmail(email);
+  if (!localValidation.valid) return localValidation;
+
+  const hasMailDomain = await hasDeliverableDomain(localValidation.email);
+  if (!hasMailDomain) {
+    return { valid: false, email: localValidation.email, reason: 'domain_dns_missing' };
+  }
+
+  return localValidation;
+}
+
 async function extractEmailFromWebsite(websiteUrl) {
   try {
     const normalizedUrl = websiteUrl.startsWith('http') ? websiteUrl : `https://${websiteUrl}`;
@@ -258,28 +450,7 @@ async function extractEmailFromWebsite(websiteUrl) {
     });
 
     const html = response.data;
-
-    // Priorité aux liens mailto
-    const mailtoMatch = html.match(/mailto:([a-zA-Z0-9._%+\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,})/);
-    if (mailtoMatch) return mailtoMatch[1].toLowerCase();
-
-    // Fallback : regex email dans le HTML
-    const emailRegex = /\b([a-zA-Z0-9._%+\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,})\b/g;
-    const matches = [...html.matchAll(emailRegex)];
-    const filtered = matches
-      .map((m) => m[1].toLowerCase())
-      .filter(
-        (e) =>
-          !e.includes('example') &&
-          !e.includes('test@') &&
-          !e.includes('@sentry') &&
-          !e.includes('@google') &&
-          !e.includes('@schema') &&
-          !e.includes('noreply') &&
-          !e.includes('no-reply')
-      );
-
-    return filtered[0] || null;
+    return extractEmailCandidates(html)[0] || null;
   } catch {
     return null;
   }
@@ -536,10 +707,12 @@ async function main() {
     skippedNoDetails: 0,
     skippedNoWebsite: 0,
     skippedNoEmail: 0,
+    skippedInvalidEmail: 0,
     skippedDuplicateEmail: 0,
     searches: [],
     candidates: [],
     sent: [],
+    invalidEmails: [],
     errors: [],
   };
 
@@ -625,6 +798,24 @@ async function main() {
       report.skippedNoEmail++;
       continue;
     }
+
+    const emailValidation = await validateEmailBeforeSend(email);
+    if (!emailValidation.valid) {
+      console.log(`[SKIP] Email invalide (${emailValidation.reason}) : ${details.name} <${email}>`);
+      report.skippedInvalidEmail++;
+      report.invalidEmails.push({
+        placeId: business.place_id,
+        name: details.name,
+        email,
+        reason: emailValidation.reason,
+        website: websiteUrl,
+        marketCode: business.marketCode || null,
+        market: business.marketLabel || null,
+        language: business.language || 'fr',
+      });
+      continue;
+    }
+    email = emailValidation.email;
 
     if (extractedEmails.has(email)) {
       console.log(`[SKIP] Email déjà extrait/contacté : ${details.name} <${email}>`);
@@ -715,7 +906,11 @@ module.exports = {
   buildSearchQuery,
   buildEmailContent,
   displayUrl,
+  extractEmailCandidates,
   getSearchTargets,
+  hasDeliverableDomain,
+  isLikelyDeliverableEmail,
   pickSubject,
   scoreProspect,
+  validateEmailBeforeSend,
 };

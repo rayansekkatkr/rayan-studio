@@ -1,5 +1,6 @@
 import { NextRequest, NextResponse } from "next/server";
 import { BRAND } from "@/lib/brand";
+import { getContactSendErrorMessage } from "@/lib/contact-errors";
 
 type ContactPayload = {
   firstName?: string;
@@ -137,7 +138,23 @@ export async function POST(request: NextRequest) {
   });
 
   if (!response.ok) {
-    return NextResponse.json({ error: "Envoi impossible pour le moment. Réessaie dans un instant." }, { status: 502 });
+    const responseBody = await response.text();
+    console.error("[contact] Brevo API error", {
+      status: response.status,
+      statusText: response.statusText,
+      body: responseBody.slice(0, 1000),
+    });
+
+    return NextResponse.json(
+      {
+        error: getContactSendErrorMessage({
+          status: response.status,
+          body: responseBody,
+          isProduction: process.env.NODE_ENV === "production",
+        }),
+      },
+      { status: 502 },
+    );
   }
 
   return NextResponse.json({ ok: true }, { status: 200 });

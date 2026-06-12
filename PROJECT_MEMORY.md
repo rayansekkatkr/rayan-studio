@@ -105,6 +105,7 @@ Direction actuelle:
 - Hero niveau 2: dossier de refonte, plan de relance web, audit visuel, SEO/DNS/deploiement, hebergement/VPS et technique prise en charge visibles dans le premier ecran.
 - Realisations niveau 2: cartes transformees en mini dossiers client avec probleme, intervention, resultat, preuve, et scopes de travail sur le projet actif.
 - Process niveau 2: passage a 5 etapes avec diagnostic, structure/maquette, design/dev, SEO/DNS/VPS, deploiement/support.
+- Tarifs niveau 2: chaque offre ouvre une modale de demande rapide contextualisee, avec l'offre preselectionnee et un message pre-rempli selon la langue.
 - Favicon remplace par un monogramme `RS` en encre/corail.
 - Assets portfolio: `public/realisations/*.png`.
 
@@ -161,6 +162,8 @@ Variables d'environnement attendues:
 - `BREVO_TO_EMAIL`
 - `BREVO_SUBJECT`
 
+Point de debug connu: si `/api/contact` retourne 502 en local avec Brevo, verifier les IP autorisees dans Brevo. Le compte peut refuser l'appel API avec `unrecognised IP address` si l'IP actuelle ou l'IP du serveur n'est pas whitelist.
+
 ### Tracking
 
 - `FunnelTracking` emet `scroll_depth` a 25, 50, 75, 90%.
@@ -206,14 +209,18 @@ Fichiers:
 
 Fonctionnement actuel:
 
-1. GitHub Action lance le script en semaine a 08:00 UTC.
-2. Le script choisit une ville et une categorie selon le jour de l'annee.
-3. Il cherche des entreprises via Google Places Text Search.
-4. Il recupere les details Google Place: nom, adresse, site web, telephone.
-5. Si un site existe, il scanne le HTML pour trouver un email.
-6. Il envoie un email via Gmail/Nodemailer.
-7. Il ajoute le placeId et les infos au fichier `contacted.json`.
-8. La GitHub Action commit et push la liste de contacts mise a jour.
+1. GitHub Action lance le script en semaine a 08:00 UTC, avec des options manuelles pour dry-run, volume, groupes de marches et profondeur de scan.
+2. Le script selectionne des couples categorie + marche, sans obligation de choisir une ville.
+3. Les marches sont separes en deux groupes: francophone et anglophone.
+4. Il cherche des entreprises via Google Places Text Search.
+5. Il recupere les details Google Place: nom, adresse, site web, telephone.
+6. Si un site existe, il scanne le HTML pour trouver des candidats email.
+7. L'extraction priorise `mailto:`, puis le HTML, avec filtres anti-faux positifs: fichiers image/assets (`@2x.png`, `@2x.webp`, etc.), placeholders (`name@email.com`, `john.doe@gmail.com`, etc.), domaines d'exemple, emails techniques et domaines tiers de scripts comme Clearbit.
+8. Avant envoi ou ajout candidat, le script verifie que le domaine de l'email peut recevoir du mail via DNS MX, puis fallback A/AAAA.
+9. La langue de l'email depend du marche detecte: `fr` pour les marches francophones, `en` pour les marches anglophones, avec lien vers `/fr` ou `/en`.
+10. Il envoie l'email via Gmail/Nodemailer ou le marque `dry-run`.
+11. Apres envoi reel, il ajoute le placeId et les infos au fichier `contacted.json`.
+12. La GitHub Action commit et push la liste de contacts mise a jour.
 
 Configuration attendue:
 
@@ -223,10 +230,11 @@ Configuration attendue:
 
 Limites actuelles identifiees:
 
-- Le ciblage est large: toutes categories et villes tournent mecaniquement.
+- Le ciblage reste large: les categories et marches tournent mecaniquement.
 - Le message email est peu personnalise et peut ressembler a un cold email generique.
-- Pas de scoring avant envoi: presence d'un site, qualite du site, secteur prioritaire, ville prioritaire, email qualifie.
+- Scoring encore simple: presence d'un site, email, telephone et adresse; pas encore de vraie qualification visuelle/technique du site.
 - Pas de suivi de statut detaille: envoye, reponse, desabonnement, bounce, prospect interesse.
+- Controle de delivrabilite partiel seulement: le DNS du domaine est verifie, mais l'existence exacte d'une boite email precise ne peut pas etre garantie sans envoi ou verification SMTP intrusive, souvent bloquee par les serveurs.
 - Pas de controle de delivrabilite avance: warming, domaine dedie, SPF/DKIM/DMARC, limite par domaine, variance des objets.
 - La gestion du desabonnement repose sur une reponse manuelle avec "Desabonnement".
 - Le script scanne seulement la page d'accueil du site trouve.
