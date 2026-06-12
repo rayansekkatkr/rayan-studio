@@ -210,7 +210,7 @@ SEO local phase 2:
 Preuves actuelles:
 
 - Page methode/preuves avec cas synthetises: hotel, cafe, boulangerie.
-- Showcase avec Stampeo, Manteigaria, Pick4Me, DocExtract, Pont Factur-X.
+- Showcase avec Pick4Me en premier, puis Manteigaria, DocExtract, Pont Factur-X. Stampeo a ete retire de la selection "Projet actif".
 - Pack commercial dans `docs/pack-commercial-rayan-studio.txt`.
 
 Point a surveiller:
@@ -383,6 +383,10 @@ Quand un changement important est fait:
 - Correctif applique: ajout de `embla-carousel-react` et `embla-carousel-auto-scroll` dans les dependances pour conserver ces composants sans casser TypeScript.
 - Verification: `npx tsc --noEmit` OK, `npm run lint` OK, `npm run build` OK, `git diff --check` OK.
 - Point a surveiller: `npm install` signale 8 vulnerabilites dans l'arbre npm global du projet. Ne pas lancer `npm audit fix --force` sans verifier les effets sur Next.js.
+
+### 2026-06-13
+
+- Ajustement showcase: Pick4Me devient le premier projet actif FR/EN et Stampeo est retire de la selection visuelle du bloc "Projet actif".
 - Prochaine etape recommandee: QA finale desktop/mobile puis chantier outreach (scoring prospects, personnalisation email, suivi des relances).
 - Outreach v1 sites dates: le script `scripts/outreach.js` vise maintenant explicitement les prospects avec site existant + email trouvable, ajoute `DRY_RUN=true`, `MAX_EMAILS_PER_DAY`, `DELAY_BETWEEN_EMAILS_MS`, un scoring simple et un rapport `scripts/outreach-report.json`.
 - Email outreach repositionne sur le diagnostic gratuit d'un site date: clarte du message, mobile, SEO local, contact/conversion, DNS, hebergement et deploiement.
