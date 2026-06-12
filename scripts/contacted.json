@@ -2567,7 +2567,426 @@
       "website": "http://www.asrhabitat.fr/",
       "address": "6 Rue Berthelot, 76600 Le Havre, France",
       "sentAt": "2026-06-11T09:22:46.465Z"
+    },
+    {
+      "placeId": "ChIJsf9rH_OuEmsR_RBvKoSGLn8",
+      "name": "Insil",
+      "email": "alex@clearbit.com",
+      "website": "https://www.insil.com.au/",
+      "phone": "(02) 8074 1656",
+      "address": "Level 13, 1303/83 Mount St, North Sydney NSW 2060, Australia",
+      "marketCode": "AU",
+      "market": "Australia",
+      "marketGroup": "english",
+      "language": "en",
+      "score": 95,
+      "reasons": [
+        "site existant",
+        "email trouve",
+        "telephone disponible",
+        "adresse locale",
+        "fiche nommee"
+      ],
+      "sentAt": "2026-06-12T09:17:58.368Z"
+    },
+    {
+      "placeId": "ChIJE4ozlPKuEmsRpP0Verr9_b4",
+      "name": "Direct Clicks | Digital Marketing Agency",
+      "email": "info@directclicks.com.au",
+      "website": "https://directclicks.com.au/?utm_source=google&utm_medium=organic&utm_campaign=gmb",
+      "phone": "1800 007 089",
+      "address": "Suite 4, Level 9/171 Clarence St, Sydney NSW 2000, Australia",
+      "marketCode": "AU",
+      "market": "Australia",
+      "marketGroup": "english",
+      "language": "en",
+      "score": 95,
+      "reasons": [
+        "site existant",
+        "email trouve",
+        "telephone disponible",
+        "adresse locale",
+        "fiche nommee"
+      ],
+      "sentAt": "2026-06-12T09:18:04.745Z"
+    },
+    {
+      "placeId": "ChIJqzoD-aB3k2sR7j9NILm-tVc",
+      "name": "Digital Nomads HQ",
+      "email": "hello@dnhq.com.au",
+      "website": "https://www.digitalnomadshq.com.au/",
+      "phone": "1300 633 100",
+      "address": "208/45 Brisbane Rd, Mooloolaba QLD 4557, Australia",
+      "marketCode": "AU",
+      "market": "Australia",
+      "marketGroup": "english",
+      "language": "en",
+      "score": 95,
+      "reasons": [
+        "site existant",
+        "email trouve",
+        "telephone disponible",
+        "adresse locale",
+        "fiche nommee"
+      ],
+      "sentAt": "2026-06-12T09:18:11.359Z"
+    },
+    {
+      "placeId": "ChIJgQmtXo5C1moRu03iabc0FAc",
+      "name": "Impressive - Digital Marketing & SEO Agency",
+      "email": "icn_social_linkedin_footer@2x.png",
+      "website": "https://impressive.com.au/",
+      "phone": "1300 191 943",
+      "address": "Level 4/11-13 Wilson St, South Yarra VIC 3141, Australia",
+      "marketCode": "AU",
+      "market": "Australia",
+      "marketGroup": "english",
+      "language": "en",
+      "score": 95,
+      "reasons": [
+        "site existant",
+        "email trouve",
+        "telephone disponible",
+        "adresse locale",
+        "fiche nommee"
+      ],
+      "sentAt": "2026-06-12T09:18:16.196Z"
+    },
+    {
+      "placeId": "ChIJuTdQJjZp1moR_AEpV_uVCp8",
+      "name": "Digital Movement",
+      "email": "office@digitalmovement.com.au",
+      "website": "https://www.digitalmovement.com.au/",
+      "phone": "1300 988 161",
+      "address": "Level 3/480 Collins St, Melbourne VIC 3000, Australia",
+      "marketCode": "AU",
+      "market": "Australia",
+      "marketGroup": "english",
+      "language": "en",
+      "score": 95,
+      "reasons": [
+        "site existant",
+        "email trouve",
+        "telephone disponible",
+        "adresse locale",
+        "fiche nommee"
+      ],
+      "sentAt": "2026-06-12T09:18:22.980Z"
+    },
+    {
+      "placeId": "ChIJkSgdu_Bn1moRSsN7czgd0Ks",
+      "name": "Digital Next",
+      "email": "digital-next-digital-marketing-agency-melbourne@2x-1024x878.jpg",
+      "website": "https://www.digitalnext.com.au/",
+      "phone": "(03) 9699 4585",
+      "address": "133 Buckhurst St, South Melbourne VIC 3205, Australia",
+      "marketCode": "AU",
+      "market": "Australia",
+      "marketGroup": "english",
+      "language": "en",
+      "score": 95,
+      "reasons": [
+        "site existant",
+        "email trouve",
+        "telephone disponible",
+        "adresse locale",
+        "fiche nommee"
+      ],
+      "sentAt": "2026-06-12T09:18:27.840Z"
+    },
+    {
+      "placeId": "ChIJFdEcQLNC1moR0u8IHzqDrPM",
+      "name": "SIXGUN - SEO & Digital Marketing Agency",
+      "email": "name@email.com",
+      "website": "https://sixgun.com.au/?utm_source=google&utm_medium=organic&utm_campaign=gmb",
+      "phone": "1300 127 361",
+      "address": "Unit 7/1 Bromham Pl, Richmond VIC 3121, Australia",
+      "marketCode": "AU",
+      "market": "Australia",
+      "marketGroup": "english",
+      "language": "en",
+      "score": 95,
+      "reasons": [
+        "site existant",
+        "email trouve",
+        "telephone disponible",
+        "adresse locale",
+        "fiche nommee"
+      ],
+      "sentAt": "2026-06-12T09:18:35.617Z"
+    },
+    {
+      "placeId": "ChIJnxZtgQimEmsRUnoxicwGStI",
+      "name": "AdVisible",
+      "email": "welcome@advisible.com.au",
+      "website": "https://advisible.com.au/?utm_source=google&utm_medium=organic&utm_campaign=gmb",
+      "phone": "1300 812 447",
+      "address": "Suite 302, Level 3/120 Sussex St, Sydney NSW 2000, Australia",
+      "marketCode": "AU",
+      "market": "Australia",
+      "marketGroup": "english",
+      "language": "en",
+      "score": 95,
+      "reasons": [
+        "site existant",
+        "email trouve",
+        "telephone disponible",
+        "adresse locale",
+        "fiche nommee"
+      ],
+      "sentAt": "2026-06-12T09:18:43.813Z"
+    },
+    {
+      "placeId": "ChIJEcDzybRD1moR-PA_-ddjfI4",
+      "name": "Emote Digital",
+      "email": "hello@emotedigital.com.au",
+      "website": "https://www.emotedigital.com.au/?utm_source=mybusiness&utm_medium=organic&utm_campaign=mybusiness",
+      "phone": "(03) 9855 2304",
+      "address": "6/13 Church St, Hawthorn VIC 3122, Australia",
+      "marketCode": "AU",
+      "market": "Australia",
+      "marketGroup": "english",
+      "language": "en",
+      "score": 95,
+      "reasons": [
+        "site existant",
+        "email trouve",
+        "telephone disponible",
+        "adresse locale",
+        "fiche nommee"
+      ],
+      "sentAt": "2026-06-12T09:18:48.031Z"
+    },
+    {
+      "placeId": "ChIJ_XRNRkxd1moROi5CbWzQZqk",
+      "name": "Aston Digital",
+      "email": "hello@astondigital.com.au",
+      "website": "https://astondigital.com.au/",
+      "phone": "1300 297 716",
+      "address": "Exchange Tower, Level 1/530 Little Collins St, Melbourne VIC 3000, Australia",
+      "marketCode": "AU",
+      "market": "Australia",
+      "marketGroup": "english",
+      "language": "en",
+      "score": 95,
+      "reasons": [
+        "site existant",
+        "email trouve",
+        "telephone disponible",
+        "adresse locale",
+        "fiche nommee"
+      ],
+      "sentAt": "2026-06-12T09:18:57.728Z"
+    },
+    {
+      "placeId": "ChIJx2pPwSRD1moRSyi5TrjTKc0",
+      "name": "Melbourne Social Co",
+      "email": "enquiries@melbournesocialco.com.au",
+      "website": "https://www.melbournesocialco.com.au/",
+      "phone": "1300 386 165",
+      "address": "Unit 5/67/73 Hardware Ln, Melbourne VIC 3000, Australia",
+      "marketCode": "AU",
+      "market": "Australia",
+      "marketGroup": "english",
+      "language": "en",
+      "score": 95,
+      "reasons": [
+        "site existant",
+        "email trouve",
+        "telephone disponible",
+        "adresse locale",
+        "fiche nommee"
+      ],
+      "sentAt": "2026-06-12T09:19:02.048Z"
+    },
+    {
+      "placeId": "ChIJ2ZaAnEYSkWsR93GQY2GmYqY",
+      "name": "Visual Marketing Australia",
+      "email": "enquiries@visualmarketing.com.au",
+      "website": "https://www.visualmarketing.com.au/",
+      "phone": "1300 158 708",
+      "address": "4/55 Upton St, Bundall QLD 4217, Australia",
+      "marketCode": "AU",
+      "market": "Australia",
+      "marketGroup": "english",
+      "language": "en",
+      "score": 95,
+      "reasons": [
+        "site existant",
+        "email trouve",
+        "telephone disponible",
+        "adresse locale",
+        "fiche nommee"
+      ],
+      "sentAt": "2026-06-12T09:19:08.585Z"
+    },
+    {
+      "placeId": "ChIJL0T9qb9HDW0RegdIgDD22TY",
+      "name": "Great Catering Company",
+      "email": "sales@greatcatering.co.nz",
+      "website": "https://www.greatcatering.co.nz/",
+      "phone": "09 376 1424",
+      "address": "14 Putiki Street, Grey Lynn, Auckland 1021, New Zealand",
+      "marketCode": "NZ",
+      "market": "New Zealand",
+      "marketGroup": "english",
+      "language": "en",
+      "score": 95,
+      "reasons": [
+        "site existant",
+        "email trouve",
+        "telephone disponible",
+        "adresse locale",
+        "fiche nommee"
+      ],
+      "sentAt": "2026-06-12T09:19:13.540Z"
+    },
+    {
+      "placeId": "ChIJF9ceYODZDG0R43AQ7ChC8YI",
+      "name": "Homestyle Catering NZ",
+      "email": "info@homestylecatering.co.nz",
+      "website": "https://homestylecatering.co.nz/",
+      "phone": "0274 353 383",
+      "address": "3 Kia Kaha Drive, Snells Beach 0920, New Zealand",
+      "marketCode": "NZ",
+      "market": "New Zealand",
+      "marketGroup": "english",
+      "language": "en",
+      "score": 95,
+      "reasons": [
+        "site existant",
+        "email trouve",
+        "telephone disponible",
+        "adresse locale",
+        "fiche nommee"
+      ],
+      "sentAt": "2026-06-12T09:19:17.887Z"
+    },
+    {
+      "placeId": "ChIJB1DdGZy1cm0RKhYHJnVuFvY",
+      "name": "Côte Catering",
+      "email": "enquiries@cotenewzealand.com",
+      "website": "http://cotenewzealand.com/",
+      "phone": null,
+      "address": "3 Burns Street, Grey Lynn, Auckland 1021, New Zealand",
+      "marketCode": "NZ",
+      "market": "New Zealand",
+      "marketGroup": "english",
+      "language": "en",
+      "score": 85,
+      "reasons": [
+        "site existant",
+        "email trouve",
+        "adresse locale",
+        "fiche nommee"
+      ],
+      "sentAt": "2026-06-12T09:19:22.069Z"
+    },
+    {
+      "placeId": "ChIJh4jOnKitOG0RzL0R27-IadU",
+      "name": "Food Envy | Events, Catering, Hospitality",
+      "email": "events@foodenvy.nz",
+      "website": "http://www.foodenvy.nz/",
+      "phone": "04 242 0080",
+      "address": "25a Tennyson Street, Te Aro, Wellington 6011, New Zealand",
+      "marketCode": "NZ",
+      "market": "New Zealand",
+      "marketGroup": "english",
+      "language": "en",
+      "score": 95,
+      "reasons": [
+        "site existant",
+        "email trouve",
+        "telephone disponible",
+        "adresse locale",
+        "fiche nommee"
+      ],
+      "sentAt": "2026-06-12T09:19:26.258Z"
+    },
+    {
+      "placeId": "ChIJ2aO9G0lGDW0RqFQuTUmgCKw",
+      "name": "Eden Catering Ltd",
+      "email": "image-14@2x.png",
+      "website": "http://www.edencatering.co.nz/",
+      "phone": "09 630 7103",
+      "address": "8 Rocklands Avenue, Mount Eden, Auckland 1024, New Zealand",
+      "marketCode": "NZ",
+      "market": "New Zealand",
+      "marketGroup": "english",
+      "language": "en",
+      "score": 95,
+      "reasons": [
+        "site existant",
+        "email trouve",
+        "telephone disponible",
+        "adresse locale",
+        "fiche nommee"
+      ],
+      "sentAt": "2026-06-12T09:19:40.519Z"
+    },
+    {
+      "placeId": "ChIJodxmn6IjDW0RTcUkJ3gOi2E",
+      "name": "Culinary Lane Catering / In-House Dinners 3 & 5 Course / Outcatering / Grazing Tables/ Private Chef/ Working Lunches",
+      "email": "culinarylane@gmail.com",
+      "website": "https://www.culinarylane.co.nz/",
+      "phone": "022 400 3001",
+      "address": "2 Godfrey Drive, Orewa 0921, New Zealand",
+      "marketCode": "NZ",
+      "market": "New Zealand",
+      "marketGroup": "english",
+      "language": "en",
+      "score": 95,
+      "reasons": [
+        "site existant",
+        "email trouve",
+        "telephone disponible",
+        "adresse locale",
+        "fiche nommee"
+      ],
+      "sentAt": "2026-06-12T09:19:47.382Z"
+    },
+    {
+      "placeId": "ChIJyZbf7NdDDW0ROXRCVr_bIEA",
+      "name": "Cook and Butler Catering",
+      "email": "sprite@2x.webp",
+      "website": "https://www.cookandbutler.co.nz/?utm_source=GMBListing+&utm_medium=Organic&utm_campaign=Google_my_Business&utm_id=GMB",
+      "phone": "021 459 056",
+      "address": "2/18 Airborne Road, Albany, Auckland 0632, New Zealand",
+      "marketCode": "NZ",
+      "market": "New Zealand",
+      "marketGroup": "english",
+      "language": "en",
+      "score": 95,
+      "reasons": [
+        "site existant",
+        "email trouve",
+        "telephone disponible",
+        "adresse locale",
+        "fiche nommee"
+      ],
+      "sentAt": "2026-06-12T09:19:51.874Z"
+    },
+    {
+      "placeId": "ChIJZ-hjwa5y5kcRJEo8HixFfJg",
+      "name": "Auto Moto École Defrance",
+      "email": "jean.dupont@gmail.com",
+      "website": "https://www.autoecoledefrance.fr/",
+      "phone": "09 72 90 51 69",
+      "address": "36 Rue Defrance, 94300 Vincennes, France",
+      "marketCode": "FR",
+      "market": "France",
+      "marketGroup": "francophone",
+      "language": "fr",
+      "score": 95,
+      "reasons": [
+        "site existant",
+        "email trouve",
+        "telephone disponible",
+        "adresse locale",
+        "fiche nommee"
+      ],
+      "sentAt": "2026-06-12T09:19:55.954Z"
     }
   ],
-  "lastUpdated": "2026-06-11T09:22:52.389Z"
+  "lastUpdated": "2026-06-12T09:22:44.518Z"
 }
