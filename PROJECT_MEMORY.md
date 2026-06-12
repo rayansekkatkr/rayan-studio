@@ -189,6 +189,7 @@ SEO existant:
 - Sitemap enrichi avec les pages services et alternates localisees quand une page equivalente existe.
 - Pages locales generees a partir de:
   - `src/lib/local-seo.ts`
+  - `src/lib/local-seo-content.js`
   - `src/components/site/LocalSeoLanding.tsx`
 - Pages services generees a partir de:
   - `src/lib/service-seo.js`
@@ -199,6 +200,12 @@ Cibles locales actuelles:
 
 - Villes: Paris, Marseille, Lyon, Toulouse, Nice, Nantes, Montpellier, Strasbourg, Bordeaux, Lille.
 - Secteurs: restaurant, cafe, hotel, boulangerie, patisserie, bar, commerce local.
+
+SEO local phase 2:
+
+- Les pages `/site/[sector]/[city]` utilisent maintenant un contenu enrichi par ville et par secteur: contexte local, intention commerciale, points a corriger, checklist et preuve adaptee.
+- Les metadata title/description sont generees par `buildLocalSeoContent` pour eviter des pages trop proches.
+- Objectif: rendre les 70 pages locales plus utiles et moins fines avant de travailler les pages geographiques ou les backlinks.
 
 Preuves actuelles:
 
