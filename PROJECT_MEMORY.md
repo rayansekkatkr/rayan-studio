@@ -108,6 +108,7 @@ Direction actuelle:
 - Tarifs niveau 2: chaque offre ouvre une modale de demande rapide contextualisee, avec l'offre preselectionnee et un message pre-rempli selon la langue.
 - Favicon remplace par un monogramme `RS` en encre/corail.
 - Assets portfolio: `public/realisations/*.png`.
+- Section temoignages remplacee par des retours synthetises sans portraits repetes, pour eviter l'effet faux temoignages et renforcer la credibilite.
 
 Diagnostic:
 
@@ -394,6 +395,7 @@ Quand un changement important est fait:
 
 - Ajustement showcase: Pick4Me devient le premier projet actif FR/EN et Stampeo est retire de la selection visuelle du bloc "Projet actif".
 - Phase SEO mesure/indexation: ajout du support Search Console par variable d'environnement et checklist d'audit post-deploiement.
+- Correction temoignages: suppression du mur de portraits dupliques et remplacement par une section statique de retours synthetises + rythme de preuve.
 - Prochaine etape recommandee: QA finale desktop/mobile puis chantier outreach (scoring prospects, personnalisation email, suivi des relances).
 - Outreach v1 sites dates: le script `scripts/outreach.js` vise maintenant explicitement les prospects avec site existant + email trouvable, ajoute `DRY_RUN=true`, `MAX_EMAILS_PER_DAY`, `DELAY_BETWEEN_EMAILS_MS`, un scoring simple et un rapport `scripts/outreach-report.json`.
 - Email outreach repositionne sur le diagnostic gratuit d'un site date: clarte du message, mobile, SEO local, contact/conversion, DNS, hebergement et deploiement.
