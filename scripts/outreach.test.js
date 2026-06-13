@@ -6,6 +6,7 @@ const {
   buildSearchQuery,
   getSearchTargets,
   extractEmailCandidates,
+  buildCrmContact,
   isLikelyDeliverableEmail,
 } = require('./outreach');
 
@@ -111,4 +112,31 @@ test('extractEmailCandidates keeps business emails and removes noisy matches', (
   `;
 
   assert.deepEqual(extractEmailCandidates(html), ['contact@boulangerie-martin.fr']);
+});
+
+test('buildCrmContact creates a follow-up ready CRM record for sent prospects', () => {
+  const record = buildCrmContact({
+    placeId: 'place-123',
+    name: 'Boulangerie Martin',
+    email: 'contact@boulangerie-martin.fr',
+    website: 'https://boulangerie-martin.fr',
+    language: 'fr',
+    marketCode: 'FR',
+    score: 90,
+    reasons: ['site existant', 'email trouve'],
+    sentAt: '2026-06-13T00:00:00.000Z',
+  });
+
+  assert.equal(record.status, 'sent');
+  assert.equal(record.lifecycleStage, 'contacted');
+  assert.equal(record.firstContactedAt, '2026-06-13T00:00:00.000Z');
+  assert.equal(record.lastContactedAt, '2026-06-13T00:00:00.000Z');
+  assert.equal(record.nextFollowUpAt, '2026-06-20T00:00:00.000Z');
+  assert.deepEqual(record.timeline, [
+    {
+      at: '2026-06-13T00:00:00.000Z',
+      type: 'sent',
+      note: 'Initial outreach email sent',
+    },
+  ]);
 });

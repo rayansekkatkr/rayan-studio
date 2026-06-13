@@ -63,6 +63,129 @@ const SERVICE_SEO_PAGES = [
   },
   {
     locale: "fr",
+    slug: "cout-refonte-site-internet-petite-entreprise",
+    intent: "pricing",
+    path: "/fr/cout-refonte-site-internet-petite-entreprise",
+    alternatePath: "/en/small-business-website-redesign-cost",
+    eyebrow: "Budget de refonte",
+    title: "Combien coute une refonte de site internet pour petite entreprise ?",
+    metaTitle: "Cout refonte site internet petite entreprise",
+    description:
+      "Comprendre le budget d'une refonte de site internet pour TPE: ce qui fait varier le prix, ce qui doit etre inclus et comment eviter un projet flou.",
+    intro:
+      "Le bon budget depend rarement d'une seule page ou d'un design plus joli. Il depend surtout de ce qu'il faut clarifier: message, parcours mobile, SEO, domaine, hebergement, formulaire et mise en ligne.",
+    primaryCta: "Demander un chiffrage clair",
+    secondaryCta: "Voir la checklist",
+    proofLabel: "Budget lisible",
+    proofValue: "Une offre cadree avant de designer, coder ou migrer",
+    sections: [
+      {
+        title: "Ce qui fait varier le prix",
+        items: [
+          "Le nombre de pages a reprendre ou creer.",
+          "Le niveau de direction visuelle attendu pour sortir d'un rendu trop generique.",
+          "La partie technique: DNS, hebergement, formulaires, tracking, redirections et mise en ligne.",
+        ],
+      },
+      {
+        title: "Les fourchettes utiles pour une TPE",
+        items: [
+          "Un premier site simple peut commencer autour de 700 EUR quand le besoin est clair et limite.",
+          "Une refonte plus complete demarre plutot autour de 1200 EUR quand il faut reprendre image, structure et SEO.",
+          "Un projet avec plusieurs pages, integrations ou contraintes metier doit etre chiffre sur devis.",
+        ],
+      },
+      {
+        title: "Comment eviter un devis flou",
+        items: [
+          "Lister les pages indispensables avant de parler design.",
+          "Verifier ce qui existe deja: domaine, hebergement, contenus, photos, fiche Google et ancien site.",
+          "Se mettre d'accord sur les livrables: site, SEO de base, mise en ligne, suivi et corrections.",
+        ],
+      },
+    ],
+    process: ["Diagnostic", "Perimetre", "Priorites", "Chiffrage", "Mise en ligne"],
+    faq: [
+      {
+        question: "Pourquoi une refonte coute plus cher qu'un simple changement de design ?",
+        answer:
+          "Parce qu'une vraie refonte reprend aussi la structure, le message, le mobile, le SEO, les redirections et la mise en ligne. Le visuel n'est qu'une partie du travail.",
+      },
+      {
+        question: "Peut-on commencer avec un budget limite ?",
+        answer:
+          "Oui, si le perimetre est clair. Il vaut mieux refaire peu de pages correctement que lancer un grand site difficile a terminer.",
+      },
+      {
+        question: "Le prix inclut-il le domaine et l'hebergement ?",
+        answer:
+          "L'accompagnement technique peut inclure les DNS, l'hebergement et le deploiement. Les abonnements externes restent generalement payes directement par l'entreprise.",
+      },
+    ],
+  },
+  {
+    locale: "fr",
+    slug: "checklist-refonte-site-internet",
+    intent: "checklist",
+    path: "/fr/checklist-refonte-site-internet",
+    eyebrow: "Checklist refonte",
+    title: "Checklist de refonte de site internet avant de refaire votre site",
+    metaTitle: "Checklist refonte site internet pour TPE",
+    description:
+      "Checklist simple avant une refonte de site internet: image, message, mobile, contact, SEO, DNS, hebergement et mise en ligne pour eviter les oublis.",
+    intro:
+      "Avant de refaire un site, il faut savoir ce qui bloque vraiment. Cette checklist aide a separer les problemes de design, de message, de parcours client et de technique.",
+    primaryCta: "Recevoir un diagnostic",
+    secondaryCta: "Voir le cout d'une refonte",
+    proofLabel: "Avant refonte",
+    proofValue: "Une liste courte pour prioriser ce qui impacte la confiance et le contact",
+    sections: [
+      {
+        title: "Verifier la premiere impression",
+        items: [
+          "Le site donne-t-il une image actuelle et credible de l'entreprise ?",
+          "Le visiteur comprend-il en quelques secondes ce que vous proposez ?",
+          "Les photos, couleurs et textes ressemblent-ils vraiment a votre activite ?",
+        ],
+      },
+      {
+        title: "Verifier le parcours mobile",
+        items: [
+          "Le telephone, WhatsApp ou le formulaire sont-ils visibles sans chercher ?",
+          "Les titres restent-ils lisibles sur petit ecran ?",
+          "Les boutons sont-ils assez clairs pour declencher une demande ?",
+        ],
+      },
+      {
+        title: "Verifier la base technique",
+        items: [
+          "Les pages importantes ont-elles un titre, une description et une structure propre ?",
+          "Les DNS, l'hebergement, les redirections et le certificat SSL sont-ils maitrises ?",
+          "Le sitemap, le robots.txt et la Search Console sont-ils correctement configures ?",
+        ],
+      },
+    ],
+    process: ["Audit visuel", "Audit mobile", "Audit SEO", "Audit technique", "Plan d'action"],
+    faq: [
+      {
+        question: "Faut-il tout refaire si le site est vieux ?",
+        answer:
+          "Pas toujours. Certains sites peuvent etre ameliores progressivement, mais une refonte complete devient utile si l'image, le mobile et la structure bloquent ensemble.",
+      },
+      {
+        question: "Quelle est la premiere chose a regarder ?",
+        answer:
+          "La clarte de l'offre. Si un visiteur ne comprend pas vite qui vous etes, ce que vous proposez et comment vous contacter, le design seul ne suffit pas.",
+      },
+      {
+        question: "La checklist suffit-elle pour lancer une refonte ?",
+        answer:
+          "Elle aide a cadrer les priorites. Pour lancer proprement, il faut ensuite transformer les constats en perimetre, contenus et planning de mise en ligne.",
+      },
+    ],
+  },
+  {
+    locale: "fr",
     slug: "creation-site-vitrine",
     intent: "creation",
     path: "/fr/creation-site-vitrine",
@@ -243,6 +366,68 @@ const SERVICE_SEO_PAGES = [
         question: "Does the redesign include SEO?",
         answer:
           "Yes. The redesign includes a clean SEO base: structure, metadata, responsive layout, performance and clearer local intent.",
+      },
+    ],
+  },
+  {
+    locale: "en",
+    slug: "small-business-website-redesign-cost",
+    intent: "pricing",
+    path: "/en/small-business-website-redesign-cost",
+    alternatePath: "/fr/cout-refonte-site-internet-petite-entreprise",
+    eyebrow: "Redesign budget",
+    title: "How much does a small business website redesign cost?",
+    metaTitle: "Small business website redesign cost",
+    description:
+      "Understand small business website redesign cost: what changes the budget, what should be included and how to avoid a vague redesign project.",
+    intro:
+      "A redesign budget is not only about a new look. It depends on the message, mobile journey, SEO base, domain, hosting, forms, redirects and launch details that need to be handled.",
+    primaryCta: "Ask for a clear estimate",
+    secondaryCta: "See the method",
+    proofLabel: "Clear scope",
+    proofValue: "A practical estimate before design, development or migration starts",
+    sections: [
+      {
+        title: "What affects the cost",
+        items: [
+          "The number of pages that need to be rewritten, redesigned or migrated.",
+          "The level of visual direction needed to make the business feel credible.",
+          "Technical work such as DNS, hosting, redirects, forms, tracking and deployment.",
+        ],
+      },
+      {
+        title: "Useful budget ranges",
+        items: [
+          "A simple first website can start around 700 EUR when the scope is limited.",
+          "A fuller redesign usually starts around 1200 EUR when image, structure and SEO need work.",
+          "Larger projects with multiple pages, integrations or specific workflows should be estimated separately.",
+        ],
+      },
+      {
+        title: "How to avoid a vague quote",
+        items: [
+          "Define the essential pages before discussing visual options.",
+          "Check what already exists: domain, hosting, content, photos, Google profile and current website.",
+          "Agree on deliverables: website, basic SEO, launch support, follow-up and corrections.",
+        ],
+      },
+    ],
+    process: ["Diagnosis", "Scope", "Priorities", "Estimate", "Launch"],
+    faq: [
+      {
+        question: "Why can a redesign cost more than a visual refresh?",
+        answer:
+          "A real redesign also covers structure, messaging, mobile usability, SEO, redirects and launch details. The visual layer is only one part of the work.",
+      },
+      {
+        question: "Can a small business start with a limited budget?",
+        answer:
+          "Yes, if the scope is focused. A smaller website done properly is usually better than a large project that becomes hard to finish.",
+      },
+      {
+        question: "Are domain and hosting included?",
+        answer:
+          "Technical support can include DNS, hosting and deployment. External subscriptions are usually paid directly by the business owner.",
       },
     ],
   },

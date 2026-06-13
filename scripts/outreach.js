@@ -204,6 +204,41 @@ function saveReport(report) {
   fs.writeFileSync(REPORT_FILE, JSON.stringify(report, null, 2));
 }
 
+function normalizeIsoDate(value) {
+  if (!value) return new Date().toISOString();
+
+  const date = new Date(value);
+  return Number.isNaN(date.getTime()) ? new Date().toISOString() : date.toISOString();
+}
+
+function addDaysIso(value, days) {
+  const date = new Date(normalizeIsoDate(value));
+  date.setUTCDate(date.getUTCDate() + days);
+  return date.toISOString();
+}
+
+function buildCrmContact(contact, status = 'sent') {
+  const sentAt = normalizeIsoDate(contact.sentAt);
+  const timeline = Array.isArray(contact.timeline) ? [...contact.timeline] : [];
+
+  timeline.push({
+    at: sentAt,
+    type: status,
+    note: status === 'sent' ? 'Initial outreach email sent' : `Outreach status: ${status}`,
+  });
+
+  return {
+    ...contact,
+    status,
+    lifecycleStage: status === 'sent' ? 'contacted' : contact.lifecycleStage || 'lead',
+    sentAt,
+    firstContactedAt: contact.firstContactedAt || sentAt,
+    lastContactedAt: sentAt,
+    nextFollowUpAt: contact.nextFollowUpAt || addDaysIso(sentAt, 7),
+    timeline,
+  };
+}
+
 function getDayOfYear() {
   return Math.floor(
     (Date.now() - new Date(new Date().getFullYear(), 0, 0).getTime()) / 86400000
@@ -856,7 +891,7 @@ async function main() {
         await sendEmail(email, subject, html, text);
         console.log(`[OK] Email envoyé à ${details.name} <${email}> — score ${scoreInfo.score}`);
 
-        contactedData.contacted.push({
+        contactedData.contacted.push(buildCrmContact({
           placeId: business.place_id,
           name: details.name,
           email,
@@ -870,7 +905,7 @@ async function main() {
           score: scoreInfo.score,
           reasons: scoreInfo.reasons,
           sentAt: new Date().toISOString(),
-        });
+        }));
         contactedPlaceIds.add(business.place_id);
         contactedChanged = true;
         report.sent.push({ ...candidate, status: 'sent', subject });
@@ -904,6 +939,7 @@ if (require.main === module) {
 
 module.exports = {
   buildSearchQuery,
+  buildCrmContact,
   buildEmailContent,
   displayUrl,
   extractEmailCandidates,

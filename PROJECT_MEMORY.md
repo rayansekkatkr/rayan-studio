@@ -1,6 +1,6 @@
 # Rayan Studio - Memoire Projet
 
-Derniere mise a jour: 2026-06-12
+Derniere mise a jour: 2026-06-13
 
 Ce fichier sert de memoire vivante pour le projet. A chaque chantier important, le mettre a jour avant de terminer: etat du site, decisions, points techniques, risques, prochaine etape.
 
@@ -106,6 +106,7 @@ Direction actuelle:
 - Realisations niveau 2: cartes transformees en mini dossiers client avec probleme, intervention, resultat, preuve, et scopes de travail sur le projet actif.
 - Process niveau 2: passage a 5 etapes avec diagnostic, structure/maquette, design/dev, SEO/DNS/VPS, deploiement/support.
 - Tarifs niveau 2: chaque offre ouvre une modale de demande rapide contextualisee, avec l'offre preselectionnee et un message pre-rempli selon la langue.
+- Contact niveau 2: le diagnostic gratuit annonce maintenant un livrable concret: reponse sous 24h, 3 priorites d'action, capture commentee et plan de correction simple.
 - Favicon remplace par un monogramme `RS` en encre/corail.
 - Assets portfolio: `public/realisations/*.png`.
 - Section temoignages remplacee par des retours synthetises sans portraits repetes, pour eviter l'effet faux temoignages et renforcer la credibilite.
@@ -143,6 +144,11 @@ Champs formulaire:
 - Email.
 - Message.
 - Honeypot `website`.
+
+Promesse de diagnostic:
+
+- Le bloc contact precise ce que le prospect recoit avant tout devis: 3 priorites d'action, une capture commentee, un plan de correction simple et une reponse sous 24h.
+- Version anglaise equivalente: 3 action priorities, annotated screenshot, simple correction plan.
 
 Securite/qualite:
 
@@ -184,6 +190,10 @@ SEO existant:
   - `/fr/site-internet-petite-entreprise`
   - `/en/website-redesign`
   - `/en/small-business-website`
+- Pages services SEO phase 2 contenu:
+  - `/fr/cout-refonte-site-internet-petite-entreprise`
+  - `/fr/checklist-refonte-site-internet`
+  - `/en/small-business-website-redesign-cost`
 - Schema.org homepage.
 - Schema.org `Service` + `FAQPage` sur les pages services.
 - Sitemap dynamique avec pages locales.
@@ -213,6 +223,11 @@ SEO phase 3:
 - Verification Google Search Console preparee via `NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION` et `metadata.verification.google`.
 - Checklist post-deploiement creee dans `docs/seo-search-console-checklist.md`: verification, sitemap, pages prioritaires, requetes a suivre, rythme de suivi.
 - Objectif: mesurer impressions, indexation et CTR avant de produire davantage de contenu.
+
+SEO phase 4:
+
+- Ajout de pages contenu intentionnelles pour capter les recherches de budget et de preparation de refonte.
+- Les nouvelles pages restent prudentes: pas de faux chiffres clients, seulement des fourchettes commerciales deja presentes dans l'offre et des explications de perimetre.
 
 Preuves actuelles:
 
@@ -246,7 +261,7 @@ Fonctionnement actuel:
 8. Avant envoi ou ajout candidat, le script verifie que le domaine de l'email peut recevoir du mail via DNS MX, puis fallback A/AAAA.
 9. La langue de l'email depend du marche detecte: `fr` pour les marches francophones, `en` pour les marches anglophones, avec lien vers `/fr` ou `/en`.
 10. Il envoie l'email via Gmail/Nodemailer ou le marque `dry-run`.
-11. Apres envoi reel, il ajoute le placeId et les infos au fichier `contacted.json`.
+11. Apres envoi reel, il ajoute le placeId et les infos au fichier `contacted.json` sous forme de fiche CRM minimale: `status`, `lifecycleStage`, `firstContactedAt`, `lastContactedAt`, `nextFollowUpAt` a J+7 et `timeline`.
 12. La GitHub Action commit et push la liste de contacts mise a jour.
 
 Configuration attendue:
@@ -260,7 +275,7 @@ Limites actuelles identifiees:
 - Le ciblage reste large: les categories et marches tournent mecaniquement.
 - Le message email est peu personnalise et peut ressembler a un cold email generique.
 - Scoring encore simple: presence d'un site, email, telephone et adresse; pas encore de vraie qualification visuelle/technique du site.
-- Pas de suivi de statut detaille: envoye, reponse, desabonnement, bounce, prospect interesse.
+- Suivi de statut partiel: les nouveaux envois ont une fiche CRM minimale, mais les reponses, desabonnements, bounces et prospects interesses restent a renseigner/automatiser.
 - Controle de delivrabilite partiel seulement: le DNS du domaine est verifie, mais l'existence exacte d'une boite email precise ne peut pas etre garantie sans envoi ou verification SMTP intrusive, souvent bloquee par les serveurs.
 - Pas de controle de delivrabilite avance: warming, domaine dedie, SPF/DKIM/DMARC, limite par domaine, variance des objets.
 - La gestion du desabonnement repose sur une reponse manuelle avec "Desabonnement".
@@ -277,6 +292,7 @@ Pistes d'amelioration:
 - Ajouter un mode dry-run et un rapport quotidien.
 - Ajouter une blacklist/desabonnement robuste.
 - Considerer un domaine/email dedie avec SPF, DKIM, DMARC, et un outil transactionnel ou cold outreach adapte.
+- Ajouter une vue simple du mini CRM ou exporter les fiches vers un tableur pour suivre les relances.
 
 ## Etat Git A Ne Pas Ecraser
 
@@ -412,3 +428,6 @@ Quand un changement important est fait:
 - Categories localisees: les requetes utilisent les categories francaises pour les marches francophones et les categories anglaises pour les marches anglophones.
 - Emails bilingues: `buildEmailContent` produit maintenant un email francais pour `language=fr` et anglais pour `language=en`, avec liens vers `/fr` ou `/en`.
 - GitHub Action outreach: ajout de `target_market_groups` et `search_targets_per_run` pour choisir les groupes (`francophone,english`) et le nombre de recherches `categorie + marche` par run.
+- Conversion contact: le bloc contact annonce le livrable du diagnostic gratuit avec reponse sous 24h, 3 priorites d'action, capture commentee et plan simple. Test dedie: `scripts/conversion-diagnostic.test.js`.
+- Outreach v5 mini CRM: les nouveaux envois reels creent maintenant une fiche de suivi dans `scripts/contacted.json` avec statut `sent`, etape `contacted`, timeline et relance conseillee a J+7. Les anciennes entrees restent compatibles et ne sont pas reecrites.
+- SEO contenu phase 4: ajout des pages `/fr/cout-refonte-site-internet-petite-entreprise`, `/fr/checklist-refonte-site-internet` et `/en/small-business-website-redesign-cost`, generees par `src/lib/service-seo.js` et automatiquement reprises par le sitemap.

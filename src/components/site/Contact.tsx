@@ -19,10 +19,13 @@ const projectTypes = [
 
 const diagnosticPointsFr = ["Image et crédibilité", "Mobile et parcours de contact", "SEO, DNS, hébergement, VPS"];
 const diagnosticPointsEn = ["Image and credibility", "Mobile and contact journey", "SEO, DNS, hosting, VPS"];
+const diagnosticDeliverablesFr = ["3 priorités d'action", "capture commentée", "plan de correction simple"];
+const diagnosticDeliverablesEn = ["3 action priorities", "annotated screenshot", "simple correction plan"];
 
 export function Contact({ locale = "fr" }: { locale?: Locale }) {
   const en = isEnglish(locale);
   const diagnosticPoints = en ? diagnosticPointsEn : diagnosticPointsFr;
+  const diagnosticDeliverables = en ? diagnosticDeliverablesEn : diagnosticDeliverablesFr;
   const [isSent, setIsSent] = useState(false);
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [errorMessage, setErrorMessage] = useState<string | null>(null);
@@ -79,6 +82,24 @@ export function Contact({ locale = "fr" }: { locale?: Locale }) {
                   {diagnosticPoints.map((point) => (
                     <div key={point} className="flex items-start gap-2 text-sm font-semibold text-[#f7ead8]">
                       <CheckCircle2 size={15} className="mt-0.5 shrink-0 text-[#f0a064]" />
+                      <span>{point}</span>
+                    </div>
+                  ))}
+                </div>
+              </div>
+              <div className="border border-[#2a231d]/14 bg-[#f5f1e8] p-4">
+                <p className="text-[10px] font-black uppercase tracking-[0.16em] text-[#d94f2b]">
+                  {en ? "Diagnosis deliverable" : "Livrable diagnostic"}
+                </p>
+                <p className="mt-2 text-sm font-semibold text-[#342b24]">
+                  {en
+                    ? "You receive a concrete reply within 24h, before any quote."
+                    : "Vous recevez une réponse sous 24h, concrète, avant tout devis."}
+                </p>
+                <div className="mt-3 grid gap-2">
+                  {diagnosticDeliverables.map((point) => (
+                    <div key={point} className="flex items-start gap-2 text-sm font-semibold text-[#63584d]">
+                      <CheckCircle2 size={15} className="mt-0.5 shrink-0 text-[#d94f2b]" />
                       <span>{point}</span>
                     </div>
                   ))}
