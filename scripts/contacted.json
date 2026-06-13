@@ -1,4 +1,2992 @@
 {
-  "contacted": [],
-  "lastUpdated": null
+  "contacted": [
+    {
+      "placeId": "ChIJoSh2JnGt9UcRnd2TmK-FRk4",
+      "name": "LAHAYE & CO Expert-comptable à Saint-Étienne",
+      "email": "j.lahaye@cabinet-lahaye.fr",
+      "website": "https://cabinet-lahaye.fr/",
+      "address": "35 Rue de la Télématique, 42000 Saint-Étienne, France",
+      "sentAt": "2026-04-20T08:39:32.787Z"
+    },
+    {
+      "placeId": "ChIJheg8G7Ct9UcRj37QNtKxw9g",
+      "name": "Fenyx Conseil",
+      "email": "maxime.gibert@fenyx-conseil.fr",
+      "website": "https://www.fenyx-conseil.fr/",
+      "address": "133 Rue de la Montat, 42100 Saint-Étienne, France",
+      "sentAt": "2026-04-20T08:39:38.272Z"
+    },
+    {
+      "placeId": "ChIJiWk-2JWt9UcRvauvpmV0Oxg",
+      "name": "Expert Comptable SAINT ETIENNE : AURUS",
+      "email": "contact@aurus-compta.fr",
+      "website": "http://www.aurus-compta.fr/",
+      "address": "5 Rue de la Productique, 42000 Saint-Étienne, France",
+      "sentAt": "2026-04-20T08:39:47.134Z"
+    },
+    {
+      "placeId": "ChIJTdvGmU6p9UcRWcLCnFVnuS8",
+      "name": "In Extenso Saint-Etienne",
+      "email": "flags@2x.png",
+      "website": "https://www.inextenso.fr/agence/expert-comptable-saint-etienne/",
+      "address": "immeuble le quatre, 24 Rue des Aciéries BP 20172, 42000 Saint-Étienne, France",
+      "sentAt": "2026-04-20T08:39:51.973Z"
+    },
+    {
+      "placeId": "ChIJ4xBDhAqs9UcRkdvoH_aW_iQ",
+      "name": "Aliantis Saint-Etienne",
+      "email": "grc@aliantis.net",
+      "website": "https://www.aliantis.net/",
+      "address": "1 Rue de la Presse, 42000 Saint-Étienne, France",
+      "sentAt": "2026-04-20T08:39:59.229Z"
+    },
+    {
+      "placeId": "ChIJ2aghaNKt9UcRFarCs8iyE_8",
+      "name": "Cabinet Pierre Alles",
+      "email": "st.etienne@cabinetlagier.fr",
+      "website": "http://www.cabinetpierrealles.fr/",
+      "address": "5 Rue de la Télématique, 42000 Saint-Étienne, France",
+      "sentAt": "2026-04-20T08:40:09.209Z"
+    },
+    {
+      "placeId": "ChIJ5bCc1WWr9UcRQjRW3khFc64",
+      "name": "VISIO COMPTE - EXPERT COMPTABLE",
+      "email": "contact@visiocompte.pro",
+      "website": "http://www.visiocompte.pro/",
+      "address": "17B Rue de la Presse, 42000 Saint-Étienne, France",
+      "sentAt": "2026-04-20T08:40:14.366Z"
+    },
+    {
+      "placeId": "ChIJbSYq6Qqs9UcRU1A4mPUP5dM",
+      "name": "Cabinet Tamet",
+      "email": "contact@cabinet-tamet.com",
+      "website": "http://www.cabinet-tamet.com/",
+      "address": "7 All. de l'Informatique, 42000 Saint-Étienne, France",
+      "sentAt": "2026-04-20T08:40:21.196Z"
+    },
+    {
+      "placeId": "ChIJR1hqnquu9UcRerATT4Z1ujo",
+      "name": "Cabinet Royet Sa",
+      "email": "cr@cabinet-royet.fr",
+      "website": "https://cabinet-royet.com/",
+      "address": "9 Pl. Jean Moulin, 42000 Saint-Étienne, France",
+      "sentAt": "2026-04-20T08:40:27.245Z"
+    },
+    {
+      "placeId": "ChIJF0lJ0vip9UcRaAu9fYvjHvg",
+      "name": "Cabinet NAMYSL",
+      "email": "contact@cabinet-namysl.com",
+      "website": "https://cabinet-namysl.com/",
+      "address": "Immeuble Le Delta, 1 All. de l'Électronique, 42000 Saint-Étienne, France",
+      "sentAt": "2026-04-20T08:40:33.706Z"
+    },
+    {
+      "placeId": "ChIJKfk-yli5FkgR5o_vh_gb30Q",
+      "name": "Agence Havas Voyages Brest Clemenceau",
+      "email": "exemple@domaine.fr",
+      "website": "https://agences.havas-voyages.fr/66-havas-voyages-brest-clemenceau#lf-location-main-forms",
+      "address": "23 Av. Georges Clemenceau, 29200 Brest, France",
+      "sentAt": "2026-04-21T08:30:45.882Z"
+    },
+    {
+      "placeId": "ChIJ1Q8P9SG7FkgRMVKIXlQgiFc",
+      "name": "Agence de voyage Promovacances Brest le Phare",
+      "email": "agence-brestlephare@promovacances.com",
+      "website": "https://www.promovacances.com/agences-de-voyages/agence-de-voyage-brestlephare-29200/",
+      "address": "Le Phare de l'Europe, 29 Rue de Gouesnou, 29200 Brest, France",
+      "sentAt": "2026-04-21T08:30:50.069Z"
+    },
+    {
+      "placeId": "ChIJXxDD__25FkgRq027VV7IDJs",
+      "name": "Agence de voyages Promovacances Brest",
+      "email": "agence-brest@promovacances.com",
+      "website": "https://www.promovacances.com/agences-de-voyages/agence-de-voyage-brest-29000/",
+      "address": "87 Rue de Siam, 29200 Brest, France",
+      "sentAt": "2026-04-21T08:30:53.934Z"
+    },
+    {
+      "placeId": "ChIJ3ZeKTFi5FkgREOV10gSpmUA",
+      "name": "Selectour - Sun 7 Voyages",
+      "email": "mail@mail.com",
+      "website": "https://www.histoiredevoyages.fr/",
+      "address": "78 Rue de Siam, 29200 Brest, France",
+      "sentAt": "2026-04-21T08:30:58.151Z"
+    },
+    {
+      "placeId": "ChIJOQr7blm5FkgRDQiNQ8Zhbk8",
+      "name": "Selectour - Histoires de Voyages",
+      "email": "mail@mail.com",
+      "website": "https://www.histoiredevoyages.fr/",
+      "address": "14 Rue de Lyon, 29200 Brest, France",
+      "sentAt": "2026-04-21T08:31:01.868Z"
+    },
+    {
+      "placeId": "ChIJ_foyFlm5FkgRIrZAiN-x4F0",
+      "name": "Selectour - Armor Voyages",
+      "email": "mail@mail.com",
+      "website": "https://www.histoiredevoyages.fr/",
+      "address": "6 bis Rue Colbert, 29200 Brest, France",
+      "sentAt": "2026-04-21T08:31:06.596Z"
+    },
+    {
+      "placeId": "ChIJyVPI7lm5FkgR-br7aDx1o7k",
+      "name": "Agence de voyage TUI STORE Brest",
+      "email": "agencebrest@tuifrance.com",
+      "website": "https://agences-de-voyages.tui.fr/brest/agence-de-voyage-tui-store-brest-9",
+      "address": "40 Rue Jean Macé, 29200 Brest, France",
+      "sentAt": "2026-04-21T08:31:17.952Z"
+    },
+    {
+      "placeId": "ChIJabmJklm5FkgRvJ0b40JNsrY",
+      "name": "Faces of the World",
+      "email": "exemple@domaine.fr",
+      "website": "https://agence.visagesdumonde.fr/5-visages-du-monde-brest?utm_source=gmb",
+      "address": "44 Rue Emile Zola, 29200 Brest, France",
+      "sentAt": "2026-04-21T08:31:22.888Z"
+    },
+    {
+      "placeId": "ChIJ___Twlm5FkgR_9LvOsITnpY",
+      "name": "FRAM",
+      "email": "ambassade@frambrest.com",
+      "website": "https://www.fram.fr/agence-de-voyage/agence-ambassade-fram-brest-29200/agence-brest-voyages/",
+      "address": "67 Rue de Siam, 29200 Brest, France",
+      "sentAt": "2026-04-21T08:31:27.126Z"
+    },
+    {
+      "placeId": "ChIJIyAQVIO5FkgRbTQtbLmCPv0",
+      "name": "Brest Walking Tours",
+      "email": "brestwalkingtours@gmail.com",
+      "website": "http://brestwalkingtours.fr/",
+      "address": "18 Rpe du Merle Blanc, 29200 Brest, France",
+      "sentAt": "2026-04-21T08:31:35.180Z"
+    },
+    {
+      "placeId": "ChIJr6omujfU_EcRvkqVd8VxNHU",
+      "name": "ART O Zoir",
+      "email": "contact@sessile.fr",
+      "website": "https://www.sessile.fr/trouvez-votre-fleuriste/lart-o-zoir/?utm_source=google_my_business&utm_medium=organic&utm_campaign=website",
+      "address": "138 Rue de la Fuye, 37000 Tours, France",
+      "sentAt": "2026-04-22T08:29:35.433Z"
+    },
+    {
+      "placeId": "ChIJcyWKsWTV_EcRaVyW-uhiOlc",
+      "name": "Jungle Urbaine",
+      "email": "jungleurbaine37@gmail.com",
+      "website": "http://jungleurbainetours.com/",
+      "address": "24 Rue Charles Gille, 37000 Tours, France",
+      "sentAt": "2026-04-22T08:29:50.819Z"
+    },
+    {
+      "placeId": "ChIJA3JrDxDV_EcRmoNza_tzbwM",
+      "name": "L'atelier d'Iris | Fleuriste Tours",
+      "email": "contact@sessile.fr",
+      "website": "https://www.sessile.fr/trouvez-votre-fleuriste/latelier-diris/?utm_source=google_my_business&utm_medium=organic&utm_campaign=website",
+      "address": "15 Pl. de la Tranchée, 37100 Tours, France",
+      "sentAt": "2026-04-22T08:29:59.458Z"
+    },
+    {
+      "placeId": "ChIJmU4HTcDV_EcR0prCJWEgv0c",
+      "name": "Plantain Maison Fleurie",
+      "email": "contact@plantainmaisonfleurie.com",
+      "website": "https://www.plantainmaisonfleurie.com/",
+      "address": "2 Pass. Margueron, 37000 Tours, France",
+      "sentAt": "2026-04-22T08:30:12.303Z"
+    },
+    {
+      "placeId": "ChIJ00IhkUuE50cRsV3L1aud8Rg",
+      "name": "Studio Devisse - Photographe & Location Borne Selfie",
+      "email": "devissestudio@gmail.com",
+      "website": "http://www.studiodevisse.com/",
+      "address": "71 Rue Jules Barni, 80000 Amiens, France",
+      "sentAt": "2026-04-23T08:30:31.536Z"
+    },
+    {
+      "placeId": "ChIJ2WPY8jiE50cRxCu9zA0elDg",
+      "name": "Studio Borel",
+      "email": "studioborel@yahoo.fr",
+      "website": "http://studioborel.com/",
+      "address": "26 Rue Dusevel, 80000 Amiens, France",
+      "sentAt": "2026-04-23T08:30:38.359Z"
+    },
+    {
+      "placeId": "ChIJnebTFDuE50cRnHzdmzVSTxY",
+      "name": "Studio Nisso Portraits d'art",
+      "email": "nissofoto@wanadoo.fr",
+      "website": "http://photo-nisso.wifeo.com/",
+      "address": "5 Chau. Saint-Pierre, 80080 Amiens, France",
+      "sentAt": "2026-04-23T08:30:42.482Z"
+    },
+    {
+      "placeId": "ChIJpxCiMTiE50cRFQ-rJ5eOJY8",
+      "name": "Yoann Legros Photographie",
+      "email": "contact@yoannlegros.com",
+      "website": "https://www.yoannlegros.com/",
+      "address": "62 Rue l'Abbé de l'Épée, 80000 Amiens, France",
+      "sentAt": "2026-04-23T08:30:49.099Z"
+    },
+    {
+      "placeId": "ChIJq3QU5LqD50cRSoheyzyWQ94",
+      "name": "Prestige Studio",
+      "email": "utilisateur@domaine.com",
+      "website": "https://www.prestigestudio.fr/",
+      "address": "11 All. des Marronniers, 80480 Pont-de-Metz, France",
+      "sentAt": "2026-04-23T08:30:56.067Z"
+    },
+    {
+      "placeId": "ChIJq-mftqGF50cRlNWNfV76AAc",
+      "name": "LIBERTY LOVE",
+      "email": "studio.liberty.love@gmail.com",
+      "website": "https://studiolibertylove.wordpress.com/",
+      "address": "Le QG, 77 Rte de Paris Box 27, 80000 Amiens, France",
+      "sentAt": "2026-04-23T08:31:01.119Z"
+    },
+    {
+      "placeId": "ChIJ1YiaVUIz-UcRedM7cV6ds3E",
+      "name": "Entreprise Blanchon Sa",
+      "email": "blanchon@blanchon.fr",
+      "website": "https://blanchon.fr/",
+      "address": "7 Rue Fernand Malinvaud, 87000 Limoges, France",
+      "sentAt": "2026-04-24T08:36:08.308Z"
+    },
+    {
+      "placeId": "ChIJd8lQxbw0-UcR6BcpnLPiN0Y",
+      "name": "ACR",
+      "email": "contact@acr-constructions.fr",
+      "website": "https://www.acr-constructions.fr/",
+      "address": "7 Rue du Maupas, 87000 Limoges, France",
+      "sentAt": "2026-04-24T08:36:17.864Z"
+    },
+    {
+      "placeId": "ChIJ9W5DQUw1-UcR_34URNYP7vU",
+      "name": "MIKIT",
+      "email": "charlie@mikit.fr",
+      "website": "https://limoges.mikit.fr/",
+      "address": "63 Rue Montmailler, 87000 Limoges, France",
+      "sentAt": "2026-04-24T08:36:28.922Z"
+    },
+    {
+      "placeId": "ChIJH2Z58u81-UcRpiwkhzSLnwg",
+      "name": "R2S CONSTRUCTIONS",
+      "email": "support@webador.fr",
+      "website": "https://www.r2s-constructions.fr/",
+      "address": "1 Rue Aristide Maillol, 87350 Panazol, France",
+      "sentAt": "2026-04-24T08:36:34.503Z"
+    },
+    {
+      "placeId": "ChIJX71FhEXL_kcRSZrPav9RJ9I",
+      "name": "T L B SARL",
+      "email": "contact@tlb87.fr",
+      "website": "https://www.tlb-maconnerie.fr/",
+      "address": "90 Rue Meissonier, 87000 Limoges, France",
+      "sentAt": "2026-04-24T08:36:47.374Z"
+    },
+    {
+      "placeId": "ChIJnUwxcV3L_kcRzRC67CuEuCs",
+      "name": "Bâtisseurs d'ici LIMOGES",
+      "email": "2@2x-3.jpg.webp",
+      "website": "http://www.batisseursdici.com/",
+      "address": "310 Rue François Perrin, 87000 Limoges, France",
+      "sentAt": "2026-04-24T08:36:54.195Z"
+    },
+    {
+      "placeId": "ChIJJbgQ2z7L_kcRgsoECmS_nmI",
+      "name": "NÉO Habitat Stores, Pergolas et Fermetures",
+      "email": "contact@neo-habitat87.com",
+      "website": "https://neo-habitat87.com/",
+      "address": "6 Rue de l'Amphithéâtre, 87000 Limoges, France",
+      "sentAt": "2026-04-24T08:36:59.106Z"
+    },
+    {
+      "placeId": "ChIJCwDmLRbP_kcRY79CGvCxZeM",
+      "name": "GUILLAUMIE CONSTRUCTION BOIS LIMOGES",
+      "email": "contact@guillaumie.com",
+      "website": "https://www.guillaumie.com/",
+      "address": "Zone Industrielle Le Moulin Cheyroux, 87700 Aixe-sur-Vienne, France",
+      "sentAt": "2026-04-24T08:37:05.073Z"
+    },
+    {
+      "placeId": "ChIJ10chA3c1-UcRnnB5IsCMeUo",
+      "name": "Coren Limousin",
+      "email": "contact@coren-renovation.fr",
+      "website": "https://www.coren-renovation.com/",
+      "address": "10 Rue Panhard Levassor, 87280 Limoges, France",
+      "sentAt": "2026-04-24T08:37:12.301Z"
+    },
+    {
+      "placeId": "ChIJbTowZRDL_kcR0UToie8Jw9k",
+      "name": "Sarl Kolat",
+      "email": "tw-share-facebook@2x.png",
+      "website": "http://sarlkolat.free.fr/",
+      "address": "46 Rue du Fraud, 87100 Limoges, France",
+      "sentAt": "2026-04-24T08:37:17.264Z"
+    },
+    {
+      "placeId": "ChIJq64EGhZjjUcRz-y3mPSq-R0",
+      "name": "Driving School Acces Permis",
+      "email": "autoecoleaccespermis@orange.fr",
+      "website": "https://www.auto-ecole-acces-permis.com/?utm_source=gmb",
+      "address": "7 Rue du Lycée, 25000 Besançon, France",
+      "sentAt": "2026-04-27T08:45:24.556Z"
+    },
+    {
+      "placeId": "ChIJCT4gwBFjjUcRjAnc7T_Ea1c",
+      "name": "Driving School Acces Permis",
+      "email": "autoecoleaccespermis@orange.fr",
+      "website": "http://www.auto-ecole-acces-permis.fr/",
+      "address": "36 bis Av. Georges Clémenceau, 25000 Besançon, France",
+      "sentAt": "2026-04-27T08:45:30.964Z"
+    },
+    {
+      "placeId": "ChIJ3QbqPw9jjUcRqZyKBfoKnR0",
+      "name": "School Driving 25",
+      "email": "ecoledeconduite25@gmail.com",
+      "website": "https://ecoledeconduite25.fr/",
+      "address": "13 Rue de Belfort, 25000 Besançon, France",
+      "sentAt": "2026-04-27T08:45:38.733Z"
+    },
+    {
+      "placeId": "ChIJBzXzbcxijUcRxzTGezitgRw",
+      "name": "Driving School Personeni Clerc",
+      "email": "ste-nouv-personeni-clerc@orange.fr",
+      "website": "http://www.auto-ecole-personeni.fr/",
+      "address": "10 Rue des Courtils, 25000 Besançon, France",
+      "sentAt": "2026-04-27T08:45:55.937Z"
+    },
+    {
+      "placeId": "ChIJn7FsnY1jjUcR4kUEIbOec6M",
+      "name": "School Of Driving Drivexpérience",
+      "email": "contact@drivexperience.fr",
+      "website": "https://drivexperience.fr/?utm_source=gmb",
+      "address": "17 Rue de la Mouillère, 25000 Besançon, France",
+      "sentAt": "2026-04-27T08:46:10.220Z"
+    },
+    {
+      "placeId": "ChIJT4XD8RBjjUcR0OILdYOJ1MQ",
+      "name": "Driving School Bourgeois",
+      "email": "info@autoecolebourgeois.com",
+      "website": "http://www.autoecolebourgeois.com/",
+      "address": "12 D Av. Georges Clémenceau, 25000 Besançon, France",
+      "sentAt": "2026-04-27T08:46:17.314Z"
+    },
+    {
+      "placeId": "ChIJO4a8vWNnjUcR52cMaCMAICE",
+      "name": "Auto Ecole F.baud",
+      "email": "contact@autoecole-baud.fr",
+      "website": "http://www.autoecole-baud.fr/",
+      "address": "85 Chem. des Champs Michel, 25410 Saint-Vit, France",
+      "sentAt": "2026-04-27T08:46:33.677Z"
+    },
+    {
+      "placeId": "ChIJURAZSAzl5EcRVcbw-2t1AD4",
+      "name": "NEO PHYZ ORLEANS - Cabinet de Kinésithérapie",
+      "email": "contact.dataprivacy@doctolib.com",
+      "website": "https://www.doctolib.fr/cabinet-de-kinesitherapie/orleans/neo-phyz-orleans",
+      "address": "5 Rue de la Lionne, 45000 Orléans, France",
+      "sentAt": "2026-04-28T08:44:11.590Z"
+    },
+    {
+      "placeId": "ChIJzwdrwyj75EcR0D9SCOCA_54",
+      "name": "Claire Etchegoyhen",
+      "email": "contact.dataprivacy@doctolib.com",
+      "website": "https://www.doctolib.fr/masseur-kinesitherapeute/orleans/claire-etchegoyhen",
+      "address": "4 Clos de la Fromentee, 45560 Saint-Denis-en-Val, France",
+      "sentAt": "2026-04-28T08:44:18.134Z"
+    },
+    {
+      "placeId": "ChIJvzlN3KP35EcRk5ScqADwasI",
+      "name": "Cabinet de kinésithérapie Jonathan DEVOYE",
+      "email": "contact.dataprivacy@doctolib.com",
+      "website": "https://www.doctolib.fr/masseur-kinesitherapeute/gidy/jonathan-devoye",
+      "address": "5 Pl. Lucien Bourgon, 45520 Gidy, France",
+      "sentAt": "2026-04-28T08:44:24.499Z"
+    },
+    {
+      "placeId": "ChIJdQ_nAb7l5EcRa5yqsPTx0zY",
+      "name": "CABINET DE KINESITHERAPIE CHATELET",
+      "email": "scmchabrillatmorin@gmail.com",
+      "website": "https://monrdvkine.fr/c/cabinet-de-kinesitherapie-chatelet",
+      "address": "10 Rue Isaac Jogues, 45000 Orléans, France",
+      "sentAt": "2026-04-28T08:44:31.352Z"
+    },
+    {
+      "placeId": "ChIJ-8wWnJfd4EcR2MpXSSvb9CA",
+      "name": "Lunettes Pour Tous",
+      "email": "contact@lunettespourtous.com",
+      "website": "https://lunettespourtous.com/",
+      "address": "58 Rue Jeanne d'Arc, 76000 Rouen, France",
+      "sentAt": "2026-04-29T08:40:58.759Z"
+    },
+    {
+      "placeId": "ChIJYQz59Pfd4EcRK8Q1gEzfggY",
+      "name": "Opticien Rouen Centre-Ville GRANDOPTICAL",
+      "email": "directeur.rouen@grandoptical.com",
+      "website": "https://www.grandoptical.com/opticien/rouen/147?utm_campaign=gmb-website&utm_source=google&utm_medium=organic&utm_content=147&y_source=1_MTA4MTk3MjQ3NS03MTUtbG9jYXRpb24ud2Vic2l0ZQ%3D%3D",
+      "address": "39 Rue des Carmes, 76000 Rouen, France",
+      "sentAt": "2026-04-29T08:41:03.613Z"
+    },
+    {
+      "placeId": "ChIJnWLuxnfe4EcRTU4KVWtU05M",
+      "name": "Opticien ROUEN - Optical Center",
+      "email": "exemple@domaine.fr",
+      "website": "https://opticien.optical-center.fr/399-opticien-rouen-optical-center",
+      "address": "26 Rue Jeanne d'Arc, 76000 Rouen, France",
+      "sentAt": "2026-04-29T08:41:08.473Z"
+    },
+    {
+      "placeId": "ChIJHS-z-3je4EcRXQbPk2nRJ58",
+      "name": "Opticien Rouen - Cathédrale - Krys",
+      "email": "rouen-cathedrale@krys.com",
+      "website": "https://www.krys.com/opticien/france/seine-maritime/opticien-rouen/rouen-cathedrale",
+      "address": "44 Rue du Général Leclerc, 76000 Rouen, France",
+      "sentAt": "2026-04-29T08:41:15.224Z"
+    },
+    {
+      "placeId": "ChIJRSzy5fzd4EcRciEnVXNdeKU",
+      "name": "GrandOptical",
+      "email": "magasin.rouen-les-docks@grandoptical.com",
+      "website": "https://www.grandoptical.com/opticien/rouen/101?utm_campaign=gmb-website&utm_source=google&utm_medium=organic&utm_content=101&y_source=1_MTA4MTk3MjQ0Ny03MTUtbG9jYXRpb24ud2Vic2l0ZQ%3D%3D",
+      "address": "Centre Commercial Dock, Bd Ferdinand de Lesseps, 76000 Rouen, France",
+      "sentAt": "2026-04-29T08:41:20.456Z"
+    },
+    {
+      "placeId": "ChIJWXlfIdnd4EcRUTDvUZHOWP4",
+      "name": "Glasses In Seine ROUEN",
+      "email": "lunettesenseine@gmail.com",
+      "website": "http://www.lunettes-en-seine.com/",
+      "address": "55 Rue Cauchoise, 76000 Rouen, France",
+      "sentAt": "2026-04-29T08:41:24.770Z"
+    },
+    {
+      "placeId": "ChIJhYbi69Xd4EcRW3M2cYTo3nQ",
+      "name": "Générale d'Optique",
+      "email": "magasin.19@generale-optique.com",
+      "website": "https://www.generale-optique.com/opticien/rouen/19?utm_campaign=gmb-website&utm_source=google&utm_medium=organic&utm_content=19&y_source=1_MTA4MTk2ODg2OC03MTUtbG9jYXRpb24ud2Vic2l0ZQ%3D%3D",
+      "address": "65 Av. de Bretagne, 76000 Rouen, France",
+      "sentAt": "2026-04-29T08:41:30.150Z"
+    },
+    {
+      "placeId": "ChIJic_91XPe4EcRZ3iEtSfyTSk",
+      "name": "Écouter Voir Optique Mutualiste",
+      "email": "ecoutervoir.optique.rouen-sever@vyv3.fr",
+      "website": "https://magasins.ecoutervoir.fr/normandie/seine-maritime/rouen/ecouter-voir-optique-mutualiste-938?locale=fr&utm_campaign=referencement&utm_medium=affiliate_organic&utm_source=gmb",
+      "address": "99 Rue Saint-Sever, 76100 Rouen, France",
+      "sentAt": "2026-04-29T08:41:34.646Z"
+    },
+    {
+      "placeId": "ChIJfXZfEdjd4EcR6Qic3JKi5Zk",
+      "name": "Opticien ROUEN - ALAIN AFFLELOU",
+      "email": "piro@afflelou.net",
+      "website": "https://www.afflelou.com/opticien/rouen/afflelou-60-rue-jeanne-darc-76000?utm_source=google&utm_medium=organic&utm_campaign=gmb&y_source=1_MTM4MTEwOTctNzE1LWxvY2F0aW9uLndlYnNpdGU%3D",
+      "address": "60 Rue Jeanne d'Arc, 76000 Rouen, France",
+      "sentAt": "2026-04-29T08:41:40.246Z"
+    },
+    {
+      "placeId": "ChIJdVrgh3fe4EcRsZTiGEnJ4eE",
+      "name": "The Opticians Mutualistes",
+      "email": "ecoutervoir.optique.rouen-leclerc@vyv3.fr",
+      "website": "https://magasins.ecoutervoir.fr/normandie/seine-maritime/rouen/ecouter-voir-optique-mutualiste-937?locale=fr&utm_campaign=referencement&utm_medium=affiliate_organic&utm_source=gmb",
+      "address": "81 Rue du Général Leclerc, 76000 Rouen, France",
+      "sentAt": "2026-04-29T08:41:44.504Z"
+    },
+    {
+      "placeId": "ChIJsyyk1H_e4EcRx0_Di9ouV2g",
+      "name": "Entre Vue",
+      "email": "entrevueoptique@hotmail.fr",
+      "website": "http://www.entrevueoptique.fr/?utm_source=gmb",
+      "address": "90 Rue Martainville, 76000 Rouen, France",
+      "sentAt": "2026-04-29T08:41:49.259Z"
+    },
+    {
+      "placeId": "ChIJIdidHPzd4EcRAqtbco4Dzac",
+      "name": "Opticien Rouen - Le Petit Lunetier",
+      "email": "z022_1210x1210_crop_center@2x.jpg",
+      "website": "https://lepetitlunetier.com/pages/opticien-rouen-rue-des-carmes",
+      "address": "74 Rue des Carmes, 76000 Rouen, France",
+      "sentAt": "2026-04-29T08:41:53.951Z"
+    },
+    {
+      "placeId": "ChIJc37ex93f4EcRlsZ0jUGsvpc",
+      "name": "Opticien Rouen - St Sever - Krys",
+      "email": "rouen-stsever@krys.com",
+      "website": "https://www.krys.com/opticien/france/seine-maritime/opticien-rouen/rouen-stsever",
+      "address": "Centre Commercial Saint Sever, Av. de Bretagne, 76100 Rouen, France",
+      "sentAt": "2026-04-29T08:42:00.283Z"
+    },
+    {
+      "placeId": "ChIJjbf3jXLf4EcRS9hN-nGrmd0",
+      "name": "L'Atelier Aux Lunettes",
+      "email": "contact.dataprivacy@doctolib.com",
+      "website": "https://www.doctolib.fr/magasin-d-optique/sotteville-les-rouen/l-atelier-aux-lunettes-opticien",
+      "address": "26 Pl. de l'Hôtel de ville, 76300 Sotteville-lès-Rouen, France",
+      "sentAt": "2026-04-29T08:42:05.147Z"
+    },
+    {
+      "placeId": "ChIJ_cpvRNjd4EcRzay6vHVf1n4",
+      "name": "Le Lanchon Normandie Optique",
+      "email": "logo-white@2x.png",
+      "website": "https://lelanchon.net/",
+      "address": "7 Rue Guillaume le Conquérant, 76000 Rouen, France",
+      "sentAt": "2026-04-29T08:42:11.756Z"
+    },
+    {
+      "placeId": "ChIJw9dwXtbd4EcRdq6C17iWUh0",
+      "name": "Optique des Familles",
+      "email": "logo@2x.png",
+      "website": "http://www.optiquedesfamilles.fr/",
+      "address": "17 Rue Beauvoisine, 76000 Rouen, France",
+      "sentAt": "2026-04-29T08:42:16.964Z"
+    },
+    {
+      "placeId": "ChIJ0Y7Uk_lv5kcRxQMuMKFtVmc",
+      "name": "Le Marais Restaurant Paris",
+      "email": "contact@privateaser.com",
+      "website": "https://www.privateaser.com/lieu/44897-le-marais-restaurant",
+      "address": "47 R. de Turbigo, 75003 Paris, France",
+      "sentAt": "2026-04-30T08:41:21.966Z"
+    },
+    {
+      "placeId": "ChIJHwzjqZJv5kcRCir2RjPAaKE",
+      "name": "Chouchou",
+      "email": "restauchouchou@gmail.com",
+      "website": "http://www.restaurantchouchouparis.fr/",
+      "address": "23 Bd de Sébastopol, 75001 Paris, France",
+      "sentAt": "2026-04-30T08:41:26.000Z"
+    },
+    {
+      "placeId": "ChIJf-oe7Wdu5kcRRto099RQ9Fc",
+      "name": "Sacrée Fleur Montmartre",
+      "email": "restosacreefleur@gmail.com",
+      "website": "http://www.sacreefleur.fr/",
+      "address": "50 Rue de Clignancourt, 75018 Paris, France",
+      "sentAt": "2026-04-30T08:41:30.956Z"
+    },
+    {
+      "placeId": "ChIJD6B9d1Rx5kcRqX4XYd8yP2E",
+      "name": "St Germain Restaurant notre dame Paris 5",
+      "email": "cafebdsaintgermain@gmail.com",
+      "website": "https://cafesaintgermain.metro.bar/?lang=fr",
+      "address": "18 Bd Saint-Germain, 75005 Paris, France",
+      "sentAt": "2026-04-30T08:41:34.926Z"
+    },
+    {
+      "placeId": "ChIJ5U4GPz9v5kcRStPGOYpHOGs",
+      "name": "Magnolia",
+      "email": "contact@restaurant-magnolia.fr",
+      "website": "https://www.restaurant-magnolia.fr/",
+      "address": "5 Rue Henry Monnier, 75009 Paris, France",
+      "sentAt": "2026-04-30T08:41:39.316Z"
+    },
+    {
+      "placeId": "ChIJF81Lvo5v5kcR34BLAZe2U1o",
+      "name": "La Scène",
+      "email": "contact@la-scene.paris",
+      "website": "https://www.la-scene.paris/",
+      "address": "32 Av. Matignon, 75008 Paris, France",
+      "sentAt": "2026-04-30T08:41:43.889Z"
+    },
+    {
+      "placeId": "ChIJXyUgvjlv5kcRmhx7R3xmFX8",
+      "name": "ROOF Paris",
+      "email": "roof@madamereve.com",
+      "website": "https://madamereve.com/restaurants/roof/",
+      "address": "43 Rue Étienne Marcel, 75001 Paris, France",
+      "sentAt": "2026-04-30T08:41:56.197Z"
+    },
+    {
+      "placeId": "ChIJ0e8QDrnAyRIR3Q4AwY3U1C0",
+      "name": "Boulangerie Aixoise",
+      "email": "contact@biscuiteriemarseillaise.fr",
+      "website": "http://www.biscuiteriemarseillaise.fr/",
+      "address": "45 Rue Francis Davso, 13001 Marseille, France",
+      "sentAt": "2026-05-01T08:34:22.191Z"
+    },
+    {
+      "placeId": "ChIJJXDgBs7AyRIRAaCFerMfPck",
+      "name": "Maison Saint-Honoré",
+      "email": "m.sthonore@gmail.com",
+      "website": "https://maisonsaint-honore.com/",
+      "address": "131 Rue d'Endoume, 13007 Marseille, France",
+      "sentAt": "2026-05-01T08:34:35.217Z"
+    },
+    {
+      "placeId": "ChIJobjHeQrQzRIRl-E48HKQCKE",
+      "name": "Pharmacie Anglo American",
+      "email": "pharmacie@angloamericaine.fr",
+      "website": "https://french-pharmacy.fr/",
+      "address": "2 Rue de France, 06000 Nice, France",
+      "sentAt": "2026-05-04T08:45:30.095Z"
+    },
+    {
+      "placeId": "ChIJ8XQN2aDazRIRnU0ZWWqD9H0",
+      "name": "La Grande Pharmacie Principale",
+      "email": "pharmacieprincipale@mesoigner.fr",
+      "website": "https://grandepharmacieprincipale06.pharmavie.fr/",
+      "address": "10 Rue Massena, 06000 Nice, France",
+      "sentAt": "2026-05-04T08:45:36.848Z"
+    },
+    {
+      "placeId": "ChIJEROsKR_RzRIRWogno87Mki4",
+      "name": "Pharmacie Nice Gare du Sud",
+      "email": "pharmacienicegaredusud@gmail.com",
+      "website": "https://pharmacienicegaredusud.universpharmacie.com/",
+      "address": "3 All. Philippe Seguin, 06000 Nice, France",
+      "sentAt": "2026-05-04T08:45:43.175Z"
+    },
+    {
+      "placeId": "ChIJh2tC_qbazRIRE1WpEVabIis",
+      "name": "Centre Commercial NICETOILE",
+      "email": "nom@domain.com",
+      "website": "https://www.nicetoile.com/?utm_medium=GMB&utm_source=Partoo",
+      "address": "30 Av. Jean Médecin, 06000 Nice, France",
+      "sentAt": "2026-05-04T08:45:50.072Z"
+    },
+    {
+      "placeId": "ChIJITv5JKHazRIRWN1raJ51XgU",
+      "name": "Grande Pharmacie Masséna",
+      "email": "contact.dataprivacy@doctolib.com",
+      "website": "https://www.doctolib.fr/pharmacie/nice/pharmacie-massena",
+      "address": "5 Rue Massena, 06000 Nice, France",
+      "sentAt": "2026-05-04T08:45:56.717Z"
+    },
+    {
+      "placeId": "ChIJ33CdYuPPzRIRJzhE-GFvpqU",
+      "name": "Grande Pharmacie de l'Horloge",
+      "email": "pharmacie.horloge@offisecure.com",
+      "website": "https://grandepharmaciedel-horloge.fr/",
+      "address": "98 Bd de Cessole, 06100 Nice, France",
+      "sentAt": "2026-05-04T08:46:13.234Z"
+    },
+    {
+      "placeId": "ChIJ319DFArRzRIRWhOfsw6jqb0",
+      "name": "Pharmacie Nikaia",
+      "email": "contact@pharmacienikaia.fr",
+      "website": "https://leadersante-pharmacie.fr/pharmacie/view/detail/id/358/?_gl=1*me2epy*_up*MQ..*_ga*Mjc3OTE4NTcuMTc0MjIwODE2MA..*_ga_HF25FHL4PN*MTc0MjIwODE1OS4xLjEuMTc0MjIwODE2NC4wLjAuMA..",
+      "address": "5 Trav. de la Digue des Français, 06200 Nice, France",
+      "sentAt": "2026-05-04T08:46:18.716Z"
+    },
+    {
+      "placeId": "ChIJje4LHqjazRIRjLJVmIxPFr4",
+      "name": "Pharmacie de l'Avenue",
+      "email": "monadresse@email.com",
+      "website": "https://www.pharmacie-avenue-nice.fr/",
+      "address": "45 Av. Jean Médecin, 06000 Nice, France",
+      "sentAt": "2026-05-04T08:46:24.164Z"
+    },
+    {
+      "placeId": "ChIJozKmMq3tBUgRTgmqDCPuYP8",
+      "name": "Cabinet dentaire Nantes Sainte-Anne",
+      "email": "contact.dataprivacy@doctolib.com",
+      "website": "https://www.doctolib.fr/cabinet-dentaire/nantes/cabinet-dentaire-nantes-sainte-anne",
+      "address": "132 Bd Saint-Aignan, 44100 Nantes, France",
+      "sentAt": "2026-05-05T08:39:09.248Z"
+    },
+    {
+      "placeId": "ChIJGeZHQcrvBUgRMlQK1Bfyfz0",
+      "name": "Vertuo",
+      "email": "athis@vertuo-sante.com",
+      "website": "https://www.vertuo-sante.com/dentiste/nantes-beaujoire-44/",
+      "address": "Centre commercial Carrefour, Rte de Paris, 44300 Nantes, France",
+      "sentAt": "2026-05-05T08:39:23.024Z"
+    },
+    {
+      "placeId": "ChIJaxkqjqfuBUgRsGBtSqvaeLk",
+      "name": "Cabinet Dentaire Contrescarpe - Dr Thierry VIVION - Dr Corentin VIVION - Dr Alice CASTEUBLE - Dr Estelle BIZOT",
+      "email": "contact.dataprivacy@doctolib.com",
+      "website": "https://www.doctolib.fr/cabinet-dentaire/nantes/cabinet-dentaire-contrescarpe-docteur-thierry-vivion-docteur-corentin-vivion",
+      "address": "11 Rue Contrescarpe, 44000 Nantes, France",
+      "sentAt": "2026-05-05T08:39:28.672Z"
+    },
+    {
+      "placeId": "ChIJGUZ-SsntBUgRNZnBCUzzb7M",
+      "name": "Dr Laura QUINTON",
+      "email": "contact.dataprivacy@doctolib.com",
+      "website": "https://www.doctolib.fr/dentiste/nantes/laura-quinton",
+      "address": "28 bis Bd Gabriel Guist'Hau, 44000 Nantes, France",
+      "sentAt": "2026-05-05T08:39:36.546Z"
+    },
+    {
+      "placeId": "ChIJuQKCXbyXB0ERwj0kJkZKSmM",
+      "name": "Dental Practice Dr. Carlos Fuentes",
+      "email": "contact.dataprivacy@doctolib.com",
+      "website": "https://www.doctolib.fr/cabinet-dentaire/nantes/cabinet-dentaire-monselet",
+      "address": "3 Pl. Emile Sarradin, 44000 Nantes, France",
+      "sentAt": "2026-05-05T08:39:41.708Z"
+    },
+    {
+      "placeId": "ChIJyaPUUOTvBUgRWI7oardcc7I",
+      "name": "Centre Dentaire de l'Eraudière",
+      "email": "contact.dataprivacy@doctolib.com",
+      "website": "https://www.doctolib.fr/centre-dentaire/nantes/centre-dentaire-de-l-eraudiere?utm_campaign=google-maps&utm_content=nantes&utm_medium=organic&utm_source=google&utm_term=centre-dentaire",
+      "address": "22 Rue des Marsauderies, 44300 Nantes, France",
+      "sentAt": "2026-05-05T08:39:46.964Z"
+    },
+    {
+      "placeId": "ChIJjbtmOrfvBUgR8FlINbS_b4M",
+      "name": "Dr Fanny PRIMAULT - Chirurgien-Dentiste",
+      "email": "contact.dataprivacy@doctolib.com",
+      "website": "https://www.doctolib.fr/dentiste/nantes/fanny-primault",
+      "address": "2 All. du Héron, 44000 Nantes, France",
+      "sentAt": "2026-05-05T08:39:52.360Z"
+    },
+    {
+      "placeId": "ChIJz17YuRHsBUgRk1KFS-mMx-E",
+      "name": "Docteur Florence Chartier-Martin",
+      "email": "contact.dataprivacy@doctolib.com",
+      "website": "https://www.doctolib.fr/dentiste/nantes/florence-chartier-martin",
+      "address": "44 Rue de Gigant, 44000 Nantes, France",
+      "sentAt": "2026-05-05T08:39:59.082Z"
+    },
+    {
+      "placeId": "ChIJAdVRIivtBUgRgo6BjXMlwwY",
+      "name": "Centre dentaire Vertuo Saint-Herblain",
+      "email": "accueil-herblain@vertuo-sante.com",
+      "website": "https://www.vertuo-sante.com/dentiste/nantes-saint-herblain-44/",
+      "address": "Bd Charles-Gautier, 44800 Saint-Herblain, France",
+      "sentAt": "2026-05-05T08:40:05.049Z"
+    },
+    {
+      "placeId": "ChIJoYV5TQCvthIR08jO7rnU61o",
+      "name": "Cabinet LAVILLE & PADOIN Avocats",
+      "email": "nadegelaville@montpellieravocats.fr",
+      "website": "http://www.laville-avocats-montpellier.fr/",
+      "address": "8 Av. d'Assas, 34000 Montpellier, France",
+      "sentAt": "2026-05-06T08:44:53.413Z"
+    },
+    {
+      "placeId": "ChIJzzTYDqevthIRkC-UTP1xYuI",
+      "name": "CABINET BOISSIERE AVOCATS | Avocats en droit routier | Avocat permis de conduire Montpellier | Intervention nationale",
+      "email": "secretariat@avocat-boissiere.com",
+      "website": "https://www.avocat-boissiere.com/",
+      "address": "4 Rue de Maguelone, 34000 Montpellier, France",
+      "sentAt": "2026-05-06T08:45:01.961Z"
+    },
+    {
+      "placeId": "ChIJNShDQ2CvthIR_8EjgfugUHM",
+      "name": "Cabinet Emilie Vidal- avocat droit de la famille Montpellier",
+      "email": "emilievidalavocat@hotmail.fr",
+      "website": "http://www.avocat-vidal-montpellier.com/",
+      "address": "9 Bd Sarrail, 34000 Montpellier, France",
+      "sentAt": "2026-05-06T08:45:11.575Z"
+    },
+    {
+      "placeId": "ChIJJaUlJ1OrthIRgsRg-l0sstE",
+      "name": "Mélanie LAPORTE - droit de la famille - fonction publique - Avocat divorce Montpellier",
+      "email": "m.laporteavocat@gmail.com",
+      "website": "https://www.melanielaporte-avocat.fr/",
+      "address": "9 Rue de l'Aiguillerie, 34000 Montpellier, France",
+      "sentAt": "2026-05-06T08:45:15.830Z"
+    },
+    {
+      "placeId": "ChIJ510bh5iNyRIRv3cFv5ulOaQ",
+      "name": "Adriana Ivanova Avocat à Montpellier",
+      "email": "ivanovaavocat1@gmail.com",
+      "website": "https://www.cabinet-adi.com/conseil-juridique-en-ligne/",
+      "address": "1 Av. de la Gaillarde, 34000 Montpellier, France",
+      "sentAt": "2026-05-06T08:45:23.070Z"
+    },
+    {
+      "placeId": "ChIJiRVamPCvthIRbKd-v5dDl_s",
+      "name": "Chreifa BADJI Ouali Avocat droit des étrangers/droit de la famille (divorce) Montpellier",
+      "email": "contact@ouali-avocat.fr",
+      "website": "http://ouali-avocat.fr/",
+      "address": "753 Rue Marius Petipa, 34080 Montpellier, France",
+      "sentAt": "2026-05-06T08:45:27.933Z"
+    },
+    {
+      "placeId": "ChIJYStzC7ivthIRi0Khc3rPomI",
+      "name": "Maître Martin FAURE | Avocat en Droit Routier & Permis de Conduire | Droit Pénal - Droit de la Famille - Droit Immobilier",
+      "email": "contact@faureavocat.com",
+      "website": "https://faureavocat.com/",
+      "address": "10 Rue Marceau, 34000 Montpellier, France",
+      "sentAt": "2026-05-06T08:45:35.597Z"
+    },
+    {
+      "placeId": "ChIJR9dgT3RR9W8RinYOD6ieCjE",
+      "name": "Ivan MARTIN-GROS | AVOCAT PENALISTE | Droit Pénal, Droit routier & Aménagement de peine",
+      "email": "martingros.avocat@gmail.com",
+      "website": "https://www.avocat-martingros.fr/",
+      "address": "3 Rue Doria, 34000 Montpellier, France",
+      "sentAt": "2026-05-06T08:45:43.246Z"
+    },
+    {
+      "placeId": "ChIJXTqfuhavthIRSJ28c0Z8n78",
+      "name": "Cabinet de Maître Fanny Misslin, avocat à Montpellier, droit des étrangers, droit des visas et droit de la famille",
+      "email": "contact@misslin-avocat.com",
+      "website": "https://www.misslin-avocat.com/cabinet/",
+      "address": "2 Rue de l'Ancien Courrier, 34000 Montpellier, France",
+      "sentAt": "2026-05-06T08:45:47.943Z"
+    },
+    {
+      "placeId": "ChIJK-oGBKqvthIRpqxkyzogjdo",
+      "name": "David GUYON Avocat",
+      "email": "contact@guyon-avocat.fr",
+      "website": "http://guyon-avocat.fr/",
+      "address": "4 Bd Ledru Rollin, 34000 Montpellier, France",
+      "sentAt": "2026-05-06T08:45:58.843Z"
+    },
+    {
+      "placeId": "ChIJC4z1L7PJlkcR8RSCAwdowOQ",
+      "name": "Agence immobilière Laforêt Strasbourg",
+      "email": "strasbourg@laforet.com",
+      "website": "https://www.laforet.com/agence-immobiliere/strasbourg",
+      "address": "41 Rue Finkwiller, 67000 Strasbourg, France",
+      "sentAt": "2026-05-07T08:49:27.643Z"
+    },
+    {
+      "placeId": "ChIJA_4W-izIlkcRbirWqQP73o8",
+      "name": "Ethiqu'immo",
+      "email": "228j3nug9gvg@320x212.webp",
+      "website": "https://www.ethiqu-immo.fr/",
+      "address": "61 Rue du Lazaret, 67100 Strasbourg, France",
+      "sentAt": "2026-05-07T08:49:34.597Z"
+    },
+    {
+      "placeId": "ChIJSazpYefJlkcRl0pc9Xyoq90",
+      "name": "Gael STURTZ Agence Immobilière, Strasbourg",
+      "email": "photo_agence@640x337.jpg",
+      "website": "https://www.agence-gaelsturtz.com/",
+      "address": "4 Rue Friese, 67000 Strasbourg, France",
+      "sentAt": "2026-05-07T08:49:39.643Z"
+    },
+    {
+      "placeId": "ChIJffW1eHXJlkcRxysL5XiKA1s",
+      "name": "NOVÉO IMMO Strasbourg",
+      "email": "portrait-xavier@2x.webp",
+      "website": "https://www.noveo-immo.fr/",
+      "address": "40 Rue Pertois, 67100 Strasbourg, France",
+      "sentAt": "2026-05-07T08:49:45.142Z"
+    },
+    {
+      "placeId": "ChIJf6keo27JlkcRh5cjTqSurCA",
+      "name": "Bintz Immobilier - Vente, Location & Gestion immobilière",
+      "email": "contact@bintzimmobilier.fr",
+      "website": "https://www.bintzimmobilier.fr/",
+      "address": "1 Rue Saint-Arbogast, 67000 Strasbourg, France",
+      "sentAt": "2026-05-07T08:49:50.242Z"
+    },
+    {
+      "placeId": "ChIJsWU_zKjJlkcRsIcrUIeiu3A",
+      "name": "Innovimmo Strasbourg",
+      "email": "f80004eb1752065401@2560x1706.jpg",
+      "website": "https://www.innovimmo-strasbourg.fr/",
+      "address": "1 Rue de Belfort, 67100 Strasbourg, France",
+      "sentAt": "2026-05-07T08:49:57.121Z"
+    },
+    {
+      "placeId": "ChIJkYfl9VjIlkcRTK7-x9bbSSs",
+      "name": "L'Agence Immobilière à Strasbourg",
+      "email": "lagencestrasbourg@gmail.com",
+      "website": "https://www.immobiliere-agence-strasbourg.fr/contact",
+      "address": "9 Rue des Arquebusiers, 67000 Strasbourg, France",
+      "sentAt": "2026-05-07T08:50:03.626Z"
+    },
+    {
+      "placeId": "ChIJ-wgoap_JlkcRypp8NDZQiLg",
+      "name": "Agence Strasbourg Immobilière",
+      "email": "b02e89c41667555318@5180x3453.jpg",
+      "website": "https://www.asi67.com/",
+      "address": "200 Av. de Colmar, 67100 Strasbourg, France",
+      "sentAt": "2026-05-07T08:50:11.499Z"
+    },
+    {
+      "placeId": "ChIJfbVlwtzJlkcRqr8ghZrdeKE",
+      "name": "L'immobilière de Sarah",
+      "email": "7n81j4l5l930@320x256.webp",
+      "website": "http://www.limmobilieredesarah.fr/",
+      "address": "Rue de Verdun, 67000 Strasbourg, France",
+      "sentAt": "2026-05-07T08:50:18.773Z"
+    },
+    {
+      "placeId": "ChIJTeZ0ntrJlkcRIiegIetlpOA",
+      "name": "Immoval - Agence Immobilière Strasbourg",
+      "email": "immoval@immoval.com",
+      "website": "https://www.immoval.com/?utm_campaign=agence_paix&utm_medium=organic&utm_source=GMB",
+      "address": "26B Av. de la Paix, 67000 Strasbourg, France",
+      "sentAt": "2026-05-07T08:50:22.951Z"
+    },
+    {
+      "placeId": "ChIJUZ2ZMknIlkcRWVp4qTk2MVg",
+      "name": "Angsthelm Immobilier",
+      "email": "annecamille@angsthelm-immobilier.com",
+      "website": "http://angsthelm-immobilier.com/",
+      "address": "32 All. de la Robertsau, 67000 Strasbourg, France",
+      "sentAt": "2026-05-07T08:50:29.548Z"
+    },
+    {
+      "placeId": "ChIJPwQ_N_HIlkcRhSydbcRYDm0",
+      "name": "Immobiliere Vauban",
+      "email": "zuchner@immobilier-vauban.com",
+      "website": "http://www.immobilier-vauban.com/",
+      "address": "67 All. de la Robertsau, 67000 Strasbourg, France",
+      "sentAt": "2026-05-07T08:50:33.817Z"
+    },
+    {
+      "placeId": "ChIJJWgusw3JlkcR2fKlyXm2OLw",
+      "name": "Agence immobilière Laforêt Strasbourg Orangerie",
+      "email": "reclamations@stpierreassurances.com",
+      "website": "https://www.laforet.com/agence-immobiliere/strasbourg-orangerie?utm_source=google&utm_medium=mybusiness",
+      "address": "16 Av. de la Forêt-Noire, 67000 Strasbourg, France",
+      "sentAt": "2026-05-07T08:50:38.135Z"
+    },
+    {
+      "placeId": "ChIJQ_6pF1AnVQ0R29f2Iz7HJgs",
+      "name": "JOST HOTEL BORDEAUX",
+      "email": "hello@jostbordeaux.com",
+      "website": "https://jostbordeaux.com/",
+      "address": "18 Rue des Ateliers, 33800 Bordeaux, France",
+      "sentAt": "2026-05-08T08:27:10.411Z"
+    },
+    {
+      "placeId": "ChIJ___vZyvZVA0Rm2Jn1aBas3c",
+      "name": "The Originals city - Hôtel Bordeaux porte du bassin",
+      "email": "h3308@theoriginalshotels.com",
+      "website": "http://hotel-bordeaux-porte-bassin.fr/",
+      "address": "3 Rue Jean Monnet, 33170 Gradignan, France",
+      "sentAt": "2026-05-08T08:27:16.798Z"
+    },
+    {
+      "placeId": "ChIJV0gaXaopVQ0R0VcV1r0IEls",
+      "name": "ibis budget Bordeaux Le Lac",
+      "email": "h3085@accor.com",
+      "website": "https://all.accor.com/lien_externe.svlt?goto=fiche_hotel&code_hotel=3085&merchantid=seo-maps-FR-3085&sourceid=aw-cen&utm_medium=seo%20maps&utm_source=google%20Maps&utm_campaign=seo%20maps",
+      "address": "Centre Hôtelier Du Lac, Rue du Petit Barail, 33300 Bordeaux, France",
+      "sentAt": "2026-05-08T08:27:23.451Z"
+    },
+    {
+      "placeId": "ChIJzeLyu2QoVQ0RBFvpYZHwH6c",
+      "name": "Hôtel Mercure Bordeaux Château Chartrons",
+      "email": "h1810-re@accor.com",
+      "website": "https://all.accor.com/lien_externe.svlt?goto=fiche_hotel&code_hotel=1810&merchantid=seo-maps-FR-1810&sourceid=aw-cen&utm_medium=seo%20maps&utm_source=google%20Maps&utm_campaign=seo%20maps",
+      "address": "81 Cr Saint-Louis, 33300 Bordeaux, France",
+      "sentAt": "2026-05-08T08:27:29.839Z"
+    },
+    {
+      "placeId": "ChIJ0ZgMAGYoVQ0RvMlb6x__HDA",
+      "name": "Residhotel Galerie Tatry",
+      "email": "galerietatry@residhotel.com",
+      "website": "https://www.residhotel.com/residence/bordeaux-galerie-tatry/",
+      "address": "174 Cr du Médoc, 33300 Bordeaux, France",
+      "sentAt": "2026-05-08T08:27:34.574Z"
+    },
+    {
+      "placeId": "ChIJAQDMa74nVQ0RDe2ujHCMzD8",
+      "name": "LES CHAMBRES DE MARIE",
+      "email": "leschambresdemariereservations@gmail.com",
+      "website": "https://leschambresdemarie.fr/",
+      "address": "20 Rue Théodore Gardere, 33000 Bordeaux, France",
+      "sentAt": "2026-05-08T08:27:38.862Z"
+    },
+    {
+      "placeId": "ChIJj3nFiNonVQ0RHe4mXPmHmys",
+      "name": "Hôtel du Théâtre",
+      "email": "reservation@hotel-du-theatre.com",
+      "website": "http://www.hotel-du-theatre.com/",
+      "address": "10 Rue de la Maison Daurade, 33000 Bordeaux, France",
+      "sentAt": "2026-05-08T08:27:54.110Z"
+    },
+    {
+      "placeId": "ChIJBZu8H3QpVQ0RfX0pZqJzxwQ",
+      "name": "Hôtel Notre Dame",
+      "email": "info@hnd33.com",
+      "website": "http://www.hotelbordeauxchartrons.com/",
+      "address": "36-38 Rue Notre Dame, 33000 Bordeaux, France",
+      "sentAt": "2026-05-08T08:27:59.013Z"
+    },
+    {
+      "placeId": "ChIJL3v1fCsvVQ0RLsHPjUvZDJc",
+      "name": "RHVS Study Hôtel",
+      "email": "x0mhqxh@nhxyv40hpd.jt",
+      "website": "http://www.studyhotel.fr/",
+      "address": "19 Rue Louis Beydts, 33310 Lormont, France",
+      "sentAt": "2026-05-08T08:28:04.024Z"
+    },
+    {
+      "placeId": "ChIJxxb80xQmVQ0RjWQlFmLkDcs",
+      "name": "hotelF1 Bordeaux Ville Aréna",
+      "email": "h2419@accor.com",
+      "website": "https://all.accor.com/lien_externe.svlt?goto=fiche_hotel&code_hotel=2419&merchantid=seo-maps-FR-2419&sourceid=aw-cen&utm_medium=seo%20maps&utm_source=google%20Maps&utm_campaign=seo%20maps",
+      "address": "50 Rue Emile Henriot, Quai de la Souys, 33100 Bordeaux, France",
+      "sentAt": "2026-05-08T08:28:08.398Z"
+    },
+    {
+      "placeId": "ChIJy-ozdfInVQ0RNOFnANYdvjI",
+      "name": "ibis Styles Bordeaux Mériadeck",
+      "email": "h7368@accor.com",
+      "website": "https://all.accor.com/lien_externe.svlt?goto=fiche_hotel&code_hotel=7368&merchantid=seo-maps-FR-7368&sourceid=aw-cen&utm_medium=seo%20maps&utm_source=google%20Maps&utm_campaign=seo%20maps",
+      "address": "Avenue Du General Larminat, 54 Rue Joseph Abria, 33000 Bordeaux, France",
+      "sentAt": "2026-05-08T08:28:12.870Z"
+    },
+    {
+      "placeId": "ChIJr4YWgxJ16UcRIcKsPvKmQJ4",
+      "name": "REIMS PLOMBERIE Eurl Dumont Laurent",
+      "email": "contact@reimsplomberie.net",
+      "website": "http://www.reimsplomberie.net/",
+      "address": "64 Rue Maldan, 51100 Reims, France",
+      "sentAt": "2026-05-11T09:01:05.962Z"
+    },
+    {
+      "placeId": "ChIJTcoOAip16UcRoyGhwbMVeKg",
+      "name": "Sf Service Plombier Chauffagiste",
+      "email": "sf.service@yahoo.com",
+      "website": "http://sfservices.fr/?utm_source=gmb",
+      "address": "9 Esp. Gustave Courbet, 51100 Reims, France",
+      "sentAt": "2026-05-11T09:01:15.212Z"
+    },
+    {
+      "placeId": "ChIJ5wzw978a4Y4Rb8U86CVtA8w",
+      "name": "A.B PLOMBERIE CHAUFFAGE REIMS",
+      "email": "contact@abentreprise.com",
+      "website": "http://abentreprise.com/",
+      "address": "45 Rue Narcisse Brunette, 51100 Reims, France",
+      "sentAt": "2026-05-11T09:01:24.198Z"
+    },
+    {
+      "placeId": "ChIJc2_CtsR16UcRuvWq7dcfXlk",
+      "name": "Plomberie Moronval",
+      "email": "plomberie.moronval@gmail.com",
+      "website": "https://www.plomberie-moronval.fr/",
+      "address": "19 Rue Linguet, 51100 Reims, France",
+      "sentAt": "2026-05-11T09:01:30.402Z"
+    },
+    {
+      "placeId": "ChIJf26HNGEn-yQRteOLqhY8NpU",
+      "name": "EM ENERGIE - Chauffagiste Reims",
+      "email": "contact@em-energie.fr",
+      "website": "http://em-energie.fr/",
+      "address": "82 Av. Georges Clemenceau, 51100 Reims, France",
+      "sentAt": "2026-05-11T09:01:42.163Z"
+    },
+    {
+      "placeId": "ChIJ0T9KgUhx6UcRJOPLCxY_iMM",
+      "name": "Fort Intervention",
+      "email": "fort.j@gmx.fr",
+      "website": "https://www.fort-intervention.com/?utm_medium=referral&utm_source=gmb&utm_campaign=lnk-gmb",
+      "address": "26 Rue Lecointre, 51100 Reims, France",
+      "sentAt": "2026-05-11T09:01:49.893Z"
+    },
+    {
+      "placeId": "ChIJaa8YKAB16UcR9CH9-VCRWS4",
+      "name": "Star Management",
+      "email": "starmanagement.marne@gmail.com",
+      "website": "https://starmanagementplomberie.sitew.org/",
+      "address": "Châtillons, 51100 Reims, France",
+      "sentAt": "2026-05-11T09:01:56.203Z"
+    },
+    {
+      "placeId": "ChIJd7qEnex16UcRWj3BtSAyeC4",
+      "name": "Agence Dépannage Ballooneo Reims",
+      "email": "contact@info-ballooneo.fr",
+      "website": "https://www.depannage-ballooneo.fr/zone-intervention/marne/depannage-chauffe-eau-reims/",
+      "address": "17 Rdpt de l'Europe, 51430 Bezannes, France",
+      "sentAt": "2026-05-11T09:02:03.320Z"
+    },
+    {
+      "placeId": "ChIJA4WYGycv4EcRWsg5nChVOik",
+      "name": "Benji Electricity - L'excellence de l'électricité Normande",
+      "email": "contact@benjielectricity.com",
+      "website": "https://benjielectricity.com/",
+      "address": "40 Rue Berthelot, 76600 Le Havre, France",
+      "sentAt": "2026-05-12T08:53:10.265Z"
+    },
+    {
+      "placeId": "ChIJK_L-iF8v4EcReKh4waK85kA",
+      "name": "Elec 76 (Sarl)",
+      "email": "contact@elec76.com",
+      "website": "https://www.electricienlehavre.fr/",
+      "address": "88 Rue Alfred Sisley, 76620 Le Havre, France",
+      "sentAt": "2026-05-12T08:53:16.661Z"
+    },
+    {
+      "placeId": "ChIJ3dABpQgv4EcRdL1mAZcLyeg",
+      "name": "SARL LESAUVAGE ET MALANDAIN",
+      "email": "icon2@2x.png",
+      "website": "https://lesauvagemalandain.fr/",
+      "address": "13 Rue Collard, 76600 Le Havre, France",
+      "sentAt": "2026-05-12T08:53:22.687Z"
+    },
+    {
+      "placeId": "ChIJeaEEUacw4EcRExYRvIMKdKY",
+      "name": "SARL MAXELEC",
+      "email": "maxelec.contact@gmail.com",
+      "website": "https://maxelec-lehavre.fr/",
+      "address": "1 Rés de la Bergerie, 76290 Saint-Martin-du-Manoir, France",
+      "sentAt": "2026-05-12T08:53:28.339Z"
+    },
+    {
+      "placeId": "ChIJIY6A99Qv4EcRcB9HNq5WmiM",
+      "name": "Mendo Elec le Havre",
+      "email": "support@webador.fr",
+      "website": "https://www.mendo-elec.fr/",
+      "address": "1 Rue Jules Tellier, 76600 Le Havre, France",
+      "sentAt": "2026-05-12T08:53:32.640Z"
+    },
+    {
+      "placeId": "ChIJ06Z_bNlA4EcRyl5NU1QvpnY",
+      "name": "E.M.2.I.SERVICES",
+      "email": "contact@em2i.fr",
+      "website": "https://www.em2iservices.fr/",
+      "address": "22 bis Rue de Provence, 76600 Le Havre, France",
+      "sentAt": "2026-05-12T08:53:43.048Z"
+    },
+    {
+      "placeId": "ChIJz8iZTbYv4EcRzdPAlgAf-Ik",
+      "name": "DaKelec",
+      "email": "d.a.k.elec@free.fr",
+      "website": "https://dakelectrique.wixsite.com/dakelec",
+      "address": "20 All. Jules Renard, 76620 Le Havre, France",
+      "sentAt": "2026-05-12T08:53:48.587Z"
+    },
+    {
+      "placeId": "ChIJtWJRZp0byRIR_VXFD20fdKU",
+      "name": "D-CONCEPTS - Architecte Toulon (Elodie DROUIN)",
+      "email": "contact@d-concepts.fr",
+      "website": "https://www.d-concepts.fr/?utm_source=google&utm_medium=seo&utm_campaign=gmb",
+      "address": "110 Rue Mireille, 83000 Toulon, France",
+      "sentAt": "2026-05-13T08:55:49.106Z"
+    },
+    {
+      "placeId": "ChIJ-bc0pXcbyRIRqBuKf9QyNs4",
+      "name": "Carl Tran Architecte d'intérieur Toulon - CT Création",
+      "email": "ct@carltran-ctcreation.fr",
+      "website": "https://www.carltran-ctcreation.fr/",
+      "address": "2 Rue Méridienne, 83000 Toulon, France",
+      "sentAt": "2026-05-13T08:55:54.070Z"
+    },
+    {
+      "placeId": "ChIJrTJ_IpYbyRIRs_1LDiWaiI8",
+      "name": "JULIEN COMBES ARCHITECTE TOULON - ARCHITECTURE & DESIGN",
+      "email": "contact@jca.archi",
+      "website": "http://jca.archi/",
+      "address": "3bis Rue Zénon Pons, 83000 Toulon, France",
+      "sentAt": "2026-05-13T08:56:00.422Z"
+    },
+    {
+      "placeId": "ChIJbe8M7CkbyRIR3HA-oL0wRgs",
+      "name": "Visions Architecture",
+      "email": "contact@visionsarchitecture.com",
+      "website": "https://visionsarchitecture.com/",
+      "address": "9 Bd Eugène Pelletan, 83000 Toulon, France",
+      "sentAt": "2026-05-13T08:56:05.496Z"
+    },
+    {
+      "placeId": "ChIJMQ6epC4byRIRhzMyPOloFxE",
+      "name": "NumaDé Architecte et Décorateur d'intérieur",
+      "email": "contact@architecte-interieur-toulon.fr",
+      "website": "https://architecte-interieur-toulon.fr/",
+      "address": "275 Rue Président Robert Schuman, 83000 Toulon, France",
+      "sentAt": "2026-05-13T08:56:12.286Z"
+    },
+    {
+      "placeId": "ChIJeQyp8WgqDk4RHRbWIqjHSYI",
+      "name": "Architecte d'intérieur Toulon | Flor'A | FlorArchitecte",
+      "email": "leicarragueflora@gmail.com",
+      "website": "https://www.flora-architecteinterieur.com/",
+      "address": "3 Imp. François Marcel, 83000 Toulon, France",
+      "sentAt": "2026-05-13T08:56:16.085Z"
+    },
+    {
+      "placeId": "ChIJj8rxBagbyRIR-H_K-37Ig2k",
+      "name": "HBV Architectes : Raphaël Henry-Biabaud & Sylvie Valls Santacatalina",
+      "email": "hb.architecte@gmail.com",
+      "website": "http://hbv-architectes.com/",
+      "address": "15 Rue Auffan, 83000 Toulon, France",
+      "sentAt": "2026-05-13T08:56:21.299Z"
+    },
+    {
+      "placeId": "ChIJL_RQJWwbyRIRfmPo6Efnok4",
+      "name": "Sinibaldi Clément - Architecte d'intérieur Toulon",
+      "email": "contact@sinibaldi-architecte.fr",
+      "website": "https://www.sinibaldi-architecte.fr/",
+      "address": "3 Rue Gozza, 83000 Toulon, France",
+      "sentAt": "2026-05-13T08:56:27.088Z"
+    },
+    {
+      "placeId": "ChIJj952X3kbyRIRLEwFkAnFHNM",
+      "name": "CDEKO , Architecture D’intérieur et Décoration",
+      "email": "contact@cdeko.com",
+      "website": "https://cdeko.com/",
+      "address": "60 allée de fontarèche, 83190 Ollioules, France",
+      "sentAt": "2026-05-13T08:56:33.036Z"
+    },
+    {
+      "placeId": "ChIJt-KMXWEbyRIR9YNwiATk9ck",
+      "name": "Barbara Ibgui Architecte d'intérieur",
+      "email": "barbara.ibgui@gmail.com",
+      "website": "https://www.barbaraibgui.com/",
+      "address": "200 Impasse Romain, 83000 Toulon, France",
+      "sentAt": "2026-05-13T08:56:38.490Z"
+    },
+    {
+      "placeId": "ChIJr3Bu_JobyRIR-wD38EXL97M",
+      "name": "bbg ARCHITECTES",
+      "email": "bbg.architectes@orange.fr",
+      "website": "https://www.bbgarchitectes.com/",
+      "address": "145A Rue Alexandre Borelly, 83000 Toulon, France",
+      "sentAt": "2026-05-13T08:56:45.284Z"
+    },
+    {
+      "placeId": "ChIJnTTeb5r0ikcRlaDvCukMup4",
+      "name": "Arcalys conseil et expert-comptable",
+      "email": "contact@arcalys.co",
+      "website": "https://www.arcalys.co/",
+      "address": "26 Rue Colonel Dumont, 38000 Grenoble, France",
+      "sentAt": "2026-05-14T08:51:17.190Z"
+    },
+    {
+      "placeId": "ChIJu4kEzJ70ikcR5K1x4Dy1WW0",
+      "name": "Cabinet Chekhar | Expert Comptable Grenoble",
+      "email": "contact@cabinet-chekhar.fr",
+      "website": "http://www.cabinet-chekhar.fr/",
+      "address": "11 Rue Charles Péguy, 38100 Grenoble, France",
+      "sentAt": "2026-05-14T08:51:25.852Z"
+    },
+    {
+      "placeId": "ChIJmROBzov0ikcR9YPJtqUL4B8",
+      "name": "MCA Expert - Expert-Comptable Grenoble",
+      "email": "contact@mca-expert.com",
+      "website": "https://www.mca-expert.com/",
+      "address": "3 Rue de la République, 38000 Grenoble, France",
+      "sentAt": "2026-05-14T08:51:39.536Z"
+    },
+    {
+      "placeId": "ChIJ4bx4JoD0ikcRCOLNV5S411M",
+      "name": "Cabinet Comptable Pépin",
+      "email": "contact@cabinet-pepin.fr",
+      "website": "https://cabinet-pepin.fr/",
+      "address": "23 Av. Doyen Louis Weil, 38000 Grenoble, France",
+      "sentAt": "2026-05-14T08:51:45.584Z"
+    },
+    {
+      "placeId": "ChIJmbcOy4H0ikcRNT4b_TlBIN4",
+      "name": "Cabinet Meunier",
+      "email": "contact@meunier-expert-conseil.fr",
+      "website": "https://meunier-expert-conseil.fr/",
+      "address": "4 Av. Doyen Louis Weil, 38000 Grenoble, France",
+      "sentAt": "2026-05-14T08:51:57.002Z"
+    },
+    {
+      "placeId": "ChIJeX4k45X1ikcR-MARXQKP3vM",
+      "name": "YTHAK | Expert - Comptable | Grenoble",
+      "email": "ythak2@ythak.fr",
+      "website": "http://ythak.fr/",
+      "address": "26 Rue Colonel Dumont, 38000 Grenoble, France",
+      "sentAt": "2026-05-14T08:52:02.751Z"
+    },
+    {
+      "placeId": "ChIJQ_Psm8P1ikcRyImZma-Sgtg",
+      "name": "AdQuo Grenoble - Cabinet d'Expertise Comptable et Commissaire aux Comptes",
+      "email": "contact@adquo.fr",
+      "website": "http://www.adquo.fr/",
+      "address": "26 Rue Colonel Dumont, 38000 Grenoble, France",
+      "sentAt": "2026-05-14T08:52:08.264Z"
+    },
+    {
+      "placeId": "ChIJwRown670ikcRPV6qOVXY53k",
+      "name": "FIDUXIA",
+      "email": "info@fiduxia.net",
+      "website": "http://fiduxia.net/",
+      "address": "91 Rue Général Mangin, 38100 Grenoble, France",
+      "sentAt": "2026-05-14T08:52:15.736Z"
+    },
+    {
+      "placeId": "ChIJX_juDVT0ikcR47wCfr3sfUg",
+      "name": "In Extenso Grenoble",
+      "email": "flags@2x.png",
+      "website": "https://www.inextenso.fr/agence/expert-comptable-grenoble/",
+      "address": "1 bis Bd de la Chantourne, 38700 La Tronche, France",
+      "sentAt": "2026-05-14T08:52:25.290Z"
+    },
+    {
+      "placeId": "ChIJ1aN506H0ikcRoZ7tktwEf88",
+      "name": "SODEGE",
+      "email": "contact@sodege.com",
+      "website": "http://www.sodege.com/",
+      "address": "6 Bd Roger Salengro, 38100 Grenoble, France",
+      "sentAt": "2026-05-14T08:52:30.399Z"
+    },
+    {
+      "placeId": "ChIJASvqdeud8kcRaOZ_sCcqzCU",
+      "name": "Prêt à Partir Dijon (Ambassade FRAM)",
+      "email": "recrutement@pretapartir.fr",
+      "website": "https://www.pretapartir.fr/nos-agences/pret-a-partir-dijon.html",
+      "address": "10 Rue de la Liberté, 21000 Dijon, France",
+      "sentAt": "2026-05-15T08:57:52.846Z"
+    },
+    {
+      "placeId": "ChIJtWSlS-qd8kcRJg-hGF6NZoY",
+      "name": "Selectour Voyages Girardot",
+      "email": "mail@mail.com",
+      "website": "https://www.selectour-voyages-girardot.com/",
+      "address": "18 Rue du Chapeau Rouge, 21000 Dijon, France",
+      "sentAt": "2026-05-15T08:57:57.921Z"
+    },
+    {
+      "placeId": "ChIJtzPSfRhi7UcRlJjf5pLhQDI",
+      "name": "Agence de voyages Promovacances Dijon",
+      "email": "agence-dijon@promovacances.com",
+      "website": "https://www.promovacances.com/agences-de-voyages/agence-de-voyage-toison-d-or-dijon-21000/",
+      "address": "Parc Commercial de la Toison d'Or, N/A Rte de Langres, 21000 Dijon, France",
+      "sentAt": "2026-05-15T08:58:02.045Z"
+    },
+    {
+      "placeId": "ChIJJxDfJuqd8kcR8ZBw_Aapl7c",
+      "name": "Agence de voyage TUI STORE Dijon",
+      "email": "agencedijon@tuifrance.com",
+      "website": "https://agences-de-voyages.tui.fr/dijon/agence-de-voyage-tui-store-dijon-6",
+      "address": "18 Rue Piron, 21000 Dijon, France",
+      "sentAt": "2026-05-15T08:58:07.159Z"
+    },
+    {
+      "placeId": "ChIJ3bLVKuid8kcR8WRPRk5cAT0",
+      "name": "Voyage Conseil Bourgogne SARL",
+      "email": "agence@voyageconseilbourgogne.fr",
+      "website": "http://www.voyageconseilbourgogne.fr/?utm_source=gmb",
+      "address": "1 Pl. des Cordeliers, 21000 Dijon, France",
+      "sentAt": "2026-05-15T08:58:12.031Z"
+    },
+    {
+      "placeId": "ChIJCxppze-oi0cRV8ddM36tl_A",
+      "name": "France-Makkah by Omra & Hajj",
+      "email": "contact@france-makkah.com",
+      "website": "https://www.france-makkah.com/",
+      "address": "52 Rue d'Auxonne, 21000 Dijon, France",
+      "sentAt": "2026-05-15T08:58:18.848Z"
+    },
+    {
+      "placeId": "ChIJBSwsfK-d8kcRASddbWN3sCk",
+      "name": "Agence de Voyages Club Med Dijon",
+      "email": "agence.dijon@clubmed.com",
+      "website": "https://agence.clubmed.fr/fr/france/bourgogne-franche-comte/cote-dor/dijon/agence-de-voyages-club-med-dijon-50",
+      "address": "20 Rue des Forges, 21000 Dijon, France",
+      "sentAt": "2026-05-15T08:58:22.912Z"
+    },
+    {
+      "placeId": "ChIJ2-PdRkUqcUURSstTrQT0YZM",
+      "name": "Omra Hajj Family",
+      "email": "omrahajjfamily@hotmail.com",
+      "website": "https://omra-hajj-family.com/",
+      "address": "14 Rue Pierre de Coubertin, 21000 Dijon, France",
+      "sentAt": "2026-05-15T08:58:26.889Z"
+    },
+    {
+      "placeId": "ChIJI4xMiyWd8kcRhU6xOssqn2Y",
+      "name": "ACTIVE TOURS DIJON",
+      "email": "info@active-tours.fr",
+      "website": "https://active-tours.fr/",
+      "address": "78 Rue Monge, 21000 Dijon, France",
+      "sentAt": "2026-05-15T08:58:31.159Z"
+    },
+    {
+      "placeId": "ChIJI6Q5tW_AB0ERAGiPzfxEeMA",
+      "name": "Vision d'Ailleurs Voyages",
+      "email": "contact@visiondailleurs.fr",
+      "website": "https://visiondailleurs.fr/?utm_source=gmb",
+      "address": "31 Rue de la Libération, 21240 Talant, France",
+      "sentAt": "2026-05-15T08:58:39.389Z"
+    },
+    {
+      "placeId": "ChIJL5eaIbqNyRIRFDBLjmLlNaU",
+      "name": "️ Multi Tech Rénov (MTR) ️- Travaux de rénovation à Aix en Provence",
+      "email": "charlesoliverx@gmail.com",
+      "website": "https://www.mtrenovation-aixenprovence.fr/",
+      "address": "20 Bd du Roi René, 13100 Aix-en-Provence, France",
+      "sentAt": "2026-05-18T09:02:37.081Z"
+    },
+    {
+      "placeId": "ChIJhTjk4HiNyRIRtDeMjnN5AUo",
+      "name": "EPC Travaux - Construction et Rénovation",
+      "email": "contact@epc-travaux.fr",
+      "website": "https://www.epc-travaux.fr/",
+      "address": "55 Rue Cornaline, 13510 Éguilles, France",
+      "sentAt": "2026-05-18T09:02:41.815Z"
+    },
+    {
+      "placeId": "ChIJ58tpmxjtyRIRMbT0jwIhgRE",
+      "name": "SECTP",
+      "email": "infos@sectp.com",
+      "website": "http://www.sectp.com/",
+      "address": "185 Av. Archimède, 13290 Aix-en-Provence, France",
+      "sentAt": "2026-05-18T09:02:47.938Z"
+    },
+    {
+      "placeId": "ChIJ8ybcROmSyRIRrQklWy1olJw",
+      "name": "COGEBAT",
+      "email": "contact@cogebat.pro",
+      "website": "http://www.cogebat.pro/",
+      "address": "1040 Av. Jean Perrin, 13290 Aix-en-Provence, France",
+      "sentAt": "2026-05-18T09:02:55.582Z"
+    },
+    {
+      "placeId": "ChIJfaoSNzyNyRIRlcIwipUcV0M",
+      "name": "✅ Pierre et Construction",
+      "email": "info@pierreetconstruction.fr",
+      "website": "https://www.pierreetconstruction.fr/",
+      "address": "1561 Chem. de la Muscatelle, 13790 Châteauneuf-le-Rouge, France",
+      "sentAt": "2026-05-18T09:03:04.539Z"
+    },
+    {
+      "placeId": "ChIJT9PvY7yNyRIRzVuQdx8j0As",
+      "name": "CHVS Rénovation",
+      "email": "chvsrenovation@gmail.com",
+      "website": "http://fcrbatimrenov.fr/",
+      "address": "3 Rue du Puits Neuf, 13100 Aix-en-Provence, France",
+      "sentAt": "2026-05-18T09:03:10.525Z"
+    },
+    {
+      "placeId": "ChIJ605_Bdkd90cRi_F5io7C658",
+      "name": "Agence Vingt Deux",
+      "email": "contact@vingtdeux.fr",
+      "website": "https://www.vingtdeux.fr/",
+      "address": "22 All. Alan Turing, 63000 Clermont-Ferrand, France",
+      "sentAt": "2026-05-19T09:01:07.614Z"
+    },
+    {
+      "placeId": "ChIJLQW_Cg4d90cRzeZG-3dDcKs",
+      "name": "AGENCE DA'COM",
+      "email": "contact@agence-dacom.fr",
+      "website": "https://www.agence-dacom.fr/",
+      "address": "10 All. Evariste Galois, 63000 Clermont-Ferrand, France",
+      "sentAt": "2026-05-19T09:01:13.114Z"
+    },
+    {
+      "placeId": "ChIJURggIXcZ90cRJC9d3Ue6ugk",
+      "name": "Floricom | Agence de communication",
+      "email": "agence@floricom.fr",
+      "website": "https://www.floricom.fr/",
+      "address": "126 Rue Sully, 63100 Clermont-Ferrand, France",
+      "sentAt": "2026-05-19T09:01:20.473Z"
+    },
+    {
+      "placeId": "ChIJk4eyNkgZ90cRKlms7yunBIk",
+      "name": "Agence MKF",
+      "email": "contact@agencemkf.fr",
+      "website": "https://agencemkf.fr/",
+      "address": "8 Rue Eric de Cromières, 63000 Clermont-Ferrand, France",
+      "sentAt": "2026-05-19T09:01:25.833Z"
+    },
+    {
+      "placeId": "ChIJUZis5QMc90cRE2lsSpXbO6U",
+      "name": "Scopika agence digitale",
+      "email": "contact@scopika.com",
+      "website": "https://www.scopika.com/",
+      "address": "15, Autre entrée :, 17 Rue du Pré la Reine, 63100 Clermont-Ferrand, France",
+      "sentAt": "2026-05-19T09:01:31.031Z"
+    },
+    {
+      "placeId": "ChIJuXkJeOgb90cRXOmSpte-Yac",
+      "name": "SAS Communication",
+      "email": "recrutement@sas-communication.fr",
+      "website": "http://www.sas-communication.fr/",
+      "address": "17 Rue Saint-Arthème, 63000 Clermont-Ferrand, France",
+      "sentAt": "2026-05-19T09:01:44.699Z"
+    },
+    {
+      "placeId": "ChIJabax8q4e90cRze3MkvgX17o",
+      "name": "LEMON",
+      "email": "hello@hellolemon.fr",
+      "website": "https://hellolemon.fr/",
+      "address": "29 Rue des Jacobins, 63000 Clermont-Ferrand, France",
+      "sentAt": "2026-05-19T09:01:53.607Z"
+    },
+    {
+      "placeId": "ChIJE2tIZUdVE4oROzYME8ZEq_Q",
+      "name": "VESPERIART",
+      "email": "contact@vesperiart.com",
+      "website": "https://vesperiart.com/",
+      "address": "7 Rue Paul Verlaine, 49000 Angers, France",
+      "sentAt": "2026-05-19T09:01:58.549Z"
+    },
+    {
+      "placeId": "ChIJCUvZoSGv9UcR-HvaBEXp2ig",
+      "name": "Eric Favier réception",
+      "email": "info@website.com",
+      "website": "http://traiteur-st-etienne.fr/",
+      "address": "10 Rue Émile, 42100 Saint-Étienne, France",
+      "sentAt": "2026-05-20T09:00:27.301Z"
+    },
+    {
+      "placeId": "ChIJCeUXgBqs9UcRL-5ldHgpqOM",
+      "name": "Traiteur Faye J-M",
+      "email": "traiteur.faye@gmail.com",
+      "website": "https://traiteurfayejm.eatbu.com/",
+      "address": "3 Rue Edmond Charpentier, 42000 Saint-Étienne, France",
+      "sentAt": "2026-05-20T09:00:34.987Z"
+    },
+    {
+      "placeId": "ChIJ48fMGjCp9UcRqO047JehWHs",
+      "name": "Ethic Table - Traiteur & Restauration Collective",
+      "email": "phone@2x.png",
+      "website": "http://www.ethic-table.fr/",
+      "address": "12 Imp. Côte Thiollière, 42100 Saint-Étienne, France",
+      "sentAt": "2026-05-20T09:00:43.578Z"
+    },
+    {
+      "placeId": "ChIJ83cHkhCu9UcRonh6smHQXpM",
+      "name": "Aux Rendez-vous des Saveurs",
+      "email": "contact@auxrendez-vousdessaveurs.com",
+      "website": "https://www.auxrendez-vousdessaveurs.com/",
+      "address": "20 Rue Sadi Carnot, 42230 Roche-la-Molière, France",
+      "sentAt": "2026-05-20T09:00:53.870Z"
+    },
+    {
+      "placeId": "ChIJAQAQpryu9UcRULcydZw6-Bw",
+      "name": "Artisans traiteur rotisseur à Saint-Etienne",
+      "email": "kampoulet@hotmail.fr",
+      "website": "https://ketmplatscuisines.fr/",
+      "address": "7 Rue de Montmartre, 42000 Saint-Étienne, France",
+      "sentAt": "2026-05-20T09:01:02.808Z"
+    },
+    {
+      "placeId": "ChIJR8EaP3iv9UcRoU-1aZL7nXk",
+      "name": "Pause Traiteur",
+      "email": "pausetraiteur@outlook.fr",
+      "website": "http://pause-traiteur.fr/",
+      "address": "87 Rue Désiré Claude, 42100 Saint-Étienne, France",
+      "sentAt": "2026-05-20T09:01:10.767Z"
+    },
+    {
+      "placeId": "ChIJA3LgfVKp9UcR4ttVijb3hJ4",
+      "name": "Pause et Plaisir",
+      "email": "contact@pauseetplaisir.fr",
+      "website": "https://www.pauseetplaisir.fr/",
+      "address": "7 Imp. Fauriat, 42000 Saint-Étienne, France",
+      "sentAt": "2026-05-20T09:01:19.224Z"
+    },
+    {
+      "placeId": "ChIJBdetRu-v9UcRPCNBR9-R8H0",
+      "name": "Kitchen Street",
+      "email": "ezgif.com-webp-to-png_1_100x@2x.png",
+      "website": "https://www.kitchenstreet.fr/",
+      "address": "1 Bd Dalgabio, 42000 Saint-Étienne, France",
+      "sentAt": "2026-05-20T09:01:23.886Z"
+    },
+    {
+      "placeId": "ChIJZ5XQSd-t9UcR_kGHeE3Yb04",
+      "name": "TRAITEUR SEBASTIEN DERAIL",
+      "email": "traiteur.derail2008@gmail.com",
+      "website": "https://traiteur-sebastien-derail-saint-etienne.eatbu.com/",
+      "address": "41 Rue Charles de Gaulle, 42000 Saint-Étienne, France",
+      "sentAt": "2026-05-20T09:01:30.970Z"
+    },
+    {
+      "placeId": "ChIJw6_BYPu9FkgRVed2cC1G89Y",
+      "name": "Lines Of Driving Driving School Brest",
+      "email": "lignesdeconduite29@gmail.com",
+      "website": "https://www.lignesdeconduite29.com/",
+      "address": "87 Rue Général Gallieni, 29200 Brest, France",
+      "sentAt": "2026-05-21T09:00:50.961Z"
+    },
+    {
+      "placeId": "ChIJU3CMElG5FkgRnsDf1yVebwo",
+      "name": "CONDUITE 29",
+      "email": "conduite29@orange.fr",
+      "website": "http://www.conduite29.fr/",
+      "address": "7 Rue de Siam, 29200 Brest, France",
+      "sentAt": "2026-05-21T09:00:56.298Z"
+    },
+    {
+      "placeId": "ChIJYzCURZK7FkgRCQ5XrP-kre8",
+      "name": "Lambé Conduite",
+      "email": "web@lambeconduite.com",
+      "website": "http://lambeconduite.com/",
+      "address": "15 Rue Robespierre, 29200 Brest, France",
+      "sentAt": "2026-05-21T09:01:02.259Z"
+    },
+    {
+      "placeId": "ChIJgVgeGFO5FkgRNStmwJFeCL0",
+      "name": "ECF - French Driving School",
+      "email": "ecf.brestguipavas@ecf-roudaut.fr",
+      "website": "https://www.ecf.asso.fr/Auto-ecole/ROUDAUT/ECF-ROUDAUT-Brest-Recouvrance-BREST",
+      "address": "22 Rue de la Porte, 29200 Brest, France",
+      "sentAt": "2026-05-21T09:01:07.679Z"
+    },
+    {
+      "placeId": "ChIJ4zIaDgm8FkgRmnB2_92ur2s",
+      "name": "French Driving School",
+      "email": "ecf.brestbellevue@ecf-roudaut.fr",
+      "website": "https://www.ecf.asso.fr/Auto-ecole/ROUDAUT/ECF-ROUDAUT-Brest-Bellevue-BREST",
+      "address": "24 Pl. Napoléon III, 29200 Brest, France",
+      "sentAt": "2026-05-21T09:01:13.766Z"
+    },
+    {
+      "placeId": "ChIJdUDYd--7FkgRtnjj49gUHkA",
+      "name": "Campus Conduite",
+      "email": "campusconduitebrest@gmail.com",
+      "website": "https://auto-ecole.codesrousseau.fr/annuaire-auto-ecoles/brest/campus-conduite-brest/20307",
+      "address": "Halles de Kérinou, 66 Rue Auguste Kervern, 29200 Brest, France",
+      "sentAt": "2026-05-21T09:01:21.853Z"
+    },
+    {
+      "placeId": "ChIJH1GrhK--FkgRAneE3y2_djc",
+      "name": "School Of Driving Contact",
+      "email": "contact@eccontact.fr",
+      "website": "http://www.eccontact.fr/",
+      "address": "255 Rue Anatole France, 29200 Brest, France",
+      "sentAt": "2026-05-21T09:01:27.071Z"
+    },
+    {
+      "placeId": "ChIJ4954VZK7FkgRyhKCxEniISs",
+      "name": "Armor Conduite Auto Moto School",
+      "email": "armor.conduite.brest@gmail.com",
+      "website": "https://armor-conduite.com/",
+      "address": "20 Rue Robespierre, 29200 Brest, France",
+      "sentAt": "2026-05-21T09:01:32.984Z"
+    },
+    {
+      "placeId": "ChIJiZQ21dG7FkgROf7P9-d8qfY",
+      "name": "Driving School Cer",
+      "email": "cerrichardthomas270@orange.fr",
+      "website": "http://www.auto-ecole-cer.com/",
+      "address": "8 Pl. de Strasbourg, 29200 Brest, France",
+      "sentAt": "2026-05-21T09:01:41.362Z"
+    },
+    {
+      "placeId": "ChIJwZ9DN2q6FkgR-SeE8Ds2dDU",
+      "name": "ECF - French Driving School",
+      "email": "ecf.brestguipavas@ecf-roudaut.fr",
+      "website": "https://www.ecf.asso.fr/Auto-ecole/ROUDAUT/ECF-ROUDAUT-Centre-de-formation-professionnelle-BREST-GUIPAVAS",
+      "address": "245 Rue du Froutven, 29490 Guipavas, France",
+      "sentAt": "2026-05-21T09:01:46.525Z"
+    },
+    {
+      "placeId": "ChIJNTZPm-C7FkgRaXf8qvT6pJA",
+      "name": "Education A La Route",
+      "email": "education-a-la-route@orange.fr",
+      "website": "http://www.ifsr.fr/",
+      "address": "6 Pl. Maurice Gillet, 29200 Brest, France",
+      "sentAt": "2026-05-21T09:01:52.387Z"
+    },
+    {
+      "placeId": "ChIJt6JIXve7FkgRehkast01wJQ",
+      "name": "Auto Progress",
+      "email": "autoprogress29@gmail.com",
+      "website": "http://autoprogress.fr/",
+      "address": "63 Rue Professeur Langevin, 29200 Brest, France",
+      "sentAt": "2026-05-21T09:01:56.491Z"
+    },
+    {
+      "placeId": "ChIJZbHshRbV_EcRwJ5w8ajT8sQ",
+      "name": "Mayeul DE LA SELLE",
+      "email": "contact.dataprivacy@doctolib.com",
+      "website": "https://www.doctolib.fr/masseur-kinesitherapeute/tours/mayeul-de-la-selle?utm_campaign=google-maps&utm_content=tours&utm_medium=organic&utm_source=google&utm_term=masseur-kinesitherapeute",
+      "address": "64 Bd Béranger, 37000 Tours, France",
+      "sentAt": "2026-05-22T08:59:40.166Z"
+    },
+    {
+      "placeId": "ChIJq19Djt1Z4UcRXlrKAfhLbYY",
+      "name": "François Jourdran - Ostéopathe Tours Centre",
+      "email": "contact.dataprivacy@doctolib.com",
+      "website": "https://www.doctolib.fr/osteopathe/tours/francois-jourdran",
+      "address": "64 Bis Bd Béranger, 37000 Tours, France",
+      "sentAt": "2026-05-22T08:59:44.979Z"
+    },
+    {
+      "placeId": "ChIJIauu11vV_EcRqI_PSdBfTKY",
+      "name": "Elisa Parat",
+      "email": "contact.dataprivacy@doctolib.com",
+      "website": "https://www.doctolib.fr/masseur-kinesitherapeute/tours/elisa-parat?utm_campaign=google-maps&utm_content=tours&utm_medium=organic&utm_source=google&utm_term=masseur-kinesitherapeute",
+      "address": "22 bis Av. de Grammont, 37000 Tours, France",
+      "sentAt": "2026-05-22T08:59:51.488Z"
+    },
+    {
+      "placeId": "ChIJ9SLnFMbV_EcRdMvzSNrCnmI",
+      "name": "NUNEZ Noa - Cabinet 197 grammont",
+      "email": "nunez.noa.kine@free.fr",
+      "website": "https://maddie.doctor/cabinet/kine/tours/cabinet-de-kinesitherapie-197-grammont",
+      "address": "197 Av. de Grammont, 37000 Tours, France",
+      "sentAt": "2026-05-22T08:59:56.538Z"
+    },
+    {
+      "placeId": "ChIJo0hQPwDV_EcRMATODjNQI_s",
+      "name": "Léa Juillet",
+      "email": "contact.dataprivacy@doctolib.com",
+      "website": "https://www.doctolib.fr/masseur-kinesitherapeute/tours/lea-juillet",
+      "address": "5 Rue Origet, 37000 Tours, France",
+      "sentAt": "2026-05-22T09:00:01.943Z"
+    },
+    {
+      "placeId": "ChIJ28ZO-YbV_EcRthyEAx40aEI",
+      "name": "Chloé GROLLEAU - KSP",
+      "email": "contact.dataprivacy@doctolib.com",
+      "website": "http://www.doctolib.fr/masseur-kinesitherapeute/saint-cyr-sur-loire/chloe-grolleau?utm_campaign=google-maps&utm_content=saint-cyr-sur-loire&utm_medium=organic&utm_source=google&utm_term=masseur-kinesitherapeute",
+      "address": "5 Rue Origet, 37000 Tours, France",
+      "sentAt": "2026-05-22T09:00:08.187Z"
+    },
+    {
+      "placeId": "ChIJDcV5-gzV_EcRbw8pkKfFKAI",
+      "name": "Cabinet de Kinésithérapie du Carré des Lys",
+      "email": "maeva.sportsante@gmail.com",
+      "website": "https://cabinetdeslys.fr/",
+      "address": "24 Bd Jean Royer, 37000 Tours, France",
+      "sentAt": "2026-05-22T09:00:13.072Z"
+    },
+    {
+      "placeId": "ChIJ5UJ7WJBxsBIRLtzocSUY4IY",
+      "name": "Boulangerie Feuillette",
+      "email": "oanh@agencematch.fr",
+      "website": "https://www.feuillette.fr/",
+      "address": "1116 Chem. de la Fossella, 66100 Perpignan, France",
+      "sentAt": "2026-05-25T09:13:18.185Z"
+    },
+    {
+      "placeId": "ChIJBTF9nMJtsBIRPLgkJMJRTcA",
+      "name": "Marie Blachère PERPIGNAN PRADES",
+      "email": "estelle.genot@blachere.fr",
+      "website": "https://boulangeries.marieblachere.com/fr/france-FR/5233/marie-blachere-perpignan-prades/details?utm_source=google&utm_medium=organic&utm_campaign=mybusiness-website",
+      "address": "2609 Av. de Prades, 66000 Perpignan, France",
+      "sentAt": "2026-05-25T09:13:42.561Z"
+    },
+    {
+      "placeId": "ChIJKwhjdxvclEcRpcy65xyHnRY",
+      "name": "Silver hands",
+      "email": "wavy@treatwell.fr",
+      "website": "https://booking.wavy.pro/auxmainsdargent",
+      "address": "15 Rue du Neufbourg, 57000 Metz, France",
+      "sentAt": "2026-05-26T09:02:00.223Z"
+    },
+    {
+      "placeId": "ChIJYW7xgwLclEcR-dS5eNP2s9k",
+      "name": "Saint Alban Metz",
+      "email": "contact@saintalban-coiffure.com",
+      "website": "http://www.saintalban-coiffure.com/",
+      "address": "24 Rue du Palais, 57000 Metz, France",
+      "sentAt": "2026-05-26T09:02:07.119Z"
+    },
+    {
+      "placeId": "ChIJ0a2WzALclEcRqPw2a8fvVNk",
+      "name": "Camille Albane - Coiffeur Metz",
+      "email": "s150192@dessange-international.com",
+      "website": "https://salon.camillealbane.com/coiffeur/metz-hardie/?utm_source=150192&utm_medium=HP&utm_campaign=MyBusinessYext&y_source=1_MTUxMDAzNjAtNzE1LWxvY2F0aW9uLndlYnNpdGU=",
+      "address": "6/8 Rue Pierre Hardie, 57000 Metz, France",
+      "sentAt": "2026-05-26T09:02:13.913Z"
+    },
+    {
+      "placeId": "ChIJkUhz8ojdlEcR6oWDCx10ha4",
+      "name": "Coiffure barber Tuzla 075",
+      "email": "semirhaliti975@gmail.com",
+      "website": "https://widget.treatwell.fr/salon/barber-tuzla-semir-style/",
+      "address": "19 Rue du Coetlosquet, 57000 Metz, France",
+      "sentAt": "2026-05-26T09:02:19.858Z"
+    },
+    {
+      "placeId": "ChIJi1lUmIHdlEcRWrKxLlY8NfY",
+      "name": "Hairitage Metz",
+      "email": "hairitage.metz@gmail.com",
+      "website": "https://www.hairitagemetz.com/",
+      "address": "12 Av. Sébastopol, 57070 Metz, France",
+      "sentAt": "2026-05-26T09:02:25.206Z"
+    },
+    {
+      "placeId": "ChIJjUqXj4pjjUcRxQZCQpbNRyw",
+      "name": "Salle de sport - ON AIR Besançon",
+      "email": "besancon@onair-fitness.fr",
+      "website": "https://onair-fitness.fr/club/besancon/",
+      "address": "ZAC de la chaufferie Bois, 226C Rue de Dole, 25000 Besançon, France",
+      "sentAt": "2026-05-27T09:01:15.828Z"
+    },
+    {
+      "placeId": "ChIJhbnojvtijUcR7suPB5eMi90",
+      "name": "Snatch Fitness Club",
+      "email": "contact@snatchfitnessclub.fr",
+      "website": "https://www.snatchfitnessclub.fr/",
+      "address": "101 Rue de Vesoul, 25000 Besançon, France",
+      "sentAt": "2026-05-27T09:01:21.270Z"
+    },
+    {
+      "placeId": "ChIJ2xOR2z1jjUcR_n8MoZLnCg8",
+      "name": "Salle de sport Besançon Centre - Liberty GYM",
+      "email": "besancon-centre-ville@libertygym.fr",
+      "website": "https://libertygym.fr/salle-de-sport/besancon-centre/",
+      "address": "3 Rue Jean Jacques Rousseau, 25000 Besançon, France",
+      "sentAt": "2026-05-27T09:01:26.515Z"
+    },
+    {
+      "placeId": "ChIJ9YXhEQ9jjUcRnycee3jwhJQ",
+      "name": "Liberty Gym",
+      "email": "besancon-marmier@libertygym.fr",
+      "website": "https://libertygym.fr/besancon-marmier/",
+      "address": "9 Rue Xavier Marmier, 25000 Besançon, France",
+      "sentAt": "2026-05-27T09:01:33.351Z"
+    },
+    {
+      "placeId": "ChIJA5zQsiNjjUcRIrCtsVy1Nls",
+      "name": "Le Local Transformation physique",
+      "email": "jose@lelocalbesancon.com",
+      "website": "http://www.lelocalbesancon.com/",
+      "address": "Rue Weiss, 25000 Besançon, France",
+      "sentAt": "2026-05-27T09:01:44.564Z"
+    },
+    {
+      "placeId": "ChIJKXXvR7djjUcRkcj572cQ6cg",
+      "name": "Everest Sport Club",
+      "email": "everest.besancon@monsportclub.fr",
+      "website": "https://www.everest-sportclub.fr/",
+      "address": "4 Rue de l'Escale, 25000 Besançon, France",
+      "sentAt": "2026-05-27T09:01:49.940Z"
+    },
+    {
+      "placeId": "ChIJlYqVAABjjUcRkqSmwoZtnrE",
+      "name": "Warrior Mind - SPORT CLUB",
+      "email": "contact@warrior-mind.fr",
+      "website": "https://warrior-mind.fr/",
+      "address": "41 Rue Thomas Edison, 25000 Besançon, France",
+      "sentAt": "2026-05-27T09:01:58.151Z"
+    },
+    {
+      "placeId": "ChIJuyE8z6JjjUcRw8kG0Gq30DU",
+      "name": "Crossfit Besançon 958 Hyrox Club Training Gym",
+      "email": "crossfitbesancon958@gmail.com",
+      "website": "https://crossfitbesancon.com/",
+      "address": "29 Bd Président John Fitzgerald Kennedy, 25000 Besançon, France",
+      "sentAt": "2026-05-27T09:02:04.071Z"
+    },
+    {
+      "placeId": "ChIJVVVVVWhijUcRKrGEaZJ68Zg",
+      "name": "Liberty Gym Besançon Valentin - Liberty GYM Salle de sport",
+      "email": "besancon-valentin@libertygym.fr",
+      "website": "https://libertygym.fr/salle-de-sport/besancon-valentin/",
+      "address": "51 Rue de Châtillon, 25480 École-Valentin, France",
+      "sentAt": "2026-05-27T09:02:12.079Z"
+    },
+    {
+      "placeId": "ChIJeVHtKcZijUcRZ-ys7oftii0",
+      "name": "COP'S - Besançon Fitness",
+      "email": "votre@email.fr",
+      "website": "http://cops25.com/",
+      "address": "56 Chem. des Montarmots, 25000 Besançon, France",
+      "sentAt": "2026-05-27T09:02:18.203Z"
+    },
+    {
+      "placeId": "ChIJuRcb_X9jjUcR_uy7wRRZaCI",
+      "name": "So'Fitness Besançon",
+      "email": "sofitnessbesancon@gmail.com",
+      "website": "http://www.sofitness-studio.fr/",
+      "address": "21 B Rue de la République, 25000 Besançon, France",
+      "sentAt": "2026-05-27T09:02:24.191Z"
+    },
+    {
+      "placeId": "ChIJdadSmdTk5EcREQm0KPRXM2o",
+      "name": "Pharmacie Centrale Orléans",
+      "email": "support@valwin.fr",
+      "website": "https://pharmacie-centrale-orleans.epharmacie.pro/",
+      "address": "19 Rue de la République, 45000 Orléans, France",
+      "sentAt": "2026-05-28T09:06:25.731Z"
+    },
+    {
+      "placeId": "ChIJezwCUDbl5EcRSIv_DL9fL5Q",
+      "name": "PHARMACY PHARMAVANCE Orleans",
+      "email": "compharmavance@gmail.com",
+      "website": "https://www.pharmavance.com/",
+      "address": "103 Rue du Faubourg Madeleine, 45000 Orléans, France",
+      "sentAt": "2026-05-28T09:06:30.468Z"
+    },
+    {
+      "placeId": "ChIJ2dTfE6lx5kcRSCqwMfqsUww",
+      "name": "Pharmacie Principale de la Porte d'Orléans",
+      "email": "pharmaman75@gmail.com",
+      "website": "https://pharmacie-porte-orleans.mesoigner.fr/",
+      "address": "4 Pl. du 25 Août 1944, 75014 Paris, France",
+      "sentAt": "2026-05-28T09:06:36.183Z"
+    },
+    {
+      "placeId": "ChIJ8Uraxgjk5EcRN6A2-IC7qm4",
+      "name": "Rond Point Pharmacy",
+      "email": "support@valwin.fr",
+      "website": "https://pharmacie-du-rond-point-orleans.epharmacie.pro/",
+      "address": "16 Av. de la Bolière, 45100 Orléans, France",
+      "sentAt": "2026-05-28T09:06:45.663Z"
+    },
+    {
+      "placeId": "ChIJfc-9Y0775EcRMXmlCyeMl_M",
+      "name": "Marie Stuart Pharmacy",
+      "email": "phmariestuart@gmail.com",
+      "website": "https://pharmaciemariestuart.mesoigner.fr/",
+      "address": "53 Bd Marie Stuart, 45000 Orléans, France",
+      "sentAt": "2026-05-28T09:06:53.837Z"
+    },
+    {
+      "placeId": "ChIJLbDPjejk5EcRPvv-Zvpm-5I",
+      "name": "Pharmacy Loire Valley",
+      "email": "contact.dataprivacy@doctolib.com",
+      "website": "https://www.doctolib.fr/pharmacie/orleans/pharmacie-du-val-de-loire-orleans",
+      "address": "77 Av. de la Mouillère, 45100 Orléans, France",
+      "sentAt": "2026-05-28T09:07:01.105Z"
+    },
+    {
+      "placeId": "ChIJd6TrA9Tk5EcRkmZg64BpeDI",
+      "name": "The Pharmacy Bolière",
+      "email": "contact.dataprivacy@doctolib.com",
+      "website": "https://www.doctolib.fr/pharmacie/orleans/pharmacie-de-la-boliere",
+      "address": "24 Av. de la Bolière, 45100 Orléans, France",
+      "sentAt": "2026-05-28T09:07:15.829Z"
+    },
+    {
+      "placeId": "ChIJDXG7LNTk5EcR41Awp-1iuVk",
+      "name": "Pharmacie de la Poste",
+      "email": "contact.dataprivacy@doctolib.com",
+      "website": "https://www.doctolib.fr/pharmacie/orleans/pharmacie-de-la-poste-orleans",
+      "address": "6 Rue des Carmes, 45000 Orléans, France",
+      "sentAt": "2026-05-28T09:07:20.740Z"
+    },
+    {
+      "placeId": "ChIJiST_ntT65EcRsIwdi77fmmQ",
+      "name": "Pharmacie Dunois",
+      "email": "spdunois@orange.fr",
+      "website": "https://pharmacie-dunois.pharmaciereference.fr/",
+      "address": "1 Pl. Dunois, 45000 Orléans, France",
+      "sentAt": "2026-05-28T09:07:25.975Z"
+    },
+    {
+      "placeId": "ChIJDRVz5Sr75EcRVnZKNNfTchA",
+      "name": "Pharmacie Gambetta",
+      "email": "phie.gambetta@yahoo.fr",
+      "website": "https://pharmacie-gambetta-orleans.pharmacorp.fr/",
+      "address": "8 Pl. Gambetta, 45000 Orléans, France",
+      "sentAt": "2026-05-28T09:07:32.652Z"
+    },
+    {
+      "placeId": "ChIJPflBsQnk5EcR4l8QQAieUxc",
+      "name": "Pharmacie de l'Indien",
+      "email": "phiedelindien@yahoo.fr",
+      "website": "https://pharmaciedelindien-orleans.pharmavie.fr/",
+      "address": "12 Av. du Président John Kennedy, 45100 Orléans, France",
+      "sentAt": "2026-05-28T09:07:39.036Z"
+    },
+    {
+      "placeId": "ChIJ_1fZiC775EcRwG6gW2ZFvWQ",
+      "name": "Pharmacie Emile Zola",
+      "email": "pharmacieemilezola450@gmail.com",
+      "website": "https://pharmacie-emilezola-orleans.pharmacorp.fr/",
+      "address": "All. Anne du Bourg, 45000 Orléans, France",
+      "sentAt": "2026-05-28T09:07:45.769Z"
+    },
+    {
+      "placeId": "ChIJCVqmEQUPUysR1yyeRppuXJk",
+      "name": "Centre dentaire Elbeuf : Dentiste Elbeuf - Dentego",
+      "email": "43@2x.png",
+      "website": "https://dentego.fr/nos-centres/normandie",
+      "address": "90 Rue des Martyrs, 76500 Elbeuf, France",
+      "sentAt": "2026-05-29T09:01:55.915Z"
+    },
+    {
+      "placeId": "ChIJCWf3fNDd4EcRsGxwf-Vxq9Q",
+      "name": "Cabinet Dentaire La Luciline - Docteur Élodie Miray - Chirurgien-dentiste",
+      "email": "contact.drmiray@gmail.com",
+      "website": "https://dr-elodie-miray.chirurgiens-dentistes.fr/",
+      "address": "31 Mail Andrée Putman, 76000 Rouen, France",
+      "sentAt": "2026-05-29T09:02:01.126Z"
+    },
+    {
+      "placeId": "ChIJl77I4_Pd4EcRtdWKqJCH26c",
+      "name": "Dr Julie Meuleman",
+      "email": "contact@docteur-elie.fr",
+      "website": "https://dr-elie-romain.chirurgiens-dentistes.fr/",
+      "address": "15 Rue de Crosne, 76000 Rouen, France",
+      "sentAt": "2026-05-29T09:02:10.526Z"
+    },
+    {
+      "placeId": "ChIJryQgP5Xd4EcRKb1jYdkhVfs",
+      "name": "Dr Romain ELIE",
+      "email": "contact@docteur-elie.fr",
+      "website": "http://www.docteur-elie.fr/",
+      "address": "15 Rue de Crosne, 76000 Rouen, France",
+      "sentAt": "2026-05-29T09:02:17.673Z"
+    },
+    {
+      "placeId": "ChIJjx7X8n7e4EcRLPOxXSEMu2w",
+      "name": "Dr GRAINDORGE Charles - ORTHODONTISTE ROUEN",
+      "email": "rdv.ch.graindorge@iortho.fr",
+      "website": "https://dr-charles-graindorge.chirurgiens-dentistes.fr/",
+      "address": "24 Rue des Arpents, 76000 Rouen, France",
+      "sentAt": "2026-05-29T09:02:26.512Z"
+    },
+    {
+      "placeId": "ChIJn6jIk7Lr9EcRiVvGW06DHDw",
+      "name": "Hôtel Vaubecour",
+      "email": "contact@hotelvaubecour-lyon.com",
+      "website": "http://www.hotelvaubecour-lyon.com/",
+      "address": "28 Rue Vaubecour 2é étage, 69002 Lyon, France",
+      "sentAt": "2026-06-01T09:42:53.297Z"
+    },
+    {
+      "placeId": "ChIJuyL0JlTq9EcRhmUqkkypx_k",
+      "name": "Hôtel Mercure Lyon Centre Beaux Arts",
+      "email": "h2949@accor.com",
+      "website": "https://all.accor.com/lien_externe.svlt?goto=fiche_hotel&code_hotel=2949&merchantid=seo-maps-FR-2949&sourceid=aw-cen&utm_medium=seo%20maps&utm_source=google%20Maps&utm_campaign=seo%20maps",
+      "address": "73-75 Rue du Président Édouard Herriot, 69002 Lyon, France",
+      "sentAt": "2026-06-01T09:43:01.612Z"
+    },
+    {
+      "placeId": "ChIJf51bMmXq9EcRLsjk2d3kbp8",
+      "name": "Hôtel Première Classe Lyon Centre - Gare Part Dieu",
+      "email": "dpo@groupedulouvre.com",
+      "website": "https://lyon-centre-gare-part-dieu.premiereclasse.com/fr-fr/",
+      "address": "75 Bd Marius Vivier Merle, 69003 Lyon, France",
+      "sentAt": "2026-06-01T09:43:07.234Z"
+    },
+    {
+      "placeId": "ChIJxdy5lXfp9EcRoGKfr8kZ2oo",
+      "name": "hotelF1 Lyon Sud Oullins",
+      "email": "h2255@accor.com",
+      "website": "https://all.accor.com/lien_externe.svlt?goto=fiche_hotel&code_hotel=2255&merchantid=seo-maps-FR-2255&sourceid=aw-cen&utm_medium=seo%20maps&utm_source=google%20Maps&utm_campaign=seo%20maps",
+      "address": "10/12 Rue Elisée Reclus, 69600 Oullins-Pierre-Bénite, France",
+      "sentAt": "2026-06-01T09:43:12.920Z"
+    },
+    {
+      "placeId": "ChIJy6NMV3zr9EcRGI8vnMAn9L4",
+      "name": "ResidHotel Lyon Lamartine",
+      "email": "lamartine@residhotel.com",
+      "website": "https://www.residhotel.com/lyon-lamartine",
+      "address": "11 Av. Victor Hugo, 69130 Tassin-la-Demi-Lune, France",
+      "sentAt": "2026-06-01T09:43:17.991Z"
+    },
+    {
+      "placeId": "ChIJu3vpHk7q9EcRAtdpUqNwmHw",
+      "name": "Sofitel Lyon Bellecour",
+      "email": "h0553@sofitel.com",
+      "website": "http://sofitel.accor.com/hotels/0553?merchantid=seo-maps-FR-0553&sourceid=aw-cen&utm_source=google+Maps&utm_medium=seo+maps&utm_campaign=seo+maps&utm_term=Sofitel-Launch",
+      "address": "20 Quai du Dr Gailleton, 69002 Lyon, France",
+      "sentAt": "2026-06-01T09:43:22.900Z"
+    },
+    {
+      "placeId": "ChIJb-N5pL_B9EcR8S1x6afajnM",
+      "name": "Hôtel Maison Lacassagne",
+      "email": "contact@hotel-lacassagne.fr",
+      "website": "http://www.hotel-maisonlacassagne.fr/",
+      "address": "245 Av. Lacassagne, 69003 Lyon, France",
+      "sentAt": "2026-06-01T09:43:31.483Z"
+    },
+    {
+      "placeId": "ChIJh9SOPDbr9EcRL1YsIQcBk80",
+      "name": "Boscolo Lyon Hotel & Spa",
+      "email": "contact.lyon@boscolocollection.com",
+      "website": "https://boscolocollection.com/lyon/",
+      "address": "11 Quai Jules Courmont, 69002 Lyon, France",
+      "sentAt": "2026-06-01T09:43:38.399Z"
+    },
+    {
+      "placeId": "ChIJn_S4DOHB9EcRBgmLoymEuC0",
+      "name": "Villa 216",
+      "email": "audrey@villa216.com",
+      "website": "http://www.villa216.com/",
+      "address": "216 Av. Félix Faure, 69003 Lyon, France",
+      "sentAt": "2026-06-01T09:43:45.191Z"
+    },
+    {
+      "placeId": "ChIJDRPusv_q9EcR_wtDJenVCZc",
+      "name": "Grand Hôtel Des Terreaux",
+      "email": "ght@hotel-lyon.fr",
+      "website": "http://www.hotel-lyon-grandhoteldesterreaux.fr/",
+      "address": "16 Rue Lanterne, 69001 Lyon, France",
+      "sentAt": "2026-06-01T09:43:51.655Z"
+    },
+    {
+      "placeId": "ChIJFSAsZ528rhIRfUm4oiPj16k",
+      "name": "Les Traits Français",
+      "email": "annesophie@lestraitsfrancais.com",
+      "website": "http://les-traits-francais.fr/",
+      "address": "8 Rue Jules Chalande, 31000 Toulouse, France",
+      "sentAt": "2026-06-02T09:19:58.072Z"
+    },
+    {
+      "placeId": "ChIJP8I4fFK9rhIRrKVxUH12BTU",
+      "name": "Les Sisterettes",
+      "email": "serviceclients.lessisterettes@gmail.com",
+      "website": "https://www.lessisterettes.fr/",
+      "address": "6 Rue Baronie, 31000 Toulouse, France",
+      "sentAt": "2026-06-02T09:20:05.899Z"
+    },
+    {
+      "placeId": "ChIJsQbzsOq9rhIRiZZRW0i_mOs",
+      "name": "INDIES Toulouse",
+      "email": "contact@indies.fr",
+      "website": "http://www.indies.fr/",
+      "address": "1 bis Rue Cantegril, 31000 Toulouse, France",
+      "sentAt": "2026-06-02T09:20:13.411Z"
+    },
+    {
+      "placeId": "ChIJ2ysIrJ28rhIRsteBC4A20TY",
+      "name": "Maison 123",
+      "email": "valeriedupont@gmail.com",
+      "website": "https://www.maison123.com/nos-boutiques/villes/boutiques?storeid=0181&utm_campaign=google_my_business&utm_medium=organic&utm_source=google",
+      "address": "27 Rue d'Alsace Lorraine, 31000 Toulouse, France",
+      "sentAt": "2026-06-02T09:20:19.161Z"
+    },
+    {
+      "placeId": "ChIJq923n_G9rhIR9cFopF9NT48",
+      "name": "Les Piplettes",
+      "email": "contact@lespiplettesstore.fr",
+      "website": "http://www.lespiplettesstore.fr/",
+      "address": "63 Rue de la Pomme, 31000 Toulouse, France",
+      "sentAt": "2026-06-02T09:20:24.200Z"
+    },
+    {
+      "placeId": "ChIJ7T4IXqK9rhIRhNgjE-a6qkM",
+      "name": "YAYA Toulouse",
+      "email": "contact@cosy-concept.fr",
+      "website": "https://cosy-concept.fr/",
+      "address": "9 Pl. Roger Salengro, 31000 Toulouse, France",
+      "sentAt": "2026-06-02T09:20:35.266Z"
+    },
+    {
+      "placeId": "ChIJy87brYK8rhIR0xXFQm6fvpU",
+      "name": "NEIWA",
+      "email": "neiwa-logo-black_100x@2x.png",
+      "website": "https://www.neiwa.fr/",
+      "address": "7 Rue Sainte-Ursule, 31000 Toulouse, France",
+      "sentAt": "2026-06-02T09:20:42.545Z"
+    },
+    {
+      "placeId": "ChIJZaknmZy8rhIRefx2ZNc3n0E",
+      "name": "Devernois Toulouse",
+      "email": "nom_utilisateur@exemple.com",
+      "website": "https://www.devernois.com/pages/devernois-toulouse",
+      "address": "27 Rue Boulbonne, 31000 Toulouse, France",
+      "sentAt": "2026-06-02T09:20:47.222Z"
+    },
+    {
+      "placeId": "ChIJy93nsXnbzRIRAHnQ8xiJYlQ",
+      "name": "La Claque Coffee Shop",
+      "email": "contact@laclaquecafe.com",
+      "website": "https://www.laclaquecafe.com/",
+      "address": "8 Rue du Pont Vieux, 06300 Nice, France",
+      "sentAt": "2026-06-03T09:29:14.937Z"
+    },
+    {
+      "placeId": "ChIJc2NzglPRzRIRgKXqhO-h2Vc",
+      "name": "Le Kawa - Brunch & Coffee Shop Nice",
+      "email": "nom@domain.com",
+      "website": "https://lekawanice.fr/",
+      "address": "23 Rue de Belgique, 06000 Nice, France",
+      "sentAt": "2026-06-03T09:29:23.359Z"
+    },
+    {
+      "placeId": "ChIJI8Z7lLjbzRIRYJGHwsADUY4",
+      "name": "Brume Coffee Nice",
+      "email": "contact@brumecoffeenice.fr",
+      "website": "https://www.brumecoffeenice.fr/",
+      "address": "34 Rue Pairolière, 06300 Nice, France",
+      "sentAt": "2026-06-03T09:29:30.802Z"
+    },
+    {
+      "placeId": "ChIJVd4DbI3RzRIRHzC7sSpWytU",
+      "name": "Atelier Alfred café",
+      "email": "atelieralfred13@gmail.com",
+      "website": "https://www.atelier-alfred.fr/",
+      "address": "13 Rue Vernier, 06000 Nice, France",
+      "sentAt": "2026-06-03T09:29:35.330Z"
+    },
+    {
+      "placeId": "ChIJO6fzjQvRzRIRRwQerV9_gqI",
+      "name": "Selah Atelier",
+      "email": "logo_selah_atelier_200x@2x.png",
+      "website": "http://www.selah-atelier.com/",
+      "address": "23 Rue de Dijon, 06000 Nice, France",
+      "sentAt": "2026-06-03T09:29:40.400Z"
+    },
+    {
+      "placeId": "ChIJ34qM7orbzRIR6wq4Ou3LO8k",
+      "name": "Chez Les Garçons",
+      "email": "contact@chezlesgarcons.fr",
+      "website": "https://www.chezlesgarcons.fr/",
+      "address": "1 Rue Niepce, 06000 Nice, France",
+      "sentAt": "2026-06-03T09:29:48.990Z"
+    },
+    {
+      "placeId": "ChIJ9b-Jl6DazRIRUfzIXKQBIyA",
+      "name": "Café de Nice",
+      "email": "lecafedenice@gmail.com",
+      "website": "http://www.lecafedenice.fr/",
+      "address": "1 Rue Maurice Jaubert, 06000 Nice, France",
+      "sentAt": "2026-06-03T09:29:54.838Z"
+    },
+    {
+      "placeId": "ChIJ_____w_vBUgR5iumPfAM6y4",
+      "name": "AB Plomberie",
+      "email": "gael@abplomberie.com",
+      "website": "http://www.abplomberie.com/?utm_source=gmb",
+      "address": "33 Rue du Plessis Tison, 44300 Nantes, France",
+      "sentAt": "2026-06-04T09:13:35.148Z"
+    },
+    {
+      "placeId": "ChIJpcSw8ZvuBUgRwP0fCIVj_BQ",
+      "name": "Ze Plombier - Nantes",
+      "email": "contact@zeplombier.fr",
+      "website": "https://www.zeplombier.fr/",
+      "address": "25 Rue Petite Biesse, 44200 Nantes, France",
+      "sentAt": "2026-06-04T09:13:42.160Z"
+    },
+    {
+      "placeId": "ChIJzZ_gdR3sBUgRxlaSlY7EpMs",
+      "name": "AMS Services - Spécialiste en Dépannage Plomberie et Remplacement de Chauffe Eau",
+      "email": "contact@ams-nantes.fr",
+      "website": "http://www.ams-nantes.fr/",
+      "address": "1 Rue la Fayette, 44000 Nantes, France",
+      "sentAt": "2026-06-04T09:13:48.375Z"
+    },
+    {
+      "placeId": "ChIJY3l_I4ftBUgRbvGADyjRfmM",
+      "name": "DU’EAU PLOMBERIE CHAUFFAGE - plombier Nantes",
+      "email": "dpc.nantes@gmail.com",
+      "website": "https://dueau-plomberie-chauffage.fr/",
+      "address": "2 Av. des Renoncules, 44300 Nantes, France",
+      "sentAt": "2026-06-04T09:13:53.512Z"
+    },
+    {
+      "placeId": "ChIJt9w5Nc3vBUgRG3i6T04qX90",
+      "name": "Plombier Nantes MATTOS VINCENT",
+      "email": "consommation@atlantique-mediation.org",
+      "website": "https://www.plombier-chauffagiste-vm.fr/",
+      "address": "17 Rue de la Planche au Gué, 44300 Nantes, France",
+      "sentAt": "2026-06-04T09:14:02.232Z"
+    },
+    {
+      "placeId": "ChIJJT3k0EztBUgR2ll-rHpwUUY",
+      "name": "C'est le Plombier",
+      "email": "g.palide@orange.fr",
+      "website": "http://www.plombier-serrurier-vitrier-nantes.fr/",
+      "address": "9 Rue Kléber, 44000 Nantes, France",
+      "sentAt": "2026-06-04T09:14:09.347Z"
+    },
+    {
+      "placeId": "ChIJf4M4hJ7tBUgRmqY-kcQHbvo",
+      "name": "Eco Detect - Recherche de Fuite Nantes",
+      "email": "contact@eco-detect.fr",
+      "website": "https://www.eco-detect.fr/",
+      "address": "39 Rue des Dervallières Etage 3, 44000 Nantes, France",
+      "sentAt": "2026-06-04T09:14:15.335Z"
+    },
+    {
+      "placeId": "ChIJjQ6IzFKe36kRiZXq4BHrnb8",
+      "name": "Service Dépannage Plomberie Chauffage",
+      "email": "contact@serf-plomberie-chauffagiste.fr",
+      "website": "https://serf-plomberie-chauffagiste.fr/",
+      "address": "19 Rue Claude et Simone Millot, 44300 Nantes, France",
+      "sentAt": "2026-06-04T09:14:22.748Z"
+    },
+    {
+      "placeId": "ChIJx15VXuW2JE4RZ6IMIILgH_w",
+      "name": "DL PLOMBIER CHAUFFAGISTE NANTES",
+      "email": "contact.dlplombier@gmail.com",
+      "website": "http://dlplombiernantes.fr/",
+      "address": "9 Rue de l'Enclos, 44700 Orvault, France",
+      "sentAt": "2026-06-04T09:14:31.031Z"
+    },
+    {
+      "placeId": "ChIJf8-LrGHtBUgRXVc-vf4K7U0",
+      "name": "Chauffage And Co",
+      "email": "chauffageandco@outlook.fr",
+      "website": "https://chauffageandco.fr/",
+      "address": "18 Rue du Calvaire de Grillaud, 44100 Nantes, France",
+      "sentAt": "2026-06-04T09:14:37.992Z"
+    },
+    {
+      "placeId": "ChIJTxX5rLvByRIR3qqvMZzVpjs",
+      "name": "Florent Delagrange Electricien Montpellier",
+      "email": "fdelectricienmontpellier@gmail.com",
+      "website": "http://electricienmontpellier.fr/",
+      "address": "17 Av. d'Assas Batiment C, 34000 Montpellier, France",
+      "sentAt": "2026-06-05T09:01:19.473Z"
+    },
+    {
+      "placeId": "ChIJtzPRR5-vthIRcSWJe1oTyuM",
+      "name": "Domus Service - Electricien Montpellier - Urgence électrique",
+      "email": "flags@2x.webp",
+      "website": "https://www.domusservice.fr/",
+      "address": "50 Rue des Sauges, 34070 Montpellier, France",
+      "sentAt": "2026-06-05T09:01:26.735Z"
+    },
+    {
+      "placeId": "ChIJkVaDwGD5NSwRLOQXFrNFDuE",
+      "name": "GENIUS ELEC | Electricien Montpellier - Installation, Dépannage Et Rénovation Électrique",
+      "email": "contact@geniuselec.com",
+      "website": "https://www.geniuselec.com/",
+      "address": "301 résid Le Mas D Aiguelongue, 55 Rue du Mas de Calenda, 34090 Montpellier, France",
+      "sentAt": "2026-06-05T09:01:32.712Z"
+    },
+    {
+      "placeId": "ChIJ-4Qm5tivthIRYr0jUbYtiyI",
+      "name": "ERVR34 Electricien Montpellier",
+      "email": "ervr34@gmail.com",
+      "website": "http://www.ervr34.eu/",
+      "address": "12 Rue Frédéric Bazille, 34000 Montpellier, France",
+      "sentAt": "2026-06-05T09:01:38.157Z"
+    },
+    {
+      "placeId": "ChIJcbR24xivthIRDtW23bCQDJk",
+      "name": "MAE MON ARTISAN ELECTRICIEN",
+      "email": "contact@kwatee-energie.fr",
+      "website": "https://kwatee-energies.fr/",
+      "address": "73 All. Kleber, 34000 Montpellier, France",
+      "sentAt": "2026-06-05T09:01:52.167Z"
+    },
+    {
+      "placeId": "ChIJX4jwCRGtthIR8GJoTPHsyzE",
+      "name": "Lumyos - Electricien et Dépannage à Montpellier et alentours",
+      "email": "contact@lumyos.fr",
+      "website": "https://lumyos.fr/?utm_source=google&utm_medium=organic&utm_campaign=gbp_website",
+      "address": "33 Rue de Lipari, 34080 Montpellier, France",
+      "sentAt": "2026-06-05T09:01:58.075Z"
+    },
+    {
+      "placeId": "ChIJGUhFlp_VwkcRbWeUq0aNTgQ",
+      "name": "Selectour - Solair Travel",
+      "email": "mail@mail.com",
+      "website": "https://www.solairvoyages.fr/",
+      "address": "2 Rue du Faubourg des Postes, 59000 Lille, France",
+      "sentAt": "2026-06-08T09:28:08.899Z"
+    },
+    {
+      "placeId": "ChIJy24KtUDVwkcR-1VmScmXr54",
+      "name": "Agence de voyages Fram Lille",
+      "email": "votre-email@merci.com",
+      "website": "https://www.fram.fr/agence-de-voyage/agence-lille-59000/",
+      "address": "35 Rue Neuve, 59800 Lille, France",
+      "sentAt": "2026-06-08T09:28:13.643Z"
+    },
+    {
+      "placeId": "ChIJkcl6fY_VwkcRS0Vb7d8NVbc",
+      "name": "Selectour - Travelil",
+      "email": "mail@mail.com",
+      "website": "https://www.travelil.fr/",
+      "address": "7 Pl. Richebé, 59000 Lille, France",
+      "sentAt": "2026-06-08T09:28:20.115Z"
+    },
+    {
+      "placeId": "ChIJszscZLvVwkcR-WG65mC2Rmk",
+      "name": "Terres De Cultures - Agence de voyages Lille",
+      "email": "contact@terresdecultures.fr",
+      "website": "http://www.terresdecultures.fr/",
+      "address": "24 Rue Eugène Vermersch, 59000 Lille, France",
+      "sentAt": "2026-06-08T09:28:30.506Z"
+    },
+    {
+      "placeId": "ChIJXzDDkPfVwkcRPhrPrGejsGc",
+      "name": "Promovacances Lille (Euralille)",
+      "email": "agence-euralille@promovacances.com",
+      "website": "https://www.promovacances.com/agences-de-voyages/agence-de-voyage-euralille-lille-59777/",
+      "address": "Centre Commercial, 100 Av. Willy Brandt, 59777 Lille, France",
+      "sentAt": "2026-06-08T09:28:34.692Z"
+    },
+    {
+      "placeId": "ChIJj3bs-4fVwkcRxtwIkWbgXPc",
+      "name": "Agence de voyage SC Travel",
+      "email": "info@sctravel.fr",
+      "website": "https://www.sctravel.fr/",
+      "address": "1 Rue du Plat, 59800 Lille, France",
+      "sentAt": "2026-06-08T09:28:45.291Z"
+    },
+    {
+      "placeId": "ChIJc240BHYqw0cRj4YLNYTBj1A",
+      "name": "Selectour - Génération Voyages",
+      "email": "mail@mail.com",
+      "website": "http://www.generationvoyages.com/",
+      "address": "62 Bd Carnot, 59000 Lille, France",
+      "sentAt": "2026-06-08T09:28:50.156Z"
+    },
+    {
+      "placeId": "ChIJVUDfO1_VwkcRts5FwkRB8hg",
+      "name": "Selectour - Océane Voyages",
+      "email": "mail@mail.com",
+      "website": "https://www.oceanevoyages-selectour.com/",
+      "address": "291 A Av. de Dunkerque, 59160 Lille, France",
+      "sentAt": "2026-06-08T09:28:54.475Z"
+    },
+    {
+      "placeId": "ChIJB_VIWInVwkcRna7vdE11O3Y",
+      "name": "Selectour - Soleil Voyages",
+      "email": "mail@mail.com",
+      "website": "https://www.soleil-selectour.com/",
+      "address": "45 Rue du Molinel, 59800 Lille, France",
+      "sentAt": "2026-06-08T09:28:58.826Z"
+    },
+    {
+      "placeId": "ChIJTYbsi6DfDkgRptPHTWKALoc",
+      "name": "Maison Tulipe | Fleuriste Rennes",
+      "email": "contact@sessile.fr",
+      "website": "https://www.sessile.fr/trouvez-votre-fleuriste/maison-tulipe/?utm_source=google_my_business&utm_medium=organic&utm_campaign=website",
+      "address": "9 Rue du Chapitre, 35000 Rennes, France",
+      "sentAt": "2026-06-09T09:01:16.088Z"
+    },
+    {
+      "placeId": "ChIJf7Ukwd_fDkgRVwUKnAh_mCY",
+      "name": "Le Bazar à Pétales",
+      "email": "lebazarapetales@gmail.com",
+      "website": "http://www.lebazarapetales.com/",
+      "address": "43 Rue Saint-Hélier, 35000 Rennes, France",
+      "sentAt": "2026-06-09T09:01:28.813Z"
+    },
+    {
+      "placeId": "ChIJh3SshCTDDkgR-9HHYLnsR0A",
+      "name": "Les Herbes Sauvages",
+      "email": "herbessauvages@gmail.com",
+      "website": "http://lesherbessauvages.fr/",
+      "address": "16 Rue Pont aux Foulons, 35000 Rennes, France",
+      "sentAt": "2026-06-09T09:01:35.790Z"
+    },
+    {
+      "placeId": "ChIJF6QASdnfDkgRduoGZ7lu1Io",
+      "name": "Monceau Fleurs",
+      "email": "service.consommateurs@monceaufleurs.com",
+      "website": "https://www.monceaufleurs.com/fleuriste/ille-et-vilaine/monceau-fleurs-rennes-nantes?utm_source=google&utm_medium=organic&utm_campaign=mybusiness-website",
+      "address": "252 ter Rue de Nantes, 35136 Saint-Jacques-de-la-Lande, France",
+      "sentAt": "2026-06-09T09:01:41.092Z"
+    },
+    {
+      "placeId": "ChIJq2y2ZUh06UcRvWwDzNpEq8c",
+      "name": "STUDIO DIEPPEDALLE / JACQUES DIEPPEDALLE",
+      "email": "studio.dieppedalle@gmail.com",
+      "website": "http://www.studio-dieppedalle.com/",
+      "address": "2 Rue des Salines, 51100 Reims, France",
+      "sentAt": "2026-06-10T09:07:18.242Z"
+    },
+    {
+      "placeId": "ChIJt-McqKt16UcRpfdj7sKPjDU",
+      "name": "Isabelle Limbach photographer",
+      "email": "nous_contacter@isabellephotographe.fr",
+      "website": "https://www.isabellephotographe.fr/",
+      "address": "Champagne-Ardenne, 68 Rue de Talleyrand, 51100 Reims, France",
+      "sentAt": "2026-06-10T09:07:25.345Z"
+    },
+    {
+      "placeId": "ChIJadnqTkh16UcRVCMYNUYK-mI",
+      "name": "Mille et une Poses",
+      "email": "milleetuneposes@orange.fr",
+      "website": "https://www.mille-et-une-poses.com/",
+      "address": "21 All. de Courtemont, 51450 Bétheny, France",
+      "sentAt": "2026-06-10T09:07:29.822Z"
+    },
+    {
+      "placeId": "ChIJ0baaIlB06UcRRaGT5timyVo",
+      "name": "NoMade Photographie",
+      "email": "sebastien.m@nomade.photo",
+      "website": "https://nomade.photo/",
+      "address": "82 Rue des Moulins, 51100 Reims, France",
+      "sentAt": "2026-06-10T09:07:35.786Z"
+    },
+    {
+      "placeId": "ChIJAwNCszl16UcRa9fB4tO5wes",
+      "name": "You & Eye Photo Reims Photographie d'Iris",
+      "email": "info@youandeyephoto.com",
+      "website": "https://youandeyephoto.com/boutique-reims/",
+      "address": "10 Rue Théodore Dubois, 51100 Reims, France",
+      "sentAt": "2026-06-10T09:07:41.935Z"
+    },
+    {
+      "placeId": "ChIJ8YNxebd16UcRGfVQgYxT2lY",
+      "name": "Maryline Photographe Reims",
+      "email": "contact@photosbymaryline.fr",
+      "website": "https://www.photosbymaryline.fr/",
+      "address": "2 All. Charlotte Perriand, 51100 Reims, France",
+      "sentAt": "2026-06-10T09:07:54.146Z"
+    },
+    {
+      "placeId": "ChIJg4lMr4x16UcRB5_3TNXG4PI",
+      "name": "CELIA BEAUSOLEIL PHOTOGRAPHE",
+      "email": "celiabeausoleil.photographe@gmail.com",
+      "website": "https://www.celiabeausoleilphotographe.com/",
+      "address": "Cr Christian Lange, 51430 Bezannes, France",
+      "sentAt": "2026-06-10T09:08:01.253Z"
+    },
+    {
+      "placeId": "ChIJXcVbNfsr6kcR-MEPtuE_hWQ",
+      "name": "Studio VingTrois - Agence de communication Reims (photo / vidéo / drone / réseaux sociaux)",
+      "email": "contact@studiovingtrois.fr",
+      "website": "http://www.studio-vingtrois.com/",
+      "address": "14 Rue Simon, 51100 Reims, France",
+      "sentAt": "2026-06-10T09:08:08.127Z"
+    },
+    {
+      "placeId": "ChIJgdAe3Qgv4EcRkLuy2dRHZ-E",
+      "name": "Allain Rénovation",
+      "email": "allainrenovation@gmail.com",
+      "website": "https://allainrenovation.wixsite.com/allain-renovation",
+      "address": "55 Rue de Neustrie, 76600 Le Havre, France",
+      "sentAt": "2026-06-11T09:21:58.109Z"
+    },
+    {
+      "placeId": "ChIJcRbyyMov4EcRNhpsRW_uoeo",
+      "name": "BK BATIMENT 93 - Entreprise au Havre Façadier spécialiste du ravalement de façade et rejointoiement de brique - LE HAVRE",
+      "email": "bkbati93@gmail.com",
+      "website": "http://www.bkbatiment.com/",
+      "address": "57 Rue Suzanne Valadon, 76620 Le Havre, France",
+      "sentAt": "2026-06-11T09:22:03.304Z"
+    },
+    {
+      "placeId": "ChIJWQCCBSAv4EcRdkrNgaHRp78",
+      "name": "Océane Construction",
+      "email": "construction.oceane@wanadoo.fr",
+      "website": "http://www.oceane-construction.fr/",
+      "address": "6 Pl. du Vieux Marché, 76600 Le Havre, France",
+      "sentAt": "2026-06-11T09:22:08.409Z"
+    },
+    {
+      "placeId": "ChIJc6ZKNN5mh6kRweZOpbaFUfo",
+      "name": "DELTA BATIMENT - Façadier Spécialiste du Ravalement, Enduit projeté ,ITE, Rejointoiement de brique au Havre",
+      "email": "deltabatiment@outlook.fr",
+      "website": "https://www.delta-batiment.com/",
+      "address": "116 Rue Florimond Laurent, 76620 Le Havre, France",
+      "sentAt": "2026-06-11T09:22:13.384Z"
+    },
+    {
+      "placeId": "ChIJvXKQ5A0v4EcR5CrHmcDHlQE",
+      "name": "GMB - Maîtrise d'oeuvre & Conception",
+      "email": "gilles.barre@gmb76.fr",
+      "website": "http://www.gmb76.fr/?utm_source=gmb",
+      "address": "Le, 104 Rue Voltaire, 76600 Le Havre, France",
+      "sentAt": "2026-06-11T09:22:18.354Z"
+    },
+    {
+      "placeId": "ChIJDzHPbNgu4EcR7yUd4ybn_iw",
+      "name": "Gueudry Constructions - LE HAVRE (constructeur maisons)",
+      "email": "secretariat@gueudry.fr",
+      "website": "http://www.gueudry.fr/",
+      "address": "18 Rue Saint-Jacques, 76600 Le Havre, France",
+      "sentAt": "2026-06-11T09:22:24.126Z"
+    },
+    {
+      "placeId": "ChIJs6SXhT4v4EcRIqq7hbWJjc4",
+      "name": "Océane rénovations et services père et fils",
+      "email": "contact@oceane-renovations-services.fr",
+      "website": "https://www.oceane-renovations-services.fr/",
+      "address": "191 Rue du Bois au Coq, 76620 Le Havre, France",
+      "sentAt": "2026-06-11T09:22:34.579Z"
+    },
+    {
+      "placeId": "ChIJl3VDEh4v4EcR-peHSZUb4RI",
+      "name": "Mon Plafond Tendu - Travaux, rénovation, pose plafond - Le Havre",
+      "email": "loic.lacorne@gmail.com",
+      "website": "http://www.mon-plafondtendu.fr/",
+      "address": "30 Rue Bougainville, 76600 Le Havre, France",
+      "sentAt": "2026-06-11T09:22:42.158Z"
+    },
+    {
+      "placeId": "ChIJ09jZIIEv4EcR2xA7MJ9sG9o",
+      "name": "ASR Habitat",
+      "email": "contact@asrhabitat.fr",
+      "website": "http://www.asrhabitat.fr/",
+      "address": "6 Rue Berthelot, 76600 Le Havre, France",
+      "sentAt": "2026-06-11T09:22:46.465Z"
+    },
+    {
+      "placeId": "ChIJsf9rH_OuEmsR_RBvKoSGLn8",
+      "name": "Insil",
+      "email": "alex@clearbit.com",
+      "website": "https://www.insil.com.au/",
+      "phone": "(02) 8074 1656",
+      "address": "Level 13, 1303/83 Mount St, North Sydney NSW 2060, Australia",
+      "marketCode": "AU",
+      "market": "Australia",
+      "marketGroup": "english",
+      "language": "en",
+      "score": 95,
+      "reasons": [
+        "site existant",
+        "email trouve",
+        "telephone disponible",
+        "adresse locale",
+        "fiche nommee"
+      ],
+      "sentAt": "2026-06-12T09:17:58.368Z"
+    },
+    {
+      "placeId": "ChIJE4ozlPKuEmsRpP0Verr9_b4",
+      "name": "Direct Clicks | Digital Marketing Agency",
+      "email": "info@directclicks.com.au",
+      "website": "https://directclicks.com.au/?utm_source=google&utm_medium=organic&utm_campaign=gmb",
+      "phone": "1800 007 089",
+      "address": "Suite 4, Level 9/171 Clarence St, Sydney NSW 2000, Australia",
+      "marketCode": "AU",
+      "market": "Australia",
+      "marketGroup": "english",
+      "language": "en",
+      "score": 95,
+      "reasons": [
+        "site existant",
+        "email trouve",
+        "telephone disponible",
+        "adresse locale",
+        "fiche nommee"
+      ],
+      "sentAt": "2026-06-12T09:18:04.745Z"
+    },
+    {
+      "placeId": "ChIJqzoD-aB3k2sR7j9NILm-tVc",
+      "name": "Digital Nomads HQ",
+      "email": "hello@dnhq.com.au",
+      "website": "https://www.digitalnomadshq.com.au/",
+      "phone": "1300 633 100",
+      "address": "208/45 Brisbane Rd, Mooloolaba QLD 4557, Australia",
+      "marketCode": "AU",
+      "market": "Australia",
+      "marketGroup": "english",
+      "language": "en",
+      "score": 95,
+      "reasons": [
+        "site existant",
+        "email trouve",
+        "telephone disponible",
+        "adresse locale",
+        "fiche nommee"
+      ],
+      "sentAt": "2026-06-12T09:18:11.359Z"
+    },
+    {
+      "placeId": "ChIJgQmtXo5C1moRu03iabc0FAc",
+      "name": "Impressive - Digital Marketing & SEO Agency",
+      "email": "icn_social_linkedin_footer@2x.png",
+      "website": "https://impressive.com.au/",
+      "phone": "1300 191 943",
+      "address": "Level 4/11-13 Wilson St, South Yarra VIC 3141, Australia",
+      "marketCode": "AU",
+      "market": "Australia",
+      "marketGroup": "english",
+      "language": "en",
+      "score": 95,
+      "reasons": [
+        "site existant",
+        "email trouve",
+        "telephone disponible",
+        "adresse locale",
+        "fiche nommee"
+      ],
+      "sentAt": "2026-06-12T09:18:16.196Z"
+    },
+    {
+      "placeId": "ChIJuTdQJjZp1moR_AEpV_uVCp8",
+      "name": "Digital Movement",
+      "email": "office@digitalmovement.com.au",
+      "website": "https://www.digitalmovement.com.au/",
+      "phone": "1300 988 161",
+      "address": "Level 3/480 Collins St, Melbourne VIC 3000, Australia",
+      "marketCode": "AU",
+      "market": "Australia",
+      "marketGroup": "english",
+      "language": "en",
+      "score": 95,
+      "reasons": [
+        "site existant",
+        "email trouve",
+        "telephone disponible",
+        "adresse locale",
+        "fiche nommee"
+      ],
+      "sentAt": "2026-06-12T09:18:22.980Z"
+    },
+    {
+      "placeId": "ChIJkSgdu_Bn1moRSsN7czgd0Ks",
+      "name": "Digital Next",
+      "email": "digital-next-digital-marketing-agency-melbourne@2x-1024x878.jpg",
+      "website": "https://www.digitalnext.com.au/",
+      "phone": "(03) 9699 4585",
+      "address": "133 Buckhurst St, South Melbourne VIC 3205, Australia",
+      "marketCode": "AU",
+      "market": "Australia",
+      "marketGroup": "english",
+      "language": "en",
+      "score": 95,
+      "reasons": [
+        "site existant",
+        "email trouve",
+        "telephone disponible",
+        "adresse locale",
+        "fiche nommee"
+      ],
+      "sentAt": "2026-06-12T09:18:27.840Z"
+    },
+    {
+      "placeId": "ChIJFdEcQLNC1moR0u8IHzqDrPM",
+      "name": "SIXGUN - SEO & Digital Marketing Agency",
+      "email": "name@email.com",
+      "website": "https://sixgun.com.au/?utm_source=google&utm_medium=organic&utm_campaign=gmb",
+      "phone": "1300 127 361",
+      "address": "Unit 7/1 Bromham Pl, Richmond VIC 3121, Australia",
+      "marketCode": "AU",
+      "market": "Australia",
+      "marketGroup": "english",
+      "language": "en",
+      "score": 95,
+      "reasons": [
+        "site existant",
+        "email trouve",
+        "telephone disponible",
+        "adresse locale",
+        "fiche nommee"
+      ],
+      "sentAt": "2026-06-12T09:18:35.617Z"
+    },
+    {
+      "placeId": "ChIJnxZtgQimEmsRUnoxicwGStI",
+      "name": "AdVisible",
+      "email": "welcome@advisible.com.au",
+      "website": "https://advisible.com.au/?utm_source=google&utm_medium=organic&utm_campaign=gmb",
+      "phone": "1300 812 447",
+      "address": "Suite 302, Level 3/120 Sussex St, Sydney NSW 2000, Australia",
+      "marketCode": "AU",
+      "market": "Australia",
+      "marketGroup": "english",
+      "language": "en",
+      "score": 95,
+      "reasons": [
+        "site existant",
+        "email trouve",
+        "telephone disponible",
+        "adresse locale",
+        "fiche nommee"
+      ],
+      "sentAt": "2026-06-12T09:18:43.813Z"
+    },
+    {
+      "placeId": "ChIJEcDzybRD1moR-PA_-ddjfI4",
+      "name": "Emote Digital",
+      "email": "hello@emotedigital.com.au",
+      "website": "https://www.emotedigital.com.au/?utm_source=mybusiness&utm_medium=organic&utm_campaign=mybusiness",
+      "phone": "(03) 9855 2304",
+      "address": "6/13 Church St, Hawthorn VIC 3122, Australia",
+      "marketCode": "AU",
+      "market": "Australia",
+      "marketGroup": "english",
+      "language": "en",
+      "score": 95,
+      "reasons": [
+        "site existant",
+        "email trouve",
+        "telephone disponible",
+        "adresse locale",
+        "fiche nommee"
+      ],
+      "sentAt": "2026-06-12T09:18:48.031Z"
+    },
+    {
+      "placeId": "ChIJ_XRNRkxd1moROi5CbWzQZqk",
+      "name": "Aston Digital",
+      "email": "hello@astondigital.com.au",
+      "website": "https://astondigital.com.au/",
+      "phone": "1300 297 716",
+      "address": "Exchange Tower, Level 1/530 Little Collins St, Melbourne VIC 3000, Australia",
+      "marketCode": "AU",
+      "market": "Australia",
+      "marketGroup": "english",
+      "language": "en",
+      "score": 95,
+      "reasons": [
+        "site existant",
+        "email trouve",
+        "telephone disponible",
+        "adresse locale",
+        "fiche nommee"
+      ],
+      "sentAt": "2026-06-12T09:18:57.728Z"
+    },
+    {
+      "placeId": "ChIJx2pPwSRD1moRSyi5TrjTKc0",
+      "name": "Melbourne Social Co",
+      "email": "enquiries@melbournesocialco.com.au",
+      "website": "https://www.melbournesocialco.com.au/",
+      "phone": "1300 386 165",
+      "address": "Unit 5/67/73 Hardware Ln, Melbourne VIC 3000, Australia",
+      "marketCode": "AU",
+      "market": "Australia",
+      "marketGroup": "english",
+      "language": "en",
+      "score": 95,
+      "reasons": [
+        "site existant",
+        "email trouve",
+        "telephone disponible",
+        "adresse locale",
+        "fiche nommee"
+      ],
+      "sentAt": "2026-06-12T09:19:02.048Z"
+    },
+    {
+      "placeId": "ChIJ2ZaAnEYSkWsR93GQY2GmYqY",
+      "name": "Visual Marketing Australia",
+      "email": "enquiries@visualmarketing.com.au",
+      "website": "https://www.visualmarketing.com.au/",
+      "phone": "1300 158 708",
+      "address": "4/55 Upton St, Bundall QLD 4217, Australia",
+      "marketCode": "AU",
+      "market": "Australia",
+      "marketGroup": "english",
+      "language": "en",
+      "score": 95,
+      "reasons": [
+        "site existant",
+        "email trouve",
+        "telephone disponible",
+        "adresse locale",
+        "fiche nommee"
+      ],
+      "sentAt": "2026-06-12T09:19:08.585Z"
+    },
+    {
+      "placeId": "ChIJL0T9qb9HDW0RegdIgDD22TY",
+      "name": "Great Catering Company",
+      "email": "sales@greatcatering.co.nz",
+      "website": "https://www.greatcatering.co.nz/",
+      "phone": "09 376 1424",
+      "address": "14 Putiki Street, Grey Lynn, Auckland 1021, New Zealand",
+      "marketCode": "NZ",
+      "market": "New Zealand",
+      "marketGroup": "english",
+      "language": "en",
+      "score": 95,
+      "reasons": [
+        "site existant",
+        "email trouve",
+        "telephone disponible",
+        "adresse locale",
+        "fiche nommee"
+      ],
+      "sentAt": "2026-06-12T09:19:13.540Z"
+    },
+    {
+      "placeId": "ChIJF9ceYODZDG0R43AQ7ChC8YI",
+      "name": "Homestyle Catering NZ",
+      "email": "info@homestylecatering.co.nz",
+      "website": "https://homestylecatering.co.nz/",
+      "phone": "0274 353 383",
+      "address": "3 Kia Kaha Drive, Snells Beach 0920, New Zealand",
+      "marketCode": "NZ",
+      "market": "New Zealand",
+      "marketGroup": "english",
+      "language": "en",
+      "score": 95,
+      "reasons": [
+        "site existant",
+        "email trouve",
+        "telephone disponible",
+        "adresse locale",
+        "fiche nommee"
+      ],
+      "sentAt": "2026-06-12T09:19:17.887Z"
+    },
+    {
+      "placeId": "ChIJB1DdGZy1cm0RKhYHJnVuFvY",
+      "name": "Côte Catering",
+      "email": "enquiries@cotenewzealand.com",
+      "website": "http://cotenewzealand.com/",
+      "phone": null,
+      "address": "3 Burns Street, Grey Lynn, Auckland 1021, New Zealand",
+      "marketCode": "NZ",
+      "market": "New Zealand",
+      "marketGroup": "english",
+      "language": "en",
+      "score": 85,
+      "reasons": [
+        "site existant",
+        "email trouve",
+        "adresse locale",
+        "fiche nommee"
+      ],
+      "sentAt": "2026-06-12T09:19:22.069Z"
+    },
+    {
+      "placeId": "ChIJh4jOnKitOG0RzL0R27-IadU",
+      "name": "Food Envy | Events, Catering, Hospitality",
+      "email": "events@foodenvy.nz",
+      "website": "http://www.foodenvy.nz/",
+      "phone": "04 242 0080",
+      "address": "25a Tennyson Street, Te Aro, Wellington 6011, New Zealand",
+      "marketCode": "NZ",
+      "market": "New Zealand",
+      "marketGroup": "english",
+      "language": "en",
+      "score": 95,
+      "reasons": [
+        "site existant",
+        "email trouve",
+        "telephone disponible",
+        "adresse locale",
+        "fiche nommee"
+      ],
+      "sentAt": "2026-06-12T09:19:26.258Z"
+    },
+    {
+      "placeId": "ChIJ2aO9G0lGDW0RqFQuTUmgCKw",
+      "name": "Eden Catering Ltd",
+      "email": "image-14@2x.png",
+      "website": "http://www.edencatering.co.nz/",
+      "phone": "09 630 7103",
+      "address": "8 Rocklands Avenue, Mount Eden, Auckland 1024, New Zealand",
+      "marketCode": "NZ",
+      "market": "New Zealand",
+      "marketGroup": "english",
+      "language": "en",
+      "score": 95,
+      "reasons": [
+        "site existant",
+        "email trouve",
+        "telephone disponible",
+        "adresse locale",
+        "fiche nommee"
+      ],
+      "sentAt": "2026-06-12T09:19:40.519Z"
+    },
+    {
+      "placeId": "ChIJodxmn6IjDW0RTcUkJ3gOi2E",
+      "name": "Culinary Lane Catering / In-House Dinners 3 & 5 Course / Outcatering / Grazing Tables/ Private Chef/ Working Lunches",
+      "email": "culinarylane@gmail.com",
+      "website": "https://www.culinarylane.co.nz/",
+      "phone": "022 400 3001",
+      "address": "2 Godfrey Drive, Orewa 0921, New Zealand",
+      "marketCode": "NZ",
+      "market": "New Zealand",
+      "marketGroup": "english",
+      "language": "en",
+      "score": 95,
+      "reasons": [
+        "site existant",
+        "email trouve",
+        "telephone disponible",
+        "adresse locale",
+        "fiche nommee"
+      ],
+      "sentAt": "2026-06-12T09:19:47.382Z"
+    },
+    {
+      "placeId": "ChIJyZbf7NdDDW0ROXRCVr_bIEA",
+      "name": "Cook and Butler Catering",
+      "email": "sprite@2x.webp",
+      "website": "https://www.cookandbutler.co.nz/?utm_source=GMBListing+&utm_medium=Organic&utm_campaign=Google_my_Business&utm_id=GMB",
+      "phone": "021 459 056",
+      "address": "2/18 Airborne Road, Albany, Auckland 0632, New Zealand",
+      "marketCode": "NZ",
+      "market": "New Zealand",
+      "marketGroup": "english",
+      "language": "en",
+      "score": 95,
+      "reasons": [
+        "site existant",
+        "email trouve",
+        "telephone disponible",
+        "adresse locale",
+        "fiche nommee"
+      ],
+      "sentAt": "2026-06-12T09:19:51.874Z"
+    },
+    {
+      "placeId": "ChIJZ-hjwa5y5kcRJEo8HixFfJg",
+      "name": "Auto Moto École Defrance",
+      "email": "jean.dupont@gmail.com",
+      "website": "https://www.autoecoledefrance.fr/",
+      "phone": "09 72 90 51 69",
+      "address": "36 Rue Defrance, 94300 Vincennes, France",
+      "marketCode": "FR",
+      "market": "France",
+      "marketGroup": "francophone",
+      "language": "fr",
+      "score": 95,
+      "reasons": [
+        "site existant",
+        "email trouve",
+        "telephone disponible",
+        "adresse locale",
+        "fiche nommee"
+      ],
+      "sentAt": "2026-06-12T09:19:55.954Z"
+    }
+  ],
+  "lastUpdated": "2026-06-12T09:22:44.518Z"
 }
