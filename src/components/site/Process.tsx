@@ -13,17 +13,21 @@ export function Process({ locale = "fr" }: { locale?: Locale }) {
       <div className="mx-auto max-w-7xl">
         <Reveal>
           <SectionHeading
-            eyebrow="Process"
-            title={en ? "A clear 5-step process" : "Un process clair en 5 étapes"}
+            eyebrow={en ? "Process · 5 steps" : "Process · 5 étapes"}
+            title={
+              en
+                ? "How I support you, from diagnosis to deployment"
+                : "Comment je vous accompagne, du diagnostic au déploiement"
+            }
             description={
               en
-                ? "From diagnosis to deployment, you always know what happens next. I handle the technical parts without making you manage them."
-                : "Du diagnostic au deploiement, vous savez toujours ce qui se passe ensuite. Je gere la partie technique sans vous la faire porter."
+                ? "You always know what happens next. I handle the technical parts without making you carry them."
+                : "Vous savez toujours ce qui se passe ensuite. Je gère la partie technique sans vous la faire porter."
             }
           />
         </Reveal>
         <Reveal delay={0.08}>
-          <div className="mt-7">
+          <div className="mt-6 md:mt-8">
             <VerticalTabs locale={locale} />
           </div>
         </Reveal>

@@ -144,130 +144,148 @@ export function VerticalTabs({ locale = "fr", items }: { locale?: Locale; items?
     }),
   };
 
+  const activeItem = resolvedItems[activeIndex];
+
   return (
-    <div ref={containerRef} className="w-full py-1 md:py-3">
-      <div className="mx-auto w-full max-w-7xl px-0">
-        <div className="grid grid-cols-1 items-start gap-8 lg:grid-cols-12 lg:gap-12">
-          <div className="order-2 flex flex-col justify-center pt-2 lg:order-1 lg:col-span-5">
-            <div className="mb-6 space-y-1">
-              <h3 className="font-display text-balance text-2xl font-medium tracking-tight text-[#17120f] md:text-3xl lg:text-4xl">
-                {en ? "How I support your business" : "Comment je vous accompagne"}
-              </h3>
-              <span className="ml-0.5 block text-[10px] font-black uppercase tracking-[0.3em] text-[#d94f2b]">
-                (PROCESS)
-              </span>
-            </div>
+    <div ref={containerRef} className="w-full">
+      <div className="grid items-stretch gap-7 lg:grid-cols-12 lg:gap-10">
+        {/* Steps rail */}
+        <div className="order-2 flex flex-col lg:order-1 lg:col-span-5">
+          <ol className="flex flex-col">
+            {resolvedItems.map((item, index) => {
+              const isActive = activeIndex === index;
 
-            <div className="flex flex-col">
-              {resolvedItems.map((item, index) => {
-                const isActive = activeIndex === index;
-
-                return (
+              return (
+                <li key={item.id}>
                   <button
-                    key={item.id}
+                    type="button"
                     onClick={() => handleTabClick(index)}
+                    aria-current={isActive ? "step" : undefined}
                     className={cn(
-                      "group relative flex items-start gap-4 border-t border-[#2a231d]/12 py-4 text-left transition-all duration-500 first:border-0 md:py-5",
+                      "group relative flex w-full items-start gap-4 border-t border-[#2a231d]/12 py-3.5 pl-5 text-left transition-colors duration-300 first:border-0 md:py-4",
                       isActive ? "text-[#17120f]" : "text-[#8a7d6f] hover:text-[#17120f]",
                     )}
                   >
-                    <div className="absolute -left-4 bottom-0 top-0 w-[2px] bg-[#2a231d]/12 md:-left-6">
+                    {/* accent rail */}
+                    <span className="absolute bottom-0 left-0 top-0 w-[3px] bg-[#2a231d]/10">
                       {isActive && (
-                        <motion.div
+                        <motion.span
                           key={`progress-${index}-${isPaused}`}
-                          className="absolute left-0 top-0 w-full origin-top bg-[#d94f2b]"
+                          className="absolute left-0 top-0 block w-full origin-top bg-[#d94f2b]"
                           initial={{ height: "0%" }}
-                          animate={isPaused ? { height: "0%" } : { height: "100%" }}
-                          transition={{ duration: AUTO_PLAY_DURATION / 1000, ease: "linear" }}
+                          animate={isPaused ? { height: "100%" } : { height: "100%" }}
+                          transition={{ duration: isPaused ? 0 : AUTO_PLAY_DURATION / 1000, ease: "linear" }}
                         />
                       )}
-                    </div>
+                    </span>
 
-                    <span className="mt-1 text-[10px] font-medium tabular-nums opacity-55">/{item.id}</span>
+                    <span
+                      className={cn(
+                        "mt-0.5 font-display text-sm font-semibold tabular-nums transition-colors duration-300",
+                        isActive ? "text-[#d94f2b]" : "text-[#bdb09e]",
+                      )}
+                    >
+                      {item.id}
+                    </span>
 
-                    <div className="flex flex-1 flex-col gap-2">
+                    <div className="flex flex-1 flex-col">
                       <span
                         className={cn(
-                          "text-xl font-normal tracking-tight transition-colors duration-500 md:text-2xl lg:text-3xl",
+                          "font-display text-lg font-medium leading-snug tracking-tight transition-colors duration-300 md:text-xl",
                           isActive ? "text-[#17120f]" : "",
                         )}
                       >
                         {item.title}
                       </span>
 
-                      <AnimatePresence mode="wait">
+                      <AnimatePresence initial={false} mode="wait">
                         {isActive && (
-                          <motion.div
-                            initial={{ opacity: 0, height: 0 }}
-                            animate={{ opacity: 1, height: "auto" }}
-                            exit={{ opacity: 0, height: 0 }}
+                          <motion.p
+                            key={item.id}
+                            initial={{ opacity: 0, height: 0, marginTop: 0 }}
+                            animate={{ opacity: 1, height: "auto", marginTop: 6 }}
+                            exit={{ opacity: 0, height: 0, marginTop: 0 }}
                             transition={{ duration: 0.3, ease: [0.23, 1, 0.32, 1] }}
-                            className="overflow-hidden"
+                            className="max-w-md overflow-hidden text-sm leading-relaxed text-[#63584d]"
                           >
-                            <p className="max-w-sm pb-2 text-sm font-normal leading-relaxed text-[#63584d] md:text-base">
-                              {item.description}
-                            </p>
-                          </motion.div>
+                            {item.description}
+                          </motion.p>
                         )}
                       </AnimatePresence>
                     </div>
                   </button>
-                );
-              })}
-            </div>
-          </div>
+                </li>
+              );
+            })}
+          </ol>
+        </div>
 
-          <div className="order-1 flex h-full flex-col justify-end lg:order-2 lg:col-span-7">
-            <div className="relative" onMouseEnter={() => setIsPaused(true)} onMouseLeave={() => setIsPaused(false)}>
-              <div className="relative aspect-[4/5] overflow-hidden rounded-none border border-[#2a231d]/14 bg-[#fffaf0]/70 shadow-[8px_8px_0_rgba(42,35,29,0.08)] md:aspect-[4/3] lg:aspect-[16/11]">
-                <AnimatePresence initial={false} custom={direction} mode="popLayout">
-                  <motion.div
-                    key={activeIndex}
-                    custom={direction}
-                    variants={variants}
-                    initial="enter"
-                    animate="center"
-                    exit="exit"
-                    transition={{
-                      y: { type: "spring", stiffness: 260, damping: 32 },
-                      opacity: { duration: 0.4 },
-                    }}
-                    className="absolute inset-0 h-full w-full cursor-pointer"
-                    onClick={handleNext}
-                  >
-                    <Image
-                      src={resolvedItems[activeIndex].image}
-                      alt={resolvedItems[activeIndex].title}
-                      fill
-                      sizes="(max-width: 1024px) 100vw, 66vw"
-                      className="block h-full w-full object-cover transition-transform duration-700 hover:scale-105"
-                    />
-                    <div className="absolute inset-x-0 bottom-0 h-1/3 bg-gradient-to-t from-black/30 via-transparent to-transparent opacity-70" />
-                  </motion.div>
-                </AnimatePresence>
+        {/* Visual */}
+        <div className="order-1 lg:order-2 lg:col-span-7">
+          <div
+            className="relative h-full"
+            onMouseEnter={() => setIsPaused(true)}
+            onMouseLeave={() => setIsPaused(false)}
+          >
+            <div className="relative aspect-[4/3] h-full min-h-[280px] overflow-hidden rounded-none border border-[#2a231d]/14 bg-[#fffaf0]/70 shadow-[8px_8px_0_rgba(42,35,29,0.08)] lg:aspect-auto">
+              <AnimatePresence initial={false} custom={direction} mode="popLayout">
+                <motion.div
+                  key={activeIndex}
+                  custom={direction}
+                  variants={variants}
+                  initial="enter"
+                  animate="center"
+                  exit="exit"
+                  transition={{
+                    y: { type: "spring", stiffness: 260, damping: 32 },
+                    opacity: { duration: 0.4 },
+                  }}
+                  className="absolute inset-0 h-full w-full cursor-pointer"
+                  onClick={handleNext}
+                >
+                  <Image
+                    src={activeItem.image}
+                    alt={activeItem.title}
+                    fill
+                    sizes="(max-width: 1024px) 100vw, 58vw"
+                    className="block h-full w-full object-cover transition-transform duration-700 hover:scale-105"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/55 via-black/5 to-transparent" />
+                </motion.div>
+              </AnimatePresence>
 
-                <div className="absolute bottom-6 right-6 z-20 flex gap-2 md:bottom-8 md:right-8 md:gap-3">
-                  <button
-                    onClick={(event) => {
-                      event.stopPropagation();
-                      handlePrev();
-                    }}
-                    className="flex h-10 w-10 items-center justify-center rounded-none border border-[#2a231d]/14 bg-[#fffaf0]/88 text-[#17120f] backdrop-blur-md transition-all hover:bg-[#fffaf0] active:scale-90 md:h-12 md:w-12"
-                    aria-label={en ? "Previous step" : "Étape précédente"}
-                  >
-                    <ChevronLeft size={20} />
-                  </button>
-                  <button
-                    onClick={(event) => {
-                      event.stopPropagation();
-                      handleNext();
-                    }}
-                    className="flex h-10 w-10 items-center justify-center rounded-none border border-[#2a231d]/14 bg-[#fffaf0]/88 text-[#17120f] backdrop-blur-md transition-all hover:bg-[#fffaf0] active:scale-90 md:h-12 md:w-12"
-                    aria-label={en ? "Next step" : "Étape suivante"}
-                  >
-                    <ChevronRight size={20} />
-                  </button>
-                </div>
+              {/* Caption */}
+              <div className="pointer-events-none absolute inset-x-5 bottom-5 z-20 md:inset-x-7 md:bottom-7">
+                <span className="inline-flex items-center gap-2 border border-white/20 bg-black/35 px-3 py-1 text-[10px] font-black uppercase tracking-[0.16em] text-white backdrop-blur-sm">
+                  <span className="text-[#ff9b76]">{activeItem.id}</span>
+                  {activeItem.title}
+                </span>
+              </div>
+
+              {/* Nav */}
+              <div className="absolute bottom-5 right-5 z-20 flex gap-2 md:bottom-7 md:right-7">
+                <button
+                  type="button"
+                  onClick={(event) => {
+                    event.stopPropagation();
+                    handlePrev();
+                  }}
+                  className="flex h-10 w-10 items-center justify-center rounded-none border border-[#2a231d]/14 bg-[#fffaf0]/90 text-[#17120f] backdrop-blur-md transition-all hover:bg-[#fffaf0] active:scale-90 md:h-11 md:w-11"
+                  aria-label={en ? "Previous step" : "Étape précédente"}
+                >
+                  <ChevronLeft size={18} />
+                </button>
+                <button
+                  type="button"
+                  onClick={(event) => {
+                    event.stopPropagation();
+                    handleNext();
+                  }}
+                  className="flex h-10 w-10 items-center justify-center rounded-none border border-[#2a231d]/14 bg-[#fffaf0]/90 text-[#17120f] backdrop-blur-md transition-all hover:bg-[#fffaf0] active:scale-90 md:h-11 md:w-11"
+                  aria-label={en ? "Next step" : "Étape suivante"}
+                >
+                  <ChevronRight size={18} />
+                </button>
               </div>
             </div>
           </div>
