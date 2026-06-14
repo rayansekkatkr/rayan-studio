@@ -6,6 +6,7 @@ import { ArrowUpRight, ExternalLink } from "lucide-react";
 import { TextRotate, type TextRotateRef } from "@/components/ui/text-rotate";
 import { Button } from "@/components/ui/button";
 import { trackEvent } from "@/lib/analytics";
+import { cn } from "@/lib/utils";
 import { isEnglish, type Locale } from "@/lib/i18n";
 import { Reveal } from "./Reveal";
 import { SectionHeading } from "./SectionHeading";
@@ -160,38 +161,77 @@ const caseStudiesEn = [
   },
 ];
 
-function ProjectThumb({
+function getDomain(url: string) {
+  try {
+    return new URL(url).hostname.replace(/^www\./, "");
+  } catch {
+    return url;
+  }
+}
+
+function ProjectNavItem({
   index,
-  image,
-  title,
+  id,
+  name,
+  designation,
+  isActive,
   ariaPrefix,
   onClick,
 }: {
   index: number;
-  image: string;
-  title: string;
+  id: string;
+  name: string;
+  designation: string;
+  isActive: boolean;
   ariaPrefix: string;
   onClick: (index: number) => void;
 }) {
   return (
-    <div className="py-1.5 md:py-3">
-      <button
-        type="button"
-        onClick={() => onClick(index)}
-        className="group relative h-20 w-full overflow-hidden rounded-none border border-[#2a231d]/14 bg-[#fffaf0]/78 text-left shadow-[4px_4px_0_rgba(42,35,29,0.08)] md:h-24"
-        aria-label={`${ariaPrefix} ${title}`}
+    <button
+      type="button"
+      onClick={() => onClick(index)}
+      aria-pressed={isActive}
+      aria-label={`${ariaPrefix} ${name}`}
+      data-project-id={id}
+      className={cn(
+        "group relative flex w-full items-start gap-3 border-t border-[#2a231d]/10 px-3 py-3 text-left transition-colors duration-300 first:border-t-0",
+        isActive ? "bg-[#17120f] text-[#fffaf0]" : "text-[#63584d] hover:bg-[#fffaf0]/70",
+      )}
+    >
+      <span
+        className={cn(
+          "mt-0.5 font-display text-xs font-semibold tabular-nums transition-colors",
+          isActive ? "text-[#ff9b76]" : "text-[#bdb09e]",
+        )}
       >
-        <Image
-          src={image}
-          alt={title}
-          fill
-          sizes="(max-width: 768px) 100vw, (max-width: 1280px) 48vw, 30vw"
-          className="object-cover transition duration-500 group-hover:scale-105"
-        />
-        <div className="absolute inset-0 bg-gradient-to-r from-slate-900/44 via-slate-900/10 to-transparent" />
-        <div className="absolute bottom-2 left-3 right-3 text-xs font-semibold uppercase tracking-[0.12em] text-white">{title}</div>
-      </button>
-    </div>
+        /0{index + 1}
+      </span>
+      <span className="flex min-w-0 flex-1 flex-col">
+        <span
+          className={cn(
+            "truncate font-display text-sm font-semibold leading-snug transition-colors",
+            isActive ? "text-[#fffaf0]" : "text-[#17120f]",
+          )}
+        >
+          {name}
+        </span>
+        <span
+          className={cn(
+            "mt-0.5 truncate text-[11px] leading-snug transition-colors",
+            isActive ? "text-[#fffaf0]/65" : "text-[#8a7d6f]",
+          )}
+        >
+          {designation}
+        </span>
+      </span>
+      <ArrowUpRight
+        size={14}
+        className={cn(
+          "mt-0.5 shrink-0 transition-all",
+          isActive ? "text-[#ff9b76] opacity-100" : "text-[#bdb09e] opacity-0 group-hover:opacity-100",
+        )}
+      />
+    </button>
   );
 }
 
@@ -270,72 +310,114 @@ export function Showcase({ locale = "fr" }: { locale?: Locale }) {
         </Reveal>
 
         <Reveal delay={0.05} y={16} className="mt-6 md:mt-8">
-          <div className="relative overflow-hidden rounded-none border border-[#2a231d]/14 bg-[linear-gradient(145deg,rgba(255,250,240,0.9),rgba(239,231,217,0.72))] p-4 shadow-[8px_8px_0_rgba(42,35,29,0.08)] md:p-6">
-            <div className="absolute left-5 top-5 z-20 hidden rounded-none border border-[#2a231d]/14 bg-[#17120f] px-3 py-1 text-[11px] font-black uppercase tracking-[0.13em] text-[#fffaf0] shadow-[4px_4px_0_rgba(217,79,43,0.28)] backdrop-blur-xl sm:block">
-              {en ? "Active project" : "Projet actif"}
+          <div className="relative overflow-hidden rounded-none border border-[#2a231d]/16 bg-[linear-gradient(150deg,rgba(255,250,240,0.94),rgba(239,231,217,0.78))] shadow-[8px_8px_0_rgba(42,35,29,0.1)]">
+            {/* Top bar */}
+            <div className="flex flex-wrap items-center justify-between gap-2 border-b border-[#2a231d]/12 px-4 py-2.5 md:px-6">
+              <span className="inline-flex items-center gap-2 text-[11px] font-black uppercase tracking-[0.14em] text-[#17120f]">
+                <span className="relative flex h-2 w-2">
+                  <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-[#d94f2b] opacity-60" />
+                  <span className="relative inline-flex h-2 w-2 rounded-full bg-[#d94f2b]" />
+                </span>
+                {en ? "Active project" : "Projet actif"}
+              </span>
+              <span className="text-[11px] font-black uppercase tracking-[0.14em] tabular-nums text-[#8a7d6f]">
+                0{activeIndex + 1} <span className="text-[#bdb09e]">/ 0{projects.length}</span>
+              </span>
             </div>
 
-            <div className="relative grid gap-5 lg:grid-cols-[1.2fr_0.8fr]">
-              <div className="overflow-hidden rounded-none border border-[#2a231d]/14 bg-[#fffaf0]/78 p-3 backdrop-blur-2xl">
-                <div className="relative h-[260px] overflow-hidden rounded-none border border-[#2a231d]/12 sm:h-[310px] md:h-[390px]">
-                  <Image
-                    src={activeProject.src}
-                    alt={activeProject.name}
-                    fill
-                    sizes="(max-width: 1024px) 100vw, 62vw"
-                    className="object-cover"
+            {/* Body: nav directory + live browser preview */}
+            <div className="grid lg:grid-cols-[0.85fr_1.6fr]">
+              {/* Nav directory */}
+              <div className="flex flex-col border-b border-[#2a231d]/12 lg:border-b-0 lg:border-r">
+                <p className="px-3 pb-2 pt-3 text-[10px] font-black uppercase tracking-[0.16em] text-[#8a7d6f]">
+                  {en ? "Select a project" : "Choisir un projet"}
+                </p>
+                {projects.map((project, index) => (
+                  <ProjectNavItem
+                    key={project.id}
+                    index={index}
+                    id={project.id}
+                    name={project.name}
+                    designation={project.designation}
+                    isActive={index === activeIndex}
+                    ariaPrefix={en ? "Show" : "Afficher"}
+                    onClick={handleSelect}
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-slate-900/52 via-slate-900/12 to-transparent" />
+                ))}
+              </div>
+
+              {/* Browser preview */}
+              <div className="flex flex-col p-4 md:p-5">
+                <div className="overflow-hidden rounded-none border border-[#2a231d]/16 bg-[#17120f] shadow-[6px_6px_0_rgba(42,35,29,0.12)]">
+                  {/* Chrome */}
+                  <div className="flex items-center gap-3 border-b border-white/10 bg-[#211a15] px-3 py-2">
+                    <span className="flex gap-1.5">
+                      <span className="h-2.5 w-2.5 rounded-full bg-[#ff5f57]" />
+                      <span className="h-2.5 w-2.5 rounded-full bg-[#febc2e]" />
+                      <span className="h-2.5 w-2.5 rounded-full bg-[#28c840]" />
+                    </span>
+                    <span className="flex min-w-0 flex-1 items-center gap-2 truncate rounded-none border border-white/10 bg-[#fffaf0]/5 px-3 py-1 text-[11px] font-medium text-[#cbbfae]">
+                      <span className="text-[#7fd28a]">●</span>
+                      <span className="truncate">{getDomain(activeProject.projectUrl)}</span>
+                    </span>
+                  </div>
+                  {/* Screenshot */}
+                  <div className="relative aspect-[16/9] overflow-hidden">
+                    <Image
+                      key={activeProject.src}
+                      src={activeProject.src}
+                      alt={activeProject.name}
+                      fill
+                      sizes="(max-width: 1024px) 100vw, 60vw"
+                      className="object-cover object-top"
+                    />
+                  </div>
                 </div>
 
-                <div className="mt-4">
-                  <p className="text-xs font-black uppercase tracking-[0.14em] text-[#8a7d6f]">
-                    {en ? "Project in focus" : "Projet en focus"}
-                  </p>
-                  <TextRotate
-                    ref={textRotateRef}
-                    texts={projects.map((project) => project.name)}
-                    mainClassName="mt-2 text-xl font-display font-semibold text-[#17120f] sm:text-2xl md:text-3xl"
-                    splitLevelClassName="overflow-hidden pb-1"
-                    staggerFrom="first"
-                    staggerDuration={0.005}
-                    animatePresenceMode="wait"
-                    auto={false}
-                    loop={false}
-                    initial={{ opacity: 0, y: 40 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    exit={{ opacity: 0, y: -40 }}
-                    transition={{ type: "spring", duration: 0.58, bounce: 0 }}
-                  />
-                  <p className="mt-1.5 text-sm font-medium text-[#63584d]">{activeProject.designation}</p>
-                  <p className="mt-2 inline-flex w-fit rounded-none border border-[#2a231d]/14 bg-[#f5f1e8] px-2.5 py-1 text-[10px] font-black uppercase tracking-[0.12em] text-[#d94f2b]">
-                    {activeProject.segment}
-                  </p>
-                  <p className="mt-3 text-sm leading-relaxed text-[#63584d]">{activeProject.quote}</p>
-                  <div className="mt-3">
-                    <p className="text-[10px] font-black uppercase tracking-[0.14em] text-[#8a7d6f]">
-                      {en ? "What was worked on" : "Ce qui a ete travaille"}
-                    </p>
-                    <div className="mt-2 flex flex-wrap gap-2">
-                      {activeProject.scope.map((item) => (
-                        <span
-                          key={item}
-                          className="border border-[#2a231d]/12 bg-[#fffaf0] px-2.5 py-1 text-[10px] font-black uppercase tracking-[0.08em] text-[#63584d]"
-                        >
-                          {item}
-                        </span>
-                      ))}
-                    </div>
+                {/* Meta */}
+                <div className="mt-4 flex flex-1 flex-col">
+                  <div className="flex flex-wrap items-baseline gap-x-3 gap-y-1">
+                    <TextRotate
+                      ref={textRotateRef}
+                      texts={projects.map((project) => project.name)}
+                      mainClassName="text-xl font-display font-semibold text-[#17120f] md:text-2xl"
+                      splitLevelClassName="overflow-hidden pb-1"
+                      staggerFrom="first"
+                      staggerDuration={0.005}
+                      animatePresenceMode="wait"
+                      auto={false}
+                      loop={false}
+                      initial={{ opacity: 0, y: 40 }}
+                      animate={{ opacity: 1, y: 0 }}
+                      exit={{ opacity: 0, y: -40 }}
+                      transition={{ type: "spring", duration: 0.58, bounce: 0 }}
+                    />
+                    <span className="inline-flex rounded-none border border-[#2a231d]/14 bg-[#f5f1e8] px-2 py-0.5 text-[10px] font-black uppercase tracking-[0.1em] text-[#d94f2b]">
+                      {activeProject.segment}
+                    </span>
                   </div>
+                  <p className="mt-2 text-sm leading-relaxed text-[#63584d]">{activeProject.quote}</p>
+
+                  <div className="mt-3 flex flex-wrap gap-1.5">
+                    {activeProject.scope.map((item) => (
+                      <span
+                        key={item}
+                        className="border border-[#2a231d]/12 bg-[#fffaf0] px-2 py-1 text-[10px] font-black uppercase tracking-[0.06em] text-[#63584d]"
+                      >
+                        {item}
+                      </span>
+                    ))}
+                  </div>
+
                   <div className="mt-4 flex flex-wrap gap-2.5">
                     {activeProject.beforeUrl ? (
                       <Button asChild variant="outline" size="sm" className="h-9">
-                      <a
-                        href={activeProject.beforeUrl}
-                        target="_blank"
-                        rel="noreferrer"
-                        onClick={() => trackEvent("project_before_click", { project_id: activeProject.id, locale })}
-                      >
+                        <a
+                          href={activeProject.beforeUrl}
+                          target="_blank"
+                          rel="noreferrer"
+                          onClick={() => trackEvent("project_before_click", { project_id: activeProject.id, locale })}
+                        >
                           {en ? "View before" : "Voir avant"}
                         </a>
                       </Button>
@@ -352,31 +434,6 @@ export function Showcase({ locale = "fr" }: { locale?: Locale }) {
                       </a>
                     </Button>
                   </div>
-                </div>
-              </div>
-
-              <div className="rounded-none border border-[#2a231d]/14 bg-[#fffaf0]/66 p-3 backdrop-blur-2xl">
-                <div className="mb-2 flex items-center justify-between px-1">
-                  <p className="text-[11px] font-black uppercase tracking-[0.14em] text-[#8a7d6f]">
-                    {en ? "Visual selection" : "Sélection visuelle"}
-                  </p>
-                  <span className="inline-flex items-center gap-1 text-[11px] font-black uppercase tracking-[0.12em] text-[#d94f2b]">
-                    {en ? "Click to switch" : "Cliquer pour changer"}
-                    <ArrowUpRight size={12} />
-                  </span>
-                </div>
-
-                <div className="grid grid-cols-2 gap-2 rounded-none px-1 md:block md:gap-0">
-                  {projects.map((project, index) => (
-                    <ProjectThumb
-                      key={project.id}
-                      index={index}
-                      image={project.src}
-                      title={project.name}
-                      ariaPrefix={en ? "Show" : "Afficher"}
-                      onClick={handleSelect}
-                    />
-                  ))}
                 </div>
               </div>
             </div>
