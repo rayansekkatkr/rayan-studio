@@ -2986,7 +2986,667 @@
         "fiche nommee"
       ],
       "sentAt": "2026-06-12T09:19:55.954Z"
+    },
+    {
+      "placeId": "ChIJ41qDsAvdw0cRM-B7DAx0gQ8",
+      "name": "Kine Sport Brussels",
+      "email": "info@kine-sport-brussels.be",
+      "website": "http://www.kine-sport-brussels.be/",
+      "phone": "0493 44 00 33",
+      "address": "Av. Marcel Thiry 81, 1200 Bruxelles, Belgium",
+      "marketCode": "BE-FR",
+      "market": "Belgique francophone",
+      "marketGroup": "francophone",
+      "language": "fr",
+      "score": 95,
+      "reasons": [
+        "site existant",
+        "email trouve",
+        "telephone disponible",
+        "adresse locale",
+        "fiche nommee"
+      ],
+      "sentAt": "2026-06-15T10:00:26.662Z",
+      "status": "sent",
+      "lifecycleStage": "contacted",
+      "firstContactedAt": "2026-06-15T10:00:26.662Z",
+      "lastContactedAt": "2026-06-15T10:00:26.662Z",
+      "nextFollowUpAt": "2026-06-22T10:00:26.662Z",
+      "timeline": [
+        {
+          "at": "2026-06-15T10:00:26.662Z",
+          "type": "sent",
+          "note": "Initial outreach email sent"
+        }
+      ]
+    },
+    {
+      "placeId": "ChIJc1qQjQXdw0cR5WXpZHQQAiQ",
+      "name": "Kinésithérapeute Arnaud Bogaert - Sport & ATM",
+      "email": "arnaud.monkine@gmail.com",
+      "website": "https://www.monkine.org/?utm_source=google&utm_medium=wix_google_business_profile&utm_campaign=589044398302718960",
+      "phone": "0484 68 06 28",
+      "address": "Av. Chapelle-aux-Champs 60, 1200 Bruxelles, Belgium",
+      "marketCode": "BE-FR",
+      "market": "Belgique francophone",
+      "marketGroup": "francophone",
+      "language": "fr",
+      "score": 95,
+      "reasons": [
+        "site existant",
+        "email trouve",
+        "telephone disponible",
+        "adresse locale",
+        "fiche nommee"
+      ],
+      "sentAt": "2026-06-15T10:00:35.656Z",
+      "status": "sent",
+      "lifecycleStage": "contacted",
+      "firstContactedAt": "2026-06-15T10:00:35.656Z",
+      "lastContactedAt": "2026-06-15T10:00:35.656Z",
+      "nextFollowUpAt": "2026-06-22T10:00:35.656Z",
+      "timeline": [
+        {
+          "at": "2026-06-15T10:00:35.656Z",
+          "type": "sent",
+          "note": "Initial outreach email sent"
+        }
+      ]
+    },
+    {
+      "placeId": "ChIJUdWRAQLFw0cR2w-e9o1jhYI",
+      "name": "Kinésithérapeute de la main - Sarah Scalzo Abdoulhoussen",
+      "email": "support@rosa.be",
+      "website": "https://rosa.be/fr/hp/sarah-abdoulhoussen-1/?highlights=physio-hand",
+      "phone": "0491 73 34 74",
+      "address": "Chau. Bara 212, 1420 Braine-l'Alleud, Belgium",
+      "marketCode": "BE-FR",
+      "market": "Belgique francophone",
+      "marketGroup": "francophone",
+      "language": "fr",
+      "score": 95,
+      "reasons": [
+        "site existant",
+        "email trouve",
+        "telephone disponible",
+        "adresse locale",
+        "fiche nommee"
+      ],
+      "sentAt": "2026-06-15T10:00:40.480Z",
+      "status": "sent",
+      "lifecycleStage": "contacted",
+      "firstContactedAt": "2026-06-15T10:00:40.480Z",
+      "lastContactedAt": "2026-06-15T10:00:40.480Z",
+      "nextFollowUpAt": "2026-06-22T10:00:40.480Z",
+      "timeline": [
+        {
+          "at": "2026-06-15T10:00:40.480Z",
+          "type": "sent",
+          "note": "Initial outreach email sent"
+        }
+      ]
+    },
+    {
+      "placeId": "ChIJ77GtYILbw0cRflaNLM4i25Y",
+      "name": "Marine Delvigne - Kinésithérapeute pédiatrique - Bobath",
+      "email": "madelvigne@gmail.com",
+      "website": "http://www.kine-pedia.be/",
+      "phone": "0472 79 28 77",
+      "address": "Rue Valduc 227, 1160 Auderghem, Belgium",
+      "marketCode": "BE-FR",
+      "market": "Belgique francophone",
+      "marketGroup": "francophone",
+      "language": "fr",
+      "score": 95,
+      "reasons": [
+        "site existant",
+        "email trouve",
+        "telephone disponible",
+        "adresse locale",
+        "fiche nommee"
+      ],
+      "sentAt": "2026-06-15T10:00:55.989Z",
+      "status": "sent",
+      "lifecycleStage": "contacted",
+      "firstContactedAt": "2026-06-15T10:00:55.989Z",
+      "lastContactedAt": "2026-06-15T10:00:55.989Z",
+      "nextFollowUpAt": "2026-06-22T10:00:55.989Z",
+      "timeline": [
+        {
+          "at": "2026-06-15T10:00:55.989Z",
+          "type": "sent",
+          "note": "Initial outreach email sent"
+        }
+      ]
+    },
+    {
+      "placeId": "ChIJ9Sms1WPdw0cRANOfHlJXPz4",
+      "name": "Kinésithérapie Gériatrique à domicile Christopher Hoorens",
+      "email": "kinefirstwoluwe@gmail.com",
+      "website": "https://www.christopherhoorenskinsithrapeute.com/",
+      "phone": "0475 98 24 66",
+      "address": "Sq. Emile Duployé 5, 1030 Schaerbeek, Belgium",
+      "marketCode": "BE-FR",
+      "market": "Belgique francophone",
+      "marketGroup": "francophone",
+      "language": "fr",
+      "score": 95,
+      "reasons": [
+        "site existant",
+        "email trouve",
+        "telephone disponible",
+        "adresse locale",
+        "fiche nommee"
+      ],
+      "sentAt": "2026-06-15T10:01:09.125Z",
+      "status": "sent",
+      "lifecycleStage": "contacted",
+      "firstContactedAt": "2026-06-15T10:01:09.125Z",
+      "lastContactedAt": "2026-06-15T10:01:09.125Z",
+      "nextFollowUpAt": "2026-06-22T10:01:09.125Z",
+      "timeline": [
+        {
+          "at": "2026-06-15T10:01:09.125Z",
+          "type": "sent",
+          "note": "Initial outreach email sent"
+        }
+      ]
+    },
+    {
+      "placeId": "ChIJlzAUVozDw0cRoXeiofK75gc",
+      "name": "Quentin Posno",
+      "email": "cbooghs@gmail.com",
+      "website": "http://www.be-sports.be/",
+      "phone": "0497 71 61 97",
+      "address": "Rue Henri Chomé 59, 1030 Schaerbeek, Belgium",
+      "marketCode": "BE-FR",
+      "market": "Belgique francophone",
+      "marketGroup": "francophone",
+      "language": "fr",
+      "score": 95,
+      "reasons": [
+        "site existant",
+        "email trouve",
+        "telephone disponible",
+        "adresse locale",
+        "fiche nommee"
+      ],
+      "sentAt": "2026-06-15T10:01:15.686Z",
+      "status": "sent",
+      "lifecycleStage": "contacted",
+      "firstContactedAt": "2026-06-15T10:01:15.686Z",
+      "lastContactedAt": "2026-06-15T10:01:15.686Z",
+      "nextFollowUpAt": "2026-06-22T10:01:15.686Z",
+      "timeline": [
+        {
+          "at": "2026-06-15T10:01:15.686Z",
+          "type": "sent",
+          "note": "Initial outreach email sent"
+        }
+      ]
+    },
+    {
+      "placeId": "ChIJjYfUJ7KEjkcRBGzpmpBYqck",
+      "name": "Lunetterie de Blonay Turrian Optique",
+      "email": "info@lunetterie-de-blonay.ch",
+      "website": "http://lunetterie-de-blonay.ch/",
+      "phone": "021 943 26 15",
+      "address": "Rte du Village 10, 1807 Blonay, Switzerland",
+      "marketCode": "CH-FR",
+      "market": "Suisse romande",
+      "marketGroup": "francophone",
+      "language": "fr",
+      "score": 95,
+      "reasons": [
+        "site existant",
+        "email trouve",
+        "telephone disponible",
+        "adresse locale",
+        "fiche nommee"
+      ],
+      "sentAt": "2026-06-15T10:01:24.413Z",
+      "status": "sent",
+      "lifecycleStage": "contacted",
+      "firstContactedAt": "2026-06-15T10:01:24.413Z",
+      "lastContactedAt": "2026-06-15T10:01:24.413Z",
+      "nextFollowUpAt": "2026-06-22T10:01:24.413Z",
+      "timeline": [
+        {
+          "at": "2026-06-15T10:01:24.413Z",
+          "type": "sent",
+          "note": "Initial outreach email sent"
+        }
+      ]
+    },
+    {
+      "placeId": "ChIJqyMT-mvJjkcRiRMEyWGAP6M",
+      "name": "Créateur de Vue",
+      "email": "info@createurdevue.ch",
+      "website": "https://www.createurdevue.ch/",
+      "phone": "077 460 56 82",
+      "address": "Rue de l'Eglise 2, 1926 Fully, Switzerland",
+      "marketCode": "CH-FR",
+      "market": "Suisse romande",
+      "marketGroup": "francophone",
+      "language": "fr",
+      "score": 95,
+      "reasons": [
+        "site existant",
+        "email trouve",
+        "telephone disponible",
+        "adresse locale",
+        "fiche nommee"
+      ],
+      "sentAt": "2026-06-15T10:01:29.209Z",
+      "status": "sent",
+      "lifecycleStage": "contacted",
+      "firstContactedAt": "2026-06-15T10:01:29.209Z",
+      "lastContactedAt": "2026-06-15T10:01:29.209Z",
+      "nextFollowUpAt": "2026-06-22T10:01:29.209Z",
+      "timeline": [
+        {
+          "at": "2026-06-15T10:01:29.209Z",
+          "type": "sent",
+          "note": "Initial outreach email sent"
+        }
+      ]
+    },
+    {
+      "placeId": "ChIJZ0mIqUEujEcRl4g5ikv9i5k",
+      "name": "Lunetterie de la Sallaz",
+      "email": "info@lunetteriedelasallaz.ch",
+      "website": "http://www.lunetteriedelasallaz.ch/",
+      "phone": "021 653 22 22",
+      "address": "Rte de Berne 1, 1010 Lausanne, Switzerland",
+      "marketCode": "CH-FR",
+      "market": "Suisse romande",
+      "marketGroup": "francophone",
+      "language": "fr",
+      "score": 95,
+      "reasons": [
+        "site existant",
+        "email trouve",
+        "telephone disponible",
+        "adresse locale",
+        "fiche nommee"
+      ],
+      "sentAt": "2026-06-15T10:01:34.878Z",
+      "status": "sent",
+      "lifecycleStage": "contacted",
+      "firstContactedAt": "2026-06-15T10:01:34.878Z",
+      "lastContactedAt": "2026-06-15T10:01:34.878Z",
+      "nextFollowUpAt": "2026-06-22T10:01:34.878Z",
+      "timeline": [
+        {
+          "at": "2026-06-15T10:01:34.878Z",
+          "type": "sent",
+          "note": "Initial outreach email sent"
+        }
+      ]
+    },
+    {
+      "placeId": "ChIJw-b1b9VkjEcRzOILUIScIKU",
+      "name": "Vue des bains",
+      "email": "info@vuedesbains.ch",
+      "website": "http://www.vuedesbains.ch/",
+      "phone": "022 320 26 30",
+      "address": "Av. du Mail 8, 1205 Genève, Switzerland",
+      "marketCode": "CH-FR",
+      "market": "Suisse romande",
+      "marketGroup": "francophone",
+      "language": "fr",
+      "score": 95,
+      "reasons": [
+        "site existant",
+        "email trouve",
+        "telephone disponible",
+        "adresse locale",
+        "fiche nommee"
+      ],
+      "sentAt": "2026-06-15T10:01:43.108Z",
+      "status": "sent",
+      "lifecycleStage": "contacted",
+      "firstContactedAt": "2026-06-15T10:01:43.108Z",
+      "lastContactedAt": "2026-06-15T10:01:43.108Z",
+      "nextFollowUpAt": "2026-06-22T10:01:43.108Z",
+      "timeline": [
+        {
+          "at": "2026-06-15T10:01:43.108Z",
+          "type": "sent",
+          "note": "Initial outreach email sent"
+        }
+      ]
+    },
+    {
+      "placeId": "ChIJyajzsn1GjEcRkCiXaHNtDUY",
+      "name": "Iriss Optic - Opticien Rolle",
+      "email": "info@iriss-optic.ch",
+      "website": "https://iriss-optic.ch/",
+      "phone": "021 825 40 54",
+      "address": "Grand-Rue 11, 1180 Rolle, Switzerland",
+      "marketCode": "CH-FR",
+      "market": "Suisse romande",
+      "marketGroup": "francophone",
+      "language": "fr",
+      "score": 95,
+      "reasons": [
+        "site existant",
+        "email trouve",
+        "telephone disponible",
+        "adresse locale",
+        "fiche nommee"
+      ],
+      "sentAt": "2026-06-15T10:01:48.427Z",
+      "status": "sent",
+      "lifecycleStage": "contacted",
+      "firstContactedAt": "2026-06-15T10:01:48.427Z",
+      "lastContactedAt": "2026-06-15T10:01:48.427Z",
+      "nextFollowUpAt": "2026-06-22T10:01:48.427Z",
+      "timeline": [
+        {
+          "at": "2026-06-15T10:01:48.427Z",
+          "type": "sent",
+          "note": "Initial outreach email sent"
+        }
+      ]
+    },
+    {
+      "placeId": "ChIJa0pDwdJIlUcRnjU57_ecv7A",
+      "name": "Restaurant Clairefontaine",
+      "email": "clairefo@pt.lu",
+      "website": "http://www.restaurantclairefontaine.lu/",
+      "phone": "46 22 11",
+      "address": "9 Pl. de Clairefontaine, 1341 Ville-Haute Luxembourg",
+      "marketCode": "LU",
+      "market": "Luxembourg",
+      "marketGroup": "francophone",
+      "language": "fr",
+      "score": 95,
+      "reasons": [
+        "site existant",
+        "email trouve",
+        "telephone disponible",
+        "adresse locale",
+        "fiche nommee"
+      ],
+      "sentAt": "2026-06-15T10:02:00.947Z",
+      "status": "sent",
+      "lifecycleStage": "contacted",
+      "firstContactedAt": "2026-06-15T10:02:00.947Z",
+      "lastContactedAt": "2026-06-15T10:02:00.947Z",
+      "nextFollowUpAt": "2026-06-22T10:02:00.947Z",
+      "timeline": [
+        {
+          "at": "2026-06-15T10:02:00.947Z",
+          "type": "sent",
+          "note": "Initial outreach email sent"
+        }
+      ]
+    },
+    {
+      "placeId": "ChIJN036Jl1PlUcR7lerVi_Y0zA",
+      "name": "JUNCO",
+      "email": "contact@junco.lu",
+      "website": "https://restaurantsandbars.accor.com/en/restaurant/1930_R003",
+      "phone": "42 98 48 833",
+      "address": "Quartier Européen Nord, 6 rue Fort Niedergrünewald, 2226 Kirchberg Luxembourg",
+      "marketCode": "LU",
+      "market": "Luxembourg",
+      "marketGroup": "francophone",
+      "language": "fr",
+      "score": 95,
+      "reasons": [
+        "site existant",
+        "email trouve",
+        "telephone disponible",
+        "adresse locale",
+        "fiche nommee"
+      ],
+      "sentAt": "2026-06-15T10:02:07.115Z",
+      "status": "sent",
+      "lifecycleStage": "contacted",
+      "firstContactedAt": "2026-06-15T10:02:07.115Z",
+      "lastContactedAt": "2026-06-15T10:02:07.115Z",
+      "nextFollowUpAt": "2026-06-22T10:02:07.115Z",
+      "timeline": [
+        {
+          "at": "2026-06-15T10:02:07.115Z",
+          "type": "sent",
+          "note": "Initial outreach email sent"
+        }
+      ]
+    },
+    {
+      "placeId": "ChIJPwHzqixPlUcRAsadEd8rMgA",
+      "name": "Grand Café",
+      "email": "605a7baede844d278b89dc95ae0a9123@sentry-next.wixpress.com",
+      "website": "http://www.grandcafe-redbeef.lu/",
+      "phone": "26 27 02 92",
+      "address": "11 Pl. d'Armes, 1136 Ville-Haute Luxembourg",
+      "marketCode": "LU",
+      "market": "Luxembourg",
+      "marketGroup": "francophone",
+      "language": "fr",
+      "score": 95,
+      "reasons": [
+        "site existant",
+        "email trouve",
+        "telephone disponible",
+        "adresse locale",
+        "fiche nommee"
+      ],
+      "sentAt": "2026-06-15T10:02:12.221Z",
+      "status": "sent",
+      "lifecycleStage": "contacted",
+      "firstContactedAt": "2026-06-15T10:02:12.221Z",
+      "lastContactedAt": "2026-06-15T10:02:12.221Z",
+      "nextFollowUpAt": "2026-06-22T10:02:12.221Z",
+      "timeline": [
+        {
+          "at": "2026-06-15T10:02:12.221Z",
+          "type": "sent",
+          "note": "Initial outreach email sent"
+        }
+      ]
+    },
+    {
+      "placeId": "ChIJq2bRpDNJlUcRfenPwTjqf6w",
+      "name": "Public House",
+      "email": "info@publichouse.lu",
+      "website": "http://publichouse.lu/",
+      "phone": "621 573 723",
+      "address": "7 Bd Franklin Delano Roosevelt, 2450 Ville-Haute Luxembourg",
+      "marketCode": "LU",
+      "market": "Luxembourg",
+      "marketGroup": "francophone",
+      "language": "fr",
+      "score": 95,
+      "reasons": [
+        "site existant",
+        "email trouve",
+        "telephone disponible",
+        "adresse locale",
+        "fiche nommee"
+      ],
+      "sentAt": "2026-06-15T10:02:19.446Z",
+      "status": "sent",
+      "lifecycleStage": "contacted",
+      "firstContactedAt": "2026-06-15T10:02:19.446Z",
+      "lastContactedAt": "2026-06-15T10:02:19.446Z",
+      "nextFollowUpAt": "2026-06-22T10:02:19.446Z",
+      "timeline": [
+        {
+          "at": "2026-06-15T10:02:19.446Z",
+          "type": "sent",
+          "note": "Initial outreach email sent"
+        }
+      ]
+    },
+    {
+      "placeId": "ChIJAWHrfDRPlUcRRjlGghi9y6g",
+      "name": "Restaurant Gastronomique Le Sud",
+      "email": "info@le-sud.lu",
+      "website": "https://www.le-sud.lu/",
+      "phone": "26 47 87 50",
+      "address": "8 Rives de Clausen, 2165 Grund Luxembourg",
+      "marketCode": "LU",
+      "market": "Luxembourg",
+      "marketGroup": "francophone",
+      "language": "fr",
+      "score": 95,
+      "reasons": [
+        "site existant",
+        "email trouve",
+        "telephone disponible",
+        "adresse locale",
+        "fiche nommee"
+      ],
+      "sentAt": "2026-06-15T10:02:31.339Z",
+      "status": "sent",
+      "lifecycleStage": "contacted",
+      "firstContactedAt": "2026-06-15T10:02:31.339Z",
+      "lastContactedAt": "2026-06-15T10:02:31.339Z",
+      "nextFollowUpAt": "2026-06-22T10:02:31.339Z",
+      "timeline": [
+        {
+          "at": "2026-06-15T10:02:31.339Z",
+          "type": "sent",
+          "note": "Initial outreach email sent"
+        }
+      ]
+    },
+    {
+      "placeId": "ChIJV38C8T9JlUcRN-NHw6uOemU",
+      "name": "Restaurant le Laboratoire",
+      "email": "info@lelaboratoire.lu",
+      "website": "http://lelaboratoire.lu/",
+      "phone": "27 48 97 07",
+      "address": "1 Rue des Trevires, 2628 Bonnevoie-Nord-Verlorenkost Luxembourg",
+      "marketCode": "LU",
+      "market": "Luxembourg",
+      "marketGroup": "francophone",
+      "language": "fr",
+      "score": 95,
+      "reasons": [
+        "site existant",
+        "email trouve",
+        "telephone disponible",
+        "adresse locale",
+        "fiche nommee"
+      ],
+      "sentAt": "2026-06-15T10:02:59.043Z",
+      "status": "sent",
+      "lifecycleStage": "contacted",
+      "firstContactedAt": "2026-06-15T10:02:59.043Z",
+      "lastContactedAt": "2026-06-15T10:02:59.043Z",
+      "nextFollowUpAt": "2026-06-22T10:02:59.043Z",
+      "timeline": [
+        {
+          "at": "2026-06-15T10:02:59.043Z",
+          "type": "sent",
+          "note": "Initial outreach email sent"
+        }
+      ]
+    },
+    {
+      "placeId": "ChIJW78No9lPlUcRtFo1lNiqBjU",
+      "name": "MAMA RESTAURANT LUXEMBOURG",
+      "email": "data@ennismore.com",
+      "website": "https://mamashelter.com/luxembourg/eat-drink/?utm_source=google+Maps&utm_medium=seo+maps&utm_campaign=seo+maps",
+      "phone": "20 80 44 05",
+      "address": "2 Rue Du Fort Niedergruenewald, 2 R. Fort Niedergrünewald, 1616 Kirchberg Luxembourg",
+      "marketCode": "LU",
+      "market": "Luxembourg",
+      "marketGroup": "francophone",
+      "language": "fr",
+      "score": 95,
+      "reasons": [
+        "site existant",
+        "email trouve",
+        "telephone disponible",
+        "adresse locale",
+        "fiche nommee"
+      ],
+      "sentAt": "2026-06-15T10:03:07.890Z",
+      "status": "sent",
+      "lifecycleStage": "contacted",
+      "firstContactedAt": "2026-06-15T10:03:07.890Z",
+      "lastContactedAt": "2026-06-15T10:03:07.890Z",
+      "nextFollowUpAt": "2026-06-22T10:03:07.890Z",
+      "timeline": [
+        {
+          "at": "2026-06-15T10:03:07.890Z",
+          "type": "sent",
+          "note": "Initial outreach email sent"
+        }
+      ]
+    },
+    {
+      "placeId": "ChIJX9HjwHGWuEwRXuORKbAFP5s",
+      "name": "Boulangerie Pâtisserie Le Croquembouche",
+      "email": "croquembouche@legeorge-v.com",
+      "website": "http://www.lecroquembouche.com/",
+      "phone": "(418) 523-9009",
+      "address": "225 Rue Saint-Joseph E, Québec, QC G1K 3B1, Canada",
+      "marketCode": "CA-QC",
+      "market": "Québec",
+      "marketGroup": "francophone",
+      "language": "fr",
+      "score": 95,
+      "reasons": [
+        "site existant",
+        "email trouve",
+        "telephone disponible",
+        "adresse locale",
+        "fiche nommee"
+      ],
+      "sentAt": "2026-06-15T10:03:13.455Z",
+      "status": "sent",
+      "lifecycleStage": "contacted",
+      "firstContactedAt": "2026-06-15T10:03:13.455Z",
+      "lastContactedAt": "2026-06-15T10:03:13.455Z",
+      "nextFollowUpAt": "2026-06-22T10:03:13.455Z",
+      "timeline": [
+        {
+          "at": "2026-06-15T10:03:13.455Z",
+          "type": "sent",
+          "note": "Initial outreach email sent"
+        }
+      ]
+    },
+    {
+      "placeId": "ChIJDwePsneWuEwRsJlt0T2tXu4",
+      "name": "Boulangerie artisanale Epi’Fanny I Québec",
+      "email": "info@boulangerieepifanny.com",
+      "website": "https://boulangerieepifanny.com/",
+      "phone": "(418) 621-9191",
+      "address": "646 Rue Saint-Jean, Québec, QC G1R 1P8, Canada",
+      "marketCode": "CA-QC",
+      "market": "Québec",
+      "marketGroup": "francophone",
+      "language": "fr",
+      "score": 95,
+      "reasons": [
+        "site existant",
+        "email trouve",
+        "telephone disponible",
+        "adresse locale",
+        "fiche nommee"
+      ],
+      "sentAt": "2026-06-15T10:03:18.116Z",
+      "status": "sent",
+      "lifecycleStage": "contacted",
+      "firstContactedAt": "2026-06-15T10:03:18.116Z",
+      "lastContactedAt": "2026-06-15T10:03:18.116Z",
+      "nextFollowUpAt": "2026-06-22T10:03:18.116Z",
+      "timeline": [
+        {
+          "at": "2026-06-15T10:03:18.116Z",
+          "type": "sent",
+          "note": "Initial outreach email sent"
+        }
+      ]
     }
   ],
-  "lastUpdated": "2026-06-12T09:22:44.518Z"
+  "lastUpdated": "2026-06-15T10:05:36.813Z"
 }
