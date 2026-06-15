@@ -77,7 +77,7 @@ export function Hero({ locale = "fr" }: { locale?: Locale }) {
   return (
     <section
       id="hero"
-      className="relative isolate min-h-[84dvh] max-w-full overflow-hidden bg-[#f8f5ee] px-4 pb-5 pt-22 text-[#17120f] md:px-8 lg:px-10 lg:pb-6 lg:pt-24"
+      className="relative isolate min-h-[84dvh] max-w-full overflow-hidden bg-[#f8f5ee] px-4 pb-5 pt-28 text-[#17120f] md:px-8 md:pt-24 lg:px-10 lg:pb-6 lg:pt-24"
     >
       <div className="absolute inset-0 -z-20 bg-[linear-gradient(120deg,rgba(245,241,232,0.96)_0%,rgba(232,224,210,0.9)_52%,rgba(247,238,224,0.96)_100%)]" />
       <div
@@ -104,7 +104,7 @@ export function Hero({ locale = "fr" }: { locale?: Locale }) {
 
           <motion.h1
             variants={introItem}
-            className="font-display mt-4 max-w-[16ch] text-[clamp(2.25rem,4.7vw,4.45rem)] font-semibold leading-[0.93] tracking-[-0.01em] text-[#17120f]"
+            className="font-display mt-4 max-w-[16ch] text-[clamp(1.85rem,7.4vw,4.45rem)] font-semibold leading-[0.98] tracking-[-0.01em] text-[#17120f] sm:leading-[0.93]"
           >
             {t.title}
           </motion.h1>
