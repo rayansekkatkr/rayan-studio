@@ -3646,7 +3646,634 @@
           "note": "Initial outreach email sent"
         }
       ]
+    },
+    {
+      "placeId": "ChIJRxWqgnOXuEwRNMwFSsKmFSM",
+      "name": "Pâtisserie Chouquette",
+      "email": "info@patisseriechouquette.com",
+      "website": "http://patisseriechouquette.myshopify.com/",
+      "phone": "(418) 614-3500",
+      "address": "778 Rue Saint-Jean, Québec, QC G1R 1P9, Canada",
+      "marketCode": "CA-QC",
+      "market": "Québec",
+      "marketGroup": "francophone",
+      "language": "fr",
+      "score": 95,
+      "reasons": [
+        "site existant",
+        "email trouve",
+        "telephone disponible",
+        "adresse locale",
+        "fiche nommee"
+      ],
+      "sentAt": "2026-06-16T09:42:54.614Z",
+      "status": "sent",
+      "lifecycleStage": "contacted",
+      "firstContactedAt": "2026-06-16T09:42:54.614Z",
+      "lastContactedAt": "2026-06-16T09:42:54.614Z",
+      "nextFollowUpAt": "2026-06-23T09:42:54.614Z",
+      "timeline": [
+        {
+          "at": "2026-06-16T09:42:54.614Z",
+          "type": "sent",
+          "note": "Initial outreach email sent"
+        }
+      ]
+    },
+    {
+      "placeId": "ChIJ3-H_XZiWuEwREI51lfCf6mo",
+      "name": "Boulangerie Artisanale Paul",
+      "email": "boul.arti.paul@hotmail.com",
+      "website": "https://www.boulangerieartisanalepaul.com/",
+      "phone": "(418) 684-0200",
+      "address": "1646 Chem. Saint-Louis, Québec, QC G1S 1G8, Canada",
+      "marketCode": "CA-QC",
+      "market": "Québec",
+      "marketGroup": "francophone",
+      "language": "fr",
+      "score": 95,
+      "reasons": [
+        "site existant",
+        "email trouve",
+        "telephone disponible",
+        "adresse locale",
+        "fiche nommee"
+      ],
+      "sentAt": "2026-06-16T09:42:58.487Z",
+      "status": "sent",
+      "lifecycleStage": "contacted",
+      "firstContactedAt": "2026-06-16T09:42:58.487Z",
+      "lastContactedAt": "2026-06-16T09:42:58.487Z",
+      "nextFollowUpAt": "2026-06-23T09:42:58.487Z",
+      "timeline": [
+        {
+          "at": "2026-06-16T09:42:58.487Z",
+          "type": "sent",
+          "note": "Initial outreach email sent"
+        }
+      ]
+    },
+    {
+      "placeId": "ChIJ5SW7ypKWuEwRdNLrBoS__zA",
+      "name": "La Boule-Miche, boulangerie-pâtisserie",
+      "email": "info@laboulemiche.com",
+      "website": "http://www.laboulemiche.com/",
+      "phone": "(418) 688-7538",
+      "address": "1483 Ch Ste-Foy, Québec, QC G1S 2N7, Canada",
+      "marketCode": "CA-QC",
+      "market": "Québec",
+      "marketGroup": "francophone",
+      "language": "fr",
+      "score": 95,
+      "reasons": [
+        "site existant",
+        "email trouve",
+        "telephone disponible",
+        "adresse locale",
+        "fiche nommee"
+      ],
+      "sentAt": "2026-06-16T09:43:03.488Z",
+      "status": "sent",
+      "lifecycleStage": "contacted",
+      "firstContactedAt": "2026-06-16T09:43:03.488Z",
+      "lastContactedAt": "2026-06-16T09:43:03.488Z",
+      "nextFollowUpAt": "2026-06-23T09:43:03.488Z",
+      "timeline": [
+        {
+          "at": "2026-06-16T09:43:03.488Z",
+          "type": "sent",
+          "note": "Initial outreach email sent"
+        }
+      ]
+    },
+    {
+      "placeId": "ChIJCf1ymTaRuEwRhw-9hevBpsY",
+      "name": "Au Palet D'Or",
+      "email": "info@aupaletdor.com",
+      "website": "https://www.aupaletdor.com/",
+      "phone": "(418) 692-2488",
+      "address": "1325 Rte de l'Église, Québec, QC G1W 3P3, Canada",
+      "marketCode": "CA-QC",
+      "market": "Québec",
+      "marketGroup": "francophone",
+      "language": "fr",
+      "score": 95,
+      "reasons": [
+        "site existant",
+        "email trouve",
+        "telephone disponible",
+        "adresse locale",
+        "fiche nommee"
+      ],
+      "sentAt": "2026-06-16T09:43:15.619Z",
+      "status": "sent",
+      "lifecycleStage": "contacted",
+      "firstContactedAt": "2026-06-16T09:43:15.619Z",
+      "lastContactedAt": "2026-06-16T09:43:15.619Z",
+      "nextFollowUpAt": "2026-06-23T09:43:15.619Z",
+      "timeline": [
+        {
+          "at": "2026-06-16T09:43:15.619Z",
+          "type": "sent",
+          "note": "Initial outreach email sent"
+        }
+      ]
+    },
+    {
+      "placeId": "ChIJnRT8i36kuEwRoM2TKxpG6Bw",
+      "name": "Boulangerie du Lac",
+      "email": "info@boulangeriedulac.com",
+      "website": "http://boulangeriedulac.ca/",
+      "phone": "(418) 316-2837",
+      "address": "1025 Bd du Lac, Lac-Beauport, QC G3B 0X1, Canada",
+      "marketCode": "CA-QC",
+      "market": "Québec",
+      "marketGroup": "francophone",
+      "language": "fr",
+      "score": 95,
+      "reasons": [
+        "site existant",
+        "email trouve",
+        "telephone disponible",
+        "adresse locale",
+        "fiche nommee"
+      ],
+      "sentAt": "2026-06-16T09:43:24.490Z",
+      "status": "sent",
+      "lifecycleStage": "contacted",
+      "firstContactedAt": "2026-06-16T09:43:24.490Z",
+      "lastContactedAt": "2026-06-16T09:43:24.490Z",
+      "nextFollowUpAt": "2026-06-23T09:43:24.490Z",
+      "timeline": [
+        {
+          "at": "2026-06-16T09:43:24.490Z",
+          "type": "sent",
+          "note": "Initial outreach email sent"
+        }
+      ]
+    },
+    {
+      "placeId": "ChIJl92aXbAcbkgRlDfmXbtPCTE",
+      "name": "Lazarou Hair Salon & Extensions Cardiff Castle",
+      "email": "support@lazarouhairsalons.co.uk",
+      "website": "https://www.lazarouhairsalons.co.uk/besthairdresserscardiff",
+      "phone": "029 2022 1000",
+      "address": "12 Duke St, Cardiff CF10 1AY, UK",
+      "marketCode": "GB",
+      "market": "United Kingdom",
+      "marketGroup": "english",
+      "language": "en",
+      "score": 95,
+      "reasons": [
+        "site existant",
+        "email trouve",
+        "telephone disponible",
+        "adresse locale",
+        "fiche nommee"
+      ],
+      "sentAt": "2026-06-16T09:43:34.648Z",
+      "status": "sent",
+      "lifecycleStage": "contacted",
+      "firstContactedAt": "2026-06-16T09:43:34.648Z",
+      "lastContactedAt": "2026-06-16T09:43:34.648Z",
+      "nextFollowUpAt": "2026-06-23T09:43:34.648Z",
+      "timeline": [
+        {
+          "at": "2026-06-16T09:43:34.648Z",
+          "type": "sent",
+          "note": "Initial outreach email sent"
+        }
+      ]
+    },
+    {
+      "placeId": "ChIJeWOUY0wddkgR81CyYceuHrA",
+      "name": "Neil Moodie Studio",
+      "email": "enquiries@neilmoodiestudio.com",
+      "website": "http://www.neilmoodiestudio.com/",
+      "phone": "020 7646 7106",
+      "address": "16A Lamb St, London E1 6EA, UK",
+      "marketCode": "GB",
+      "market": "United Kingdom",
+      "marketGroup": "english",
+      "language": "en",
+      "score": 95,
+      "reasons": [
+        "site existant",
+        "email trouve",
+        "telephone disponible",
+        "adresse locale",
+        "fiche nommee"
+      ],
+      "sentAt": "2026-06-16T09:43:38.696Z",
+      "status": "sent",
+      "lifecycleStage": "contacted",
+      "firstContactedAt": "2026-06-16T09:43:38.696Z",
+      "lastContactedAt": "2026-06-16T09:43:38.696Z",
+      "nextFollowUpAt": "2026-06-23T09:43:38.696Z",
+      "timeline": [
+        {
+          "at": "2026-06-16T09:43:38.696Z",
+          "type": "sent",
+          "note": "Initial outreach email sent"
+        }
+      ]
+    },
+    {
+      "placeId": "ChIJSbpfyicbdkgRQx9YUHPAoNM",
+      "name": "Euston Barber Looking Good Hair & Beauty",
+      "email": "micah@micahrich.com",
+      "website": "https://lookinggoodsalon.co.uk/",
+      "phone": "07958 531197",
+      "address": "Euston, 144 Drummond St, London NW1 2PA, UK",
+      "marketCode": "GB",
+      "market": "United Kingdom",
+      "marketGroup": "english",
+      "language": "en",
+      "score": 95,
+      "reasons": [
+        "site existant",
+        "email trouve",
+        "telephone disponible",
+        "adresse locale",
+        "fiche nommee"
+      ],
+      "sentAt": "2026-06-16T09:43:42.857Z",
+      "status": "sent",
+      "lifecycleStage": "contacted",
+      "firstContactedAt": "2026-06-16T09:43:42.857Z",
+      "lastContactedAt": "2026-06-16T09:43:42.857Z",
+      "nextFollowUpAt": "2026-06-23T09:43:42.857Z",
+      "timeline": [
+        {
+          "at": "2026-06-16T09:43:42.857Z",
+          "type": "sent",
+          "note": "Initial outreach email sent"
+        }
+      ]
+    },
+    {
+      "placeId": "ChIJkftPWo8ddkgRmVDIMX1Ichk",
+      "name": "SALT Salon Hackney",
+      "email": "bookings@salthackney.com",
+      "website": "http://www.saltsalonlondon.com/",
+      "phone": "07950 722776",
+      "address": "SALT, Unit 10A, STAMFORD WORKS, 3 Gillett St, London N16 8JH, UK",
+      "marketCode": "GB",
+      "market": "United Kingdom",
+      "marketGroup": "english",
+      "language": "en",
+      "score": 95,
+      "reasons": [
+        "site existant",
+        "email trouve",
+        "telephone disponible",
+        "adresse locale",
+        "fiche nommee"
+      ],
+      "sentAt": "2026-06-16T09:43:46.965Z",
+      "status": "sent",
+      "lifecycleStage": "contacted",
+      "firstContactedAt": "2026-06-16T09:43:46.965Z",
+      "lastContactedAt": "2026-06-16T09:43:46.965Z",
+      "nextFollowUpAt": "2026-06-23T09:43:46.965Z",
+      "timeline": [
+        {
+          "at": "2026-06-16T09:43:46.965Z",
+          "type": "sent",
+          "note": "Initial outreach email sent"
+        }
+      ]
+    },
+    {
+      "placeId": "ChIJDYFjLXMbdkgRWqA4RPSQIFU",
+      "name": "Haug London Haus",
+      "email": "hello@hauglondon.com",
+      "website": "https://www.hauglondon.com/",
+      "phone": "020 3376 2630",
+      "address": "19 Rathbone St, London W1T 1NE, UK",
+      "marketCode": "GB",
+      "market": "United Kingdom",
+      "marketGroup": "english",
+      "language": "en",
+      "score": 95,
+      "reasons": [
+        "site existant",
+        "email trouve",
+        "telephone disponible",
+        "adresse locale",
+        "fiche nommee"
+      ],
+      "sentAt": "2026-06-16T09:43:51.357Z",
+      "status": "sent",
+      "lifecycleStage": "contacted",
+      "firstContactedAt": "2026-06-16T09:43:51.357Z",
+      "lastContactedAt": "2026-06-16T09:43:51.357Z",
+      "nextFollowUpAt": "2026-06-23T09:43:51.357Z",
+      "timeline": [
+        {
+          "at": "2026-06-16T09:43:51.357Z",
+          "type": "sent",
+          "note": "Initial outreach email sent"
+        }
+      ]
+    },
+    {
+      "placeId": "ChIJt2JzLIUhe0gRb4A_TSymvS0",
+      "name": "DOT Hair",
+      "email": "phill@dothair.co.uk",
+      "website": "http://www.dothair.co.uk/",
+      "phone": "0151 236 5421",
+      "address": "46 Dale St, Liverpool L2 5SF, UK",
+      "marketCode": "GB",
+      "market": "United Kingdom",
+      "marketGroup": "english",
+      "language": "en",
+      "score": 95,
+      "reasons": [
+        "site existant",
+        "email trouve",
+        "telephone disponible",
+        "adresse locale",
+        "fiche nommee"
+      ],
+      "sentAt": "2026-06-16T09:44:03.730Z",
+      "status": "sent",
+      "lifecycleStage": "contacted",
+      "firstContactedAt": "2026-06-16T09:44:03.730Z",
+      "lastContactedAt": "2026-06-16T09:44:03.730Z",
+      "nextFollowUpAt": "2026-06-23T09:44:03.730Z",
+      "timeline": [
+        {
+          "at": "2026-06-16T09:44:03.730Z",
+          "type": "sent",
+          "note": "Initial outreach email sent"
+        }
+      ]
+    },
+    {
+      "placeId": "ChIJl59AJ-EPdkgRpSt96JDb5lM",
+      "name": "BOTTEGA hair salon",
+      "email": "bottegahair.london@gmail.com",
+      "website": "https://bottegahairsalon.mytreatwell.co.uk/",
+      "phone": "020 3887 7012",
+      "address": "49 White Hart Ln, London SW13 0PP, UK",
+      "marketCode": "GB",
+      "market": "United Kingdom",
+      "marketGroup": "english",
+      "language": "en",
+      "score": 95,
+      "reasons": [
+        "site existant",
+        "email trouve",
+        "telephone disponible",
+        "adresse locale",
+        "fiche nommee"
+      ],
+      "sentAt": "2026-06-16T09:44:08.465Z",
+      "status": "sent",
+      "lifecycleStage": "contacted",
+      "firstContactedAt": "2026-06-16T09:44:08.465Z",
+      "lastContactedAt": "2026-06-16T09:44:08.465Z",
+      "nextFollowUpAt": "2026-06-23T09:44:08.465Z",
+      "timeline": [
+        {
+          "at": "2026-06-16T09:44:08.465Z",
+          "type": "sent",
+          "note": "Initial outreach email sent"
+        }
+      ]
+    },
+    {
+      "placeId": "ChIJi7icT9hwfkgRTAnEYWBaqxM",
+      "name": "Boilerhouse - Hair & Beauty Salon",
+      "email": "boilerhousebridal@gmail.com",
+      "website": "https://boilerhousehair.co.uk/",
+      "phone": "0191 281 2348",
+      "address": "9 Acorn Rd, Jesmond, Newcastle upon Tyne NE2 2DJ, UK",
+      "marketCode": "GB",
+      "market": "United Kingdom",
+      "marketGroup": "english",
+      "language": "en",
+      "score": 95,
+      "reasons": [
+        "site existant",
+        "email trouve",
+        "telephone disponible",
+        "adresse locale",
+        "fiche nommee"
+      ],
+      "sentAt": "2026-06-16T09:44:14.509Z",
+      "status": "sent",
+      "lifecycleStage": "contacted",
+      "firstContactedAt": "2026-06-16T09:44:14.509Z",
+      "lastContactedAt": "2026-06-16T09:44:14.509Z",
+      "nextFollowUpAt": "2026-06-23T09:44:14.509Z",
+      "timeline": [
+        {
+          "at": "2026-06-16T09:44:14.509Z",
+          "type": "sent",
+          "note": "Initial outreach email sent"
+        }
+      ]
+    },
+    {
+      "placeId": "ChIJNTRaZL4VcUgRQHeUTf7NMoo",
+      "name": "Blushes Cirencester",
+      "email": "cirencester@blushes.co.uk",
+      "website": "https://www.blushes.co.uk/cirencester-salon",
+      "phone": "01285 842724",
+      "address": "5 Market Pl, Cirencester GL7 2NX, UK",
+      "marketCode": "GB",
+      "market": "United Kingdom",
+      "marketGroup": "english",
+      "language": "en",
+      "score": 95,
+      "reasons": [
+        "site existant",
+        "email trouve",
+        "telephone disponible",
+        "adresse locale",
+        "fiche nommee"
+      ],
+      "sentAt": "2026-06-16T09:44:18.490Z",
+      "status": "sent",
+      "lifecycleStage": "contacted",
+      "firstContactedAt": "2026-06-16T09:44:18.490Z",
+      "lastContactedAt": "2026-06-16T09:44:18.490Z",
+      "nextFollowUpAt": "2026-06-23T09:44:18.490Z",
+      "timeline": [
+        {
+          "at": "2026-06-16T09:44:18.490Z",
+          "type": "sent",
+          "note": "Initial outreach email sent"
+        }
+      ]
+    },
+    {
+      "placeId": "ChIJ86KXNKgIe0gRRUSvXmBVEY8",
+      "name": "Leah Marie Hair & Beauty",
+      "email": "contact@sansoxygen.com",
+      "website": "https://leah-marie.co.uk/",
+      "phone": "01942 254922",
+      "address": "40 Market St, Hindley, Wigan WN2 3AN, UK",
+      "marketCode": "GB",
+      "market": "United Kingdom",
+      "marketGroup": "english",
+      "language": "en",
+      "score": 95,
+      "reasons": [
+        "site existant",
+        "email trouve",
+        "telephone disponible",
+        "adresse locale",
+        "fiche nommee"
+      ],
+      "sentAt": "2026-06-16T09:44:24.430Z",
+      "status": "sent",
+      "lifecycleStage": "contacted",
+      "firstContactedAt": "2026-06-16T09:44:24.430Z",
+      "lastContactedAt": "2026-06-16T09:44:24.430Z",
+      "nextFollowUpAt": "2026-06-23T09:44:24.430Z",
+      "timeline": [
+        {
+          "at": "2026-06-16T09:44:24.430Z",
+          "type": "sent",
+          "note": "Initial outreach email sent"
+        }
+      ]
+    },
+    {
+      "placeId": "ChIJ79KUVrJzZ0gR-CnF8yMiOTA",
+      "name": "Fyre Gym",
+      "email": "info@fyregyms.ie",
+      "website": "http://fyregyms.ie/",
+      "phone": "(01) 822 8763",
+      "address": "Unit 10 Porters Rd, Coolmine Industrial Estate, Dublin 15, Ireland",
+      "marketCode": "IE",
+      "market": "Ireland",
+      "marketGroup": "english",
+      "language": "en",
+      "score": 95,
+      "reasons": [
+        "site existant",
+        "email trouve",
+        "telephone disponible",
+        "adresse locale",
+        "fiche nommee"
+      ],
+      "sentAt": "2026-06-16T09:44:35.541Z",
+      "status": "sent",
+      "lifecycleStage": "contacted",
+      "firstContactedAt": "2026-06-16T09:44:35.541Z",
+      "lastContactedAt": "2026-06-16T09:44:35.541Z",
+      "nextFollowUpAt": "2026-06-23T09:44:35.541Z",
+      "timeline": [
+        {
+          "at": "2026-06-16T09:44:35.541Z",
+          "type": "sent",
+          "note": "Initial outreach email sent"
+        }
+      ]
+    },
+    {
+      "placeId": "ChIJPwGAOD8MZ0gRNf_kmkvfoXY",
+      "name": "Herberton Leisure",
+      "email": "contact@herbertonleisure.com",
+      "website": "https://www.herbertonleisureclub.com/",
+      "phone": "(01) 454 7963",
+      "address": "James's Walk, Saint James, Dublin, Ireland",
+      "marketCode": "IE",
+      "market": "Ireland",
+      "marketGroup": "english",
+      "language": "en",
+      "score": 95,
+      "reasons": [
+        "site existant",
+        "email trouve",
+        "telephone disponible",
+        "adresse locale",
+        "fiche nommee"
+      ],
+      "sentAt": "2026-06-16T09:44:41.294Z",
+      "status": "sent",
+      "lifecycleStage": "contacted",
+      "firstContactedAt": "2026-06-16T09:44:41.294Z",
+      "lastContactedAt": "2026-06-16T09:44:41.294Z",
+      "nextFollowUpAt": "2026-06-23T09:44:41.294Z",
+      "timeline": [
+        {
+          "at": "2026-06-16T09:44:41.294Z",
+          "type": "sent",
+          "note": "Initial outreach email sent"
+        }
+      ]
+    },
+    {
+      "placeId": "ChIJZclB_SYMZ0gRvNAA3kxYxIM",
+      "name": "Iveagh Fitness Club",
+      "email": "iveagh.fitness@iveaghfitness.ie",
+      "website": "http://www.iveaghfitness.ie/",
+      "phone": "(01) 454 6555",
+      "address": "D08KR12, Bride Road, Dublin 8, D08 KR12, Ireland",
+      "marketCode": "IE",
+      "market": "Ireland",
+      "marketGroup": "english",
+      "language": "en",
+      "score": 95,
+      "reasons": [
+        "site existant",
+        "email trouve",
+        "telephone disponible",
+        "adresse locale",
+        "fiche nommee"
+      ],
+      "sentAt": "2026-06-16T09:44:49.898Z",
+      "status": "sent",
+      "lifecycleStage": "contacted",
+      "firstContactedAt": "2026-06-16T09:44:49.898Z",
+      "lastContactedAt": "2026-06-16T09:44:49.898Z",
+      "nextFollowUpAt": "2026-06-23T09:44:49.898Z",
+      "timeline": [
+        {
+          "at": "2026-06-16T09:44:49.898Z",
+          "type": "sent",
+          "note": "Initial outreach email sent"
+        }
+      ]
+    },
+    {
+      "placeId": "ChIJL2vIBZ4OZ0gRu_c-nR_Ssks",
+      "name": "YMCA Fitness",
+      "email": "info@ymca.ie",
+      "website": "https://www.ymca.ie/fitness/",
+      "phone": "(01) 478 2607",
+      "address": "53 Aungier St, Dublin 2, D02 CH96, Ireland",
+      "marketCode": "IE",
+      "market": "Ireland",
+      "marketGroup": "english",
+      "language": "en",
+      "score": 95,
+      "reasons": [
+        "site existant",
+        "email trouve",
+        "telephone disponible",
+        "adresse locale",
+        "fiche nommee"
+      ],
+      "sentAt": "2026-06-16T09:45:03.113Z",
+      "status": "sent",
+      "lifecycleStage": "contacted",
+      "firstContactedAt": "2026-06-16T09:45:03.113Z",
+      "lastContactedAt": "2026-06-16T09:45:03.113Z",
+      "nextFollowUpAt": "2026-06-23T09:45:03.113Z",
+      "timeline": [
+        {
+          "at": "2026-06-16T09:45:03.113Z",
+          "type": "sent",
+          "note": "Initial outreach email sent"
+        }
+      ]
     }
   ],
-  "lastUpdated": "2026-06-15T10:05:36.813Z"
+  "lastUpdated": "2026-06-16T09:46:56.541Z"
 }
