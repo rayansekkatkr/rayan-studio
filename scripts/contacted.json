@@ -4273,7 +4273,667 @@
           "note": "Initial outreach email sent"
         }
       ]
+    },
+    {
+      "placeId": "ChIJwUUSlKNGlUcRkh88I2nxTTg",
+      "name": "Ma langue sourit",
+      "email": "mls@mls.lu",
+      "website": "https://www.mls.lu/",
+      "phone": "26 35 20 31",
+      "address": "1 Rte de Remich, 5331 Oetrange Contern, Luxembourg",
+      "marketCode": "LU",
+      "market": "Luxembourg",
+      "marketGroup": "francophone",
+      "language": "fr",
+      "score": 95,
+      "reasons": [
+        "site existant",
+        "email trouve",
+        "telephone disponible",
+        "adresse locale",
+        "fiche nommee"
+      ],
+      "sentAt": "2026-06-17T09:30:00.345Z",
+      "status": "sent",
+      "lifecycleStage": "contacted",
+      "firstContactedAt": "2026-06-17T09:30:00.345Z",
+      "lastContactedAt": "2026-06-17T09:30:00.345Z",
+      "nextFollowUpAt": "2026-06-24T09:30:00.345Z",
+      "timeline": [
+        {
+          "at": "2026-06-17T09:30:00.345Z",
+          "type": "sent",
+          "note": "Initial outreach email sent"
+        }
+      ]
+    },
+    {
+      "placeId": "ChIJx-JTRjFPlUcRo6uy_HeDWQ4",
+      "name": "Restaurant Equilibrium",
+      "email": "info@equilibriumrestaurant.lu",
+      "website": "https://www.equilibriumrestaurant.lu/",
+      "phone": "27 70 13 23",
+      "address": "107 Rue de la Tour Jacob, 1831 Grund Luxembourg",
+      "marketCode": "LU",
+      "market": "Luxembourg",
+      "marketGroup": "francophone",
+      "language": "fr",
+      "score": 95,
+      "reasons": [
+        "site existant",
+        "email trouve",
+        "telephone disponible",
+        "adresse locale",
+        "fiche nommee"
+      ],
+      "sentAt": "2026-06-17T09:30:26.983Z",
+      "status": "sent",
+      "lifecycleStage": "contacted",
+      "firstContactedAt": "2026-06-17T09:30:26.983Z",
+      "lastContactedAt": "2026-06-17T09:30:26.983Z",
+      "nextFollowUpAt": "2026-06-24T09:30:26.983Z",
+      "timeline": [
+        {
+          "at": "2026-06-17T09:30:26.983Z",
+          "type": "sent",
+          "note": "Initial outreach email sent"
+        }
+      ]
+    },
+    {
+      "placeId": "ChIJk-jLrd-VuEwRoy7WtvUD7HA",
+      "name": "Chez Boulay - comptoir boréal",
+      "email": "vincent@chezboulay.com",
+      "website": "https://chezboulay.com/epicerie-quebecoise/",
+      "phone": "(418) 380-8237",
+      "address": "42 Côte du Palais, Québec, QC G1R 4H8, Canada",
+      "marketCode": "CA-QC",
+      "market": "Québec",
+      "marketGroup": "francophone",
+      "language": "fr",
+      "score": 95,
+      "reasons": [
+        "site existant",
+        "email trouve",
+        "telephone disponible",
+        "adresse locale",
+        "fiche nommee"
+      ],
+      "sentAt": "2026-06-17T09:30:42.608Z",
+      "status": "sent",
+      "lifecycleStage": "contacted",
+      "firstContactedAt": "2026-06-17T09:30:42.608Z",
+      "lastContactedAt": "2026-06-17T09:30:42.608Z",
+      "nextFollowUpAt": "2026-06-24T09:30:42.608Z",
+      "timeline": [
+        {
+          "at": "2026-06-17T09:30:42.608Z",
+          "type": "sent",
+          "note": "Initial outreach email sent"
+        }
+      ]
+    },
+    {
+      "placeId": "ChIJmXrni4EbdkgRUZdLvSg6njQ",
+      "name": "Hair Boost",
+      "email": "infohairboost@gmail.com",
+      "website": "https://www.hairboost.co.uk/",
+      "phone": "07786 075652",
+      "address": "639 Holloway Rd, Archway, London N19 5SS, UK",
+      "marketCode": "GB",
+      "market": "United Kingdom",
+      "marketGroup": "english",
+      "language": "en",
+      "score": 95,
+      "reasons": [
+        "site existant",
+        "email trouve",
+        "telephone disponible",
+        "adresse locale",
+        "fiche nommee"
+      ],
+      "sentAt": "2026-06-17T09:30:55.337Z",
+      "status": "sent",
+      "lifecycleStage": "contacted",
+      "firstContactedAt": "2026-06-17T09:30:55.337Z",
+      "lastContactedAt": "2026-06-17T09:30:55.337Z",
+      "nextFollowUpAt": "2026-06-24T09:30:55.337Z",
+      "timeline": [
+        {
+          "at": "2026-06-17T09:30:55.337Z",
+          "type": "sent",
+          "note": "Initial outreach email sent"
+        }
+      ]
+    },
+    {
+      "placeId": "ChIJxd4mBq8NZ0gRL05_6tYwFyM",
+      "name": "Énergie Fitness Dublin8",
+      "email": "dublin8@energiefitness.com",
+      "website": "http://www.energiefitness.com/dublin-8",
+      "phone": "(01) 539 2990",
+      "address": "Brabazon Hall, Cork St, The Liberties, Dublin, D08 XH90, Ireland",
+      "marketCode": "IE",
+      "market": "Ireland",
+      "marketGroup": "english",
+      "language": "en",
+      "score": 95,
+      "reasons": [
+        "site existant",
+        "email trouve",
+        "telephone disponible",
+        "adresse locale",
+        "fiche nommee"
+      ],
+      "sentAt": "2026-06-17T09:31:22.032Z",
+      "status": "sent",
+      "lifecycleStage": "contacted",
+      "firstContactedAt": "2026-06-17T09:31:22.032Z",
+      "lastContactedAt": "2026-06-17T09:31:22.032Z",
+      "nextFollowUpAt": "2026-06-24T09:31:22.032Z",
+      "timeline": [
+        {
+          "at": "2026-06-17T09:31:22.032Z",
+          "type": "sent",
+          "note": "Initial outreach email sent"
+        }
+      ]
+    },
+    {
+      "placeId": "ChIJz58Ua4QIZ0gR_0R6Mwmw32o",
+      "name": "Anytime Fitness Dun Laoghaire",
+      "email": "coach.anna.chukhan@gmail.com",
+      "website": "http://www.anytimefitness.com/en-ie/locations/co-dublin-dublin-uk-0049",
+      "phone": "(01) 697 2471",
+      "address": "30 Kill Ave, Woodpark, Dublin, Ireland",
+      "marketCode": "IE",
+      "market": "Ireland",
+      "marketGroup": "english",
+      "language": "en",
+      "score": 95,
+      "reasons": [
+        "site existant",
+        "email trouve",
+        "telephone disponible",
+        "adresse locale",
+        "fiche nommee"
+      ],
+      "sentAt": "2026-06-17T09:31:29.768Z",
+      "status": "sent",
+      "lifecycleStage": "contacted",
+      "firstContactedAt": "2026-06-17T09:31:29.768Z",
+      "lastContactedAt": "2026-06-17T09:31:29.768Z",
+      "nextFollowUpAt": "2026-06-24T09:31:29.768Z",
+      "timeline": [
+        {
+          "at": "2026-06-17T09:31:29.768Z",
+          "type": "sent",
+          "note": "Initial outreach email sent"
+        }
+      ]
+    },
+    {
+      "placeId": "ChIJ6YLP36ASZ0gRFF7KEmtbtgc",
+      "name": "National Aquatic Centre",
+      "email": "sales@sportirelandcampus.ie",
+      "website": "https://www.sportirelandcampus.ie/facilities/sport-ireland-national-aquatic-centre",
+      "phone": "(01) 646 4300",
+      "address": "Sport Ireland Campus, Snugborough Rd, Blanchardstown, Dublin 15, D15 EPN4, Ireland",
+      "marketCode": "IE",
+      "market": "Ireland",
+      "marketGroup": "english",
+      "language": "en",
+      "score": 95,
+      "reasons": [
+        "site existant",
+        "email trouve",
+        "telephone disponible",
+        "adresse locale",
+        "fiche nommee"
+      ],
+      "sentAt": "2026-06-17T09:31:39.889Z",
+      "status": "sent",
+      "lifecycleStage": "contacted",
+      "firstContactedAt": "2026-06-17T09:31:39.889Z",
+      "lastContactedAt": "2026-06-17T09:31:39.889Z",
+      "nextFollowUpAt": "2026-06-24T09:31:39.889Z",
+      "timeline": [
+        {
+          "at": "2026-06-17T09:31:39.889Z",
+          "type": "sent",
+          "note": "Initial outreach email sent"
+        }
+      ]
+    },
+    {
+      "placeId": "ChIJfeaNn1In7IcRXzZklfGCILM",
+      "name": "PharMerica",
+      "email": "zachary.barlow@pharmerica.com",
+      "website": "https://www.pharmerica.com/",
+      "phone": "(800) 791-9324",
+      "address": "2901 99th St, Urbandale, IA 50322, USA",
+      "marketCode": "US",
+      "market": "United States",
+      "marketGroup": "english",
+      "language": "en",
+      "score": 95,
+      "reasons": [
+        "site existant",
+        "email trouve",
+        "telephone disponible",
+        "adresse locale",
+        "fiche nommee"
+      ],
+      "sentAt": "2026-06-17T09:31:59.728Z",
+      "status": "sent",
+      "lifecycleStage": "contacted",
+      "firstContactedAt": "2026-06-17T09:31:59.728Z",
+      "lastContactedAt": "2026-06-17T09:31:59.728Z",
+      "nextFollowUpAt": "2026-06-24T09:31:59.728Z",
+      "timeline": [
+        {
+          "at": "2026-06-17T09:31:59.728Z",
+          "type": "sent",
+          "note": "Initial outreach email sent"
+        }
+      ]
+    },
+    {
+      "placeId": "ChIJzUOYdbY0K4gRv8rH-D_si2w",
+      "name": "Bay College Dental Centre",
+      "email": "bcdc@rogers.com",
+      "website": "http://baycollegedentalcenter.com/",
+      "phone": "(416) 640-6400",
+      "address": "790 Bay St. #105, Toronto, ON M5G 1K9, Canada",
+      "marketCode": "CA-EN",
+      "market": "English-speaking Canada",
+      "marketGroup": "english",
+      "language": "en",
+      "score": 95,
+      "reasons": [
+        "site existant",
+        "email trouve",
+        "telephone disponible",
+        "adresse locale",
+        "fiche nommee"
+      ],
+      "sentAt": "2026-06-17T09:32:07.654Z",
+      "status": "sent",
+      "lifecycleStage": "contacted",
+      "firstContactedAt": "2026-06-17T09:32:07.654Z",
+      "lastContactedAt": "2026-06-17T09:32:07.654Z",
+      "nextFollowUpAt": "2026-06-24T09:32:07.654Z",
+      "timeline": [
+        {
+          "at": "2026-06-17T09:32:07.654Z",
+          "type": "sent",
+          "note": "Initial outreach email sent"
+        }
+      ]
+    },
+    {
+      "placeId": "ChIJb88fh5E0K4gRXa8x2dEkdIA",
+      "name": "Bloor Dental Clinic",
+      "email": "info@bloordentalclinic.com",
+      "website": "http://www.bloordentalclinic.com/",
+      "phone": "(416) 535-2111",
+      "address": "464 Bloor St W, Toronto, ON M5S 1X8, Canada",
+      "marketCode": "CA-EN",
+      "market": "English-speaking Canada",
+      "marketGroup": "english",
+      "language": "en",
+      "score": 95,
+      "reasons": [
+        "site existant",
+        "email trouve",
+        "telephone disponible",
+        "adresse locale",
+        "fiche nommee"
+      ],
+      "sentAt": "2026-06-17T09:32:16.155Z",
+      "status": "sent",
+      "lifecycleStage": "contacted",
+      "firstContactedAt": "2026-06-17T09:32:16.155Z",
+      "lastContactedAt": "2026-06-17T09:32:16.155Z",
+      "nextFollowUpAt": "2026-06-24T09:32:16.155Z",
+      "timeline": [
+        {
+          "at": "2026-06-17T09:32:16.155Z",
+          "type": "sent",
+          "note": "Initial outreach email sent"
+        }
+      ]
+    },
+    {
+      "placeId": "ChIJB9gYbVc2K4gR0SQ4MuRhO2E",
+      "name": "The Dental Clinic - Office of Dr. Rahul Shah, Dr. Deanna Lue, Dr. Janine Koutsaris, Dr. Noah Naygeboren & Dr. Sooyoung Kang",
+      "email": "info@thedentalclinic.ca",
+      "website": "http://www.thedentalclinic.ca/",
+      "phone": "(416) 233-9581",
+      "address": "4869 Dundas St W Suite 201, Etobicoke, ON M9A 1B3, Canada",
+      "marketCode": "CA-EN",
+      "market": "English-speaking Canada",
+      "marketGroup": "english",
+      "language": "en",
+      "score": 95,
+      "reasons": [
+        "site existant",
+        "email trouve",
+        "telephone disponible",
+        "adresse locale",
+        "fiche nommee"
+      ],
+      "sentAt": "2026-06-17T09:32:22.855Z",
+      "status": "sent",
+      "lifecycleStage": "contacted",
+      "firstContactedAt": "2026-06-17T09:32:22.855Z",
+      "lastContactedAt": "2026-06-17T09:32:22.855Z",
+      "nextFollowUpAt": "2026-06-24T09:32:22.855Z",
+      "timeline": [
+        {
+          "at": "2026-06-17T09:32:22.855Z",
+          "type": "sent",
+          "note": "Initial outreach email sent"
+        }
+      ]
+    },
+    {
+      "placeId": "ChIJmXiBwot0j1QRVRMfz29M9Yo",
+      "name": "Academy Dental Victoria",
+      "email": "fort@victoriadentist.com",
+      "website": "https://www.victoriadentist.com/?utm_source=GMB_Listing&utm_medium=organic&utm_campaign=Website_URL",
+      "phone": "(778) 561-4816",
+      "address": "1195 Fort St, Victoria, BC V8V 3L1, Canada",
+      "marketCode": "CA-EN",
+      "market": "English-speaking Canada",
+      "marketGroup": "english",
+      "language": "en",
+      "score": 95,
+      "reasons": [
+        "site existant",
+        "email trouve",
+        "telephone disponible",
+        "adresse locale",
+        "fiche nommee"
+      ],
+      "sentAt": "2026-06-17T09:32:27.750Z",
+      "status": "sent",
+      "lifecycleStage": "contacted",
+      "firstContactedAt": "2026-06-17T09:32:27.750Z",
+      "lastContactedAt": "2026-06-17T09:32:27.750Z",
+      "nextFollowUpAt": "2026-06-24T09:32:27.750Z",
+      "timeline": [
+        {
+          "at": "2026-06-17T09:32:27.750Z",
+          "type": "sent",
+          "note": "Initial outreach email sent"
+        }
+      ]
+    },
+    {
+      "placeId": "ChIJvc8wSs80K4gRJAuL5Wdz-2E",
+      "name": "University Ave Dental Clinic",
+      "email": "info@universityavedentalclinic.ca",
+      "website": "https://universityavedentalclinic.ca/",
+      "phone": "(647) 949-1717",
+      "address": "275 Dundas St W Unit 7, Toronto, ON M5T 1G1, Canada",
+      "marketCode": "CA-EN",
+      "market": "English-speaking Canada",
+      "marketGroup": "english",
+      "language": "en",
+      "score": 95,
+      "reasons": [
+        "site existant",
+        "email trouve",
+        "telephone disponible",
+        "adresse locale",
+        "fiche nommee"
+      ],
+      "sentAt": "2026-06-17T09:32:33.790Z",
+      "status": "sent",
+      "lifecycleStage": "contacted",
+      "firstContactedAt": "2026-06-17T09:32:33.790Z",
+      "lastContactedAt": "2026-06-17T09:32:33.790Z",
+      "nextFollowUpAt": "2026-06-24T09:32:33.790Z",
+      "timeline": [
+        {
+          "at": "2026-06-17T09:32:33.790Z",
+          "type": "sent",
+          "note": "Initial outreach email sent"
+        }
+      ]
+    },
+    {
+      "placeId": "ChIJvfRCIv40K4gRlmvSAv4QZpI",
+      "name": "The Dentistry Place",
+      "email": "info@thedentistryplace.com",
+      "website": "http://www.thedentistryplace.com/",
+      "phone": "(416) 538-5800",
+      "address": "1033 Queen St W, Toronto, ON M6J 0A6, Canada",
+      "marketCode": "CA-EN",
+      "market": "English-speaking Canada",
+      "marketGroup": "english",
+      "language": "en",
+      "score": 95,
+      "reasons": [
+        "site existant",
+        "email trouve",
+        "telephone disponible",
+        "adresse locale",
+        "fiche nommee"
+      ],
+      "sentAt": "2026-06-17T09:32:42.319Z",
+      "status": "sent",
+      "lifecycleStage": "contacted",
+      "firstContactedAt": "2026-06-17T09:32:42.319Z",
+      "lastContactedAt": "2026-06-17T09:32:42.319Z",
+      "nextFollowUpAt": "2026-06-24T09:32:42.319Z",
+      "timeline": [
+        {
+          "at": "2026-06-17T09:32:42.319Z",
+          "type": "sent",
+          "note": "Initial outreach email sent"
+        }
+      ]
+    },
+    {
+      "placeId": "ChIJs8eKEOjYfVMR3A7XIrXEc5E",
+      "name": "Vernon Dental Centre",
+      "email": "reception@vernondentalcentre.com",
+      "website": "http://www.vernondentalcentre.com/",
+      "phone": "(250) 542-1179",
+      "address": "3200 30th Ave Suite 201, Vernon, BC V1T 2C5, Canada",
+      "marketCode": "CA-EN",
+      "market": "English-speaking Canada",
+      "marketGroup": "english",
+      "language": "en",
+      "score": 95,
+      "reasons": [
+        "site existant",
+        "email trouve",
+        "telephone disponible",
+        "adresse locale",
+        "fiche nommee"
+      ],
+      "sentAt": "2026-06-17T09:32:47.685Z",
+      "status": "sent",
+      "lifecycleStage": "contacted",
+      "firstContactedAt": "2026-06-17T09:32:47.685Z",
+      "lastContactedAt": "2026-06-17T09:32:47.685Z",
+      "nextFollowUpAt": "2026-06-24T09:32:47.685Z",
+      "timeline": [
+        {
+          "at": "2026-06-17T09:32:47.685Z",
+          "type": "sent",
+          "note": "Initial outreach email sent"
+        }
+      ]
+    },
+    {
+      "placeId": "ChIJu4Dm1mCvEmsRoCjtjPln_AA",
+      "name": "KF Lawyers Australia",
+      "email": "katrina@kflawyers.com.au",
+      "website": "http://www.kflawyers.com.au/",
+      "phone": "0434 255 922",
+      "address": "1/299 Elizabeth St, Sydney NSW 2000, Australia",
+      "marketCode": "AU",
+      "market": "Australia",
+      "marketGroup": "english",
+      "language": "en",
+      "score": 95,
+      "reasons": [
+        "site existant",
+        "email trouve",
+        "telephone disponible",
+        "adresse locale",
+        "fiche nommee"
+      ],
+      "sentAt": "2026-06-17T09:32:53.181Z",
+      "status": "sent",
+      "lifecycleStage": "contacted",
+      "firstContactedAt": "2026-06-17T09:32:53.181Z",
+      "lastContactedAt": "2026-06-17T09:32:53.181Z",
+      "nextFollowUpAt": "2026-06-24T09:32:53.181Z",
+      "timeline": [
+        {
+          "at": "2026-06-17T09:32:53.181Z",
+          "type": "sent",
+          "note": "Initial outreach email sent"
+        }
+      ]
+    },
+    {
+      "placeId": "ChIJoWvxPT2uEmsR3mIckO2MnSQ",
+      "name": "Criminal Defence Lawyers Australia",
+      "email": "info@criminaldefencelawyers.com.au",
+      "website": "https://www.criminaldefencelawyers.com.au/",
+      "phone": "(02) 8606 2218",
+      "address": "Ste 279, Level 3/398 Pitt St, Sydney NSW 2000, Australia",
+      "marketCode": "AU",
+      "market": "Australia",
+      "marketGroup": "english",
+      "language": "en",
+      "score": 95,
+      "reasons": [
+        "site existant",
+        "email trouve",
+        "telephone disponible",
+        "adresse locale",
+        "fiche nommee"
+      ],
+      "sentAt": "2026-06-17T09:33:01.702Z",
+      "status": "sent",
+      "lifecycleStage": "contacted",
+      "firstContactedAt": "2026-06-17T09:33:01.702Z",
+      "lastContactedAt": "2026-06-17T09:33:01.702Z",
+      "nextFollowUpAt": "2026-06-24T09:33:01.702Z",
+      "timeline": [
+        {
+          "at": "2026-06-17T09:33:01.702Z",
+          "type": "sent",
+          "note": "Initial outreach email sent"
+        }
+      ]
+    },
+    {
+      "placeId": "ChIJ-ZyHaB-vEmsRGdDHekxNW2I",
+      "name": "Australian Lawyers and Advocates",
+      "email": "jleitner@lawyersandadvocates.com.au",
+      "website": "https://australianlawyersandadvocates.com.au/?utm_source=Google&utm_medium=Organic&utm_campaign=GBP",
+      "phone": "(02) 9159 9833",
+      "address": "299 Elizabeth St, Sydney NSW 2000, Australia",
+      "marketCode": "AU",
+      "market": "Australia",
+      "marketGroup": "english",
+      "language": "en",
+      "score": 95,
+      "reasons": [
+        "site existant",
+        "email trouve",
+        "telephone disponible",
+        "adresse locale",
+        "fiche nommee"
+      ],
+      "sentAt": "2026-06-17T09:33:07.812Z",
+      "status": "sent",
+      "lifecycleStage": "contacted",
+      "firstContactedAt": "2026-06-17T09:33:07.812Z",
+      "lastContactedAt": "2026-06-17T09:33:07.812Z",
+      "nextFollowUpAt": "2026-06-24T09:33:07.812Z",
+      "timeline": [
+        {
+          "at": "2026-06-17T09:33:07.812Z",
+          "type": "sent",
+          "note": "Initial outreach email sent"
+        }
+      ]
+    },
+    {
+      "placeId": "ChIJq6rG_T-uEmsR-OyxAgUPaMI",
+      "name": "Goldman Lawyers",
+      "email": "legal@goldman-lawyers.com",
+      "website": "https://www.goldman-lawyers.com/",
+      "phone": "1300 050 105",
+      "address": "Level 13/111 Elizabeth St, Sydney NSW 2000, Australia",
+      "marketCode": "AU",
+      "market": "Australia",
+      "marketGroup": "english",
+      "language": "en",
+      "score": 95,
+      "reasons": [
+        "site existant",
+        "email trouve",
+        "telephone disponible",
+        "adresse locale",
+        "fiche nommee"
+      ],
+      "sentAt": "2026-06-17T09:33:15.955Z",
+      "status": "sent",
+      "lifecycleStage": "contacted",
+      "firstContactedAt": "2026-06-17T09:33:15.955Z",
+      "lastContactedAt": "2026-06-17T09:33:15.955Z",
+      "nextFollowUpAt": "2026-06-24T09:33:15.955Z",
+      "timeline": [
+        {
+          "at": "2026-06-17T09:33:15.955Z",
+          "type": "sent",
+          "note": "Initial outreach email sent"
+        }
+      ]
+    },
+    {
+      "placeId": "ChIJCzHLcEKuEmsRq8mZ3Z-_shM",
+      "name": "Australian Presence Legal",
+      "email": "info@australianpresencelegal.com",
+      "website": "https://australianpresencelegal.com/",
+      "phone": "(02) 8039 9688",
+      "address": "Ste 603, Level 6/50 York St, Sydney NSW 2000, Australia",
+      "marketCode": "AU",
+      "market": "Australia",
+      "marketGroup": "english",
+      "language": "en",
+      "score": 95,
+      "reasons": [
+        "site existant",
+        "email trouve",
+        "telephone disponible",
+        "adresse locale",
+        "fiche nommee"
+      ],
+      "sentAt": "2026-06-17T09:33:20.454Z",
+      "status": "sent",
+      "lifecycleStage": "contacted",
+      "firstContactedAt": "2026-06-17T09:33:20.454Z",
+      "lastContactedAt": "2026-06-17T09:33:20.454Z",
+      "nextFollowUpAt": "2026-06-24T09:33:20.454Z",
+      "timeline": [
+        {
+          "at": "2026-06-17T09:33:20.454Z",
+          "type": "sent",
+          "note": "Initial outreach email sent"
+        }
+      ]
     }
   ],
-  "lastUpdated": "2026-06-16T09:46:56.541Z"
+  "lastUpdated": "2026-06-17T09:34:23.679Z"
 }
