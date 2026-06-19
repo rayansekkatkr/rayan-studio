@@ -5593,7 +5593,667 @@
           "note": "Initial outreach email sent"
         }
       ]
+    },
+    {
+      "placeId": "ChIJ8ZiQHjMbdkgRQPzz_seQ7qY",
+      "name": "Gusto Hairdressing Covent Garden",
+      "email": "info@gustohair.com",
+      "website": "https://gustohair.com/contact/gusto-covent-garden/?utm_source=Google+Business+Listing&utm_medium=Listing&utm_campaign=GMB&utm_id=GMB+",
+      "phone": "020 7836 9163",
+      "address": "224 Shaftesbury Ave, London WC2H 8EB, UK",
+      "marketCode": "GB",
+      "market": "United Kingdom",
+      "marketGroup": "english",
+      "language": "en",
+      "score": 95,
+      "reasons": [
+        "site existant",
+        "email trouve",
+        "telephone disponible",
+        "adresse locale",
+        "fiche nommee"
+      ],
+      "sentAt": "2026-06-19T09:29:46.065Z",
+      "status": "sent",
+      "lifecycleStage": "contacted",
+      "firstContactedAt": "2026-06-19T09:29:46.065Z",
+      "lastContactedAt": "2026-06-19T09:29:46.065Z",
+      "nextFollowUpAt": "2026-06-26T09:29:46.065Z",
+      "timeline": [
+        {
+          "at": "2026-06-19T09:29:46.065Z",
+          "type": "sent",
+          "note": "Initial outreach email sent"
+        }
+      ]
+    },
+    {
+      "placeId": "ChIJ45D4v-7HyIARK5xtryKcfWU",
+      "name": "Elite Rx Compounding Pharmacy and Wellness Store",
+      "email": "info@eliterxlv.com",
+      "website": "https://www.eliterxlv.com/",
+      "phone": "(702) 538-9388",
+      "address": "4845 S Rainbow Blvd Ste 403, Las Vegas, NV 89103, USA",
+      "marketCode": "US",
+      "market": "United States",
+      "marketGroup": "english",
+      "language": "en",
+      "score": 95,
+      "reasons": [
+        "site existant",
+        "email trouve",
+        "telephone disponible",
+        "adresse locale",
+        "fiche nommee"
+      ],
+      "sentAt": "2026-06-19T09:30:29.038Z",
+      "status": "sent",
+      "lifecycleStage": "contacted",
+      "firstContactedAt": "2026-06-19T09:30:29.038Z",
+      "lastContactedAt": "2026-06-19T09:30:29.038Z",
+      "nextFollowUpAt": "2026-06-26T09:30:29.038Z",
+      "timeline": [
+        {
+          "at": "2026-06-19T09:30:29.038Z",
+          "type": "sent",
+          "note": "Initial outreach email sent"
+        }
+      ]
+    },
+    {
+      "placeId": "ChIJnSXLKV5Mw4AR6bOmB7U28O0",
+      "name": "St Mina Pharmacy",
+      "email": "stmina_pharmacy@yahoo.com",
+      "website": "https://www.stminapharmacy.com/",
+      "phone": "(909) 350-3200",
+      "address": "8110 Mango Ave Ste 105, Fontana, CA 92335, USA",
+      "marketCode": "US",
+      "market": "United States",
+      "marketGroup": "english",
+      "language": "en",
+      "score": 95,
+      "reasons": [
+        "site existant",
+        "email trouve",
+        "telephone disponible",
+        "adresse locale",
+        "fiche nommee"
+      ],
+      "sentAt": "2026-06-19T09:30:34.659Z",
+      "status": "sent",
+      "lifecycleStage": "contacted",
+      "firstContactedAt": "2026-06-19T09:30:34.659Z",
+      "lastContactedAt": "2026-06-19T09:30:34.659Z",
+      "nextFollowUpAt": "2026-06-26T09:30:34.659Z",
+      "timeline": [
+        {
+          "at": "2026-06-19T09:30:34.659Z",
+          "type": "sent",
+          "note": "Initial outreach email sent"
+        }
+      ]
+    },
+    {
+      "placeId": "ChIJw5gPA8E0K4gRLe4CyIfJmWs",
+      "name": "College Street Dental",
+      "email": "info@collegestreetdental.ca",
+      "website": "http://www.collegestreetdental.ca/",
+      "phone": "(416) 519-5550",
+      "address": "261 College St, Toronto, ON M5T 1R5, Canada",
+      "marketCode": "CA-EN",
+      "market": "English-speaking Canada",
+      "marketGroup": "english",
+      "language": "en",
+      "score": 95,
+      "reasons": [
+        "site existant",
+        "email trouve",
+        "telephone disponible",
+        "adresse locale",
+        "fiche nommee"
+      ],
+      "sentAt": "2026-06-19T09:30:56.497Z",
+      "status": "sent",
+      "lifecycleStage": "contacted",
+      "firstContactedAt": "2026-06-19T09:30:56.497Z",
+      "lastContactedAt": "2026-06-19T09:30:56.497Z",
+      "nextFollowUpAt": "2026-06-26T09:30:56.497Z",
+      "timeline": [
+        {
+          "at": "2026-06-19T09:30:56.497Z",
+          "type": "sent",
+          "note": "Initial outreach email sent"
+        }
+      ]
+    },
+    {
+      "placeId": "ChIJ9yUBm4Q6K4gRGqOSMWNrYbI",
+      "name": "Dental Health Clinic",
+      "email": "admin@dentalhealthclinic.ca",
+      "website": "http://dentalhealthclinic.ca/",
+      "phone": "(647) 697-7869",
+      "address": "2691 Islington Ave., Etobicoke, ON M9V 2X7, Canada",
+      "marketCode": "CA-EN",
+      "market": "English-speaking Canada",
+      "marketGroup": "english",
+      "language": "en",
+      "score": 95,
+      "reasons": [
+        "site existant",
+        "email trouve",
+        "telephone disponible",
+        "adresse locale",
+        "fiche nommee"
+      ],
+      "sentAt": "2026-06-19T09:31:03.111Z",
+      "status": "sent",
+      "lifecycleStage": "contacted",
+      "firstContactedAt": "2026-06-19T09:31:03.111Z",
+      "lastContactedAt": "2026-06-19T09:31:03.111Z",
+      "nextFollowUpAt": "2026-06-26T09:31:03.111Z",
+      "timeline": [
+        {
+          "at": "2026-06-19T09:31:03.111Z",
+          "type": "sent",
+          "note": "Initial outreach email sent"
+        }
+      ]
+    },
+    {
+      "placeId": "ChIJY82szrE0K4gRYBEzVjoFVR4",
+      "name": "Yorkview Family Dental Clinic",
+      "email": "info@yorkviewdentaltoronto.com",
+      "website": "https://www.yorkviewdentaltoronto.com/",
+      "phone": "(416) 924-4848",
+      "address": "1107 Bay St., Toronto, ON M5S 2B3, Canada",
+      "marketCode": "CA-EN",
+      "market": "English-speaking Canada",
+      "marketGroup": "english",
+      "language": "en",
+      "score": 95,
+      "reasons": [
+        "site existant",
+        "email trouve",
+        "telephone disponible",
+        "adresse locale",
+        "fiche nommee"
+      ],
+      "sentAt": "2026-06-19T09:31:10.582Z",
+      "status": "sent",
+      "lifecycleStage": "contacted",
+      "firstContactedAt": "2026-06-19T09:31:10.582Z",
+      "lastContactedAt": "2026-06-19T09:31:10.582Z",
+      "nextFollowUpAt": "2026-06-26T09:31:10.582Z",
+      "timeline": [
+        {
+          "at": "2026-06-19T09:31:10.582Z",
+          "type": "sent",
+          "note": "Initial outreach email sent"
+        }
+      ]
+    },
+    {
+      "placeId": "ChIJo_NF1M40K4gRuapEY9xg9bI",
+      "name": "Downtown Dentistry",
+      "email": "info@downtowndentistry.com",
+      "website": "https://www.downtowndentistry.com/",
+      "phone": "(647) 370-5136",
+      "address": "123 Edward St #1403, Toronto, ON M5G 1E2, Canada",
+      "marketCode": "CA-EN",
+      "market": "English-speaking Canada",
+      "marketGroup": "english",
+      "language": "en",
+      "score": 95,
+      "reasons": [
+        "site existant",
+        "email trouve",
+        "telephone disponible",
+        "adresse locale",
+        "fiche nommee"
+      ],
+      "sentAt": "2026-06-19T09:31:17.108Z",
+      "status": "sent",
+      "lifecycleStage": "contacted",
+      "firstContactedAt": "2026-06-19T09:31:17.108Z",
+      "lastContactedAt": "2026-06-19T09:31:17.108Z",
+      "nextFollowUpAt": "2026-06-26T09:31:17.108Z",
+      "timeline": [
+        {
+          "at": "2026-06-19T09:31:17.108Z",
+          "type": "sent",
+          "note": "Initial outreach email sent"
+        }
+      ]
+    },
+    {
+      "placeId": "ChIJndPvyyKuEmsRgg8yqOeZBow",
+      "name": "International Lawyers Co-Operative PTY LTD",
+      "email": "info@ilclaw.com.au",
+      "website": "http://ilclaw.com.au/",
+      "phone": "(02) 9282 9377",
+      "address": "Suite 449, Level 5/311/315 Castlereagh St, Haymarket NSW 2000, Australia",
+      "marketCode": "AU",
+      "market": "Australia",
+      "marketGroup": "english",
+      "language": "en",
+      "score": 95,
+      "reasons": [
+        "site existant",
+        "email trouve",
+        "telephone disponible",
+        "adresse locale",
+        "fiche nommee"
+      ],
+      "sentAt": "2026-06-19T09:31:47.564Z",
+      "status": "sent",
+      "lifecycleStage": "contacted",
+      "firstContactedAt": "2026-06-19T09:31:47.564Z",
+      "lastContactedAt": "2026-06-19T09:31:47.564Z",
+      "nextFollowUpAt": "2026-06-26T09:31:47.564Z",
+      "timeline": [
+        {
+          "at": "2026-06-19T09:31:47.564Z",
+          "type": "sent",
+          "note": "Initial outreach email sent"
+        }
+      ]
+    },
+    {
+      "placeId": "ChIJkdpE3rGvEmsRjJZXbayRsUI",
+      "name": "HC Lawyers Pty Ltd",
+      "email": "info@hclaws.com.au",
+      "website": "http://www.hclaws.com.au/",
+      "phone": "(02) 8036 2078",
+      "address": "Level 8/67 Castlereagh St, Sydney NSW 2000, Australia",
+      "marketCode": "AU",
+      "market": "Australia",
+      "marketGroup": "english",
+      "language": "en",
+      "score": 95,
+      "reasons": [
+        "site existant",
+        "email trouve",
+        "telephone disponible",
+        "adresse locale",
+        "fiche nommee"
+      ],
+      "sentAt": "2026-06-19T09:31:52.317Z",
+      "status": "sent",
+      "lifecycleStage": "contacted",
+      "firstContactedAt": "2026-06-19T09:31:52.317Z",
+      "lastContactedAt": "2026-06-19T09:31:52.317Z",
+      "nextFollowUpAt": "2026-06-26T09:31:52.317Z",
+      "timeline": [
+        {
+          "at": "2026-06-19T09:31:52.317Z",
+          "type": "sent",
+          "note": "Initial outreach email sent"
+        }
+      ]
+    },
+    {
+      "placeId": "ChIJN_ZjDX2vEmsRmgJaCPMkrN4",
+      "name": "Truth Lawyers",
+      "email": "info@truthlawyers.com",
+      "website": "https://truthlawyers.com.au/",
+      "phone": "(02) 8005 3064",
+      "address": "Level 8/65 York St, Sydney NSW 2000, Australia",
+      "marketCode": "AU",
+      "market": "Australia",
+      "marketGroup": "english",
+      "language": "en",
+      "score": 95,
+      "reasons": [
+        "site existant",
+        "email trouve",
+        "telephone disponible",
+        "adresse locale",
+        "fiche nommee"
+      ],
+      "sentAt": "2026-06-19T09:31:56.300Z",
+      "status": "sent",
+      "lifecycleStage": "contacted",
+      "firstContactedAt": "2026-06-19T09:31:56.300Z",
+      "lastContactedAt": "2026-06-19T09:31:56.300Z",
+      "nextFollowUpAt": "2026-06-26T09:31:56.300Z",
+      "timeline": [
+        {
+          "at": "2026-06-19T09:31:56.300Z",
+          "type": "sent",
+          "note": "Initial outreach email sent"
+        }
+      ]
+    },
+    {
+      "placeId": "ChIJTVVYrteLMW0RRgV8Tgyq97I",
+      "name": "Total Realty Ltd Christchurch",
+      "email": "hazel@totalrealty.co.nz",
+      "website": "https://www.totalrealty.co.nz/",
+      "phone": "03 940 9797",
+      "address": "Unit O/199 Marshland Road, Shirley, Christchurch 8083, New Zealand",
+      "marketCode": "NZ",
+      "market": "New Zealand",
+      "marketGroup": "english",
+      "language": "en",
+      "score": 95,
+      "reasons": [
+        "site existant",
+        "email trouve",
+        "telephone disponible",
+        "adresse locale",
+        "fiche nommee"
+      ],
+      "sentAt": "2026-06-19T09:32:03.870Z",
+      "status": "sent",
+      "lifecycleStage": "contacted",
+      "firstContactedAt": "2026-06-19T09:32:03.870Z",
+      "lastContactedAt": "2026-06-19T09:32:03.870Z",
+      "nextFollowUpAt": "2026-06-26T09:32:03.870Z",
+      "timeline": [
+        {
+          "at": "2026-06-19T09:32:03.870Z",
+          "type": "sent",
+          "note": "Initial outreach email sent"
+        }
+      ]
+    },
+    {
+      "placeId": "ChIJaUzrJtGvOG0Ro91QPzzXQzY",
+      "name": "New Zealand Sotheby's International Realty Wellington",
+      "email": "info@wellington.nzsir.com",
+      "website": "https://www.nzsothebysrealty.com/wellington/",
+      "phone": "04 471 0114",
+      "address": "46 Lady Elizabeth Lane, Wellington Central, Wellington 6011, New Zealand",
+      "marketCode": "NZ",
+      "market": "New Zealand",
+      "marketGroup": "english",
+      "language": "en",
+      "score": 95,
+      "reasons": [
+        "site existant",
+        "email trouve",
+        "telephone disponible",
+        "adresse locale",
+        "fiche nommee"
+      ],
+      "sentAt": "2026-06-19T09:32:15.420Z",
+      "status": "sent",
+      "lifecycleStage": "contacted",
+      "firstContactedAt": "2026-06-19T09:32:15.420Z",
+      "lastContactedAt": "2026-06-19T09:32:15.420Z",
+      "nextFollowUpAt": "2026-06-26T09:32:15.420Z",
+      "timeline": [
+        {
+          "at": "2026-06-19T09:32:15.420Z",
+          "type": "sent",
+          "note": "Initial outreach email sent"
+        }
+      ]
+    },
+    {
+      "placeId": "ChIJTYqVDiKKMW0RN_2t7uhinFA",
+      "name": "Smart Real Estate - Christchurch Central",
+      "email": "enquiries@smartrealestate.co.nz",
+      "website": "https://smartrealestate.co.nz/?utm_source=google&utm_medium=organic&utm_campaign=gmb_christchurch",
+      "phone": "03 384 8600",
+      "address": "304 Fitzgerald Avenue, Christchurch Central City, Christchurch 8013, New Zealand",
+      "marketCode": "NZ",
+      "market": "New Zealand",
+      "marketGroup": "english",
+      "language": "en",
+      "score": 95,
+      "reasons": [
+        "site existant",
+        "email trouve",
+        "telephone disponible",
+        "adresse locale",
+        "fiche nommee"
+      ],
+      "sentAt": "2026-06-19T09:32:20.761Z",
+      "status": "sent",
+      "lifecycleStage": "contacted",
+      "firstContactedAt": "2026-06-19T09:32:20.761Z",
+      "lastContactedAt": "2026-06-19T09:32:20.761Z",
+      "nextFollowUpAt": "2026-06-26T09:32:20.761Z",
+      "timeline": [
+        {
+          "at": "2026-06-19T09:32:20.761Z",
+          "type": "sent",
+          "note": "Initial outreach email sent"
+        }
+      ]
+    },
+    {
+      "placeId": "ChIJs8HDPmj-pb8RrIP691CpJug",
+      "name": "New Zealand Sotheby's International Realty Christchurch",
+      "email": "u003cnoreply@nzsir.com",
+      "website": "http://www.nzsothebysrealty.com/christchurch",
+      "phone": "03 364 5555",
+      "address": "Ground Floor/60 Cashel Street, Christchurch Central City, Christchurch 8013, New Zealand",
+      "marketCode": "NZ",
+      "market": "New Zealand",
+      "marketGroup": "english",
+      "language": "en",
+      "score": 95,
+      "reasons": [
+        "site existant",
+        "email trouve",
+        "telephone disponible",
+        "adresse locale",
+        "fiche nommee"
+      ],
+      "sentAt": "2026-06-19T09:32:30.700Z",
+      "status": "sent",
+      "lifecycleStage": "contacted",
+      "firstContactedAt": "2026-06-19T09:32:30.700Z",
+      "lastContactedAt": "2026-06-19T09:32:30.700Z",
+      "nextFollowUpAt": "2026-06-26T09:32:30.700Z",
+      "timeline": [
+        {
+          "at": "2026-06-19T09:32:30.700Z",
+          "type": "sent",
+          "note": "Initial outreach email sent"
+        }
+      ]
+    },
+    {
+      "placeId": "ChIJEQAP7N-yQW0REzaum8UnFYc",
+      "name": "Watson Integrity: Real Estate | Property Management - Palmerston North",
+      "email": "salesadmin@watsonrealestate.co.nz",
+      "website": "https://watsonrealestate.nz/",
+      "phone": "06 353 1925",
+      "address": "267 Broadway Avenue, Palmerston North Central, Palmerston North 4400, New Zealand",
+      "marketCode": "NZ",
+      "market": "New Zealand",
+      "marketGroup": "english",
+      "language": "en",
+      "score": 95,
+      "reasons": [
+        "site existant",
+        "email trouve",
+        "telephone disponible",
+        "adresse locale",
+        "fiche nommee"
+      ],
+      "sentAt": "2026-06-19T09:32:42.134Z",
+      "status": "sent",
+      "lifecycleStage": "contacted",
+      "firstContactedAt": "2026-06-19T09:32:42.134Z",
+      "lastContactedAt": "2026-06-19T09:32:42.134Z",
+      "nextFollowUpAt": "2026-06-26T09:32:42.134Z",
+      "timeline": [
+        {
+          "at": "2026-06-19T09:32:42.134Z",
+          "type": "sent",
+          "note": "Initial outreach email sent"
+        }
+      ]
+    },
+    {
+      "placeId": "ChIJ5c-Q6yquOG0RtlbZ5yHpcaY",
+      "name": "Harcourts Wellington City - Team Group Realty Ltd",
+      "email": "holly.fordham@harcourts.co.nz",
+      "website": "https://www.teamharcourts.co.nz/wellington-city?utm_term=plcid_11435450974641072450&utm_source=google&utm_medium=organic&utm_campaign=Google%20My%20Business&utm_content=Harcourts%20Wellington%20City%20-%20Team%20Group%20Realty%20Ltd",
+      "phone": "04 801 5199",
+      "address": "57 Vivian Street, Te Aro, Wellington 6011, New Zealand",
+      "marketCode": "NZ",
+      "market": "New Zealand",
+      "marketGroup": "english",
+      "language": "en",
+      "score": 95,
+      "reasons": [
+        "site existant",
+        "email trouve",
+        "telephone disponible",
+        "adresse locale",
+        "fiche nommee"
+      ],
+      "sentAt": "2026-06-19T09:32:52.625Z",
+      "status": "sent",
+      "lifecycleStage": "contacted",
+      "firstContactedAt": "2026-06-19T09:32:52.625Z",
+      "lastContactedAt": "2026-06-19T09:32:52.625Z",
+      "nextFollowUpAt": "2026-06-26T09:32:52.625Z",
+      "timeline": [
+        {
+          "at": "2026-06-19T09:32:52.625Z",
+          "type": "sent",
+          "note": "Initial outreach email sent"
+        }
+      ]
+    },
+    {
+      "placeId": "ChIJXSPPb1w6DW0RDElxWZjfSoQ",
+      "name": "Matt Corin Realty | Partnered with eXp | Auckland Real Estate Agent",
+      "email": "matt@mcrealty.co.nz",
+      "website": "http://www.mcrealty.co.nz/",
+      "phone": "027 777 0737",
+      "address": "4/61 Constellation Drive, Rosedale, Auckland 0630, New Zealand",
+      "marketCode": "NZ",
+      "market": "New Zealand",
+      "marketGroup": "english",
+      "language": "en",
+      "score": 95,
+      "reasons": [
+        "site existant",
+        "email trouve",
+        "telephone disponible",
+        "adresse locale",
+        "fiche nommee"
+      ],
+      "sentAt": "2026-06-19T09:32:59.486Z",
+      "status": "sent",
+      "lifecycleStage": "contacted",
+      "firstContactedAt": "2026-06-19T09:32:59.486Z",
+      "lastContactedAt": "2026-06-19T09:32:59.486Z",
+      "nextFollowUpAt": "2026-06-26T09:32:59.486Z",
+      "timeline": [
+        {
+          "at": "2026-06-19T09:32:59.486Z",
+          "type": "sent",
+          "note": "Initial outreach email sent"
+        }
+      ]
+    },
+    {
+      "placeId": "ChIJoYurDi3fbW0RJ0YmwcnDFVs",
+      "name": "Powers Realty Group Ltd",
+      "email": "info@powersrealty.co.nz",
+      "website": "http://www.powersrealty.co.nz/",
+      "phone": "0800 726 372",
+      "address": "95 Oceanview Road, Mount Maunganui 3116, New Zealand",
+      "marketCode": "NZ",
+      "market": "New Zealand",
+      "marketGroup": "english",
+      "language": "en",
+      "score": 95,
+      "reasons": [
+        "site existant",
+        "email trouve",
+        "telephone disponible",
+        "adresse locale",
+        "fiche nommee"
+      ],
+      "sentAt": "2026-06-19T09:33:08.672Z",
+      "status": "sent",
+      "lifecycleStage": "contacted",
+      "firstContactedAt": "2026-06-19T09:33:08.672Z",
+      "lastContactedAt": "2026-06-19T09:33:08.672Z",
+      "nextFollowUpAt": "2026-06-26T09:33:08.672Z",
+      "timeline": [
+        {
+          "at": "2026-06-19T09:33:08.672Z",
+          "type": "sent",
+          "note": "Initial outreach email sent"
+        }
+      ]
+    },
+    {
+      "placeId": "ChIJDdrlRherOG0Ro_vtOSkdysM",
+      "name": "New Zealand Sotheby's International Realty Hutt Valley",
+      "email": "takapuna@nzsir.com",
+      "website": "https://www.nzsothebysrealty.com/",
+      "phone": "04 333 2380",
+      "address": "702 High Street, Boulcott, Lower Hutt 5010, New Zealand",
+      "marketCode": "NZ",
+      "market": "New Zealand",
+      "marketGroup": "english",
+      "language": "en",
+      "score": 95,
+      "reasons": [
+        "site existant",
+        "email trouve",
+        "telephone disponible",
+        "adresse locale",
+        "fiche nommee"
+      ],
+      "sentAt": "2026-06-19T09:33:13.565Z",
+      "status": "sent",
+      "lifecycleStage": "contacted",
+      "firstContactedAt": "2026-06-19T09:33:13.565Z",
+      "lastContactedAt": "2026-06-19T09:33:13.565Z",
+      "nextFollowUpAt": "2026-06-26T09:33:13.565Z",
+      "timeline": [
+        {
+          "at": "2026-06-19T09:33:13.565Z",
+          "type": "sent",
+          "note": "Initial outreach email sent"
+        }
+      ]
+    },
+    {
+      "placeId": "ChIJSUSsxyewOG0REyeCnMJkScA",
+      "name": "Professionals Real Estate, Wellington City & Suburbs Office",
+      "email": "wellington@redcoats.co.nz",
+      "website": "https://redcoats.professionals.co.nz/offices/wellington/wellington-cbd",
+      "phone": "04 385 9965",
+      "address": "27 Buller Street, Te Aro, Wellington 6011, New Zealand",
+      "marketCode": "NZ",
+      "market": "New Zealand",
+      "marketGroup": "english",
+      "language": "en",
+      "score": 95,
+      "reasons": [
+        "site existant",
+        "email trouve",
+        "telephone disponible",
+        "adresse locale",
+        "fiche nommee"
+      ],
+      "sentAt": "2026-06-19T09:33:18.517Z",
+      "status": "sent",
+      "lifecycleStage": "contacted",
+      "firstContactedAt": "2026-06-19T09:33:18.517Z",
+      "lastContactedAt": "2026-06-19T09:33:18.517Z",
+      "nextFollowUpAt": "2026-06-26T09:33:18.517Z",
+      "timeline": [
+        {
+          "at": "2026-06-19T09:33:18.517Z",
+          "type": "sent",
+          "note": "Initial outreach email sent"
+        }
+      ]
     }
   ],
-  "lastUpdated": "2026-06-18T09:29:51.144Z"
+  "lastUpdated": "2026-06-19T09:34:47.964Z"
 }
