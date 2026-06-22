@@ -6253,7 +6253,667 @@
           "note": "Initial outreach email sent"
         }
       ]
+    },
+    {
+      "placeId": "ChIJFTf3fHRy5kcRGjvJR5Tkh_I",
+      "name": "Grand Hotel Français",
+      "email": "grand-hotel-francais@wanadoo.fr",
+      "website": "http://www.grand-hotel-francais.fr/",
+      "phone": "01 43 71 27 57",
+      "address": "223 Bd Voltaire, 75011 Paris, France",
+      "marketCode": "FR",
+      "market": "France",
+      "marketGroup": "francophone",
+      "language": "fr",
+      "score": 95,
+      "reasons": [
+        "site existant",
+        "email trouve",
+        "telephone disponible",
+        "adresse locale",
+        "fiche nommee"
+      ],
+      "sentAt": "2026-06-22T09:55:02.034Z",
+      "status": "sent",
+      "lifecycleStage": "contacted",
+      "firstContactedAt": "2026-06-22T09:55:02.034Z",
+      "lastContactedAt": "2026-06-22T09:55:02.034Z",
+      "nextFollowUpAt": "2026-06-29T09:55:02.034Z",
+      "timeline": [
+        {
+          "at": "2026-06-22T09:55:02.034Z",
+          "type": "sent",
+          "note": "Initial outreach email sent"
+        }
+      ]
+    },
+    {
+      "placeId": "ChIJhXWLZg9u5kcRDVyqoZYgcmg",
+      "name": "Paris France Hotel",
+      "email": "resa@paris-france-hotel.com",
+      "website": "https://www.paris-france-hotel.com/",
+      "phone": "01 42 78 00 04",
+      "address": "72 R. de Turbigo, 75003 Paris, France",
+      "marketCode": "FR",
+      "market": "France",
+      "marketGroup": "francophone",
+      "language": "fr",
+      "score": 95,
+      "reasons": [
+        "site existant",
+        "email trouve",
+        "telephone disponible",
+        "adresse locale",
+        "fiche nommee"
+      ],
+      "sentAt": "2026-06-22T09:55:07.585Z",
+      "status": "sent",
+      "lifecycleStage": "contacted",
+      "firstContactedAt": "2026-06-22T09:55:07.585Z",
+      "lastContactedAt": "2026-06-22T09:55:07.585Z",
+      "nextFollowUpAt": "2026-06-29T09:55:07.585Z",
+      "timeline": [
+        {
+          "at": "2026-06-22T09:55:07.585Z",
+          "type": "sent",
+          "note": "Initial outreach email sent"
+        }
+      ]
+    },
+    {
+      "placeId": "ChIJ7bJCvWpu5kcRB1A0Se2Kga8",
+      "name": "Hotel",
+      "email": "hotel@duprehotels.com",
+      "website": "https://hotel.duprehotels.com/",
+      "phone": "01 42 81 37 11",
+      "address": "10 Rue Pierre Semard, 75009 Paris, France",
+      "marketCode": "FR",
+      "market": "France",
+      "marketGroup": "francophone",
+      "language": "fr",
+      "score": 95,
+      "reasons": [
+        "site existant",
+        "email trouve",
+        "telephone disponible",
+        "adresse locale",
+        "fiche nommee"
+      ],
+      "sentAt": "2026-06-22T09:55:12.436Z",
+      "status": "sent",
+      "lifecycleStage": "contacted",
+      "firstContactedAt": "2026-06-22T09:55:12.436Z",
+      "lastContactedAt": "2026-06-22T09:55:12.436Z",
+      "nextFollowUpAt": "2026-06-29T09:55:12.436Z",
+      "timeline": [
+        {
+          "at": "2026-06-22T09:55:12.436Z",
+          "type": "sent",
+          "note": "Initial outreach email sent"
+        }
+      ]
+    },
+    {
+      "placeId": "ChIJMxLlnsRv5kcRphzi48mVQIk",
+      "name": "Hôtel Marignan Champs-Élysées",
+      "email": "reservation@hotelmarignan.fr",
+      "website": "https://www.hotelmarignanelyseesparis.com/",
+      "phone": "01 40 76 34 56",
+      "address": "12 Rue de Marignan, 75008 Paris, France",
+      "marketCode": "FR",
+      "market": "France",
+      "marketGroup": "francophone",
+      "language": "fr",
+      "score": 95,
+      "reasons": [
+        "site existant",
+        "email trouve",
+        "telephone disponible",
+        "adresse locale",
+        "fiche nommee"
+      ],
+      "sentAt": "2026-06-22T09:55:17.340Z",
+      "status": "sent",
+      "lifecycleStage": "contacted",
+      "firstContactedAt": "2026-06-22T09:55:17.340Z",
+      "lastContactedAt": "2026-06-22T09:55:17.340Z",
+      "nextFollowUpAt": "2026-06-29T09:55:17.340Z",
+      "timeline": [
+        {
+          "at": "2026-06-22T09:55:17.340Z",
+          "type": "sent",
+          "note": "Initial outreach email sent"
+        }
+      ]
+    },
+    {
+      "placeId": "ChIJx0e-_JBMjUcRsK3NRZ9R8g8",
+      "name": "Hotel de la Cloche",
+      "email": "reception@la-cloche.fr",
+      "website": "http://la-cloche.fr/",
+      "phone": "03 84 82 06 06",
+      "address": "1 Pl. Jules Grevy, 39100 Dole, France",
+      "marketCode": "FR",
+      "market": "France",
+      "marketGroup": "francophone",
+      "language": "fr",
+      "score": 95,
+      "reasons": [
+        "site existant",
+        "email trouve",
+        "telephone disponible",
+        "adresse locale",
+        "fiche nommee"
+      ],
+      "sentAt": "2026-06-22T09:55:26.686Z",
+      "status": "sent",
+      "lifecycleStage": "contacted",
+      "firstContactedAt": "2026-06-22T09:55:26.686Z",
+      "lastContactedAt": "2026-06-22T09:55:26.686Z",
+      "nextFollowUpAt": "2026-06-29T09:55:26.686Z",
+      "timeline": [
+        {
+          "at": "2026-06-22T09:55:26.686Z",
+          "type": "sent",
+          "note": "Initial outreach email sent"
+        }
+      ]
+    },
+    {
+      "placeId": "ChIJwREMgdbd4kcRpmok0f3wEZI",
+      "name": "Hôtel de France - Logis",
+      "email": "bienvenue@lhoteldefrance.fr",
+      "website": "https://lhoteldefrance.fr/sejour/",
+      "phone": "02 43 44 40 16",
+      "address": "20 Pl. de la République, 72340 La Chartre-sur-le-Loir, France",
+      "marketCode": "FR",
+      "market": "France",
+      "marketGroup": "francophone",
+      "language": "fr",
+      "score": 95,
+      "reasons": [
+        "site existant",
+        "email trouve",
+        "telephone disponible",
+        "adresse locale",
+        "fiche nommee"
+      ],
+      "sentAt": "2026-06-22T09:55:32.025Z",
+      "status": "sent",
+      "lifecycleStage": "contacted",
+      "firstContactedAt": "2026-06-22T09:55:32.025Z",
+      "lastContactedAt": "2026-06-22T09:55:32.025Z",
+      "nextFollowUpAt": "2026-06-29T09:55:32.025Z",
+      "timeline": [
+        {
+          "at": "2026-06-22T09:55:32.025Z",
+          "type": "sent",
+          "note": "Initial outreach email sent"
+        }
+      ]
+    },
+    {
+      "placeId": "ChIJ1TBtzQLsBUgRNDav_oQPAAs",
+      "name": "Oceania Hôtel de France Nantes",
+      "email": "oceania.hoteldefrance@oceaniahotels.com",
+      "website": "https://www.oceaniahotels.com/oceania-hotel-de-france-nantes",
+      "phone": "02 40 73 57 91",
+      "address": "24 Rue Crébillon, 44000 Nantes, France",
+      "marketCode": "FR",
+      "market": "France",
+      "marketGroup": "francophone",
+      "language": "fr",
+      "score": 95,
+      "reasons": [
+        "site existant",
+        "email trouve",
+        "telephone disponible",
+        "adresse locale",
+        "fiche nommee"
+      ],
+      "sentAt": "2026-06-22T09:55:36.885Z",
+      "status": "sent",
+      "lifecycleStage": "contacted",
+      "firstContactedAt": "2026-06-22T09:55:36.885Z",
+      "lastContactedAt": "2026-06-22T09:55:36.885Z",
+      "nextFollowUpAt": "2026-06-29T09:55:36.885Z",
+      "timeline": [
+        {
+          "at": "2026-06-22T09:55:36.885Z",
+          "type": "sent",
+          "note": "Initial outreach email sent"
+        }
+      ]
+    },
+    {
+      "placeId": "ChIJTRPwOYRv5kcREMFcGD0PxAs",
+      "name": "Hotel D'Anjou",
+      "email": "anjouequipe@gmail.com",
+      "website": "http://www.hotel-anjou-paris.fr/",
+      "phone": "01 47 57 44 94",
+      "address": "HOTEL D'ANJOU, 47 Rue Louis Rouquier, 92300 Levallois-Perret, France",
+      "marketCode": "FR",
+      "market": "France",
+      "marketGroup": "francophone",
+      "language": "fr",
+      "score": 95,
+      "reasons": [
+        "site existant",
+        "email trouve",
+        "telephone disponible",
+        "adresse locale",
+        "fiche nommee"
+      ],
+      "sentAt": "2026-06-22T09:55:40.673Z",
+      "status": "sent",
+      "lifecycleStage": "contacted",
+      "firstContactedAt": "2026-06-22T09:55:40.673Z",
+      "lastContactedAt": "2026-06-22T09:55:40.673Z",
+      "nextFollowUpAt": "2026-06-29T09:55:40.673Z",
+      "timeline": [
+        {
+          "at": "2026-06-22T09:55:40.673Z",
+          "type": "sent",
+          "note": "Initial outreach email sent"
+        }
+      ]
+    },
+    {
+      "placeId": "ChIJBZeiwpFL5EcR93N51UTkGtM",
+      "name": "Hôtel de France",
+      "email": "contact@hotel-de-france-paris.fr",
+      "website": "https://hotel-de-france-paris.fr/",
+      "phone": "01 69 95 11 30",
+      "address": "2 Pl. du Marché, 91670 Angerville, France",
+      "marketCode": "FR",
+      "market": "France",
+      "marketGroup": "francophone",
+      "language": "fr",
+      "score": 95,
+      "reasons": [
+        "site existant",
+        "email trouve",
+        "telephone disponible",
+        "adresse locale",
+        "fiche nommee"
+      ],
+      "sentAt": "2026-06-22T09:55:57.988Z",
+      "status": "sent",
+      "lifecycleStage": "contacted",
+      "firstContactedAt": "2026-06-22T09:55:57.988Z",
+      "lastContactedAt": "2026-06-22T09:55:57.988Z",
+      "nextFollowUpAt": "2026-06-29T09:55:57.988Z",
+      "timeline": [
+        {
+          "at": "2026-06-22T09:55:57.988Z",
+          "type": "sent",
+          "note": "Initial outreach email sent"
+        }
+      ]
+    },
+    {
+      "placeId": "ChIJl_7p8uFv5kcRr5K0w1soNKA",
+      "name": "Hôtel France Eiffel",
+      "email": "hotel@franceeiffel.com",
+      "website": "http://www.franceeiffel.com/",
+      "phone": "09 62 68 60 54",
+      "address": "8 Rue St Charles, 75015 Paris, France",
+      "marketCode": "FR",
+      "market": "France",
+      "marketGroup": "francophone",
+      "language": "fr",
+      "score": 95,
+      "reasons": [
+        "site existant",
+        "email trouve",
+        "telephone disponible",
+        "adresse locale",
+        "fiche nommee"
+      ],
+      "sentAt": "2026-06-22T09:56:02.250Z",
+      "status": "sent",
+      "lifecycleStage": "contacted",
+      "firstContactedAt": "2026-06-22T09:56:02.250Z",
+      "lastContactedAt": "2026-06-22T09:56:02.250Z",
+      "nextFollowUpAt": "2026-06-29T09:56:02.250Z",
+      "timeline": [
+        {
+          "at": "2026-06-22T09:56:02.250Z",
+          "type": "sent",
+          "note": "Initial outreach email sent"
+        }
+      ]
+    },
+    {
+      "placeId": "ChIJc3_jfBhw5kcR5Pk_XZZNLPw",
+      "name": "Hôtel Tourisme Avenue",
+      "email": "hotel@tourismeavenue.com",
+      "website": "https://www.hoteltourismeavenue.com/",
+      "phone": "01 47 34 28 01",
+      "address": "66 Av. de la Motte-Picquet, 75015 Paris, France",
+      "marketCode": "FR",
+      "market": "France",
+      "marketGroup": "francophone",
+      "language": "fr",
+      "score": 95,
+      "reasons": [
+        "site existant",
+        "email trouve",
+        "telephone disponible",
+        "adresse locale",
+        "fiche nommee"
+      ],
+      "sentAt": "2026-06-22T09:56:06.591Z",
+      "status": "sent",
+      "lifecycleStage": "contacted",
+      "firstContactedAt": "2026-06-22T09:56:06.591Z",
+      "lastContactedAt": "2026-06-22T09:56:06.591Z",
+      "nextFollowUpAt": "2026-06-29T09:56:06.591Z",
+      "timeline": [
+        {
+          "at": "2026-06-22T09:56:06.591Z",
+          "type": "sent",
+          "note": "Initial outreach email sent"
+        }
+      ]
+    },
+    {
+      "placeId": "ChIJjSorT-xx5kcRJBOUaWmCvqc",
+      "name": "Hôtel de France Quartier-Latin",
+      "email": "reception@hotelfrancequartierlatin.com",
+      "website": "http://www.hotelfrancequartierlatin.com/",
+      "phone": "01 47 07 19 04",
+      "address": "108 Rue Monge, 75005 Paris, France",
+      "marketCode": "FR",
+      "market": "France",
+      "marketGroup": "francophone",
+      "language": "fr",
+      "score": 95,
+      "reasons": [
+        "site existant",
+        "email trouve",
+        "telephone disponible",
+        "adresse locale",
+        "fiche nommee"
+      ],
+      "sentAt": "2026-06-22T09:56:12.568Z",
+      "status": "sent",
+      "lifecycleStage": "contacted",
+      "firstContactedAt": "2026-06-22T09:56:12.568Z",
+      "lastContactedAt": "2026-06-22T09:56:12.568Z",
+      "nextFollowUpAt": "2026-06-29T09:56:12.568Z",
+      "timeline": [
+        {
+          "at": "2026-06-22T09:56:12.568Z",
+          "type": "sent",
+          "note": "Initial outreach email sent"
+        }
+      ]
+    },
+    {
+      "placeId": "ChIJkf6drySHwUcR2O_xYDxtf-E",
+      "name": "Boutique Dressy",
+      "email": "boutiquedressy.fleurus@gmail.com",
+      "website": "http://www.boutiquedressy.com/",
+      "phone": "0472 77 27 46",
+      "address": "Rue du Couvent 14, 6220 Fleurus, Belgium",
+      "marketCode": "BE-FR",
+      "market": "Belgique francophone",
+      "marketGroup": "francophone",
+      "language": "fr",
+      "score": 95,
+      "reasons": [
+        "site existant",
+        "email trouve",
+        "telephone disponible",
+        "adresse locale",
+        "fiche nommee"
+      ],
+      "sentAt": "2026-06-22T09:56:16.674Z",
+      "status": "sent",
+      "lifecycleStage": "contacted",
+      "firstContactedAt": "2026-06-22T09:56:16.674Z",
+      "lastContactedAt": "2026-06-22T09:56:16.674Z",
+      "nextFollowUpAt": "2026-06-29T09:56:16.674Z",
+      "timeline": [
+        {
+          "at": "2026-06-22T09:56:16.674Z",
+          "type": "sent",
+          "note": "Initial outreach email sent"
+        }
+      ]
+    },
+    {
+      "placeId": "ChIJ46ABagz6wEcRZtpqAngmp8k",
+      "name": "Boutique Lellou",
+      "email": "lellou@lellou.be",
+      "website": "http://www.lellou.be/",
+      "phone": "0479 75 18 34",
+      "address": "Rue Charles Magnette 10, 4000 Liège, Belgium",
+      "marketCode": "BE-FR",
+      "market": "Belgique francophone",
+      "marketGroup": "francophone",
+      "language": "fr",
+      "score": 95,
+      "reasons": [
+        "site existant",
+        "email trouve",
+        "telephone disponible",
+        "adresse locale",
+        "fiche nommee"
+      ],
+      "sentAt": "2026-06-22T09:56:25.948Z",
+      "status": "sent",
+      "lifecycleStage": "contacted",
+      "firstContactedAt": "2026-06-22T09:56:25.948Z",
+      "lastContactedAt": "2026-06-22T09:56:25.948Z",
+      "nextFollowUpAt": "2026-06-29T09:56:25.948Z",
+      "timeline": [
+        {
+          "at": "2026-06-22T09:56:25.948Z",
+          "type": "sent",
+          "note": "Initial outreach email sent"
+        }
+      ]
+    },
+    {
+      "placeId": "ChIJc2q8zdrEw0cRGfGmjD9BDMc",
+      "name": "Velvet Shop - Vêtements et Accessoires de Mode",
+      "email": "info@velvetshop.be",
+      "website": "https://velvetshop.be/",
+      "phone": "02 219 51 29",
+      "address": "Av. de l'Université 24, 1050 Ixelles, Belgium",
+      "marketCode": "BE-FR",
+      "market": "Belgique francophone",
+      "marketGroup": "francophone",
+      "language": "fr",
+      "score": 95,
+      "reasons": [
+        "site existant",
+        "email trouve",
+        "telephone disponible",
+        "adresse locale",
+        "fiche nommee"
+      ],
+      "sentAt": "2026-06-22T09:56:31.261Z",
+      "status": "sent",
+      "lifecycleStage": "contacted",
+      "firstContactedAt": "2026-06-22T09:56:31.261Z",
+      "lastContactedAt": "2026-06-22T09:56:31.261Z",
+      "nextFollowUpAt": "2026-06-29T09:56:31.261Z",
+      "timeline": [
+        {
+          "at": "2026-06-22T09:56:31.261Z",
+          "type": "sent",
+          "note": "Initial outreach email sent"
+        }
+      ]
+    },
+    {
+      "placeId": "ChIJvVZEQYn8wEcRNo7CtqrneaU",
+      "name": "Point B",
+      "email": "info@balladin.com",
+      "website": "http://www.pamofficiel.com/",
+      "phone": "04 227 61 62",
+      "address": "Rue de Bruxelles 7, 4340 Awans, Belgium",
+      "marketCode": "BE-FR",
+      "market": "Belgique francophone",
+      "marketGroup": "francophone",
+      "language": "fr",
+      "score": 95,
+      "reasons": [
+        "site existant",
+        "email trouve",
+        "telephone disponible",
+        "adresse locale",
+        "fiche nommee"
+      ],
+      "sentAt": "2026-06-22T09:56:35.842Z",
+      "status": "sent",
+      "lifecycleStage": "contacted",
+      "firstContactedAt": "2026-06-22T09:56:35.842Z",
+      "lastContactedAt": "2026-06-22T09:56:35.842Z",
+      "nextFollowUpAt": "2026-06-29T09:56:35.842Z",
+      "timeline": [
+        {
+          "at": "2026-06-22T09:56:35.842Z",
+          "type": "sent",
+          "note": "Initial outreach email sent"
+        }
+      ]
+    },
+    {
+      "placeId": "ChIJsSjKli8Hw0cR7p7V2zMymw8",
+      "name": "Chouettes Vêtements",
+      "email": "corine_re@hotmail.com",
+      "website": "http://chouettesvetements.nano.shop/",
+      "phone": "0475 44 87 17",
+      "address": "rue haillemont 35 Pour le gps n°12, 7890 Wodecq, Belgium",
+      "marketCode": "BE-FR",
+      "market": "Belgique francophone",
+      "marketGroup": "francophone",
+      "language": "fr",
+      "score": 95,
+      "reasons": [
+        "site existant",
+        "email trouve",
+        "telephone disponible",
+        "adresse locale",
+        "fiche nommee"
+      ],
+      "sentAt": "2026-06-22T09:56:40.193Z",
+      "status": "sent",
+      "lifecycleStage": "contacted",
+      "firstContactedAt": "2026-06-22T09:56:40.193Z",
+      "lastContactedAt": "2026-06-22T09:56:40.193Z",
+      "nextFollowUpAt": "2026-06-29T09:56:40.193Z",
+      "timeline": [
+        {
+          "at": "2026-06-22T09:56:40.193Z",
+          "type": "sent",
+          "note": "Initial outreach email sent"
+        }
+      ]
+    },
+    {
+      "placeId": "ChIJQwnk16bXw0cR_XxGRi6ripQ",
+      "name": "Babeth",
+      "email": "votre-courriel@exemple.com",
+      "website": "http://www.babeth.be/",
+      "phone": "0471 10 10 24",
+      "address": "Rue Rosier Bois 21, 1331 Rixensart, Belgium",
+      "marketCode": "BE-FR",
+      "market": "Belgique francophone",
+      "marketGroup": "francophone",
+      "language": "fr",
+      "score": 95,
+      "reasons": [
+        "site existant",
+        "email trouve",
+        "telephone disponible",
+        "adresse locale",
+        "fiche nommee"
+      ],
+      "sentAt": "2026-06-22T09:56:54.168Z",
+      "status": "sent",
+      "lifecycleStage": "contacted",
+      "firstContactedAt": "2026-06-22T09:56:54.168Z",
+      "lastContactedAt": "2026-06-22T09:56:54.168Z",
+      "nextFollowUpAt": "2026-06-29T09:56:54.168Z",
+      "timeline": [
+        {
+          "at": "2026-06-22T09:56:54.168Z",
+          "type": "sent",
+          "note": "Initial outreach email sent"
+        }
+      ]
+    },
+    {
+      "placeId": "ChIJZTEoFijFw0cRE2mWb56m9gI",
+      "name": "Essentiel Antwerp",
+      "email": "service@essentiel-antwerp.com",
+      "website": "https://www.essentiel-antwerp.com/be_fr/",
+      "phone": "02 513 18 91",
+      "address": "Rue Jean Stas 18, 1060 Saint-Gilles, Belgium",
+      "marketCode": "BE-FR",
+      "market": "Belgique francophone",
+      "marketGroup": "francophone",
+      "language": "fr",
+      "score": 95,
+      "reasons": [
+        "site existant",
+        "email trouve",
+        "telephone disponible",
+        "adresse locale",
+        "fiche nommee"
+      ],
+      "sentAt": "2026-06-22T09:57:00.031Z",
+      "status": "sent",
+      "lifecycleStage": "contacted",
+      "firstContactedAt": "2026-06-22T09:57:00.031Z",
+      "lastContactedAt": "2026-06-22T09:57:00.031Z",
+      "nextFollowUpAt": "2026-06-29T09:57:00.031Z",
+      "timeline": [
+        {
+          "at": "2026-06-22T09:57:00.031Z",
+          "type": "sent",
+          "note": "Initial outreach email sent"
+        }
+      ]
+    },
+    {
+      "placeId": "ChIJayU2KWXEw0cR_fr7ULYfE4M",
+      "name": "Foxhole Vintage",
+      "email": "hello@foxholevintage.com",
+      "website": "http://www.foxholevintage.com/",
+      "phone": "0477 20 53 36",
+      "address": "Rue des Renards 6, 1000 Bruxelles, Belgium",
+      "marketCode": "BE-FR",
+      "market": "Belgique francophone",
+      "marketGroup": "francophone",
+      "language": "fr",
+      "score": 95,
+      "reasons": [
+        "site existant",
+        "email trouve",
+        "telephone disponible",
+        "adresse locale",
+        "fiche nommee"
+      ],
+      "sentAt": "2026-06-22T09:57:06.189Z",
+      "status": "sent",
+      "lifecycleStage": "contacted",
+      "firstContactedAt": "2026-06-22T09:57:06.189Z",
+      "lastContactedAt": "2026-06-22T09:57:06.189Z",
+      "nextFollowUpAt": "2026-06-29T09:57:06.189Z",
+      "timeline": [
+        {
+          "at": "2026-06-22T09:57:06.189Z",
+          "type": "sent",
+          "note": "Initial outreach email sent"
+        }
+      ]
     }
   ],
-  "lastUpdated": "2026-06-19T09:34:47.964Z"
+  "lastUpdated": "2026-06-22T09:58:27.169Z"
 }
