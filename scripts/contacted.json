@@ -6913,7 +6913,664 @@
           "note": "Initial outreach email sent"
         }
       ]
+    },
+    {
+      "placeId": "ChIJ95G9XxBu5kcRZnLl6ZrYxQY",
+      "name": "Solly Hôtel Paris",
+      "email": "hello@sollyhotel.com",
+      "website": "https://www.sollyhotel.com/",
+      "phone": "01 42 72 08 15",
+      "address": "4 Rue Salomon de Caus, 75003 Paris, France",
+      "marketCode": "FR",
+      "market": "France",
+      "marketGroup": "francophone",
+      "language": "fr",
+      "score": 95,
+      "reasons": [
+        "site existant",
+        "email trouve",
+        "telephone disponible",
+        "adresse locale",
+        "fiche nommee"
+      ],
+      "sentAt": "2026-06-23T09:01:52.216Z",
+      "status": "sent",
+      "lifecycleStage": "contacted",
+      "firstContactedAt": "2026-06-23T09:01:52.216Z",
+      "lastContactedAt": "2026-06-23T09:01:52.216Z",
+      "nextFollowUpAt": "2026-06-30T09:01:52.216Z",
+      "timeline": [
+        {
+          "at": "2026-06-23T09:01:52.216Z",
+          "type": "sent",
+          "note": "Initial outreach email sent"
+        }
+      ]
+    },
+    {
+      "placeId": "ChIJI2O_I8Rv5kcRLul-28AZykk",
+      "name": "Hôtel d'Angleterre Champs-Elysées",
+      "email": "hotel@hoteldelaboetie.com",
+      "website": "https://www.hoteldelaboetie.com/",
+      "phone": "01 43 59 35 45",
+      "address": "91 Rue La Boétie, 75008 Paris, France",
+      "marketCode": "FR",
+      "market": "France",
+      "marketGroup": "francophone",
+      "language": "fr",
+      "score": 95,
+      "reasons": [
+        "site existant",
+        "email trouve",
+        "telephone disponible",
+        "adresse locale",
+        "fiche nommee"
+      ],
+      "sentAt": "2026-06-23T09:01:58.691Z",
+      "status": "sent",
+      "lifecycleStage": "contacted",
+      "firstContactedAt": "2026-06-23T09:01:58.691Z",
+      "lastContactedAt": "2026-06-23T09:01:58.691Z",
+      "nextFollowUpAt": "2026-06-30T09:01:58.691Z",
+      "timeline": [
+        {
+          "at": "2026-06-23T09:01:58.691Z",
+          "type": "sent",
+          "note": "Initial outreach email sent"
+        }
+      ]
+    },
+    {
+      "placeId": "ChIJEQ_mXtPGtRIRNpV5nN_x59Q",
+      "name": "Hôtel La Fenouillere",
+      "email": "hb814@accor.com",
+      "website": "https://all.accor.com/hotel/B814/index.fr.shtml?utm_campaign=seo+maps&utm_medium=seo+maps&utm_source=google+Maps",
+      "phone": "04 66 57 03 08",
+      "address": "247 Chem. de la Fenouillère, 30390 Estézargues, France",
+      "marketCode": "FR",
+      "market": "France",
+      "marketGroup": "francophone",
+      "language": "fr",
+      "score": 95,
+      "reasons": [
+        "site existant",
+        "email trouve",
+        "telephone disponible",
+        "adresse locale",
+        "fiche nommee"
+      ],
+      "sentAt": "2026-06-23T09:02:04.160Z",
+      "status": "sent",
+      "lifecycleStage": "contacted",
+      "firstContactedAt": "2026-06-23T09:02:04.160Z",
+      "lastContactedAt": "2026-06-23T09:02:04.160Z",
+      "nextFollowUpAt": "2026-06-30T09:02:04.160Z",
+      "timeline": [
+        {
+          "at": "2026-06-23T09:02:04.160Z",
+          "type": "sent",
+          "note": "Initial outreach email sent"
+        }
+      ]
+    },
+    {
+      "placeId": "ChIJL3ZCE_Zv5kcRHpn_t5e-I8I",
+      "name": "Grand Hôtel de Paris",
+      "email": "ghp.bo@cbs29.fr",
+      "website": "https://www.grand-hotel-paris.com/",
+      "phone": "01 46 07 40 56",
+      "address": "72 Bd de Strasbourg, 75010 Paris, France",
+      "marketCode": "FR",
+      "market": "France",
+      "marketGroup": "francophone",
+      "language": "fr",
+      "score": 95,
+      "reasons": [
+        "site existant",
+        "email trouve",
+        "telephone disponible",
+        "adresse locale",
+        "fiche nommee"
+      ],
+      "sentAt": "2026-06-23T09:02:08.271Z",
+      "status": "sent",
+      "lifecycleStage": "contacted",
+      "firstContactedAt": "2026-06-23T09:02:08.271Z",
+      "lastContactedAt": "2026-06-23T09:02:08.271Z",
+      "nextFollowUpAt": "2026-06-30T09:02:08.271Z",
+      "timeline": [
+        {
+          "at": "2026-06-23T09:02:08.271Z",
+          "type": "sent",
+          "note": "Initial outreach email sent"
+        }
+      ]
+    },
+    {
+      "placeId": "ChIJKdmzc0du5kcRJHXqrNIg4-Y",
+      "name": "France Albion",
+      "email": "contact@france-albion.com",
+      "website": "http://www.france-albion.com/",
+      "phone": "01 45 26 00 81",
+      "address": "11 Rue Notre Dame de Lorette, 75009 Paris, France",
+      "marketCode": "FR",
+      "market": "France",
+      "marketGroup": "francophone",
+      "language": "fr",
+      "score": 95,
+      "reasons": [
+        "site existant",
+        "email trouve",
+        "telephone disponible",
+        "adresse locale",
+        "fiche nommee"
+      ],
+      "sentAt": "2026-06-23T09:02:13.174Z",
+      "status": "sent",
+      "lifecycleStage": "contacted",
+      "firstContactedAt": "2026-06-23T09:02:13.174Z",
+      "lastContactedAt": "2026-06-23T09:02:13.174Z",
+      "nextFollowUpAt": "2026-06-30T09:02:13.174Z",
+      "timeline": [
+        {
+          "at": "2026-06-23T09:02:13.174Z",
+          "type": "sent",
+          "note": "Initial outreach email sent"
+        }
+      ]
+    },
+    {
+      "placeId": "ChIJw8i8LyVu5kcRkU9makcIJhc",
+      "name": "Hôtel Thérèse",
+      "email": "info@hoteltherese.com",
+      "website": "http://www.hoteltherese.fr/",
+      "phone": "01 42 96 10 01",
+      "address": "5 Rue Thérèse, 75001 Paris, France",
+      "marketCode": "FR",
+      "market": "France",
+      "marketGroup": "francophone",
+      "language": "fr",
+      "score": 95,
+      "reasons": [
+        "site existant",
+        "email trouve",
+        "telephone disponible",
+        "adresse locale",
+        "fiche nommee"
+      ],
+      "sentAt": "2026-06-23T09:02:25.858Z",
+      "status": "sent",
+      "lifecycleStage": "contacted",
+      "firstContactedAt": "2026-06-23T09:02:25.858Z",
+      "lastContactedAt": "2026-06-23T09:02:25.858Z",
+      "nextFollowUpAt": "2026-06-30T09:02:25.858Z",
+      "timeline": [
+        {
+          "at": "2026-06-23T09:02:25.858Z",
+          "type": "sent",
+          "note": "Initial outreach email sent"
+        }
+      ]
+    },
+    {
+      "placeId": "ChIJ25nqsRScD0gRCUIQe1KoDr4",
+      "name": "Bel Hotel",
+      "email": "bienvenue@bel-hotel.com",
+      "website": "https://www.contact-hotel.com/hotel-france/1078/bel-hotel-saint-nicolas-de-redon.htm",
+      "phone": "02 99 71 10 10",
+      "address": "42 Av. Jean Burel, 44460 Saint-Nicolas-de-Redon, France",
+      "marketCode": "FR",
+      "market": "France",
+      "marketGroup": "francophone",
+      "language": "fr",
+      "score": 95,
+      "reasons": [
+        "site existant",
+        "email trouve",
+        "telephone disponible",
+        "adresse locale",
+        "fiche nommee"
+      ],
+      "sentAt": "2026-06-23T09:02:32.938Z",
+      "status": "sent",
+      "lifecycleStage": "contacted",
+      "firstContactedAt": "2026-06-23T09:02:32.938Z",
+      "lastContactedAt": "2026-06-23T09:02:32.938Z",
+      "nextFollowUpAt": "2026-06-30T09:02:32.938Z",
+      "timeline": [
+        {
+          "at": "2026-06-23T09:02:32.938Z",
+          "type": "sent",
+          "note": "Initial outreach email sent"
+        }
+      ]
+    },
+    {
+      "placeId": "ChIJpzcGtDIwB0gRlEKehylCVv0",
+      "name": "France Hôtel",
+      "email": "contact@francehotelniort.com",
+      "website": "http://francehotelniort.com/",
+      "phone": "05 49 24 24 50",
+      "address": "8 Rue des Cordeliers, 79000 Niort, France",
+      "marketCode": "FR",
+      "market": "France",
+      "marketGroup": "francophone",
+      "language": "fr",
+      "score": 95,
+      "reasons": [
+        "site existant",
+        "email trouve",
+        "telephone disponible",
+        "adresse locale",
+        "fiche nommee"
+      ],
+      "sentAt": "2026-06-23T09:02:40.895Z",
+      "status": "sent",
+      "lifecycleStage": "contacted",
+      "firstContactedAt": "2026-06-23T09:02:40.895Z",
+      "lastContactedAt": "2026-06-23T09:02:40.895Z",
+      "nextFollowUpAt": "2026-06-30T09:02:40.895Z",
+      "timeline": [
+        {
+          "at": "2026-06-23T09:02:40.895Z",
+          "type": "sent",
+          "note": "Initial outreach email sent"
+        }
+      ]
+    },
+    {
+      "placeId": "ChIJRZOcrgJu5kcRNHLaohZ3YRI",
+      "name": "Hotel France Louvre",
+      "email": "hotel@francelouvre.com",
+      "website": "http://www.francelouvre.com/",
+      "phone": "09 71 28 46 06",
+      "address": "40 Rue de Rivoli, 75004 Paris, France",
+      "marketCode": "FR",
+      "market": "France",
+      "marketGroup": "francophone",
+      "language": "fr",
+      "score": 95,
+      "reasons": [
+        "site existant",
+        "email trouve",
+        "telephone disponible",
+        "adresse locale",
+        "fiche nommee"
+      ],
+      "sentAt": "2026-06-23T09:02:45.236Z",
+      "status": "sent",
+      "lifecycleStage": "contacted",
+      "firstContactedAt": "2026-06-23T09:02:45.236Z",
+      "lastContactedAt": "2026-06-23T09:02:45.236Z",
+      "nextFollowUpAt": "2026-06-30T09:02:45.236Z",
+      "timeline": [
+        {
+          "at": "2026-06-23T09:02:45.236Z",
+          "type": "sent",
+          "note": "Initial outreach email sent"
+        }
+      ]
+    },
+    {
+      "placeId": "ChIJzW6ZVg1u5kcRLQ9oBTgUpH0",
+      "name": "Hotel D'Alsace",
+      "email": "hoteldalsace75@gmail.com",
+      "website": "http://www.hotel-alsace-paris.com/",
+      "phone": "01 40 37 75 41",
+      "address": "85 Bd de Strasbourg, 75010 Paris, France",
+      "marketCode": "FR",
+      "market": "France",
+      "marketGroup": "francophone",
+      "language": "fr",
+      "score": 95,
+      "reasons": [
+        "site existant",
+        "email trouve",
+        "telephone disponible",
+        "adresse locale",
+        "fiche nommee"
+      ],
+      "sentAt": "2026-06-23T09:02:50.013Z",
+      "status": "sent",
+      "lifecycleStage": "contacted",
+      "firstContactedAt": "2026-06-23T09:02:50.013Z",
+      "lastContactedAt": "2026-06-23T09:02:50.013Z",
+      "nextFollowUpAt": "2026-06-30T09:02:50.013Z",
+      "timeline": [
+        {
+          "at": "2026-06-23T09:02:50.013Z",
+          "type": "sent",
+          "note": "Initial outreach email sent"
+        }
+      ]
+    },
+    {
+      "placeId": "ChIJVVUJl_Rv5kcRWSLAapo51Ss",
+      "name": "Hôtel Toujours",
+      "email": "bonjour@hoteltoujours.paris",
+      "website": "https://hoteltoujours.paris/?utm_source=gmb&utm_medium=organic&utm_campaign=gmb_toujours",
+      "phone": "01 45 00 23 45",
+      "address": "155 Av. de Malakoff, 75116 Paris, France",
+      "marketCode": "FR",
+      "market": "France",
+      "marketGroup": "francophone",
+      "language": "fr",
+      "score": 95,
+      "reasons": [
+        "site existant",
+        "email trouve",
+        "telephone disponible",
+        "adresse locale",
+        "fiche nommee"
+      ],
+      "sentAt": "2026-06-23T09:02:57.324Z",
+      "status": "sent",
+      "lifecycleStage": "contacted",
+      "firstContactedAt": "2026-06-23T09:02:57.324Z",
+      "lastContactedAt": "2026-06-23T09:02:57.324Z",
+      "nextFollowUpAt": "2026-06-30T09:02:57.324Z",
+      "timeline": [
+        {
+          "at": "2026-06-23T09:02:57.324Z",
+          "type": "sent",
+          "note": "Initial outreach email sent"
+        }
+      ]
+    },
+    {
+      "placeId": "ChIJB4C_4UVHUQ0Rlt2QhtpP4fw",
+      "name": "Adonis Hôtel Bayonne",
+      "email": "resa@adonis-bayonne.com",
+      "website": "http://www.adonis-hotel-bayonne.com/",
+      "phone": "05 59 52 92 28",
+      "address": "Centre Européen de Frêt, Rue Mayzounave Bidea, 64990 Lahonce, France",
+      "marketCode": "FR",
+      "market": "France",
+      "marketGroup": "francophone",
+      "language": "fr",
+      "score": 95,
+      "reasons": [
+        "site existant",
+        "email trouve",
+        "telephone disponible",
+        "adresse locale",
+        "fiche nommee"
+      ],
+      "sentAt": "2026-06-23T09:03:02.077Z",
+      "status": "sent",
+      "lifecycleStage": "contacted",
+      "firstContactedAt": "2026-06-23T09:03:02.077Z",
+      "lastContactedAt": "2026-06-23T09:03:02.077Z",
+      "nextFollowUpAt": "2026-06-30T09:03:02.077Z",
+      "timeline": [
+        {
+          "at": "2026-06-23T09:03:02.077Z",
+          "type": "sent",
+          "note": "Initial outreach email sent"
+        }
+      ]
+    },
+    {
+      "placeId": "ChIJC9pY1Y7rtRIR25Sst81Z6mo",
+      "name": "Hotel De Cambis, Bw Premier Collection",
+      "email": "welcome@hoteldecambis.com",
+      "website": "https://www.hoteldecambis.com/",
+      "phone": "04 90 14 62 73",
+      "address": "89 Rue Joseph Vernet, 84000 Avignon, France",
+      "marketCode": "FR",
+      "market": "France",
+      "marketGroup": "francophone",
+      "language": "fr",
+      "score": 95,
+      "reasons": [
+        "site existant",
+        "email trouve",
+        "telephone disponible",
+        "adresse locale",
+        "fiche nommee"
+      ],
+      "sentAt": "2026-06-23T09:03:07.594Z",
+      "status": "sent",
+      "lifecycleStage": "contacted",
+      "firstContactedAt": "2026-06-23T09:03:07.594Z",
+      "lastContactedAt": "2026-06-23T09:03:07.594Z",
+      "nextFollowUpAt": "2026-06-30T09:03:07.594Z",
+      "timeline": [
+        {
+          "at": "2026-06-23T09:03:07.594Z",
+          "type": "sent",
+          "note": "Initial outreach email sent"
+        }
+      ]
+    },
+    {
+      "placeId": "ChIJTximcmV190cRp9oMpMlGjBM",
+      "name": "Le Grand Hôtel",
+      "email": "legrandhotellemontdore@orange.fr",
+      "website": "http://www.hotel-mont-dore.com/",
+      "phone": "04 73 65 02 64",
+      "address": "2 Rue Meynadier, 63240 Mont-Dore, France",
+      "marketCode": "FR",
+      "market": "France",
+      "marketGroup": "francophone",
+      "language": "fr",
+      "score": 95,
+      "reasons": [
+        "site existant",
+        "email trouve",
+        "telephone disponible",
+        "adresse locale",
+        "fiche nommee"
+      ],
+      "sentAt": "2026-06-23T09:03:14.686Z",
+      "status": "sent",
+      "lifecycleStage": "contacted",
+      "firstContactedAt": "2026-06-23T09:03:14.686Z",
+      "lastContactedAt": "2026-06-23T09:03:14.686Z",
+      "nextFollowUpAt": "2026-06-30T09:03:14.686Z",
+      "timeline": [
+        {
+          "at": "2026-06-23T09:03:14.686Z",
+          "type": "sent",
+          "note": "Initial outreach email sent"
+        }
+      ]
+    },
+    {
+      "placeId": "ChIJJf2y2qCAwUcRo_5VvWolH0Q",
+      "name": "Hello Les Copines",
+      "email": "info@hellolescopines.be",
+      "website": "https://hellolescopines.be/",
+      "phone": null,
+      "address": "Rue Joseph Scohy 17, 6222 Fleurus, Belgium",
+      "marketCode": "BE-FR",
+      "market": "Belgique francophone",
+      "marketGroup": "francophone",
+      "language": "fr",
+      "score": 85,
+      "reasons": [
+        "site existant",
+        "email trouve",
+        "adresse locale",
+        "fiche nommee"
+      ],
+      "sentAt": "2026-06-23T09:03:26.216Z",
+      "status": "sent",
+      "lifecycleStage": "contacted",
+      "firstContactedAt": "2026-06-23T09:03:26.216Z",
+      "lastContactedAt": "2026-06-23T09:03:26.216Z",
+      "nextFollowUpAt": "2026-06-30T09:03:26.216Z",
+      "timeline": [
+        {
+          "at": "2026-06-23T09:03:26.216Z",
+          "type": "sent",
+          "note": "Initial outreach email sent"
+        }
+      ]
+    },
+    {
+      "placeId": "ChIJvfebkZjEw0cRFdPCR0EtW7A",
+      "name": "Le Petit Boudoir",
+      "email": "openspacebruxelles@gmail.com",
+      "website": "https://www.petitboudoir.be/",
+      "phone": "02 721 51 26",
+      "address": "Rue Belliard 151, 1040 Etterbeek, Belgium",
+      "marketCode": "BE-FR",
+      "market": "Belgique francophone",
+      "marketGroup": "francophone",
+      "language": "fr",
+      "score": 95,
+      "reasons": [
+        "site existant",
+        "email trouve",
+        "telephone disponible",
+        "adresse locale",
+        "fiche nommee"
+      ],
+      "sentAt": "2026-06-23T09:03:31.208Z",
+      "status": "sent",
+      "lifecycleStage": "contacted",
+      "firstContactedAt": "2026-06-23T09:03:31.208Z",
+      "lastContactedAt": "2026-06-23T09:03:31.208Z",
+      "nextFollowUpAt": "2026-06-30T09:03:31.208Z",
+      "timeline": [
+        {
+          "at": "2026-06-23T09:03:31.208Z",
+          "type": "sent",
+          "note": "Initial outreach email sent"
+        }
+      ]
+    },
+    {
+      "placeId": "ChIJd6IwwtGLwEcRyxYi-s5-nuM",
+      "name": "Côté Rue",
+      "email": "info@coterue.be",
+      "website": "http://www.coterue.be/",
+      "phone": "087 26 69 19",
+      "address": "Av. de Spa 88, 4802 Verviers, Belgium",
+      "marketCode": "BE-FR",
+      "market": "Belgique francophone",
+      "marketGroup": "francophone",
+      "language": "fr",
+      "score": 95,
+      "reasons": [
+        "site existant",
+        "email trouve",
+        "telephone disponible",
+        "adresse locale",
+        "fiche nommee"
+      ],
+      "sentAt": "2026-06-23T09:03:40.052Z",
+      "status": "sent",
+      "lifecycleStage": "contacted",
+      "firstContactedAt": "2026-06-23T09:03:40.052Z",
+      "lastContactedAt": "2026-06-23T09:03:40.052Z",
+      "nextFollowUpAt": "2026-06-30T09:03:40.052Z",
+      "timeline": [
+        {
+          "at": "2026-06-23T09:03:40.052Z",
+          "type": "sent",
+          "note": "Initial outreach email sent"
+        }
+      ]
+    },
+    {
+      "placeId": "ChIJwwgZAj8vjEcRpBWp4kUVYBg",
+      "name": "ÇA PASSE CRÈME - Specialty Coffee Shop",
+      "email": "info@capassecreme.ch",
+      "website": "https://www.capassecreme.ch/",
+      "phone": null,
+      "address": "Bd de Grancy 49, 1006 Lausanne, Switzerland",
+      "marketCode": "CH-FR",
+      "market": "Suisse romande",
+      "marketGroup": "francophone",
+      "language": "fr",
+      "score": 85,
+      "reasons": [
+        "site existant",
+        "email trouve",
+        "adresse locale",
+        "fiche nommee"
+      ],
+      "sentAt": "2026-06-23T09:03:52.889Z",
+      "status": "sent",
+      "lifecycleStage": "contacted",
+      "firstContactedAt": "2026-06-23T09:03:52.889Z",
+      "lastContactedAt": "2026-06-23T09:03:52.889Z",
+      "nextFollowUpAt": "2026-06-30T09:03:52.889Z",
+      "timeline": [
+        {
+          "at": "2026-06-23T09:03:52.889Z",
+          "type": "sent",
+          "note": "Initial outreach email sent"
+        }
+      ]
+    },
+    {
+      "placeId": "ChIJCW8qVzIujEcRvk9qLl3Opbw",
+      "name": "Café Romand",
+      "email": "contact@cafe-romand.ch",
+      "website": "http://www.cafe-romand.ch/",
+      "phone": "021 312 63 75",
+      "address": "Pl. Saint-François 2, 1003 Lausanne, Switzerland",
+      "marketCode": "CH-FR",
+      "market": "Suisse romande",
+      "marketGroup": "francophone",
+      "language": "fr",
+      "score": 95,
+      "reasons": [
+        "site existant",
+        "email trouve",
+        "telephone disponible",
+        "adresse locale",
+        "fiche nommee"
+      ],
+      "sentAt": "2026-06-23T09:04:00.700Z",
+      "status": "sent",
+      "lifecycleStage": "contacted",
+      "firstContactedAt": "2026-06-23T09:04:00.700Z",
+      "lastContactedAt": "2026-06-23T09:04:00.700Z",
+      "nextFollowUpAt": "2026-06-30T09:04:00.700Z",
+      "timeline": [
+        {
+          "at": "2026-06-23T09:04:00.700Z",
+          "type": "sent",
+          "note": "Initial outreach email sent"
+        }
+      ]
+    },
+    {
+      "placeId": "ChIJhcpRhO5ljEcRMQr5rXM2fIs",
+      "name": "Pages & Sips",
+      "email": "info@pagesandsips.com",
+      "website": "http://www.pagesandsips.com/",
+      "phone": null,
+      "address": "Grand-Rue 37, 1204 Genève, Switzerland",
+      "marketCode": "CH-FR",
+      "market": "Suisse romande",
+      "marketGroup": "francophone",
+      "language": "fr",
+      "score": 85,
+      "reasons": [
+        "site existant",
+        "email trouve",
+        "adresse locale",
+        "fiche nommee"
+      ],
+      "sentAt": "2026-06-23T09:04:06.295Z",
+      "status": "sent",
+      "lifecycleStage": "contacted",
+      "firstContactedAt": "2026-06-23T09:04:06.295Z",
+      "lastContactedAt": "2026-06-23T09:04:06.295Z",
+      "nextFollowUpAt": "2026-06-30T09:04:06.295Z",
+      "timeline": [
+        {
+          "at": "2026-06-23T09:04:06.295Z",
+          "type": "sent",
+          "note": "Initial outreach email sent"
+        }
+      ]
     }
   ],
-  "lastUpdated": "2026-06-22T09:58:27.169Z"
+  "lastUpdated": "2026-06-23T09:05:46.269Z"
 }
