@@ -7570,7 +7570,667 @@
           "note": "Initial outreach email sent"
         }
       ]
+    },
+    {
+      "placeId": "ChIJyV8kl0zIlkcRIiYfKtmCU-g",
+      "name": "Pavillon Régent Petite France",
+      "email": "accueil@regent-petite-france.com",
+      "website": "https://www.regent-petite-france.com/",
+      "phone": "03 88 76 43 43",
+      "address": "6 Rue des Moulins, 67000 Strasbourg, France",
+      "marketCode": "FR",
+      "market": "France",
+      "marketGroup": "francophone",
+      "language": "fr",
+      "score": 95,
+      "reasons": [
+        "site existant",
+        "email trouve",
+        "telephone disponible",
+        "adresse locale",
+        "fiche nommee"
+      ],
+      "sentAt": "2026-06-24T09:00:40.646Z",
+      "status": "sent",
+      "lifecycleStage": "contacted",
+      "firstContactedAt": "2026-06-24T09:00:40.646Z",
+      "lastContactedAt": "2026-06-24T09:00:40.646Z",
+      "nextFollowUpAt": "2026-07-01T09:00:40.646Z",
+      "timeline": [
+        {
+          "at": "2026-06-24T09:00:40.646Z",
+          "type": "sent",
+          "note": "Initial outreach email sent"
+        }
+      ]
+    },
+    {
+      "placeId": "ChIJGYAjUUt5jkcRhfEyZLHu1c8",
+      "name": "Restaurant Café Suisse | Romont",
+      "email": "info@cafe-suisse-romont.ch",
+      "website": "https://www.restaurant-cafe-suisse-romont.ch/",
+      "phone": "026 652 41 10",
+      "address": "Rue du Château 105, 1680 Romont, Switzerland",
+      "marketCode": "CH-FR",
+      "market": "Suisse romande",
+      "marketGroup": "francophone",
+      "language": "fr",
+      "score": 95,
+      "reasons": [
+        "site existant",
+        "email trouve",
+        "telephone disponible",
+        "adresse locale",
+        "fiche nommee"
+      ],
+      "sentAt": "2026-06-24T09:00:59.789Z",
+      "status": "sent",
+      "lifecycleStage": "contacted",
+      "firstContactedAt": "2026-06-24T09:00:59.789Z",
+      "lastContactedAt": "2026-06-24T09:00:59.789Z",
+      "nextFollowUpAt": "2026-07-01T09:00:59.789Z",
+      "timeline": [
+        {
+          "at": "2026-06-24T09:00:59.789Z",
+          "type": "sent",
+          "note": "Initial outreach email sent"
+        }
+      ]
+    },
+    {
+      "placeId": "ChIJkQTDCNZJlUcROq_6j3EkxPQ",
+      "name": "Weber & Fils Sàrl",
+      "email": "info@weberetfils.lu",
+      "website": "https://weberetfils.lu/",
+      "phone": "20 60 22 22",
+      "address": "20 Rue des Peupliers, 2328 Hamm Luxembourg",
+      "marketCode": "LU",
+      "market": "Luxembourg",
+      "marketGroup": "francophone",
+      "language": "fr",
+      "score": 95,
+      "reasons": [
+        "site existant",
+        "email trouve",
+        "telephone disponible",
+        "adresse locale",
+        "fiche nommee"
+      ],
+      "sentAt": "2026-06-24T09:01:06.860Z",
+      "status": "sent",
+      "lifecycleStage": "contacted",
+      "firstContactedAt": "2026-06-24T09:01:06.860Z",
+      "lastContactedAt": "2026-06-24T09:01:06.860Z",
+      "nextFollowUpAt": "2026-07-01T09:01:06.860Z",
+      "timeline": [
+        {
+          "at": "2026-06-24T09:01:06.860Z",
+          "type": "sent",
+          "note": "Initial outreach email sent"
+        }
+      ]
+    },
+    {
+      "placeId": "ChIJ3fWrXWS-A0wRSlvjchPbYNE",
+      "name": "Help Depanne Services",
+      "email": "hds@helpservice24.net",
+      "website": "https://helpservice24.net/",
+      "phone": "621 140 705",
+      "address": "7 Av. John F. Kennedy, 1855 Kirchberg Luxembourg",
+      "marketCode": "LU",
+      "market": "Luxembourg",
+      "marketGroup": "francophone",
+      "language": "fr",
+      "score": 95,
+      "reasons": [
+        "site existant",
+        "email trouve",
+        "telephone disponible",
+        "adresse locale",
+        "fiche nommee"
+      ],
+      "sentAt": "2026-06-24T09:01:12.363Z",
+      "status": "sent",
+      "lifecycleStage": "contacted",
+      "firstContactedAt": "2026-06-24T09:01:12.363Z",
+      "lastContactedAt": "2026-06-24T09:01:12.363Z",
+      "nextFollowUpAt": "2026-07-01T09:01:12.363Z",
+      "timeline": [
+        {
+          "at": "2026-06-24T09:01:12.363Z",
+          "type": "sent",
+          "note": "Initial outreach email sent"
+        }
+      ]
+    },
+    {
+      "placeId": "ChIJfQaLe_y16kcReCanAr_xBb4",
+      "name": "Multiserv24",
+      "email": "contact@multiserv24.com",
+      "website": "https://multiserv24.com/plombierluxembourg/?fbclid=IwAR0pXXHdkVRO_TWz-0k3FQri3Rryo265KDfIa0UflT_WXSFvbDXawY1eizg",
+      "phone": "691 416 631",
+      "address": "145 Rte de Pétange, 4645 Niederkorn Differdange, Luxembourg",
+      "marketCode": "LU",
+      "market": "Luxembourg",
+      "marketGroup": "francophone",
+      "language": "fr",
+      "score": 95,
+      "reasons": [
+        "site existant",
+        "email trouve",
+        "telephone disponible",
+        "adresse locale",
+        "fiche nommee"
+      ],
+      "sentAt": "2026-06-24T09:01:19.568Z",
+      "status": "sent",
+      "lifecycleStage": "contacted",
+      "firstContactedAt": "2026-06-24T09:01:19.568Z",
+      "lastContactedAt": "2026-06-24T09:01:19.568Z",
+      "nextFollowUpAt": "2026-07-01T09:01:19.568Z",
+      "timeline": [
+        {
+          "at": "2026-06-24T09:01:19.568Z",
+          "type": "sent",
+          "note": "Initial outreach email sent"
+        }
+      ]
+    },
+    {
+      "placeId": "ChIJEyLbaIxJlUcR1IPSIzOUdfY",
+      "name": "CARA LUX - PLOMBIER CHAUFFAGISTE LUXEMBOURG",
+      "email": "info@caralux.net",
+      "website": "https://www.caralux.lu/",
+      "phone": "661 758 136",
+      "address": "55 Rue de Luxembourg, 8077 Helfent Bertrange, Luxembourg",
+      "marketCode": "LU",
+      "market": "Luxembourg",
+      "marketGroup": "francophone",
+      "language": "fr",
+      "score": 95,
+      "reasons": [
+        "site existant",
+        "email trouve",
+        "telephone disponible",
+        "adresse locale",
+        "fiche nommee"
+      ],
+      "sentAt": "2026-06-24T09:01:25.419Z",
+      "status": "sent",
+      "lifecycleStage": "contacted",
+      "firstContactedAt": "2026-06-24T09:01:25.419Z",
+      "lastContactedAt": "2026-06-24T09:01:25.419Z",
+      "nextFollowUpAt": "2026-07-01T09:01:25.419Z",
+      "timeline": [
+        {
+          "at": "2026-06-24T09:01:25.419Z",
+          "type": "sent",
+          "note": "Initial outreach email sent"
+        }
+      ]
+    },
+    {
+      "placeId": "ChIJgVTk4kZPlUcRRkRnaUm0ARI",
+      "name": "IDROLUX",
+      "email": "info@idrolux.lu",
+      "website": "http://idrolux.lu/",
+      "phone": "661 260 879",
+      "address": "53 Cité Grand-Duc Jean, 7233 Bereldange Walferdange, Luxembourg",
+      "marketCode": "LU",
+      "market": "Luxembourg",
+      "marketGroup": "francophone",
+      "language": "fr",
+      "score": 95,
+      "reasons": [
+        "site existant",
+        "email trouve",
+        "telephone disponible",
+        "adresse locale",
+        "fiche nommee"
+      ],
+      "sentAt": "2026-06-24T09:01:31.301Z",
+      "status": "sent",
+      "lifecycleStage": "contacted",
+      "firstContactedAt": "2026-06-24T09:01:31.301Z",
+      "lastContactedAt": "2026-06-24T09:01:31.301Z",
+      "nextFollowUpAt": "2026-07-01T09:01:31.301Z",
+      "timeline": [
+        {
+          "at": "2026-06-24T09:01:31.301Z",
+          "type": "sent",
+          "note": "Initial outreach email sent"
+        }
+      ]
+    },
+    {
+      "placeId": "ChIJBXyAx9ROlUcRWjHxxej9K1M",
+      "name": "AlloServices.lu",
+      "email": "client@alloservices.lu",
+      "website": "https://alloservices.lu/?utm_source=google_my_business&utm_medium=clic&utm_campaign=alloservices_my_business&utm_id=Alloservices+-+Google+My+Business",
+      "phone": "28 84 84 1",
+      "address": "Z.A.I de Bourmicht, 10B Rue des Mérovingiens, 8070 Bertrange, Luxembourg",
+      "marketCode": "LU",
+      "market": "Luxembourg",
+      "marketGroup": "francophone",
+      "language": "fr",
+      "score": 95,
+      "reasons": [
+        "site existant",
+        "email trouve",
+        "telephone disponible",
+        "adresse locale",
+        "fiche nommee"
+      ],
+      "sentAt": "2026-06-24T09:01:37.981Z",
+      "status": "sent",
+      "lifecycleStage": "contacted",
+      "firstContactedAt": "2026-06-24T09:01:37.981Z",
+      "lastContactedAt": "2026-06-24T09:01:37.981Z",
+      "nextFollowUpAt": "2026-07-01T09:01:37.981Z",
+      "timeline": [
+        {
+          "at": "2026-06-24T09:01:37.981Z",
+          "type": "sent",
+          "note": "Initial outreach email sent"
+        }
+      ]
+    },
+    {
+      "placeId": "ChIJT7Gn91yQc0kR4StE5xigSgQ",
+      "name": "MS Services 24/7 Plomberie, Électricité et Climatisation",
+      "email": "info@msservices.lu",
+      "website": "https://msservices.lu/",
+      "phone": "27 58 58 25",
+      "address": "38 Rue du Bois, 4421 Soleuvre Sanem, Luxembourg",
+      "marketCode": "LU",
+      "market": "Luxembourg",
+      "marketGroup": "francophone",
+      "language": "fr",
+      "score": 95,
+      "reasons": [
+        "site existant",
+        "email trouve",
+        "telephone disponible",
+        "adresse locale",
+        "fiche nommee"
+      ],
+      "sentAt": "2026-06-24T09:01:43.349Z",
+      "status": "sent",
+      "lifecycleStage": "contacted",
+      "firstContactedAt": "2026-06-24T09:01:43.349Z",
+      "lastContactedAt": "2026-06-24T09:01:43.349Z",
+      "nextFollowUpAt": "2026-07-01T09:01:43.349Z",
+      "timeline": [
+        {
+          "at": "2026-06-24T09:01:43.349Z",
+          "type": "sent",
+          "note": "Initial outreach email sent"
+        }
+      ]
+    },
+    {
+      "placeId": "ChIJFTzwvm1dlUcRV8g_KHhMQ5A",
+      "name": "R&N sàrl - Reis & Neumann Luxemburg",
+      "email": "info@reis-neumann.com",
+      "website": "https://reis-neumann.lu/",
+      "phone": "73 50 90",
+      "address": "6 Buergaass, 6834 Biwer, Luxembourg",
+      "marketCode": "LU",
+      "market": "Luxembourg",
+      "marketGroup": "francophone",
+      "language": "fr",
+      "score": 95,
+      "reasons": [
+        "site existant",
+        "email trouve",
+        "telephone disponible",
+        "adresse locale",
+        "fiche nommee"
+      ],
+      "sentAt": "2026-06-24T09:01:48.265Z",
+      "status": "sent",
+      "lifecycleStage": "contacted",
+      "firstContactedAt": "2026-06-24T09:01:48.265Z",
+      "lastContactedAt": "2026-06-24T09:01:48.265Z",
+      "nextFollowUpAt": "2026-07-01T09:01:48.265Z",
+      "timeline": [
+        {
+          "at": "2026-06-24T09:01:48.265Z",
+          "type": "sent",
+          "note": "Initial outreach email sent"
+        }
+      ]
+    },
+    {
+      "placeId": "ChIJnW4LRc9IlUcRuDze3FhABLg",
+      "name": "Baumert Sanitary and Heating",
+      "email": "info@baumert-ent.lu",
+      "website": "http://www.baumert-ent.lu/",
+      "phone": "36 98 71",
+      "address": "5 Rue Félix de Blochausen, 1243 Bonnevoie-Nord-Verlorenkost Luxembourg",
+      "marketCode": "LU",
+      "market": "Luxembourg",
+      "marketGroup": "francophone",
+      "language": "fr",
+      "score": 95,
+      "reasons": [
+        "site existant",
+        "email trouve",
+        "telephone disponible",
+        "adresse locale",
+        "fiche nommee"
+      ],
+      "sentAt": "2026-06-24T09:01:53.380Z",
+      "status": "sent",
+      "lifecycleStage": "contacted",
+      "firstContactedAt": "2026-06-24T09:01:53.380Z",
+      "lastContactedAt": "2026-06-24T09:01:53.380Z",
+      "nextFollowUpAt": "2026-07-01T09:01:53.380Z",
+      "timeline": [
+        {
+          "at": "2026-06-24T09:01:53.380Z",
+          "type": "sent",
+          "note": "Initial outreach email sent"
+        }
+      ]
+    },
+    {
+      "placeId": "ChIJS0vXHzz4v0cRrplsKxbv6mA",
+      "name": "Chauffage Sanitaire Barthel S.A.",
+      "email": "info@heizung-barthel.lu",
+      "website": "https://www.heizung-barthel.lu/",
+      "phone": "92 34 34 1",
+      "address": "16 Op der Hei, 9809 Hosingen Parc Hosingen, Luxembourg",
+      "marketCode": "LU",
+      "market": "Luxembourg",
+      "marketGroup": "francophone",
+      "language": "fr",
+      "score": 95,
+      "reasons": [
+        "site existant",
+        "email trouve",
+        "telephone disponible",
+        "adresse locale",
+        "fiche nommee"
+      ],
+      "sentAt": "2026-06-24T09:02:00.470Z",
+      "status": "sent",
+      "lifecycleStage": "contacted",
+      "firstContactedAt": "2026-06-24T09:02:00.470Z",
+      "lastContactedAt": "2026-06-24T09:02:00.470Z",
+      "nextFollowUpAt": "2026-07-01T09:02:00.470Z",
+      "timeline": [
+        {
+          "at": "2026-06-24T09:02:00.470Z",
+          "type": "sent",
+          "note": "Initial outreach email sent"
+        }
+      ]
+    },
+    {
+      "placeId": "ChIJy6APT4uz6kcRZap2GfhTQl8",
+      "name": "RK Chauffage Sanitaire Climatisation Sàrl",
+      "email": "contact@my-rk.lu",
+      "website": "https://rkchauffage.lu/",
+      "phone": "621 453 842",
+      "address": "67 Rte de Luxembourg, 8440 Steinfort, Luxembourg",
+      "marketCode": "LU",
+      "market": "Luxembourg",
+      "marketGroup": "francophone",
+      "language": "fr",
+      "score": 95,
+      "reasons": [
+        "site existant",
+        "email trouve",
+        "telephone disponible",
+        "adresse locale",
+        "fiche nommee"
+      ],
+      "sentAt": "2026-06-24T09:02:10.351Z",
+      "status": "sent",
+      "lifecycleStage": "contacted",
+      "firstContactedAt": "2026-06-24T09:02:10.351Z",
+      "lastContactedAt": "2026-06-24T09:02:10.351Z",
+      "nextFollowUpAt": "2026-07-01T09:02:10.351Z",
+      "timeline": [
+        {
+          "at": "2026-06-24T09:02:10.351Z",
+          "type": "sent",
+          "note": "Initial outreach email sent"
+        }
+      ]
+    },
+    {
+      "placeId": "ChIJwZKBtTNblUcRjTY1wqLRWzU",
+      "name": "wohlwert - Bad & Wärme. (ehem. Schlien Sàrl)",
+      "email": "info@wohlwert.lu",
+      "website": "https://www.wohlwert.lu/",
+      "phone": "26 78 21 32",
+      "address": "11 um Lensterbierg, 6125 Junglinster, Luxembourg",
+      "marketCode": "LU",
+      "market": "Luxembourg",
+      "marketGroup": "francophone",
+      "language": "fr",
+      "score": 95,
+      "reasons": [
+        "site existant",
+        "email trouve",
+        "telephone disponible",
+        "adresse locale",
+        "fiche nommee"
+      ],
+      "sentAt": "2026-06-24T09:02:17.038Z",
+      "status": "sent",
+      "lifecycleStage": "contacted",
+      "firstContactedAt": "2026-06-24T09:02:17.038Z",
+      "lastContactedAt": "2026-06-24T09:02:17.038Z",
+      "nextFollowUpAt": "2026-07-01T09:02:17.038Z",
+      "timeline": [
+        {
+          "at": "2026-06-24T09:02:17.038Z",
+          "type": "sent",
+          "note": "Initial outreach email sent"
+        }
+      ]
+    },
+    {
+      "placeId": "ChIJBUAOOBBJlUcRGm_QOtwLDPI",
+      "name": "Home Services",
+      "email": "info@home-services.lu",
+      "website": "https://www.home-services.lu/",
+      "phone": "661 890 055",
+      "address": "41 Rue Zénon Bernard, 4031 Esch-sur-Alzette, Luxembourg",
+      "marketCode": "LU",
+      "market": "Luxembourg",
+      "marketGroup": "francophone",
+      "language": "fr",
+      "score": 95,
+      "reasons": [
+        "site existant",
+        "email trouve",
+        "telephone disponible",
+        "adresse locale",
+        "fiche nommee"
+      ],
+      "sentAt": "2026-06-24T09:02:22.593Z",
+      "status": "sent",
+      "lifecycleStage": "contacted",
+      "firstContactedAt": "2026-06-24T09:02:22.593Z",
+      "lastContactedAt": "2026-06-24T09:02:22.593Z",
+      "nextFollowUpAt": "2026-07-01T09:02:22.593Z",
+      "timeline": [
+        {
+          "at": "2026-06-24T09:02:22.593Z",
+          "type": "sent",
+          "note": "Initial outreach email sent"
+        }
+      ]
+    },
+    {
+      "placeId": "ChIJgco7pCBPlUcR-V9bMJz800Q",
+      "name": "Rovabo Sàrl",
+      "email": "rovabo@pt.lu",
+      "website": "https://www.rovabo.lu/",
+      "phone": "27 04 81 80",
+      "address": "2A Rue des Artisans, 3213 Bettembourg, Luxembourg",
+      "marketCode": "LU",
+      "market": "Luxembourg",
+      "marketGroup": "francophone",
+      "language": "fr",
+      "score": 95,
+      "reasons": [
+        "site existant",
+        "email trouve",
+        "telephone disponible",
+        "adresse locale",
+        "fiche nommee"
+      ],
+      "sentAt": "2026-06-24T09:02:28.164Z",
+      "status": "sent",
+      "lifecycleStage": "contacted",
+      "firstContactedAt": "2026-06-24T09:02:28.164Z",
+      "lastContactedAt": "2026-06-24T09:02:28.164Z",
+      "nextFollowUpAt": "2026-07-01T09:02:28.164Z",
+      "timeline": [
+        {
+          "at": "2026-06-24T09:02:28.164Z",
+          "type": "sent",
+          "note": "Initial outreach email sent"
+        }
+      ]
+    },
+    {
+      "placeId": "ChIJHS0G2Z236kcRnJQVQ6Lybmk",
+      "name": "HPro Chauffage",
+      "email": "contact@hprochauffage.lu",
+      "website": "https://www.hprochauffage.lu/",
+      "phone": "26 45 99 55",
+      "address": "29 Rue Robert Krieps, 4702 Pétange, Luxembourg",
+      "marketCode": "LU",
+      "market": "Luxembourg",
+      "marketGroup": "francophone",
+      "language": "fr",
+      "score": 95,
+      "reasons": [
+        "site existant",
+        "email trouve",
+        "telephone disponible",
+        "adresse locale",
+        "fiche nommee"
+      ],
+      "sentAt": "2026-06-24T09:02:37.248Z",
+      "status": "sent",
+      "lifecycleStage": "contacted",
+      "firstContactedAt": "2026-06-24T09:02:37.248Z",
+      "lastContactedAt": "2026-06-24T09:02:37.248Z",
+      "nextFollowUpAt": "2026-07-01T09:02:37.248Z",
+      "timeline": [
+        {
+          "at": "2026-06-24T09:02:37.248Z",
+          "type": "sent",
+          "note": "Initial outreach email sent"
+        }
+      ]
+    },
+    {
+      "placeId": "ChIJq4rM8lGWuEwR5w2azX7xoT0",
+      "name": "Steq Svc De Techniciens En",
+      "email": "info@steq.ca",
+      "website": "http://www.steq.ca/",
+      "phone": "(418) 682-8363",
+      "address": "750 Bd Pierre-Bertrand Bureau 115, Québec, QC G1M 1C2, Canada",
+      "marketCode": "CA-QC",
+      "market": "Québec",
+      "marketGroup": "francophone",
+      "language": "fr",
+      "score": 95,
+      "reasons": [
+        "site existant",
+        "email trouve",
+        "telephone disponible",
+        "adresse locale",
+        "fiche nommee"
+      ],
+      "sentAt": "2026-06-24T09:02:43.278Z",
+      "status": "sent",
+      "lifecycleStage": "contacted",
+      "firstContactedAt": "2026-06-24T09:02:43.278Z",
+      "lastContactedAt": "2026-06-24T09:02:43.278Z",
+      "nextFollowUpAt": "2026-07-01T09:02:43.278Z",
+      "timeline": [
+        {
+          "at": "2026-06-24T09:02:43.278Z",
+          "type": "sent",
+          "note": "Initial outreach email sent"
+        }
+      ]
+    },
+    {
+      "placeId": "ChIJX6jG4EVdgCARRPnscYkWK6Q",
+      "name": "E3 Electricity, Inc.",
+      "email": "info@e3electricite.ca",
+      "website": "https://www.e3electricite.ca/",
+      "phone": "(418) 353-2754",
+      "address": "1445 Bd Central, Québec, QC G1P 0A7, Canada",
+      "marketCode": "CA-QC",
+      "market": "Québec",
+      "marketGroup": "francophone",
+      "language": "fr",
+      "score": 95,
+      "reasons": [
+        "site existant",
+        "email trouve",
+        "telephone disponible",
+        "adresse locale",
+        "fiche nommee"
+      ],
+      "sentAt": "2026-06-24T09:02:48.490Z",
+      "status": "sent",
+      "lifecycleStage": "contacted",
+      "firstContactedAt": "2026-06-24T09:02:48.490Z",
+      "lastContactedAt": "2026-06-24T09:02:48.490Z",
+      "nextFollowUpAt": "2026-07-01T09:02:48.490Z",
+      "timeline": [
+        {
+          "at": "2026-06-24T09:02:48.490Z",
+          "type": "sent",
+          "note": "Initial outreach email sent"
+        }
+      ]
+    },
+    {
+      "placeId": "ChIJlalf0Vu9uEwRX5AO5AtU5AM",
+      "name": "Del-Design",
+      "email": "info@del-design.com",
+      "website": "http://www.del-design.com/",
+      "phone": "(418) 614-3553",
+      "address": "1496 Av. des Platanes, Québec, QC G1G 3P4, Canada",
+      "marketCode": "CA-QC",
+      "market": "Québec",
+      "marketGroup": "francophone",
+      "language": "fr",
+      "score": 95,
+      "reasons": [
+        "site existant",
+        "email trouve",
+        "telephone disponible",
+        "adresse locale",
+        "fiche nommee"
+      ],
+      "sentAt": "2026-06-24T09:02:55.706Z",
+      "status": "sent",
+      "lifecycleStage": "contacted",
+      "firstContactedAt": "2026-06-24T09:02:55.706Z",
+      "lastContactedAt": "2026-06-24T09:02:55.706Z",
+      "nextFollowUpAt": "2026-07-01T09:02:55.706Z",
+      "timeline": [
+        {
+          "at": "2026-06-24T09:02:55.706Z",
+          "type": "sent",
+          "note": "Initial outreach email sent"
+        }
+      ]
     }
   ],
-  "lastUpdated": "2026-06-23T09:05:46.269Z"
+  "lastUpdated": "2026-06-24T09:04:54.020Z"
 }
