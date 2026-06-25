@@ -8230,7 +8230,667 @@
           "note": "Initial outreach email sent"
         }
       ]
+    },
+    {
+      "placeId": "ChIJKb2JYN9tsxIR7HJ5hD1MX8M",
+      "name": "Hotel De France",
+      "email": "contact@hoteldefrance-mende.com",
+      "website": "http://www.hoteldefrance-mende.com/",
+      "phone": "04 66 65 00 04",
+      "address": "9 Bd Lucien Arnault, 48000 Mende, France",
+      "marketCode": "FR",
+      "market": "France",
+      "marketGroup": "francophone",
+      "language": "fr",
+      "score": 95,
+      "reasons": [
+        "site existant",
+        "email trouve",
+        "telephone disponible",
+        "adresse locale",
+        "fiche nommee"
+      ],
+      "sentAt": "2026-06-25T09:00:08.896Z",
+      "status": "sent",
+      "lifecycleStage": "contacted",
+      "firstContactedAt": "2026-06-25T09:00:08.896Z",
+      "lastContactedAt": "2026-06-25T09:00:08.896Z",
+      "nextFollowUpAt": "2026-07-02T09:00:08.896Z",
+      "timeline": [
+        {
+          "at": "2026-06-25T09:00:08.896Z",
+          "type": "sent",
+          "note": "Initial outreach email sent"
+        }
+      ]
+    },
+    {
+      "placeId": "ChIJ2Tf8P-9lkUcRN9R-BsEkiE4",
+      "name": "Hotel Turenne",
+      "email": "infos@maisonturenne.com",
+      "website": "http://www.maisonturenne.com/",
+      "phone": "03 89 21 58 58",
+      "address": "10 Rte de Bâle, 68000 Colmar, France",
+      "marketCode": "FR",
+      "market": "France",
+      "marketGroup": "francophone",
+      "language": "fr",
+      "score": 95,
+      "reasons": [
+        "site existant",
+        "email trouve",
+        "telephone disponible",
+        "adresse locale",
+        "fiche nommee"
+      ],
+      "sentAt": "2026-06-25T09:00:25.799Z",
+      "status": "sent",
+      "lifecycleStage": "contacted",
+      "firstContactedAt": "2026-06-25T09:00:25.799Z",
+      "lastContactedAt": "2026-06-25T09:00:25.799Z",
+      "nextFollowUpAt": "2026-07-02T09:00:25.799Z",
+      "timeline": [
+        {
+          "at": "2026-06-25T09:00:25.799Z",
+          "type": "sent",
+          "note": "Initial outreach email sent"
+        }
+      ]
+    },
+    {
+      "placeId": "ChIJX7l02dBv5kcRv2QC8Zx-J1s",
+      "name": "B&B HOTEL Paris 17 Batignolles",
+      "email": "commercial-4686@hotelbb.com",
+      "website": "https://www.hotel-bb.com/fr/hotel/paris-17-batignolles?utm_source=googlemaps&utm_medium=fichehotel&utm_campaign=yext",
+      "phone": "0 892 23 34 46",
+      "address": "4 Bd Berthier, 75017 Paris, France",
+      "marketCode": "FR",
+      "market": "France",
+      "marketGroup": "francophone",
+      "language": "fr",
+      "score": 95,
+      "reasons": [
+        "site existant",
+        "email trouve",
+        "telephone disponible",
+        "adresse locale",
+        "fiche nommee"
+      ],
+      "sentAt": "2026-06-25T09:00:36.087Z",
+      "status": "sent",
+      "lifecycleStage": "contacted",
+      "firstContactedAt": "2026-06-25T09:00:36.087Z",
+      "lastContactedAt": "2026-06-25T09:00:36.087Z",
+      "nextFollowUpAt": "2026-07-02T09:00:36.087Z",
+      "timeline": [
+        {
+          "at": "2026-06-25T09:00:36.087Z",
+          "type": "sent",
+          "note": "Initial outreach email sent"
+        }
+      ]
+    },
+    {
+      "placeId": "ChIJM_duukOCwUcR7spgbJIxDh8",
+      "name": "Ann B by Marie",
+      "email": "info@annbbymarie.be",
+      "website": "http://www.annbbymarie.be/",
+      "phone": "081 61 07 72",
+      "address": "Grand'Rue 66, 5030 Gembloux, Belgium",
+      "marketCode": "BE-FR",
+      "market": "Belgique francophone",
+      "marketGroup": "francophone",
+      "language": "fr",
+      "score": 95,
+      "reasons": [
+        "site existant",
+        "email trouve",
+        "telephone disponible",
+        "adresse locale",
+        "fiche nommee"
+      ],
+      "sentAt": "2026-06-25T09:00:46.398Z",
+      "status": "sent",
+      "lifecycleStage": "contacted",
+      "firstContactedAt": "2026-06-25T09:00:46.398Z",
+      "lastContactedAt": "2026-06-25T09:00:46.398Z",
+      "nextFollowUpAt": "2026-07-02T09:00:46.398Z",
+      "timeline": [
+        {
+          "at": "2026-06-25T09:00:46.398Z",
+          "type": "sent",
+          "note": "Initial outreach email sent"
+        }
+      ]
+    },
+    {
+      "placeId": "ChIJNyFyEVVJlUcRDxtVR9NIN-I",
+      "name": "Thermotec",
+      "email": "info@thermotec.lu",
+      "website": "https://www.thermotec.lu/",
+      "phone": "26 11 91 06",
+      "address": "30 Rue de l'Industrie, 8069 Strassen, Luxembourg",
+      "marketCode": "LU",
+      "market": "Luxembourg",
+      "marketGroup": "francophone",
+      "language": "fr",
+      "score": 95,
+      "reasons": [
+        "site existant",
+        "email trouve",
+        "telephone disponible",
+        "adresse locale",
+        "fiche nommee"
+      ],
+      "sentAt": "2026-06-25T09:01:15.050Z",
+      "status": "sent",
+      "lifecycleStage": "contacted",
+      "firstContactedAt": "2026-06-25T09:01:15.050Z",
+      "lastContactedAt": "2026-06-25T09:01:15.050Z",
+      "nextFollowUpAt": "2026-07-02T09:01:15.050Z",
+      "timeline": [
+        {
+          "at": "2026-06-25T09:01:15.050Z",
+          "type": "sent",
+          "note": "Initial outreach email sent"
+        }
+      ]
+    },
+    {
+      "placeId": "ChIJXYGCMCRPlUcRONcBwyBK5zc",
+      "name": "Peiffert & Fils Sarl",
+      "email": "info@peiffert.lu",
+      "website": "http://www.peiffert.lu/",
+      "phone": "27 86 44 92",
+      "address": "12 Rue de Bastogne, 1217 Beggen Luxembourg",
+      "marketCode": "LU",
+      "market": "Luxembourg",
+      "marketGroup": "francophone",
+      "language": "fr",
+      "score": 95,
+      "reasons": [
+        "site existant",
+        "email trouve",
+        "telephone disponible",
+        "adresse locale",
+        "fiche nommee"
+      ],
+      "sentAt": "2026-06-25T09:01:26.586Z",
+      "status": "sent",
+      "lifecycleStage": "contacted",
+      "firstContactedAt": "2026-06-25T09:01:26.586Z",
+      "lastContactedAt": "2026-06-25T09:01:26.586Z",
+      "nextFollowUpAt": "2026-07-02T09:01:26.586Z",
+      "timeline": [
+        {
+          "at": "2026-06-25T09:01:26.586Z",
+          "type": "sent",
+          "note": "Initial outreach email sent"
+        }
+      ]
+    },
+    {
+      "placeId": "ChIJ07hTi732dUoRQEFbzW5vZ3Y",
+      "name": "Lajoie électrique",
+      "email": "lajoieelectrique@gmail.com",
+      "website": "https://lajoieelectrique.com/",
+      "phone": "(418) 618-8667",
+      "address": "4464 Bd Sainte-Anne, Québec, QC G1E 3M7, Canada",
+      "marketCode": "CA-QC",
+      "market": "Québec",
+      "marketGroup": "francophone",
+      "language": "fr",
+      "score": 95,
+      "reasons": [
+        "site existant",
+        "email trouve",
+        "telephone disponible",
+        "adresse locale",
+        "fiche nommee"
+      ],
+      "sentAt": "2026-06-25T09:01:42.680Z",
+      "status": "sent",
+      "lifecycleStage": "contacted",
+      "firstContactedAt": "2026-06-25T09:01:42.680Z",
+      "lastContactedAt": "2026-06-25T09:01:42.680Z",
+      "nextFollowUpAt": "2026-07-02T09:01:42.680Z",
+      "timeline": [
+        {
+          "at": "2026-06-25T09:01:42.680Z",
+          "type": "sent",
+          "note": "Initial outreach email sent"
+        }
+      ]
+    },
+    {
+      "placeId": "ChIJc7h7TsiYuEwRu2qxXh34zGE",
+      "name": "Éric Claveau Entrepreneur Électricien",
+      "email": "eric_claveau@hotmail.com",
+      "website": "http://www.ericclaveau.com/",
+      "phone": "(418) 915-9599",
+      "address": "1480 Rue Collin, Québec, QC G3K 1H5, Canada",
+      "marketCode": "CA-QC",
+      "market": "Québec",
+      "marketGroup": "francophone",
+      "language": "fr",
+      "score": 95,
+      "reasons": [
+        "site existant",
+        "email trouve",
+        "telephone disponible",
+        "adresse locale",
+        "fiche nommee"
+      ],
+      "sentAt": "2026-06-25T09:01:49.086Z",
+      "status": "sent",
+      "lifecycleStage": "contacted",
+      "firstContactedAt": "2026-06-25T09:01:49.086Z",
+      "lastContactedAt": "2026-06-25T09:01:49.086Z",
+      "nextFollowUpAt": "2026-07-02T09:01:49.086Z",
+      "timeline": [
+        {
+          "at": "2026-06-25T09:01:49.086Z",
+          "type": "sent",
+          "note": "Initial outreach email sent"
+        }
+      ]
+    },
+    {
+      "placeId": "ChIJT4aH5TyXuEwRfGIFLlq19kA",
+      "name": "Contrôle Volt inc",
+      "email": "info@controlevolt.com",
+      "website": "https://controlevolt.com/",
+      "phone": "(418) 476-7636",
+      "address": "2831 Bd Masson, Québec, QC G1P 1J7, Canada",
+      "marketCode": "CA-QC",
+      "market": "Québec",
+      "marketGroup": "francophone",
+      "language": "fr",
+      "score": 95,
+      "reasons": [
+        "site existant",
+        "email trouve",
+        "telephone disponible",
+        "adresse locale",
+        "fiche nommee"
+      ],
+      "sentAt": "2026-06-25T09:02:01.035Z",
+      "status": "sent",
+      "lifecycleStage": "contacted",
+      "firstContactedAt": "2026-06-25T09:02:01.035Z",
+      "lastContactedAt": "2026-06-25T09:02:01.035Z",
+      "nextFollowUpAt": "2026-07-02T09:02:01.035Z",
+      "timeline": [
+        {
+          "at": "2026-06-25T09:02:01.035Z",
+          "type": "sent",
+          "note": "Initial outreach email sent"
+        }
+      ]
+    },
+    {
+      "placeId": "ChIJcUst1PahuEwRkVt6g8nXBVE",
+      "name": "Thibault Electric, Inc.",
+      "email": "info@thibaultelectrique.ca",
+      "website": "http://thibaultelectrique.ca/",
+      "phone": "(418) 847-3243",
+      "address": "16305 Bd Valcartier, Québec, QC G2A 0A8, Canada",
+      "marketCode": "CA-QC",
+      "market": "Québec",
+      "marketGroup": "francophone",
+      "language": "fr",
+      "score": 95,
+      "reasons": [
+        "site existant",
+        "email trouve",
+        "telephone disponible",
+        "adresse locale",
+        "fiche nommee"
+      ],
+      "sentAt": "2026-06-25T09:02:07.823Z",
+      "status": "sent",
+      "lifecycleStage": "contacted",
+      "firstContactedAt": "2026-06-25T09:02:07.823Z",
+      "lastContactedAt": "2026-06-25T09:02:07.823Z",
+      "nextFollowUpAt": "2026-07-02T09:02:07.823Z",
+      "timeline": [
+        {
+          "at": "2026-06-25T09:02:07.823Z",
+          "type": "sent",
+          "note": "Initial outreach email sent"
+        }
+      ]
+    },
+    {
+      "placeId": "ChIJ-aqGrr6NuEwRFyTAZfL_E0w",
+      "name": "Electricité Des Deux Rives Inc",
+      "email": "info@eddr.ca",
+      "website": "http://www.eddr.ca/",
+      "phone": "(418) 353-8511",
+      "address": "500 Ave Saint-Sacrement #352, Québec City, QC G1N 3Y2, Canada",
+      "marketCode": "CA-QC",
+      "market": "Québec",
+      "marketGroup": "francophone",
+      "language": "fr",
+      "score": 95,
+      "reasons": [
+        "site existant",
+        "email trouve",
+        "telephone disponible",
+        "adresse locale",
+        "fiche nommee"
+      ],
+      "sentAt": "2026-06-25T09:02:15.023Z",
+      "status": "sent",
+      "lifecycleStage": "contacted",
+      "firstContactedAt": "2026-06-25T09:02:15.023Z",
+      "lastContactedAt": "2026-06-25T09:02:15.023Z",
+      "nextFollowUpAt": "2026-07-02T09:02:15.023Z",
+      "timeline": [
+        {
+          "at": "2026-06-25T09:02:15.023Z",
+          "type": "sent",
+          "note": "Initial outreach email sent"
+        }
+      ]
+    },
+    {
+      "placeId": "ChIJEf3Oq4sfyUwRaEu5RmJJosI",
+      "name": "K&E Electricien",
+      "email": "klodi.mukaj@hotmail.com",
+      "website": "https://www.ke-electricien.com/",
+      "phone": "(514) 574-8873",
+      "address": "9172 Rue de Louisiane, Montréal, QC H1P 2P5, Canada",
+      "marketCode": "CA-QC",
+      "market": "Québec",
+      "marketGroup": "francophone",
+      "language": "fr",
+      "score": 95,
+      "reasons": [
+        "site existant",
+        "email trouve",
+        "telephone disponible",
+        "adresse locale",
+        "fiche nommee"
+      ],
+      "sentAt": "2026-06-25T09:02:23.037Z",
+      "status": "sent",
+      "lifecycleStage": "contacted",
+      "firstContactedAt": "2026-06-25T09:02:23.037Z",
+      "lastContactedAt": "2026-06-25T09:02:23.037Z",
+      "nextFollowUpAt": "2026-07-02T09:02:23.037Z",
+      "timeline": [
+        {
+          "at": "2026-06-25T09:02:23.037Z",
+          "type": "sent",
+          "note": "Initial outreach email sent"
+        }
+      ]
+    },
+    {
+      "placeId": "ChIJP3xBe1MXdkgRL2XNnDGcf-0",
+      "name": "qR Architects Ltd",
+      "email": "info@qrarchitects.co.uk",
+      "website": "http://www.qrarchitects.co.uk/",
+      "phone": "020 3287 9937",
+      "address": "23 Berkeley Square, London W1J 6HE, UK",
+      "marketCode": "GB",
+      "market": "United Kingdom",
+      "marketGroup": "english",
+      "language": "en",
+      "score": 95,
+      "reasons": [
+        "site existant",
+        "email trouve",
+        "telephone disponible",
+        "adresse locale",
+        "fiche nommee"
+      ],
+      "sentAt": "2026-06-25T09:02:28.419Z",
+      "status": "sent",
+      "lifecycleStage": "contacted",
+      "firstContactedAt": "2026-06-25T09:02:28.419Z",
+      "lastContactedAt": "2026-06-25T09:02:28.419Z",
+      "nextFollowUpAt": "2026-07-02T09:02:28.419Z",
+      "timeline": [
+        {
+          "at": "2026-06-25T09:02:28.419Z",
+          "type": "sent",
+          "note": "Initial outreach email sent"
+        }
+      ]
+    },
+    {
+      "placeId": "ChIJb6NKglcDdkgRydsjBOOqY3M",
+      "name": "YARD Architects",
+      "email": "studio@yardarchitects.co.uk",
+      "website": "https://yardarchitects.co.uk/",
+      "phone": "020 7407 8303",
+      "address": "Unit 104, 65 Glasshill St, London SE1 0QR, UK",
+      "marketCode": "GB",
+      "market": "United Kingdom",
+      "marketGroup": "english",
+      "language": "en",
+      "score": 95,
+      "reasons": [
+        "site existant",
+        "email trouve",
+        "telephone disponible",
+        "adresse locale",
+        "fiche nommee"
+      ],
+      "sentAt": "2026-06-25T09:02:32.713Z",
+      "status": "sent",
+      "lifecycleStage": "contacted",
+      "firstContactedAt": "2026-06-25T09:02:32.713Z",
+      "lastContactedAt": "2026-06-25T09:02:32.713Z",
+      "nextFollowUpAt": "2026-07-02T09:02:32.713Z",
+      "timeline": [
+        {
+          "at": "2026-06-25T09:02:32.713Z",
+          "type": "sent",
+          "note": "Initial outreach email sent"
+        }
+      ]
+    },
+    {
+      "placeId": "ChIJG9WDRCkbdkgRj76GE3gbMf4",
+      "name": "Make Architects",
+      "email": "info@makearchitects.com",
+      "website": "http://www.makearchitects.com/",
+      "phone": "020 7636 5151",
+      "address": "32 Cleveland St, London W1T 4JY, UK",
+      "marketCode": "GB",
+      "market": "United Kingdom",
+      "marketGroup": "english",
+      "language": "en",
+      "score": 95,
+      "reasons": [
+        "site existant",
+        "email trouve",
+        "telephone disponible",
+        "adresse locale",
+        "fiche nommee"
+      ],
+      "sentAt": "2026-06-25T09:02:38.756Z",
+      "status": "sent",
+      "lifecycleStage": "contacted",
+      "firstContactedAt": "2026-06-25T09:02:38.756Z",
+      "lastContactedAt": "2026-06-25T09:02:38.756Z",
+      "nextFollowUpAt": "2026-07-02T09:02:38.756Z",
+      "timeline": [
+        {
+          "at": "2026-06-25T09:02:38.756Z",
+          "type": "sent",
+          "note": "Initial outreach email sent"
+        }
+      ]
+    },
+    {
+      "placeId": "ChIJBxSzraUFdkgRvQ9nE4FujZk",
+      "name": "Armstrong Simmonds Architects",
+      "email": "projects@as-architects.co.uk",
+      "website": "https://www.as-architects.co.uk/",
+      "phone": "020 7228 1324",
+      "address": "Unit 23, Battersea Business Centre, London SW11 5QL, UK",
+      "marketCode": "GB",
+      "market": "United Kingdom",
+      "marketGroup": "english",
+      "language": "en",
+      "score": 95,
+      "reasons": [
+        "site existant",
+        "email trouve",
+        "telephone disponible",
+        "adresse locale",
+        "fiche nommee"
+      ],
+      "sentAt": "2026-06-25T09:02:44.869Z",
+      "status": "sent",
+      "lifecycleStage": "contacted",
+      "firstContactedAt": "2026-06-25T09:02:44.869Z",
+      "lastContactedAt": "2026-06-25T09:02:44.869Z",
+      "nextFollowUpAt": "2026-07-02T09:02:44.869Z",
+      "timeline": [
+        {
+          "at": "2026-06-25T09:02:44.869Z",
+          "type": "sent",
+          "note": "Initial outreach email sent"
+        }
+      ]
+    },
+    {
+      "placeId": "ChIJI9-FLoMNdkgR8LizDTSIO8w",
+      "name": "Freedom Homes Architects",
+      "email": "info@freedomhomes.uk",
+      "website": "https://www.freedomhomesarchitects.co.uk/",
+      "phone": "020 3633 5522",
+      "address": "85 Uxbridge Rd, London W5 5BW, UK",
+      "marketCode": "GB",
+      "market": "United Kingdom",
+      "marketGroup": "english",
+      "language": "en",
+      "score": 95,
+      "reasons": [
+        "site existant",
+        "email trouve",
+        "telephone disponible",
+        "adresse locale",
+        "fiche nommee"
+      ],
+      "sentAt": "2026-06-25T09:02:50.989Z",
+      "status": "sent",
+      "lifecycleStage": "contacted",
+      "firstContactedAt": "2026-06-25T09:02:50.989Z",
+      "lastContactedAt": "2026-06-25T09:02:50.989Z",
+      "nextFollowUpAt": "2026-07-02T09:02:50.989Z",
+      "timeline": [
+        {
+          "at": "2026-06-25T09:02:50.989Z",
+          "type": "sent",
+          "note": "Initial outreach email sent"
+        }
+      ]
+    },
+    {
+      "placeId": "ChIJZXKRG40CdkgRMcOesbGpirY",
+      "name": "Urbanist Architecture",
+      "email": "megane@urbanistarchitecture.co.uk",
+      "website": "https://urbanistarchitecture.co.uk/",
+      "phone": "020 3793 7878",
+      "address": "2 Little Thames Walk, London SE8 3FB, UK",
+      "marketCode": "GB",
+      "market": "United Kingdom",
+      "marketGroup": "english",
+      "language": "en",
+      "score": 95,
+      "reasons": [
+        "site existant",
+        "email trouve",
+        "telephone disponible",
+        "adresse locale",
+        "fiche nommee"
+      ],
+      "sentAt": "2026-06-25T09:02:58.036Z",
+      "status": "sent",
+      "lifecycleStage": "contacted",
+      "firstContactedAt": "2026-06-25T09:02:58.036Z",
+      "lastContactedAt": "2026-06-25T09:02:58.036Z",
+      "nextFollowUpAt": "2026-07-02T09:02:58.036Z",
+      "timeline": [
+        {
+          "at": "2026-06-25T09:02:58.036Z",
+          "type": "sent",
+          "note": "Initial outreach email sent"
+        }
+      ]
+    },
+    {
+      "placeId": "ChIJZw1PySkFdkgRySC1gHTxUM0",
+      "name": "Debbie Flevotomou Architects",
+      "email": "efzin.architecture@gmail.com",
+      "website": "https://www.debbieflevotomou.com/",
+      "phone": "020 7887 1305",
+      "address": "2nd floor, Berkeley Square House, Berkeley Square, London W1J 6BD, UK",
+      "marketCode": "GB",
+      "market": "United Kingdom",
+      "marketGroup": "english",
+      "language": "en",
+      "score": 95,
+      "reasons": [
+        "site existant",
+        "email trouve",
+        "telephone disponible",
+        "adresse locale",
+        "fiche nommee"
+      ],
+      "sentAt": "2026-06-25T09:03:02.352Z",
+      "status": "sent",
+      "lifecycleStage": "contacted",
+      "firstContactedAt": "2026-06-25T09:03:02.352Z",
+      "lastContactedAt": "2026-06-25T09:03:02.352Z",
+      "nextFollowUpAt": "2026-07-02T09:03:02.352Z",
+      "timeline": [
+        {
+          "at": "2026-06-25T09:03:02.352Z",
+          "type": "sent",
+          "note": "Initial outreach email sent"
+        }
+      ]
+    },
+    {
+      "placeId": "ChIJC1pJbmgDdkgRfmoMLmKgKmU",
+      "name": "Architecture Social",
+      "email": "hello@architecturesocial.com",
+      "website": "https://www.architecturesocial.com/",
+      "phone": "020 7770 9572",
+      "address": "1 Fore St Ave, Barbican, London EC2Y 9DT, UK",
+      "marketCode": "GB",
+      "market": "United Kingdom",
+      "marketGroup": "english",
+      "language": "en",
+      "score": 95,
+      "reasons": [
+        "site existant",
+        "email trouve",
+        "telephone disponible",
+        "adresse locale",
+        "fiche nommee"
+      ],
+      "sentAt": "2026-06-25T09:03:07.281Z",
+      "status": "sent",
+      "lifecycleStage": "contacted",
+      "firstContactedAt": "2026-06-25T09:03:07.281Z",
+      "lastContactedAt": "2026-06-25T09:03:07.281Z",
+      "nextFollowUpAt": "2026-07-02T09:03:07.281Z",
+      "timeline": [
+        {
+          "at": "2026-06-25T09:03:07.281Z",
+          "type": "sent",
+          "note": "Initial outreach email sent"
+        }
+      ]
     }
   ],
-  "lastUpdated": "2026-06-24T09:04:54.020Z"
+  "lastUpdated": "2026-06-25T09:04:41.581Z"
 }
