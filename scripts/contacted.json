@@ -8890,7 +8890,667 @@
           "note": "Initial outreach email sent"
         }
       ]
+    },
+    {
+      "placeId": "ChIJd28oG3V9wUcRGfUwbbw_OBQ",
+      "name": "Eros Access",
+      "email": "favian@skynet.be",
+      "website": "https://wavre.shop/wavre-commerce/eros-wavre/",
+      "phone": "010 24 34 48",
+      "address": "Rue du Pont du Christ 16, 1300 Wavre, Belgium",
+      "marketCode": "BE-FR",
+      "market": "Belgique francophone",
+      "marketGroup": "francophone",
+      "language": "fr",
+      "score": 95,
+      "reasons": [
+        "site existant",
+        "email trouve",
+        "telephone disponible",
+        "adresse locale",
+        "fiche nommee"
+      ],
+      "sentAt": "2026-06-26T08:59:53.491Z",
+      "status": "sent",
+      "lifecycleStage": "contacted",
+      "firstContactedAt": "2026-06-26T08:59:53.491Z",
+      "lastContactedAt": "2026-06-26T08:59:53.491Z",
+      "nextFollowUpAt": "2026-07-03T08:59:53.491Z",
+      "timeline": [
+        {
+          "at": "2026-06-26T08:59:53.491Z",
+          "type": "sent",
+          "note": "Initial outreach email sent"
+        }
+      ]
+    },
+    {
+      "placeId": "ChIJwZSmmg7FQkMRFjhuwQWgZ5E",
+      "name": "PLH électrique",
+      "email": "pascal.lheureux@plhelectrique.ca",
+      "website": "http://plhelectrique.ca/",
+      "phone": "(418) 999-3116",
+      "address": "984 Rue des Chataigniers, Lévis, QC G6V 9L6, Canada",
+      "marketCode": "CA-QC",
+      "market": "Québec",
+      "marketGroup": "francophone",
+      "language": "fr",
+      "score": 95,
+      "reasons": [
+        "site existant",
+        "email trouve",
+        "telephone disponible",
+        "adresse locale",
+        "fiche nommee"
+      ],
+      "sentAt": "2026-06-26T09:00:10.830Z",
+      "status": "sent",
+      "lifecycleStage": "contacted",
+      "firstContactedAt": "2026-06-26T09:00:10.830Z",
+      "lastContactedAt": "2026-06-26T09:00:10.830Z",
+      "nextFollowUpAt": "2026-07-03T09:00:10.830Z",
+      "timeline": [
+        {
+          "at": "2026-06-26T09:00:10.830Z",
+          "type": "sent",
+          "note": "Initial outreach email sent"
+        }
+      ]
+    },
+    {
+      "placeId": "ChIJEZO6EgrXyEwR6VaPhH0HV28",
+      "name": "Charbonneau Électrique - Électricien Résidentiel",
+      "email": "info@charbonneauelectrique.com",
+      "website": "https://www.411habitation.com/electriciens/laurentides/sainte-anne-des-plaines-5/electriciens-sainte-anne-des-plaines.htm",
+      "phone": "(450) 661-6801",
+      "address": "6757 Mtée. Gagnon, Sainte-Anne-des-Plaines, QC J5N 1S3, Canada",
+      "marketCode": "CA-QC",
+      "market": "Québec",
+      "marketGroup": "francophone",
+      "language": "fr",
+      "score": 95,
+      "reasons": [
+        "site existant",
+        "email trouve",
+        "telephone disponible",
+        "adresse locale",
+        "fiche nommee"
+      ],
+      "sentAt": "2026-06-26T09:00:17.220Z",
+      "status": "sent",
+      "lifecycleStage": "contacted",
+      "firstContactedAt": "2026-06-26T09:00:17.220Z",
+      "lastContactedAt": "2026-06-26T09:00:17.220Z",
+      "nextFollowUpAt": "2026-07-03T09:00:17.220Z",
+      "timeline": [
+        {
+          "at": "2026-06-26T09:00:17.220Z",
+          "type": "sent",
+          "note": "Initial outreach email sent"
+        }
+      ]
+    },
+    {
+      "placeId": "ChIJyd9NDQAPdkgRotukqcSXuhE",
+      "name": "Payte Architects London",
+      "email": "info@qubiweb-testsite.co.uk",
+      "website": "https://paytearchitects-london.co.uk/?utm_source=organic&utm_medium=gbp&utm_campaign=Google+Business+Tracking&utm_id=google",
+      "phone": "020 3984 8501",
+      "address": "10 Shepherds Bush Rd, London W6 7PJ, UK",
+      "marketCode": "GB",
+      "market": "United Kingdom",
+      "marketGroup": "english",
+      "language": "en",
+      "score": 95,
+      "reasons": [
+        "site existant",
+        "email trouve",
+        "telephone disponible",
+        "adresse locale",
+        "fiche nommee"
+      ],
+      "sentAt": "2026-06-26T09:00:24.499Z",
+      "status": "sent",
+      "lifecycleStage": "contacted",
+      "firstContactedAt": "2026-06-26T09:00:24.499Z",
+      "lastContactedAt": "2026-06-26T09:00:24.499Z",
+      "nextFollowUpAt": "2026-07-03T09:00:24.499Z",
+      "timeline": [
+        {
+          "at": "2026-06-26T09:00:24.499Z",
+          "type": "sent",
+          "note": "Initial outreach email sent"
+        }
+      ]
+    },
+    {
+      "placeId": "ChIJcYp3F3wLdkgRBOZlwJTWU_k",
+      "name": "Architecture:WK",
+      "email": "studio@architecturewk.com",
+      "website": "https://www.architecturewk.com/projects",
+      "phone": "020 8977 6999",
+      "address": "The Powder Rooms, 69-71 Broad St, Teddington TW11 8QZ, UK",
+      "marketCode": "GB",
+      "market": "United Kingdom",
+      "marketGroup": "english",
+      "language": "en",
+      "score": 95,
+      "reasons": [
+        "site existant",
+        "email trouve",
+        "telephone disponible",
+        "adresse locale",
+        "fiche nommee"
+      ],
+      "sentAt": "2026-06-26T09:00:32.318Z",
+      "status": "sent",
+      "lifecycleStage": "contacted",
+      "firstContactedAt": "2026-06-26T09:00:32.318Z",
+      "lastContactedAt": "2026-06-26T09:00:32.318Z",
+      "nextFollowUpAt": "2026-07-03T09:00:32.318Z",
+      "timeline": [
+        {
+          "at": "2026-06-26T09:00:32.318Z",
+          "type": "sent",
+          "note": "Initial outreach email sent"
+        }
+      ]
+    },
+    {
+      "placeId": "ChIJ_QYjW5MHdkgR2VcVOvGdnkI",
+      "name": "Studio Werc Architects",
+      "email": "info@studiowerc.com",
+      "website": "http://www.studiowerc.com/",
+      "phone": "07545 374440",
+      "address": "25A Northcote Rd, London SW11 1NJ, UK",
+      "marketCode": "GB",
+      "market": "United Kingdom",
+      "marketGroup": "english",
+      "language": "en",
+      "score": 95,
+      "reasons": [
+        "site existant",
+        "email trouve",
+        "telephone disponible",
+        "adresse locale",
+        "fiche nommee"
+      ],
+      "sentAt": "2026-06-26T09:00:37.876Z",
+      "status": "sent",
+      "lifecycleStage": "contacted",
+      "firstContactedAt": "2026-06-26T09:00:37.876Z",
+      "lastContactedAt": "2026-06-26T09:00:37.876Z",
+      "nextFollowUpAt": "2026-07-03T09:00:37.876Z",
+      "timeline": [
+        {
+          "at": "2026-06-26T09:00:37.876Z",
+          "type": "sent",
+          "note": "Initial outreach email sent"
+        }
+      ]
+    },
+    {
+      "placeId": "ChIJ1TbGI5YOZ0gRsRMNamfEPzY",
+      "name": "Greavy & Co Accountants",
+      "email": "info@greavyandco.ie",
+      "website": "https://greavyandco.ie/",
+      "phone": "(01) 604 0011",
+      "address": "8 Clanwilliam Square, Grand Canal Dock, Dublin 2, D02 PF75, Ireland",
+      "marketCode": "IE",
+      "market": "Ireland",
+      "marketGroup": "english",
+      "language": "en",
+      "score": 95,
+      "reasons": [
+        "site existant",
+        "email trouve",
+        "telephone disponible",
+        "adresse locale",
+        "fiche nommee"
+      ],
+      "sentAt": "2026-06-26T09:00:51.744Z",
+      "status": "sent",
+      "lifecycleStage": "contacted",
+      "firstContactedAt": "2026-06-26T09:00:51.744Z",
+      "lastContactedAt": "2026-06-26T09:00:51.744Z",
+      "nextFollowUpAt": "2026-07-03T09:00:51.744Z",
+      "timeline": [
+        {
+          "at": "2026-06-26T09:00:51.744Z",
+          "type": "sent",
+          "note": "Initial outreach email sent"
+        }
+      ]
+    },
+    {
+      "placeId": "ChIJIwJgk5cOZ0gRj9_cXTALy50",
+      "name": "Beyond Accounting",
+      "email": "hello@beyond.ie",
+      "website": "https://beyond.ie/",
+      "phone": "(01) 639 2963",
+      "address": "56 Fitzwilliam Square N, Dublin, D02 X224, Ireland",
+      "marketCode": "IE",
+      "market": "Ireland",
+      "marketGroup": "english",
+      "language": "en",
+      "score": 95,
+      "reasons": [
+        "site existant",
+        "email trouve",
+        "telephone disponible",
+        "adresse locale",
+        "fiche nommee"
+      ],
+      "sentAt": "2026-06-26T09:00:58.175Z",
+      "status": "sent",
+      "lifecycleStage": "contacted",
+      "firstContactedAt": "2026-06-26T09:00:58.175Z",
+      "lastContactedAt": "2026-06-26T09:00:58.175Z",
+      "nextFollowUpAt": "2026-07-03T09:00:58.175Z",
+      "timeline": [
+        {
+          "at": "2026-06-26T09:00:58.175Z",
+          "type": "sent",
+          "note": "Initial outreach email sent"
+        }
+      ]
+    },
+    {
+      "placeId": "ChIJe4fxMZYOZ0gR7FGkiMf2FlY",
+      "name": "Gallagher Keane Chartered Accountants",
+      "email": "info@gallagherkeane.ie",
+      "website": "http://www.gallagherkeane.ie/",
+      "phone": "(01) 969 5100",
+      "address": "30 Fitzwilliam Street Upper, Dublin 2, D02 X205, Ireland",
+      "marketCode": "IE",
+      "market": "Ireland",
+      "marketGroup": "english",
+      "language": "en",
+      "score": 95,
+      "reasons": [
+        "site existant",
+        "email trouve",
+        "telephone disponible",
+        "adresse locale",
+        "fiche nommee"
+      ],
+      "sentAt": "2026-06-26T09:01:11.271Z",
+      "status": "sent",
+      "lifecycleStage": "contacted",
+      "firstContactedAt": "2026-06-26T09:01:11.271Z",
+      "lastContactedAt": "2026-06-26T09:01:11.271Z",
+      "nextFollowUpAt": "2026-07-03T09:01:11.271Z",
+      "timeline": [
+        {
+          "at": "2026-06-26T09:01:11.271Z",
+          "type": "sent",
+          "note": "Initial outreach email sent"
+        }
+      ]
+    },
+    {
+      "placeId": "ChIJZTvjuvULZ0gR8wWmgkP_voI",
+      "name": "Cronin | Accountancy Firm Dublin",
+      "email": "info@croninco.ie",
+      "website": "https://croninco.ie/",
+      "phone": "(01) 490 1670",
+      "address": "1 Terenure Pl, Terenure, Dublin 6W, Co. Dublin, D6W FN23, Ireland",
+      "marketCode": "IE",
+      "market": "Ireland",
+      "marketGroup": "english",
+      "language": "en",
+      "score": 95,
+      "reasons": [
+        "site existant",
+        "email trouve",
+        "telephone disponible",
+        "adresse locale",
+        "fiche nommee"
+      ],
+      "sentAt": "2026-06-26T09:01:17.834Z",
+      "status": "sent",
+      "lifecycleStage": "contacted",
+      "firstContactedAt": "2026-06-26T09:01:17.834Z",
+      "lastContactedAt": "2026-06-26T09:01:17.834Z",
+      "nextFollowUpAt": "2026-07-03T09:01:17.834Z",
+      "timeline": [
+        {
+          "at": "2026-06-26T09:01:17.834Z",
+          "type": "sent",
+          "note": "Initial outreach email sent"
+        }
+      ]
+    },
+    {
+      "placeId": "ChIJ4wQ_PFoOZ0gRETp8VLMSSqI",
+      "name": "Kinore Accountants",
+      "email": "hello@kinore.com",
+      "website": "https://kinore.com/?utm_source=google-maps&utm_id=local",
+      "phone": "(01) 905 9364",
+      "address": "71 Baggot Street Lower, Dublin 2, D02 P593, Ireland",
+      "marketCode": "IE",
+      "market": "Ireland",
+      "marketGroup": "english",
+      "language": "en",
+      "score": 95,
+      "reasons": [
+        "site existant",
+        "email trouve",
+        "telephone disponible",
+        "adresse locale",
+        "fiche nommee"
+      ],
+      "sentAt": "2026-06-26T09:01:23.780Z",
+      "status": "sent",
+      "lifecycleStage": "contacted",
+      "firstContactedAt": "2026-06-26T09:01:23.780Z",
+      "lastContactedAt": "2026-06-26T09:01:23.780Z",
+      "nextFollowUpAt": "2026-07-03T09:01:23.780Z",
+      "timeline": [
+        {
+          "at": "2026-06-26T09:01:23.780Z",
+          "type": "sent",
+          "note": "Initial outreach email sent"
+        }
+      ]
+    },
+    {
+      "placeId": "ChIJb4l2PY4OZ0gR53-LtBak8JY",
+      "name": "Grant Thornton Ireland",
+      "email": "info@ie.gt.com",
+      "website": "https://www.grantthornton.ie/",
+      "phone": "(01) 680 5805",
+      "address": "13 City Quay, Dublin 2, D02 ED70, Ireland",
+      "marketCode": "IE",
+      "market": "Ireland",
+      "marketGroup": "english",
+      "language": "en",
+      "score": 95,
+      "reasons": [
+        "site existant",
+        "email trouve",
+        "telephone disponible",
+        "adresse locale",
+        "fiche nommee"
+      ],
+      "sentAt": "2026-06-26T09:01:29.641Z",
+      "status": "sent",
+      "lifecycleStage": "contacted",
+      "firstContactedAt": "2026-06-26T09:01:29.641Z",
+      "lastContactedAt": "2026-06-26T09:01:29.641Z",
+      "nextFollowUpAt": "2026-07-03T09:01:29.641Z",
+      "timeline": [
+        {
+          "at": "2026-06-26T09:01:29.641Z",
+          "type": "sent",
+          "note": "Initial outreach email sent"
+        }
+      ]
+    },
+    {
+      "placeId": "ChIJRfs9jJEOZ0gRCEJZluse824",
+      "name": "Merry Mullen Accountants",
+      "email": "enquiries@merrymullen.ie",
+      "website": "http://www.merrymullen.ie/",
+      "phone": "(01) 645 8100",
+      "address": "18 Westland Square, Pearse St, Dublin, D02 F751, Ireland",
+      "marketCode": "IE",
+      "market": "Ireland",
+      "marketGroup": "english",
+      "language": "en",
+      "score": 95,
+      "reasons": [
+        "site existant",
+        "email trouve",
+        "telephone disponible",
+        "adresse locale",
+        "fiche nommee"
+      ],
+      "sentAt": "2026-06-26T09:01:35.879Z",
+      "status": "sent",
+      "lifecycleStage": "contacted",
+      "firstContactedAt": "2026-06-26T09:01:35.879Z",
+      "lastContactedAt": "2026-06-26T09:01:35.879Z",
+      "nextFollowUpAt": "2026-07-03T09:01:35.879Z",
+      "timeline": [
+        {
+          "at": "2026-06-26T09:01:35.879Z",
+          "type": "sent",
+          "note": "Initial outreach email sent"
+        }
+      ]
+    },
+    {
+      "placeId": "ChIJV7NNj_gQZ0gRwA5z9YDANL0",
+      "name": "Icon Accounting",
+      "email": "info@iconaccounting.ie",
+      "website": "http://www.iconaccounting.ie/",
+      "phone": "(01) 807 7106",
+      "address": "Columba House, Lakeshore Dr, Airside Retail Park, Swords, Co. Dublin, K67 R2Y9, Ireland",
+      "marketCode": "IE",
+      "market": "Ireland",
+      "marketGroup": "english",
+      "language": "en",
+      "score": 95,
+      "reasons": [
+        "site existant",
+        "email trouve",
+        "telephone disponible",
+        "adresse locale",
+        "fiche nommee"
+      ],
+      "sentAt": "2026-06-26T09:01:41.895Z",
+      "status": "sent",
+      "lifecycleStage": "contacted",
+      "firstContactedAt": "2026-06-26T09:01:41.895Z",
+      "lastContactedAt": "2026-06-26T09:01:41.895Z",
+      "nextFollowUpAt": "2026-07-03T09:01:41.895Z",
+      "timeline": [
+        {
+          "at": "2026-06-26T09:01:41.895Z",
+          "type": "sent",
+          "note": "Initial outreach email sent"
+        }
+      ]
+    },
+    {
+      "placeId": "ChIJQXKvJigMZ0gRv9KRGv0-RrI",
+      "name": "Nolan & Associates",
+      "email": "office@nolan.ie",
+      "website": "http://www.nolanassociates.com/",
+      "phone": "(01) 878 6011",
+      "address": "302-304, 7 Mary's Abbey, North City, Dublin 7, D07 PY7X, Ireland",
+      "marketCode": "IE",
+      "market": "Ireland",
+      "marketGroup": "english",
+      "language": "en",
+      "score": 95,
+      "reasons": [
+        "site existant",
+        "email trouve",
+        "telephone disponible",
+        "adresse locale",
+        "fiche nommee"
+      ],
+      "sentAt": "2026-06-26T09:01:47.515Z",
+      "status": "sent",
+      "lifecycleStage": "contacted",
+      "firstContactedAt": "2026-06-26T09:01:47.515Z",
+      "lastContactedAt": "2026-06-26T09:01:47.515Z",
+      "nextFollowUpAt": "2026-07-03T09:01:47.515Z",
+      "timeline": [
+        {
+          "at": "2026-06-26T09:01:47.515Z",
+          "type": "sent",
+          "note": "Initial outreach email sent"
+        }
+      ]
+    },
+    {
+      "placeId": "ChIJ65rRAmAFZ0gRiiiuOMtrYRE",
+      "name": "Irish Accounts",
+      "email": "info@irishaccounts.ie",
+      "website": "http://www.irishaccounts.ie/",
+      "phone": "(01) 832 2398",
+      "address": "6 Abbey Business Park, Grange Drive, Baldoyle Industrial Estate, Dublin 13 D13 N738, Baldoyle, Dublin, D05 W3C8, Ireland",
+      "marketCode": "IE",
+      "market": "Ireland",
+      "marketGroup": "english",
+      "language": "en",
+      "score": 95,
+      "reasons": [
+        "site existant",
+        "email trouve",
+        "telephone disponible",
+        "adresse locale",
+        "fiche nommee"
+      ],
+      "sentAt": "2026-06-26T09:01:54.887Z",
+      "status": "sent",
+      "lifecycleStage": "contacted",
+      "firstContactedAt": "2026-06-26T09:01:54.887Z",
+      "lastContactedAt": "2026-06-26T09:01:54.887Z",
+      "nextFollowUpAt": "2026-07-03T09:01:54.887Z",
+      "timeline": [
+        {
+          "at": "2026-06-26T09:01:54.887Z",
+          "type": "sent",
+          "note": "Initial outreach email sent"
+        }
+      ]
+    },
+    {
+      "placeId": "ChIJDXSf1FVjwokR01nOJj8kIzE",
+      "name": "ET Family Travel",
+      "email": "info@etfamilytravel.com",
+      "website": "http://www.etfamilytravel.com/",
+      "phone": "(800) 901-8622",
+      "address": "52 Brixton Rd, Garden City, NY 11530, USA",
+      "marketCode": "US",
+      "market": "United States",
+      "marketGroup": "english",
+      "language": "en",
+      "score": 95,
+      "reasons": [
+        "site existant",
+        "email trouve",
+        "telephone disponible",
+        "adresse locale",
+        "fiche nommee"
+      ],
+      "sentAt": "2026-06-26T09:02:07.545Z",
+      "status": "sent",
+      "lifecycleStage": "contacted",
+      "firstContactedAt": "2026-06-26T09:02:07.545Z",
+      "lastContactedAt": "2026-06-26T09:02:07.545Z",
+      "nextFollowUpAt": "2026-07-03T09:02:07.545Z",
+      "timeline": [
+        {
+          "at": "2026-06-26T09:02:07.545Z",
+          "type": "sent",
+          "note": "Initial outreach email sent"
+        }
+      ]
+    },
+    {
+      "placeId": "ChIJa3dY0d5VtokR648gGwczRYc",
+      "name": "Fond Travels",
+      "email": "info@fondtravels.com",
+      "website": "https://www.fondtravels.com/",
+      "phone": "(323) 800-6001",
+      "address": "2700 Neabsco Common Pl Ste 101, Woodbridge, VA 22191, USA",
+      "marketCode": "US",
+      "market": "United States",
+      "marketGroup": "english",
+      "language": "en",
+      "score": 95,
+      "reasons": [
+        "site existant",
+        "email trouve",
+        "telephone disponible",
+        "adresse locale",
+        "fiche nommee"
+      ],
+      "sentAt": "2026-06-26T09:02:11.551Z",
+      "status": "sent",
+      "lifecycleStage": "contacted",
+      "firstContactedAt": "2026-06-26T09:02:11.551Z",
+      "lastContactedAt": "2026-06-26T09:02:11.551Z",
+      "nextFollowUpAt": "2026-07-03T09:02:11.551Z",
+      "timeline": [
+        {
+          "at": "2026-06-26T09:02:11.551Z",
+          "type": "sent",
+          "note": "Initial outreach email sent"
+        }
+      ]
+    },
+    {
+      "placeId": "ChIJR5mB7qFTQIgR1A-Ni2viZn8",
+      "name": "First Discount Travel",
+      "email": "info@fdtcincinnati.com",
+      "website": "http://www.dreamhoneymoon.com/",
+      "phone": "(513) 791-8359",
+      "address": "4828 Cooper Rd, Cincinnati, OH 45242, USA",
+      "marketCode": "US",
+      "market": "United States",
+      "marketGroup": "english",
+      "language": "en",
+      "score": 95,
+      "reasons": [
+        "site existant",
+        "email trouve",
+        "telephone disponible",
+        "adresse locale",
+        "fiche nommee"
+      ],
+      "sentAt": "2026-06-26T09:02:25.013Z",
+      "status": "sent",
+      "lifecycleStage": "contacted",
+      "firstContactedAt": "2026-06-26T09:02:25.013Z",
+      "lastContactedAt": "2026-06-26T09:02:25.013Z",
+      "nextFollowUpAt": "2026-07-03T09:02:25.013Z",
+      "timeline": [
+        {
+          "at": "2026-06-26T09:02:25.013Z",
+          "type": "sent",
+          "note": "Initial outreach email sent"
+        }
+      ]
+    },
+    {
+      "placeId": "ChIJuab9QqLlwogRELTq0gLsqdQ",
+      "name": "Goulds Travel",
+      "email": "info@gouldstravel.com",
+      "website": "http://www.gouldstravel.com/",
+      "phone": "(727) 232-0500",
+      "address": "4500 140th Ave N Ste 121, Clearwater, FL 33762, USA",
+      "marketCode": "US",
+      "market": "United States",
+      "marketGroup": "english",
+      "language": "en",
+      "score": 95,
+      "reasons": [
+        "site existant",
+        "email trouve",
+        "telephone disponible",
+        "adresse locale",
+        "fiche nommee"
+      ],
+      "sentAt": "2026-06-26T09:02:29.564Z",
+      "status": "sent",
+      "lifecycleStage": "contacted",
+      "firstContactedAt": "2026-06-26T09:02:29.564Z",
+      "lastContactedAt": "2026-06-26T09:02:29.564Z",
+      "nextFollowUpAt": "2026-07-03T09:02:29.564Z",
+      "timeline": [
+        {
+          "at": "2026-06-26T09:02:29.564Z",
+          "type": "sent",
+          "note": "Initial outreach email sent"
+        }
+      ]
     }
   ],
-  "lastUpdated": "2026-06-25T09:04:41.581Z"
+  "lastUpdated": "2026-06-26T09:03:34.234Z"
 }
