@@ -245,9 +245,15 @@ Point a surveiller:
 Fichiers:
 
 - Script: `scripts/outreach.js`.
+- Opportunites plateformes freelance: `scripts/freelance-opportunities.js`.
+- Humanizer messages: `scripts/message-humanizer.js`.
+- Rapports de session workflows: `scripts/workflow-session-report.js` et `scripts/workflow-session-reports/`.
 - Dependances: `scripts/package.json`.
 - Historique contacts: `scripts/contacted.json`.
 - Automatisation: `.github/workflows/daily-outreach.yml`.
+- Scan manuel/programme de missions: `.github/workflows/freelance-opportunities.yml`.
+- Guide: `docs/prospection-plateformes-freelance.md`.
+- Guide rapports workflow: `docs/workflow-session-reports.md`.
 
 Fonctionnement actuel:
 
@@ -263,6 +269,31 @@ Fonctionnement actuel:
 10. Il envoie l'email via Gmail/Nodemailer ou le marque `dry-run`.
 11. Apres envoi reel, il ajoute le placeId et les infos au fichier `contacted.json` sous forme de fiche CRM minimale: `status`, `lifecycleStage`, `firstContactedAt`, `lastContactedAt`, `nextFollowUpAt` a J+7 et `timeline`.
 12. La GitHub Action commit et push la liste de contacts mise a jour.
+
+Opportunites plateformes freelance:
+
+1. Le script `scripts/freelance-opportunities.js` scanne des URLs publiques ou des fichiers HTML sauvegardes via `FREELANCE_SEARCH_URLS` ou `FREELANCE_SOURCE_FILE`.
+2. Sans URL fournie, il cherche lui-meme sur un catalogue de plateformes publiques: Codeur, 404Works, Freelancer, PeoplePerHour et RemoteOK. Upwork et We Work Remotely restent disponibles en override manuel, mais ne sont plus dans le catalogue automatique car les pages publiques renvoient souvent HTTP 403.
+3. Le scoring/recherche est maintenant aligne sur le CV full-stack / DevOps de Rayan: plateformes web, SaaS/admin, API integrations, paiements, automation, Next.js/React/Node, Docker, Kubernetes, CI/CD, VPS/cloud, DNS/SSL, maintenance, deploiement, refonte et SEO local.
+4. Il extrait les missions via JSON-LD et liens HTML, puis filtre les demandes proches de l'offre: creation/refonte de site, full-stack web, DevOps, API, maintenance, deploiement, SEO local, mobile/conversion.
+5. Contrainte dure: Rayan etant en Coree du Sud, le rapport ne doit garder que des missions en teletravail. Les missions sur site, presentiel, hybrides ou sans mention claire remote/teletravail sont exclues par defaut.
+6. Il score chaque opportunite et genere un `proposalDraft` a coller manuellement dans Malt, Codeur ou une autre plateforme.
+7. Il n'envoie aucun message automatiquement: la reponse doit rester relue et adaptee a la mission.
+8. Le workflow `freelance-opportunities.yml` peut etre lance manuellement sans URL et tourne aussi en cron avec le catalogue par defaut. `FREELANCE_PLATFORMS`, `FREELANCE_SEARCH_QUERIES` et `FREELANCE_SEARCH_URLS` servent seulement a ajuster ou remplacer la recherche. `FREELANCE_REQUIRE_REMOTE=true` reste force dans le workflow.
+
+Humanizer:
+
+- `scripts/message-humanizer.js` passe sur les emails froids et les brouillons de reponse plateforme avant envoi/ecriture dans le rapport.
+- Objectif: retirer le ton marketing ou trop "agence", garder les faits utiles, et produire un message court, humain et relisible avant action.
+- Le module reste local et deterministe, sans API externe, pour eviter de transmettre des donnees prospects a un service tiers.
+
+Rapports de session GitHub Actions:
+
+- Chaque workflow d'acquisition ecrit maintenant un rapport de session via `scripts/workflow-session-report.js`.
+- `daily-outreach.yml` genere `scripts/workflow-session-reports/daily-outreach-latest.md` et `.json`.
+- `freelance-opportunities.yml` genere `scripts/workflow-session-reports/freelance-opportunities-latest.md` et `.json`.
+- Les rapports sont produits avec `if: always()`, donc meme si la recherche ou l'envoi echoue, le workflow tente d'ecrire un resume: statut, event, branche, commit, run GitHub, compteurs principaux et erreurs.
+- Les commits automatiques incluent maintenant aussi `scripts/workflow-session-reports/`.
 
 Configuration attendue:
 
@@ -431,3 +462,25 @@ Quand un changement important est fait:
 - Conversion contact: le bloc contact annonce le livrable du diagnostic gratuit avec reponse sous 24h, 3 priorites d'action, capture commentee et plan simple. Test dedie: `scripts/conversion-diagnostic.test.js`.
 - Outreach v5 mini CRM: les nouveaux envois reels creent maintenant une fiche de suivi dans `scripts/contacted.json` avec statut `sent`, etape `contacted`, timeline et relance conseillee a J+7. Les anciennes entrees restent compatibles et ne sont pas reecrites.
 - SEO contenu phase 4: ajout des pages `/fr/cout-refonte-site-internet-petite-entreprise`, `/fr/checklist-refonte-site-internet` et `/en/small-business-website-redesign-cost`, generees par `src/lib/service-seo.js` et automatiquement reprises par le sitemap.
+
+### 2026-06-27
+
+- Mise en place du workflow "plateformes freelance" inspire d'une video/transcription sur la prospection Malt/Codeur: le projet dispose maintenant d'un scanner d'opportunites qui cherche lui-meme sur des plateformes publiques.
+- Nouveau script: `scripts/freelance-opportunities.js`, avec catalogue par defaut Codeur/404Works/Upwork/Freelancer/PeoplePerHour, extraction JSON-LD/liens, scoring oriente refonte/site vitrine/SEO local/mobile, deduplication et brouillon de reponse manuelle avec lien portfolio.
+- Nouveau workflow: `.github/workflows/freelance-opportunities.yml`, manuel sans URL ou programme avec le catalogue par defaut; les variables ne servent qu'a limiter/override les plateformes ou mots-cles.
+- Nouvelle doc: `docs/prospection-plateformes-freelance.md`, avec usage local sans configuration, options de filtrage, rapport et regles anti-spam.
+- Verification: `npm test` dans `scripts/` OK (20 tests: outreach + opportunites + humanizer), `node --check scripts/freelance-opportunities.js` OK, `node --check scripts/outreach.js` OK, `git diff --check` OK. Scan reel automatique limite a 10 sources OK: 566 opportunites brutes extraites, 20 candidates gardees dans `scripts/freelance-opportunities-report.json`; Upwork retourne HTTP 403 sur les pages publiques, les autres sources testees repondent.
+- Ajout du humanizer local pour les mails et messages: `scripts/message-humanizer.js`, utilise par `scripts/outreach.js` et `scripts/freelance-opportunities.js`; test dedie `scripts/message-humanizer.test.js`.
+- Ajout des rapports de session sur les workflows `daily-outreach.yml` et `freelance-opportunities.yml`: generation markdown + JSON via `scripts/workflow-session-report.js`, commit automatique des fichiers `scripts/workflow-session-reports/*-latest.*`, et tests dedies `scripts/workflow-session-report.test.js`.
+- Integration du CV `CVRAYAN_yeonin.pdf` dans le scoring/recherche freelance: le profil est maintenant traite comme full-stack / platform web / DevOps, avec priorite aux missions API, SaaS/admin, paiements, automation, Docker/Kubernetes, CI/CD, VPS/cloud, DNS/SSL, maintenance et deploiement, en plus des refontes/sites vitrines. Scan reel apres ajustement CV: 18 sources, 663 opportunites brutes apres filtrage, 30 candidates retenues; les liens generiques de categorie/profil plateforme sont filtres.
+
+### 2026-06-28
+
+- Contrainte teletravail ajoutee au workflow plateformes freelance: les recherches par defaut commencent maintenant par des requetes remote/teletravail alignees full-stack / DevOps, et `FREELANCE_REQUIRE_REMOTE=true` est force dans `.github/workflows/freelance-opportunities.yml`.
+- `scripts/freelance-opportunities.js` enrichit chaque mission avec `remoteOnly`, `remoteStatus` et `remoteReason`; les mentions `sur site`, `presentiel`, `hybride`, `on-site`, `in office`, `local candidates` ou `relocation` excluent la mission. Une simple recherche contenant `remote` ne suffit plus: la mission doit le mentionner, ou venir d'une plateforme garantie remote-only.
+- RemoteOK est ajoute au catalogue automatique comme plateforme remote-only; Upwork et We Work Remotely restent optionnels mais sortent du catalogue par defaut a cause des HTTP 403 publics.
+- Verification: `npm test` dans `scripts/` OK (28 tests), avec tests dedies pour le classement remote, les recherches remote par defaut et le filtrage du rapport.
+- Correction apres essai Claude Cowork: l'extracteur filtre maintenant les vraies URLs de mission par plateforme pour exclure pages de navigation, profils freelances et liens externes; la meta-description globale de PeoplePerHour n'est plus injectee dans chaque offre, ce qui evite de scorer des postes type assistant/receptionist.
+- Les brouillons `proposalDraft` passent en anglais pour PeoplePerHour/Freelancer/RemoteOK/Upwork/We Work Remotely, avec un angle adapte full-stack, MERN, DevOps, API/paiement ou e-commerce. Le fichier `scripts/freelance-valid-offers.*` contient maintenant seulement les missions propres disponibles apres filtrage, pas un quota artificiel de 30.
+- Ajout de `scripts/freelance-contact-queue.js`: le script lit les offres propres, scanne les pages pour emails publics, `mailto:` et numeros internationaux, puis genere `scripts/freelance-contact-queue.{json,md}` avec messages humanises. L'envoi reel est bloque par defaut et exige `approved: true` par contact + `FREELANCE_CONTACT_SEND_APPROVED=true` + credentials Gmail, afin d'eviter un envoi de masse non valide.
+- Run reel contact queue du 2026-06-28: 20 offres scannees, 0 email public, 0 telephone public, 20 offres sans contact public; aucun email envoye.

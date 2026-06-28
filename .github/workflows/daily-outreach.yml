@@ -72,10 +72,21 @@ jobs:
           MAX_PLACES_TO_SCAN: ${{ github.event_name == 'workflow_dispatch' && inputs.max_places_to_scan || '160' }}
           MAX_EMAILS_TO_EXTRACT: ${{ github.event_name == 'workflow_dispatch' && inputs.max_emails_to_extract || '80' }}
 
+      - name: Write workflow session report
+        if: always()
+        working-directory: scripts
+        run: node workflow-session-report.js
+        env:
+          WORKFLOW_SESSION_NAME: Daily Outreach
+          WORKFLOW_SESSION_SLUG: daily-outreach
+          WORKFLOW_SESSION_STATUS: ${{ job.status }}
+          WORKFLOW_SESSION_PRIMARY_REPORT: outreach-report.json
+
       - name: Commit updated contacts list
+        if: always()
         run: |
           git config --local user.email "github-actions@github.com"
           git config --local user.name "GitHub Actions"
-          git add scripts/contacted.json scripts/outreach-report.json
+          git add scripts/contacted.json scripts/outreach-report.json scripts/workflow-session-reports/
           git diff --staged --quiet || git commit -m "chore: update contacted companies list [$(date +'%Y-%m-%d')]"
           git push

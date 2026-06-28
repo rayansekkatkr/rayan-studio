@@ -24,7 +24,9 @@ test('buildEmailContent creates a short human plain-text outreach email', () => 
   assert.match(email.text, /Boulangerie Martin/);
   assert.match(email.text, /2-3 points simples/);
   assert.match(email.text, /Rayan/);
+  assert.equal(email.humanized, true);
   assert.doesNotMatch(email.text, /performants|sur-mesure|tarifs transparents|convertir davantage/i);
+  assert.doesNotMatch(email.text, /Sans vouloir être intrusif|Je me permets de vous écrire/i);
   assert.ok(email.text.length < 900, 'message should stay short and personal');
 });
 
@@ -51,6 +53,7 @@ test('buildEmailContent creates an English email for English-speaking markets', 
   assert.match(email.text, /2-3 simple points/);
   assert.match(email.text, /free quick review/i);
   assert.match(email.text, /\/en/);
+  assert.doesNotMatch(email.text, /I came across your website\. I came across/i);
   assert.doesNotMatch(email.text, /Bonjour|désabonnement|petites entreprises/i);
 });
 

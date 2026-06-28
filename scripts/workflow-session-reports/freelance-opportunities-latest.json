@@ -1,0 +1,34 @@
+{
+  "generatedAt": "2026-06-27T18:56:27.835Z",
+  "workflow": {
+    "name": "Freelance Opportunities",
+    "slug": "freelance-opportunities",
+    "status": "success",
+    "primaryReport": "/Users/rayansekkat/Desktop/rayan_project/rayan-studio/scripts/freelance-opportunities-report.json"
+  },
+  "github": {
+    "runId": null,
+    "runNumber": null,
+    "runAttempt": null,
+    "runUrl": null,
+    "repository": null,
+    "actor": null,
+    "eventName": null,
+    "refName": null,
+    "sha": null
+  },
+  "summary": {
+    "status": "ready",
+    "dryRun": null,
+    "sourceMode": "default_platforms",
+    "sourceCount": 18,
+    "scannedOpportunities": 252,
+    "scoredCandidateCount": 94,
+    "remotePolicy": "explicit_remote_only",
+    "remoteRejectedCount": 74,
+    "candidateCount": 20,
+    "sentCount": 0,
+    "errorCount": 0,
+    "errors": []
+  }
+}

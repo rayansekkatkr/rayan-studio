@@ -1,0 +1,614 @@
+{
+  "runAt": "2026-06-27T18:54:15.958Z",
+  "status": "ready",
+  "sourceMode": "default_platforms",
+  "sourceCount": 18,
+  "sources": [
+    {
+      "name": "Codeur - remote full stack web developer",
+      "url": "https://www.codeur.com/projects?keywords=remote%20full%20stack%20web%20developer",
+      "platform": "codeur",
+      "searchQuery": "remote full stack web developer",
+      "remoteGuaranteed": false,
+      "autoDiscovered": true
+    },
+    {
+      "name": "404Works - remote full stack web developer",
+      "url": "https://www.404works.com/fr/projects?search=remote%20full%20stack%20web%20developer",
+      "platform": "404works",
+      "searchQuery": "remote full stack web developer",
+      "remoteGuaranteed": false,
+      "autoDiscovered": true
+    },
+    {
+      "name": "Freelancer - remote full stack web developer",
+      "url": "https://www.freelancer.com/jobs/website-development",
+      "platform": "freelancer",
+      "searchQuery": "remote full stack web developer",
+      "remoteGuaranteed": false,
+      "autoDiscovered": true
+    },
+    {
+      "name": "PeoplePerHour - remote full stack web developer",
+      "url": "https://www.peopleperhour.com/freelance-remote-full-stack-web-developer-jobs",
+      "platform": "peopleperhour",
+      "searchQuery": "remote full stack web developer",
+      "remoteGuaranteed": false,
+      "autoDiscovered": true
+    },
+    {
+      "name": "RemoteOK - remote full stack web developer",
+      "url": "https://remoteok.com/remote-full-stack-web-developer-jobs",
+      "platform": "remoteok",
+      "searchQuery": "remote full stack web developer",
+      "remoteGuaranteed": true,
+      "autoDiscovered": true
+    },
+    {
+      "name": "Codeur - remote devops deployment",
+      "url": "https://www.codeur.com/projects?keywords=remote%20devops%20deployment",
+      "platform": "codeur",
+      "searchQuery": "remote devops deployment",
+      "remoteGuaranteed": false,
+      "autoDiscovered": true
+    },
+    {
+      "name": "404Works - remote devops deployment",
+      "url": "https://www.404works.com/fr/projects?search=remote%20devops%20deployment",
+      "platform": "404works",
+      "searchQuery": "remote devops deployment",
+      "remoteGuaranteed": false,
+      "autoDiscovered": true
+    },
+    {
+      "name": "Freelancer - remote devops deployment",
+      "url": "https://www.freelancer.com/jobs/website-management",
+      "platform": "freelancer",
+      "searchQuery": "remote devops deployment",
+      "remoteGuaranteed": false,
+      "autoDiscovered": true
+    },
+    {
+      "name": "PeoplePerHour - remote devops deployment",
+      "url": "https://www.peopleperhour.com/freelance-remote-devops-deployment-jobs",
+      "platform": "peopleperhour",
+      "searchQuery": "remote devops deployment",
+      "remoteGuaranteed": false,
+      "autoDiscovered": true
+    },
+    {
+      "name": "RemoteOK - remote devops deployment",
+      "url": "https://remoteok.com/remote-devops-deployment-jobs",
+      "platform": "remoteok",
+      "searchQuery": "remote devops deployment",
+      "remoteGuaranteed": true,
+      "autoDiscovered": true
+    },
+    {
+      "name": "Codeur - remote api integration",
+      "url": "https://www.codeur.com/projects?keywords=remote%20api%20integration",
+      "platform": "codeur",
+      "searchQuery": "remote api integration",
+      "remoteGuaranteed": false,
+      "autoDiscovered": true
+    },
+    {
+      "name": "404Works - remote api integration",
+      "url": "https://www.404works.com/fr/projects?search=remote%20api%20integration",
+      "platform": "404works",
+      "searchQuery": "remote api integration",
+      "remoteGuaranteed": false,
+      "autoDiscovered": true
+    },
+    {
+      "name": "Freelancer - remote api integration",
+      "url": "https://www.freelancer.com/jobs/website-development",
+      "platform": "freelancer",
+      "searchQuery": "remote api integration",
+      "remoteGuaranteed": false,
+      "autoDiscovered": true
+    },
+    {
+      "name": "PeoplePerHour - remote api integration",
+      "url": "https://www.peopleperhour.com/freelance-remote-api-integration-jobs",
+      "platform": "peopleperhour",
+      "searchQuery": "remote api integration",
+      "remoteGuaranteed": false,
+      "autoDiscovered": true
+    },
+    {
+      "name": "RemoteOK - remote api integration",
+      "url": "https://remoteok.com/remote-api-integration-jobs",
+      "platform": "remoteok",
+      "searchQuery": "remote api integration",
+      "remoteGuaranteed": true,
+      "autoDiscovered": true
+    },
+    {
+      "name": "Codeur - remote docker kubernetes deployment",
+      "url": "https://www.codeur.com/projects?keywords=remote%20docker%20kubernetes%20deployment",
+      "platform": "codeur",
+      "searchQuery": "remote docker kubernetes deployment",
+      "remoteGuaranteed": false,
+      "autoDiscovered": true
+    },
+    {
+      "name": "404Works - remote docker kubernetes deployment",
+      "url": "https://www.404works.com/fr/projects?search=remote%20docker%20kubernetes%20deployment",
+      "platform": "404works",
+      "searchQuery": "remote docker kubernetes deployment",
+      "remoteGuaranteed": false,
+      "autoDiscovered": true
+    },
+    {
+      "name": "Freelancer - remote docker kubernetes deployment",
+      "url": "https://www.freelancer.com/jobs/website-management",
+      "platform": "freelancer",
+      "searchQuery": "remote docker kubernetes deployment",
+      "remoteGuaranteed": false,
+      "autoDiscovered": true
+    }
+  ],
+  "scannedOpportunities": 252,
+  "scoredCandidateCount": 94,
+  "remotePolicy": "explicit_remote_only",
+  "remoteRejectedCount": 74,
+  "candidateCount": 20,
+  "maxOpportunities": 30,
+  "minScore": 35,
+  "nextStep": "Review candidates from the automatic platform catalog, then paste the proposalDraft into the platform.",
+  "platformPlaybook": [
+    {
+      "name": "Malt",
+      "angle": "Priorite aux missions de refonte, site vitrine, landing page et SEO local.",
+      "note": "Reponse courte, portfolio en lien, puis proposition de mini diagnostic avant devis."
+    },
+    {
+      "name": "Codeur.com",
+      "angle": "Scanner les appels d offres web et filtrer les demandes trop low-cost ou hors site.",
+      "note": "Repondre avec un perimetre clair: structure, maquette, developpement, mise en ligne."
+    },
+    {
+      "name": "RemoteOK / We Work Remotely",
+      "angle": "Priorite aux offres full-stack, DevOps, platform engineering et web apps garanties remote.",
+      "note": "Verifier le statut contract/freelance avant reponse, puis adapter le message au contexte international."
+    },
+    {
+      "name": "LinkedIn / reseaux",
+      "angle": "Reperer les posts de dirigeants TPE qui cherchent un site ou une refonte.",
+      "note": "Approche manuelle, ton humain, pas de message automatique en masse."
+    }
+  ],
+  "candidates": [
+    {
+      "source": "PeoplePerHour - remote full stack web developer",
+      "sourceUrl": "https://www.peopleperhour.com/freelance-remote-full-stack-web-developer-jobs",
+      "platform": "peopleperhour",
+      "searchQuery": "remote full stack web developer",
+      "remoteGuaranteed": false,
+      "title": "Full-Stack Developer / Team Needed for Custom Web & Mobile App",
+      "description": "",
+      "sourceDescription": "Find Freelance Remote Full Stack Web Developer Jobs, Work & Projects. 1000&#x27;s of freelance jobs that pay. Earn money and work with high quality customers.",
+      "url": "https://www.peopleperhour.com/freelance-jobs/technology-programming/website-development/full-stack-developer-team-needed-for-custom-web-mobile-a-4505223",
+      "extractionMethod": "anchor",
+      "score": 100,
+      "fit": "high",
+      "reasons": [
+        "besoin site/refonte",
+        "profil full-stack/platform",
+        "UX, mobile ou conversion"
+      ],
+      "remoteOnly": true,
+      "remoteStatus": "remote_listing",
+      "remoteReason": "offre issue d une page de missions teletravail",
+      "proposalDraft": "Hi,\n\nI saw your project \"Full-Stack Developer / Team Needed for Custom Web & Mobile App\" and it looks close to the kind of full-stack/platform work I handle.\n\nMy strongest fit here is React/Node full-stack delivery, with the backend, API integrations and deployment side handled together rather than split across separate people.\n\nI can help clarify the scope, then take care of the implementation, API/backend work, responsive front-end, deployment details, and clean handover.\n\nPortfolio: https://www.rayanstudios.com/fr\n\nIf you can share the current stack, priority features and timeline, I can reply with a concrete scope and estimate.\n\nBest,\nRayan\nMission: https://www.peopleperhour.com/freelance-jobs/technology-programming/website-development/full-stack-developer-team-needed-for-custom-web-mobile-a-4505223"
+    },
+    {
+      "source": "PeoplePerHour - remote full stack web developer",
+      "sourceUrl": "https://www.peopleperhour.com/freelance-remote-full-stack-web-developer-jobs",
+      "platform": "peopleperhour",
+      "searchQuery": "remote full stack web developer",
+      "remoteGuaranteed": false,
+      "title": "Full-Stack Developer for E-Commerce Landing Page",
+      "description": "",
+      "sourceDescription": "Find Freelance Remote Full Stack Web Developer Jobs, Work & Projects. 1000&#x27;s of freelance jobs that pay. Earn money and work with high quality customers.",
+      "url": "https://www.peopleperhour.com/freelance-jobs/technology-programming/website-development/full-stack-developer-for-e-commerce-landing-page-4500173",
+      "extractionMethod": "anchor",
+      "score": 95,
+      "fit": "high",
+      "reasons": [
+        "besoin site/refonte",
+        "profil full-stack/platform",
+        "profil TPE/local"
+      ],
+      "remoteOnly": true,
+      "remoteStatus": "remote_listing",
+      "remoteReason": "offre issue d une page de missions teletravail",
+      "proposalDraft": "Hi,\n\nI saw your project \"Full-Stack Developer for E-Commerce Landing Page\" and it looks close to the kind of full-stack/platform work I handle.\n\nMy strongest fit here is React/Node full-stack delivery, with the backend, API integrations and deployment side handled together rather than split across separate people.\n\nI can help clarify the scope, then take care of the implementation, API/backend work, responsive front-end, deployment details, and clean handover.\n\nPortfolio: https://www.rayanstudios.com/fr\n\nIf you can share the current stack, priority features and timeline, I can reply with a concrete scope and estimate.\n\nBest,\nRayan\nMission: https://www.peopleperhour.com/freelance-jobs/technology-programming/website-development/full-stack-developer-for-e-commerce-landing-page-4500173"
+    },
+    {
+      "source": "PeoplePerHour - remote full stack web developer",
+      "sourceUrl": "https://www.peopleperhour.com/freelance-remote-full-stack-web-developer-jobs",
+      "platform": "peopleperhour",
+      "searchQuery": "remote full stack web developer",
+      "remoteGuaranteed": false,
+      "title": "Frontend Developer – Hospitality Management Software",
+      "description": "",
+      "sourceDescription": "Find Freelance Remote Full Stack Web Developer Jobs, Work & Projects. 1000&#x27;s of freelance jobs that pay. Earn money and work with high quality customers.",
+      "url": "https://www.peopleperhour.com/freelance-jobs/technology-programming/website-development/frontend-developer-hospitality-management-software-4503418",
+      "extractionMethod": "anchor",
+      "score": 85,
+      "fit": "high",
+      "reasons": [
+        "besoin site/refonte",
+        "profil full-stack/platform"
+      ],
+      "remoteOnly": true,
+      "remoteStatus": "remote_listing",
+      "remoteReason": "offre issue d une page de missions teletravail",
+      "proposalDraft": "Hi,\n\nI saw your project \"Frontend Developer – Hospitality Management Software\" and it looks close to the kind of full-stack/platform work I handle.\n\nMy strongest fit here is taking a web product from a clear scope to a working, maintainable implementation.\n\nI can help clarify the scope, then take care of the implementation, API/backend work, responsive front-end, deployment details, and clean handover.\n\nPortfolio: https://www.rayanstudios.com/fr\n\nIf you can share the current stack, priority features and timeline, I can reply with a concrete scope and estimate.\n\nBest,\nRayan\nMission: https://www.peopleperhour.com/freelance-jobs/technology-programming/website-development/frontend-developer-hospitality-management-software-4503418"
+    },
+    {
+      "source": "PeoplePerHour - remote api integration",
+      "sourceUrl": "https://www.peopleperhour.com/freelance-remote-api-integration-jobs",
+      "platform": "peopleperhour",
+      "searchQuery": "remote api integration",
+      "remoteGuaranteed": false,
+      "title": "Stripe account help api",
+      "description": "",
+      "sourceDescription": "Find Freelance Remote Api Integration Jobs, Work & Projects. 1000&#x27;s of freelance jobs that pay. Earn money and work with high quality customers.",
+      "url": "https://www.peopleperhour.com/freelance-jobs/digital-marketing/ecommerce-marketing-managers/stripe-account-help-api-4504030",
+      "extractionMethod": "anchor",
+      "score": 65,
+      "fit": "medium",
+      "reasons": [
+        "profil full-stack/platform",
+        "automation, paiement ou integration",
+        "profil TPE/local"
+      ],
+      "remoteOnly": true,
+      "remoteStatus": "remote_listing",
+      "remoteReason": "offre issue d une page de missions teletravail",
+      "proposalDraft": "Hi,\n\nI saw your project \"Stripe account help api\" and it looks close to the kind of full-stack/platform work I handle.\n\nMy strongest fit here is API and payment integration work, including Stripe-style flows, backend reliability and practical production checks.\n\nI can help clarify the scope, then take care of the implementation, API/backend work, responsive front-end, deployment details, and clean handover.\n\nPortfolio: https://www.rayanstudios.com/fr\n\nIf you can share the current stack, priority features and timeline, I can reply with a concrete scope and estimate.\n\nBest,\nRayan\nMission: https://www.peopleperhour.com/freelance-jobs/digital-marketing/ecommerce-marketing-managers/stripe-account-help-api-4504030"
+    },
+    {
+      "source": "PeoplePerHour - remote full stack web developer",
+      "sourceUrl": "https://www.peopleperhour.com/freelance-remote-full-stack-web-developer-jobs",
+      "platform": "peopleperhour",
+      "searchQuery": "remote full stack web developer",
+      "remoteGuaranteed": false,
+      "title": "Need a MERN stack developer",
+      "description": "",
+      "sourceDescription": "Find Freelance Remote Full Stack Web Developer Jobs, Work & Projects. 1000&#x27;s of freelance jobs that pay. Earn money and work with high quality customers.",
+      "url": "https://www.peopleperhour.com/freelance-jobs/technology-programming/website-development/need-a-mern-stack-developer-4501271",
+      "extractionMethod": "anchor",
+      "score": 55,
+      "fit": "medium",
+      "reasons": [
+        "besoin site/refonte"
+      ],
+      "remoteOnly": true,
+      "remoteStatus": "remote_listing",
+      "remoteReason": "offre issue d une page de missions teletravail",
+      "proposalDraft": "Hi,\n\nI saw your project \"Need a MERN stack developer\" and it looks close to the kind of full-stack/platform work I handle.\n\nMy strongest fit here is React/Node full-stack delivery, with the backend, API integrations and deployment side handled together rather than split across separate people.\n\nI can help clarify the scope, then take care of the implementation, API/backend work, responsive front-end, deployment details, and clean handover.\n\nPortfolio: https://www.rayanstudios.com/fr\n\nIf you can share the current stack, priority features and timeline, I can reply with a concrete scope and estimate.\n\nBest,\nRayan\nMission: https://www.peopleperhour.com/freelance-jobs/technology-programming/website-development/need-a-mern-stack-developer-4501271"
+    },
+    {
+      "source": "PeoplePerHour - remote full stack web developer",
+      "sourceUrl": "https://www.peopleperhour.com/freelance-remote-full-stack-web-developer-jobs",
+      "platform": "peopleperhour",
+      "searchQuery": "remote full stack web developer",
+      "remoteGuaranteed": false,
+      "title": "Full-Stack Developer (Kotlin Multiplatform + SvelteKit)",
+      "description": "",
+      "sourceDescription": "Find Freelance Remote Full Stack Web Developer Jobs, Work & Projects. 1000&#x27;s of freelance jobs that pay. Earn money and work with high quality customers.",
+      "url": "https://www.peopleperhour.com/freelance-jobs/technology-programming/mobile-app-development/full-stack-developer-kotlin-multiplatform-sveltekit-4502764",
+      "extractionMethod": "anchor",
+      "score": 55,
+      "fit": "medium",
+      "reasons": [
+        "profil full-stack/platform",
+        "UX, mobile ou conversion"
+      ],
+      "remoteOnly": true,
+      "remoteStatus": "remote_listing",
+      "remoteReason": "offre issue d une page de missions teletravail",
+      "proposalDraft": "Hi,\n\nI saw your project \"Full-Stack Developer (Kotlin Multiplatform + SvelteKit)\" and it looks close to the kind of full-stack/platform work I handle.\n\nMy strongest fit here is React/Node full-stack delivery, with the backend, API integrations and deployment side handled together rather than split across separate people.\n\nI can help clarify the scope, then take care of the implementation, API/backend work, responsive front-end, deployment details, and clean handover.\n\nPortfolio: https://www.rayanstudios.com/fr\n\nIf you can share the current stack, priority features and timeline, I can reply with a concrete scope and estimate.\n\nBest,\nRayan\nMission: https://www.peopleperhour.com/freelance-jobs/technology-programming/mobile-app-development/full-stack-developer-kotlin-multiplatform-sveltekit-4502764"
+    },
+    {
+      "source": "PeoplePerHour - remote full stack web developer",
+      "sourceUrl": "https://www.peopleperhour.com/freelance-remote-full-stack-web-developer-jobs",
+      "platform": "peopleperhour",
+      "searchQuery": "remote full stack web developer",
+      "remoteGuaranteed": false,
+      "title": "I need a MERN Stack developer for upgrading my Social Platform.",
+      "description": "",
+      "sourceDescription": "Find Freelance Remote Full Stack Web Developer Jobs, Work & Projects. 1000&#x27;s of freelance jobs that pay. Earn money and work with high quality customers.",
+      "url": "https://www.peopleperhour.com/freelance-jobs/technology-programming/website-development/i-need-a-mern-stack-developer-for-upgrading-my-social-platfo-4500289",
+      "extractionMethod": "anchor",
+      "score": 55,
+      "fit": "medium",
+      "reasons": [
+        "besoin site/refonte"
+      ],
+      "remoteOnly": true,
+      "remoteStatus": "remote_listing",
+      "remoteReason": "offre issue d une page de missions teletravail",
+      "proposalDraft": "Hi,\n\nI saw your project \"I need a MERN Stack developer for upgrading my Social Platform.\" and it looks close to the kind of full-stack/platform work I handle.\n\nMy strongest fit here is React/Node full-stack delivery, with the backend, API integrations and deployment side handled together rather than split across separate people.\n\nI can help clarify the scope, then take care of the implementation, API/backend work, responsive front-end, deployment details, and clean handover.\n\nPortfolio: https://www.rayanstudios.com/fr\n\nIf you can share the current stack, priority features and timeline, I can reply with a concrete scope and estimate.\n\nBest,\nRayan\nMission: https://www.peopleperhour.com/freelance-jobs/technology-programming/website-development/i-need-a-mern-stack-developer-for-upgrading-my-social-platfo-4500289"
+    },
+    {
+      "source": "PeoplePerHour - remote full stack web developer",
+      "sourceUrl": "https://www.peopleperhour.com/freelance-remote-full-stack-web-developer-jobs",
+      "platform": "peopleperhour",
+      "searchQuery": "remote full stack web developer",
+      "remoteGuaranteed": false,
+      "title": "The coven - web development",
+      "description": "",
+      "sourceDescription": "Find Freelance Remote Full Stack Web Developer Jobs, Work & Projects. 1000&#x27;s of freelance jobs that pay. Earn money and work with high quality customers.",
+      "url": "https://www.peopleperhour.com/freelance-jobs/technology-programming/website-development/the-coven-web-development-4499859",
+      "extractionMethod": "anchor",
+      "score": 55,
+      "fit": "medium",
+      "reasons": [
+        "besoin site/refonte"
+      ],
+      "remoteOnly": true,
+      "remoteStatus": "remote_listing",
+      "remoteReason": "offre issue d une page de missions teletravail",
+      "proposalDraft": "Hi,\n\nI saw your project \"The coven - web development\" and it looks close to the kind of full-stack/platform work I handle.\n\nMy strongest fit here is taking a web product from a clear scope to a working, maintainable implementation.\n\nI can help clarify the scope, then take care of the implementation, API/backend work, responsive front-end, deployment details, and clean handover.\n\nPortfolio: https://www.rayanstudios.com/fr\n\nIf you can share the current stack, priority features and timeline, I can reply with a concrete scope and estimate.\n\nBest,\nRayan\nMission: https://www.peopleperhour.com/freelance-jobs/technology-programming/website-development/the-coven-web-development-4499859"
+    },
+    {
+      "source": "PeoplePerHour - remote full stack web developer",
+      "sourceUrl": "https://www.peopleperhour.com/freelance-remote-full-stack-web-developer-jobs",
+      "platform": "peopleperhour",
+      "searchQuery": "remote full stack web developer",
+      "remoteGuaranteed": false,
+      "title": "Looking for 5+ Senior Software Engineer",
+      "description": "",
+      "sourceDescription": "Find Freelance Remote Full Stack Web Developer Jobs, Work & Projects. 1000&#x27;s of freelance jobs that pay. Earn money and work with high quality customers.",
+      "url": "https://www.peopleperhour.com/freelance-jobs/technology-programming/website-development/looking-for-5-senior-software-engineer-4505446",
+      "extractionMethod": "anchor",
+      "score": 55,
+      "fit": "medium",
+      "reasons": [
+        "besoin site/refonte"
+      ],
+      "remoteOnly": true,
+      "remoteStatus": "remote_listing",
+      "remoteReason": "offre issue d une page de missions teletravail",
+      "proposalDraft": "Hi,\n\nI saw your project \"Looking for 5+ Senior Software Engineer\" and it looks close to the kind of full-stack/platform work I handle.\n\nMy strongest fit here is taking a web product from a clear scope to a working, maintainable implementation.\n\nI can help clarify the scope, then take care of the implementation, API/backend work, responsive front-end, deployment details, and clean handover.\n\nPortfolio: https://www.rayanstudios.com/fr\n\nIf you can share the current stack, priority features and timeline, I can reply with a concrete scope and estimate.\n\nBest,\nRayan\nMission: https://www.peopleperhour.com/freelance-jobs/technology-programming/website-development/looking-for-5-senior-software-engineer-4505446"
+    },
+    {
+      "source": "PeoplePerHour - remote api integration",
+      "sourceUrl": "https://www.peopleperhour.com/freelance-remote-api-integration-jobs",
+      "platform": "peopleperhour",
+      "searchQuery": "remote api integration",
+      "remoteGuaranteed": false,
+      "title": "Virtual Technical Assistant (Wix, Sqaurespace , Shopify Expert)",
+      "description": "",
+      "sourceDescription": "Find Freelance Remote Api Integration Jobs, Work & Projects. 1000&#x27;s of freelance jobs that pay. Earn money and work with high quality customers.",
+      "url": "https://www.peopleperhour.com/freelance-jobs/technology-programming/website-development/virtual-technical-assistant-wix-sqaurespace-shopify-expe-4504583",
+      "extractionMethod": "anchor",
+      "score": 55,
+      "fit": "medium",
+      "reasons": [
+        "besoin site/refonte"
+      ],
+      "remoteOnly": true,
+      "remoteStatus": "remote_listing",
+      "remoteReason": "offre issue d une page de missions teletravail",
+      "proposalDraft": "Hi,\n\nI saw your project \"Virtual Technical Assistant (Wix, Sqaurespace , Shopify Expert)\" and it looks close to the kind of full-stack/platform work I handle.\n\nMy strongest fit here is turning the business goal into a clean, responsive implementation with the technical setup around launch handled properly.\n\nI can help clarify the scope, then take care of the implementation, API/backend work, responsive front-end, deployment details, and clean handover.\n\nPortfolio: https://www.rayanstudios.com/fr\n\nIf you can share the current stack, priority features and timeline, I can reply with a concrete scope and estimate.\n\nBest,\nRayan\nMission: https://www.peopleperhour.com/freelance-jobs/technology-programming/website-development/virtual-technical-assistant-wix-sqaurespace-shopify-expe-4504583"
+    },
+    {
+      "source": "PeoplePerHour - remote api integration",
+      "sourceUrl": "https://www.peopleperhour.com/freelance-remote-api-integration-jobs",
+      "platform": "peopleperhour",
+      "searchQuery": "remote api integration",
+      "remoteGuaranteed": false,
+      "title": "Akeneo Developer (AI Integrations & Custom Development)",
+      "description": "",
+      "sourceDescription": "Find Freelance Remote Api Integration Jobs, Work & Projects. 1000&#x27;s of freelance jobs that pay. Earn money and work with high quality customers.",
+      "url": "https://www.peopleperhour.com/freelance-jobs/technology-programming/e-commerce-cms-development/akeneo-developer-ai-integrations-custom-development-4504609",
+      "extractionMethod": "anchor",
+      "score": 50,
+      "fit": "medium",
+      "reasons": [
+        "profil full-stack/platform",
+        "profil TPE/local"
+      ],
+      "remoteOnly": true,
+      "remoteStatus": "remote_listing",
+      "remoteReason": "offre issue d une page de missions teletravail",
+      "proposalDraft": "Hi,\n\nI saw your project \"Akeneo Developer (AI Integrations & Custom Development)\" and it looks close to the kind of full-stack/platform work I handle.\n\nMy strongest fit here is API and payment integration work, including Stripe-style flows, backend reliability and practical production checks.\n\nI can help clarify the scope, then take care of the implementation, API/backend work, responsive front-end, deployment details, and clean handover.\n\nPortfolio: https://www.rayanstudios.com/fr\n\nIf you can share the current stack, priority features and timeline, I can reply with a concrete scope and estimate.\n\nBest,\nRayan\nMission: https://www.peopleperhour.com/freelance-jobs/technology-programming/e-commerce-cms-development/akeneo-developer-ai-integrations-custom-development-4504609"
+    },
+    {
+      "source": "PeoplePerHour - remote full stack web developer",
+      "sourceUrl": "https://www.peopleperhour.com/freelance-remote-full-stack-web-developer-jobs",
+      "platform": "peopleperhour",
+      "searchQuery": "remote full stack web developer",
+      "remoteGuaranteed": false,
+      "title": "Part-Time Full Stack Developer",
+      "description": "",
+      "sourceDescription": "Find Freelance Remote Full Stack Web Developer Jobs, Work & Projects. 1000&#x27;s of freelance jobs that pay. Earn money and work with high quality customers.",
+      "url": "https://www.peopleperhour.com/freelance-jobs/technology-programming/programming-coding/part-time-full-stack-developer-4500996",
+      "extractionMethod": "anchor",
+      "score": 40,
+      "fit": "low",
+      "reasons": [
+        "profil full-stack/platform"
+      ],
+      "remoteOnly": true,
+      "remoteStatus": "remote_listing",
+      "remoteReason": "offre issue d une page de missions teletravail",
+      "proposalDraft": "Hi,\n\nI saw your project \"Part-Time Full Stack Developer\" and it looks close to the kind of full-stack/platform work I handle.\n\nMy strongest fit here is React/Node full-stack delivery, with the backend, API integrations and deployment side handled together rather than split across separate people.\n\nI can help clarify the scope, then take care of the implementation, API/backend work, responsive front-end, deployment details, and clean handover.\n\nPortfolio: https://www.rayanstudios.com/fr\n\nIf you can share the current stack, priority features and timeline, I can reply with a concrete scope and estimate.\n\nBest,\nRayan\nMission: https://www.peopleperhour.com/freelance-jobs/technology-programming/programming-coding/part-time-full-stack-developer-4500996"
+    },
+    {
+      "source": "PeoplePerHour - remote full stack web developer",
+      "sourceUrl": "https://www.peopleperhour.com/freelance-remote-full-stack-web-developer-jobs",
+      "platform": "peopleperhour",
+      "searchQuery": "remote full stack web developer",
+      "remoteGuaranteed": false,
+      "title": "Full-Stack Developer Required to Build Custom, Secure CRM System",
+      "description": "",
+      "sourceDescription": "Find Freelance Remote Full Stack Web Developer Jobs, Work & Projects. 1000&#x27;s of freelance jobs that pay. Earn money and work with high quality customers.",
+      "url": "https://www.peopleperhour.com/freelance-jobs/technology-programming/erp-crm-development/full-stack-developer-required-to-build-custom-secure-crm-sy-4504843",
+      "extractionMethod": "anchor",
+      "score": 40,
+      "fit": "low",
+      "reasons": [
+        "profil full-stack/platform"
+      ],
+      "remoteOnly": true,
+      "remoteStatus": "remote_listing",
+      "remoteReason": "offre issue d une page de missions teletravail",
+      "proposalDraft": "Hi,\n\nI saw your project \"Full-Stack Developer Required to Build Custom, Secure CRM System\" and it looks close to the kind of full-stack/platform work I handle.\n\nMy strongest fit here is React/Node full-stack delivery, with the backend, API integrations and deployment side handled together rather than split across separate people.\n\nI can help clarify the scope, then take care of the implementation, API/backend work, responsive front-end, deployment details, and clean handover.\n\nPortfolio: https://www.rayanstudios.com/fr\n\nIf you can share the current stack, priority features and timeline, I can reply with a concrete scope and estimate.\n\nBest,\nRayan\nMission: https://www.peopleperhour.com/freelance-jobs/technology-programming/erp-crm-development/full-stack-developer-required-to-build-custom-secure-crm-sy-4504843"
+    },
+    {
+      "source": "PeoplePerHour - remote full stack web developer",
+      "sourceUrl": "https://www.peopleperhour.com/freelance-remote-full-stack-web-developer-jobs",
+      "platform": "peopleperhour",
+      "searchQuery": "remote full stack web developer",
+      "remoteGuaranteed": false,
+      "title": "I am looking for a full-stack developer",
+      "description": "",
+      "sourceDescription": "Find Freelance Remote Full Stack Web Developer Jobs, Work & Projects. 1000&#x27;s of freelance jobs that pay. Earn money and work with high quality customers.",
+      "url": "https://www.peopleperhour.com/freelance-jobs/technology-programming/programming-coding/i-am-looking-for-a-full-stack-developer-4499443",
+      "extractionMethod": "anchor",
+      "score": 40,
+      "fit": "low",
+      "reasons": [
+        "profil full-stack/platform"
+      ],
+      "remoteOnly": true,
+      "remoteStatus": "remote_listing",
+      "remoteReason": "offre issue d une page de missions teletravail",
+      "proposalDraft": "Hi,\n\nI saw your project \"I am looking for a full-stack developer\" and it looks close to the kind of full-stack/platform work I handle.\n\nMy strongest fit here is React/Node full-stack delivery, with the backend, API integrations and deployment side handled together rather than split across separate people.\n\nI can help clarify the scope, then take care of the implementation, API/backend work, responsive front-end, deployment details, and clean handover.\n\nPortfolio: https://www.rayanstudios.com/fr\n\nIf you can share the current stack, priority features and timeline, I can reply with a concrete scope and estimate.\n\nBest,\nRayan\nMission: https://www.peopleperhour.com/freelance-jobs/technology-programming/programming-coding/i-am-looking-for-a-full-stack-developer-4499443"
+    },
+    {
+      "source": "PeoplePerHour - remote full stack web developer",
+      "sourceUrl": "https://www.peopleperhour.com/freelance-remote-full-stack-web-developer-jobs",
+      "platform": "peopleperhour",
+      "searchQuery": "remote full stack web developer",
+      "remoteGuaranteed": false,
+      "title": "Part-Time Remote Full Stack Engineer (C#/.NET, Python, Angular)",
+      "description": "",
+      "sourceDescription": "Find Freelance Remote Full Stack Web Developer Jobs, Work & Projects. 1000&#x27;s of freelance jobs that pay. Earn money and work with high quality customers.",
+      "url": "https://www.peopleperhour.com/freelance-jobs/technology-programming/programming-coding/part-time-remote-full-stack-engineer-c-net-python-angul-4501117",
+      "extractionMethod": "anchor",
+      "score": 40,
+      "fit": "low",
+      "reasons": [
+        "profil full-stack/platform"
+      ],
+      "remoteOnly": true,
+      "remoteStatus": "remote",
+      "remoteReason": "teletravail explicite dans la mission",
+      "proposalDraft": "Hi,\n\nI saw your project \"Part-Time Remote Full Stack Engineer (C#/.NET, Python, Angular)\" and it looks close to the kind of full-stack/platform work I handle.\n\nMy strongest fit here is React/Node full-stack delivery, with the backend, API integrations and deployment side handled together rather than split across separate people.\n\nI can help clarify the scope, then take care of the implementation, API/backend work, responsive front-end, deployment details, and clean handover.\n\nPortfolio: https://www.rayanstudios.com/fr\n\nIf you can share the current stack, priority features and timeline, I can reply with a concrete scope and estimate.\n\nBest,\nRayan\nMission: https://www.peopleperhour.com/freelance-jobs/technology-programming/programming-coding/part-time-remote-full-stack-engineer-c-net-python-angul-4501117"
+    },
+    {
+      "source": "PeoplePerHour - remote full stack web developer",
+      "sourceUrl": "https://www.peopleperhour.com/freelance-remote-full-stack-web-developer-jobs",
+      "platform": "peopleperhour",
+      "searchQuery": "remote full stack web developer",
+      "remoteGuaranteed": false,
+      "title": "I need a full stack blockchain developer",
+      "description": "",
+      "sourceDescription": "Find Freelance Remote Full Stack Web Developer Jobs, Work & Projects. 1000&#x27;s of freelance jobs that pay. Earn money and work with high quality customers.",
+      "url": "https://www.peopleperhour.com/freelance-jobs/technology-programming/programming-coding/i-need-a-full-stack-blockchain-developer-4498763",
+      "extractionMethod": "anchor",
+      "score": 40,
+      "fit": "low",
+      "reasons": [
+        "profil full-stack/platform"
+      ],
+      "remoteOnly": true,
+      "remoteStatus": "remote_listing",
+      "remoteReason": "offre issue d une page de missions teletravail",
+      "proposalDraft": "Hi,\n\nI saw your project \"I need a full stack blockchain developer\" and it looks close to the kind of full-stack/platform work I handle.\n\nMy strongest fit here is React/Node full-stack delivery, with the backend, API integrations and deployment side handled together rather than split across separate people.\n\nI can help clarify the scope, then take care of the implementation, API/backend work, responsive front-end, deployment details, and clean handover.\n\nPortfolio: https://www.rayanstudios.com/fr\n\nIf you can share the current stack, priority features and timeline, I can reply with a concrete scope and estimate.\n\nBest,\nRayan\nMission: https://www.peopleperhour.com/freelance-jobs/technology-programming/programming-coding/i-need-a-full-stack-blockchain-developer-4498763"
+    },
+    {
+      "source": "PeoplePerHour - remote devops deployment",
+      "sourceUrl": "https://www.peopleperhour.com/freelance-remote-devops-deployment-jobs",
+      "platform": "peopleperhour",
+      "searchQuery": "remote devops deployment",
+      "remoteGuaranteed": false,
+      "title": "LMOps / DevOps for Knowledge Transfer & Course Development",
+      "description": "",
+      "sourceDescription": "Find Freelance Remote Devops Deployment Jobs, Work & Projects. 1000&#x27;s of freelance jobs that pay. Earn money and work with high quality customers.",
+      "url": "https://www.peopleperhour.com/freelance-jobs/artificial-intelligence/artificial-intelligence-agent-development/lmops-devops-for-knowledge-transfer-course-development-4504955",
+      "extractionMethod": "anchor",
+      "score": 40,
+      "fit": "low",
+      "reasons": [
+        "DevOps, CI/CD ou deploiement"
+      ],
+      "remoteOnly": true,
+      "remoteStatus": "remote_listing",
+      "remoteReason": "offre issue d une page de missions teletravail",
+      "proposalDraft": "Hi,\n\nI saw your project \"LMOps / DevOps for Knowledge Transfer & Course Development\" and it looks close to the kind of full-stack/platform work I handle.\n\nMy strongest fit here is the DevOps and deployment side: Docker, CI/CD, VPS/cloud setup, SSL/DNS and production handover.\n\nI can help clarify the scope, then take care of the implementation, API/backend work, responsive front-end, deployment details, and clean handover.\n\nPortfolio: https://www.rayanstudios.com/fr\n\nIf you can share the current stack, priority features and timeline, I can reply with a concrete scope and estimate.\n\nBest,\nRayan\nMission: https://www.peopleperhour.com/freelance-jobs/artificial-intelligence/artificial-intelligence-agent-development/lmops-devops-for-knowledge-transfer-course-development-4504955"
+    },
+    {
+      "source": "PeoplePerHour - remote devops deployment",
+      "sourceUrl": "https://www.peopleperhour.com/freelance-remote-devops-deployment-jobs",
+      "platform": "peopleperhour",
+      "searchQuery": "remote devops deployment",
+      "remoteGuaranteed": false,
+      "title": "Deployment of Ready Code",
+      "description": "",
+      "sourceDescription": "Find Freelance Remote Devops Deployment Jobs, Work & Projects. 1000&#x27;s of freelance jobs that pay. Earn money and work with high quality customers.",
+      "url": "https://www.peopleperhour.com/freelance-jobs/technology-programming/programming-coding/deployment-of-ready-code-4502662",
+      "extractionMethod": "anchor",
+      "score": 40,
+      "fit": "low",
+      "reasons": [
+        "DevOps, CI/CD ou deploiement"
+      ],
+      "remoteOnly": true,
+      "remoteStatus": "remote_listing",
+      "remoteReason": "offre issue d une page de missions teletravail",
+      "proposalDraft": "Hi,\n\nI saw your project \"Deployment of Ready Code\" and it looks close to the kind of full-stack/platform work I handle.\n\nMy strongest fit here is the DevOps and deployment side: Docker, CI/CD, VPS/cloud setup, SSL/DNS and production handover.\n\nI can help clarify the scope, then take care of the implementation, API/backend work, responsive front-end, deployment details, and clean handover.\n\nPortfolio: https://www.rayanstudios.com/fr\n\nIf you can share the current stack, priority features and timeline, I can reply with a concrete scope and estimate.\n\nBest,\nRayan\nMission: https://www.peopleperhour.com/freelance-jobs/technology-programming/programming-coding/deployment-of-ready-code-4502662"
+    },
+    {
+      "source": "PeoplePerHour - remote devops deployment",
+      "sourceUrl": "https://www.peopleperhour.com/freelance-remote-devops-deployment-jobs",
+      "platform": "peopleperhour",
+      "searchQuery": "remote devops deployment",
+      "remoteGuaranteed": false,
+      "title": "Backend Engineer for Startup Team — Full-Time Level Commitment",
+      "description": "",
+      "sourceDescription": "Find Freelance Remote Devops Deployment Jobs, Work & Projects. 1000&#x27;s of freelance jobs that pay. Earn money and work with high quality customers.",
+      "url": "https://www.peopleperhour.com/freelance-jobs/technology-programming/programming-coding/backend-engineer-for-startup-team-full-time-level-commit-4505469",
+      "extractionMethod": "anchor",
+      "score": 40,
+      "fit": "low",
+      "reasons": [
+        "profil full-stack/platform"
+      ],
+      "remoteOnly": true,
+      "remoteStatus": "remote_listing",
+      "remoteReason": "offre issue d une page de missions teletravail",
+      "proposalDraft": "Hi,\n\nI saw your project \"Backend Engineer for Startup Team — Full-Time Level Commitment\" and it looks close to the kind of full-stack/platform work I handle.\n\nMy strongest fit here is taking a web product from a clear scope to a working, maintainable implementation.\n\nI can help clarify the scope, then take care of the implementation, API/backend work, responsive front-end, deployment details, and clean handover.\n\nPortfolio: https://www.rayanstudios.com/fr\n\nIf you can share the current stack, priority features and timeline, I can reply with a concrete scope and estimate.\n\nBest,\nRayan\nMission: https://www.peopleperhour.com/freelance-jobs/technology-programming/programming-coding/backend-engineer-for-startup-team-full-time-level-commit-4505469"
+    },
+    {
+      "source": "PeoplePerHour - remote api integration",
+      "sourceUrl": "https://www.peopleperhour.com/freelance-remote-api-integration-jobs",
+      "platform": "peopleperhour",
+      "searchQuery": "remote api integration",
+      "remoteGuaranteed": false,
+      "title": "Opencart connector for UPS Global Shipping API",
+      "description": "",
+      "sourceDescription": "Find Freelance Remote Api Integration Jobs, Work & Projects. 1000&#x27;s of freelance jobs that pay. Earn money and work with high quality customers.",
+      "url": "https://www.peopleperhour.com/freelance-jobs/technology-programming/programming-coding/opencart-connector-for-ups-global-shipping-api-4503640",
+      "extractionMethod": "anchor",
+      "score": 40,
+      "fit": "low",
+      "reasons": [
+        "profil full-stack/platform"
+      ],
+      "remoteOnly": true,
+      "remoteStatus": "remote_listing",
+      "remoteReason": "offre issue d une page de missions teletravail",
+      "proposalDraft": "Hi,\n\nI saw your project \"Opencart connector for UPS Global Shipping API\" and it looks close to the kind of full-stack/platform work I handle.\n\nMy strongest fit here is API and payment integration work, including Stripe-style flows, backend reliability and practical production checks.\n\nI can help clarify the scope, then take care of the implementation, API/backend work, responsive front-end, deployment details, and clean handover.\n\nPortfolio: https://www.rayanstudios.com/fr\n\nIf you can share the current stack, priority features and timeline, I can reply with a concrete scope and estimate.\n\nBest,\nRayan\nMission: https://www.peopleperhour.com/freelance-jobs/technology-programming/programming-coding/opencart-connector-for-ups-global-shipping-api-4503640"
+    }
+  ],
+  "errors": []
+}

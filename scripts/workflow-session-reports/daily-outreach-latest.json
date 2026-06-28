@@ -1,0 +1,31 @@
+{
+  "generatedAt": "2026-06-27T15:17:31.761Z",
+  "workflow": {
+    "name": "Daily Outreach",
+    "slug": "daily-outreach",
+    "status": "local-check",
+    "primaryReport": "/Users/rayansekkat/Desktop/rayan_project/rayan-studio/scripts/outreach-report.json"
+  },
+  "github": {
+    "runId": null,
+    "runNumber": null,
+    "runAttempt": null,
+    "runUrl": null,
+    "repository": null,
+    "actor": null,
+    "eventName": null,
+    "refName": null,
+    "sha": null
+  },
+  "summary": {
+    "status": "completed",
+    "dryRun": false,
+    "sourceMode": "multilingual_markets",
+    "sourceCount": 12,
+    "scannedOpportunities": 160,
+    "candidateCount": 69,
+    "sentCount": 20,
+    "errorCount": 0,
+    "errors": []
+  }
+}

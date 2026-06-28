@@ -1,8 +1,7 @@
-const axios = require('axios');
-const nodemailer = require('nodemailer');
 const dns = require('dns').promises;
 const fs = require('fs');
 const path = require('path');
+const { humanizeMessage, textToSimpleHtml } = require('./message-humanizer');
 
 const GOOGLE_API_KEY = process.env.GOOGLE_PLACES_API_KEY;
 const GMAIL_USER = process.env.GMAIL_USER;
@@ -278,6 +277,7 @@ function buildSearchQuery(target) {
 }
 
 async function searchBusinesses(query, maxPages = GOOGLE_PLACES_MAX_PAGES) {
+  const axios = require('axios');
   const url = 'https://maps.googleapis.com/maps/api/place/textsearch/json';
   const results = [];
   let pageToken = null;
@@ -310,6 +310,7 @@ async function searchBusinesses(query, maxPages = GOOGLE_PLACES_MAX_PAGES) {
 }
 
 async function getPlaceDetails(placeId) {
+  const axios = require('axios');
   const url = 'https://maps.googleapis.com/maps/api/place/details/json';
   try {
     const response = await axios.get(url, {
@@ -474,6 +475,7 @@ async function validateEmailBeforeSend(email) {
 
 async function extractEmailFromWebsite(websiteUrl) {
   try {
+    const axios = require('axios');
     const normalizedUrl = websiteUrl.startsWith('http') ? websiteUrl : `https://${websiteUrl}`;
     const response = await axios.get(normalizedUrl, {
       timeout: 8000,
@@ -571,15 +573,11 @@ function buildEmailContent(details) {
   const language = details.language === 'en' ? 'en' : 'fr';
   const businessNameText = details.name || 'votre entreprise';
   const websiteText = displayUrl(details.website);
-  const businessName = escapeHtml(businessNameText);
-  const websiteUrl = escapeHtml(details.website);
-  const websiteLabel = escapeHtml(websiteText);
   const studioUrlText = localizedStudioUrl(language);
-  const studioUrl = escapeHtml(studioUrlText);
   const subject = pickSubject(details);
 
   if (language === 'en') {
-    const text = `Hello,
+    const rawText = `Hello,
 
 I hope you don't mind me reaching out. I came across the website for ${businessNameText} (${websiteText}).
 
@@ -596,44 +594,13 @@ ${studioUrlText}
 
 If you would rather not receive messages from me, simply reply "unsubscribe".`;
 
-    const html = `
-<div style="font-family: Arial, sans-serif; max-width: 560px; color: #17120f; line-height: 1.55;">
-  <p>Hello,</p>
+    const text = humanizeMessage(rawText, { language });
+    const html = textToSimpleHtml(text);
 
-  <p>
-    I hope you don't mind me reaching out. I came across the website for
-    <strong>${businessName}</strong>
-    (<a href="${websiteUrl}" style="color: #17120f;">${websiteLabel}</a>).
-  </p>
-
-  <p>
-    I work on website redesigns for small businesses, especially when the website already exists
-    but no longer reflects the quality of the business.
-  </p>
-
-  <p>
-    Without wanting to be intrusive, I think there may be 2-3 simple points worth clarifying on your website:
-    readability, mobile journey, contact path and overall image.
-  </p>
-
-  <p>If useful, I can send you a free quick review of your website, with no obligation.</p>
-
-  <p>
-    Best regards,<br/>
-    Rayan<br/>
-    Rayan Studio<br/>
-    <a href="${studioUrl}" style="color: #17120f;">${studioUrl}</a>
-  </p>
-
-  <p style="font-size: 12px; color: #6f6256;">
-    If you would rather not receive messages from me, simply reply "unsubscribe".
-  </p>
-</div>`;
-
-    return { subject, text, html };
+    return { subject, text, html, humanized: true };
   }
 
-  const text = `Bonjour,
+  const rawText = `Bonjour,
 
 Je me permets de vous écrire car je suis tombé sur le site de ${businessNameText} (${websiteText}).
 
@@ -650,44 +617,14 @@ ${studioUrlText}
 
 Si vous préférez ne plus recevoir de messages, répondez simplement "désabonnement".`;
 
-  const html = `
-<div style="font-family: Arial, sans-serif; max-width: 560px; color: #17120f; line-height: 1.55;">
-  <p>Bonjour,</p>
+  const text = humanizeMessage(rawText, { language });
+  const html = textToSimpleHtml(text);
 
-  <p>
-    Je me permets de vous écrire car je suis tombé sur le site de
-    <strong>${businessName}</strong>
-    (<a href="${websiteUrl}" style="color: #17120f;">${websiteLabel}</a>).
-  </p>
-
-  <p>
-    Je travaille sur des refontes de sites pour petites entreprises, surtout quand le site existe déjà
-    mais ne reflète plus vraiment la qualité de l’activité.
-  </p>
-
-  <p>
-    Sans vouloir être intrusif, je pense qu'il y aurait peut-être 2-3 points simples à clarifier sur votre site :
-    lisibilité, parcours mobile, contact et image générale.
-  </p>
-
-  <p>Si cela vous intéresse, je peux vous envoyer une mini lecture gratuite de votre site, sans engagement.</p>
-
-  <p>
-    Bonne journée,<br/>
-    Rayan<br/>
-    Rayan Studio<br/>
-    <a href="${studioUrl}" style="color: #17120f;">${studioUrl}</a>
-  </p>
-
-  <p style="font-size: 12px; color: #6f6256;">
-    Si vous préférez ne plus recevoir de messages, répondez simplement "désabonnement".
-  </p>
-</div>`;
-
-  return { subject, text, html };
+  return { subject, text, html, humanized: true };
 }
 
 async function sendEmail(to, subject, html, text) {
+  const nodemailer = require('nodemailer');
   const transporter = nodemailer.createTransport({
     service: 'gmail',
     auth: { user: GMAIL_USER, pass: GMAIL_APP_PASSWORD },

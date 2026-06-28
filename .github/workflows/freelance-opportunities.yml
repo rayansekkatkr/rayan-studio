@@ -1,0 +1,83 @@
+name: Freelance Opportunities
+
+on:
+  workflow_dispatch:
+    inputs:
+      search_urls:
+        description: "Optional override URLs to scan, separated by newlines or commas"
+        required: false
+        default: ""
+        type: string
+      platforms:
+        description: "Optional platform ids: codeur,404works,freelancer,peopleperhour,remoteok,weworkremotely,upwork"
+        required: false
+        default: ""
+        type: string
+      search_queries:
+        description: "Optional search terms, separated by newlines or commas"
+        required: false
+        default: ""
+        type: string
+      max_opportunities:
+        description: "Maximum scored opportunities to keep"
+        required: false
+        default: "30"
+        type: string
+  schedule:
+    # Monday to Friday at 08:00 UTC.
+    # During summer this is 10:00 in Paris and 17:00 in Seoul.
+    - cron: '0 8 * * 1-5'
+
+permissions:
+  contents: write
+
+concurrency:
+  group: freelance-opportunities
+  cancel-in-progress: false
+
+jobs:
+  scan-opportunities:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Install dependencies
+        working-directory: scripts
+        run: npm install
+
+      - name: Scan freelance opportunities
+        working-directory: scripts
+        run: node freelance-opportunities.js
+        env:
+          FREELANCE_SEARCH_URLS: ${{ github.event_name == 'workflow_dispatch' && inputs.search_urls || vars.FREELANCE_SEARCH_URLS }}
+          FREELANCE_PLATFORMS: ${{ github.event_name == 'workflow_dispatch' && inputs.platforms || vars.FREELANCE_PLATFORMS }}
+          FREELANCE_SEARCH_QUERIES: ${{ github.event_name == 'workflow_dispatch' && inputs.search_queries || vars.FREELANCE_SEARCH_QUERIES }}
+          FREELANCE_REQUIRE_REMOTE: "true"
+          MAX_OPPORTUNITIES: ${{ github.event_name == 'workflow_dispatch' && inputs.max_opportunities || '30' }}
+          STUDIO_URL: ${{ vars.STUDIO_URL || 'https://www.rayanstudios.com' }}
+
+      - name: Write workflow session report
+        if: always()
+        working-directory: scripts
+        run: node workflow-session-report.js
+        env:
+          WORKFLOW_SESSION_NAME: Freelance Opportunities
+          WORKFLOW_SESSION_SLUG: freelance-opportunities
+          WORKFLOW_SESSION_STATUS: ${{ job.status }}
+          WORKFLOW_SESSION_PRIMARY_REPORT: freelance-opportunities-report.json
+
+      - name: Commit opportunities report
+        if: always()
+        run: |
+          git config --local user.email "github-actions@github.com"
+          git config --local user.name "GitHub Actions"
+          git add scripts/freelance-opportunities-report.json scripts/workflow-session-reports/
+          git diff --staged --quiet || git commit -m "chore: update freelance opportunities report [$(date +'%Y-%m-%d')]"
+          git push
