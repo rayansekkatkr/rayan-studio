@@ -1,21 +1,21 @@
 {
-  "generatedAt": "2026-06-27T15:17:31.761Z",
+  "generatedAt": "2026-06-29T09:33:43.518Z",
   "workflow": {
     "name": "Daily Outreach",
     "slug": "daily-outreach",
-    "status": "local-check",
-    "primaryReport": "/Users/rayansekkat/Desktop/rayan_project/rayan-studio/scripts/outreach-report.json"
+    "status": "success",
+    "primaryReport": "/home/runner/work/rayan-studio/rayan-studio/scripts/outreach-report.json"
   },
   "github": {
-    "runId": null,
-    "runNumber": null,
-    "runAttempt": null,
-    "runUrl": null,
-    "repository": null,
-    "actor": null,
-    "eventName": null,
-    "refName": null,
-    "sha": null
+    "runId": "28362221218",
+    "runNumber": "51",
+    "runAttempt": "1",
+    "runUrl": "https://github.com/rayansekkatkr/rayan-studio/actions/runs/28362221218",
+    "repository": "rayansekkatkr/rayan-studio",
+    "actor": "rayansekkatkr",
+    "eventName": "schedule",
+    "refName": "main",
+    "sha": "cf43441b"
   },
   "summary": {
     "status": "completed",
@@ -23,7 +23,10 @@
     "sourceMode": "multilingual_markets",
     "sourceCount": 12,
     "scannedOpportunities": 160,
-    "candidateCount": 69,
+    "scoredCandidateCount": null,
+    "remotePolicy": null,
+    "remoteRejectedCount": null,
+    "candidateCount": 62,
     "sentCount": 20,
     "errorCount": 0,
     "errors": []

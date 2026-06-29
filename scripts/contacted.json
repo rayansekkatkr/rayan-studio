@@ -9550,7 +9550,667 @@
           "note": "Initial outreach email sent"
         }
       ]
+    },
+    {
+      "placeId": "ChIJv2FfraAEdkgRqUHgOmF3SNQ",
+      "name": "Studio Manifest Architects",
+      "email": "info@studiomanifest.co.uk",
+      "website": "https://www.studiomanifest.co.uk/",
+      "phone": "020 3375 6511",
+      "address": "93 Newington Causeway, London SE1 6BN, UK",
+      "marketCode": "GB",
+      "market": "United Kingdom",
+      "marketGroup": "english",
+      "language": "en",
+      "score": 95,
+      "reasons": [
+        "site existant",
+        "email trouve",
+        "telephone disponible",
+        "adresse locale",
+        "fiche nommee"
+      ],
+      "sentAt": "2026-06-29T09:28:49.275Z",
+      "status": "sent",
+      "lifecycleStage": "contacted",
+      "firstContactedAt": "2026-06-29T09:28:49.275Z",
+      "lastContactedAt": "2026-06-29T09:28:49.275Z",
+      "nextFollowUpAt": "2026-07-06T09:28:49.275Z",
+      "timeline": [
+        {
+          "at": "2026-06-29T09:28:49.275Z",
+          "type": "sent",
+          "note": "Initial outreach email sent"
+        }
+      ]
+    },
+    {
+      "placeId": "ChIJQVObFoocdkgRqnwyICUfQPE",
+      "name": "White Red Architects",
+      "email": "contact@white-red.co.uk",
+      "website": "http://www.whitered.co.uk/",
+      "phone": "020 7859 4521",
+      "address": "45 Charlotte Rd, London EC2A 3PD, UK",
+      "marketCode": "GB",
+      "market": "United Kingdom",
+      "marketGroup": "english",
+      "language": "en",
+      "score": 95,
+      "reasons": [
+        "site existant",
+        "email trouve",
+        "telephone disponible",
+        "adresse locale",
+        "fiche nommee"
+      ],
+      "sentAt": "2026-06-29T09:29:02.477Z",
+      "status": "sent",
+      "lifecycleStage": "contacted",
+      "firstContactedAt": "2026-06-29T09:29:02.477Z",
+      "lastContactedAt": "2026-06-29T09:29:02.477Z",
+      "nextFollowUpAt": "2026-07-06T09:29:02.477Z",
+      "timeline": [
+        {
+          "at": "2026-06-29T09:29:02.477Z",
+          "type": "sent",
+          "note": "Initial outreach email sent"
+        }
+      ]
+    },
+    {
+      "placeId": "ChIJ0Vbv36YEdkgRSQkdLNFuogg",
+      "name": "LA London Architects",
+      "email": "info@la.london",
+      "website": "https://www.la.london/",
+      "phone": "020 7403 1000",
+      "address": "38 Southwark St, London SE1 1UN, UK",
+      "marketCode": "GB",
+      "market": "United Kingdom",
+      "marketGroup": "english",
+      "language": "en",
+      "score": 95,
+      "reasons": [
+        "site existant",
+        "email trouve",
+        "telephone disponible",
+        "adresse locale",
+        "fiche nommee"
+      ],
+      "sentAt": "2026-06-29T09:29:07.489Z",
+      "status": "sent",
+      "lifecycleStage": "contacted",
+      "firstContactedAt": "2026-06-29T09:29:07.489Z",
+      "lastContactedAt": "2026-06-29T09:29:07.489Z",
+      "nextFollowUpAt": "2026-07-06T09:29:07.489Z",
+      "timeline": [
+        {
+          "at": "2026-06-29T09:29:07.489Z",
+          "type": "sent",
+          "note": "Initial outreach email sent"
+        }
+      ]
+    },
+    {
+      "placeId": "ChIJLbwJ8DUNdkgRc7Qn5AY5BWw",
+      "name": "AH Architecture",
+      "email": "info@ah-architecture.co.uk",
+      "website": "http://www.ah-architecture.co.uk/",
+      "phone": "07756 066098",
+      "address": "15 Alleyn Park, Southall UB2 5QT, UK",
+      "marketCode": "GB",
+      "market": "United Kingdom",
+      "marketGroup": "english",
+      "language": "en",
+      "score": 95,
+      "reasons": [
+        "site existant",
+        "email trouve",
+        "telephone disponible",
+        "adresse locale",
+        "fiche nommee"
+      ],
+      "sentAt": "2026-06-29T09:29:12.775Z",
+      "status": "sent",
+      "lifecycleStage": "contacted",
+      "firstContactedAt": "2026-06-29T09:29:12.775Z",
+      "lastContactedAt": "2026-06-29T09:29:12.775Z",
+      "nextFollowUpAt": "2026-07-06T09:29:12.775Z",
+      "timeline": [
+        {
+          "at": "2026-06-29T09:29:12.775Z",
+          "type": "sent",
+          "note": "Initial outreach email sent"
+        }
+      ]
+    },
+    {
+      "placeId": "ChIJFWOs7NZ1Z0gRgrqRdbqfbI8",
+      "name": "Ireland Accountant - Dublin Accounting Firm",
+      "email": "info@irelandaccountant.ie",
+      "website": "https://irelandaccountant.ie/",
+      "phone": "(0818) 003 373",
+      "address": "Suite 4, Inniscarra, Main St, Rathcoole, Dublin, D24 E029, Ireland",
+      "marketCode": "IE",
+      "market": "Ireland",
+      "marketGroup": "english",
+      "language": "en",
+      "score": 95,
+      "reasons": [
+        "site existant",
+        "email trouve",
+        "telephone disponible",
+        "adresse locale",
+        "fiche nommee"
+      ],
+      "sentAt": "2026-06-29T09:29:19.109Z",
+      "status": "sent",
+      "lifecycleStage": "contacted",
+      "firstContactedAt": "2026-06-29T09:29:19.109Z",
+      "lastContactedAt": "2026-06-29T09:29:19.109Z",
+      "nextFollowUpAt": "2026-07-06T09:29:19.109Z",
+      "timeline": [
+        {
+          "at": "2026-06-29T09:29:19.109Z",
+          "type": "sent",
+          "note": "Initial outreach email sent"
+        }
+      ]
+    },
+    {
+      "placeId": "ChIJX2Lj_GdtZ0gRCaaOKvNmoTg",
+      "name": "TASC Accountants",
+      "email": "info@tascaccountants.com",
+      "website": "https://www.tascaccountants.com/",
+      "phone": "087 225 7706",
+      "address": "3C Main St, Ongar Village, Dublin, D15 RW2D, Ireland",
+      "marketCode": "IE",
+      "market": "Ireland",
+      "marketGroup": "english",
+      "language": "en",
+      "score": 95,
+      "reasons": [
+        "site existant",
+        "email trouve",
+        "telephone disponible",
+        "adresse locale",
+        "fiche nommee"
+      ],
+      "sentAt": "2026-06-29T09:29:31.792Z",
+      "status": "sent",
+      "lifecycleStage": "contacted",
+      "firstContactedAt": "2026-06-29T09:29:31.792Z",
+      "lastContactedAt": "2026-06-29T09:29:31.792Z",
+      "nextFollowUpAt": "2026-07-06T09:29:31.792Z",
+      "timeline": [
+        {
+          "at": "2026-06-29T09:29:31.792Z",
+          "type": "sent",
+          "note": "Initial outreach email sent"
+        }
+      ]
+    },
+    {
+      "placeId": "ChIJge2TcHEPZ0gRd_hcTwgZpVQ",
+      "name": "CloudAccounts",
+      "email": "info@cloudaccounts.ie",
+      "website": "http://cloudaccounts.ie/",
+      "phone": "(01) 233 8100",
+      "address": "13 Adelaide Rd, Saint Kevin's, Dublin 2, D02 P950, Ireland",
+      "marketCode": "IE",
+      "market": "Ireland",
+      "marketGroup": "english",
+      "language": "en",
+      "score": 95,
+      "reasons": [
+        "site existant",
+        "email trouve",
+        "telephone disponible",
+        "adresse locale",
+        "fiche nommee"
+      ],
+      "sentAt": "2026-06-29T09:29:38.373Z",
+      "status": "sent",
+      "lifecycleStage": "contacted",
+      "firstContactedAt": "2026-06-29T09:29:38.373Z",
+      "lastContactedAt": "2026-06-29T09:29:38.373Z",
+      "nextFollowUpAt": "2026-07-06T09:29:38.373Z",
+      "timeline": [
+        {
+          "at": "2026-06-29T09:29:38.373Z",
+          "type": "sent",
+          "note": "Initial outreach email sent"
+        }
+      ]
+    },
+    {
+      "placeId": "ChIJ5WMcqWc7DogRlQn1JqqbiIs",
+      "name": "Traveluxe",
+      "email": "info@traveluxe.com",
+      "website": "https://www.traveluxe.com/",
+      "phone": "(872) 810-2023",
+      "address": "10326 S Avers Ave, Chicago, IL 60655, USA",
+      "marketCode": "US",
+      "market": "United States",
+      "marketGroup": "english",
+      "language": "en",
+      "score": 95,
+      "reasons": [
+        "site existant",
+        "email trouve",
+        "telephone disponible",
+        "adresse locale",
+        "fiche nommee"
+      ],
+      "sentAt": "2026-06-29T09:30:07.342Z",
+      "status": "sent",
+      "lifecycleStage": "contacted",
+      "firstContactedAt": "2026-06-29T09:30:07.342Z",
+      "lastContactedAt": "2026-06-29T09:30:07.342Z",
+      "nextFollowUpAt": "2026-07-06T09:30:07.342Z",
+      "timeline": [
+        {
+          "at": "2026-06-29T09:30:07.342Z",
+          "type": "sent",
+          "note": "Initial outreach email sent"
+        }
+      ]
+    },
+    {
+      "placeId": "ChIJIwWdmweHUocRPNHZIOeWV6E",
+      "name": "Mouseketrips",
+      "email": "info@mouseketrips.com",
+      "website": "https://www.mouseketrips.com/",
+      "phone": "(801) 613-1363",
+      "address": "5213 S Commerce Dr, Murray, UT 84107, USA",
+      "marketCode": "US",
+      "market": "United States",
+      "marketGroup": "english",
+      "language": "en",
+      "score": 95,
+      "reasons": [
+        "site existant",
+        "email trouve",
+        "telephone disponible",
+        "adresse locale",
+        "fiche nommee"
+      ],
+      "sentAt": "2026-06-29T09:30:17.152Z",
+      "status": "sent",
+      "lifecycleStage": "contacted",
+      "firstContactedAt": "2026-06-29T09:30:17.152Z",
+      "lastContactedAt": "2026-06-29T09:30:17.152Z",
+      "nextFollowUpAt": "2026-07-06T09:30:17.152Z",
+      "timeline": [
+        {
+          "at": "2026-06-29T09:30:17.152Z",
+          "type": "sent",
+          "note": "Initial outreach email sent"
+        }
+      ]
+    },
+    {
+      "placeId": "ChIJ__SiLlKs2YgRt-NygMj82OQ",
+      "name": "Forest Travel Agency",
+      "email": "info@foresttravel.com",
+      "website": "https://foresttravel.com/",
+      "phone": "(786) 751-8771",
+      "address": "2420 NE Miami Gardens Dr Suite 301 Aventura, Miami, FL 33180, USA",
+      "marketCode": "US",
+      "market": "United States",
+      "marketGroup": "english",
+      "language": "en",
+      "score": 95,
+      "reasons": [
+        "site existant",
+        "email trouve",
+        "telephone disponible",
+        "adresse locale",
+        "fiche nommee"
+      ],
+      "sentAt": "2026-06-29T09:30:22.140Z",
+      "status": "sent",
+      "lifecycleStage": "contacted",
+      "firstContactedAt": "2026-06-29T09:30:22.140Z",
+      "lastContactedAt": "2026-06-29T09:30:22.140Z",
+      "nextFollowUpAt": "2026-07-06T09:30:22.140Z",
+      "timeline": [
+        {
+          "at": "2026-06-29T09:30:22.140Z",
+          "type": "sent",
+          "note": "Initial outreach email sent"
+        }
+      ]
+    },
+    {
+      "placeId": "ChIJsaM_bJFKO4gR5RaTcjjbgK8",
+      "name": "Corporate Travel Service",
+      "email": "info@ctscentral.net",
+      "website": "http://www.ctscentral.net/",
+      "phone": "(313) 565-8888",
+      "address": "41780 Six Mile Rd Ste 100, Northville, MI 48168, USA",
+      "marketCode": "US",
+      "market": "United States",
+      "marketGroup": "english",
+      "language": "en",
+      "score": 95,
+      "reasons": [
+        "site existant",
+        "email trouve",
+        "telephone disponible",
+        "adresse locale",
+        "fiche nommee"
+      ],
+      "sentAt": "2026-06-29T09:30:26.576Z",
+      "status": "sent",
+      "lifecycleStage": "contacted",
+      "firstContactedAt": "2026-06-29T09:30:26.576Z",
+      "lastContactedAt": "2026-06-29T09:30:26.576Z",
+      "nextFollowUpAt": "2026-07-06T09:30:26.576Z",
+      "timeline": [
+        {
+          "at": "2026-06-29T09:30:26.576Z",
+          "type": "sent",
+          "note": "Initial outreach email sent"
+        }
+      ]
+    },
+    {
+      "placeId": "ChIJxys--QvqwokRTRt9uvnmMrU",
+      "name": "WAC Travel - Europe & Africa Specialist",
+      "email": "info@wactravel.com",
+      "website": "http://www.wactravel.com/",
+      "phone": "(845) 535-1300",
+      "address": "48 S Broadway Unit 822, Nyack, NY 10960, USA",
+      "marketCode": "US",
+      "market": "United States",
+      "marketGroup": "english",
+      "language": "en",
+      "score": 95,
+      "reasons": [
+        "site existant",
+        "email trouve",
+        "telephone disponible",
+        "adresse locale",
+        "fiche nommee"
+      ],
+      "sentAt": "2026-06-29T09:30:32.538Z",
+      "status": "sent",
+      "lifecycleStage": "contacted",
+      "firstContactedAt": "2026-06-29T09:30:32.538Z",
+      "lastContactedAt": "2026-06-29T09:30:32.538Z",
+      "nextFollowUpAt": "2026-07-06T09:30:32.538Z",
+      "timeline": [
+        {
+          "at": "2026-06-29T09:30:32.538Z",
+          "type": "sent",
+          "note": "Initial outreach email sent"
+        }
+      ]
+    },
+    {
+      "placeId": "ChIJ8bZhrlND04kRWHmz-GhdFOo",
+      "name": "Canada Flowers",
+      "email": "service@flowers.ca",
+      "website": "https://www.canadaflowers.ca/toronto",
+      "phone": "(647) 800-4400",
+      "address": "45 Brisbane Rd #1, North York, ON M3J 2K1, Canada",
+      "marketCode": "CA-EN",
+      "market": "English-speaking Canada",
+      "marketGroup": "english",
+      "language": "en",
+      "score": 95,
+      "reasons": [
+        "site existant",
+        "email trouve",
+        "telephone disponible",
+        "adresse locale",
+        "fiche nommee"
+      ],
+      "sentAt": "2026-06-29T09:30:37.773Z",
+      "status": "sent",
+      "lifecycleStage": "contacted",
+      "firstContactedAt": "2026-06-29T09:30:37.773Z",
+      "lastContactedAt": "2026-06-29T09:30:37.773Z",
+      "nextFollowUpAt": "2026-07-06T09:30:37.773Z",
+      "timeline": [
+        {
+          "at": "2026-06-29T09:30:37.773Z",
+          "type": "sent",
+          "note": "Initial outreach email sent"
+        }
+      ]
+    },
+    {
+      "placeId": "ChIJZ9kFXyUzK4gRXxrmhGT4ISM",
+      "name": "Flowers Of The World",
+      "email": "info@flowersoftheworld.ca",
+      "website": "https://www.flowersoftheworld.ca/",
+      "phone": "(416) 440-0077",
+      "address": "191 Eglinton Ave E #106, Toronto, ON M4P 1K1, Canada",
+      "marketCode": "CA-EN",
+      "market": "English-speaking Canada",
+      "marketGroup": "english",
+      "language": "en",
+      "score": 95,
+      "reasons": [
+        "site existant",
+        "email trouve",
+        "telephone disponible",
+        "adresse locale",
+        "fiche nommee"
+      ],
+      "sentAt": "2026-06-29T09:30:43.816Z",
+      "status": "sent",
+      "lifecycleStage": "contacted",
+      "firstContactedAt": "2026-06-29T09:30:43.816Z",
+      "lastContactedAt": "2026-06-29T09:30:43.816Z",
+      "nextFollowUpAt": "2026-07-06T09:30:43.816Z",
+      "timeline": [
+        {
+          "at": "2026-06-29T09:30:43.816Z",
+          "type": "sent",
+          "note": "Initial outreach email sent"
+        }
+      ]
+    },
+    {
+      "placeId": "ChIJtT47gBl3hlQRuOnV4zJ2_MM",
+      "name": "Canada Florist Burnaby",
+      "email": "info@canadafloristburnaby.com",
+      "website": "https://www.canadafloristburnaby.com/",
+      "phone": "(604) 298-0522",
+      "address": "4726 Canada Wy, Burnaby, BC V5G 1L2, Canada",
+      "marketCode": "CA-EN",
+      "market": "English-speaking Canada",
+      "marketGroup": "english",
+      "language": "en",
+      "score": 95,
+      "reasons": [
+        "site existant",
+        "email trouve",
+        "telephone disponible",
+        "adresse locale",
+        "fiche nommee"
+      ],
+      "sentAt": "2026-06-29T09:30:48.609Z",
+      "status": "sent",
+      "lifecycleStage": "contacted",
+      "firstContactedAt": "2026-06-29T09:30:48.609Z",
+      "lastContactedAt": "2026-06-29T09:30:48.609Z",
+      "nextFollowUpAt": "2026-07-06T09:30:48.609Z",
+      "timeline": [
+        {
+          "at": "2026-06-29T09:30:48.609Z",
+          "type": "sent",
+          "note": "Initial outreach email sent"
+        }
+      ]
+    },
+    {
+      "placeId": "ChIJ1eMxWsTP1IkRwvkahlonNZw",
+      "name": "Canadiana Flowers",
+      "email": "info@canadianaflowers.com",
+      "website": "https://www.canadianaflowers.com/?utm_source=GMB&utm_medium=GMB%20Visitors&utm_campaign=Organic%20GMB",
+      "phone": "(888) 265-7673",
+      "address": "3087 Kingston Rd, Scarborough, ON M1M 1P1, Canada",
+      "marketCode": "CA-EN",
+      "market": "English-speaking Canada",
+      "marketGroup": "english",
+      "language": "en",
+      "score": 95,
+      "reasons": [
+        "site existant",
+        "email trouve",
+        "telephone disponible",
+        "adresse locale",
+        "fiche nommee"
+      ],
+      "sentAt": "2026-06-29T09:30:59.680Z",
+      "status": "sent",
+      "lifecycleStage": "contacted",
+      "firstContactedAt": "2026-06-29T09:30:59.680Z",
+      "lastContactedAt": "2026-06-29T09:30:59.680Z",
+      "nextFollowUpAt": "2026-07-06T09:30:59.680Z",
+      "timeline": [
+        {
+          "at": "2026-06-29T09:30:59.680Z",
+          "type": "sent",
+          "note": "Initial outreach email sent"
+        }
+      ]
+    },
+    {
+      "placeId": "ChIJhfJQczPL1IkRaUJ5bRMuK4Q",
+      "name": "Toronto Flower Gallery",
+      "email": "support@torontoflowergallery.com",
+      "website": "https://www.torontoflowergallery.com/",
+      "phone": "(416) 367-0476",
+      "address": "111 Victoria St, Toronto, ON M5C 2M6, Canada",
+      "marketCode": "CA-EN",
+      "market": "English-speaking Canada",
+      "marketGroup": "english",
+      "language": "en",
+      "score": 95,
+      "reasons": [
+        "site existant",
+        "email trouve",
+        "telephone disponible",
+        "adresse locale",
+        "fiche nommee"
+      ],
+      "sentAt": "2026-06-29T09:31:05.558Z",
+      "status": "sent",
+      "lifecycleStage": "contacted",
+      "firstContactedAt": "2026-06-29T09:31:05.558Z",
+      "lastContactedAt": "2026-06-29T09:31:05.558Z",
+      "nextFollowUpAt": "2026-07-06T09:31:05.558Z",
+      "timeline": [
+        {
+          "at": "2026-06-29T09:31:05.558Z",
+          "type": "sent",
+          "note": "Initial outreach email sent"
+        }
+      ]
+    },
+    {
+      "placeId": "ChIJnVL8nMo1K4gRXVLgWiqkVt4",
+      "name": "Sweetpea's",
+      "email": "info@sweetpeas.ca",
+      "website": "http://www.sweetpeas.ca/",
+      "phone": "(416) 537-3700",
+      "address": "169 Roncesvalles Ave, Toronto, ON M6R 2L3, Canada",
+      "marketCode": "CA-EN",
+      "market": "English-speaking Canada",
+      "marketGroup": "english",
+      "language": "en",
+      "score": 95,
+      "reasons": [
+        "site existant",
+        "email trouve",
+        "telephone disponible",
+        "adresse locale",
+        "fiche nommee"
+      ],
+      "sentAt": "2026-06-29T09:31:10.710Z",
+      "status": "sent",
+      "lifecycleStage": "contacted",
+      "firstContactedAt": "2026-06-29T09:31:10.710Z",
+      "lastContactedAt": "2026-06-29T09:31:10.710Z",
+      "nextFollowUpAt": "2026-07-06T09:31:10.710Z",
+      "timeline": [
+        {
+          "at": "2026-06-29T09:31:10.710Z",
+          "type": "sent",
+          "note": "Initial outreach email sent"
+        }
+      ]
+    },
+    {
+      "placeId": "ChIJH-g3rrQ1K4gRH5eQbDKxEZI",
+      "name": "Flowers & Flowers",
+      "email": "info@flowersandflowers.ca",
+      "website": "https://flowersandflowers.ca/",
+      "phone": "(800) 213-9050",
+      "address": "37 King St E, Toronto, ON M5C 1E9, Canada",
+      "marketCode": "CA-EN",
+      "market": "English-speaking Canada",
+      "marketGroup": "english",
+      "language": "en",
+      "score": 95,
+      "reasons": [
+        "site existant",
+        "email trouve",
+        "telephone disponible",
+        "adresse locale",
+        "fiche nommee"
+      ],
+      "sentAt": "2026-06-29T09:31:15.640Z",
+      "status": "sent",
+      "lifecycleStage": "contacted",
+      "firstContactedAt": "2026-06-29T09:31:15.640Z",
+      "lastContactedAt": "2026-06-29T09:31:15.640Z",
+      "nextFollowUpAt": "2026-07-06T09:31:15.640Z",
+      "timeline": [
+        {
+          "at": "2026-06-29T09:31:15.640Z",
+          "type": "sent",
+          "note": "Initial outreach email sent"
+        }
+      ]
+    },
+    {
+      "placeId": "ChIJD-O6Udk0K4gRV18_tYkDlek",
+      "name": "Bloomen Flower Delivery - Toronto",
+      "email": "info@bloomen.ca",
+      "website": "https://bloomen.ca/",
+      "phone": "(647) 689-4643",
+      "address": "500 King St W #301, Toronto, ON M5V 1L9, Canada",
+      "marketCode": "CA-EN",
+      "market": "English-speaking Canada",
+      "marketGroup": "english",
+      "language": "en",
+      "score": 95,
+      "reasons": [
+        "site existant",
+        "email trouve",
+        "telephone disponible",
+        "adresse locale",
+        "fiche nommee"
+      ],
+      "sentAt": "2026-06-29T09:31:20.571Z",
+      "status": "sent",
+      "lifecycleStage": "contacted",
+      "firstContactedAt": "2026-06-29T09:31:20.571Z",
+      "lastContactedAt": "2026-06-29T09:31:20.571Z",
+      "nextFollowUpAt": "2026-07-06T09:31:20.571Z",
+      "timeline": [
+        {
+          "at": "2026-06-29T09:31:20.571Z",
+          "type": "sent",
+          "note": "Initial outreach email sent"
+        }
+      ]
     }
   ],
-  "lastUpdated": "2026-06-26T09:03:34.234Z"
+  "lastUpdated": "2026-06-29T09:33:43.475Z"
 }
