@@ -1,32 +1,32 @@
 {
-  "generatedAt": "2026-06-27T18:56:27.835Z",
+  "generatedAt": "2026-06-29T09:48:10.941Z",
   "workflow": {
     "name": "Freelance Opportunities",
     "slug": "freelance-opportunities",
     "status": "success",
-    "primaryReport": "/Users/rayansekkat/Desktop/rayan_project/rayan-studio/scripts/freelance-opportunities-report.json"
+    "primaryReport": "/home/runner/work/rayan-studio/rayan-studio/scripts/freelance-opportunities-report.json"
   },
   "github": {
-    "runId": null,
-    "runNumber": null,
-    "runAttempt": null,
-    "runUrl": null,
-    "repository": null,
-    "actor": null,
-    "eventName": null,
-    "refName": null,
-    "sha": null
+    "runId": "28363310842",
+    "runNumber": "1",
+    "runAttempt": "1",
+    "runUrl": "https://github.com/rayansekkatkr/rayan-studio/actions/runs/28363310842",
+    "repository": "rayansekkatkr/rayan-studio",
+    "actor": "rayansekkatkr",
+    "eventName": "schedule",
+    "refName": "main",
+    "sha": "ccd2434c"
   },
   "summary": {
-    "status": "ready",
+    "status": "no_candidates",
     "dryRun": null,
     "sourceMode": "default_platforms",
     "sourceCount": 18,
     "scannedOpportunities": 252,
-    "scoredCandidateCount": 94,
+    "scoredCandidateCount": 83,
     "remotePolicy": "explicit_remote_only",
-    "remoteRejectedCount": 74,
-    "candidateCount": 20,
+    "remoteRejectedCount": 83,
+    "candidateCount": 0,
     "sentCount": 0,
     "errorCount": 0,
     "errors": []
