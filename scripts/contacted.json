@@ -10210,7 +10210,665 @@
           "note": "Initial outreach email sent"
         }
       ]
+    },
+    {
+      "placeId": "ChIJHRPF9By72EcRYfZnK1jRIgM",
+      "name": "@ Architect UK Ltd",
+      "email": "office@architectltd.co.uk",
+      "website": "https://www.architectltd.co.uk/",
+      "phone": "01708 477899",
+      "address": "Suite 2 Clocktower House Station Road, West Horndon, Brentwood CM13 3XL, UK",
+      "marketCode": "GB",
+      "market": "United Kingdom",
+      "marketGroup": "english",
+      "language": "en",
+      "score": 95,
+      "reasons": [
+        "site existant",
+        "email trouve",
+        "telephone disponible",
+        "adresse locale",
+        "fiche nommee"
+      ],
+      "sentAt": "2026-06-30T09:00:46.627Z",
+      "status": "sent",
+      "lifecycleStage": "contacted",
+      "firstContactedAt": "2026-06-30T09:00:46.627Z",
+      "lastContactedAt": "2026-06-30T09:00:46.627Z",
+      "nextFollowUpAt": "2026-07-07T09:00:46.627Z",
+      "timeline": [
+        {
+          "at": "2026-06-30T09:00:46.627Z",
+          "type": "sent",
+          "note": "Initial outreach email sent"
+        }
+      ]
+    },
+    {
+      "placeId": "ChIJO04PKw0MZ0gRUAmO3dN6npQ",
+      "name": "Hugh McCarthy & Associates Accountants",
+      "email": "info@yourcompany.com",
+      "website": "https://www.hmca.ie/",
+      "phone": "(01) 492 4367",
+      "address": "1st & 2nd Floor, The Mill, Greenmount Industrial Estate, Harold's Cross, Dublin 12, Ireland",
+      "marketCode": "IE",
+      "market": "Ireland",
+      "marketGroup": "english",
+      "language": "en",
+      "score": 95,
+      "reasons": [
+        "site existant",
+        "email trouve",
+        "telephone disponible",
+        "adresse locale",
+        "fiche nommee"
+      ],
+      "sentAt": "2026-06-30T09:01:01.471Z",
+      "status": "sent",
+      "lifecycleStage": "contacted",
+      "firstContactedAt": "2026-06-30T09:01:01.471Z",
+      "lastContactedAt": "2026-06-30T09:01:01.471Z",
+      "nextFollowUpAt": "2026-07-07T09:01:01.471Z",
+      "timeline": [
+        {
+          "at": "2026-06-30T09:01:01.471Z",
+          "type": "sent",
+          "note": "Initial outreach email sent"
+        }
+      ]
+    },
+    {
+      "placeId": "ChIJYxC38ETZhVQRStHl6HkCufw",
+      "name": "Designer Blooms Canada",
+      "email": "support@gist-apps.com",
+      "website": "https://designerblooms.ca/?utm_source=google+business+profile&utm_medium=local+seo",
+      "phone": "(236) 428-2704",
+      "address": "339 Railway St Suite 110, Vancouver, BC V6A 1A4, Canada",
+      "marketCode": "CA-EN",
+      "market": "English-speaking Canada",
+      "marketGroup": "english",
+      "language": "en",
+      "score": 95,
+      "reasons": [
+        "site existant",
+        "email trouve",
+        "telephone disponible",
+        "adresse locale",
+        "fiche nommee"
+      ],
+      "sentAt": "2026-06-30T09:01:23.963Z",
+      "status": "sent",
+      "lifecycleStage": "contacted",
+      "firstContactedAt": "2026-06-30T09:01:23.963Z",
+      "lastContactedAt": "2026-06-30T09:01:23.963Z",
+      "nextFollowUpAt": "2026-07-07T09:01:23.963Z",
+      "timeline": [
+        {
+          "at": "2026-06-30T09:01:23.963Z",
+          "type": "sent",
+          "note": "Initial outreach email sent"
+        }
+      ]
+    },
+    {
+      "placeId": "ChIJ-9_TBY0tK4gRTIBRZPS79vs",
+      "name": "416-Flowers: Same-Day Flower Delivery Toronto",
+      "email": "7329bb42e158a05a7845b07fc6d69c98@sentry.infra.thewebstage.com",
+      "website": "https://www.416-flowers.com/",
+      "phone": "(416) 356-9377",
+      "address": "60 Doncaster Ave #6, Thornhill, ON L3T 1L5, Canada",
+      "marketCode": "CA-EN",
+      "market": "English-speaking Canada",
+      "marketGroup": "english",
+      "language": "en",
+      "score": 95,
+      "reasons": [
+        "site existant",
+        "email trouve",
+        "telephone disponible",
+        "adresse locale",
+        "fiche nommee"
+      ],
+      "sentAt": "2026-06-30T09:01:29.911Z",
+      "status": "sent",
+      "lifecycleStage": "contacted",
+      "firstContactedAt": "2026-06-30T09:01:29.911Z",
+      "lastContactedAt": "2026-06-30T09:01:29.911Z",
+      "nextFollowUpAt": "2026-07-07T09:01:29.911Z",
+      "timeline": [
+        {
+          "at": "2026-06-30T09:01:29.911Z",
+          "type": "sent",
+          "note": "Initial outreach email sent"
+        }
+      ]
+    },
+    {
+      "placeId": "ChIJX7PhpkCuEmsRo4Eze5_icRY",
+      "name": "Monte Luke Studio",
+      "email": "studio@monteluke.com.au",
+      "website": "https://monteluke.com.au/",
+      "phone": "(02) 9299 3041",
+      "address": "2/2 Barrack St, Sydney NSW 2000, Australia",
+      "marketCode": "AU",
+      "market": "Australia",
+      "marketGroup": "english",
+      "language": "en",
+      "score": 95,
+      "reasons": [
+        "site existant",
+        "email trouve",
+        "telephone disponible",
+        "adresse locale",
+        "fiche nommee"
+      ],
+      "sentAt": "2026-06-30T09:01:37.748Z",
+      "status": "sent",
+      "lifecycleStage": "contacted",
+      "firstContactedAt": "2026-06-30T09:01:37.748Z",
+      "lastContactedAt": "2026-06-30T09:01:37.748Z",
+      "nextFollowUpAt": "2026-07-07T09:01:37.748Z",
+      "timeline": [
+        {
+          "at": "2026-06-30T09:01:37.748Z",
+          "type": "sent",
+          "note": "Initial outreach email sent"
+        }
+      ]
+    },
+    {
+      "placeId": "ChIJ96QLkCCuEmsRDxVDP7kyCb4",
+      "name": "Orlando Sydney Corporate Photography",
+      "email": "enquiries@orlandosydney.com",
+      "website": "https://orlandosydney.com/corporate-photography-sydney/?utm_source=gmb&utm_medium=organicweb&utm_campaign=may",
+      "phone": "(02) 9698 4192",
+      "address": "Unit 78/156 Chalmers St, Surry Hills NSW 2010, Australia",
+      "marketCode": "AU",
+      "market": "Australia",
+      "marketGroup": "english",
+      "language": "en",
+      "score": 95,
+      "reasons": [
+        "site existant",
+        "email trouve",
+        "telephone disponible",
+        "adresse locale",
+        "fiche nommee"
+      ],
+      "sentAt": "2026-06-30T09:01:45.240Z",
+      "status": "sent",
+      "lifecycleStage": "contacted",
+      "firstContactedAt": "2026-06-30T09:01:45.240Z",
+      "lastContactedAt": "2026-06-30T09:01:45.240Z",
+      "nextFollowUpAt": "2026-07-07T09:01:45.240Z",
+      "timeline": [
+        {
+          "at": "2026-06-30T09:01:45.240Z",
+          "type": "sent",
+          "note": "Initial outreach email sent"
+        }
+      ]
+    },
+    {
+      "placeId": "ChIJPYMqG5u7MioRZrsl79GP-S4",
+      "name": "Perth Photography",
+      "email": "info@perthphotography.com",
+      "website": "http://perthphotography.com/",
+      "phone": "0411 532 843",
+      "address": "Studio 1, 2nd Level/10 Pier St, Perth WA 6000, Australia",
+      "marketCode": "AU",
+      "market": "Australia",
+      "marketGroup": "english",
+      "language": "en",
+      "score": 95,
+      "reasons": [
+        "site existant",
+        "email trouve",
+        "telephone disponible",
+        "adresse locale",
+        "fiche nommee"
+      ],
+      "sentAt": "2026-06-30T09:01:51.631Z",
+      "status": "sent",
+      "lifecycleStage": "contacted",
+      "firstContactedAt": "2026-06-30T09:01:51.631Z",
+      "lastContactedAt": "2026-06-30T09:01:51.631Z",
+      "nextFollowUpAt": "2026-07-07T09:01:51.631Z",
+      "timeline": [
+        {
+          "at": "2026-06-30T09:01:51.631Z",
+          "type": "sent",
+          "note": "Initial outreach email sent"
+        }
+      ]
+    },
+    {
+      "placeId": "ChIJ7UMKFpmvMioR2ajvIa3buwQ",
+      "name": "Archer Imagery",
+      "email": "info@archerimagery.com.au",
+      "website": "http://www.archerimagery.com.au/",
+      "phone": "(08) 9200 6275",
+      "address": "2 Church St, Perth WA 6000, Australia",
+      "marketCode": "AU",
+      "market": "Australia",
+      "marketGroup": "english",
+      "language": "en",
+      "score": 95,
+      "reasons": [
+        "site existant",
+        "email trouve",
+        "telephone disponible",
+        "adresse locale",
+        "fiche nommee"
+      ],
+      "sentAt": "2026-06-30T09:02:00.137Z",
+      "status": "sent",
+      "lifecycleStage": "contacted",
+      "firstContactedAt": "2026-06-30T09:02:00.137Z",
+      "lastContactedAt": "2026-06-30T09:02:00.137Z",
+      "nextFollowUpAt": "2026-07-07T09:02:00.137Z",
+      "timeline": [
+        {
+          "at": "2026-06-30T09:02:00.137Z",
+          "type": "sent",
+          "note": "Initial outreach email sent"
+        }
+      ]
+    },
+    {
+      "placeId": "ChIJfWYY1Ck-1moRPSIAM8bzR7E",
+      "name": "Museum of Australian Photography (MAPh)",
+      "email": "maph@monash.vic.gov.au",
+      "website": "http://www.maph.org.au/",
+      "phone": "(03) 8544 0500",
+      "address": "860 Ferntree Gully Rd, Wheelers Hill VIC 3150, Australia",
+      "marketCode": "AU",
+      "market": "Australia",
+      "marketGroup": "english",
+      "language": "en",
+      "score": 95,
+      "reasons": [
+        "site existant",
+        "email trouve",
+        "telephone disponible",
+        "adresse locale",
+        "fiche nommee"
+      ],
+      "sentAt": "2026-06-30T09:02:05.761Z",
+      "status": "sent",
+      "lifecycleStage": "contacted",
+      "firstContactedAt": "2026-06-30T09:02:05.761Z",
+      "lastContactedAt": "2026-06-30T09:02:05.761Z",
+      "nextFollowUpAt": "2026-07-07T09:02:05.761Z",
+      "timeline": [
+        {
+          "at": "2026-06-30T09:02:05.761Z",
+          "type": "sent",
+          "note": "Initial outreach email sent"
+        }
+      ]
+    },
+    {
+      "placeId": "ChIJG8-q3JiKMW0R6kzEtrJJUGg",
+      "name": "Farrell Construction",
+      "email": "contact@farrells.co.nz",
+      "website": "https://www.farrellconstruction.co.nz/",
+      "phone": "03 374 3266",
+      "address": "1/10 Vulcan Place, Middleton, Christchurch 8024, New Zealand",
+      "marketCode": "NZ",
+      "market": "New Zealand",
+      "marketGroup": "english",
+      "language": "en",
+      "score": 95,
+      "reasons": [
+        "site existant",
+        "email trouve",
+        "telephone disponible",
+        "adresse locale",
+        "fiche nommee"
+      ],
+      "sentAt": "2026-06-30T09:02:16.438Z",
+      "status": "sent",
+      "lifecycleStage": "contacted",
+      "firstContactedAt": "2026-06-30T09:02:16.438Z",
+      "lastContactedAt": "2026-06-30T09:02:16.438Z",
+      "nextFollowUpAt": "2026-07-07T09:02:16.438Z",
+      "timeline": [
+        {
+          "at": "2026-06-30T09:02:16.438Z",
+          "type": "sent",
+          "note": "Initial outreach email sent"
+        }
+      ]
+    },
+    {
+      "placeId": "ChIJOcNXX8VHDW0R0SuRAGYzpAo",
+      "name": "NZ Strong Construction",
+      "email": "info@nzstrong.co.nz",
+      "website": "http://www.nzstrong.co.nz/",
+      "phone": "09 630 7324",
+      "address": "108 Mount Eden Road, Mount Eden, Auckland 1024, New Zealand",
+      "marketCode": "NZ",
+      "market": "New Zealand",
+      "marketGroup": "english",
+      "language": "en",
+      "score": 95,
+      "reasons": [
+        "site existant",
+        "email trouve",
+        "telephone disponible",
+        "adresse locale",
+        "fiche nommee"
+      ],
+      "sentAt": "2026-06-30T09:02:27.708Z",
+      "status": "sent",
+      "lifecycleStage": "contacted",
+      "firstContactedAt": "2026-06-30T09:02:27.708Z",
+      "lastContactedAt": "2026-06-30T09:02:27.708Z",
+      "nextFollowUpAt": "2026-07-07T09:02:27.708Z",
+      "timeline": [
+        {
+          "at": "2026-06-30T09:02:27.708Z",
+          "type": "sent",
+          "note": "Initial outreach email sent"
+        }
+      ]
+    },
+    {
+      "placeId": "ChIJEVamgl_XFowRXV0ucmvUeQI",
+      "name": "Cascade Construction Limited New Zealand",
+      "email": "hr@cascadeconstructionlimited-nz.com",
+      "website": "https://cascadeconstructionlimited-nz.com/",
+      "phone": "09 951 9632",
+      "address": "3 City Road, Grafton, Auckland 1010, New Zealand",
+      "marketCode": "NZ",
+      "market": "New Zealand",
+      "marketGroup": "english",
+      "language": "en",
+      "score": 95,
+      "reasons": [
+        "site existant",
+        "email trouve",
+        "telephone disponible",
+        "adresse locale",
+        "fiche nommee"
+      ],
+      "sentAt": "2026-06-30T09:02:32.840Z",
+      "status": "sent",
+      "lifecycleStage": "contacted",
+      "firstContactedAt": "2026-06-30T09:02:32.840Z",
+      "lastContactedAt": "2026-06-30T09:02:32.840Z",
+      "nextFollowUpAt": "2026-07-07T09:02:32.840Z",
+      "timeline": [
+        {
+          "at": "2026-06-30T09:02:32.840Z",
+          "type": "sent",
+          "note": "Initial outreach email sent"
+        }
+      ]
+    },
+    {
+      "placeId": "ChIJnRw6dZIjbW0R0Y_xoBAXRzY",
+      "name": "NZ Construction Alliance",
+      "email": "warren@nzca.net.nz",
+      "website": "http://www.nzca.net.nz/",
+      "phone": "020 499 9550",
+      "address": "Ground Floor/181 Arthur Porter Drive, Te Rapa, Hamilton 3241, New Zealand",
+      "marketCode": "NZ",
+      "market": "New Zealand",
+      "marketGroup": "english",
+      "language": "en",
+      "score": 95,
+      "reasons": [
+        "site existant",
+        "email trouve",
+        "telephone disponible",
+        "adresse locale",
+        "fiche nommee"
+      ],
+      "sentAt": "2026-06-30T09:02:39.967Z",
+      "status": "sent",
+      "lifecycleStage": "contacted",
+      "firstContactedAt": "2026-06-30T09:02:39.967Z",
+      "lastContactedAt": "2026-06-30T09:02:39.967Z",
+      "nextFollowUpAt": "2026-07-07T09:02:39.967Z",
+      "timeline": [
+        {
+          "at": "2026-06-30T09:02:39.967Z",
+          "type": "sent",
+          "note": "Initial outreach email sent"
+        }
+      ]
+    },
+    {
+      "placeId": "ChIJV0z-w6escm0ROmxtTrMMTi4",
+      "name": "CH Construction NZ",
+      "email": "admin@chcnz.co.nz",
+      "website": "https://chcnz.co.nz/",
+      "phone": "09 294 7027",
+      "address": "237 Great South Road, Drury 2113, New Zealand",
+      "marketCode": "NZ",
+      "market": "New Zealand",
+      "marketGroup": "english",
+      "language": "en",
+      "score": 95,
+      "reasons": [
+        "site existant",
+        "email trouve",
+        "telephone disponible",
+        "adresse locale",
+        "fiche nommee"
+      ],
+      "sentAt": "2026-06-30T09:02:46.642Z",
+      "status": "sent",
+      "lifecycleStage": "contacted",
+      "firstContactedAt": "2026-06-30T09:02:46.642Z",
+      "lastContactedAt": "2026-06-30T09:02:46.642Z",
+      "nextFollowUpAt": "2026-07-07T09:02:46.642Z",
+      "timeline": [
+        {
+          "at": "2026-06-30T09:02:46.642Z",
+          "type": "sent",
+          "note": "Initial outreach email sent"
+        }
+      ]
+    },
+    {
+      "placeId": "ChIJbSabfxZHDW0RebiR7p5Bu3Q",
+      "name": "JRA Construction",
+      "email": "joe@jraconstruction.co.nz",
+      "website": "https://www.jraconstruction.co.nz/",
+      "phone": "09 884 0915",
+      "address": "45 Brighton Road, Parnell, Auckland 1052, New Zealand",
+      "marketCode": "NZ",
+      "market": "New Zealand",
+      "marketGroup": "english",
+      "language": "en",
+      "score": 95,
+      "reasons": [
+        "site existant",
+        "email trouve",
+        "telephone disponible",
+        "adresse locale",
+        "fiche nommee"
+      ],
+      "sentAt": "2026-06-30T09:02:53.038Z",
+      "status": "sent",
+      "lifecycleStage": "contacted",
+      "firstContactedAt": "2026-06-30T09:02:53.038Z",
+      "lastContactedAt": "2026-06-30T09:02:53.038Z",
+      "nextFollowUpAt": "2026-07-07T09:02:53.038Z",
+      "timeline": [
+        {
+          "at": "2026-06-30T09:02:53.038Z",
+          "type": "sent",
+          "note": "Initial outreach email sent"
+        }
+      ]
+    },
+    {
+      "placeId": "ChIJO_0tQTCLMW0RDOAen179YsU",
+      "name": "Builders and Contractors",
+      "email": "angela@markat.co.nz",
+      "website": "https://www.buildersandcontractors.co.nz/",
+      "phone": "03 961 5050",
+      "address": "38 Lowe Street, Addington, Christchurch 8011, New Zealand",
+      "marketCode": "NZ",
+      "market": "New Zealand",
+      "marketGroup": "english",
+      "language": "en",
+      "score": 95,
+      "reasons": [
+        "site existant",
+        "email trouve",
+        "telephone disponible",
+        "adresse locale",
+        "fiche nommee"
+      ],
+      "sentAt": "2026-06-30T09:03:10.461Z",
+      "status": "sent",
+      "lifecycleStage": "contacted",
+      "firstContactedAt": "2026-06-30T09:03:10.461Z",
+      "lastContactedAt": "2026-06-30T09:03:10.461Z",
+      "nextFollowUpAt": "2026-07-07T09:03:10.461Z",
+      "timeline": [
+        {
+          "at": "2026-06-30T09:03:10.461Z",
+          "type": "sent",
+          "note": "Initial outreach email sent"
+        }
+      ]
+    },
+    {
+      "placeId": "ChIJVyPp359z5kcR99bY0aXv3TI",
+      "name": "Agence Wix Factory",
+      "email": "contact@wixfactory.com",
+      "website": "http://www.wixfactory.com/",
+      "phone": "01 87 66 17 63",
+      "address": "34 Av. des Champs-Élysées, 75008 Paris, France",
+      "marketCode": "FR",
+      "market": "France",
+      "marketGroup": "francophone",
+      "language": "fr",
+      "score": 95,
+      "reasons": [
+        "site existant",
+        "email trouve",
+        "telephone disponible",
+        "adresse locale",
+        "fiche nommee"
+      ],
+      "sentAt": "2026-06-30T09:03:14.937Z",
+      "status": "sent",
+      "lifecycleStage": "contacted",
+      "firstContactedAt": "2026-06-30T09:03:14.937Z",
+      "lastContactedAt": "2026-06-30T09:03:14.937Z",
+      "nextFollowUpAt": "2026-07-07T09:03:14.937Z",
+      "timeline": [
+        {
+          "at": "2026-06-30T09:03:14.937Z",
+          "type": "sent",
+          "note": "Initial outreach email sent"
+        }
+      ]
+    },
+    {
+      "placeId": "ChIJu4HAZuuqIw8RG6Mi0VV4cSo",
+      "name": "NuBet - Agence Marketing Digital / Wordpress / SEO / SEA",
+      "email": "hello@nubet.fr",
+      "website": "https://nubet.fr/",
+      "phone": "07 43 27 11 44",
+      "address": "6 Rue d'Armaillé, 75017 Paris, France",
+      "marketCode": "FR",
+      "market": "France",
+      "marketGroup": "francophone",
+      "language": "fr",
+      "score": 95,
+      "reasons": [
+        "site existant",
+        "email trouve",
+        "telephone disponible",
+        "adresse locale",
+        "fiche nommee"
+      ],
+      "sentAt": "2026-06-30T09:03:19.509Z",
+      "status": "sent",
+      "lifecycleStage": "contacted",
+      "firstContactedAt": "2026-06-30T09:03:19.509Z",
+      "lastContactedAt": "2026-06-30T09:03:19.509Z",
+      "nextFollowUpAt": "2026-07-07T09:03:19.509Z",
+      "timeline": [
+        {
+          "at": "2026-06-30T09:03:19.509Z",
+          "type": "sent",
+          "note": "Initial outreach email sent"
+        }
+      ]
+    },
+    {
+      "placeId": "ChIJreu_ziJv5kcRGiUUbvOB-pw",
+      "name": "✅ Agence de marketing digital - Drift Digital Paris",
+      "email": "contact@driftdigital.fr",
+      "website": "https://driftdigital.fr/",
+      "phone": null,
+      "address": "2 Rue Chaptal, 75009 Paris, France",
+      "marketCode": "FR",
+      "market": "France",
+      "marketGroup": "francophone",
+      "language": "fr",
+      "score": 85,
+      "reasons": [
+        "site existant",
+        "email trouve",
+        "adresse locale",
+        "fiche nommee"
+      ],
+      "sentAt": "2026-06-30T09:03:24.980Z",
+      "status": "sent",
+      "lifecycleStage": "contacted",
+      "firstContactedAt": "2026-06-30T09:03:24.980Z",
+      "lastContactedAt": "2026-06-30T09:03:24.980Z",
+      "nextFollowUpAt": "2026-07-07T09:03:24.980Z",
+      "timeline": [
+        {
+          "at": "2026-06-30T09:03:24.980Z",
+          "type": "sent",
+          "note": "Initial outreach email sent"
+        }
+      ]
+    },
+    {
+      "placeId": "ChIJCYiskd1v5kcRvjgrN_f07UI",
+      "name": "Clark Influence",
+      "email": "info@clarkinfluence.com",
+      "website": "https://www.clarkinfluence.com/marketing-influence-paris",
+      "phone": null,
+      "address": "96 Rue de la Victoire, 75009 Paris, France",
+      "marketCode": "FR",
+      "market": "France",
+      "marketGroup": "francophone",
+      "language": "fr",
+      "score": 85,
+      "reasons": [
+        "site existant",
+        "email trouve",
+        "adresse locale",
+        "fiche nommee"
+      ],
+      "sentAt": "2026-06-30T09:03:30.021Z",
+      "status": "sent",
+      "lifecycleStage": "contacted",
+      "firstContactedAt": "2026-06-30T09:03:30.021Z",
+      "lastContactedAt": "2026-06-30T09:03:30.021Z",
+      "nextFollowUpAt": "2026-07-07T09:03:30.021Z",
+      "timeline": [
+        {
+          "at": "2026-06-30T09:03:30.021Z",
+          "type": "sent",
+          "note": "Initial outreach email sent"
+        }
+      ]
     }
   ],
-  "lastUpdated": "2026-06-29T09:33:43.475Z"
+  "lastUpdated": "2026-06-30T09:04:47.181Z"
 }

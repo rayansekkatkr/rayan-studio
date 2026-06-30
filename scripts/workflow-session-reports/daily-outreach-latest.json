@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-06-29T09:33:43.518Z",
+  "generatedAt": "2026-06-30T09:04:47.226Z",
   "workflow": {
     "name": "Daily Outreach",
     "slug": "daily-outreach",
@@ -7,15 +7,15 @@
     "primaryReport": "/home/runner/work/rayan-studio/rayan-studio/scripts/outreach-report.json"
   },
   "github": {
-    "runId": "28362221218",
-    "runNumber": "51",
+    "runId": "28432680708",
+    "runNumber": "52",
     "runAttempt": "1",
-    "runUrl": "https://github.com/rayansekkatkr/rayan-studio/actions/runs/28362221218",
+    "runUrl": "https://github.com/rayansekkatkr/rayan-studio/actions/runs/28432680708",
     "repository": "rayansekkatkr/rayan-studio",
     "actor": "rayansekkatkr",
     "eventName": "schedule",
     "refName": "main",
-    "sha": "cf43441b"
+    "sha": "a045d390"
   },
   "summary": {
     "status": "completed",
@@ -26,7 +26,7 @@
     "scoredCandidateCount": null,
     "remotePolicy": null,
     "remoteRejectedCount": null,
-    "candidateCount": 62,
+    "candidateCount": 53,
     "sentCount": 20,
     "errorCount": 0,
     "errors": []
