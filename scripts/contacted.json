@@ -10868,7 +10868,667 @@
           "note": "Initial outreach email sent"
         }
       ]
+    },
+    {
+      "placeId": "ChIJTVgwEbk7b4cRIYnSwMLWp5o",
+      "name": "Flyer Club Inc",
+      "email": "info@flyer-club.com",
+      "website": "http://www.flyer-club.com/",
+      "phone": "(844) 447-0007",
+      "address": "1603 Capitol Ave Ste 413 b102, Cheyenne, WY 82001, USA",
+      "marketCode": "US",
+      "market": "United States",
+      "marketGroup": "english",
+      "language": "en",
+      "score": 95,
+      "reasons": [
+        "site existant",
+        "email trouve",
+        "telephone disponible",
+        "adresse locale",
+        "fiche nommee"
+      ],
+      "sentAt": "2026-07-01T09:02:23.438Z",
+      "status": "sent",
+      "lifecycleStage": "contacted",
+      "firstContactedAt": "2026-07-01T09:02:23.438Z",
+      "lastContactedAt": "2026-07-01T09:02:23.438Z",
+      "nextFollowUpAt": "2026-07-08T09:02:23.438Z",
+      "timeline": [
+        {
+          "at": "2026-07-01T09:02:23.438Z",
+          "type": "sent",
+          "note": "Initial outreach email sent"
+        }
+      ]
+    },
+    {
+      "placeId": "ChIJy9OyTcI6b4cR8r0oa_8Arrs",
+      "name": "EZ Check-in Travel",
+      "email": "infos@ezcheckin.net",
+      "website": "http://ezcheckin.net/",
+      "phone": "(800) 515-6760",
+      "address": "109 E 17th St Ste 63, Cheyenne, WY 82001, USA",
+      "marketCode": "US",
+      "market": "United States",
+      "marketGroup": "english",
+      "language": "en",
+      "score": 95,
+      "reasons": [
+        "site existant",
+        "email trouve",
+        "telephone disponible",
+        "adresse locale",
+        "fiche nommee"
+      ],
+      "sentAt": "2026-07-01T09:02:28.294Z",
+      "status": "sent",
+      "lifecycleStage": "contacted",
+      "firstContactedAt": "2026-07-01T09:02:28.294Z",
+      "lastContactedAt": "2026-07-01T09:02:28.294Z",
+      "nextFollowUpAt": "2026-07-08T09:02:28.294Z",
+      "timeline": [
+        {
+          "at": "2026-07-01T09:02:28.294Z",
+          "type": "sent",
+          "note": "Initial outreach email sent"
+        }
+      ]
+    },
+    {
+      "placeId": "ChIJv2BIq4KHa4cRgjPCal1KuV0",
+      "name": "Michele Travels",
+      "email": "info@micheletravels.com",
+      "website": "http://micheletravels.com/",
+      "phone": "(720) 515-8594",
+      "address": "Tennyson St, Denver, CO 80212, USA",
+      "marketCode": "US",
+      "market": "United States",
+      "marketGroup": "english",
+      "language": "en",
+      "score": 95,
+      "reasons": [
+        "site existant",
+        "email trouve",
+        "telephone disponible",
+        "adresse locale",
+        "fiche nommee"
+      ],
+      "sentAt": "2026-07-01T09:02:36.066Z",
+      "status": "sent",
+      "lifecycleStage": "contacted",
+      "firstContactedAt": "2026-07-01T09:02:36.066Z",
+      "lastContactedAt": "2026-07-01T09:02:36.066Z",
+      "nextFollowUpAt": "2026-07-08T09:02:36.066Z",
+      "timeline": [
+        {
+          "at": "2026-07-01T09:02:36.066Z",
+          "type": "sent",
+          "note": "Initial outreach email sent"
+        }
+      ]
+    },
+    {
+      "placeId": "ChIJg6jKg169t4kRlaw26ZS1bQU",
+      "name": "Xceptional Travel Destinations (XTD) Travel Club",
+      "email": "info@xceptionaltravel.com",
+      "website": "https://www.xceptionaltravel.com/",
+      "phone": "(844) 983-8728",
+      "address": "9134 Piscataway Rd #2164, Clinton, MD 20735, USA",
+      "marketCode": "US",
+      "market": "United States",
+      "marketGroup": "english",
+      "language": "en",
+      "score": 95,
+      "reasons": [
+        "site existant",
+        "email trouve",
+        "telephone disponible",
+        "adresse locale",
+        "fiche nommee"
+      ],
+      "sentAt": "2026-07-01T09:02:43.771Z",
+      "status": "sent",
+      "lifecycleStage": "contacted",
+      "firstContactedAt": "2026-07-01T09:02:43.771Z",
+      "lastContactedAt": "2026-07-01T09:02:43.771Z",
+      "nextFollowUpAt": "2026-07-08T09:02:43.771Z",
+      "timeline": [
+        {
+          "at": "2026-07-01T09:02:43.771Z",
+          "type": "sent",
+          "note": "Initial outreach email sent"
+        }
+      ]
+    },
+    {
+      "placeId": "ChIJq5rwZqSvbocRKy-FKwVdnhI",
+      "name": "All Inclusive Reservations",
+      "email": "elly@allinclusivereservations.com",
+      "website": "https://www.allinclusivereservations.com/",
+      "phone": "(800) 960-1778",
+      "address": "586 Beaver Creek Ct., Brighton, CO 80601, USA",
+      "marketCode": "US",
+      "market": "United States",
+      "marketGroup": "english",
+      "language": "en",
+      "score": 95,
+      "reasons": [
+        "site existant",
+        "email trouve",
+        "telephone disponible",
+        "adresse locale",
+        "fiche nommee"
+      ],
+      "sentAt": "2026-07-01T09:02:48.641Z",
+      "status": "sent",
+      "lifecycleStage": "contacted",
+      "firstContactedAt": "2026-07-01T09:02:48.641Z",
+      "lastContactedAt": "2026-07-01T09:02:48.641Z",
+      "nextFollowUpAt": "2026-07-08T09:02:48.641Z",
+      "timeline": [
+        {
+          "at": "2026-07-01T09:02:48.641Z",
+          "type": "sent",
+          "note": "Initial outreach email sent"
+        }
+      ]
+    },
+    {
+      "placeId": "ChIJy89JuxgfoFMRO5KAmOz9TQE",
+      "name": "Florans Flower Boutique - Calgary Trail",
+      "email": "florans.ca@gmail.com",
+      "website": "https://florans.ca/",
+      "phone": "(587) 989-3019",
+      "address": "5530 Calgary Trl NW, Edmonton, AB T6H 4K1, Canada",
+      "marketCode": "CA-EN",
+      "market": "English-speaking Canada",
+      "marketGroup": "english",
+      "language": "en",
+      "score": 95,
+      "reasons": [
+        "site existant",
+        "email trouve",
+        "telephone disponible",
+        "adresse locale",
+        "fiche nommee"
+      ],
+      "sentAt": "2026-07-01T09:02:59.254Z",
+      "status": "sent",
+      "lifecycleStage": "contacted",
+      "firstContactedAt": "2026-07-01T09:02:59.254Z",
+      "lastContactedAt": "2026-07-01T09:02:59.254Z",
+      "nextFollowUpAt": "2026-07-08T09:02:59.254Z",
+      "timeline": [
+        {
+          "at": "2026-07-01T09:02:59.254Z",
+          "type": "sent",
+          "note": "Initial outreach email sent"
+        }
+      ]
+    },
+    {
+      "placeId": "ChIJgxlSW_oyK4gRMNcxpeK7_fM",
+      "name": "Floris Flower Co.",
+      "email": "info@floris.ca",
+      "website": "http://www.floris.ca/",
+      "phone": "(416) 222-8080",
+      "address": "1864 Avenue Rd, Toronto, ON M5M 3Z6, Canada",
+      "marketCode": "CA-EN",
+      "market": "English-speaking Canada",
+      "marketGroup": "english",
+      "language": "en",
+      "score": 95,
+      "reasons": [
+        "site existant",
+        "email trouve",
+        "telephone disponible",
+        "adresse locale",
+        "fiche nommee"
+      ],
+      "sentAt": "2026-07-01T09:03:07.456Z",
+      "status": "sent",
+      "lifecycleStage": "contacted",
+      "firstContactedAt": "2026-07-01T09:03:07.456Z",
+      "lastContactedAt": "2026-07-01T09:03:07.456Z",
+      "nextFollowUpAt": "2026-07-08T09:03:07.456Z",
+      "timeline": [
+        {
+          "at": "2026-07-01T09:03:07.456Z",
+          "type": "sent",
+          "note": "Initial outreach email sent"
+        }
+      ]
+    },
+    {
+      "placeId": "ChIJW5-ARFfV1IkRlOcwyQz0238",
+      "name": "Markham Flower Shop . Same Day Delivery Toronto . Blooming One Florist",
+      "email": "info@bloomingone.ca",
+      "website": "https://bloomingone.ca/",
+      "phone": "(647) 709-5699",
+      "address": "800 Denison St Unit 10, Markham, ON L3R 5M9, Canada",
+      "marketCode": "CA-EN",
+      "market": "English-speaking Canada",
+      "marketGroup": "english",
+      "language": "en",
+      "score": 95,
+      "reasons": [
+        "site existant",
+        "email trouve",
+        "telephone disponible",
+        "adresse locale",
+        "fiche nommee"
+      ],
+      "sentAt": "2026-07-01T09:03:15.184Z",
+      "status": "sent",
+      "lifecycleStage": "contacted",
+      "firstContactedAt": "2026-07-01T09:03:15.184Z",
+      "lastContactedAt": "2026-07-01T09:03:15.184Z",
+      "nextFollowUpAt": "2026-07-08T09:03:15.184Z",
+      "timeline": [
+        {
+          "at": "2026-07-01T09:03:15.184Z",
+          "type": "sent",
+          "note": "Initial outreach email sent"
+        }
+      ]
+    },
+    {
+      "placeId": "ChIJVWWgNa6xEmsREPDrU7SJ49M",
+      "name": "Design Identity Australia",
+      "email": "bookings@designidentity.com.au",
+      "website": "https://www.designidentity.com.au/?utm_source=google&utm_medium=organic&utm_campaign=gbp",
+      "phone": "(02) 8339 0130",
+      "address": "Unit 25/34-36 Ralph St, Alexandria NSW 2015, Australia",
+      "marketCode": "AU",
+      "market": "Australia",
+      "marketGroup": "english",
+      "language": "en",
+      "score": 95,
+      "reasons": [
+        "site existant",
+        "email trouve",
+        "telephone disponible",
+        "adresse locale",
+        "fiche nommee"
+      ],
+      "sentAt": "2026-07-01T09:03:23.265Z",
+      "status": "sent",
+      "lifecycleStage": "contacted",
+      "firstContactedAt": "2026-07-01T09:03:23.265Z",
+      "lastContactedAt": "2026-07-01T09:03:23.265Z",
+      "nextFollowUpAt": "2026-07-08T09:03:23.265Z",
+      "timeline": [
+        {
+          "at": "2026-07-01T09:03:23.265Z",
+          "type": "sent",
+          "note": "Initial outreach email sent"
+        }
+      ]
+    },
+    {
+      "placeId": "ChIJN9atAI5p1moR27nrJzO4TC0",
+      "name": "Candid chaser photographer",
+      "email": "candidchaser1@gmail.com",
+      "website": "https://candidchaser.com.au/",
+      "phone": "0481 465 074",
+      "address": "5 Rosebery Ave, Rosebery NSW 2018, Australia",
+      "marketCode": "AU",
+      "market": "Australia",
+      "marketGroup": "english",
+      "language": "en",
+      "score": 95,
+      "reasons": [
+        "site existant",
+        "email trouve",
+        "telephone disponible",
+        "adresse locale",
+        "fiche nommee"
+      ],
+      "sentAt": "2026-07-01T09:03:37.231Z",
+      "status": "sent",
+      "lifecycleStage": "contacted",
+      "firstContactedAt": "2026-07-01T09:03:37.231Z",
+      "lastContactedAt": "2026-07-01T09:03:37.231Z",
+      "nextFollowUpAt": "2026-07-08T09:03:37.231Z",
+      "timeline": [
+        {
+          "at": "2026-07-01T09:03:37.231Z",
+          "type": "sent",
+          "note": "Initial outreach email sent"
+        }
+      ]
+    },
+    {
+      "placeId": "ChIJq1Hbpl-qEmsRngGJg4cgJy8",
+      "name": "Zoom In With Eden Photography – Corporate Photographer/Videographer",
+      "email": "eden@zoominwitheden.com",
+      "website": "http://www.zoominwitheden.com/",
+      "phone": "0419 505 500",
+      "address": "230 New Canterbury Rd, Lewisham NSW 2049, Australia",
+      "marketCode": "AU",
+      "market": "Australia",
+      "marketGroup": "english",
+      "language": "en",
+      "score": 95,
+      "reasons": [
+        "site existant",
+        "email trouve",
+        "telephone disponible",
+        "adresse locale",
+        "fiche nommee"
+      ],
+      "sentAt": "2026-07-01T09:03:42.906Z",
+      "status": "sent",
+      "lifecycleStage": "contacted",
+      "firstContactedAt": "2026-07-01T09:03:42.906Z",
+      "lastContactedAt": "2026-07-01T09:03:42.906Z",
+      "nextFollowUpAt": "2026-07-08T09:03:42.906Z",
+      "timeline": [
+        {
+          "at": "2026-07-01T09:03:42.906Z",
+          "type": "sent",
+          "note": "Initial outreach email sent"
+        }
+      ]
+    },
+    {
+      "placeId": "ChIJi8uV0Edp1moR_wJSudKdg2U",
+      "name": "Australian Photography School",
+      "email": "learningonline@mylearningonline.co",
+      "website": "https://www.australianphotographyschool.com.au/",
+      "phone": "1300 231 188",
+      "address": "Level 8/11 Queens Ln, Melbourne VIC 3004, Australia",
+      "marketCode": "AU",
+      "market": "Australia",
+      "marketGroup": "english",
+      "language": "en",
+      "score": 95,
+      "reasons": [
+        "site existant",
+        "email trouve",
+        "telephone disponible",
+        "adresse locale",
+        "fiche nommee"
+      ],
+      "sentAt": "2026-07-01T09:03:51.992Z",
+      "status": "sent",
+      "lifecycleStage": "contacted",
+      "firstContactedAt": "2026-07-01T09:03:51.992Z",
+      "lastContactedAt": "2026-07-01T09:03:51.992Z",
+      "nextFollowUpAt": "2026-07-08T09:03:51.992Z",
+      "timeline": [
+        {
+          "at": "2026-07-01T09:03:51.992Z",
+          "type": "sent",
+          "note": "Initial outreach email sent"
+        }
+      ]
+    },
+    {
+      "placeId": "ChIJ-7mfreuvEmsRUCpd5LFBQiY",
+      "name": "Sky Portraits Photography Studio Sydney",
+      "email": "info@skyportraits.com.au",
+      "website": "https://skyportraits.com.au/",
+      "phone": "0468 043 488",
+      "address": "9/6-8 Pacific Hwy, St Leonards NSW 2065, Australia",
+      "marketCode": "AU",
+      "market": "Australia",
+      "marketGroup": "english",
+      "language": "en",
+      "score": 95,
+      "reasons": [
+        "site existant",
+        "email trouve",
+        "telephone disponible",
+        "adresse locale",
+        "fiche nommee"
+      ],
+      "sentAt": "2026-07-01T09:04:03.131Z",
+      "status": "sent",
+      "lifecycleStage": "contacted",
+      "firstContactedAt": "2026-07-01T09:04:03.131Z",
+      "lastContactedAt": "2026-07-01T09:04:03.131Z",
+      "nextFollowUpAt": "2026-07-08T09:04:03.131Z",
+      "timeline": [
+        {
+          "at": "2026-07-01T09:04:03.131Z",
+          "type": "sent",
+          "note": "Initial outreach email sent"
+        }
+      ]
+    },
+    {
+      "placeId": "ChIJlf88-M3ebW0R9f-XK0DHsN8",
+      "name": "New Zealand Commercial Construction Limited",
+      "email": "bevan@nzccl.co.nz",
+      "website": "https://nzccl.co.nz/",
+      "phone": "021 954 487",
+      "address": "13a Tui Street, Mount Maunganui 3116, New Zealand",
+      "marketCode": "NZ",
+      "market": "New Zealand",
+      "marketGroup": "english",
+      "language": "en",
+      "score": 95,
+      "reasons": [
+        "site existant",
+        "email trouve",
+        "telephone disponible",
+        "adresse locale",
+        "fiche nommee"
+      ],
+      "sentAt": "2026-07-01T09:04:29.588Z",
+      "status": "sent",
+      "lifecycleStage": "contacted",
+      "firstContactedAt": "2026-07-01T09:04:29.588Z",
+      "lastContactedAt": "2026-07-01T09:04:29.588Z",
+      "nextFollowUpAt": "2026-07-08T09:04:29.588Z",
+      "timeline": [
+        {
+          "at": "2026-07-01T09:04:29.588Z",
+          "type": "sent",
+          "note": "Initial outreach email sent"
+        }
+      ]
+    },
+    {
+      "placeId": "ChIJQdrN2PWiQG0RXgVUSaHEiho",
+      "name": "Goodman Contractors Limited",
+      "email": "info@goodmans.nz",
+      "website": "https://www.goodmans.nz/",
+      "phone": "04 293 7176",
+      "address": "4 Anne Street, Waikanae 5036, New Zealand",
+      "marketCode": "NZ",
+      "market": "New Zealand",
+      "marketGroup": "english",
+      "language": "en",
+      "score": 95,
+      "reasons": [
+        "site existant",
+        "email trouve",
+        "telephone disponible",
+        "adresse locale",
+        "fiche nommee"
+      ],
+      "sentAt": "2026-07-01T09:04:35.204Z",
+      "status": "sent",
+      "lifecycleStage": "contacted",
+      "firstContactedAt": "2026-07-01T09:04:35.204Z",
+      "lastContactedAt": "2026-07-01T09:04:35.204Z",
+      "nextFollowUpAt": "2026-07-08T09:04:35.204Z",
+      "timeline": [
+        {
+          "at": "2026-07-01T09:04:35.204Z",
+          "type": "sent",
+          "note": "Initial outreach email sent"
+        }
+      ]
+    },
+    {
+      "placeId": "ChIJp0NEFMDrlkcRAzQUrPKT4Bs",
+      "name": "My Agency Marketing",
+      "email": "contact@monagencemarketing.com",
+      "website": "http://www.monagencemarketing.com/",
+      "phone": "03 88 05 69 05",
+      "address": "25C Rue de la Sablière, 67590 Schweighouse-sur-Moder, France",
+      "marketCode": "FR",
+      "market": "France",
+      "marketGroup": "francophone",
+      "language": "fr",
+      "score": 95,
+      "reasons": [
+        "site existant",
+        "email trouve",
+        "telephone disponible",
+        "adresse locale",
+        "fiche nommee"
+      ],
+      "sentAt": "2026-07-01T09:04:42.424Z",
+      "status": "sent",
+      "lifecycleStage": "contacted",
+      "firstContactedAt": "2026-07-01T09:04:42.424Z",
+      "lastContactedAt": "2026-07-01T09:04:42.424Z",
+      "nextFollowUpAt": "2026-07-08T09:04:42.424Z",
+      "timeline": [
+        {
+          "at": "2026-07-01T09:04:42.424Z",
+          "type": "sent",
+          "note": "Initial outreach email sent"
+        }
+      ]
+    },
+    {
+      "placeId": "ChIJjShQ5Rlw5kcRcI3rk50qCzA",
+      "name": "Alioze France",
+      "email": "hello@alioze.com",
+      "website": "https://www.alioze.com/",
+      "phone": "01 83 62 21 84",
+      "address": "15 Rue Claude Terrasse, 75016 Paris, France",
+      "marketCode": "FR",
+      "market": "France",
+      "marketGroup": "francophone",
+      "language": "fr",
+      "score": 95,
+      "reasons": [
+        "site existant",
+        "email trouve",
+        "telephone disponible",
+        "adresse locale",
+        "fiche nommee"
+      ],
+      "sentAt": "2026-07-01T09:04:52.833Z",
+      "status": "sent",
+      "lifecycleStage": "contacted",
+      "firstContactedAt": "2026-07-01T09:04:52.833Z",
+      "lastContactedAt": "2026-07-01T09:04:52.833Z",
+      "nextFollowUpAt": "2026-07-08T09:04:52.833Z",
+      "timeline": [
+        {
+          "at": "2026-07-01T09:04:52.833Z",
+          "type": "sent",
+          "note": "Initial outreach email sent"
+        }
+      ]
+    },
+    {
+      "placeId": "ChIJP6nsUTr15kcRm_kd-6TZst8",
+      "name": "MON AGENCE DU WEB",
+      "email": "contact@monagenceduweb.com",
+      "website": "https://monagenceduweb.com/",
+      "phone": "01 87 20 00 19",
+      "address": "La Turbine, 32 Bd du Port, 95000 Cergy, France",
+      "marketCode": "FR",
+      "market": "France",
+      "marketGroup": "francophone",
+      "language": "fr",
+      "score": 95,
+      "reasons": [
+        "site existant",
+        "email trouve",
+        "telephone disponible",
+        "adresse locale",
+        "fiche nommee"
+      ],
+      "sentAt": "2026-07-01T09:04:58.378Z",
+      "status": "sent",
+      "lifecycleStage": "contacted",
+      "firstContactedAt": "2026-07-01T09:04:58.378Z",
+      "lastContactedAt": "2026-07-01T09:04:58.378Z",
+      "nextFollowUpAt": "2026-07-08T09:04:58.378Z",
+      "timeline": [
+        {
+          "at": "2026-07-01T09:04:58.378Z",
+          "type": "sent",
+          "note": "Initial outreach email sent"
+        }
+      ]
+    },
+    {
+      "placeId": "ChIJQ6WkTgxu5kcRF07Lua_7x2E",
+      "name": "Tanke",
+      "email": "hello@tanke.fr",
+      "website": "http://www.tanke.fr/",
+      "phone": "01 84 25 06 01",
+      "address": "110 Rue du Faubourg Poissonnière, 75010 Paris, France",
+      "marketCode": "FR",
+      "market": "France",
+      "marketGroup": "francophone",
+      "language": "fr",
+      "score": 95,
+      "reasons": [
+        "site existant",
+        "email trouve",
+        "telephone disponible",
+        "adresse locale",
+        "fiche nommee"
+      ],
+      "sentAt": "2026-07-01T09:05:04.876Z",
+      "status": "sent",
+      "lifecycleStage": "contacted",
+      "firstContactedAt": "2026-07-01T09:05:04.876Z",
+      "lastContactedAt": "2026-07-01T09:05:04.876Z",
+      "nextFollowUpAt": "2026-07-08T09:05:04.876Z",
+      "timeline": [
+        {
+          "at": "2026-07-01T09:05:04.876Z",
+          "type": "sent",
+          "note": "Initial outreach email sent"
+        }
+      ]
+    },
+    {
+      "placeId": "ChIJD2c08CGlthIRRTDVWKEQghI",
+      "name": "Les Associés Du Marketing Agency Marketing And Communication 360°",
+      "email": "contact@associes-marketing.fr",
+      "website": "https://www.associes-marketing.fr/",
+      "phone": "07 60 42 99 01",
+      "address": "1350 Av. Albert Einstein, 34000 Montpellier, France",
+      "marketCode": "FR",
+      "market": "France",
+      "marketGroup": "francophone",
+      "language": "fr",
+      "score": 95,
+      "reasons": [
+        "site existant",
+        "email trouve",
+        "telephone disponible",
+        "adresse locale",
+        "fiche nommee"
+      ],
+      "sentAt": "2026-07-01T09:05:13.725Z",
+      "status": "sent",
+      "lifecycleStage": "contacted",
+      "firstContactedAt": "2026-07-01T09:05:13.725Z",
+      "lastContactedAt": "2026-07-01T09:05:13.725Z",
+      "nextFollowUpAt": "2026-07-08T09:05:13.725Z",
+      "timeline": [
+        {
+          "at": "2026-07-01T09:05:13.725Z",
+          "type": "sent",
+          "note": "Initial outreach email sent"
+        }
+      ]
     }
   ],
-  "lastUpdated": "2026-06-30T09:04:47.181Z"
+  "lastUpdated": "2026-07-01T09:07:15.126Z"
 }
