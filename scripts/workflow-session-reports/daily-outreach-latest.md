@@ -1,23 +1,23 @@
 # Daily Outreach - session report
 
-Generated at: 2026-07-01T09:07:15.169Z
+Generated at: 2026-07-02T08:58:56.471Z
 Status: success
 Event: schedule
 Branch: main
-Commit: 990f23a3
+Commit: db445cb6
 Actor: rayansekkatkr
-Run: https://github.com/rayansekkatkr/rayan-studio/actions/runs/28506057527
+Run: https://github.com/rayansekkatkr/rayan-studio/actions/runs/28578077404
 
 ## Summary
 
 - Report status: completed
 - Source mode: multilingual_markets
 - Sources/searches: 12
-- Scanned: 160
+- Scanned: 0
 - Scored candidates: n/a
 - Remote policy: n/a
 - Remote rejected: n/a
-- Candidates: 54
-- Sent/prepared: 20
+- Candidates: 0
+- Sent/prepared: 0
 - Errors: 0
 
