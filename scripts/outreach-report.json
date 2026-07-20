@@ -1,5 +1,5 @@
 {
-  "runAt": "2026-07-17T08:39:26.602Z",
+  "runAt": "2026-07-20T08:58:32.634Z",
   "dryRun": false,
   "queryMode": "multilingual_markets",
   "marketGroups": [
@@ -7,27 +7,6 @@
     "english"
   ],
   "searchTargets": [
-    {
-      "category": "cabinet d'avocat",
-      "marketCode": "FR",
-      "market": "France",
-      "language": "fr",
-      "query": "cabinet d'avocat France"
-    },
-    {
-      "category": "agence immobilière",
-      "marketCode": "BE-FR",
-      "market": "Belgique francophone",
-      "language": "fr",
-      "query": "agence immobilière Belgique francophone"
-    },
-    {
-      "category": "hôtel",
-      "marketCode": "CH-FR",
-      "market": "Suisse romande",
-      "language": "fr",
-      "query": "hôtel Suisse romande"
-    },
     {
       "category": "boutique vêtements",
       "marketCode": "LU",
@@ -90,6 +69,27 @@
       "market": "France",
       "language": "fr",
       "query": "photographe France"
+    },
+    {
+      "category": "entreprise de construction",
+      "marketCode": "BE-FR",
+      "market": "Belgique francophone",
+      "language": "fr",
+      "query": "entreprise de construction Belgique francophone"
+    },
+    {
+      "category": "agence marketing",
+      "marketCode": "CH-FR",
+      "market": "Suisse romande",
+      "language": "fr",
+      "query": "agence marketing Suisse romande"
+    },
+    {
+      "category": "traiteur",
+      "marketCode": "LU",
+      "market": "Luxembourg",
+      "language": "fr",
+      "query": "traiteur Luxembourg"
     }
   ],
   "maxEmailsPerDay": 20,
@@ -104,30 +104,6 @@
   "skippedInvalidEmail": 0,
   "skippedDuplicateEmail": 0,
   "searches": [
-    {
-      "category": "cabinet d'avocat",
-      "marketCode": "FR",
-      "market": "France",
-      "language": "fr",
-      "query": "cabinet d'avocat France",
-      "results": 0
-    },
-    {
-      "category": "agence immobilière",
-      "marketCode": "BE-FR",
-      "market": "Belgique francophone",
-      "language": "fr",
-      "query": "agence immobilière Belgique francophone",
-      "results": 0
-    },
-    {
-      "category": "hôtel",
-      "marketCode": "CH-FR",
-      "market": "Suisse romande",
-      "language": "fr",
-      "query": "hôtel Suisse romande",
-      "results": 0
-    },
     {
       "category": "boutique vêtements",
       "marketCode": "LU",
@@ -198,6 +174,30 @@
       "market": "France",
       "language": "fr",
       "query": "photographe France",
+      "results": 0
+    },
+    {
+      "category": "entreprise de construction",
+      "marketCode": "BE-FR",
+      "market": "Belgique francophone",
+      "language": "fr",
+      "query": "entreprise de construction Belgique francophone",
+      "results": 0
+    },
+    {
+      "category": "agence marketing",
+      "marketCode": "CH-FR",
+      "market": "Suisse romande",
+      "language": "fr",
+      "query": "agence marketing Suisse romande",
+      "results": 0
+    },
+    {
+      "category": "traiteur",
+      "marketCode": "LU",
+      "market": "Luxembourg",
+      "language": "fr",
+      "query": "traiteur Luxembourg",
       "results": 0
     }
   ],
