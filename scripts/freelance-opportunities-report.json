@@ -1,6 +1,6 @@
 {
-  "runAt": "2026-07-24T09:00:20.175Z",
-  "status": "no_candidates",
+  "runAt": "2026-07-27T09:17:53.872Z",
+  "status": "ready",
   "sourceMode": "default_platforms",
   "sourceCount": 18,
   "sources": [
@@ -149,11 +149,11 @@
       "autoDiscovered": true
     }
   ],
-  "scannedOpportunities": 262,
-  "scoredCandidateCount": 89,
+  "scannedOpportunities": 276,
+  "scoredCandidateCount": 90,
   "remotePolicy": "explicit_remote_only",
-  "remoteRejectedCount": 89,
-  "candidateCount": 0,
+  "remoteRejectedCount": 88,
+  "candidateCount": 2,
   "maxOpportunities": 30,
   "minScore": 35,
   "nextStep": "Review candidates from the automatic platform catalog, then paste the proposalDraft into the platform.",
@@ -179,6 +179,52 @@
       "note": "Approche manuelle, ton humain, pas de message automatique en masse."
     }
   ],
-  "candidates": [],
+  "candidates": [
+    {
+      "source": "Codeur - remote full stack web developer",
+      "sourceUrl": "https://www.codeur.com/projects?keywords=remote%20full%20stack%20web%20developer",
+      "platform": "codeur",
+      "searchQuery": "remote full stack web developer",
+      "remoteGuaranteed": false,
+      "title": "Création d’une application connectée de gestion de propriétés Il y a 2 jours Ouvert 10 000 € et plus 105 Offres 9301 Vues Nous recherchons une agence ou une équipe de développeurs expérimentée pour concevoir une application mobile et web professionnelle. La plateforme sera destinée à des propriétaires immobiliers souhaitant suivre et gérer leur résidence à distance.... Développement spécifique Application mobile SaaS +100 JUNR Herve Bansay Hector Yehouenou Xavier Godet Hugo Battoue",
+      "description": "",
+      "sourceDescription": "Découvrez les derniers projets disponibles sur Codeur.com et trouvez plus de cent nouvelles missions en freelance chaque jour.",
+      "url": "https://www.codeur.com/projects/487151-creation-d-une-application-connectee-de-gestion-de-proprietes",
+      "extractionMethod": "anchor",
+      "score": 60,
+      "fit": "medium",
+      "reasons": [
+        "profil full-stack/platform",
+        "UX, mobile ou conversion",
+        "budget mentionne"
+      ],
+      "remoteOnly": true,
+      "remoteStatus": "remote",
+      "remoteReason": "teletravail explicite dans la mission",
+      "proposalDraft": "Bonjour,\n\nJ'ai vu votre mission \"Création d’une application connectée de gestion de propriétés\". Je peux vous aider sur la partie site.\n\nJe commencerais par clarifier la structure et les priorites, puis je peux prendre en charge la maquette, le developpement, le responsive, le SEO de depart, le domaine/DNS et la mise en ligne.\n\nQuelques exemples de mon travail: https://www.rayanstudios.com/fr\n\nSi vous avez l'URL actuelle, 2-3 references ou une contrainte de delai/budget, je peux vous repondre avec un perimetre concret et une estimation plus precise.\n\nBonne journee,\nRayan\nMission: https://www.codeur.com/projects/487151-creation-d-une-application-connectee-de-gestion-de-proprietes"
+    },
+    {
+      "source": "Codeur - remote full stack web developer",
+      "sourceUrl": "https://www.codeur.com/projects?keywords=remote%20full%20stack%20web%20developer",
+      "platform": "codeur",
+      "searchQuery": "remote full stack web developer",
+      "remoteGuaranteed": false,
+      "title": "Administratif de formation (EDOF/CREACTIF/QUALIOPI) Il y a 3 jours Ouvert 1 000 € à 10 000 € 10 Offres 8201 Vues PoupiAcadémie – Organisme de formation certifié Qualiopi – 100 % à distance Qui sommes-nous ? PoupiAcadémie est un organisme de formation certifié Qualiopi, spécialisé dans l'accompagnement des entrepreneurs et professionnels de la petite enfanc... Formation Secrétariat à domicile Assistant virtuel +5 Jonathan Boukhris Kévin Guiot Innodataweb VIVADO Harry Porcu",
+      "description": "",
+      "sourceDescription": "Découvrez les derniers projets disponibles sur Codeur.com et trouvez plus de cent nouvelles missions en freelance chaque jour.",
+      "url": "https://www.codeur.com/projects/487106-administratif-de-formation-edof-creactif-qualiopi",
+      "extractionMethod": "anchor",
+      "score": 45,
+      "fit": "medium",
+      "reasons": [
+        "profil full-stack/platform",
+        "budget mentionne"
+      ],
+      "remoteOnly": true,
+      "remoteStatus": "remote",
+      "remoteReason": "teletravail explicite dans la mission",
+      "proposalDraft": "Hi,\n\nI saw your project \"Administratif de formation (EDOF/CREACTIF/QUALIOPI)\" and it looks close to the kind of full-stack/platform work I handle.\n\nMy strongest fit here is React/Node full-stack delivery, with the backend, API integrations and deployment side handled together rather than split across separate people.\n\nI can help clarify the scope, then take care of the implementation, API/backend work, responsive front-end, deployment details, and clean handover.\n\nPortfolio: https://www.rayanstudios.com/fr\n\nIf you can share the current stack, priority features and timeline, I can reply with a concrete scope and estimate.\n\nBest,\nRayan\nMission: https://www.codeur.com/projects/487106-administratif-de-formation-edof-creactif-qualiopi"
+    }
+  ],
   "errors": []
 }
