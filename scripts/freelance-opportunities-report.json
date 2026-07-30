@@ -1,5 +1,5 @@
 {
-  "runAt": "2026-07-29T09:05:44.812Z",
+  "runAt": "2026-07-30T09:03:17.846Z",
   "status": "no_candidates",
   "sourceMode": "default_platforms",
   "sourceCount": 18,
@@ -149,10 +149,10 @@
       "autoDiscovered": true
     }
   ],
-  "scannedOpportunities": 268,
-  "scoredCandidateCount": 93,
+  "scannedOpportunities": 250,
+  "scoredCandidateCount": 87,
   "remotePolicy": "explicit_remote_only",
-  "remoteRejectedCount": 93,
+  "remoteRejectedCount": 87,
   "candidateCount": 0,
   "maxOpportunities": 30,
   "minScore": 35,
@@ -180,5 +180,30 @@
     }
   ],
   "candidates": [],
-  "errors": []
+  "errors": [
+    {
+      "source": "404Works - remote full stack web developer",
+      "url": "https://www.404works.com/fr/projects?search=remote%20full%20stack%20web%20developer",
+      "htmlPath": null,
+      "error": "fetch failed"
+    },
+    {
+      "source": "404Works - remote devops deployment",
+      "url": "https://www.404works.com/fr/projects?search=remote%20devops%20deployment",
+      "htmlPath": null,
+      "error": "fetch failed"
+    },
+    {
+      "source": "404Works - remote api integration",
+      "url": "https://www.404works.com/fr/projects?search=remote%20api%20integration",
+      "htmlPath": null,
+      "error": "fetch failed"
+    },
+    {
+      "source": "404Works - remote docker kubernetes deployment",
+      "url": "https://www.404works.com/fr/projects?search=remote%20docker%20kubernetes%20deployment",
+      "htmlPath": null,
+      "error": "fetch failed"
+    }
+  ]
 }

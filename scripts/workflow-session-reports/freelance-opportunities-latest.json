@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-07-29T09:05:44.845Z",
+  "generatedAt": "2026-07-30T09:03:17.890Z",
   "workflow": {
     "name": "Freelance Opportunities",
     "slug": "freelance-opportunities",
@@ -7,28 +7,45 @@
     "primaryReport": "/home/runner/work/rayan-studio/rayan-studio/scripts/freelance-opportunities-report.json"
   },
   "github": {
-    "runId": "30438128690",
-    "runNumber": "23",
+    "runId": "30529063476",
+    "runNumber": "24",
     "runAttempt": "1",
-    "runUrl": "https://github.com/rayansekkatkr/rayan-studio/actions/runs/30438128690",
+    "runUrl": "https://github.com/rayansekkatkr/rayan-studio/actions/runs/30529063476",
     "repository": "rayansekkatkr/rayan-studio",
     "actor": "rayansekkatkr",
     "eventName": "schedule",
     "refName": "main",
-    "sha": "287291e8"
+    "sha": "3193be45"
   },
   "summary": {
     "status": "no_candidates",
     "dryRun": null,
     "sourceMode": "default_platforms",
     "sourceCount": 18,
-    "scannedOpportunities": 268,
-    "scoredCandidateCount": 93,
+    "scannedOpportunities": 250,
+    "scoredCandidateCount": 87,
     "remotePolicy": "explicit_remote_only",
-    "remoteRejectedCount": 93,
+    "remoteRejectedCount": 87,
     "candidateCount": 0,
     "sentCount": 0,
-    "errorCount": 0,
-    "errors": []
+    "errorCount": 4,
+    "errors": [
+      {
+        "source": "404Works - remote full stack web developer",
+        "error": "fetch failed"
+      },
+      {
+        "source": "404Works - remote devops deployment",
+        "error": "fetch failed"
+      },
+      {
+        "source": "404Works - remote api integration",
+        "error": "fetch failed"
+      },
+      {
+        "source": "404Works - remote docker kubernetes deployment",
+        "error": "fetch failed"
+      }
+    ]
   }
 }
