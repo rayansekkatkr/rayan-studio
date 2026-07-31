@@ -1,5 +1,5 @@
 {
-  "runAt": "2026-07-30T08:50:35.516Z",
+  "runAt": "2026-07-31T08:57:34.646Z",
   "dryRun": false,
   "queryMode": "multilingual_markets",
   "marketGroups": [
@@ -7,13 +7,6 @@
     "english"
   ],
   "searchTargets": [
-    {
-      "category": "agence marketing",
-      "marketCode": "CH-FR",
-      "market": "Suisse romande",
-      "language": "fr",
-      "query": "agence marketing Suisse romande"
-    },
     {
       "category": "traiteur",
       "marketCode": "LU",
@@ -90,6 +83,13 @@
       "market": "Suisse romande",
       "language": "fr",
       "query": "cabinet d'avocat Suisse romande"
+    },
+    {
+      "category": "agence immobilière",
+      "marketCode": "LU",
+      "market": "Luxembourg",
+      "language": "fr",
+      "query": "agence immobilière Luxembourg"
     }
   ],
   "maxEmailsPerDay": 20,
@@ -104,14 +104,6 @@
   "skippedInvalidEmail": 0,
   "skippedDuplicateEmail": 0,
   "searches": [
-    {
-      "category": "agence marketing",
-      "marketCode": "CH-FR",
-      "market": "Suisse romande",
-      "language": "fr",
-      "query": "agence marketing Suisse romande",
-      "results": 0
-    },
     {
       "category": "traiteur",
       "marketCode": "LU",
@@ -198,6 +190,14 @@
       "market": "Suisse romande",
       "language": "fr",
       "query": "cabinet d'avocat Suisse romande",
+      "results": 0
+    },
+    {
+      "category": "agence immobilière",
+      "marketCode": "LU",
+      "market": "Luxembourg",
+      "language": "fr",
+      "query": "agence immobilière Luxembourg",
       "results": 0
     }
   ],
