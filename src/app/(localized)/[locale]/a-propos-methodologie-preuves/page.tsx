@@ -29,7 +29,7 @@ const faqEn = [
   },
   {
     q: "What is your method?",
-    a: "Perception diagnosis, structure, visual direction, development, local SEO, DNS, hosting/VPS and clean launch.",
+    a: "First-impression audit, structure, visual direction, development, local SEO, DNS, hosting/VPS and clean launch.",
   },
   {
     q: "How do you measure results?",

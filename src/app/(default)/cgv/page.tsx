@@ -1,8 +1,11 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "CGV",
-  description: "Conditions générales de vente de Rayan Studio.",
+  title: "Conditions générales de vente",
+  description: "Conditions générales de vente des prestations de création et refonte de sites de Rayan Studio.",
+  alternates: {
+    canonical: "/cgv",
+  },
 };
 
 export default function CgvPage() {

@@ -4,7 +4,6 @@ import Script from "next/script";
 import { CookieConsent } from "@/components/site/CookieConsent";
 import { BRAND, getSiteUrl } from "@/lib/brand";
 import { getGoogleSiteVerification } from "@/lib/seo-verification";
-import "./globals.css";
 
 const bodyFont = Plus_Jakarta_Sans({
   subsets: ["latin"],
@@ -18,7 +17,7 @@ const displayFont = Sora({
   display: "swap",
 });
 
-export const metadata: Metadata = {
+export const sharedMetadata: Metadata = {
   metadataBase: new URL(getSiteUrl()),
   title: {
     default: `${BRAND.name} | Refonte de sites pour petites entreprises`,
@@ -60,13 +59,6 @@ export const metadata: Metadata = {
     shortcut: [{ url: "/icon.svg", type: "image/svg+xml" }],
     apple: [{ url: "/icon.svg", type: "image/svg+xml" }],
   },
-  alternates: {
-    canonical: "/",
-    languages: {
-      fr: "/fr",
-      en: "/en",
-    },
-  },
   robots: {
     index: true,
     follow: true,
@@ -107,45 +99,39 @@ export const metadata: Metadata = {
   },
 };
 
-export const viewport: Viewport = {
+export const sharedViewport: Viewport = {
   width: "device-width",
   initialScale: 1,
 };
 
-export default function RootLayout({
-  children,
-}: Readonly<{
-  children: React.ReactNode;
-}>) {
+export function RootBody({ children }: { children: React.ReactNode }) {
   const gaId = process.env.NEXT_PUBLIC_GA_ID;
 
   return (
-    <html lang="fr">
-      <body className={`${bodyFont.variable} ${displayFont.variable} antialiased`}>
-        {gaId ? (
-          <>
-            <Script src={`https://www.googletagmanager.com/gtag/js?id=${gaId}`} strategy="afterInteractive" />
-            <Script id="google-analytics" strategy="afterInteractive">
-              {`
-                window.dataLayer = window.dataLayer || [];
-                function gtag(){dataLayer.push(arguments);}
-                window.gtag = gtag;
-                gtag('js', new Date());
-                gtag('consent', 'default', {
-                  analytics_storage: 'denied',
-                  ad_storage: 'denied',
-                  ad_user_data: 'denied',
-                  ad_personalization: 'denied',
-                  wait_for_update: 500
-                });
-                gtag('config', '${gaId}', { anonymize_ip: true });
-              `}
-            </Script>
-          </>
-        ) : null}
-        {children}
-        {gaId ? <CookieConsent /> : null}
-      </body>
-    </html>
+    <body className={`${bodyFont.variable} ${displayFont.variable} antialiased`}>
+      {gaId ? (
+        <>
+          <Script src={`https://www.googletagmanager.com/gtag/js?id=${gaId}`} strategy="afterInteractive" />
+          <Script id="google-analytics" strategy="afterInteractive">
+            {`
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              window.gtag = gtag;
+              gtag('js', new Date());
+              gtag('consent', 'default', {
+                analytics_storage: 'denied',
+                ad_storage: 'denied',
+                ad_user_data: 'denied',
+                ad_personalization: 'denied',
+                wait_for_update: 500
+              });
+              gtag('config', '${gaId}', { anonymize_ip: true });
+            `}
+          </Script>
+        </>
+      ) : null}
+      {children}
+      {gaId ? <CookieConsent /> : null}
+    </body>
   );
 }

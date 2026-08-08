@@ -8,6 +8,15 @@ const nextConfig = {
       },
     ],
   },
+  async redirects() {
+    return [
+      {
+        source: "/a-propos-methodologie-preuves",
+        destination: "/fr/a-propos-methodologie-preuves",
+        permanent: true,
+      },
+    ];
+  },
 };
 
 export default nextConfig;

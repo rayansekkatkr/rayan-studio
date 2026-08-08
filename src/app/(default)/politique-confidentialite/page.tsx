@@ -2,7 +2,10 @@ import type { Metadata } from "next";
 
 export const metadata: Metadata = {
   title: "Politique de confidentialité",
-  description: "Politique de confidentialité de Rayan Studio.",
+  description: "Politique de confidentialité de Rayan Studio : données collectées, usage, durée de conservation et droits.",
+  alternates: {
+    canonical: "/politique-confidentialite",
+  },
 };
 
 export default function PolitiqueConfidentialitePage() {

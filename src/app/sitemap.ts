@@ -7,7 +7,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
   const baseUrl = getSiteUrl();
   const lastModified = process.env.NEXT_PUBLIC_SITE_LAST_MODIFIED
     ? new Date(process.env.NEXT_PUBLIC_SITE_LAST_MODIFIED)
-    : new Date("2026-04-06");
+    : new Date();
   const localSeoRoutes = getAllLocalSeoCombos().map(({ sector, city }) => ({
     url: `${baseUrl}/site/${sector.slug}/${city.slug}`,
     lastModified,
@@ -34,24 +34,26 @@ export default function sitemap(): MetadataRoute.Sitemap {
     };
   });
 
+  const homeLanguages = {
+    fr: `${baseUrl}/fr`,
+    en: `${baseUrl}/en`,
+    "x-default": baseUrl,
+  };
+
   return [
-    {
-      url: baseUrl,
-      lastModified,
-      changeFrequency: "weekly",
-      priority: 1,
-    },
     {
       url: `${baseUrl}/fr`,
       lastModified,
       changeFrequency: "weekly",
       priority: 1,
+      alternates: { languages: homeLanguages },
     },
     {
       url: `${baseUrl}/en`,
       lastModified,
       changeFrequency: "weekly",
       priority: 1,
+      alternates: { languages: homeLanguages },
     },
     {
       url: `${baseUrl}/mentions-legales`,
@@ -70,12 +72,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
       lastModified,
       changeFrequency: "monthly",
       priority: 0.6,
-    },
-    {
-      url: `${baseUrl}/a-propos-methodologie-preuves`,
-      lastModified,
-      changeFrequency: "monthly",
-      priority: 0.8,
     },
     {
       url: `${baseUrl}/fr/a-propos-methodologie-preuves`,
