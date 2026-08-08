@@ -107,60 +107,6 @@ const projectsEn = [
   },
 ];
 
-const caseStudiesFr = [
-  {
-    title: "Hôtel indépendant",
-    context: "Refonte d'un site vitrine daté avec peu de demandes directes.",
-    action: "Hiérarchie clarifiée, CTA visibles, parcours mobile simplifié.",
-    result: "+41% de demandes sur 30 jours",
-    period: "Janvier 2026",
-    source: "Comparatif leads formulaire + WhatsApp",
-  },
-  {
-    title: "Café de quartier",
-    context: "Site peu différenciant, informations clés difficiles à trouver.",
-    action: "Nouveau storytelling, sections utiles au-dessus de la ligne de flottaison.",
-    result: "+24 messages WhatsApp sur 30 jours",
-    period: "Décembre 2025",
-    source: "Export WhatsApp Business",
-  },
-  {
-    title: "Boulangerie artisanale",
-    context: "Produits et savoir-faire mal mis en valeur.",
-    action: "Vitrine produit plus visuelle, navigation orientée conversion.",
-    result: "+26% de commandes / demandes traiteur",
-    period: "Février 2026",
-    source: "Suivi commandes + demandes entrantes",
-  },
-];
-
-const caseStudiesEn = [
-  {
-    title: "Independent hotel",
-    context: "Redesign of an outdated showcase site with low direct inquiries.",
-    action: "Clearer hierarchy, visible CTAs, and simplified mobile journey.",
-    result: "+41% inquiries over 30 days",
-    period: "January 2026",
-    source: "Form leads + WhatsApp comparison",
-  },
-  {
-    title: "Neighborhood cafe",
-    context: "Low differentiation and key information hard to find.",
-    action: "New storytelling with useful sections above the fold.",
-    result: "+24 WhatsApp messages over 30 days",
-    period: "December 2025",
-    source: "WhatsApp Business export",
-  },
-  {
-    title: "Artisan bakery",
-    context: "Products and craftsmanship were not highlighted enough.",
-    action: "More visual product showcase and conversion-focused navigation.",
-    result: "+26% orders / catering requests",
-    period: "February 2026",
-    source: "Orders + inbound requests tracking",
-  },
-];
-
 function getDomain(url: string) {
   try {
     return new URL(url).hostname.replace(/^www\./, "");
@@ -169,18 +115,18 @@ function getDomain(url: string) {
   }
 }
 
-function ProjectNavItem({
+function ProjectThumb({
   index,
-  id,
-  name,
+  image,
+  title,
   designation,
   isActive,
   ariaPrefix,
   onClick,
 }: {
   index: number;
-  id: string;
-  name: string;
+  image: string;
+  title: string;
   designation: string;
   isActive: boolean;
   ariaPrefix: string;
@@ -191,46 +137,50 @@ function ProjectNavItem({
       type="button"
       onClick={() => onClick(index)}
       aria-pressed={isActive}
-      aria-label={`${ariaPrefix} ${name}`}
-      data-project-id={id}
+      aria-label={`${ariaPrefix} ${title}`}
       className={cn(
-        "group relative flex w-full items-start gap-3 border-t border-[#2a231d]/10 px-3 py-3 text-left transition-colors duration-300 first:border-t-0",
-        isActive ? "bg-[#17120f] text-[#fffaf0]" : "text-[#63584d] hover:bg-[#fffaf0]/70",
+        "group relative flex w-full items-center gap-3 overflow-hidden rounded-none border p-2 text-left transition-all duration-300",
+        isActive
+          ? "border-[#2a231d]/22 bg-[#17120f] shadow-[4px_4px_0_rgba(42,35,29,0.16)]"
+          : "border-[#2a231d]/14 bg-[#fffaf0]/70 hover:border-[#2a231d]/22 hover:bg-[#fffaf0]",
       )}
     >
-      <span
-        className={cn(
-          "mt-0.5 font-display text-xs font-semibold tabular-nums transition-colors",
-          isActive ? "text-[#ff9b76]" : "text-[#bdb09e]",
-        )}
-      >
-        /0{index + 1}
+      <span className="relative h-[clamp(40px,5.4vh,52px)] w-[78px] shrink-0 overflow-hidden rounded-none border border-[#2a231d]/12">
+        <Image
+          src={image}
+          alt={title}
+          fill
+          sizes="78px"
+          className="object-cover object-top transition duration-500 group-hover:scale-105"
+        />
+        {!isActive && <span className="absolute inset-0 bg-[#fffaf0]/24" />}
       </span>
       <span className="flex min-w-0 flex-1 flex-col">
         <span
           className={cn(
-            "truncate font-display text-sm font-semibold leading-snug transition-colors",
+            "truncate font-display text-[13px] font-semibold leading-tight transition-colors",
             isActive ? "text-[#fffaf0]" : "text-[#17120f]",
           )}
         >
-          {name}
+          {title}
         </span>
         <span
           className={cn(
-            "mt-0.5 truncate text-[11px] leading-snug transition-colors",
-            isActive ? "text-[#fffaf0]/65" : "text-[#8a7d6f]",
+            "mt-0.5 truncate text-[10px] uppercase tracking-[0.08em] transition-colors",
+            isActive ? "text-[#fffaf0]/60" : "text-[#8a7d6f]",
           )}
         >
           {designation}
         </span>
       </span>
-      <ArrowUpRight
-        size={14}
+      <span
         className={cn(
-          "mt-0.5 shrink-0 transition-all",
-          isActive ? "text-[#ff9b76] opacity-100" : "text-[#bdb09e] opacity-0 group-hover:opacity-100",
+          "shrink-0 font-display text-[11px] font-semibold tabular-nums transition-colors",
+          isActive ? "text-[#ff9b76]" : "text-[#bdb09e]",
         )}
-      />
+      >
+        /0{index + 1}
+      </span>
     </button>
   );
 }
@@ -238,13 +188,9 @@ function ProjectNavItem({
 export function Showcase({ locale = "fr" }: { locale?: Locale }) {
   const en = isEnglish(locale);
   const projects = en ? projectsEn : projectsFr;
-  const caseStudies = en ? caseStudiesEn : caseStudiesFr;
   const textRotateRef = useRef<TextRotateRef>(null);
   const [activeIndex, setActiveIndex] = useState(0);
   const activeProject = projects[activeIndex];
-  const caseLabels = en
-    ? { file: "Case file", problem: "Problem", intervention: "Intervention", result: "Result", proof: "Proof" }
-    : { file: "Dossier client", problem: "Probleme", intervention: "Intervention", result: "Resultat", proof: "Preuve" };
 
   const handleSelect = (index: number) => {
     setActiveIndex(index);
@@ -253,15 +199,15 @@ export function Showcase({ locale = "fr" }: { locale?: Locale }) {
   };
 
   return (
-    <section id="realisations" className="section-screen px-4 md:px-8">
-      <div className="mx-auto max-w-7xl">
+    <section id="realisations" className="section-screen section-fit px-4 md:px-8">
+      <div className="mx-auto w-full max-w-7xl">
         <Reveal>
           <SectionHeading
             eyebrow={en ? "Work" : "Réalisations"}
             title={
               en
-                ? "Work: concrete transformations with visible before/after"
-                : "Réalisations: transformations concrètes, avant / après visibles"
+                ? "Work: concrete transformations, before / after"
+                : "Réalisations: des transformations concrètes, avant / après"
             }
             description={
               en
@@ -271,45 +217,7 @@ export function Showcase({ locale = "fr" }: { locale?: Locale }) {
           />
         </Reveal>
 
-        <Reveal delay={0.04} y={12}>
-          <div className="mt-5 grid gap-3 md:grid-cols-3">
-            {caseStudies.map((study, index) => (
-              <article
-                key={study.title}
-                className="relative rounded-none border border-[#2a231d]/18 bg-[#fffaf0]/86 p-4 shadow-[5px_5px_0_rgba(42,35,29,0.1)]"
-              >
-                <div className="mb-4 flex items-start justify-between gap-3 border-b border-[#2a231d]/12 pb-3">
-                  <div>
-                    <p className="text-[10px] font-black uppercase tracking-[0.16em] text-[#d94f2b]">
-                      {caseLabels.file} 0{index + 1}
-                    </p>
-                    <h3 className="font-display mt-1 text-lg font-semibold text-[#17120f]">{study.title}</h3>
-                  </div>
-                  <span className="border border-[#2a231d]/14 bg-[#17120f] px-2 py-1 text-[10px] font-black text-[#fffaf0]">
-                    30j
-                  </span>
-                </div>
-                <div className="space-y-2.5">
-                  <CaseLine label={caseLabels.problem} text={study.context} />
-                  <CaseLine label={caseLabels.intervention} text={study.action} />
-                  <div className="border border-[#2a231d]/12 bg-[#f5f1e8] p-3">
-                    <p className="text-[10px] font-black uppercase tracking-[0.12em] text-[#d94f2b]">{caseLabels.result}</p>
-                    <p className="mt-1 text-base font-black text-[#17120f]">{study.result}</p>
-                    <p className="mt-1 text-[11px] text-[#8a7d6f]">{study.period}</p>
-                  </div>
-                  <CaseLine label={caseLabels.proof} text={study.source} />
-                </div>
-              </article>
-            ))}
-          </div>
-          <p className="mt-3 text-xs text-[#8a7d6f]">
-            {en
-              ? "Examples synthesized from project cases and client feedback over 30 days post-delivery."
-              : "Exemples synthétisés à partir de cas projets et retours clients sur 30 jours post-livraison."}
-          </p>
-        </Reveal>
-
-        <Reveal delay={0.05} y={16} className="mt-6 md:mt-8">
+        <Reveal delay={0.05} y={16} className="mt-5 md:mt-7">
           <div className="relative overflow-hidden rounded-none border border-[#2a231d]/16 bg-[linear-gradient(150deg,rgba(255,250,240,0.94),rgba(239,231,217,0.78))] shadow-[8px_8px_0_rgba(42,35,29,0.1)]">
             {/* Top bar */}
             <div className="flex flex-wrap items-center justify-between gap-2 border-b border-[#2a231d]/12 px-4 py-2.5 md:px-6">
@@ -325,31 +233,12 @@ export function Showcase({ locale = "fr" }: { locale?: Locale }) {
               </span>
             </div>
 
-            {/* Body: nav directory + live browser preview */}
-            <div className="grid lg:grid-cols-[0.85fr_1.6fr]">
-              {/* Nav directory */}
-              <div className="flex flex-col border-b border-[#2a231d]/12 lg:border-b-0 lg:border-r">
-                <p className="px-3 pb-2 pt-3 text-[10px] font-black uppercase tracking-[0.16em] text-[#8a7d6f]">
-                  {en ? "Select a project" : "Choisir un projet"}
-                </p>
-                {projects.map((project, index) => (
-                  <ProjectNavItem
-                    key={project.id}
-                    index={index}
-                    id={project.id}
-                    name={project.name}
-                    designation={project.designation}
-                    isActive={index === activeIndex}
-                    ariaPrefix={en ? "Show" : "Afficher"}
-                    onClick={handleSelect}
-                  />
-                ))}
-              </div>
-
-              {/* Browser preview */}
-              <div className="flex flex-col p-4 md:p-5">
+            {/* Body: focus preview + visual selector */}
+            <div className="grid lg:grid-cols-[1.5fr_0.85fr]">
+              {/* Focus preview */}
+              <div className="flex flex-col gap-4 border-b border-[#2a231d]/12 p-4 md:p-5 lg:border-b-0 lg:border-r">
+                {/* Browser-style screenshot */}
                 <div className="overflow-hidden rounded-none border border-[#2a231d]/16 bg-[#17120f] shadow-[6px_6px_0_rgba(42,35,29,0.12)]">
-                  {/* Chrome */}
                   <div className="flex items-center gap-3 border-b border-white/10 bg-[#211a15] px-3 py-2">
                     <span className="flex gap-1.5">
                       <span className="h-2.5 w-2.5 rounded-full bg-[#ff5f57]" />
@@ -361,26 +250,28 @@ export function Showcase({ locale = "fr" }: { locale?: Locale }) {
                       <span className="truncate">{getDomain(activeProject.projectUrl)}</span>
                     </span>
                   </div>
-                  {/* Screenshot */}
-                  <div className="relative aspect-[16/9] overflow-hidden">
+                  <div className="relative h-[clamp(170px,26vh,300px)] overflow-hidden">
                     <Image
                       key={activeProject.src}
                       src={activeProject.src}
                       alt={activeProject.name}
                       fill
-                      sizes="(max-width: 1024px) 100vw, 60vw"
+                      sizes="(max-width: 1024px) 100vw, 56vw"
                       className="object-cover object-top"
                     />
                   </div>
                 </div>
 
                 {/* Meta */}
-                <div className="mt-4 flex flex-1 flex-col">
-                  <div className="flex flex-wrap items-baseline gap-x-3 gap-y-1">
+                <div className="flex flex-col">
+                  <p className="text-[10px] font-black uppercase tracking-[0.16em] text-[#8a7d6f]">
+                    {en ? "Project in focus" : "Projet en focus"}
+                  </p>
+                  <div className="mt-1.5 flex flex-wrap items-baseline gap-x-3 gap-y-1">
                     <TextRotate
                       ref={textRotateRef}
                       texts={projects.map((project) => project.name)}
-                      mainClassName="text-xl font-display font-semibold text-[#17120f] md:text-2xl"
+                      mainClassName="font-display text-xl font-semibold text-[#17120f] md:text-2xl"
                       splitLevelClassName="overflow-hidden pb-1"
                       staggerFrom="first"
                       staggerDuration={0.005}
@@ -396,9 +287,13 @@ export function Showcase({ locale = "fr" }: { locale?: Locale }) {
                       {activeProject.segment}
                     </span>
                   </div>
-                  <p className="mt-2 text-sm leading-relaxed text-[#63584d]">{activeProject.quote}</p>
+                  <p className="mt-1 text-xs font-medium text-[#8a7d6f]">{activeProject.designation}</p>
+                  <p className="mt-2.5 text-sm leading-relaxed text-[#63584d]">{activeProject.quote}</p>
 
-                  <div className="mt-3 flex flex-wrap gap-1.5">
+                  <p className="mt-3 text-[10px] font-black uppercase tracking-[0.14em] text-[#8a7d6f]">
+                    {en ? "What was worked on" : "Ce qui a été travaillé"}
+                  </p>
+                  <div className="mt-1.5 flex flex-wrap gap-1.5">
                     {activeProject.scope.map((item) => (
                       <span
                         key={item}
@@ -436,19 +331,38 @@ export function Showcase({ locale = "fr" }: { locale?: Locale }) {
                   </div>
                 </div>
               </div>
+
+              {/* Visual selector */}
+              <div className="flex flex-col p-4 md:p-5">
+                <div className="mb-2.5 flex items-center justify-between px-0.5">
+                  <p className="text-[11px] font-black uppercase tracking-[0.14em] text-[#8a7d6f]">
+                    {en ? "Visual selection" : "Sélection visuelle"}
+                  </p>
+                  <span className="inline-flex items-center gap-1 text-[11px] font-black uppercase tracking-[0.1em] text-[#d94f2b]">
+                    {en ? "Click to switch" : "Cliquer pour changer"}
+                    <ArrowUpRight size={12} />
+                  </span>
+                </div>
+
+                <div className="flex flex-1 flex-col gap-2">
+                  {projects.map((project, index) => (
+                    <ProjectThumb
+                      key={project.id}
+                      index={index}
+                      image={project.src}
+                      title={project.name}
+                      designation={project.designation}
+                      isActive={index === activeIndex}
+                      ariaPrefix={en ? "Show" : "Afficher"}
+                      onClick={handleSelect}
+                    />
+                  ))}
+                </div>
+              </div>
             </div>
           </div>
         </Reveal>
       </div>
     </section>
-  );
-}
-
-function CaseLine({ label, text }: { label: string; text: string }) {
-  return (
-    <div className="border border-[#2a231d]/10 bg-[#fffaf0]/72 p-3">
-      <p className="text-[10px] font-black uppercase tracking-[0.12em] text-[#8a7d6f]">{label}</p>
-      <p className="mt-1 text-xs leading-relaxed text-[#63584d]">{text}</p>
-    </div>
   );
 }

@@ -143,8 +143,8 @@ export function ServiceSeoPage({ page }: { page: ServiceSeoPageData }) {
             </h2>
             <p className="mt-4 text-sm leading-6 text-[#f7ead8]">
               {en
-                ? "These pages are built for search, but the offer stays practical: understand the business, clarify the message, then launch cleanly."
-                : "Ces pages servent le SEO, mais l'offre reste concrète: comprendre l'activité, clarifier le message, puis mettre en ligne proprement."}
+                ? "Before starting, I check what already exists, what really needs to change, and what should stay under your control after launch."
+                : "Avant de démarrer, je vérifie ce qui existe déjà, ce qui doit réellement changer et ce qui doit rester sous votre contrôle après la mise en ligne."}
             </p>
           </div>
 

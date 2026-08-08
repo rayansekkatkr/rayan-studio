@@ -79,8 +79,8 @@ export function Testimonials({ locale = "fr" }: { locale?: Locale }) {
             title={en ? "What becomes clearer after a focused redesign" : "Ce qui devient plus clair après une vraie refonte"}
             description={
               en
-                ? "No repeated fake portrait wall: a concise summary of the signals I look for after a redesign."
-                : "Pas de mur de faux portraits répétés: une synthèse claire des signaux que je regarde après une refonte."
+                ? "A concise summary of the signals I look at after a redesign, and what I set up so you can measure them on your own site."
+                : "Une synthèse claire des signaux que je regarde après une refonte, et de ce que je mets en place pour que vous puissiez les mesurer sur votre site."
             }
             center
           />
@@ -100,7 +100,7 @@ export function Testimonials({ locale = "fr" }: { locale?: Locale }) {
                   {en ? "Evidence rhythm" : "Rythme de preuve"}
                 </p>
                 <h3 className="font-display mt-4 text-3xl font-semibold leading-tight md:text-4xl">
-                  {en ? "Fewer claims. Better signals." : "Moins d'avis inventés. Plus de signaux utiles."}
+                  {en ? "Fewer claims. Better signals." : "Moins de promesses. Plus de signaux utiles."}
                 </h3>
                 <p className="mt-4 text-sm leading-7 text-[#f7ead8]/82">
                   {en

@@ -47,8 +47,8 @@ export function LocalSeoLanding({ city, sector, content }: LocalSeoLandingProps)
             <p className="mt-2 text-sm font-semibold text-[#17120f]">Première direction en 72h</p>
           </div>
           <div>
-            <p className="text-[11px] font-black uppercase tracking-[0.12em] text-[#8a7d6f]">Résultat observé</p>
-            <p className="mt-2 text-sm font-semibold text-[#17120f]">{content.proof}</p>
+            <p className="text-[11px] font-black uppercase tracking-[0.12em] text-[#8a7d6f]">Priorité secteur</p>
+            <p className="mt-2 text-sm font-semibold text-[#17120f]">{content.objective}</p>
           </div>
         </div>
 

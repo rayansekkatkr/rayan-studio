@@ -133,7 +133,7 @@ const DEFAULT_SECTOR_PROFILE = {
   checklist: ["Offre claire", "Contact visible", "Mobile lisible", "Confiance renforcée"],
 };
 
-function buildLocalSeoContent({ citySlug, cityLabel, sectorSlug, sectorLabel, kpi }) {
+function buildLocalSeoContent({ citySlug, cityLabel, sectorSlug, sectorLabel, objective }) {
   const city = CITY_PROFILES[citySlug] || DEFAULT_CITY_PROFILE;
   const sector = SECTOR_PROFILES[sectorSlug] || DEFAULT_SECTOR_PROFILE;
   const titleSector = SECTOR_PROFILES[sectorSlug] ? String(sectorLabel || "commerce").toLowerCase() : String(sectorLabel || "commerce");
@@ -152,7 +152,7 @@ function buildLocalSeoContent({ citySlug, cityLabel, sectorSlug, sectorLabel, kp
       `L'intention de recherche principale pour un ${lowerSector}: ${sector.intent}.`,
     painPoints: sector.painPoints,
     checklist: sector.checklist,
-    proof: kpi,
+    objective,
     ctaIntro:
       `Je peux vous envoyer une lecture rapide de votre site actuel ou cadrer un premier site pour votre activité à ${cityLabel}.`,
   };

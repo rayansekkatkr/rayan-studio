@@ -8,25 +8,26 @@ import { isEnglish, type Locale } from "@/lib/i18n";
 const copy = {
   fr: {
     label: "Audit, refonte et mise en ligne pour petites entreprises",
-    title: "Votre site date. Je le transforme en vitrine claire et prete a vendre.",
+    title: "Votre site date. Je le transforme en vitrine claire et prête à vendre.",
     subtitle:
-      "Refonte ou premier site pour TPE: direction visuelle, SEO local, DNS, hebergement ou VPS et deploiement inclus, avec un interlocuteur unique.",
+      "Refonte ou premier site pour TPE : direction visuelle, SEO local, DNS, hébergement ou VPS et déploiement inclus, avec un interlocuteur unique.",
     primaryCta: "Demander un diagnostic gratuit",
     mobilePrimaryCta: "Diagnostic gratuit",
     secondaryCta: "Voir les transformations",
-    craft: "Design · SEO · DNS · Hebergement · Deploiement",
+    craft: "Design · SEO · DNS · Hébergement · Déploiement",
     scroll: "Explorer",
     beforeTitle: "Avant",
-    afterTitle: "Apres",
-    beforeItems: ["Image datee", "Mobile peu clair", "Technique floue"],
-    afterItems: ["DA plus credible", "SEO local pose", "Contact evident"],
+    afterTitle: "Après",
+    beforeItems: ["Image datée", "Mobile peu clair", "Technique floue"],
+    afterItems: ["DA plus crédible", "SEO local posé", "Contact évident"],
     diagnosticTitle: "Diagnostic inclus",
-    diagnosticItems: ["Audit visuel", "Parcours mobile", "SEO / DNS / deploiement"],
+    diagnosticItems: ["Audit visuel", "Parcours mobile", "SEO / DNS / déploiement"],
     dossierTitle: "Dossier de refonte",
     dossierSubtitle: "Plan de relance web",
     techTitle: "Technique prise en charge",
-    techItems: ["SEO local inspecte", "DNS / hebergement", "VPS si besoin", "Deploiement propre"],
-    solo: "Studio independant, pas une grosse agence",
+    techItems: ["SEO local inspecté", "DNS / hébergement", "VPS si besoin", "Déploiement propre"],
+    badge: "Refonte",
+    solo: "Studio indépendant, pas une grosse agence",
   },
   en: {
     label: "Audit, redesign and launch for small businesses",
@@ -41,13 +42,14 @@ const copy = {
     beforeTitle: "Before",
     afterTitle: "After",
     beforeItems: ["Dated image", "Weak mobile path", "Unclear technical setup"],
-    afterItems: ["More credible direction", "Local SEO set", "Obvious contact"],
+    afterItems: ["More credible direction", "Local SEO in place", "Easy to contact"],
     diagnosticTitle: "Included diagnosis",
     diagnosticItems: ["Visual audit", "Mobile journey", "SEO / DNS / deployment"],
     dossierTitle: "Redesign file",
     dossierSubtitle: "Web relaunch plan",
     techTitle: "Technical setup handled",
     techItems: ["Local SEO checked", "DNS / hosting", "VPS if needed", "Clean deployment"],
+    badge: "Redesign",
     solo: "Independent studio, not a big agency",
   },
 };
@@ -152,7 +154,7 @@ export function Hero({ locale = "fr" }: { locale?: Locale }) {
           className="relative mb-3 min-h-[320px] border border-[#2a231d]/14 bg-[#fffaf0] p-2.5 shadow-[8px_8px_0_rgba(42,35,29,0.1)] md:p-3 lg:mb-0"
         >
           <div className="absolute -right-3 -top-3 hidden border border-[#2a231d]/14 bg-[#d94f2b] px-3 py-2 text-[10px] font-black uppercase tracking-[0.14em] text-white shadow-[4px_4px_0_rgba(42,35,29,0.12)] sm:block">
-            Refonte
+            {t.badge}
           </div>
 
           <div className="mb-2.5 flex flex-wrap items-center justify-between gap-2 border-b border-[#2a231d]/12 pb-2.5">

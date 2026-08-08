@@ -31,34 +31,34 @@ type PricingLeadForm = {
 const plansFr = [
   {
     offerKey: "express",
-    name: "Creation Express",
-    price: "A partir de 700 EUR",
-    description: "Pour creer un premier site simple, propre et rassurant.",
-    forWho: "Ideal si votre entreprise n'a pas encore de vraie presence en ligne.",
-    result: "Vous obtenez une vitrine claire, mobile et prete a etre partagee a vos clients.",
+    name: "Création Express",
+    price: "À partir de 700 EUR",
+    description: "Pour créer un premier site simple, propre et rassurant.",
+    forWho: "Idéal si votre entreprise n'a pas encore de vraie présence en ligne.",
+    result: "Vous obtenez une vitrine claire, mobile et prête à être partagée avec vos clients.",
     features: [
       "Page principale ou petit site simple",
-      "Design responsive adapte a votre activite",
-      "SEO de base pour etre trouvable",
+      "Design responsive adapté à votre activité",
+      "SEO de base pour être trouvable",
       "Formulaire ou WhatsApp visible",
-      "Domaine, DNS, hebergement et mise en ligne accompagnes",
+      "Domaine, DNS, hébergement et mise en ligne accompagnés",
     ],
     featured: false,
   },
   {
     offerKey: "redesign",
     name: "Refonte Pro",
-    price: "A partir de 1200 EUR",
-    description: "Pour remplacer un site date par une vitrine plus credible.",
-    forWho: "Ideal si votre site existe deja mais ne reflete plus la qualite de votre entreprise.",
+    price: "À partir de 1200 EUR",
+    description: "Pour remplacer un site daté par une vitrine plus crédible.",
+    forWho: "Idéal si votre site existe déjà mais ne reflète plus la qualité de votre entreprise.",
     result: "Votre site devient plus clair, plus moderne, et donne davantage envie de vous contacter.",
     features: [
       "Diagnostic rapide du site actuel",
       "Nouvelle direction visuelle",
-      "Structure et messages retravailles",
+      "Structure et messages retravaillés",
       "SEO local ou SEO de base",
-      "DNS, hebergement, VPS si besoin et deploiement inclus",
-      "Suivi court apres livraison",
+      "DNS, hébergement, VPS si besoin et déploiement inclus",
+      "Suivi court après livraison",
     ],
     featured: true,
   },
@@ -66,16 +66,16 @@ const plansFr = [
     offerKey: "custom",
     name: "Sur mesure",
     price: "Devis",
-    description: "Pour un projet plus complet avec besoins specifiques.",
-    forWho: "Ideal si vous avez plusieurs pages, une administration, ou des fonctionnalites precises.",
-    result: "Vous obtenez une solution plus complete, alignee avec votre activite et votre organisation.",
+    description: "Pour un projet plus complet avec besoins spécifiques.",
+    forWho: "Idéal si vous avez plusieurs pages, une administration, ou des fonctionnalités précises.",
+    result: "Vous obtenez une solution plus complète, alignée avec votre activité et votre organisation.",
     features: [
       "Audit et cadrage plus approfondis",
-      "Direction creative avancee",
-      "Pages ou parcours supplementaires",
-      "Administration simple si necessaire",
-      "Fonctionnalites specifiques selon besoin",
-      "Architecture, deploiement et VPS cadres selon le projet",
+      "Direction créative avancée",
+      "Pages ou parcours supplémentaires",
+      "Administration simple si nécessaire",
+      "Fonctionnalités spécifiques selon besoin",
+      "Architecture, déploiement et VPS cadrés selon le projet",
     ],
     featured: false,
   },
@@ -135,16 +135,16 @@ const plansEn = [
 ];
 
 const maintenanceFr = {
-  title: "Maintenance legere apres livraison",
-  subtitle: "Pour garder le site propre sans devoir reprendre la technique vous-meme.",
-  price: "49 a 99 EUR/mois selon le besoin",
+  title: "Maintenance légère après livraison",
+  subtitle: "Pour garder le site propre sans devoir reprendre la technique vous-même.",
+  price: "49 à 99 EUR/mois selon le besoin",
   includes: [
     "Petites modifications de textes",
     "Remplacement ponctuel d'images",
     "Surveillance basique et sauvegardes",
     "Support simple par message",
   ],
-  note: "Propose apres livraison pour construire un revenu recurrent sans alourdir le projet initial.",
+  note: "Option sans engagement, proposée après livraison. Le périmètre, le délai de réponse et les coûts d'hébergement sont définis avant activation.",
 };
 
 const maintenanceEn = {
@@ -152,7 +152,7 @@ const maintenanceEn = {
   subtitle: "Keep the website clean without handling the technical side yourself.",
   price: "EUR 49 to 99/month depending on needs",
   includes: ["Small text updates", "Occasional image replacement", "Basic monitoring and backups", "Simple message support"],
-  note: "Offered after delivery to build recurring revenue without making the initial project heavier.",
+  note: "Optional and commitment-free after delivery. Scope, response time and hosting costs are agreed before activation.",
 };
 
 export function Pricing({ locale = "fr" }: { locale?: Locale }) {
@@ -248,11 +248,11 @@ export function Pricing({ locale = "fr" }: { locale?: Locale }) {
         <Reveal>
           <SectionHeading
             eyebrow={en ? "Pricing" : "Tarifs"}
-            title={en ? "Simple offers built for a one-person studio" : "Des offres simples, pensees pour vendre sans se disperser"}
+            title={en ? "Simple offers built for small businesses" : "Des offres simples, pensées pour les petites entreprises"}
             description={
               en
-                ? "The goal is not to sell cheap websites. It is to sell clear transformations that a small business can understand."
-                : "Le but n'est pas de vendre des sites au rabais. Le but est de vendre une transformation claire, comprehensible par une TPE."
+                ? "Clear scope, visible pricing and one direct point of contact, so you know what you get before committing."
+                : "Un périmètre clair, des prix visibles et un interlocuteur unique : vous savez ce que vous obtenez avant de vous engager."
             }
             center
           />
@@ -262,7 +262,7 @@ export function Pricing({ locale = "fr" }: { locale?: Locale }) {
           <p className="mx-auto mt-4 max-w-4xl rounded-none border border-[#2a231d]/14 bg-[#fffaf0]/82 px-4 py-3 text-sm font-semibold text-[#63584d]">
             {en
               ? "No technical skills needed on your side: design, SEO, DNS, hosting and launch can be handled in one place."
-              : "Aucune competence technique necessaire de votre cote: design, SEO, DNS, hebergement et mise en ligne peuvent etre geres au meme endroit."}
+              : "Aucune compétence technique nécessaire de votre côté : design, SEO, DNS, hébergement et mise en ligne peuvent être gérés au même endroit."}
           </p>
         </Reveal>
 
@@ -307,7 +307,7 @@ export function Pricing({ locale = "fr" }: { locale?: Locale }) {
                       ))}
                     </div>
                     <div className="mt-4 rounded-none border border-[#2a231d]/12 bg-[#f5f1e8] px-3 py-2 text-sm text-[#63584d]">
-                      <span className="font-black text-[#17120f]">{en ? "Expected result:" : "Resultat attendu :"}</span>{" "}
+                      <span className="font-black text-[#17120f]">{en ? "Expected result:" : "Résultat attendu :"}</span>{" "}
                       {plan.result}
                     </div>
                   </CardContent>
@@ -331,7 +331,7 @@ export function Pricing({ locale = "fr" }: { locale?: Locale }) {
         <Reveal delay={0.14}>
           <div className="mt-7 rounded-none border border-[#2a231d]/14 bg-[linear-gradient(145deg,rgba(255,250,240,0.95),rgba(232,224,210,0.78))] p-4 shadow-[8px_8px_0_rgba(42,35,29,0.09)] sm:p-5">
             <p className="text-xs font-black uppercase tracking-[0.12em] text-[#d94f2b]">
-              {en ? "Optional recurring support" : "Support recurrent optionnel"}
+              {en ? "Optional recurring support" : "Support récurrent optionnel"}
             </p>
             <h3 className="font-display mt-2 text-xl font-semibold text-[#17120f] sm:text-2xl">{maintenance.title}</h3>
             <p className="mt-2 text-sm text-[#63584d]">{maintenance.subtitle}</p>

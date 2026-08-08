@@ -138,12 +138,13 @@ Composants:
 
 Champs formulaire:
 
-- Prenom.
-- Besoin principal: creation, refonte, pas encore sur.
-- Type de commerce.
-- Email.
-- Message.
-- Honeypot `website`.
+- Prenom (`firstName`, requis).
+- Besoin principal (`projectType`): creation, refonte, pas encore sur.
+- Type de commerce (`businessType`, requis).
+- Email (`email`, requis).
+- URL du site actuel (`siteUrl`, optionnel, champ visible).
+- Message (`message`, requis).
+- Honeypot `companyWebsite` (champ cache anti-bot, a ne pas confondre avec `siteUrl`).
 
 Promesse de diagnostic:
 
@@ -484,3 +485,27 @@ Quand un changement important est fait:
 - Les brouillons `proposalDraft` passent en anglais pour PeoplePerHour/Freelancer/RemoteOK/Upwork/We Work Remotely, avec un angle adapte full-stack, MERN, DevOps, API/paiement ou e-commerce. Le fichier `scripts/freelance-valid-offers.*` contient maintenant seulement les missions propres disponibles apres filtrage, pas un quota artificiel de 30.
 - Ajout de `scripts/freelance-contact-queue.js`: le script lit les offres propres, scanne les pages pour emails publics, `mailto:` et numeros internationaux, puis genere `scripts/freelance-contact-queue.{json,md}` avec messages humanises. L'envoi reel est bloque par defaut et exige `approved: true` par contact + `FREELANCE_CONTACT_SEND_APPROVED=true` + credentials Gmail, afin d'eviter un envoi de masse non valide.
 - Run reel contact queue du 2026-06-28: 20 offres scannees, 0 email public, 0 telephone public, 20 offres sans contact public; aucun email envoye.
+
+### 2026-08-09
+
+- Audit complet livré (`FULL-AUDIT-REPORT.md`, note 49/100) + feuille de route (`ACTION-PLAN.md`). Priorités : P0 assainir les preuves, P1 fondations SEO/i18n/sécurité, P2 repositionnement Engineering/Studio, P3 SEO local + perf.
+- P0-2 copy destructrice de confiance corrigée : note maintenance « revenu récurrent » remplacée par un cadrage client (Pricing.tsx FR+EN), « Moins d'avis inventés » -> « Moins de promesses » (Testimonials.tsx), « Ces pages servent le SEO » -> vérification avant démarrage (ServiceSeoPage.tsx FR+EN), titre Tarifs « pensées pour vendre sans se disperser » -> « pensées pour les petites entreprises » avec description orientée périmètre/engagement.
+- P0-3 finition linguistique : accents restaurés dans Hero.tsx (H1 « prête à vendre »), Pricing.tsx (3 offres + maintenance), Services.tsx, service-seo.js (pages coût + checklist), pricing-leads.js, layout.tsx (keywords). Badge « Refonte » du hero localisé via `t.badge` (« Redesign » sur /en). Lien footer « CGV » -> "Terms of sale" sur /en. Calques EN corrigés ("Local SEO set" -> "Local SEO in place", "Obvious contact" -> "Easy to contact").
+- Fix build : `.eslintrc.json` complété avec `ignorePatterns: ["out/", "output/", ".next/"]` — les doublons Finder de `out/` faisaient échouer `next build` (2 erreurs `react/no-find-dom-node` dans du vendor minifié).
+- Vérification : `npx tsc --noEmit` exit 0 ; `cd scripts && npm test` 40/40 ; `git diff --check` OK ; lint source propre ; validation runtime de `pricing-leads.js` et `service-seo.js` (require + labels accentués). `npm run build` complet : très long (>10 min) et tué silencieusement en tâche de fond par l'outillage — relancé via nohup, résultat à confirmer avant déploiement.
+- Constat process : les commandes lancées après `cd scripts` gardent ce cwd pour les appels suivants — plusieurs greps/builds ont échoué en silence à cause de ça. Toujours préfixer par `cd` absolu.
+- Reste (P1, validé par l'utilisateur) : origine canonique www partout, `lang` dynamique sur /en, x-default, OG/Twitter localisés, sitemap sans URL redirigée ni route legacy cassée, 404 sur locales inconnues, navigation globale des pages secondaires, accessibilité menu/modal/cibles, upgrade Next 14.2.5 + headers sécurité.
+
+### 2026-08-04
+
+- Alignement de l'outillage Claude Code sur le projet `goodcall`: ajout de `.claude/settings.json` (10 types de hooks, statusline, env `CLAUDE_FLOW_*`), `.claude/loop-engineering.md`, `.mcp.json` (serveur MCP `ruflo`), `.codex/hooks.json`, fusion de `.codex/config.toml` (shell environment policy + `mcp_servers.ruflo`), mise a jour de 10 helpers dans `.claude/helpers/` dont `ruflo-hook.cjs` qui etait absent, et ajout de 10 skills `source-command-agents-*` dans `.agents/skills/`. Les agents mobile-UX de goodcall, `.superpowers/` et `.stitch/` n'ont pas ete repris car specifiques a ce projet.
+- Creation de `CLAUDE.md` a la racine: brief permanent d'invariants (produit, stack, sources de verite, commandes, acquis SEO/contact/tracking a ne pas casser, env vars, regles acquisition, regles de travail sur le worktree). Il pointe vers ce fichier pour le detail et l'historique.
+- Correction d'une erreur de ce fichier: le honeypot du formulaire de contact est `companyWebsite` (`src/app/api/contact/route.ts:64`), pas `website`. `siteUrl` est un vrai champ visible optionnel. La liste des champs formulaire a ete completee avec les noms reels et le caractere requis/optionnel.
+- Verification: `cd scripts && npm test` OK (40 tests, 0 echec), tous les JSON de config valides (`settings.json`, `.mcp.json`, `.codex/hooks.json`, `settings.local.json`), tous les chemins `helpers/*` references par les hooks existent, `statusline.cjs` et `hook-handler.cjs` s'executent en exit 0. Sauvegarde de l'ancienne config dans le scratchpad de session avant ecrasement.
+- P0 credibilite: suppression des resultats chiffres inventes. L'utilisateur a confirme que les chiffres etaient faux. Il y en avait **7**, pas 3: `kpiBySector` dans `src/app/site/[sector]/[city]/page.tsx` donnait un chiffre par secteur (restaurant +28%, cafe +24 messages, hotel +41%, boulangerie +26%, patisserie +29%, bar +23%, commerce-local +25%), affiche sur les 70 pages locales sous le label **"Resultat observe"** (`LocalSeoLanding.tsx`). Le meme chiffre apparaissait donc sur les 10 villes d'un meme secteur.
+- Correction appliquee: `kpiBySector` -> `objectiveBySector` avec des objectifs sans chiffre; label "Resultat observe" -> "Priorite secteur"; cle de donnees `kpi`/`proof` renommee en `objective` dans `local-seo-content.js` et `.d.ts` (renommage volontaire pour empecher qu'un chiffre soit reinjecte plus tard sous un label "preuve"). Section "Preuves" de `a-propos-methodologie-preuves` remplacee par "Ce que je mesure apres une refonte" (baseline avant lancement, actions suivies, Search Console sur la propriete du client, point a 30 jours). Ligne defensive "mur de faux portraits" retiree de `Testimonials.tsx`.
+- Verification P0: `npx tsc --noEmit` exit 0; `cd scripts && npm test` 40/40; `git diff --check` OK; validation runtime de `buildLocalSeoContent` (cle `objective` presente, `proof` absente, aucun motif `+N %` / `+N messages` dans la sortie); grep de controle sans occurrence residuelle des 7 chiffres ni de la cle `kpi` dans `src/` et `scripts/`.
+- `npm run build` complet non termine: tue plusieurs fois par timeout d'outil et par un lancement concurrent. Le type-check ayant ete valide separement via `tsc --noEmit`, la couverture est equivalente pour ce chantier, mais un `npm run build` de bout en bout reste a lancer avant deploiement.
+- Reste a faire (P1 SEO technique, non commence): `<html lang="fr">` en dur dans `layout.tsx:123` sert du `lang=fr` sur `/en`; `openGraph.locale: "fr_FR"` global jamais surcharge par locale; badge "Refonte" en dur `Hero.tsx:155`; aria-label "Ouvrir le menu" non localise `Navbar.tsx:111`; `canonical: "/"` sur une URL de simple redirection; pas de `x-default`; `LocalBusiness` sans adresse physique (`addressCountry` seul) a remplacer par `ProfessionalService`; `NEXT_PUBLIC_SITE_URL` doit passer en `https://www.rayanstudios.com` **cote hebergeur** (la prod sert www, toutes les URLs derivees pointent vers le non-www).
+- Hygiene repo constatee: `out/` contient trois copies (`_next/`, `_next 2/`, `_next 3/`, doublons Finder) et n'est pas exclu d'ESLint, d'ou 2 erreurs `react/no-find-dom-node` dans du vendor minifie sans rapport avec le code source.
+- Non verifie: les hooks `.claude/settings.json` et le serveur MCP `ruflo` ne sont pas encore actifs dans cette session — ils ne se chargent qu'au demarrage de Claude Code, donc leur comportement reel reste a confirmer apres redemarrage. Aucun `npm run build` ni `npm run lint` lance: cette session n'a touche aucun fichier de `src/`.

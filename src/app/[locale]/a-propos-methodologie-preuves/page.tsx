@@ -145,22 +145,34 @@ export default function AboutMethodPage({ params }: { params: { locale: string }
         </section>
 
         <section className="mt-6 rounded-none border border-[#2a231d]/14 bg-[#fffaf0]/86 p-5 shadow-[7px_7px_0_rgba(42,35,29,0.08)]">
-          <h2 className="font-display text-2xl font-semibold text-[#17120f]">{en ? "Proof" : "Preuves"}</h2>
+          <h2 className="font-display text-2xl font-semibold text-[#17120f]">
+            {en ? "What I measure after a redesign" : "Ce que je mesure après une refonte"}
+          </h2>
+          <p className="mt-4 text-sm leading-7 text-[#63584d]">
+            {en
+              ? "I do not publish client performance figures I cannot show you the source for. Here is what I set up so the result becomes measurable on your own site, from day one."
+              : "Je ne publie pas de chiffres clients dont je ne peux pas vous montrer la source. Voici ce que je mets en place pour que le résultat devienne mesurable sur votre propre site, dès la mise en ligne."}
+          </p>
           <ul className="mt-4 space-y-2 text-sm text-[#63584d]">
             <li>
               {en
-                ? "Independent hotel: +41% inquiries (January 2026, source: form leads)."
-                : "Hôtel indépendant: +41% de demandes (janvier 2026, source leads formulaires)."}
+                ? "Baseline before launch: current inquiries, calls and messages, so there is a point of comparison."
+                : "Point de départ avant mise en ligne: demandes, appels et messages actuels, pour avoir une base de comparaison."}
             </li>
             <li>
               {en
-                ? "Neighborhood cafe: +24 WhatsApp messages (December 2025, WhatsApp Business export)."
-                : "Café de quartier: +24 messages WhatsApp (décembre 2025, export WhatsApp Business)."}
+                ? "Tracked actions after launch: form submissions, WhatsApp clicks, email clicks and phone clicks."
+                : "Actions suivies après mise en ligne: envois de formulaire, clics WhatsApp, clics email et clics téléphone."}
             </li>
             <li>
               {en
-                ? "Artisan bakery: +26% orders/catering requests (February 2026)."
-                : "Boulangerie artisanale: +26% de commandes/demandes traiteur (février 2026)."}
+                ? "Search Console and analytics set up on your own property, so the data stays yours and verifiable."
+                : "Search Console et analytics configurés sur votre propre propriété, pour que les données restent les vôtres et vérifiables."}
+            </li>
+            <li>
+              {en
+                ? "A review 30 days after launch, based on your numbers, not on averages taken from other projects."
+                : "Un point 30 jours après la mise en ligne, sur vos chiffres, pas sur des moyennes issues d'autres projets."}
             </li>
           </ul>
         </section>

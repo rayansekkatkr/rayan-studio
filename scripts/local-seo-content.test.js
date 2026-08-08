@@ -9,7 +9,7 @@ test("buildLocalSeoContent creates specific content for a restaurant in Paris", 
     cityLabel: "Paris",
     sectorSlug: "restaurant",
     sectorLabel: "Restaurant",
-    kpi: "+28% de réservations sur 30 jours",
+    objective: "Rendre la réservation et l'appel immédiats depuis mobile",
   });
 
   assert.match(content.metaTitle, /restaurant/i);
@@ -25,14 +25,14 @@ test("buildLocalSeoContent varies city and sector content across local pages", (
     cityLabel: "Paris",
     sectorSlug: "restaurant",
     sectorLabel: "Restaurant",
-    kpi: "+28% de réservations sur 30 jours",
+    objective: "Rendre la réservation et l'appel immédiats depuis mobile",
   });
   const hotelLyon = buildLocalSeoContent({
     citySlug: "lyon",
     cityLabel: "Lyon",
     sectorSlug: "hotel",
     sectorLabel: "Hôtel",
-    kpi: "+41% de demandes sur 30 jours",
+    objective: "Faire remonter la demande directe avant les plateformes",
   });
 
   assert.notEqual(restaurantParis.localContext, hotelLyon.localContext);
@@ -46,7 +46,7 @@ test("buildLocalSeoContent falls back safely for unknown slugs", () => {
     cityLabel: "Ville",
     sectorSlug: "unknown-sector",
     sectorLabel: "Commerce",
-    kpi: "+25% de demandes qualifiées",
+    objective: "Rendre l'offre et les informations pratiques accessibles en un écran",
   });
 
   assert.match(content.metaTitle, /Commerce/);

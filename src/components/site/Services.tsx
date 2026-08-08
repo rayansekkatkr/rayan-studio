@@ -15,22 +15,22 @@ const servicesFr = [
     tag: "Offre principale",
     title: "Refonte Pro",
     href: "/fr/refonte-site-internet",
-    subtitle: "Pour remplacer un site date par une vitrine qui inspire confiance",
+    subtitle: "Pour remplacer un site daté par une vitrine qui inspire confiance",
     description:
-      "Je reprends votre site actuel pour clarifier le message, moderniser l'image, optimiser le parcours et gerer la mise en ligne proprement.",
-    outcomes: ["Audit rapide du site actuel", "Nouvelle direction visuelle", "SEO, DNS et deploiement inclus"],
+      "Je reprends votre site actuel pour clarifier le message, moderniser l'image, optimiser le parcours et gérer la mise en ligne proprement.",
+    outcomes: ["Audit rapide du site actuel", "Nouvelle direction visuelle", "SEO, DNS et déploiement inclus"],
     cta: "Demander un diagnostic",
   },
   {
     icon: Layers3,
     tag: "Premier site",
-    title: "Creation Express",
+    title: "Création Express",
     href: "/fr/creation-site-vitrine",
-    subtitle: "Pour exister en ligne sans devoir gerer la technique",
+    subtitle: "Pour exister en ligne sans devoir gérer la technique",
     description:
-      "Je cree une presence simple, professionnelle et rapide pour les petites entreprises qui n'ont pas encore de vrai site.",
-    outcomes: ["Page claire et responsive", "Contact WhatsApp ou formulaire", "Mise en ligne accompagnee"],
-    cta: "Creer mon premier site",
+      "Je crée une présence simple, professionnelle et rapide pour les petites entreprises qui n'ont pas encore de vrai site.",
+    outcomes: ["Page claire et responsive", "Contact WhatsApp ou formulaire", "Mise en ligne accompagnée"],
+    cta: "Créer mon premier site",
   },
 ];
 
@@ -76,11 +76,11 @@ export function Services({ locale = "fr" }: { locale?: Locale }) {
         <Reveal>
           <SectionHeading
             eyebrow="Services"
-            title={en ? "Two offers, one objective: make your business look credible online" : "Deux offres, un objectif: rendre votre entreprise credible en ligne"}
+            title={en ? "Two offers, one objective: make your business look credible online" : "Deux offres, un objectif : rendre votre entreprise crédible en ligne"}
             description={
               en
                 ? "For dated websites and businesses that still do not have a proper site."
-                : "Pour les sites dates et les entreprises qui n'ont pas encore de vraie presence en ligne."
+                : "Pour les sites datés et les entreprises qui n'ont pas encore de vraie présence en ligne."
             }
           />
         </Reveal>

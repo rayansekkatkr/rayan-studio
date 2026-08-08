@@ -151,6 +151,14 @@ export function VerticalTabs({ locale = "fr", items }: { locale?: Locale; items?
       <div className="grid items-stretch gap-7 lg:grid-cols-12 lg:gap-10">
         {/* Steps rail */}
         <div className="order-2 flex flex-col lg:order-1 lg:col-span-5">
+          <div className="mb-5 md:mb-6">
+            <h3 className="font-display text-balance text-2xl font-semibold tracking-tight text-[#17120f] md:text-3xl">
+              {en ? "How I support you" : "Comment je vous accompagne"}
+            </h3>
+            <span className="mt-1 block text-[10px] font-black uppercase tracking-[0.3em] text-[#8a7d6f]">
+              (Process)
+            </span>
+          </div>
           <ol className="flex flex-col">
             {resolvedItems.map((item, index) => {
               const isActive = activeIndex === index;

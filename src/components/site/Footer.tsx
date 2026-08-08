@@ -45,7 +45,7 @@ export function Footer({ locale = "fr" }: { locale?: Locale }) {
               {en ? "Privacy policy" : "Politique de confidentialité"}
             </a>
             <a href="/cgv" className="transition-colors hover:text-[#d94f2b]">
-              CGV
+              {en ? "Terms of sale" : "CGV"}
             </a>
           </div>
         </div>
