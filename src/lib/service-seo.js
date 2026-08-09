@@ -13,7 +13,7 @@ const SERVICE_SEO_PAGES = [
     intro:
       "Votre site existe déjà, mais il ne montre plus vraiment la qualité de votre entreprise. Je reprends la structure, l'image et le parcours pour rendre l'offre plus lisible et le contact plus naturel.",
     primaryCta: "Demander un diagnostic de refonte",
-    secondaryCta: "Voir les tarifs",
+    secondaryCta: "Voir les offres",
     proofLabel: "Objectif de refonte",
     proofValue: "Image plus crédible, parcours plus clair, demandes mieux qualifiées",
     sections: [
@@ -91,8 +91,8 @@ const SERVICE_SEO_PAGES = [
       {
         title: "Les fourchettes utiles pour une TPE",
         items: [
-          "Un premier site simple peut commencer autour de 700 EUR quand le besoin est clair et limité.",
-          "Une refonte plus complète démarre plutôt autour de 1200 EUR quand il faut reprendre image, structure et SEO.",
+          "Un premier site simple reste un budget contenu quand le besoin est clair et limité.",
+          "Une refonte complète demande un budget plus conséquent quand il faut reprendre l'image, la structure et le SEO.",
           "Un projet avec plusieurs pages, intégrations ou contraintes métier doit être chiffré sur devis.",
         ],
       },
@@ -233,7 +233,7 @@ const SERVICE_SEO_PAGES = [
       {
         question: "Quel budget prévoir pour un site vitrine ?",
         answer:
-          "L'offre Création Express commence à partir de 700 EUR pour un premier site simple, propre et responsive.",
+          "Le devis est gratuit et envoyé sous 24h. Le budget dépend du nombre de sections, des contenus disponibles et du niveau de finition attendu.",
       },
       {
         question: "Le site sera-t-il adapté au mobile ?",
@@ -324,7 +324,7 @@ const SERVICE_SEO_PAGES = [
     intro:
       "If your website exists but no longer reflects the quality of your business, the redesign should clarify the message, modernize the image and make contact easier.",
     primaryCta: "Request a redesign diagnosis",
-    secondaryCta: "See pricing",
+    secondaryCta: "See the offers",
     proofLabel: "Redesign objective",
     proofValue: "A clearer image, simpler journey and more qualified enquiries",
     sections: [
@@ -402,8 +402,8 @@ const SERVICE_SEO_PAGES = [
       {
         title: "Useful budget ranges",
         items: [
-          "A simple first website can start around 700 EUR when the scope is limited.",
-          "A fuller redesign usually starts around 1200 EUR when image, structure and SEO need work.",
+          "A simple first website stays affordable when the scope is clear and limited.",
+          "A fuller redesign needs a larger budget when image, structure and SEO all require work.",
           "Larger projects with multiple pages, integrations or specific workflows should be estimated separately.",
         ],
       },

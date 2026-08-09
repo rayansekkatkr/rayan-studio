@@ -63,7 +63,7 @@ export function Navbar({ locale = "fr" }: { locale?: Locale }) {
   const links = [
     { label: en ? "Services" : "Services", href: `/${locale}#services` },
     { label: en ? "Work" : "Réalisations", href: `/${locale}#realisations` },
-    { label: en ? "Pricing" : "Tarifs", href: `/${locale}#tarifs` },
+    { label: en ? "Offers" : "Offres", href: `/${locale}#tarifs` },
     { label: en ? "About" : "À propos", href: `/${locale}/a-propos-methodologie-preuves` },
     { label: "FAQ", href: `/${locale}#faq` },
     { label: en ? "Contact" : "Contact", href: `/${locale}#contact` },

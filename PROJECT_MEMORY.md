@@ -547,6 +547,8 @@ Quand un changement important est fait:
   - CI GitHub Actions créée : `.github/workflows/ci.yml` — npm ci, lint, tsc, tests scripts (avec leur propre `npm ci`), build (env `NEXT_PUBLIC_SITE_URL` www). Recommandation review non appliquée automatiquement : exiger la CI verte sur `main` (réglage GitHub côté utilisateur).
   - Titre + description PR #4 réécrits pour refléter le scope réel P0→P3.
   - Non traité (backlog assumé par la review) : pages légales EN, hausse des prix conseillée (790/1490/2500/59 — décision commerciale utilisateur), passage CSP en mode bloquant après observation.
+- PR #4 mergée dans main (`60616b1`), branche supprimée. CI verte (verify 1m20 + Vercel). Actions hébergeur transmises à l'utilisateur (env vars www, redirect 308, Search Console).
+- **Décision commerciale utilisateur (conseil d'un ami, contre ma recommandation documentée) : retirer tous les prix affichés, accent sur devis gratuit sous 24h.** Branche `prix-sur-devis` : les 3 offres et la maintenance passent en « Devis gratuit sous 24h » / « Sur devis, selon le périmètre » ; libellé « Tarifs » -> « Offres » (nav + eyebrow) ; bloc commun -> « Devis gratuit, écrit et sans engagement, envoyé sous 24h » ; page SEO coût : fourchettes 700/1200 EUR remplacées par des formulations qualitatives, FAQ vitrine réorientée devis 24h ; CTA « Voir les tarifs » -> « Voir les offres ». `priceRange: "€€"` conservé dans le JSON-LD. L'ancre `#tarifs` et le slug de la page coût inchangés (pas de casse d'URLs). Si les leads chutent, la recommandation inverse (ré-afficher des planchers, éventuellement relevés à 790/1490) est documentée ci-dessus.
 
 ### 2026-08-04
 
