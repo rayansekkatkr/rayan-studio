@@ -43,3 +43,6 @@ next-env.d.ts
 # local agent tooling
 .agents/
 .codex/
+
+# Données prospects : jamais dans le dépôt (mini-CRM legacy conservé en local uniquement)
+scripts/contacted.json
