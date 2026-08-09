@@ -37,7 +37,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
   const homeLanguages = {
     fr: `${baseUrl}/fr`,
     en: `${baseUrl}/en`,
-    "x-default": baseUrl,
+    "x-default": `${baseUrl}/fr`,
   };
 
   return [

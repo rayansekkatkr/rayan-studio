@@ -22,7 +22,7 @@ export function generateMetadata({ params }: { params: { locale: string } }): Me
       languages: {
         fr: "/fr",
         en: "/en",
-        "x-default": "/",
+        "x-default": "/fr",
       },
     },
     openGraph: {

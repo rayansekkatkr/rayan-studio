@@ -105,13 +105,13 @@ export const sharedViewport: Viewport = {
   initialScale: 1,
 };
 
-export function RootBody({ children }: { children: React.ReactNode }) {
+export function RootBody({ children, locale = "fr" }: { children: React.ReactNode; locale?: "fr" | "en" }) {
   const gaId = process.env.NEXT_PUBLIC_GA_ID;
 
   return (
     <body className={`${bodyFont.variable} ${displayFont.variable} antialiased`}>
       <a href="#main-content" className="skip-link">
-        Aller au contenu principal
+        {locale === "en" ? "Skip to main content" : "Aller au contenu principal"}
       </a>
       {gaId ? <AnalyticsLoader gaId={gaId} /> : null}
       {gaId ? <WebVitalsReporter /> : null}

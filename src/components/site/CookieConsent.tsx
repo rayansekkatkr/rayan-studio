@@ -2,9 +2,7 @@
 
 import Link from "next/link";
 import { useEffect, useState } from "react";
-import { trackEvent } from "@/lib/analytics";
-
-const CONSENT_KEY = "rayan_cookie_consent_v1";
+import { CONSENT_KEY, trackEvent } from "@/lib/analytics";
 
 function updateConsent(granted: boolean) {
   if (typeof window === "undefined" || typeof window.gtag !== "function") return;
@@ -64,8 +62,8 @@ export function CookieConsent() {
           className="rounded-none border border-[#2a231d]/14 bg-[#fffaf0] px-4 py-2 text-sm font-black text-[#63584d]"
           onClick={() => {
             window.localStorage.setItem(CONSENT_KEY, "declined");
+            window.dispatchEvent(new Event("rs-consent-revoked"));
             updateConsent(false);
-            trackEvent("cookie_consent", { choice: "declined" });
             setVisible(false);
           }}
         >

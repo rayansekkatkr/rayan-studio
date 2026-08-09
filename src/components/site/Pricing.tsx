@@ -170,6 +170,7 @@ export function Pricing({ locale = "fr" }: { locale?: Locale }) {
   const isModalOpen = Boolean(selectedOffer && formData);
   const modalCloseRef = useRef<HTMLButtonElement>(null);
   const modalTriggerRef = useRef<HTMLElement | null>(null);
+  const modalRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     if (!isModalOpen) return;
@@ -180,6 +181,28 @@ export function Pricing({ locale = "fr" }: { locale?: Locale }) {
       if (event.key === "Escape") {
         setSelectedOffer(null);
         setFormData(null);
+        return;
+      }
+
+      if (event.key !== "Tab") return;
+
+      const focusables = Array.from(
+        modalRef.current?.querySelectorAll<HTMLElement>(
+          "a[href], button:not([disabled]), input:not([disabled]):not([tabindex='-1']), textarea:not([disabled]), select:not([disabled])",
+        ) ?? [],
+      );
+      if (focusables.length === 0) return;
+
+      const first = focusables[0];
+      const last = focusables[focusables.length - 1];
+      const active = document.activeElement as HTMLElement | null;
+
+      if (event.shiftKey && (active === first || !modalRef.current?.contains(active))) {
+        event.preventDefault();
+        last.focus();
+      } else if (!event.shiftKey && (active === last || !modalRef.current?.contains(active))) {
+        event.preventDefault();
+        first.focus();
       }
     };
 
@@ -417,6 +440,7 @@ export function Pricing({ locale = "fr" }: { locale?: Locale }) {
             onClick={closePricingModal}
           />
           <motion.div
+            ref={modalRef}
             role="dialog"
             aria-modal="true"
             aria-labelledby="pricing-modal-title"

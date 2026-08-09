@@ -2,21 +2,24 @@
 
 import Script from "next/script";
 import { useEffect, useState } from "react";
-
-const CONSENT_KEY = "rayan_cookie_consent_v1";
+import { hasAnalyticsConsent } from "@/lib/analytics";
 
 export function AnalyticsLoader({ gaId }: { gaId: string }) {
   const [enabled, setEnabled] = useState(false);
 
   useEffect(() => {
-    if (window.localStorage.getItem(CONSENT_KEY) === "accepted") {
+    if (hasAnalyticsConsent()) {
       setEnabled(true);
-      return;
     }
 
     const enable = () => setEnabled(true);
+    const disable = () => setEnabled(false);
     window.addEventListener("rs-consent-granted", enable);
-    return () => window.removeEventListener("rs-consent-granted", enable);
+    window.addEventListener("rs-consent-revoked", disable);
+    return () => {
+      window.removeEventListener("rs-consent-granted", enable);
+      window.removeEventListener("rs-consent-revoked", disable);
+    };
   }, []);
 
   if (!enabled) return null;

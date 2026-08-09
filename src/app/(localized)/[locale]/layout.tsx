@@ -22,7 +22,7 @@ export default function LocaleLayout({
 
   return (
     <html lang={lang}>
-      <RootBody>{children}</RootBody>
+      <RootBody locale={lang}>{children}</RootBody>
     </html>
   );
 }
