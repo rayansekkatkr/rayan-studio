@@ -183,6 +183,12 @@ body::after {
     padding-top: clamp(5.75rem, 8vh, 6.75rem);
     padding-bottom: clamp(4.25rem, 7vh, 5.75rem);
   }
+
+  /* Sections that should fill exactly one viewport (no scroll) on desktop. */
+  .section-fit {
+    min-height: 100svh;
+    align-items: center;
+  }
 }
 
 section[id] {
@@ -213,4 +219,34 @@ section[id] {
     padding-top: 5.75rem;
     padding-bottom: 2.75rem;
   }
+
+  /* On mobile, content stacks tall: let it flow instead of forcing one screen. */
+  .section-fit {
+    min-height: auto;
+    align-items: flex-start;
+  }
+}
+
+.skip-link {
+  position: fixed;
+  top: -100px;
+  left: 1rem;
+  z-index: 100;
+  padding: 0.75rem 1.25rem;
+  border: 1px solid rgba(42, 35, 29, 0.2);
+  background: #17120f;
+  color: #fffaf0;
+  font-size: 0.875rem;
+  font-weight: 700;
+  transition: top 0.15s ease;
+}
+
+.skip-link:focus-visible {
+  top: 1rem;
+}
+
+/* Below-the-fold sections: skip rendering cost until scrolled near. */
+.cv-auto {
+  content-visibility: auto;
+  contain-intrinsic-size: auto 900px;
 }

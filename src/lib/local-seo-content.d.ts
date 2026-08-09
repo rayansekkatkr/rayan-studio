@@ -3,7 +3,12 @@ export type LocalSeoContentInput = {
   cityLabel: string;
   sectorSlug: string;
   sectorLabel: string;
-  kpi: string;
+  objective: string;
+};
+
+export type LocalSeoFaqEntry = {
+  question: string;
+  answer: string;
 };
 
 export type LocalSeoContent = {
@@ -12,10 +17,12 @@ export type LocalSeoContent = {
   title: string;
   subtitle: string;
   localContext: string;
+  districtsLine: string;
   sectorIntent: string;
   painPoints: string[];
   checklist: string[];
-  proof: string;
+  objective: string;
+  faq: LocalSeoFaqEntry[];
   ctaIntro: string;
 };
 

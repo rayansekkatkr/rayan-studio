@@ -2,9 +2,7 @@
 
 import Link from "next/link";
 import { useEffect, useState } from "react";
-import { trackEvent } from "@/lib/analytics";
-
-const CONSENT_KEY = "rayan_cookie_consent_v1";
+import { CONSENT_KEY, trackEvent } from "@/lib/analytics";
 
 function updateConsent(granted: boolean) {
   if (typeof window === "undefined" || typeof window.gtag !== "function") return;
@@ -23,15 +21,13 @@ export function CookieConsent() {
   useEffect(() => {
     setIsEnglish(window.location.pathname.startsWith("/en"));
     const saved = window.localStorage.getItem(CONSENT_KEY);
-    if (saved === "accepted") {
-      updateConsent(true);
-      return;
+    if (saved !== "accepted" && saved !== "declined") {
+      setVisible(true);
     }
-    if (saved === "declined") {
-      updateConsent(false);
-      return;
-    }
-    setVisible(true);
+
+    const reopen = () => setVisible(true);
+    window.addEventListener("rs-open-consent", reopen);
+    return () => window.removeEventListener("rs-open-consent", reopen);
   }, []);
 
   if (!visible) return null;
@@ -43,7 +39,7 @@ export function CookieConsent() {
           ? "We use analytics cookies to improve the website. You can accept or decline these cookies."
           : "Nous utilisons des cookies de mesure d'audience pour améliorer le site. Vous pouvez accepter ou refuser ces cookies."}
         {" "}
-        <Link href="/politique-confidentialite" className="font-black text-[#d94f2b] underline underline-offset-2">
+        <Link href="/politique-confidentialite" className="font-black text-[#c2461f] underline underline-offset-2">
           {isEnglish ? "Learn more" : "En savoir plus"}
         </Link>
       </p>
@@ -53,6 +49,7 @@ export function CookieConsent() {
           className="rounded-none border border-[#17120f] bg-[#17120f] px-4 py-2 text-sm font-black text-[#fffaf0]"
           onClick={() => {
             window.localStorage.setItem(CONSENT_KEY, "accepted");
+            window.dispatchEvent(new Event("rs-consent-granted"));
             updateConsent(true);
             trackEvent("cookie_consent", { choice: "accepted" });
             setVisible(false);
@@ -65,8 +62,8 @@ export function CookieConsent() {
           className="rounded-none border border-[#2a231d]/14 bg-[#fffaf0] px-4 py-2 text-sm font-black text-[#63584d]"
           onClick={() => {
             window.localStorage.setItem(CONSENT_KEY, "declined");
+            window.dispatchEvent(new Event("rs-consent-revoked"));
             updateConsent(false);
-            trackEvent("cookie_consent", { choice: "declined" });
             setVisible(false);
           }}
         >

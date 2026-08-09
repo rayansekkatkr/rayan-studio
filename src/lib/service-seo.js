@@ -68,58 +68,59 @@ const SERVICE_SEO_PAGES = [
     path: "/fr/cout-refonte-site-internet-petite-entreprise",
     alternatePath: "/en/small-business-website-redesign-cost",
     eyebrow: "Budget de refonte",
-    title: "Combien coute une refonte de site internet pour petite entreprise ?",
-    metaTitle: "Cout refonte site internet petite entreprise",
+    title: "Combien coûte une refonte de site internet pour petite entreprise ?",
+    metaTitle: "Coût refonte site internet petite entreprise",
     description:
-      "Comprendre le budget d'une refonte de site internet pour TPE: ce qui fait varier le prix, ce qui doit etre inclus et comment eviter un projet flou.",
+      "Comprendre le budget d'une refonte de site internet pour TPE : ce qui fait varier le prix, ce qui doit être inclus et comment éviter un projet flou.",
     intro:
-      "Le bon budget depend rarement d'une seule page ou d'un design plus joli. Il depend surtout de ce qu'il faut clarifier: message, parcours mobile, SEO, domaine, hebergement, formulaire et mise en ligne.",
+      "Le bon budget dépend rarement d'une seule page ou d'un design plus joli. Il dépend surtout de ce qu'il faut clarifier : message, parcours mobile, SEO, domaine, hébergement, formulaire et mise en ligne.",
     primaryCta: "Demander un chiffrage clair",
     secondaryCta: "Voir la checklist",
+    secondaryHref: "/fr/checklist-refonte-site-internet",
     proofLabel: "Budget lisible",
-    proofValue: "Une offre cadree avant de designer, coder ou migrer",
+    proofValue: "Une offre cadrée avant de designer, coder ou migrer",
     sections: [
       {
         title: "Ce qui fait varier le prix",
         items: [
-          "Le nombre de pages a reprendre ou creer.",
-          "Le niveau de direction visuelle attendu pour sortir d'un rendu trop generique.",
-          "La partie technique: DNS, hebergement, formulaires, tracking, redirections et mise en ligne.",
+          "Le nombre de pages à reprendre ou créer.",
+          "Le niveau de direction visuelle attendu pour sortir d'un rendu trop générique.",
+          "La partie technique : DNS, hébergement, formulaires, tracking, redirections et mise en ligne.",
         ],
       },
       {
         title: "Les fourchettes utiles pour une TPE",
         items: [
-          "Un premier site simple peut commencer autour de 700 EUR quand le besoin est clair et limite.",
-          "Une refonte plus complete demarre plutot autour de 1200 EUR quand il faut reprendre image, structure et SEO.",
-          "Un projet avec plusieurs pages, integrations ou contraintes metier doit etre chiffre sur devis.",
+          "Un premier site simple peut commencer autour de 700 EUR quand le besoin est clair et limité.",
+          "Une refonte plus complète démarre plutôt autour de 1200 EUR quand il faut reprendre image, structure et SEO.",
+          "Un projet avec plusieurs pages, intégrations ou contraintes métier doit être chiffré sur devis.",
         ],
       },
       {
-        title: "Comment eviter un devis flou",
+        title: "Comment éviter un devis flou",
         items: [
           "Lister les pages indispensables avant de parler design.",
-          "Verifier ce qui existe deja: domaine, hebergement, contenus, photos, fiche Google et ancien site.",
-          "Se mettre d'accord sur les livrables: site, SEO de base, mise en ligne, suivi et corrections.",
+          "Vérifier ce qui existe déjà : domaine, hébergement, contenus, photos, fiche Google et ancien site.",
+          "Se mettre d'accord sur les livrables : site, SEO de base, mise en ligne, suivi et corrections.",
         ],
       },
     ],
-    process: ["Diagnostic", "Perimetre", "Priorites", "Chiffrage", "Mise en ligne"],
+    process: ["Diagnostic", "Périmètre", "Priorités", "Chiffrage", "Mise en ligne"],
     faq: [
       {
-        question: "Pourquoi une refonte coute plus cher qu'un simple changement de design ?",
+        question: "Pourquoi une refonte coûte plus cher qu'un simple changement de design ?",
         answer:
           "Parce qu'une vraie refonte reprend aussi la structure, le message, le mobile, le SEO, les redirections et la mise en ligne. Le visuel n'est qu'une partie du travail.",
       },
       {
-        question: "Peut-on commencer avec un budget limite ?",
+        question: "Peut-on commencer avec un budget limité ?",
         answer:
-          "Oui, si le perimetre est clair. Il vaut mieux refaire peu de pages correctement que lancer un grand site difficile a terminer.",
+          "Oui, si le périmètre est clair. Il vaut mieux refaire peu de pages correctement que lancer un grand site difficile à terminer.",
       },
       {
-        question: "Le prix inclut-il le domaine et l'hebergement ?",
+        question: "Le prix inclut-il le domaine et l'hébergement ?",
         answer:
-          "L'accompagnement technique peut inclure les DNS, l'hebergement et le deploiement. Les abonnements externes restent generalement payes directement par l'entreprise.",
+          "L'accompagnement technique peut inclure les DNS, l'hébergement et le déploiement. Les abonnements externes restent généralement payés directement par l'entreprise.",
       },
     ],
   },
@@ -132,36 +133,37 @@ const SERVICE_SEO_PAGES = [
     title: "Checklist de refonte de site internet avant de refaire votre site",
     metaTitle: "Checklist refonte site internet pour TPE",
     description:
-      "Checklist simple avant une refonte de site internet: image, message, mobile, contact, SEO, DNS, hebergement et mise en ligne pour eviter les oublis.",
+      "Checklist simple avant une refonte de site internet : image, message, mobile, contact, SEO, DNS, hébergement et mise en ligne pour éviter les oublis.",
     intro:
-      "Avant de refaire un site, il faut savoir ce qui bloque vraiment. Cette checklist aide a separer les problemes de design, de message, de parcours client et de technique.",
+      "Avant de refaire un site, il faut savoir ce qui bloque vraiment. Cette checklist aide à séparer les problèmes de design, de message, de parcours client et de technique.",
     primaryCta: "Recevoir un diagnostic",
-    secondaryCta: "Voir le cout d'une refonte",
+    secondaryCta: "Voir le coût d'une refonte",
+    secondaryHref: "/fr/cout-refonte-site-internet-petite-entreprise",
     proofLabel: "Avant refonte",
     proofValue: "Une liste courte pour prioriser ce qui impacte la confiance et le contact",
     sections: [
       {
-        title: "Verifier la premiere impression",
+        title: "Vérifier la première impression",
         items: [
-          "Le site donne-t-il une image actuelle et credible de l'entreprise ?",
+          "Le site donne-t-il une image actuelle et crédible de l'entreprise ?",
           "Le visiteur comprend-il en quelques secondes ce que vous proposez ?",
-          "Les photos, couleurs et textes ressemblent-ils vraiment a votre activite ?",
+          "Les photos, couleurs et textes ressemblent-ils vraiment à votre activité ?",
         ],
       },
       {
-        title: "Verifier le parcours mobile",
+        title: "Vérifier le parcours mobile",
         items: [
-          "Le telephone, WhatsApp ou le formulaire sont-ils visibles sans chercher ?",
-          "Les titres restent-ils lisibles sur petit ecran ?",
-          "Les boutons sont-ils assez clairs pour declencher une demande ?",
+          "Le téléphone, WhatsApp ou le formulaire sont-ils visibles sans chercher ?",
+          "Les titres restent-ils lisibles sur petit écran ?",
+          "Les boutons sont-ils assez clairs pour déclencher une demande ?",
         ],
       },
       {
-        title: "Verifier la base technique",
+        title: "Vérifier la base technique",
         items: [
           "Les pages importantes ont-elles un titre, une description et une structure propre ?",
-          "Les DNS, l'hebergement, les redirections et le certificat SSL sont-ils maitrises ?",
-          "Le sitemap, le robots.txt et la Search Console sont-ils correctement configures ?",
+          "Les DNS, l'hébergement, les redirections et le certificat SSL sont-ils maîtrisés ?",
+          "Le sitemap, le robots.txt et la Search Console sont-ils correctement configurés ?",
         ],
       },
     ],
@@ -170,17 +172,17 @@ const SERVICE_SEO_PAGES = [
       {
         question: "Faut-il tout refaire si le site est vieux ?",
         answer:
-          "Pas toujours. Certains sites peuvent etre ameliores progressivement, mais une refonte complete devient utile si l'image, le mobile et la structure bloquent ensemble.",
+          "Pas toujours. Certains sites peuvent être améliorés progressivement, mais une refonte complète devient utile si l'image, le mobile et la structure bloquent ensemble.",
       },
       {
-        question: "Quelle est la premiere chose a regarder ?",
+        question: "Quelle est la première chose à regarder ?",
         answer:
-          "La clarte de l'offre. Si un visiteur ne comprend pas vite qui vous etes, ce que vous proposez et comment vous contacter, le design seul ne suffit pas.",
+          "La clarté de l'offre. Si un visiteur ne comprend pas vite qui vous êtes, ce que vous proposez et comment vous contacter, le design seul ne suffit pas.",
       },
       {
         question: "La checklist suffit-elle pour lancer une refonte ?",
         answer:
-          "Elle aide a cadrer les priorites. Pour lancer proprement, il faut ensuite transformer les constats en perimetre, contenus et planning de mise en ligne.",
+          "Elle aide à cadrer les priorités. Pour lancer proprement, il faut ensuite transformer les constats en périmètre, contenus et planning de mise en ligne.",
       },
     ],
   },
@@ -260,6 +262,7 @@ const SERVICE_SEO_PAGES = [
       "Pour une petite entreprise, le site doit aller droit au but: expliquer, rassurer, montrer le sérieux de l'activité et faciliter le contact.",
     primaryCta: "Discuter de mon site",
     secondaryCta: "Voir la méthode",
+    secondaryHref: "/fr/a-propos-methodologie-preuves",
     proofLabel: "Pensé TPE",
     proofValue: "Un interlocuteur unique pour le design, le SEO, les DNS et la mise en ligne",
     sections: [
@@ -384,6 +387,7 @@ const SERVICE_SEO_PAGES = [
       "A redesign budget is not only about a new look. It depends on the message, mobile journey, SEO base, domain, hosting, forms, redirects and launch details that need to be handled.",
     primaryCta: "Ask for a clear estimate",
     secondaryCta: "See the method",
+    secondaryHref: "/en/a-propos-methodologie-preuves",
     proofLabel: "Clear scope",
     proofValue: "A practical estimate before design, development or migration starts",
     sections: [
@@ -446,6 +450,7 @@ const SERVICE_SEO_PAGES = [
       "A small business website should be easy to understand, easy to trust and easy to contact from. The goal is not more complexity. It is more clarity.",
     primaryCta: "Discuss my website",
     secondaryCta: "See the method",
+    secondaryHref: "/en/a-propos-methodologie-preuves",
     proofLabel: "Built for small business",
     proofValue: "One direct contact for design, SEO, DNS, hosting and launch",
     sections: [

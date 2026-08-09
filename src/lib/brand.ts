@@ -5,7 +5,9 @@ export const BRAND = {
   phoneRaw: "+33636365696",
   phoneDisplay: "+33 6 36 36 56 96",
   whatsappUrl: "https://wa.me/33636365696",
-  baseUrlFallback: "https://rayanstudios.com",
+  linkedinUrl: "https://www.linkedin.com/in/rayan-sekkat-3911a9294",
+  portfolioUrl: "https://portfolio-rayan-sekkat.vercel.app",
+  baseUrlFallback: "https://www.rayanstudios.com",
 };
 
 export function getSiteUrl() {

@@ -15,22 +15,22 @@ const servicesFr = [
     tag: "Offre principale",
     title: "Refonte Pro",
     href: "/fr/refonte-site-internet",
-    subtitle: "Pour remplacer un site date par une vitrine qui inspire confiance",
+    subtitle: "Pour remplacer un site daté par une vitrine qui inspire confiance",
     description:
-      "Je reprends votre site actuel pour clarifier le message, moderniser l'image, optimiser le parcours et gerer la mise en ligne proprement.",
-    outcomes: ["Audit rapide du site actuel", "Nouvelle direction visuelle", "SEO, DNS et deploiement inclus"],
+      "Je reprends votre site actuel pour clarifier le message, moderniser l'image, optimiser le parcours et gérer la mise en ligne proprement.",
+    outcomes: ["Audit rapide du site actuel", "Nouvelle direction visuelle", "SEO, DNS et déploiement inclus"],
     cta: "Demander un diagnostic",
   },
   {
     icon: Layers3,
     tag: "Premier site",
-    title: "Creation Express",
+    title: "Création Express",
     href: "/fr/creation-site-vitrine",
-    subtitle: "Pour exister en ligne sans devoir gerer la technique",
+    subtitle: "Pour exister en ligne sans devoir gérer la technique",
     description:
-      "Je cree une presence simple, professionnelle et rapide pour les petites entreprises qui n'ont pas encore de vrai site.",
-    outcomes: ["Page claire et responsive", "Contact WhatsApp ou formulaire", "Mise en ligne accompagnee"],
-    cta: "Creer mon premier site",
+      "Je crée une présence simple, professionnelle et rapide pour les petites entreprises qui n'ont pas encore de vrai site.",
+    outcomes: ["Page claire et responsive", "Contact WhatsApp ou formulaire", "Mise en ligne accompagnée"],
+    cta: "Créer mon premier site",
   },
 ];
 
@@ -69,18 +69,18 @@ export function Services({ locale = "fr" }: { locale?: Locale }) {
   const reducedMotion = useReducedMotion();
 
   return (
-    <section id="services" className="section-screen px-4 md:px-8">
+    <section id="services" className="cv-auto section-screen px-4 md:px-8">
       <div className="relative mx-auto max-w-7xl">
         <div className="pointer-events-none absolute -left-8 top-24 h-px w-28 bg-[#d94f2b]/28" />
 
         <Reveal>
           <SectionHeading
             eyebrow="Services"
-            title={en ? "Two offers, one objective: make your business look credible online" : "Deux offres, un objectif: rendre votre entreprise credible en ligne"}
+            title={en ? "Two offers, one objective: make your business look credible online" : "Deux offres, un objectif : rendre votre entreprise crédible en ligne"}
             description={
               en
                 ? "For dated websites and businesses that still do not have a proper site."
-                : "Pour les sites dates et les entreprises qui n'ont pas encore de vraie presence en ligne."
+                : "Pour les sites datés et les entreprises qui n'ont pas encore de vraie présence en ligne."
             }
           />
         </Reveal>
@@ -104,7 +104,7 @@ export function Services({ locale = "fr" }: { locale?: Locale }) {
                           <service.icon size={19} />
                         </span>
                         <div>
-                          <p className="text-[11px] font-black uppercase tracking-[0.14em] text-[#d94f2b]">
+                          <p className="text-[11px] font-black uppercase tracking-[0.14em] text-[#c2461f]">
                             {service.tag}
                           </p>
                           <h3 className="font-display mt-1 text-2xl font-semibold text-[#17120f]">{service.title}</h3>
@@ -121,18 +121,14 @@ export function Services({ locale = "fr" }: { locale?: Locale }) {
                     <p className="mt-3 text-sm leading-relaxed text-[#63584d]">{service.description}</p>
 
                     <div className="mt-6 flex-1 space-y-2.5">
-                      {service.outcomes.map((outcome, itemIndex) => (
-                        <motion.div
+                      {service.outcomes.map((outcome) => (
+                        <div
                           key={outcome}
-                          initial={{ opacity: 0, y: 10 }}
-                          whileInView={{ opacity: 1, y: 0 }}
-                          viewport={{ once: true, amount: 0.4 }}
-                          transition={{ duration: 0.45, delay: itemIndex * 0.06, ease: [0.22, 1, 0.36, 1] }}
                           className="flex items-center gap-2.5 rounded-none border border-[#2a231d]/12 bg-[#f5f1e8] px-4 py-3 text-sm font-bold text-[#342b24]"
                         >
-                          <CheckCircle2 size={16} className="text-[#d94f2b]" />
+                          <CheckCircle2 size={16} className="text-[#c2461f]" />
                           {outcome}
-                        </motion.div>
+                        </div>
                       ))}
                     </div>
 

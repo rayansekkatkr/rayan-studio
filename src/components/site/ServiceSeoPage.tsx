@@ -1,6 +1,8 @@
 import { ArrowRight, Check, FileSearch, MessageSquareText } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { BRAND, getSiteUrl } from "@/lib/brand";
+import { Footer } from "./Footer";
+import { Navbar } from "./Navbar";
 
 type ServiceSeoSection = {
   title: string;
@@ -26,6 +28,7 @@ type ServiceSeoPageData = {
   sections: ServiceSeoSection[];
   process: string[];
   faq: ServiceSeoFaq[];
+  secondaryHref?: string;
 };
 
 export function ServiceSeoPage({ page }: { page: ServiceSeoPageData }) {
@@ -65,7 +68,9 @@ export function ServiceSeoPage({ page }: { page: ServiceSeoPageData }) {
   };
 
   return (
-    <main className="relative min-h-screen overflow-hidden px-4 pb-16 pt-28 md:px-8">
+    <>
+      <Navbar locale={page.locale} />
+      <main id="main-content" className="relative min-h-screen overflow-hidden px-4 pb-16 pt-28 md:px-8">
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }} />
       <div className="pointer-events-none fixed inset-0 -z-20 hero-aurora" />
       <div className="pointer-events-none fixed inset-0 -z-10 hero-vignette" />
@@ -75,7 +80,7 @@ export function ServiceSeoPage({ page }: { page: ServiceSeoPageData }) {
           <div>
             <a
               href={`/${page.locale}`}
-              className="inline-flex rounded-none border border-[#2a231d]/14 bg-[#fffaf0]/84 px-3 py-1 text-xs font-black uppercase tracking-[0.12em] text-[#d94f2b] transition hover:-translate-y-0.5"
+              className="inline-flex rounded-none border border-[#2a231d]/14 bg-[#fffaf0]/84 px-3 py-1 text-xs font-black uppercase tracking-[0.12em] text-[#c2461f] transition hover:-translate-y-0.5"
             >
               {page.eyebrow}
             </a>
@@ -91,18 +96,18 @@ export function ServiceSeoPage({ page }: { page: ServiceSeoPageData }) {
                 </a>
               </Button>
               <Button asChild variant="outline">
-                <a href={`/${page.locale}#tarifs`}>{page.secondaryCta}</a>
+                <a href={page.secondaryHref ?? `/${page.locale}#tarifs`}>{page.secondaryCta}</a>
               </Button>
             </div>
           </div>
 
           <div className="border border-[#2a231d]/14 bg-[#fffaf0]/86 p-5 shadow-[10px_10px_0_rgba(42,35,29,0.1)]">
-            <p className="text-[10px] font-black uppercase tracking-[0.16em] text-[#d94f2b]">{page.proofLabel}</p>
+            <p className="text-[10px] font-black uppercase tracking-[0.16em] text-[#c2461f]">{page.proofLabel}</p>
             <p className="font-display mt-3 text-2xl font-semibold leading-tight text-[#17120f]">{page.proofValue}</p>
             <div className="mt-5 grid gap-2 sm:grid-cols-2">
               {page.process.map((step, index) => (
                 <div key={step} className="border border-[#2a231d]/12 bg-[#f5f1e8] px-3 py-3">
-                  <p className="text-[10px] font-black uppercase tracking-[0.14em] text-[#d94f2b]">
+                  <p className="text-[10px] font-black uppercase tracking-[0.14em] text-[#c2461f]">
                     {String(index + 1).padStart(2, "0")}
                   </p>
                   <p className="mt-1 text-sm font-black text-[#17120f]">{step}</p>
@@ -143,8 +148,8 @@ export function ServiceSeoPage({ page }: { page: ServiceSeoPageData }) {
             </h2>
             <p className="mt-4 text-sm leading-6 text-[#f7ead8]">
               {en
-                ? "These pages are built for search, but the offer stays practical: understand the business, clarify the message, then launch cleanly."
-                : "Ces pages servent le SEO, mais l'offre reste concrète: comprendre l'activité, clarifier le message, puis mettre en ligne proprement."}
+                ? "Before starting, I check what already exists, what really needs to change, and what should stay under your control after launch."
+                : "Avant de démarrer, je vérifie ce qui existe déjà, ce qui doit réellement changer et ce qui doit rester sous votre contrôle après la mise en ligne."}
             </p>
           </div>
 
@@ -158,6 +163,8 @@ export function ServiceSeoPage({ page }: { page: ServiceSeoPageData }) {
           </div>
         </section>
       </div>
-    </main>
+      </main>
+      <Footer locale={page.locale} />
+    </>
   );
 }

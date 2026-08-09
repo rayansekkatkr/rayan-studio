@@ -1,10 +1,10 @@
 const PRICING_LEAD_OFFERS = {
   express: {
     projectType: "no-site",
-    labelFr: "Creation Express",
+    labelFr: "Création Express",
     labelEn: "Express Creation",
     messageFr:
-      "Je suis interesse par l'offre Creation Express. J'aimerais creer un premier site clair pour mon activite.",
+      "Je suis intéressé par l'offre Création Express. J'aimerais créer un premier site clair pour mon activité.",
     messageEn:
       "I am interested in the Express Creation offer. I would like to create a clear first website for my business.",
   },
@@ -13,7 +13,7 @@ const PRICING_LEAD_OFFERS = {
     labelFr: "Refonte Pro",
     labelEn: "Pro Redesign",
     messageFr:
-      "Je suis interesse par l'offre Refonte Pro. J'ai deja un site actuel et j'aimerais le rendre plus clair, credible et efficace.",
+      "Je suis intéressé par l'offre Refonte Pro. J'ai déjà un site actuel et j'aimerais le rendre plus clair, crédible et efficace.",
     messageEn:
       "I am interested in the Pro Redesign offer. I already have a current website and would like to make it clearer, more credible and more effective.",
   },
@@ -22,7 +22,7 @@ const PRICING_LEAD_OFFERS = {
     labelFr: "Sur mesure",
     labelEn: "Custom",
     messageFr:
-      "Je suis interesse par l'offre Sur mesure. J'aimerais discuter d'un projet plus specifique.",
+      "Je suis intéressé par l'offre Sur mesure. J'aimerais discuter d'un projet plus spécifique.",
     messageEn:
       "I am interested in the Custom offer. I would like to discuss a more specific project.",
   },

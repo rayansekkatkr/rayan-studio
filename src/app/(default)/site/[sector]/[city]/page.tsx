@@ -41,14 +41,14 @@ export function generateMetadata({ params }: { params: Params }): Metadata {
   };
 }
 
-const kpiBySector: Record<LocalSeoSectorSlug, string> = {
-  restaurant: "+28% de réservations sur 30 jours",
-  cafe: "+24 messages WhatsApp sur 30 jours",
-  hotel: "+41% de demandes sur 30 jours",
-  boulangerie: "+26% de commandes / demandes traiteur",
-  patisserie: "+29% de prises de contact",
-  bar: "+23% de réservations de groupe",
-  "commerce-local": "+25% de demandes qualifiées",
+const objectiveBySector: Record<LocalSeoSectorSlug, string> = {
+  restaurant: "Rendre la réservation et l'appel immédiats depuis mobile",
+  cafe: "Rendre les horaires et le contact WhatsApp évidents",
+  hotel: "Faire remonter la demande directe avant les plateformes",
+  boulangerie: "Simplifier les commandes et les demandes traiteur",
+  patisserie: "Rendre lisibles les commandes sur mesure et la prise de contact",
+  bar: "Mettre en avant les réservations de groupe et les événements",
+  "commerce-local": "Rendre l'offre et les informations pratiques accessibles en un écran",
 };
 
 function getLocalSeoContent(
@@ -60,7 +60,7 @@ function getLocalSeoContent(
     cityLabel: city.label,
     sectorSlug: sector.slug,
     sectorLabel: sector.label,
-    kpi: kpiBySector[sector.slug],
+    objective: objectiveBySector[sector.slug],
   });
 }
 
@@ -75,7 +75,9 @@ export default function Page({ params }: { params: Params }) {
   return (
     <LocalSeoLanding
       city={city.label}
+      citySlug={city.slug}
       sector={sector.label}
+      sectorSlug={sector.slug}
       content={getLocalSeoContent(sector, city)}
     />
   );

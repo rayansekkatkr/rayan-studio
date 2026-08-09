@@ -46,8 +46,8 @@ export function HomePage({ locale }: { locale: Locale }) {
           text: "Yes. Mobile is treated as a priority with strong readability and clear actions.",
         },
         {
-          name: "Which businesses do you work with?",
-          text: "Mainly restaurants, cafes, hotels, bakeries, pastry shops, bars, and local businesses in France.",
+          name: "Which businesses is this designed for?",
+          text: "Restaurants, cafes, hotels, bakeries, pastry shops, bars, and local businesses in France.",
         },
       ]
     : [
@@ -64,14 +64,23 @@ export function HomePage({ locale }: { locale: Locale }) {
           text: "Oui. L'expérience mobile est traitée en priorité pour garantir lisibilité, rapidité et parcours fluide.",
         },
         {
-          name: "Avec quels types de commerces travaillez-vous ?",
-          text: "Principalement restaurants, cafés, hôtels, boulangeries, pâtisseries, bars et commerces locaux en France.",
+          name: "À quels types de commerces le studio s'adresse-t-il ?",
+          text: "Restaurants, cafés, hôtels, boulangeries, pâtisseries, bars et commerces locaux en France.",
         },
       ];
 
   const structuredData = {
     "@context": "https://schema.org",
     "@graph": [
+      {
+        "@type": "Person",
+        "@id": `${siteUrl}#founder`,
+        name: BRAND.founder,
+        email: BRAND.email,
+        jobTitle: en ? "Full-stack engineer" : "Ingénieur full-stack",
+        sameAs: [BRAND.linkedinUrl, BRAND.portfolioUrl],
+        worksFor: { "@id": `${siteUrl}#professional-service` },
+      },
       {
         "@type": "ProfessionalService",
         "@id": `${siteUrl}#professional-service`,
@@ -84,27 +93,35 @@ export function HomePage({ locale }: { locale: Locale }) {
           "@type": "City",
           name: city,
         })),
-        address: {
-          "@type": "PostalAddress",
-          addressCountry: "FR",
-        },
         availableLanguage: ["fr", "en"],
         email: BRAND.email,
         telephone: BRAND.phoneRaw,
         priceRange: "€€",
-        founder: {
-          "@type": "Person",
-          name: BRAND.founder,
+        founder: { "@id": `${siteUrl}#founder` },
+        contactPoint: {
+          "@type": "ContactPoint",
+          contactType: "customer service",
+          telephone: BRAND.phoneRaw,
+          email: BRAND.email,
+          url: BRAND.whatsappUrl,
+          availableLanguage: ["fr", "en"],
         },
-        sameAs: [BRAND.whatsappUrl],
       },
       {
-        "@type": "LocalBusiness",
-        "@id": `${siteUrl}#local-business`,
+        "@type": "WebSite",
+        "@id": `${siteUrl}#website`,
         name: BRAND.name,
+        url: siteUrl,
+        inLanguage: ["fr", "en"],
+        publisher: { "@id": `${siteUrl}#professional-service` },
+      },
+      {
+        "@type": "WebPage",
+        "@id": `${siteUrl}/${locale}#webpage`,
         url: `${siteUrl}/${locale}`,
-        email: BRAND.email,
-        telephone: BRAND.phoneRaw,
+        inLanguage: locale,
+        isPartOf: { "@id": `${siteUrl}#website` },
+        about: { "@id": `${siteUrl}#professional-service` },
       },
       {
         "@type": "Service",
@@ -131,7 +148,7 @@ export function HomePage({ locale }: { locale: Locale }) {
   };
 
   return (
-    <main className="relative min-h-screen overflow-x-hidden isolate">
+    <main id="main-content" className="relative min-h-screen overflow-x-hidden isolate">
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }} />
       <div className="pointer-events-none fixed inset-0 -z-20 hero-aurora" />
       <div className="pointer-events-none fixed inset-0 -z-10 hero-vignette" />

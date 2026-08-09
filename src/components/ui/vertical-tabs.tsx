@@ -151,6 +151,14 @@ export function VerticalTabs({ locale = "fr", items }: { locale?: Locale; items?
       <div className="grid items-stretch gap-7 lg:grid-cols-12 lg:gap-10">
         {/* Steps rail */}
         <div className="order-2 flex flex-col lg:order-1 lg:col-span-5">
+          <div className="mb-5 md:mb-6">
+            <h3 className="font-display text-balance text-2xl font-semibold tracking-tight text-[#17120f] md:text-3xl">
+              {en ? "How I support you" : "Comment je vous accompagne"}
+            </h3>
+            <span className="mt-1 block text-[10px] font-black uppercase tracking-[0.3em] text-[#6f6355]">
+              (Process)
+            </span>
+          </div>
           <ol className="flex flex-col">
             {resolvedItems.map((item, index) => {
               const isActive = activeIndex === index;
@@ -163,7 +171,7 @@ export function VerticalTabs({ locale = "fr", items }: { locale?: Locale; items?
                     aria-current={isActive ? "step" : undefined}
                     className={cn(
                       "group relative flex w-full items-start gap-4 border-t border-[#2a231d]/12 py-3.5 pl-5 text-left transition-colors duration-300 first:border-0 md:py-4",
-                      isActive ? "text-[#17120f]" : "text-[#8a7d6f] hover:text-[#17120f]",
+                      isActive ? "text-[#17120f]" : "text-[#6f6355] hover:text-[#17120f]",
                     )}
                   >
                     {/* accent rail */}
@@ -182,7 +190,7 @@ export function VerticalTabs({ locale = "fr", items }: { locale?: Locale; items?
                     <span
                       className={cn(
                         "mt-0.5 font-display text-sm font-semibold tabular-nums transition-colors duration-300",
-                        isActive ? "text-[#d94f2b]" : "text-[#bdb09e]",
+                        isActive ? "text-[#c2461f]" : "text-[#bdb09e]",
                       )}
                     >
                       {item.id}

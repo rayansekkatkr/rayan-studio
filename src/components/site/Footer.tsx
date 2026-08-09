@@ -1,6 +1,7 @@
 import { BRAND } from "@/lib/brand";
 import { isEnglish, type Locale } from "@/lib/i18n";
 import { getServiceSeoPagesByLocale } from "@/lib/service-seo";
+import { ManageCookiesButton } from "./ManageCookiesButton";
 
 export function Footer({ locale = "fr" }: { locale?: Locale }) {
   const en = isEnglish(locale);
@@ -14,17 +15,23 @@ export function Footer({ locale = "fr" }: { locale?: Locale }) {
             © {new Date().getFullYear()} {BRAND.name}. {en ? "All rights reserved." : "Tous droits réservés."}
           </p>
           <div className="mt-3 flex flex-wrap gap-4 text-xs uppercase tracking-[0.15em]">
-            <a href={`/${locale}#hero`} className="transition-colors hover:text-[#d94f2b]">
+            <a href={`/${locale}#hero`} className="transition-colors hover:text-[#c2461f]">
               {en ? "Home" : "Accueil"}
             </a>
-            <a href={`/${locale}#services`} className="transition-colors hover:text-[#d94f2b]">
+            <a href={`/${locale}#services`} className="transition-colors hover:text-[#c2461f]">
               {en ? "Services" : "Services"}
             </a>
-            <a href={`/${locale}#contact`} className="transition-colors hover:text-[#d94f2b]">
+            <a href={`/${locale}#contact`} className="transition-colors hover:text-[#c2461f]">
               {en ? "Contact" : "Contact"}
             </a>
-            <a href={`/${locale}/a-propos-methodologie-preuves`} className="transition-colors hover:text-[#d94f2b]">
+            <a href={`/${locale}/a-propos-methodologie-preuves`} className="transition-colors hover:text-[#c2461f]">
               {en ? "About" : "À propos"}
+            </a>
+            <a href={BRAND.portfolioUrl} target="_blank" rel="noreferrer" className="transition-colors hover:text-[#c2461f]">
+              {en ? "Technical profile" : "Profil technique"}
+            </a>
+            <a href={BRAND.linkedinUrl} target="_blank" rel="noreferrer" className="transition-colors hover:text-[#c2461f]">
+              LinkedIn
             </a>
           </div>
         </div>
@@ -32,21 +39,22 @@ export function Footer({ locale = "fr" }: { locale?: Locale }) {
         <div className="flex flex-col gap-3 lg:items-end">
           <div className="flex flex-wrap gap-4 text-xs uppercase tracking-[0.15em] lg:justify-end">
             {serviceLinks.map((service) => (
-              <a key={service.path} href={service.path} className="transition-colors hover:text-[#d94f2b]">
+              <a key={service.path} href={service.path} className="transition-colors hover:text-[#c2461f]">
                 {service.eyebrow}
               </a>
             ))}
           </div>
           <div className="flex flex-wrap gap-4 text-xs uppercase tracking-[0.15em] lg:justify-end">
-            <a href="/mentions-legales" className="transition-colors hover:text-[#d94f2b]">
+            <a href="/mentions-legales" className="transition-colors hover:text-[#c2461f]">
               {en ? "Legal notice" : "Mentions légales"}
             </a>
-            <a href="/politique-confidentialite" className="transition-colors hover:text-[#d94f2b]">
+            <a href="/politique-confidentialite" className="transition-colors hover:text-[#c2461f]">
               {en ? "Privacy policy" : "Politique de confidentialité"}
             </a>
-            <a href="/cgv" className="transition-colors hover:text-[#d94f2b]">
-              CGV
+            <a href="/cgv" className="transition-colors hover:text-[#c2461f]">
+              {en ? "Terms of sale" : "CGV"}
             </a>
+            <ManageCookiesButton label={en ? "Manage cookies" : "Gérer les cookies"} />
           </div>
         </div>
       </div>

@@ -1,8 +1,7 @@
 "use client";
 
-import { motion, useReducedMotion } from "framer-motion";
+import { motion } from "framer-motion";
 import { AlertTriangle, CheckCircle2 } from "lucide-react";
-import { useEffect, useState } from "react";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { isEnglish, type Locale } from "@/lib/i18n";
 import { Reveal } from "./Reveal";
@@ -85,20 +84,9 @@ export function ProblemSolution({ locale = "fr" }: { locale?: Locale }) {
   const problems = en ? problemsEn : problemsFr;
   const solutions = en ? solutionsEn : solutionsFr;
   const focusItems = en ? focusItemsEn : focusItemsFr;
-  const [isMobile, setIsMobile] = useState(false);
-  const reducedMotion = useReducedMotion();
-  const shouldAnimate = !reducedMotion && !isMobile;
-
-  useEffect(() => {
-    const media = window.matchMedia("(max-width: 1024px)");
-    const onChange = () => setIsMobile(media.matches);
-    onChange();
-    media.addEventListener("change", onChange);
-    return () => media.removeEventListener("change", onChange);
-  }, []);
 
   return (
-    <section id="probleme-solution" className="section-screen relative px-4 md:px-8">
+    <section id="probleme-solution" className="cv-auto section-screen relative px-4 md:px-8">
       <div className="mx-auto max-w-7xl">
         <Reveal>
           <SectionHeading
@@ -139,12 +127,8 @@ export function ProblemSolution({ locale = "fr" }: { locale?: Locale }) {
             </Reveal>
 
             <Reveal delay={0.06}>
-              <motion.div
-                className="relative mx-auto w-full max-w-[320px] rounded-none border border-[#2a231d]/14 bg-[#fffaf0]/86 px-5 py-6 shadow-[6px_6px_0_rgba(42,35,29,0.08)] backdrop-blur-xl"
-                animate={shouldAnimate ? { y: [0, -5, 0] } : undefined}
-                transition={{ duration: 6, repeat: Infinity, ease: "easeInOut" }}
-              >
-                <p className="text-[11px] font-black uppercase tracking-[0.16em] text-[#d94f2b]">
+              <div className="relative mx-auto w-full max-w-[320px] rounded-none border border-[#2a231d]/14 bg-[#fffaf0]/86 px-5 py-6 shadow-[6px_6px_0_rgba(42,35,29,0.08)] backdrop-blur-xl">
+                <p className="text-[11px] font-black uppercase tracking-[0.16em] text-[#c2461f]">
                   {en ? "Creative direction" : "Direction créative"}
                 </p>
                 <p className="font-display mt-2 text-2xl font-semibold leading-tight text-[#17120f]">
@@ -153,12 +137,12 @@ export function ProblemSolution({ locale = "fr" }: { locale?: Locale }) {
                 <div className="mt-5 space-y-3">
                   {focusItems.map((item) => (
                     <div key={item} className="flex items-start gap-2.5 text-sm text-[#63584d]">
-                      <CheckCircle2 size={15} className="mt-0.5 shrink-0 text-[#d94f2b]" />
+                      <CheckCircle2 size={15} className="mt-0.5 shrink-0 text-[#c2461f]" />
                       <span>{item}</span>
                     </div>
                   ))}
                 </div>
-              </motion.div>
+              </div>
             </Reveal>
 
             <Reveal delay={0.12}>
@@ -166,14 +150,14 @@ export function ProblemSolution({ locale = "fr" }: { locale?: Locale }) {
                 <Card className="relative overflow-hidden rounded-none border-[#2a231d]/14 bg-[linear-gradient(145deg,rgba(255,250,240,0.96),rgba(239,231,217,0.82))] shadow-[8px_8px_0_rgba(42,35,29,0.08)]">
                   <CardHeader className="pb-3">
                     <CardTitle className="flex items-center gap-2 text-lg text-[#17120f] md:text-xl">
-                      <CheckCircle2 size={17} className="text-[#d94f2b]" />
+                      <CheckCircle2 size={17} className="text-[#c2461f]" />
                       {en ? "After: what changes" : "Après : ce qui change"}
                     </CardTitle>
                   </CardHeader>
                   <CardContent className="space-y-2.5">
                     {solutions.map((solution, index) => (
                       <div key={solution.title} className="rounded-none border border-[#2a231d]/12 bg-[#fffaf0]/78 p-3.5">
-                        <p className="text-[10px] font-black uppercase tracking-[0.14em] text-[#d94f2b]">0{index + 1}</p>
+                        <p className="text-[10px] font-black uppercase tracking-[0.14em] text-[#c2461f]">0{index + 1}</p>
                         <p className="mt-1.5 text-sm font-black text-[#17120f]">{solution.title}</p>
                         <p className="mt-1 text-sm text-[#63584d]">{solution.detail}</p>
                       </div>

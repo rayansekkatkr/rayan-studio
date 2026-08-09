@@ -1,5 +1,7 @@
 import type { Metadata } from "next";
 import { redirect } from "next/navigation";
+import { Footer } from "@/components/site/Footer";
+import { Navbar } from "@/components/site/Navbar";
 import { BRAND, getSiteUrl } from "@/lib/brand";
 import { isEnglish, normalizeLocale, type Locale } from "@/lib/i18n";
 
@@ -29,7 +31,7 @@ const faqEn = [
   },
   {
     q: "What is your method?",
-    a: "Perception diagnosis, structure, visual direction, development, local SEO, DNS, hosting/VPS and clean launch.",
+    a: "First-impression audit, structure, visual direction, development, local SEO, DNS, hosting/VPS and clean launch.",
   },
   {
     q: "How do you measure results?",
@@ -119,10 +121,12 @@ export default function AboutMethodPage({ params }: { params: { locale: string }
   };
 
   return (
-    <main className="min-h-screen px-4 pb-14 pt-28 md:px-8">
+    <>
+      <Navbar locale={locale} />
+      <main id="main-content" className="min-h-screen px-4 pb-14 pt-28 md:px-8">
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }} />
       <div className="mx-auto max-w-5xl">
-        <p className="inline-flex rounded-none border border-[#2a231d]/14 bg-[#fffaf0] px-3 py-1 text-xs font-black uppercase tracking-[0.12em] text-[#d94f2b] shadow-[3px_3px_0_rgba(42,35,29,0.08)]">
+        <p className="inline-flex rounded-none border border-[#2a231d]/14 bg-[#fffaf0] px-3 py-1 text-xs font-black uppercase tracking-[0.12em] text-[#c2461f] shadow-[3px_3px_0_rgba(42,35,29,0.08)]">
           {BRAND.name}
         </p>
         <h1 className="font-display mt-5 text-4xl font-semibold text-[#17120f] md:text-5xl">
@@ -145,22 +149,34 @@ export default function AboutMethodPage({ params }: { params: { locale: string }
         </section>
 
         <section className="mt-6 rounded-none border border-[#2a231d]/14 bg-[#fffaf0]/86 p-5 shadow-[7px_7px_0_rgba(42,35,29,0.08)]">
-          <h2 className="font-display text-2xl font-semibold text-[#17120f]">{en ? "Proof" : "Preuves"}</h2>
+          <h2 className="font-display text-2xl font-semibold text-[#17120f]">
+            {en ? "What I measure after a redesign" : "Ce que je mesure après une refonte"}
+          </h2>
+          <p className="mt-4 text-sm leading-7 text-[#63584d]">
+            {en
+              ? "I do not publish client performance figures I cannot show you the source for. Here is what I set up so the result becomes measurable on your own site, from day one."
+              : "Je ne publie pas de chiffres clients dont je ne peux pas vous montrer la source. Voici ce que je mets en place pour que le résultat devienne mesurable sur votre propre site, dès la mise en ligne."}
+          </p>
           <ul className="mt-4 space-y-2 text-sm text-[#63584d]">
             <li>
               {en
-                ? "Independent hotel: +41% inquiries (January 2026, source: form leads)."
-                : "Hôtel indépendant: +41% de demandes (janvier 2026, source leads formulaires)."}
+                ? "Baseline before launch: current inquiries, calls and messages, so there is a point of comparison."
+                : "Point de départ avant mise en ligne: demandes, appels et messages actuels, pour avoir une base de comparaison."}
             </li>
             <li>
               {en
-                ? "Neighborhood cafe: +24 WhatsApp messages (December 2025, WhatsApp Business export)."
-                : "Café de quartier: +24 messages WhatsApp (décembre 2025, export WhatsApp Business)."}
+                ? "Tracked actions after launch: form submissions, WhatsApp clicks, email clicks and phone clicks."
+                : "Actions suivies après mise en ligne: envois de formulaire, clics WhatsApp, clics email et clics téléphone."}
             </li>
             <li>
               {en
-                ? "Artisan bakery: +26% orders/catering requests (February 2026)."
-                : "Boulangerie artisanale: +26% de commandes/demandes traiteur (février 2026)."}
+                ? "Search Console and analytics set up on your own property, so the data stays yours and verifiable."
+                : "Search Console et analytics configurés sur votre propre propriété, pour que les données restent les vôtres et vérifiables."}
+            </li>
+            <li>
+              {en
+                ? "A review 30 days after launch, based on your numbers, not on averages taken from other projects."
+                : "Un point 30 jours après la mise en ligne, sur vos chiffres, pas sur des moyennes issues d'autres projets."}
             </li>
           </ul>
         </section>
@@ -179,21 +195,36 @@ export default function AboutMethodPage({ params }: { params: { locale: string }
 
         <section className="mt-6 rounded-none border border-[#2a231d]/14 bg-[#fffaf0]/86 p-5 shadow-[7px_7px_0_rgba(42,35,29,0.08)]">
           <h2 className="font-display text-2xl font-semibold text-[#17120f]">
-            {en ? "External authority & consistency" : "Autorité externe & cohérence"}
+            {en ? "Who does the work?" : "Qui réalise le travail ?"}
           </h2>
+          <p className="mt-3 text-sm leading-7 text-[#63584d]">
+            {en
+              ? `${BRAND.founder}, full-stack engineer with 5+ years of experience in web development and DevOps (including STMicroelectronics and UNYC). Based in Seoul, working 100% remotely with French-speaking clients. Every studio website is designed, developed and launched by me: visual direction, code, SEO, DNS and deployment — one single point of contact from brief to launch.`
+              : `${BRAND.founder}, ingénieur full-stack, plus de 5 ans d'expérience en développement web et DevOps (notamment chez STMicroelectronics et UNYC). Basé à Séoul, je travaille 100 % à distance avec des clients francophones. Chaque site du studio est conçu, développé et mis en ligne par moi : direction visuelle, code, SEO, DNS et déploiement — un seul interlocuteur du brief à la mise en ligne.`}
+          </p>
           <p className="mt-3 text-sm text-[#63584d]">
             {en
-              ? `The same brand information is used across the entire site and in structured schema: ${BRAND.name}, ${BRAND.email}, ${BRAND.phoneDisplay}, ${siteUrl}.`
-              : `Les mêmes informations de marque sont utilisées sur tout le site et dans les schémas structurés: ${BRAND.name}, ${BRAND.email}, ${BRAND.phoneDisplay}, ${siteUrl}.`}
+              ? "Languages: French (native), English (fluent), Korean (conversational basics)."
+              : "Langues de travail : français (natif), anglais (courant), coréen (notions)."}
           </p>
-          <p className="mt-2 text-sm text-[#63584d]">
-            {en ? "Direct contact:" : "Contact direct:"}{" "}
-            <a href={BRAND.whatsappUrl} target="_blank" rel="noreferrer" className="font-semibold text-[#d94f2b] underline">
+          <div className="mt-4 flex flex-wrap gap-4 text-sm font-semibold">
+            <a href={BRAND.portfolioUrl} target="_blank" rel="noreferrer" className="text-[#c2461f] underline underline-offset-2">
+              {en ? "Technical profile" : "Profil technique"}
+            </a>
+            <a href={BRAND.linkedinUrl} target="_blank" rel="noreferrer" className="text-[#c2461f] underline underline-offset-2">
+              LinkedIn
+            </a>
+            <a href={BRAND.whatsappUrl} target="_blank" rel="noreferrer" className="text-[#c2461f] underline underline-offset-2">
               WhatsApp
             </a>
-          </p>
+            <a href={`mailto:${BRAND.email}`} className="text-[#c2461f] underline underline-offset-2">
+              {BRAND.email}
+            </a>
+          </div>
         </section>
       </div>
-    </main>
+      </main>
+      <Footer locale={locale} />
+    </>
   );
 }

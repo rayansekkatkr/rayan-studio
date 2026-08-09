@@ -3,7 +3,7 @@
 import Link from "next/link";
 import { AnimatePresence, motion } from "framer-motion";
 import { ArrowUpRight, Menu, X } from "lucide-react";
-import { type MouseEvent, useState } from "react";
+import { type MouseEvent, useEffect, useRef, useState } from "react";
 import { Button } from "@/components/ui/button";
 import { BRAND } from "@/lib/brand";
 import { isEnglish, type Locale } from "@/lib/i18n";
@@ -11,6 +11,53 @@ import { isEnglish, type Locale } from "@/lib/i18n";
 export function Navbar({ locale = "fr" }: { locale?: Locale }) {
   const en = isEnglish(locale);
   const [mobileOpen, setMobileOpen] = useState(false);
+  const toggleRef = useRef<HTMLButtonElement>(null);
+  const panelRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    if (!mobileOpen) return;
+
+    const panel = panelRef.current;
+    const focusables = () =>
+      Array.from(
+        panel?.querySelectorAll<HTMLElement>("a[href], button:not([disabled])") ?? [],
+      );
+
+    focusables()[0]?.focus();
+    document.body.style.overflow = "hidden";
+
+    const handleKeyDown = (event: KeyboardEvent) => {
+      if (event.key === "Escape") {
+        setMobileOpen(false);
+        toggleRef.current?.focus();
+        return;
+      }
+
+      if (event.key !== "Tab") return;
+
+      const items = [toggleRef.current, ...focusables()].filter(Boolean) as HTMLElement[];
+      if (items.length === 0) return;
+
+      const first = items[0];
+      const last = items[items.length - 1];
+      const active = document.activeElement as HTMLElement | null;
+
+      if (event.shiftKey && active === first) {
+        event.preventDefault();
+        last.focus();
+      } else if (!event.shiftKey && active === last) {
+        event.preventDefault();
+        first.focus();
+      }
+    };
+
+    document.addEventListener("keydown", handleKeyDown);
+
+    return () => {
+      document.removeEventListener("keydown", handleKeyDown);
+      document.body.style.overflow = "";
+    };
+  }, [mobileOpen]);
   const switchTo = en ? "fr" : "en";
   const switchLabel = en ? "FR" : "EN";
   const links = [
@@ -22,7 +69,10 @@ export function Navbar({ locale = "fr" }: { locale?: Locale }) {
     { label: en ? "Contact" : "Contact", href: `/${locale}#contact` },
   ];
 
-  const closeMenu = () => setMobileOpen(false);
+  const closeMenu = () => {
+    setMobileOpen(false);
+    toggleRef.current?.focus();
+  };
   const scrollToSection = (event: MouseEvent<HTMLAnchorElement>, href: string) => {
     const hash = href.split("#")[1];
     if (!hash) return;
@@ -55,13 +105,8 @@ export function Navbar({ locale = "fr" }: { locale?: Locale }) {
   };
 
   return (
-    <header className="fixed inset-x-0 top-4 z-50 px-4 md:px-8">
-      <motion.nav
-        initial={{ opacity: 0, y: -20 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.85, ease: [0.22, 1, 0.36, 1] }}
-        className="relative mx-auto flex w-full min-w-0 max-w-7xl items-center justify-between rounded-none border border-[#2a231d]/20 bg-[#fffaf0] px-4 py-3 shadow-[7px_7px_0_rgba(42,35,29,0.12)] md:px-6"
-      >
+    <header className="fixed inset-x-0 top-4 z-[80] px-4 md:px-8">
+      <nav className="relative mx-auto flex w-full min-w-0 max-w-7xl items-center justify-between rounded-none border border-[#2a231d]/20 bg-[#fffaf0] px-4 py-3 shadow-[7px_7px_0_rgba(42,35,29,0.12)] md:px-6">
         <Link
           href={`/${locale}#hero`}
           onClick={(event) => scrollToSection(event, `/${locale}#hero`)}
@@ -70,7 +115,7 @@ export function Navbar({ locale = "fr" }: { locale?: Locale }) {
           <span className="grid h-8 w-8 shrink-0 place-items-center border border-[#2a231d]/18 bg-[#17120f] text-[10px] font-black uppercase tracking-[0.08em] text-[#fffaf0] shadow-[3px_3px_0_rgba(217,79,43,0.42)]">
             RS
           </span>
-          <span className="brand-wordmark truncate text-[1.35rem] leading-none transition-colors duration-300 group-hover:text-[#d94f2b] md:text-[1.5rem]">
+          <span className="brand-wordmark truncate text-[1.35rem] leading-none transition-colors duration-300 group-hover:text-[#c2461f] md:text-[1.5rem]">
             {BRAND.name}
           </span>
         </Link>
@@ -105,11 +150,15 @@ export function Navbar({ locale = "fr" }: { locale?: Locale }) {
         </Button>
 
         <button
+          ref={toggleRef}
           type="button"
-          className="inline-flex h-9 w-9 items-center justify-center rounded-none border border-[#2a231d]/14 bg-[#fffaf0] text-[#17120f] lg:hidden"
+          className="inline-flex h-11 w-11 items-center justify-center rounded-none border border-[#2a231d]/14 bg-[#fffaf0] text-[#17120f] lg:hidden"
           onClick={() => setMobileOpen((prev) => !prev)}
-          aria-label={mobileOpen ? "Fermer le menu" : "Ouvrir le menu"}
+          aria-label={
+            mobileOpen ? (en ? "Close menu" : "Fermer le menu") : (en ? "Open menu" : "Ouvrir le menu")
+          }
           aria-expanded={mobileOpen}
+          aria-controls="mobile-menu"
         >
           {mobileOpen ? <X size={18} /> : <Menu size={18} />}
         </button>
@@ -119,16 +168,18 @@ export function Navbar({ locale = "fr" }: { locale?: Locale }) {
             <>
               <motion.button
                 type="button"
-                aria-label={en ? "Close menu overlay" : "Fermer l'arriere-plan du menu"}
+                aria-label={en ? "Close menu overlay" : "Fermer l'arrière-plan du menu"}
                 onClick={closeMenu}
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 exit={{ opacity: 0 }}
                 transition={{ duration: 0.18 }}
-                className="fixed inset-0 z-[60] bg-slate-900/18 lg:hidden"
+                className="fixed inset-0 z-[-1] bg-slate-900/18 lg:hidden"
               />
 
               <motion.div
+                ref={panelRef}
+                id="mobile-menu"
                 initial={{ opacity: 0, y: -8 }}
                 animate={{ opacity: 1, y: 0 }}
                 exit={{ opacity: 0, y: -8 }}
@@ -165,7 +216,7 @@ export function Navbar({ locale = "fr" }: { locale?: Locale }) {
             </>
           ) : null}
         </AnimatePresence>
-      </motion.nav>
+      </nav>
     </header>
   );
 }

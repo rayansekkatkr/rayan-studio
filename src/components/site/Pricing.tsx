@@ -3,7 +3,7 @@
 import { motion } from "framer-motion";
 import { ArrowRight, Check, Sparkles, X } from "lucide-react";
 import type { FormEvent } from "react";
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
@@ -31,34 +31,35 @@ type PricingLeadForm = {
 const plansFr = [
   {
     offerKey: "express",
-    name: "Creation Express",
-    price: "A partir de 700 EUR",
-    description: "Pour creer un premier site simple, propre et rassurant.",
-    forWho: "Ideal si votre entreprise n'a pas encore de vraie presence en ligne.",
-    result: "Vous obtenez une vitrine claire, mobile et prete a etre partagee a vos clients.",
+    name: "Création Express",
+    price: "À partir de 700 EUR",
+    description: "Pour créer un premier site simple, propre et rassurant.",
+    forWho: "Idéal si votre entreprise n'a pas encore de vraie présence en ligne.",
+    result: "Vous obtenez une vitrine claire, mobile et prête à être partagée avec vos clients.",
     features: [
-      "Page principale ou petit site simple",
-      "Design responsive adapte a votre activite",
-      "SEO de base pour etre trouvable",
+      "Une page principale (jusqu'à 4 sections) ou petit site simple",
+      "Design responsive adapté à votre activité",
+      "SEO de base : titres, descriptions, sitemap, Search Console",
       "Formulaire ou WhatsApp visible",
-      "Domaine, DNS, hebergement et mise en ligne accompagnes",
+      "Domaine, DNS, hébergement et mise en ligne accompagnés",
+      "2 tours de révisions inclus — livraison indicative : 1 à 2 semaines",
     ],
     featured: false,
   },
   {
     offerKey: "redesign",
     name: "Refonte Pro",
-    price: "A partir de 1200 EUR",
-    description: "Pour remplacer un site date par une vitrine plus credible.",
-    forWho: "Ideal si votre site existe deja mais ne reflete plus la qualite de votre entreprise.",
+    price: "À partir de 1200 EUR",
+    description: "Pour remplacer un site daté par une vitrine plus crédible.",
+    forWho: "Idéal si votre site existe déjà mais ne reflète plus la qualité de votre entreprise.",
     result: "Votre site devient plus clair, plus moderne, et donne davantage envie de vous contacter.",
     features: [
       "Diagnostic rapide du site actuel",
-      "Nouvelle direction visuelle",
-      "Structure et messages retravailles",
-      "SEO local ou SEO de base",
-      "DNS, hebergement, VPS si besoin et deploiement inclus",
-      "Suivi court apres livraison",
+      "Nouvelle direction visuelle — jusqu'à 5 pages",
+      "Structure et messages retravaillés",
+      "SEO local ou SEO de base, migration domaine et redirections incluses",
+      "DNS, hébergement, VPS si besoin et déploiement inclus",
+      "2 tours de révisions, suivi court après livraison — livraison indicative : 2 à 3 semaines",
     ],
     featured: true,
   },
@@ -66,16 +67,16 @@ const plansFr = [
     offerKey: "custom",
     name: "Sur mesure",
     price: "Devis",
-    description: "Pour un projet plus complet avec besoins specifiques.",
-    forWho: "Ideal si vous avez plusieurs pages, une administration, ou des fonctionnalites precises.",
-    result: "Vous obtenez une solution plus complete, alignee avec votre activite et votre organisation.",
+    description: "Pour un projet plus complet avec besoins spécifiques.",
+    forWho: "Idéal si vous avez plusieurs pages, une administration, ou des fonctionnalités précises.",
+    result: "Vous obtenez une solution plus complète, alignée avec votre activité et votre organisation.",
     features: [
       "Audit et cadrage plus approfondis",
-      "Direction creative avancee",
-      "Pages ou parcours supplementaires",
-      "Administration simple si necessaire",
-      "Fonctionnalites specifiques selon besoin",
-      "Architecture, deploiement et VPS cadres selon le projet",
+      "Direction créative avancée",
+      "Pages ou parcours supplémentaires",
+      "Administration simple si nécessaire",
+      "Fonctionnalités spécifiques selon besoin",
+      "Architecture, déploiement et VPS cadrés selon le projet",
     ],
     featured: false,
   },
@@ -90,11 +91,12 @@ const plansEn = [
     forWho: "Best if your business does not yet have a proper online presence.",
     result: "You get a clear mobile storefront ready to share with customers.",
     features: [
-      "Main page or small simple website",
+      "One main page (up to 4 sections) or small simple website",
       "Responsive design adapted to your activity",
-      "Basic SEO to be findable",
+      "Basic SEO: titles, descriptions, sitemap, Search Console",
       "Visible form or WhatsApp contact",
       "Domain, DNS, hosting and launch guidance",
+      "2 revision rounds included — indicative delivery: 1 to 2 weeks",
     ],
     featured: false,
   },
@@ -107,11 +109,11 @@ const plansEn = [
     result: "Your website becomes clearer, more modern, and makes people more likely to contact you.",
     features: [
       "Quick diagnosis of the current website",
-      "New visual direction",
+      "New visual direction — up to 5 pages",
       "Structure and messaging refinement",
-      "Local or basic SEO",
+      "Local or basic SEO, domain migration and redirects included",
       "DNS, hosting, VPS if needed and deployment included",
-      "Short post-delivery follow-up",
+      "2 revision rounds, short follow-up — indicative delivery: 2 to 3 weeks",
     ],
     featured: true,
   },
@@ -135,16 +137,16 @@ const plansEn = [
 ];
 
 const maintenanceFr = {
-  title: "Maintenance legere apres livraison",
-  subtitle: "Pour garder le site propre sans devoir reprendre la technique vous-meme.",
-  price: "49 a 99 EUR/mois selon le besoin",
+  title: "Maintenance légère après livraison",
+  subtitle: "Pour garder le site propre sans devoir reprendre la technique vous-même.",
+  price: "49 à 99 EUR/mois selon le besoin",
   includes: [
     "Petites modifications de textes",
     "Remplacement ponctuel d'images",
     "Surveillance basique et sauvegardes",
     "Support simple par message",
   ],
-  note: "Propose apres livraison pour construire un revenu recurrent sans alourdir le projet initial.",
+  note: "Option sans engagement, proposée après livraison. Le périmètre, le délai de réponse et les coûts d'hébergement sont définis avant activation.",
 };
 
 const maintenanceEn = {
@@ -152,7 +154,7 @@ const maintenanceEn = {
   subtitle: "Keep the website clean without handling the technical side yourself.",
   price: "EUR 49 to 99/month depending on needs",
   includes: ["Small text updates", "Occasional image replacement", "Basic monitoring and backups", "Simple message support"],
-  note: "Offered after delivery to build recurring revenue without making the initial project heavier.",
+  note: "Optional and commitment-free after delivery. Scope, response time and hosting costs are agreed before activation.",
 };
 
 export function Pricing({ locale = "fr" }: { locale?: Locale }) {
@@ -166,14 +168,41 @@ export function Pricing({ locale = "fr" }: { locale?: Locale }) {
   const [errorMessage, setErrorMessage] = useState<string | null>(null);
 
   const isModalOpen = Boolean(selectedOffer && formData);
+  const modalCloseRef = useRef<HTMLButtonElement>(null);
+  const modalTriggerRef = useRef<HTMLElement | null>(null);
+  const modalRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     if (!isModalOpen) return;
+
+    modalCloseRef.current?.focus();
 
     const handleKeyDown = (event: KeyboardEvent) => {
       if (event.key === "Escape") {
         setSelectedOffer(null);
         setFormData(null);
+        return;
+      }
+
+      if (event.key !== "Tab") return;
+
+      const focusables = Array.from(
+        modalRef.current?.querySelectorAll<HTMLElement>(
+          "a[href], button:not([disabled]), input:not([disabled]):not([tabindex='-1']), textarea:not([disabled]), select:not([disabled])",
+        ) ?? [],
+      );
+      if (focusables.length === 0) return;
+
+      const first = focusables[0];
+      const last = focusables[focusables.length - 1];
+      const active = document.activeElement as HTMLElement | null;
+
+      if (event.shiftKey && (active === first || !modalRef.current?.contains(active))) {
+        event.preventDefault();
+        last.focus();
+      } else if (!event.shiftKey && (active === last || !modalRef.current?.contains(active))) {
+        event.preventDefault();
+        first.focus();
       }
     };
 
@@ -183,12 +212,14 @@ export function Pricing({ locale = "fr" }: { locale?: Locale }) {
     return () => {
       document.removeEventListener("keydown", handleKeyDown);
       document.body.style.overflow = "";
+      modalTriggerRef.current?.focus();
     };
   }, [isModalOpen]);
 
   function openPricingModal(offerKey: PricingOfferKey) {
     const defaults = buildPricingLeadDefaults(offerKey, locale) as PricingLeadForm;
 
+    modalTriggerRef.current = document.activeElement as HTMLElement | null;
     setSelectedOffer(offerKey);
     setFormData(defaults);
     setIsSent(false);
@@ -243,16 +274,16 @@ export function Pricing({ locale = "fr" }: { locale?: Locale }) {
   }
 
   return (
-    <section id="tarifs" className="section-screen px-4 md:px-8">
+    <section id="tarifs" className="cv-auto section-screen px-4 md:px-8">
       <div className="mx-auto max-w-7xl">
         <Reveal>
           <SectionHeading
             eyebrow={en ? "Pricing" : "Tarifs"}
-            title={en ? "Simple offers built for a one-person studio" : "Des offres simples, pensees pour vendre sans se disperser"}
+            title={en ? "Simple offers built for small businesses" : "Des offres simples, pensées pour les petites entreprises"}
             description={
               en
-                ? "The goal is not to sell cheap websites. It is to sell clear transformations that a small business can understand."
-                : "Le but n'est pas de vendre des sites au rabais. Le but est de vendre une transformation claire, comprehensible par une TPE."
+                ? "Clear scope, visible pricing and one direct point of contact, so you know what you get before committing."
+                : "Un périmètre clair, des prix visibles et un interlocuteur unique : vous savez ce que vous obtenez avant de vous engager."
             }
             center
           />
@@ -262,7 +293,7 @@ export function Pricing({ locale = "fr" }: { locale?: Locale }) {
           <p className="mx-auto mt-4 max-w-4xl rounded-none border border-[#2a231d]/14 bg-[#fffaf0]/82 px-4 py-3 text-sm font-semibold text-[#63584d]">
             {en
               ? "No technical skills needed on your side: design, SEO, DNS, hosting and launch can be handled in one place."
-              : "Aucune competence technique necessaire de votre cote: design, SEO, DNS, hebergement et mise en ligne peuvent etre geres au meme endroit."}
+              : "Aucune compétence technique nécessaire de votre côté : design, SEO, DNS, hébergement et mise en ligne peuvent être gérés au même endroit."}
           </p>
         </Reveal>
 
@@ -293,7 +324,23 @@ export function Pricing({ locale = "fr" }: { locale?: Locale }) {
                   </CardHeader>
 
                   <CardContent>
-                    <div className="space-y-3">
+                    <details className="group sm:hidden">
+                      <summary className="cursor-pointer list-none text-xs font-black uppercase tracking-[0.12em] text-[#63584d]">
+                        {en ? "What is included" : "Ce qui est inclus"}
+                        <span className="ml-2 inline-block transition-transform group-open:rotate-90">›</span>
+                      </summary>
+                      <div className="mt-3 space-y-3">
+                        {plan.features.map((feature) => (
+                          <div key={feature} className="flex items-start gap-2 text-sm text-[#63584d]">
+                            <span className="mt-0.5 rounded-none bg-[#17120f] p-1 text-[#fffaf0]">
+                              <Check size={11} />
+                            </span>
+                            <span>{feature}</span>
+                          </div>
+                        ))}
+                      </div>
+                    </details>
+                    <div className="hidden space-y-3 sm:block">
                       <p className="text-xs font-black uppercase tracking-[0.12em] text-[#63584d]">
                         {en ? "What is included" : "Ce qui est inclus"}
                       </p>
@@ -307,7 +354,7 @@ export function Pricing({ locale = "fr" }: { locale?: Locale }) {
                       ))}
                     </div>
                     <div className="mt-4 rounded-none border border-[#2a231d]/12 bg-[#f5f1e8] px-3 py-2 text-sm text-[#63584d]">
-                      <span className="font-black text-[#17120f]">{en ? "Expected result:" : "Resultat attendu :"}</span>{" "}
+                      <span className="font-black text-[#17120f]">{en ? "Expected result:" : "Résultat attendu :"}</span>{" "}
                       {plan.result}
                     </div>
                   </CardContent>
@@ -328,10 +375,41 @@ export function Pricing({ locale = "fr" }: { locale?: Locale }) {
           ))}
         </div>
 
+        <Reveal delay={0.1}>
+          <div className="mt-7 rounded-none border border-[#2a231d]/14 bg-[#fffaf0]/82 p-4 sm:p-5">
+            <p className="text-xs font-black uppercase tracking-[0.12em] text-[#c2461f]">
+              {en ? "True for every offer" : "Valable pour toutes les offres"}
+            </p>
+            <div className="mt-3 grid gap-2 md:grid-cols-2">
+              {(en
+                ? [
+                    "You own the domain, the code and every account (hosting, analytics, Search Console)",
+                    "Hosting and external subscriptions are paid directly by you, with no markup",
+                    "Prices excl. tax — a written quote before any work starts",
+                    "Based in Seoul, 100% remote, working hours overlapping with France",
+                  ]
+                : [
+                    "Vous restez propriétaire du domaine, du code et de tous les comptes (hébergement, analytics, Search Console)",
+                    "Hébergement et abonnements externes payés directement par vous, sans marge",
+                    "Prix hors taxes — devis écrit avant tout démarrage",
+                    "Basé à Séoul, 100 % à distance, créneaux d'échange compatibles avec la France",
+                  ]
+              ).map((item) => (
+                <div key={item} className="flex items-start gap-2 rounded-none border border-[#2a231d]/12 bg-[#f5f1e8] px-3 py-2 text-sm text-[#63584d]">
+                  <span className="mt-0.5 rounded-none bg-[#17120f] p-1 text-[#fffaf0]">
+                    <Check size={11} />
+                  </span>
+                  <span>{item}</span>
+                </div>
+              ))}
+            </div>
+          </div>
+        </Reveal>
+
         <Reveal delay={0.14}>
           <div className="mt-7 rounded-none border border-[#2a231d]/14 bg-[linear-gradient(145deg,rgba(255,250,240,0.95),rgba(232,224,210,0.78))] p-4 shadow-[8px_8px_0_rgba(42,35,29,0.09)] sm:p-5">
-            <p className="text-xs font-black uppercase tracking-[0.12em] text-[#d94f2b]">
-              {en ? "Optional recurring support" : "Support recurrent optionnel"}
+            <p className="text-xs font-black uppercase tracking-[0.12em] text-[#c2461f]">
+              {en ? "Optional recurring support" : "Support récurrent optionnel"}
             </p>
             <h3 className="font-display mt-2 text-xl font-semibold text-[#17120f] sm:text-2xl">{maintenance.title}</h3>
             <p className="mt-2 text-sm text-[#63584d]">{maintenance.subtitle}</p>
@@ -362,6 +440,7 @@ export function Pricing({ locale = "fr" }: { locale?: Locale }) {
             onClick={closePricingModal}
           />
           <motion.div
+            ref={modalRef}
             role="dialog"
             aria-modal="true"
             aria-labelledby="pricing-modal-title"
@@ -373,7 +452,7 @@ export function Pricing({ locale = "fr" }: { locale?: Locale }) {
           >
             <div className="grid border-b border-[#2a231d]/14 bg-[linear-gradient(135deg,rgba(255,250,240,1),rgba(245,241,232,0.92))] sm:grid-cols-[0.9fr_1.1fr]">
               <div className="border-b border-[#2a231d]/14 p-5 sm:border-b-0 sm:border-r sm:p-6">
-                <p className="text-[10px] font-black uppercase tracking-[0.18em] text-[#d94f2b]">
+                <p className="text-[10px] font-black uppercase tracking-[0.18em] text-[#c2461f]">
                   {en ? "Selected option" : "Option choisie"}
                 </p>
                 <h3 id="pricing-modal-title" className="font-display mt-3 text-3xl font-semibold text-[#17120f]">
@@ -413,9 +492,10 @@ export function Pricing({ locale = "fr" }: { locale?: Locale }) {
                     </h4>
                   </div>
                   <button
+                    ref={modalCloseRef}
                     type="button"
                     onClick={closePricingModal}
-                    className="inline-flex h-10 w-10 shrink-0 items-center justify-center rounded-none border border-[#2a231d]/14 bg-[#f5f1e8] text-[#17120f] transition hover:-translate-y-0.5 hover:bg-[#fffaf0]"
+                    className="inline-flex h-11 w-11 shrink-0 items-center justify-center rounded-none border border-[#2a231d]/14 bg-[#f5f1e8] text-[#17120f] transition hover:-translate-y-0.5 hover:bg-[#fffaf0]"
                     aria-label={en ? "Close" : "Fermer"}
                   >
                     <X size={17} />
@@ -429,6 +509,7 @@ export function Pricing({ locale = "fr" }: { locale?: Locale }) {
                     </label>
                     <Input
                       id="pricing-firstName"
+                      autoComplete="given-name"
                       value={formData.firstName}
                       placeholder="Marie"
                       onChange={(event) => setFormData((prev) => prev ? { ...prev, firstName: event.target.value } : prev)}
@@ -456,6 +537,7 @@ export function Pricing({ locale = "fr" }: { locale?: Locale }) {
                   <Input
                     id="pricing-email"
                     type="email"
+                    autoComplete="email"
                     value={formData.email}
                     placeholder={en ? "you@business.com" : "vous@commerce.fr"}
                     onChange={(event) => setFormData((prev) => prev ? { ...prev, email: event.target.value } : prev)}
@@ -470,6 +552,7 @@ export function Pricing({ locale = "fr" }: { locale?: Locale }) {
                   <Input
                     id="pricing-siteUrl"
                     type="url"
+                    autoComplete="url"
                     value={formData.siteUrl}
                     placeholder={en ? "https://your-business.com" : "https://votre-entreprise.fr"}
                     onChange={(event) => setFormData((prev) => prev ? { ...prev, siteUrl: event.target.value } : prev)}
@@ -517,7 +600,7 @@ export function Pricing({ locale = "fr" }: { locale?: Locale }) {
                 </p>
 
                 {isSent ? (
-                  <p className="rounded-none border border-[#2a231d]/14 bg-[#f5f1e8] px-3 py-2 text-sm font-bold text-[#17120f]">
+                  <p role="status" className="rounded-none border border-[#2a231d]/14 bg-[#f5f1e8] px-3 py-2 text-sm font-bold text-[#17120f]">
                     {en
                       ? "Thanks, your request has been sent. I will reply very soon."
                       : "Merci, votre demande est bien envoyée. Je vous réponds très vite."}
@@ -525,7 +608,7 @@ export function Pricing({ locale = "fr" }: { locale?: Locale }) {
                 ) : null}
 
                 {errorMessage ? (
-                  <p className="rounded-none border border-rose-200 bg-rose-50 px-3 py-2 text-sm font-medium text-rose-700">
+                  <p role="alert" className="rounded-none border border-rose-200 bg-rose-50 px-3 py-2 text-sm font-medium text-rose-700">
                     {errorMessage}
                   </p>
                 ) : null}

@@ -1,13 +1,20 @@
 import type { Metadata } from "next";
+import { Footer } from "@/components/site/Footer";
+import { Navbar } from "@/components/site/Navbar";
 
 export const metadata: Metadata = {
   title: "Mentions légales",
-  description: "Mentions légales de Rayan Studio.",
+  description: "Mentions légales du site Rayan Studio : éditeur, hébergeur et contact.",
+  alternates: {
+    canonical: "/mentions-legales",
+  },
 };
 
 export default function MentionsLegalesPage() {
   return (
-    <main className="min-h-screen px-4 pb-16 pt-28 md:px-8">
+    <>
+      <Navbar locale="fr" />
+      <main id="main-content" className="min-h-screen px-4 pb-16 pt-28 md:px-8">
       <section className="mx-auto max-w-4xl rounded-3xl border border-white/85 bg-[linear-gradient(145deg,rgba(255,255,255,0.9),rgba(228,241,255,0.72))] p-6 shadow-[0_26px_44px_rgba(123,157,217,0.2)] backdrop-blur-xl md:p-8">
         <h1 className="font-display text-3xl font-semibold text-slate-900 md:text-4xl">Mentions légales</h1>
         <p className="mt-3 text-sm text-slate-600">Dernière mise à jour : 5 avril 2026</p>
@@ -65,6 +72,8 @@ export default function MentionsLegalesPage() {
           </section>
         </div>
       </section>
-    </main>
+      </main>
+      <Footer locale="fr" />
+    </>
   );
 }
