@@ -65,10 +65,9 @@ function buildLlmPayload({ countryCode, sector, campaignCandidate, signals, evid
     sector: sanitizeExcerpt(sector, 60),
     campaign_candidate: campaignCandidate,
     signals: cleanSignals,
-    excerpts: {
-      page_title: sanitizeExcerpt(signals?.title),
-      meta_description: sanitizeExcerpt(signals?.metaDescription, 200),
-    },
+    // Aucun extrait textuel du site : les titres et meta descriptions
+    // peuvent contenir noms ou coordonnées. Le LLM ne reçoit que des
+    // signaux booléens/numériques et les URLs de preuve.
     evidence_urls: (evidence || []).map((e) => e.url).filter(Boolean).slice(0, 5),
   };
   const serialized = JSON.stringify(payload).toLowerCase();

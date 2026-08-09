@@ -47,6 +47,11 @@ function fakeClient(state) {
         state.businesses.push({ id, canonical_domain: domain });
         return { rows: [{ id }], rowCount: 1 };
       }
+      if (text.includes('UPDATE businesses SET canonical_domain')) {
+        const b = state.businesses.find((x) => x.id === params[0]);
+        if (b && b.canonical_domain === null) b.canonical_domain = params[1];
+        return { rows: [], rowCount: 1 };
+      }
       if (text.includes('SELECT id FROM businesses WHERE canonical_domain')) {
         const rows = state.businesses.filter((b) => b.canonical_domain === params[0]).map((b) => ({ id: b.id }));
         return { rows, rowCount: rows.length };

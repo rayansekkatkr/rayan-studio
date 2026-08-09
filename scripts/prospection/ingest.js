@@ -52,6 +52,26 @@ async function ingestCandidate(client, candidate, secret = process.env.SUPPRESSI
 
   let businessId = decision.businessId;
 
+  if (decision.action === 'ATTACH') {
+    // Enrichissement : une entreprise créée sans site reçoit son domaine
+    // vérifié lors d'une découverte ultérieure. Si le domaine appartient
+    // déjà à une autre entreprise (index unique), conflit -> fail closed.
+    const domain = canonicalDomain(candidate.website);
+    if (domain) {
+      try {
+        await client.query(
+          `UPDATE businesses SET canonical_domain = $2, updated_at = now()
+           WHERE id = $1 AND canonical_domain IS NULL`,
+          [businessId, domain],
+        );
+      } catch (error) {
+        const conflict = new Error('identity_conflict');
+        conflict.code = 'IDENTITY_CONFLICT';
+        throw conflict;
+      }
+    }
+  }
+
   if (decision.action === 'CREATE') {
     const domain = canonicalDomain(candidate.website);
     const { rows } = await client.query(

@@ -38,7 +38,8 @@ test('buildLlmPayload : liste blanche stricte, aucune donnée interdite ne passe
   assert.equal(payload.signals.email, undefined);
   assert.equal(payload.signals.ownerName, undefined);
   assert.deepEqual(payload.evidence_urls, ['https://epidor.fr/', 'https://epidor.fr/contact']);
-  assert.equal(payload.excerpts.page_title.includes('@'), false, 'email retiré du titre');
+  assert.equal(payload.excerpts, undefined, 'aucun extrait textuel du site ne part au LLM');
+  assert.ok(!serialized.includes('Épi'), 'le titre (nom commercial) ne part plus');
 });
 
 test('buildLlmPayload refuse une campagne inconnue', () => {

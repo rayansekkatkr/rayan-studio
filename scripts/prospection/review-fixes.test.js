@@ -46,8 +46,14 @@ test('sanitizeExcerpt retire téléphones, adresses de rue et codes postaux', ()
 function fakeRecoveryClient(rows, sent = []) {
   return {
     async query(text, params) {
-      if (text.includes("status = 'RESERVED'") && text.includes('SELECT')) {
+      if (text.includes("om.status = 'RESERVED'")) {
         return { rows };
+      }
+      if (text.includes('FROM country_policies')) {
+        return { rows: [{ country_code: 'FR', enabled: true, policy_version: 'fr-v1' }] };
+      }
+      if (text.includes('FROM suppression_list')) {
+        return { rows: [] };
       }
       if (text.includes("SET status = 'POSSIBLY_SENT'")) {
         sent.push({ type: 'possibly_sent', id: params[0] });
@@ -70,6 +76,7 @@ test('recoverStalledReservations : dans la fenêtre -> retry même clé ; au-del
     id: 'm1', business_id: 'b1', to: 'a@x.fr', subject: 's', body: 'b {{unsubscribe_url}}',
     provider_idempotency_key: 'cold-outreach/m1', attempt_count: 1,
     reserved_at: new Date(now - 60 * 60 * 1000).toISOString(), // 1h
+    country_code: 'FR', canonical_domain: 'x.fr', business_status: 'RESERVED',
   };
   const stale = { ...recent, id: 'm2', business_id: 'b2', provider_idempotency_key: 'cold-outreach/m2',
     reserved_at: new Date(now - 30 * 60 * 60 * 1000).toISOString() }; // 30h > fenêtre 24h
@@ -82,7 +89,9 @@ test('recoverStalledReservations : dans la fenêtre -> retry même clé ; au-del
     return { ok: true, status: 200, json: async () => ({ id: 'resend-recovered' }) };
   };
   const env = {
-    UNSUBSCRIBE_BASE_URL: 'https://x/api/unsubscribe', RESEND_API_KEY: 'k',
+    SEND_ENABLED: 'true', ENABLED_COUNTRIES: 'FR',
+    UNSUBSCRIBE_BASE_URL: 'https://x/api/unsubscribe', UNSUBSCRIBE_TOKEN_SECRET: 'unsubscribe-secret-0123456789',
+    RESEND_WEBHOOK_SECRET: 'w', SEND_DNS_VERIFIED: 'true', RESEND_API_KEY: 'k',
     RESEND_FROM: 'a@b.c', RESEND_BACKOFF_BASE_MS: '1',
   };
   const result = await recoverStalledReservations(client, { resendFetcher: fetcher, env, now });
@@ -90,4 +99,91 @@ test('recoverStalledReservations : dans la fenêtre -> retry même clé ; au-del
   assert.equal(result.possiblySent, 1);
   assert.deepEqual(keys, ['cold-outreach/m1'], 'reprise avec la même clé, jamais une nouvelle');
   assert.ok(actions.some((a) => a.type === 'possibly_sent' && a.id === 'm2'), 'hors fenêtre = POSSIBLY_SENT');
+});
+
+// Round 2 — B1 : l'arrêt d'urgence bloque aussi les reprises
+test('recoverStalledReservations : SEND_ENABLED=false -> zéro appel Resend, messages intacts', async () => {
+  let fetchCalls = 0;
+  const client = { async query() { throw new Error('la base ne doit même pas être lue'); } };
+  const result = await recoverStalledReservations(client, {
+    resendFetcher: async () => { fetchCalls += 1; return { ok: true, status: 200, json: async () => ({}) }; },
+    env: { SEND_ENABLED: 'false' },
+    now: Date.now(),
+  });
+  assert.equal(fetchCalls, 0);
+  assert.deepEqual(result, { retried: 0, possiblySent: 0, blockedByGuards: 0, suppressed: 0 });
+});
+
+test('recoverStalledReservations : garde-fous par message (pays non activé -> blocage, pas d\'envoi)', async () => {
+  const now = Date.now();
+  const row = {
+    id: 'm1', business_id: 'b1', to: 'a@x.fr', subject: 's', body: 'b {{unsubscribe_url}}',
+    provider_idempotency_key: 'cold-outreach/m1', attempt_count: 0,
+    reserved_at: new Date(now - 60 * 60 * 1000).toISOString(),
+    country_code: 'FR', canonical_domain: 'x.fr', business_status: 'RESERVED',
+  };
+  let fetchCalls = 0;
+  const client = {
+    async query(text) {
+      if (text.includes("om.status = 'RESERVED'")) return { rows: [row] };
+      if (text.includes('FROM country_policies')) return { rows: [{ country_code: 'FR', enabled: false, policy_version: null }] };
+      if (text.includes('FROM suppression_list')) return { rows: [] };
+      return { rows: [], rowCount: 1 };
+    },
+  };
+  const env = {
+    SEND_ENABLED: 'true', ENABLED_COUNTRIES: 'FR',
+    UNSUBSCRIBE_BASE_URL: 'https://x/api/unsubscribe', UNSUBSCRIBE_TOKEN_SECRET: 'unsubscribe-secret-0123456789',
+    RESEND_WEBHOOK_SECRET: 'w', SEND_DNS_VERIFIED: 'true', RESEND_API_KEY: 'k', RESEND_FROM: 'a@b.c',
+    RESEND_BACKOFF_BASE_MS: '1',
+  };
+  const result = await recoverStalledReservations(client, {
+    resendFetcher: async () => { fetchCalls += 1; return { ok: true, status: 200, json: async () => ({}) }; },
+    env, now,
+  });
+  assert.equal(fetchCalls, 0, 'politique pays désactivée = aucun envoi de reprise');
+  assert.equal(result.blockedByGuards, 1);
+});
+
+// Round 2 — enrichissement du domaine lors d'un ATTACH
+const { ingestCandidate: ingestForEnrich } = require('./ingest');
+test('ingestCandidate ATTACH : une entreprise sans domaine reçoit son domaine vérifié', async () => {
+  const { hmac: h } = require('./normalize');
+  const state = {
+    businesses: [{ id: 'b1', canonical_domain: null }],
+    identityKeys: [{ business_id: 'b1', kind: 'siren', value_hmac: h('123456789') }],
+    domainUpdates: [],
+  };
+  const client = {
+    async query(text, params) {
+      if (text.includes('FROM business_identity_keys') && text.includes('IN (')) {
+        const pairs = [];
+        for (let i = 0; i < params.length; i += 2) pairs.push([params[i], params[i + 1]]);
+        const rows = state.identityKeys.filter((k) => pairs.some(([kind, v]) => k.kind === kind && k.value_hmac === v));
+        return { rows, rowCount: rows.length };
+      }
+      if (text.includes('UPDATE businesses SET canonical_domain')) {
+        state.domainUpdates.push({ id: params[0], domain: params[1] });
+        return { rows: [], rowCount: 1 };
+      }
+      if (text.startsWith('INSERT INTO business_identity_keys')) {
+        const [businessId, kind, valueHmac] = params;
+        if (state.identityKeys.some((k) => k.kind === kind && k.value_hmac === valueHmac)) return { rows: [], rowCount: 0 };
+        state.identityKeys.push({ business_id: businessId, kind, value_hmac: valueHmac });
+        return { rows: [{ id: 1 }], rowCount: 1 };
+      }
+      if (text.includes('SELECT business_id FROM business_identity_keys')) {
+        const rows = state.identityKeys.filter((k) => k.kind === params[0] && k.value_hmac === params[1]).map((k) => ({ business_id: k.business_id }));
+        return { rows, rowCount: rows.length };
+      }
+      if (text.startsWith('INSERT INTO business_external_ids')) return { rows: [], rowCount: 1 };
+      throw new Error(`non simulé : ${text.slice(0, 50)}`);
+    },
+  };
+  const result = await ingestForEnrich(client, {
+    provider: 'sirene', siren: '123456789', name: 'Épi d Or', countryCode: 'FR',
+    website: 'https://www.epidor.fr',
+  });
+  assert.equal(result.outcome, 'attached');
+  assert.deepEqual(state.domainUpdates, [{ id: 'b1', domain: 'epidor.fr' }]);
 });

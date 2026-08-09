@@ -132,7 +132,8 @@ async function upsertContactSafely({ businessId, email, sourceUrl, isFunctional 
 async function loadRecentAudit(businessId) {
   const { rows } = await query(
     `SELECT signals, evidence, fetched_at FROM website_audits
-     WHERE business_id = $1 AND fetched_at > now() - make_interval(days => $2)
+     WHERE business_id = $1 AND is_summary = true
+       AND fetched_at > now() - make_interval(days => $2)
      ORDER BY fetched_at DESC LIMIT 1`,
     [businessId, AUDIT_REUSE_DAYS],
   );
@@ -157,7 +158,7 @@ async function runWeekly(options = {}) {
     dryRun, discovered: 0, ingested: 0, identityConflicts: 0, websiteMismatches: 0,
     audited: 0, auditsReused: 0, suppressed: 0, noCampaignSignal: 0,
     noCompliantContact: 0, contactConflicts: 0, jsRequired: 0, llmSkipped: 0,
-    llmInvalid: 0, qualified: 0, drafts: 0, reserved: 0, sent: 0,
+    llmInvalid: 0, qualified: 0, drafts: 0, draftsExisting: 0, reserved: 0, sent: 0,
     possiblySent: 0, sendFailed: 0, stalledRecovered: 0, webhooksReconciled: 0,
     errors: 0, guardsBlocked: [],
   };
@@ -166,7 +167,9 @@ async function runWeekly(options = {}) {
   await query(`INSERT INTO campaign_runs (id, dry_run, git_sha) VALUES ($1, $2, $3)`, [runId, dryRun, process.env.GITHUB_SHA || null]);
 
   // 0. Reprises : réservations bloquées et webhooks non appariés.
-  if (!dryRun) {
+  // La reprise est un ENVOI : elle exige SEND_ENABLED et repasse tous les
+  // garde-fous par message (elle-même vérifie politique pays + suppression).
+  if (!dryRun && process.env.SEND_ENABLED === 'true') {
     const recovered = await withTransaction((c) => recoverStalledReservations(c));
     stats.stalledRecovered = recovered.retried + recovered.possiblySent;
   }
@@ -248,6 +251,16 @@ async function runWeekly(options = {}) {
             [business.id, page.url, page.method, JSON.stringify(page.signals), JSON.stringify(audit.evidence)],
           );
         }
+        // Ligne summary : signaux FUSIONNÉS du site, seule ligne rechargée
+        // par loadRecentAudit (jamais les signaux d'une page interne seule).
+        if (audit.signals) {
+          await query(
+            `INSERT INTO website_audits (business_id, page_url, method, signals, evidence, is_summary)
+             VALUES ($1, $2, 'http', $3::jsonb, $4::jsonb, true)`,
+            [business.id, audit.signals.finalUrl || `https://${business.canonical_domain}`,
+             JSON.stringify(audit.signals), JSON.stringify(audit.evidence)],
+          );
+        }
       }
 
       const signals = audit.signals;
@@ -277,7 +290,22 @@ async function runWeekly(options = {}) {
         continue;
       }
 
-      sendCandidates.push({ business, audit, campaign, contact });
+      // Le contact conforme est persisté ICI, avant ENRICHED : un échec
+      // LLM ou un garde-fou fermé plus tard ne peut plus le perdre, et
+      // loadRecentAudit le retrouvera au run suivant.
+      const contactResult = await upsertContactSafely({
+        businessId: business.id,
+        email: contact.email,
+        sourceUrl: contact.sourceUrl,
+        isFunctional: Boolean(contact.isFunctional),
+      });
+      if (contactResult.conflict) {
+        stats.contactConflicts += 1;
+        await markSkipped(business.id, 'contact_identity_conflict');
+        continue;
+      }
+
+      sendCandidates.push({ business, audit, campaign, contact, contactId: contactResult.contactId });
       // ENRICHED = prêt pour qualification, toujours re-sélectionnable.
       await query(`UPDATE businesses SET status = 'ENRICHED', updated_at = now() WHERE id = $1`, [business.id]);
     } catch {
@@ -332,21 +360,18 @@ async function runWeekly(options = {}) {
       businessName: item.business.display_name || item.business.name_normalized,
     });
 
-    const contactResult = await upsertContactSafely({
-      businessId: item.business.id,
-      email: item.contact.email,
-      sourceUrl: item.contact.sourceUrl, // page exacte où l'adresse est publiée
-      isFunctional: item.contact.isFunctional,
-    });
-    if (contactResult.conflict) {
-      stats.contactConflicts += 1;
-      await markSkipped(item.business.id, 'contact_identity_conflict');
-      continue;
-    }
-
     if (dryRun) {
+      // Un second dry-run ne duplique pas les brouillons (README).
+      const { rows: existingDraft } = await query(
+        `SELECT 1 FROM outreach_messages WHERE business_id = $1 AND dry_run = true LIMIT 1`,
+        [item.business.id],
+      );
+      if (existingDraft.length > 0) {
+        stats.draftsExisting += 1;
+        continue;
+      }
       await withTransaction((c) => saveDryRunDraft(c, {
-        businessId: item.business.id, contactId: contactResult.contactId, runId,
+        businessId: item.business.id, contactId: item.contactId, runId,
         campaign: item.qualification.campaign, subject: email.subject, body: email.body,
         evidenceUrl: item.qualification.evidenceUrl,
       }));
@@ -356,7 +381,7 @@ async function runWeekly(options = {}) {
     }
 
     const reservation = await withTransaction((c) => reserveOutreach(c, {
-      businessId: item.business.id, contactId: contactResult.contactId, runId,
+      businessId: item.business.id, contactId: item.contactId, runId,
       campaign: item.qualification.campaign, subject: email.subject, body: email.body,
       evidenceUrl: item.qualification.evidenceUrl,
     }));

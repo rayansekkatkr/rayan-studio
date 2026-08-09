@@ -139,7 +139,7 @@ Québec (CASL), Maroc, Tunisie : désactivés, travaux dédiés requis.
 
 ## Garanties de test
 
-`npm test` (scripts/) : 120 tests dont identité multi-sources, dédup
+`npm test` (scripts/) : 123 tests dont identité multi-sources, dédup
 legacy, SSRF (IPv4/IPv6/redirections), minimisation LLM, injection,
 réservation atomique, retry même clé, POSSIBLY_SENT, signatures webhook.
 En CI, un service Postgres exécute aussi la migration base vide/existante.

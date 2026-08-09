@@ -188,20 +188,41 @@ async function sendReserved(client, message, { resendFetcher = fetch, env = proc
  * Reprise des messages restés RESERVED (crash entre l'acceptation Resend
  * et le commit). Dans la fenêtre d'idempotence : retente avec la MÊME
  * clé (réconciliation sûre). Au-delà : POSSIBLY_SENT, entreprise bloquée.
- * À appeler au début de chaque run.
+ *
+ * SOUMISE AUX MÊMES GARDE-FOUS que tout envoi : SEND_ENABLED, politique
+ * pays, allowlist, DNS, suppression. L'arrêt d'urgence
+ * (SEND_ENABLED=false) bloque aussi les reprises. Un message non
+ * autorisé reste RESERVED (aucun envoi) jusqu'à réautorisation ou
+ * sortie de fenêtre.
  */
 async function recoverStalledReservations(client, { resendFetcher, env = process.env, now = Date.now() } = {}) {
+  const results = { retried: 0, possiblySent: 0, blockedByGuards: 0, suppressed: 0 };
+  if (env.SEND_ENABLED !== 'true') return results; // arrêt d'urgence respecté
+
   const { rows } = await client.query(
-    `SELECT id, business_id, subject, body, provider_idempotency_key, attempt_count, reserved_at,
-            (SELECT email FROM contacts WHERE contacts.id = outreach_messages.contact_id) AS to
-     FROM outreach_messages
-     WHERE status = 'RESERVED' AND dry_run = false
-       AND reserved_at < now() - interval '30 minutes'`,
+    `SELECT om.id, om.business_id, om.subject, om.body, om.provider_idempotency_key,
+            om.attempt_count, om.reserved_at,
+            c.email AS to, b.country_code, b.canonical_domain, b.status AS business_status
+     FROM outreach_messages om
+     JOIN contacts c ON c.id = om.contact_id
+     JOIN businesses b ON b.id = om.business_id
+     WHERE om.status = 'RESERVED' AND om.dry_run = false
+       AND om.reserved_at < now() - interval '30 minutes'`,
   );
-  const results = { retried: 0, possiblySent: 0 };
+  const { rows: policies } = await client.query(
+    `SELECT country_code, enabled, policy_version FROM country_policies`,
+  );
+  const policyByCountry = new Map(policies.map((p) => [p.country_code, p]));
+
   for (const row of rows) {
     const age = now - new Date(row.reserved_at).getTime();
     if (age < RESEND_IDEMPOTENCY_WINDOW_MS) {
+      const guards = checkSendGuards({ env, countryPolicy: policyByCountry.get(row.country_code) });
+      if (!guards.allowed) { results.blockedByGuards += 1; continue; }
+      if (await isSuppressed(client, { email: row.to, website: row.canonical_domain, businessStatus: 'RESERVED' })) {
+        results.suppressed += 1;
+        continue;
+      }
       await sendReserved(client, row, { resendFetcher, env });
       results.retried += 1;
     } else {
