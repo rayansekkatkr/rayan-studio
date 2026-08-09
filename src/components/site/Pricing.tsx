@@ -32,7 +32,7 @@ const plansFr = [
   {
     offerKey: "express",
     name: "Création Express",
-    price: "À partir de 700 EUR",
+    price: "Devis gratuit sous 24h",
     description: "Pour créer un premier site simple, propre et rassurant.",
     forWho: "Idéal si votre entreprise n'a pas encore de vraie présence en ligne.",
     result: "Vous obtenez une vitrine claire, mobile et prête à être partagée avec vos clients.",
@@ -49,7 +49,7 @@ const plansFr = [
   {
     offerKey: "redesign",
     name: "Refonte Pro",
-    price: "À partir de 1200 EUR",
+    price: "Devis gratuit sous 24h",
     description: "Pour remplacer un site daté par une vitrine plus crédible.",
     forWho: "Idéal si votre site existe déjà mais ne reflète plus la qualité de votre entreprise.",
     result: "Votre site devient plus clair, plus moderne, et donne davantage envie de vous contacter.",
@@ -66,7 +66,7 @@ const plansFr = [
   {
     offerKey: "custom",
     name: "Sur mesure",
-    price: "Devis",
+    price: "Devis gratuit sous 24h",
     description: "Pour un projet plus complet avec besoins spécifiques.",
     forWho: "Idéal si vous avez plusieurs pages, une administration, ou des fonctionnalités précises.",
     result: "Vous obtenez une solution plus complète, alignée avec votre activité et votre organisation.",
@@ -86,7 +86,7 @@ const plansEn = [
   {
     offerKey: "express",
     name: "Express Creation",
-    price: "From EUR 700",
+    price: "Free quote within 24h",
     description: "Create a simple, clean, trust-building first website.",
     forWho: "Best if your business does not yet have a proper online presence.",
     result: "You get a clear mobile storefront ready to share with customers.",
@@ -103,7 +103,7 @@ const plansEn = [
   {
     offerKey: "redesign",
     name: "Pro Redesign",
-    price: "From EUR 1200",
+    price: "Free quote within 24h",
     description: "Replace a dated website with a more credible storefront.",
     forWho: "Best if your website exists but no longer reflects the quality of your business.",
     result: "Your website becomes clearer, more modern, and makes people more likely to contact you.",
@@ -120,7 +120,7 @@ const plansEn = [
   {
     offerKey: "custom",
     name: "Custom",
-    price: "Quote",
+    price: "Free quote within 24h",
     description: "For a more complete project with specific requirements.",
     forWho: "Best if you need several pages, admin editing, or precise functionality.",
     result: "You get a more complete solution aligned with your business and workflow.",
@@ -139,7 +139,7 @@ const plansEn = [
 const maintenanceFr = {
   title: "Maintenance légère après livraison",
   subtitle: "Pour garder le site propre sans devoir reprendre la technique vous-même.",
-  price: "49 à 99 EUR/mois selon le besoin",
+  price: "Sur devis, selon le périmètre",
   includes: [
     "Petites modifications de textes",
     "Remplacement ponctuel d'images",
@@ -152,7 +152,7 @@ const maintenanceFr = {
 const maintenanceEn = {
   title: "Light maintenance after launch",
   subtitle: "Keep the website clean without handling the technical side yourself.",
-  price: "EUR 49 to 99/month depending on needs",
+  price: "On quote, based on scope",
   includes: ["Small text updates", "Occasional image replacement", "Basic monitoring and backups", "Simple message support"],
   note: "Optional and commitment-free after delivery. Scope, response time and hosting costs are agreed before activation.",
 };
@@ -278,12 +278,12 @@ export function Pricing({ locale = "fr" }: { locale?: Locale }) {
       <div className="mx-auto max-w-7xl">
         <Reveal>
           <SectionHeading
-            eyebrow={en ? "Pricing" : "Tarifs"}
+            eyebrow={en ? "Offers" : "Offres"}
             title={en ? "Simple offers built for small businesses" : "Des offres simples, pensées pour les petites entreprises"}
             description={
               en
-                ? "Clear scope, visible pricing and one direct point of contact, so you know what you get before committing."
-                : "Un périmètre clair, des prix visibles et un interlocuteur unique : vous savez ce que vous obtenez avant de vous engager."
+                ? "Clear scope, a free quote within 24 hours and one direct point of contact, so you know what you get before committing."
+                : "Un périmètre clair, un devis gratuit sous 24h et un interlocuteur unique : vous savez ce que vous obtenez avant de vous engager."
             }
             center
           />
@@ -385,13 +385,13 @@ export function Pricing({ locale = "fr" }: { locale?: Locale }) {
                 ? [
                     "You own the domain, the code and every account (hosting, analytics, Search Console)",
                     "Hosting and external subscriptions are paid directly by you, with no markup",
-                    "Prices excl. tax — a written quote before any work starts",
+                    "Free written quote within 24 hours, with no commitment",
                     "Based in Seoul, 100% remote, working hours overlapping with France",
                   ]
                 : [
                     "Vous restez propriétaire du domaine, du code et de tous les comptes (hébergement, analytics, Search Console)",
                     "Hébergement et abonnements externes payés directement par vous, sans marge",
-                    "Prix hors taxes — devis écrit avant tout démarrage",
+                    "Devis gratuit, écrit et sans engagement, envoyé sous 24h",
                     "Basé à Séoul, 100 % à distance, créneaux d'échange compatibles avec la France",
                   ]
               ).map((item) => (
@@ -414,7 +414,7 @@ export function Pricing({ locale = "fr" }: { locale?: Locale }) {
             <h3 className="font-display mt-2 text-xl font-semibold text-[#17120f] sm:text-2xl">{maintenance.title}</h3>
             <p className="mt-2 text-sm text-[#63584d]">{maintenance.subtitle}</p>
             <p className="mt-3 text-sm font-black text-[#17120f]">
-              {en ? "Budget:" : "Budget :"} {maintenance.price}
+              {en ? "Pricing:" : "Tarif :"} {maintenance.price}
             </p>
             <div className="mt-4 grid gap-2 md:grid-cols-2">
               {maintenance.includes.map((item) => (
