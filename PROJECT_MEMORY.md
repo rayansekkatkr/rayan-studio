@@ -528,6 +528,13 @@ Quand un changement important est fait:
   - Footer : liens « Profil technique » + LinkedIn. JSON-LD Person : `jobTitle` + `sameAs`.
   - Confirmations utilisateur reçues ensuite : DocExtract **est** un produit du studio (étiquette validée) ; GoodCall ajouté au showcase (capture goodcall.gg via navigateur, badge « Produit du studio — en production », position 2 pour préserver le test « premier projet = Pick4Me »). Périmètre des offres explicité à l'utilisateur, pas de correction demandée à ce stade.
   - Toujours manquant : statut légal (SIREN/adresse) pour compléter les mentions légales ; témoignages clients attribués (aucun affiché — rien d'inventé).
+- P3 perf (même branche) :
+  - Hero et Navbar rendus **statiques au SSR** : suppression des variants framer-motion d'entrée (le HTML serveur contenait `opacity:0` inline -> contenu invisible jusqu'à hydratation + animation, cause principale du LCP mobile 4,7 s de l'audit). Hero n'importe plus framer-motion du tout. Micro-animations par item de Services supprimées. Le menu mobile (AnimatePresence) et les hovers restent.
+  - `.cv-auto` (content-visibility: auto + contain-intrinsic-size 900px) appliqué aux 8 sections sous le fold de la homepage.
+  - `WebVitalsReporter.tsx` : `useReportWebVitals` -> event GA `web_vitals` (LCP/CLS/INP/FCP/TTFB + rating). Ne part que si consentement (trackEvent no-op sans gtag). Donne enfin des Core Web Vitals terrain.
+  - Mesure Lighthouse locale (localhost non throttlé, `npx lighthouse --preset=perf` mobile) avant/après : score 95 -> 99, TBT 182 -> 57 ms, LCP 1933 -> 1764 ms, CLS stable 0,022. Le gain réel attendu en prod throttlée est surtout sur le LCP (paint SSR immédiat).
+  - Reste 1 `opacity:0` SSR : TextRotate du Showcase, sous le fold + cv-auto, sans impact LCP.
+  - P3 non couvert (bloqué ou décision) : enrichissement réel des 70 pages locales (contenu distinct par ville), témoignages externes, raccourcissement agressif de la homepage mobile (-25-35 % = choix design à valider visuellement).
 
 ### 2026-08-04
 

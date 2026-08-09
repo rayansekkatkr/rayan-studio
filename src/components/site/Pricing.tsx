@@ -251,7 +251,7 @@ export function Pricing({ locale = "fr" }: { locale?: Locale }) {
   }
 
   return (
-    <section id="tarifs" className="section-screen px-4 md:px-8">
+    <section id="tarifs" className="cv-auto section-screen px-4 md:px-8">
       <div className="mx-auto max-w-7xl">
         <Reveal>
           <SectionHeading

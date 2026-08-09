@@ -69,7 +69,7 @@ export function Services({ locale = "fr" }: { locale?: Locale }) {
   const reducedMotion = useReducedMotion();
 
   return (
-    <section id="services" className="section-screen px-4 md:px-8">
+    <section id="services" className="cv-auto section-screen px-4 md:px-8">
       <div className="relative mx-auto max-w-7xl">
         <div className="pointer-events-none absolute -left-8 top-24 h-px w-28 bg-[#d94f2b]/28" />
 
@@ -121,18 +121,14 @@ export function Services({ locale = "fr" }: { locale?: Locale }) {
                     <p className="mt-3 text-sm leading-relaxed text-[#63584d]">{service.description}</p>
 
                     <div className="mt-6 flex-1 space-y-2.5">
-                      {service.outcomes.map((outcome, itemIndex) => (
-                        <motion.div
+                      {service.outcomes.map((outcome) => (
+                        <div
                           key={outcome}
-                          initial={{ opacity: 0, y: 10 }}
-                          whileInView={{ opacity: 1, y: 0 }}
-                          viewport={{ once: true, amount: 0.4 }}
-                          transition={{ duration: 0.45, delay: itemIndex * 0.06, ease: [0.22, 1, 0.36, 1] }}
                           className="flex items-center gap-2.5 rounded-none border border-[#2a231d]/12 bg-[#f5f1e8] px-4 py-3 text-sm font-bold text-[#342b24]"
                         >
                           <CheckCircle2 size={16} className="text-[#c2461f]" />
                           {outcome}
-                        </motion.div>
+                        </div>
                       ))}
                     </div>
 

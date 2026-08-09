@@ -244,3 +244,9 @@ section[id] {
 .skip-link:focus-visible {
   top: 1rem;
 }
+
+/* Below-the-fold sections: skip rendering cost until scrolled near. */
+.cv-auto {
+  content-visibility: auto;
+  contain-intrinsic-size: auto 900px;
+}

@@ -40,7 +40,7 @@ export function Contact({ locale = "fr" }: { locale?: Locale }) {
   });
 
   return (
-    <section id="contact" className="section-screen px-4 md:px-8">
+    <section id="contact" className="cv-auto section-screen px-4 md:px-8">
       <div className="mx-auto max-w-7xl">
         <div className="grid gap-8 lg:grid-cols-[0.88fr_1.12fr]">
           <Card className="h-full rounded-none border-[#2a231d]/14 bg-[#fffaf0]/82">

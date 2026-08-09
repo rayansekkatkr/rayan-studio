@@ -221,7 +221,7 @@ export function Showcase({ locale = "fr" }: { locale?: Locale }) {
   };
 
   return (
-    <section id="realisations" className="section-screen section-fit px-4 md:px-8">
+    <section id="realisations" className="cv-auto section-screen section-fit px-4 md:px-8">
       <div className="mx-auto w-full max-w-7xl">
         <Reveal>
           <SectionHeading

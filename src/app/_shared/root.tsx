@@ -2,6 +2,7 @@ import type { Metadata, Viewport } from "next";
 import { Plus_Jakarta_Sans, Sora } from "next/font/google";
 import { AnalyticsLoader } from "@/components/site/AnalyticsLoader";
 import { CookieConsent } from "@/components/site/CookieConsent";
+import { WebVitalsReporter } from "@/components/site/WebVitalsReporter";
 import { BRAND, getSiteUrl } from "@/lib/brand";
 import { getGoogleSiteVerification } from "@/lib/seo-verification";
 
@@ -113,6 +114,7 @@ export function RootBody({ children }: { children: React.ReactNode }) {
         Aller au contenu principal
       </a>
       {gaId ? <AnalyticsLoader gaId={gaId} /> : null}
+      {gaId ? <WebVitalsReporter /> : null}
       {children}
       {gaId ? <CookieConsent /> : null}
     </body>

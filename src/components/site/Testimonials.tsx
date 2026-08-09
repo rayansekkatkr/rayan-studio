@@ -71,7 +71,7 @@ export function Testimonials({ locale = "fr" }: { locale?: Locale }) {
   const proof = en ? proofEn : proofFr;
 
   return (
-    <section id="temoignages" className="section-screen px-4 md:px-8">
+    <section id="temoignages" className="cv-auto section-screen px-4 md:px-8">
       <div className="mx-auto max-w-7xl">
         <Reveal>
           <SectionHeading

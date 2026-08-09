@@ -106,12 +106,7 @@ export function Navbar({ locale = "fr" }: { locale?: Locale }) {
 
   return (
     <header className="fixed inset-x-0 top-4 z-[80] px-4 md:px-8">
-      <motion.nav
-        initial={{ opacity: 0, y: -20 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.85, ease: [0.22, 1, 0.36, 1] }}
-        className="relative mx-auto flex w-full min-w-0 max-w-7xl items-center justify-between rounded-none border border-[#2a231d]/20 bg-[#fffaf0] px-4 py-3 shadow-[7px_7px_0_rgba(42,35,29,0.12)] md:px-6"
-      >
+      <nav className="relative mx-auto flex w-full min-w-0 max-w-7xl items-center justify-between rounded-none border border-[#2a231d]/20 bg-[#fffaf0] px-4 py-3 shadow-[7px_7px_0_rgba(42,35,29,0.12)] md:px-6">
         <Link
           href={`/${locale}#hero`}
           onClick={(event) => scrollToSection(event, `/${locale}#hero`)}
@@ -221,7 +216,7 @@ export function Navbar({ locale = "fr" }: { locale?: Locale }) {
             </>
           ) : null}
         </AnimatePresence>
-      </motion.nav>
+      </nav>
     </header>
   );
 }

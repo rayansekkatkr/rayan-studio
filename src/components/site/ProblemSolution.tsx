@@ -86,7 +86,7 @@ export function ProblemSolution({ locale = "fr" }: { locale?: Locale }) {
   const focusItems = en ? focusItemsEn : focusItemsFr;
 
   return (
-    <section id="probleme-solution" className="section-screen relative px-4 md:px-8">
+    <section id="probleme-solution" className="cv-auto section-screen relative px-4 md:px-8">
       <div className="mx-auto max-w-7xl">
         <Reveal>
           <SectionHeading

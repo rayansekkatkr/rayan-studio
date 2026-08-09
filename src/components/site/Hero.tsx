@@ -1,6 +1,5 @@
 "use client";
 
-import { motion } from "framer-motion";
 import { ArrowRight, CheckCircle2, Search, Server, Sparkles } from "lucide-react";
 import { trackEvent } from "@/lib/analytics";
 import { isEnglish, type Locale } from "@/lib/i18n";
@@ -54,23 +53,6 @@ const copy = {
   },
 };
 
-const intro = {
-  hidden: { opacity: 0 },
-  show: {
-    opacity: 1,
-    transition: { delayChildren: 0.12, staggerChildren: 0.1 },
-  },
-};
-
-const introItem = {
-  hidden: { opacity: 0, y: 18 },
-  show: {
-    opacity: 1,
-    y: 0,
-    transition: { duration: 0.72, ease: [0.22, 1, 0.36, 1] },
-  },
-};
-
 export function Hero({ locale = "fr" }: { locale?: Locale }) {
   const en = isEnglish(locale);
   const t = en ? copy.en : copy.fr;
@@ -90,35 +72,29 @@ export function Hero({ locale = "fr" }: { locale?: Locale }) {
         className="hidden"
       />
 
-      <motion.div
-        variants={intro}
-        animate="show"
+      <div
         className="relative z-10 mx-auto grid min-h-[calc(84dvh-6rem)] w-full max-w-7xl items-center gap-5 overflow-hidden lg:grid-cols-[0.98fr_1.02fr]"
       >
         <div className="min-w-0 py-3 md:py-4 lg:py-0">
-          <motion.p
-            variants={introItem}
+          <p
             className="inline-flex max-w-full border border-[#2a231d]/12 bg-[#fffaf0]/78 px-3 py-1.5 text-[10px] font-black uppercase leading-relaxed tracking-[0.16em] text-[#c2461f] shadow-[3px_3px_0_rgba(42,35,29,0.1)] md:text-[11px]"
           >
             {t.label}
-          </motion.p>
+          </p>
 
-          <motion.h1
-            variants={introItem}
+          <h1
             className="font-display mt-4 max-w-[16ch] text-[clamp(1.85rem,7.4vw,4.45rem)] font-semibold leading-[0.98] tracking-[-0.01em] text-[#17120f] sm:leading-[0.93]"
           >
             {t.title}
-          </motion.h1>
+          </h1>
 
-          <motion.p
-            variants={introItem}
+          <p
             className="mt-4 max-w-xl text-[14px] leading-6 text-[#63584d] sm:text-[15px] sm:leading-6"
           >
             {t.subtitle}
-          </motion.p>
+          </p>
 
-          <motion.div
-            variants={introItem}
+          <div
             className="mt-5 flex w-full max-w-2xl flex-col gap-3 sm:flex-row sm:items-center"
           >
             <a
@@ -137,19 +113,17 @@ export function Hero({ locale = "fr" }: { locale?: Locale }) {
             >
               {t.secondaryCta}
             </a>
-          </motion.div>
+          </div>
 
-          <motion.div
-            variants={introItem}
+          <div
             className="mt-5 grid max-w-3xl gap-3 border-t border-[#2a231d]/14 pt-3 text-[10px] font-black uppercase tracking-[0.14em] text-[#63584d] md:grid-cols-[1fr_auto]"
           >
             <p>{t.craft}</p>
             <p className="text-[#17120f]">{t.solo}</p>
-          </motion.div>
+          </div>
         </div>
 
-        <motion.div
-          variants={introItem}
+        <div
           className="relative mb-3 min-h-[320px] border border-[#2a231d]/14 bg-[#fffaf0] p-2.5 shadow-[8px_8px_0_rgba(42,35,29,0.1)] md:p-3 lg:mb-0"
         >
           <div className="absolute -right-3 -top-3 hidden border border-[#2a231d]/14 bg-[#d94f2b] px-3 py-2 text-[10px] font-black uppercase tracking-[0.14em] text-white shadow-[4px_4px_0_rgba(42,35,29,0.12)] sm:block">
@@ -220,8 +194,8 @@ export function Hero({ locale = "fr" }: { locale?: Locale }) {
               </div>
             ))}
           </div>
-        </motion.div>
-      </motion.div>
+        </div>
+      </div>
 
       <a
         href={`/${locale}#services`}

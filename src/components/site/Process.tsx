@@ -9,7 +9,7 @@ export function Process({ locale = "fr" }: { locale?: Locale }) {
   const en = isEnglish(locale);
 
   return (
-    <section id="process" className="section-screen section-fit px-4 md:px-8">
+    <section id="process" className="cv-auto section-screen section-fit px-4 md:px-8">
       <div className="mx-auto w-full max-w-7xl">
         <Reveal>
           <SectionHeading

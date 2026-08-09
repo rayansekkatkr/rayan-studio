@@ -56,7 +56,7 @@ export function Faq({ locale = "fr" }: { locale?: Locale }) {
   const faq = en ? faqEn : faqFr;
 
   return (
-    <section id="faq" className="section-screen px-4 md:px-8">
+    <section id="faq" className="cv-auto section-screen px-4 md:px-8">
       <div className="mx-auto max-w-7xl">
         <Reveal>
           <SectionHeading
