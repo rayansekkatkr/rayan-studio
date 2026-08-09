@@ -38,12 +38,6 @@ export function generateMetadata({ params }: { params: Params }): Metadata {
     alternates: {
       canonical: `/site/${sector.slug}/${city.slug}`,
     },
-    // Noindex temporaire (audit P3) : contenu trop similaire entre villes.
-    // À retirer page par page quand le contenu devient réellement distinct.
-    robots: {
-      index: false,
-      follow: true,
-    },
   };
 }
 
@@ -81,7 +75,9 @@ export default function Page({ params }: { params: Params }) {
   return (
     <LocalSeoLanding
       city={city.label}
+      citySlug={city.slug}
       sector={sector.label}
+      sectorSlug={sector.slug}
       content={getLocalSeoContent(sector, city)}
     />
   );

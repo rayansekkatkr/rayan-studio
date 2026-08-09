@@ -74,7 +74,7 @@ export function Contact({ locale = "fr" }: { locale?: Locale }) {
                 <Phone size={16} className="text-[#c2461f]" />
                 {BRAND.phoneDisplay} (WhatsApp)
               </a>
-              <div className="border border-[#2a231d]/14 bg-[#17120f] p-4 text-[#fffaf0]">
+              <div className="hidden border border-[#2a231d]/14 bg-[#17120f] p-4 text-[#fffaf0] sm:block">
                 <p className="text-[10px] font-black uppercase tracking-[0.16em] text-[#f0a064]">
                   {en ? "What I check first" : "Ce que je regarde d'abord"}
                 </p>

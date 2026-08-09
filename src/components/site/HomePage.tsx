@@ -46,8 +46,8 @@ export function HomePage({ locale }: { locale: Locale }) {
           text: "Yes. Mobile is treated as a priority with strong readability and clear actions.",
         },
         {
-          name: "Which businesses do you work with?",
-          text: "Mainly restaurants, cafes, hotels, bakeries, pastry shops, bars, and local businesses in France.",
+          name: "Which businesses is this designed for?",
+          text: "Restaurants, cafes, hotels, bakeries, pastry shops, bars, and local businesses in France.",
         },
       ]
     : [
@@ -64,8 +64,8 @@ export function HomePage({ locale }: { locale: Locale }) {
           text: "Oui. L'expérience mobile est traitée en priorité pour garantir lisibilité, rapidité et parcours fluide.",
         },
         {
-          name: "Avec quels types de commerces travaillez-vous ?",
-          text: "Principalement restaurants, cafés, hôtels, boulangeries, pâtisseries, bars et commerces locaux en France.",
+          name: "À quels types de commerces le studio s'adresse-t-il ?",
+          text: "Restaurants, cafés, hôtels, boulangeries, pâtisseries, bars et commerces locaux en France.",
         },
       ];
 

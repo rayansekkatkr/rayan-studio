@@ -6,16 +6,23 @@ export type LocalSeoContentInput = {
   objective: string;
 };
 
+export type LocalSeoFaqEntry = {
+  question: string;
+  answer: string;
+};
+
 export type LocalSeoContent = {
   metaTitle: string;
   metaDescription: string;
   title: string;
   subtitle: string;
   localContext: string;
+  districtsLine: string;
   sectorIntent: string;
   painPoints: string[];
   checklist: string[];
   objective: string;
+  faq: LocalSeoFaqEntry[];
   ctaIntro: string;
 };
 

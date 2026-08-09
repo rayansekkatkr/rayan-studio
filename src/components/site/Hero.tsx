@@ -170,7 +170,7 @@ export function Hero({ locale = "fr" }: { locale?: Locale }) {
             </div>
           </div>
 
-          <div className="mt-2.5 border border-[#2a231d]/14 bg-[#17120f] p-2.5 text-[#fffaf0]">
+          <div className="mt-2.5 hidden border border-[#2a231d]/14 bg-[#17120f] p-2.5 text-[#fffaf0] sm:block">
             <p className="text-[10px] font-black uppercase tracking-[0.18em] text-[#f0a064]">{t.techTitle}</p>
             <div className="mt-2 grid gap-2 sm:grid-cols-4">
               {t.techItems.map((item, index) => (
@@ -182,7 +182,7 @@ export function Hero({ locale = "fr" }: { locale?: Locale }) {
             </div>
           </div>
 
-          <div className="mt-2.5 grid gap-2 sm:grid-cols-3">
+          <div className="mt-2.5 hidden gap-2 sm:grid sm:grid-cols-3">
             {[
               { icon: Sparkles, label: en ? "New image" : "Image neuve" },
               { icon: Server, label: en ? "Launch handled" : "Mise en ligne" },

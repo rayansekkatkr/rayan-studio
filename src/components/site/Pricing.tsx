@@ -301,7 +301,23 @@ export function Pricing({ locale = "fr" }: { locale?: Locale }) {
                   </CardHeader>
 
                   <CardContent>
-                    <div className="space-y-3">
+                    <details className="group sm:hidden">
+                      <summary className="cursor-pointer list-none text-xs font-black uppercase tracking-[0.12em] text-[#63584d]">
+                        {en ? "What is included" : "Ce qui est inclus"}
+                        <span className="ml-2 inline-block transition-transform group-open:rotate-90">›</span>
+                      </summary>
+                      <div className="mt-3 space-y-3">
+                        {plan.features.map((feature) => (
+                          <div key={feature} className="flex items-start gap-2 text-sm text-[#63584d]">
+                            <span className="mt-0.5 rounded-none bg-[#17120f] p-1 text-[#fffaf0]">
+                              <Check size={11} />
+                            </span>
+                            <span>{feature}</span>
+                          </div>
+                        ))}
+                      </div>
+                    </details>
+                    <div className="hidden space-y-3 sm:block">
                       <p className="text-xs font-black uppercase tracking-[0.12em] text-[#63584d]">
                         {en ? "What is included" : "Ce qui est inclus"}
                       </p>

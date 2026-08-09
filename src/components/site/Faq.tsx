@@ -19,8 +19,8 @@ const faqFr = [
     a: "Oui. L'expérience mobile est traitée en priorité: lisibilité, rapidité, boutons d'action visibles et parcours fluide.",
   },
   {
-    q: "Travaillez-vous avec quels types de commerces ?",
-    a: "Principalement restaurants, cafés, hôtels, boulangeries, pâtisseries, bars et commerces locaux qui veulent renforcer leur image en ligne.",
+    q: "À quels types de commerces le studio s'adresse-t-il ?",
+    a: "Restaurants, cafés, hôtels, boulangeries, pâtisseries, bars et commerces locaux qui veulent renforcer leur image en ligne.",
   },
   {
     q: "Je ne connais rien au web, est-ce un problème ?",
@@ -42,8 +42,8 @@ const faqEn = [
     a: "Yes. Mobile experience is a priority: readability, performance, and clear conversion actions.",
   },
   {
-    q: "Which businesses do you work with?",
-    a: "Mainly restaurants, cafes, hotels, bakeries, pastry shops, bars, and local businesses looking to upgrade their online image.",
+    q: "Which businesses is this designed for?",
+    a: "Restaurants, cafes, hotels, bakeries, pastry shops, bars, and local businesses looking to upgrade their online image.",
   },
   {
     q: "I do not know anything about websites. Is that a problem?",

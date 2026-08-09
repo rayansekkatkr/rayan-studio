@@ -1,5 +1,6 @@
 import type { MetadataRoute } from "next";
 import { getSiteUrl } from "@/lib/brand";
+import { getAllLocalSeoCombos } from "@/lib/local-seo";
 import { getAllServiceSeoPages } from "@/lib/service-seo";
 
 export default function sitemap(): MetadataRoute.Sitemap {
@@ -7,8 +8,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
   const lastModified = process.env.NEXT_PUBLIC_SITE_LAST_MODIFIED
     ? new Date(process.env.NEXT_PUBLIC_SITE_LAST_MODIFIED)
     : new Date();
-  // Pages locales /site/* volontairement absentes du sitemap tant qu'elles
-  // sont en noindex (contenu trop similaire entre villes — audit P3).
+  const localSeoRoutes = getAllLocalSeoCombos().map(({ sector, city }) => ({
+    url: `${baseUrl}/site/${sector.slug}/${city.slug}`,
+    lastModified,
+    changeFrequency: "monthly" as const,
+    priority: 0.7,
+  }));
   const serviceRoutes = getAllServiceSeoPages().map((page) => {
     const languages: Record<string, string> = {
       [page.locale]: `${baseUrl}${page.path}`,
@@ -81,5 +86,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.8,
     },
     ...serviceRoutes,
+    ...localSeoRoutes,
   ];
 }

@@ -20,36 +20,36 @@ type ProofNote = {
 const feedbackFr: FeedbackNote[] = [
   {
     label: "Image",
-    title: "Le site inspire plus vite confiance",
-    text: "Les retours les plus fréquents portent sur une perception plus sérieuse: le lieu paraît plus clair, plus actuel, plus crédible.",
+    title: "Un site qui inspire confiance plus vite",
+    text: "Hiérarchie, typographie et visuels travaillés pour que votre activité paraisse aussi sérieuse en ligne qu'en vrai.",
   },
   {
     label: "Parcours",
-    title: "Le contact devient plus naturel",
-    text: "Les visiteurs comprennent plus vite quoi faire: appeler, réserver, envoyer un message ou demander un devis.",
+    title: "Un contact qui devient naturel",
+    text: "Le visiteur comprend immédiatement quoi faire: appeler, réserver, envoyer un message ou demander un devis.",
   },
   {
     label: "Mobile",
-    title: "Les informations utiles remontent",
-    text: "Horaires, adresse, services, menu, commandes ou formulaire ne sont plus cachés dans une page difficile à parcourir.",
+    title: "Les informations utiles qui remontent",
+    text: "Horaires, adresse, services, menu, commandes ou formulaire visibles sans effort, pas cachés dans une page difficile à parcourir.",
   },
 ];
 
 const feedbackEn: FeedbackNote[] = [
   {
     label: "Image",
-    title: "The website builds trust faster",
-    text: "The most common feedback is about perceived quality: the business feels clearer, more current, and more credible.",
+    title: "A website that builds trust faster",
+    text: "Hierarchy, typography and visuals crafted so your business looks as serious online as it is in person.",
   },
   {
     label: "Journey",
-    title: "Contact feels more natural",
-    text: "Visitors understand the next step faster: call, book, send a message, or request a quote.",
+    title: "Contact that feels natural",
+    text: "Visitors immediately understand the next step: call, book, send a message, or request a quote.",
   },
   {
     label: "Mobile",
-    title: "Useful information comes forward",
-    text: "Opening hours, address, services, menus, orders, or forms are no longer buried in a page that is hard to scan.",
+    title: "Useful information that comes forward",
+    text: "Opening hours, address, services, menus, orders, or forms visible without effort, not buried in a hard-to-scan page.",
   },
 ];
 
@@ -75,8 +75,8 @@ export function Testimonials({ locale = "fr" }: { locale?: Locale }) {
       <div className="mx-auto max-w-7xl">
         <Reveal>
           <SectionHeading
-            eyebrow={en ? "Synthesized feedback" : "Retours synthétisés"}
-            title={en ? "What becomes clearer after a focused redesign" : "Ce qui devient plus clair après une vraie refonte"}
+            eyebrow={en ? "Commitments" : "Engagements"}
+            title={en ? "What must become clearer after a real redesign" : "Ce qui doit devenir plus clair après une vraie refonte"}
             description={
               en
                 ? "A concise summary of the signals I look at after a redesign, and what I set up so you can measure them on your own site."
@@ -128,7 +128,7 @@ export function Testimonials({ locale = "fr" }: { locale?: Locale }) {
                   {feedback.map((item) => (
                     <article
                       key={item.title}
-                      className="flex min-h-[250px] flex-col justify-between rounded-none border border-[#2a231d]/14 bg-[#f5f1e8] p-4 shadow-[5px_5px_0_rgba(42,35,29,0.08)]"
+                      className="flex flex-col justify-between rounded-none border border-[#2a231d]/14 bg-[#f5f1e8] p-4 shadow-[5px_5px_0_rgba(42,35,29,0.08)] md:min-h-[250px]"
                     >
                       <div>
                         <p className="inline-flex border border-[#2a231d]/12 bg-[#fffaf0] px-2.5 py-1 text-[10px] font-black uppercase tracking-[0.14em] text-[#c2461f]">
@@ -144,8 +144,8 @@ export function Testimonials({ locale = "fr" }: { locale?: Locale }) {
                 <div className="mt-5 border border-[#2a231d]/14 bg-[#fffaf0]/82 p-4 md:flex md:items-center md:justify-between md:gap-6">
                   <p className="text-sm font-semibold leading-7 text-[#342b24]">
                     {en
-                      ? "The goal is not to decorate the page with testimonials, but to show what changes in perception, clarity, and contact."
-                      : "Le but n'est pas de décorer la page avec des témoignages, mais de montrer ce qui change en perception, en clarté et en contact."}
+                      ? "The studio is young on the client side: rather than showing testimonials, I publish measurable commitments. The first documented cases will appear here, with their owners' permission."
+                      : "Le studio est jeune côté clients : plutôt que d'afficher des témoignages, je publie des engagements mesurables. Les premiers cas documentés apparaîtront ici, avec l'accord de leurs propriétaires."}
                   </p>
                   <p className="mt-3 shrink-0 text-[11px] font-black uppercase tracking-[0.14em] text-[#6f6355] md:mt-0">
                     {en ? "Post-delivery reading" : "Lecture post-livraison"}
