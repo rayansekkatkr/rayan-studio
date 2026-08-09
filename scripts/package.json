@@ -5,7 +5,7 @@
   "description": "Automated daily outreach script",
   "main": "outreach.js",
   "scripts": {
-    "test": "node --test outreach.test.js freelance-opportunities.test.js freelance-contact-queue.test.js message-humanizer.test.js workflow-session-report.test.js prospection/*.test.js",
+    "test": "node --test outreach.test.js freelance-opportunities.test.js freelance-contact-queue.test.js message-humanizer.test.js workflow-session-report.test.js prospection/*.test.js prospection/providers/*.test.js",
     "prospection:migrate": "node prospection/migrate.js",
     "opportunities": "node freelance-opportunities.js",
     "freelance:contacts": "node freelance-contact-queue.js",
