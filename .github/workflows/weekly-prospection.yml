@@ -1,0 +1,74 @@
+name: Weekly Prospection
+
+on:
+  schedule:
+    # Mardi 09:17 Europe/Paris (heure décalée volontairement)
+    - cron: '17 9 * * 2'
+      timezone: 'Europe/Paris'
+  workflow_dispatch:
+    inputs:
+      dry_run:
+        description: 'Dry run (aucun envoi réel, quel que soit SEND_ENABLED)'
+        type: boolean
+        default: true
+      max_sends:
+        description: 'Plafond d''envois (borné en dur à 20 côté code)'
+        default: '20'
+
+permissions:
+  contents: read
+
+concurrency:
+  group: weekly-prospection
+  cancel-in-progress: false
+
+jobs:
+  prospection:
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: npm
+          cache-dependency-path: scripts/package-lock.json
+
+      - name: Install dependencies
+        working-directory: scripts
+        run: npm ci
+
+      - name: Run tests before any prospection
+        working-directory: scripts
+        run: npm test
+
+      - name: Weekly prospection run
+        working-directory: scripts
+        env:
+          DATABASE_URL: ${{ secrets.PROSPECTION_DATABASE_URL }}
+          SUPPRESSION_HMAC_SECRET: ${{ secrets.SUPPRESSION_HMAC_SECRET }}
+          UNSUBSCRIBE_TOKEN_SECRET: ${{ secrets.UNSUBSCRIBE_TOKEN_SECRET }}
+          UNSUBSCRIBE_BASE_URL: https://www.rayanstudios.com/api/unsubscribe
+          SIRENE_API_KEY: ${{ secrets.SIRENE_API_KEY }}
+          BRAVE_SEARCH_API_KEY: ${{ secrets.BRAVE_SEARCH_API_KEY }}
+          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+          OPENAI_MODEL: ${{ vars.OPENAI_MODEL }}
+          RESEND_API_KEY: ${{ secrets.RESEND_API_KEY }}
+          RESEND_FROM: ${{ vars.RESEND_FROM }}
+          RESEND_REPLY_TO: ${{ vars.RESEND_REPLY_TO }}
+          RESEND_WEBHOOK_SECRET: ${{ secrets.RESEND_WEBHOOK_SECRET }}
+          # Envoi réel : décision explicite via variables du dépôt, jamais
+          # via un input de workflow. Table de vérité de DRY_RUN :
+          #   SEND_ENABLED != 'true'                       -> 'true'  (toujours dry-run)
+          #   schedule + SEND_ENABLED='true'               -> 'false' (envoi réel)
+          #   dispatch + dry_run coché                     -> 'true'
+          #   dispatch + dry_run décoché + envoi activé    -> 'false'
+          # (sur schedule, inputs.dry_run n'existe pas : la 1re clause
+          #  garantit le dry-run tant que l'envoi n'est pas activé)
+          SEND_ENABLED: ${{ vars.SEND_ENABLED }}
+          SEND_DNS_VERIFIED: ${{ vars.SEND_DNS_VERIFIED }}
+          ENABLED_COUNTRIES: ${{ vars.ENABLED_COUNTRIES }}
+          DRY_RUN: ${{ vars.SEND_ENABLED != 'true' && 'true' || github.event_name == 'workflow_dispatch' && inputs.dry_run == true && 'true' || 'false' }}
+          MAX_SENDS: ${{ inputs.max_sends || '20' }}
+        run: node prospection/run.js
