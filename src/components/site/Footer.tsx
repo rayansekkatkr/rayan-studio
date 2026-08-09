@@ -27,6 +27,12 @@ export function Footer({ locale = "fr" }: { locale?: Locale }) {
             <a href={`/${locale}/a-propos-methodologie-preuves`} className="transition-colors hover:text-[#c2461f]">
               {en ? "About" : "À propos"}
             </a>
+            <a href={BRAND.portfolioUrl} target="_blank" rel="noreferrer" className="transition-colors hover:text-[#c2461f]">
+              {en ? "Technical profile" : "Profil technique"}
+            </a>
+            <a href={BRAND.linkedinUrl} target="_blank" rel="noreferrer" className="transition-colors hover:text-[#c2461f]">
+              LinkedIn
+            </a>
           </div>
         </div>
 

@@ -37,11 +37,12 @@ const plansFr = [
     forWho: "Idéal si votre entreprise n'a pas encore de vraie présence en ligne.",
     result: "Vous obtenez une vitrine claire, mobile et prête à être partagée avec vos clients.",
     features: [
-      "Page principale ou petit site simple",
+      "Une page principale (jusqu'à 4 sections) ou petit site simple",
       "Design responsive adapté à votre activité",
-      "SEO de base pour être trouvable",
+      "SEO de base : titres, descriptions, sitemap, Search Console",
       "Formulaire ou WhatsApp visible",
       "Domaine, DNS, hébergement et mise en ligne accompagnés",
+      "2 tours de révisions inclus — livraison indicative : 1 à 2 semaines",
     ],
     featured: false,
   },
@@ -54,11 +55,11 @@ const plansFr = [
     result: "Votre site devient plus clair, plus moderne, et donne davantage envie de vous contacter.",
     features: [
       "Diagnostic rapide du site actuel",
-      "Nouvelle direction visuelle",
+      "Nouvelle direction visuelle — jusqu'à 5 pages",
       "Structure et messages retravaillés",
-      "SEO local ou SEO de base",
+      "SEO local ou SEO de base, migration domaine et redirections incluses",
       "DNS, hébergement, VPS si besoin et déploiement inclus",
-      "Suivi court après livraison",
+      "2 tours de révisions, suivi court après livraison — livraison indicative : 2 à 3 semaines",
     ],
     featured: true,
   },
@@ -90,11 +91,12 @@ const plansEn = [
     forWho: "Best if your business does not yet have a proper online presence.",
     result: "You get a clear mobile storefront ready to share with customers.",
     features: [
-      "Main page or small simple website",
+      "One main page (up to 4 sections) or small simple website",
       "Responsive design adapted to your activity",
-      "Basic SEO to be findable",
+      "Basic SEO: titles, descriptions, sitemap, Search Console",
       "Visible form or WhatsApp contact",
       "Domain, DNS, hosting and launch guidance",
+      "2 revision rounds included — indicative delivery: 1 to 2 weeks",
     ],
     featured: false,
   },
@@ -107,11 +109,11 @@ const plansEn = [
     result: "Your website becomes clearer, more modern, and makes people more likely to contact you.",
     features: [
       "Quick diagnosis of the current website",
-      "New visual direction",
+      "New visual direction — up to 5 pages",
       "Structure and messaging refinement",
-      "Local or basic SEO",
+      "Local or basic SEO, domain migration and redirects included",
       "DNS, hosting, VPS if needed and deployment included",
-      "Short post-delivery follow-up",
+      "2 revision rounds, short follow-up — indicative delivery: 2 to 3 weeks",
     ],
     featured: true,
   },
@@ -333,6 +335,37 @@ export function Pricing({ locale = "fr" }: { locale?: Locale }) {
             </Reveal>
           ))}
         </div>
+
+        <Reveal delay={0.1}>
+          <div className="mt-7 rounded-none border border-[#2a231d]/14 bg-[#fffaf0]/82 p-4 sm:p-5">
+            <p className="text-xs font-black uppercase tracking-[0.12em] text-[#c2461f]">
+              {en ? "True for every offer" : "Valable pour toutes les offres"}
+            </p>
+            <div className="mt-3 grid gap-2 md:grid-cols-2">
+              {(en
+                ? [
+                    "You own the domain, the code and every account (hosting, analytics, Search Console)",
+                    "Hosting and external subscriptions are paid directly by you, with no markup",
+                    "Prices excl. tax — a written quote before any work starts",
+                    "Based in Seoul, 100% remote, working hours overlapping with France",
+                  ]
+                : [
+                    "Vous restez propriétaire du domaine, du code et de tous les comptes (hébergement, analytics, Search Console)",
+                    "Hébergement et abonnements externes payés directement par vous, sans marge",
+                    "Prix hors taxes — devis écrit avant tout démarrage",
+                    "Basé à Séoul, 100 % à distance, créneaux d'échange compatibles avec la France",
+                  ]
+              ).map((item) => (
+                <div key={item} className="flex items-start gap-2 rounded-none border border-[#2a231d]/12 bg-[#f5f1e8] px-3 py-2 text-sm text-[#63584d]">
+                  <span className="mt-0.5 rounded-none bg-[#17120f] p-1 text-[#fffaf0]">
+                    <Check size={11} />
+                  </span>
+                  <span>{item}</span>
+                </div>
+              ))}
+            </div>
+          </div>
+        </Reveal>
 
         <Reveal delay={0.14}>
           <div className="mt-7 rounded-none border border-[#2a231d]/14 bg-[linear-gradient(145deg,rgba(255,250,240,0.95),rgba(232,224,210,0.78))] p-4 shadow-[8px_8px_0_rgba(42,35,29,0.09)] sm:p-5">

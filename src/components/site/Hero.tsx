@@ -27,7 +27,7 @@ const copy = {
     techTitle: "Technique prise en charge",
     techItems: ["SEO local inspecté", "DNS / hébergement", "VPS si besoin", "Déploiement propre"],
     badge: "Refonte",
-    solo: "Studio indépendant, pas une grosse agence",
+    solo: "Studio indépendant de Rayan Sekkat, ingénieur full-stack",
   },
   en: {
     label: "Audit, redesign and launch for small businesses",
@@ -50,7 +50,7 @@ const copy = {
     techTitle: "Technical setup handled",
     techItems: ["Local SEO checked", "DNS / hosting", "VPS if needed", "Clean deployment"],
     badge: "Redesign",
-    solo: "Independent studio, not a big agency",
+    solo: "Independent studio by Rayan Sekkat, full-stack engineer",
   },
 };
 

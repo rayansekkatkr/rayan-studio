@@ -518,6 +518,15 @@ Quand un changement important est fait:
   - Assets : PNG réalisations redimensionnés 1600px en place via `sips` (8,3 Mo -> 3,3 Mo ; sips ne sait pas encoder WebP, conversion AVIF/WebP source reste à faire avec sharp si besoin). `stampeo.png` (non référencé) et `hero/blue-atmosphere.mp4` (836 Ko, non référencé) supprimés.
   - SEO local : les 70 pages `/site/{secteur}/{ville}` passent en `robots: noindex, follow` et sortent du sitemap (15 URLs restantes). Décision réversible documentée en commentaire dans le template et `sitemap.ts` — conforme à la reco audit tant que le contenu n'est pas réellement distinct par ville.
   - Vérification : build vert, smoke test — zéro `googletagmanager` dans le HTML initial, sitemap sans `/site/`, `noindex, follow` rendu sur page locale, lien « Gérer les cookies » présent, lint 0, 40/40 tests.
+- P2 identité/offres (décisions utilisateur : site 100 % studio clients, PAS de parcours recruteur — il a un portfolio séparé ; remote uniquement) :
+  - Matières réelles extraites du portfolio `portfolio-rayan-sekkat.vercel.app` : ingénieur full-stack 5+ ans, ex-STMicroelectronics (DevOps 2024) et UNYC (2020-2023), Master EPSI, basé à Séoul, FR natif / EN C1 / KO notions, LinkedIn `linkedin.com/in/rayan-sekkat-3911a9294`. Pick4Me, Pont Factur-X et GoodCall = ses produits réels en production.
+  - `brand.ts` : ajout `linkedinUrl` + `portfolioUrl`.
+  - À propos : section « Autorité externe & cohérence » remplacée par « Qui réalise le travail ? » (bio réelle, langues, liens Profil technique/LinkedIn/WhatsApp/email).
+  - Hero : ligne solo -> « Studio indépendant de Rayan Sekkat, ingénieur full-stack ».
+  - Showcase : badges `segment` (jargon interne « CHR ») remplacés par statuts honnêtes — Pick4Me/DocExtract/Factur-X « Produit du studio — en production », Manteigaria « Concept — refonte non commandée ». Designations « Référence d'exécution » clarifiées. **DocExtract étiqueté « Produit du studio » par déduction (absent du portfolio, pas d'attribution publique sur getdocextract.com) — à faire corriger par Rayan si faux.**
+  - Tarifs : périmètre précisé (Express : 1 page/4 sections, 2 révisions, 1-2 sem ; Refonte Pro : 5 pages, migration/redirections, 2-3 sem) + bloc « Valable pour toutes les offres » (propriété client totale, coûts externes sans marge, prix HT + devis écrit, Séoul/remote compatible France). **Valeurs proposées par Claude, non corrigées explicitement par Rayan — à valider à la relecture de la PR.**
+  - Footer : liens « Profil technique » + LinkedIn. JSON-LD Person : `jobTitle` + `sameAs`.
+  - Toujours manquant : statut légal (SIREN/adresse) pour compléter les mentions légales ; témoignages clients attribués (aucun affiché — rien d'inventé).
 
 ### 2026-08-04
 

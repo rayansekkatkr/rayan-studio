@@ -195,19 +195,32 @@ export default function AboutMethodPage({ params }: { params: { locale: string }
 
         <section className="mt-6 rounded-none border border-[#2a231d]/14 bg-[#fffaf0]/86 p-5 shadow-[7px_7px_0_rgba(42,35,29,0.08)]">
           <h2 className="font-display text-2xl font-semibold text-[#17120f]">
-            {en ? "External authority & consistency" : "Autorité externe & cohérence"}
+            {en ? "Who does the work?" : "Qui réalise le travail ?"}
           </h2>
+          <p className="mt-3 text-sm leading-7 text-[#63584d]">
+            {en
+              ? `${BRAND.founder}, full-stack engineer with 5+ years of experience in web development and DevOps (including STMicroelectronics and UNYC). Based in Seoul, working 100% remotely with French-speaking clients. Every studio website is designed, developed and launched by me: visual direction, code, SEO, DNS and deployment — one single point of contact from brief to launch.`
+              : `${BRAND.founder}, ingénieur full-stack, plus de 5 ans d'expérience en développement web et DevOps (notamment chez STMicroelectronics et UNYC). Basé à Séoul, je travaille 100 % à distance avec des clients francophones. Chaque site du studio est conçu, développé et mis en ligne par moi : direction visuelle, code, SEO, DNS et déploiement — un seul interlocuteur du brief à la mise en ligne.`}
+          </p>
           <p className="mt-3 text-sm text-[#63584d]">
             {en
-              ? `The same brand information is used across the entire site and in structured schema: ${BRAND.name}, ${BRAND.email}, ${BRAND.phoneDisplay}, ${siteUrl}.`
-              : `Les mêmes informations de marque sont utilisées sur tout le site et dans les schémas structurés: ${BRAND.name}, ${BRAND.email}, ${BRAND.phoneDisplay}, ${siteUrl}.`}
+              ? "Languages: French (native), English (fluent), Korean (conversational basics)."
+              : "Langues de travail : français (natif), anglais (courant), coréen (notions)."}
           </p>
-          <p className="mt-2 text-sm text-[#63584d]">
-            {en ? "Direct contact:" : "Contact direct:"}{" "}
-            <a href={BRAND.whatsappUrl} target="_blank" rel="noreferrer" className="font-semibold text-[#c2461f] underline">
+          <div className="mt-4 flex flex-wrap gap-4 text-sm font-semibold">
+            <a href={BRAND.portfolioUrl} target="_blank" rel="noreferrer" className="text-[#c2461f] underline underline-offset-2">
+              {en ? "Technical profile" : "Profil technique"}
+            </a>
+            <a href={BRAND.linkedinUrl} target="_blank" rel="noreferrer" className="text-[#c2461f] underline underline-offset-2">
+              LinkedIn
+            </a>
+            <a href={BRAND.whatsappUrl} target="_blank" rel="noreferrer" className="text-[#c2461f] underline underline-offset-2">
               WhatsApp
             </a>
-          </p>
+            <a href={`mailto:${BRAND.email}`} className="text-[#c2461f] underline underline-offset-2">
+              {BRAND.email}
+            </a>
+          </div>
         </section>
       </div>
       </main>

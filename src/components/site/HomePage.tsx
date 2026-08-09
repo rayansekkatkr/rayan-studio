@@ -77,6 +77,8 @@ export function HomePage({ locale }: { locale: Locale }) {
         "@id": `${siteUrl}#founder`,
         name: BRAND.founder,
         email: BRAND.email,
+        jobTitle: en ? "Full-stack engineer" : "Ingénieur full-stack",
+        sameAs: [BRAND.linkedinUrl, BRAND.portfolioUrl],
         worksFor: { "@id": `${siteUrl}#professional-service` },
       },
       {
