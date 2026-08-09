@@ -20,7 +20,7 @@ const projectsFr = [
       "Refonte visuelle orientée clarté: positionnement immédiat, sections plus lisibles et storytelling plus convaincant dès les premières secondes.",
     projectUrl: "https://pick4me.be/",
     src: "/realisations/pick4me.png",
-    segment: "Produit du studio — en production",
+    segment: "Produit du studio, en production",
     scope: ["Positionnement", "Sections plus lisibles", "CTA clarifiés"],
   },
   {
@@ -31,19 +31,19 @@ const projectsFr = [
       "Plateforme de pronostics e-sport gratuite (LoL, Valorant, CS2) : identité forte, parcours d'inscription direct et interface lisible malgré la densité de données.",
     projectUrl: "https://goodcall.gg/en/",
     src: "/realisations/goodcall.png",
-    segment: "Produit du studio — en production",
+    segment: "Produit du studio, en production",
     scope: ["Identité de marque", "Densité maîtrisée", "Parcours d'inscription"],
   },
   {
     id: "manteigaria",
-    name: "Manteigaria — Avant / Après",
+    name: "Manteigaria : Avant / Après",
     designation: "Boulangerie artisanale • Commerce local",
     quote:
       "Passage d'un site très dense à une expérience plus claire et plus narrative. Résultat: une meilleure perception de marque et un parcours plus fluide vers l'action.",
     projectUrl: "https://manteigaria-redesign.vercel.app/",
     beforeUrl: "https://manteigaria.com/fr/",
     src: "/realisations/manteigaria-before.png",
-    segment: "Concept — refonte non commandée",
+    segment: "Concept, refonte non commandée",
     scope: ["Avant / après", "Storytelling", "Image artisanale"],
   },
   {
@@ -54,7 +54,7 @@ const projectsFr = [
       "Mise en scène plus structurée pour présenter la valeur métier rapidement: meilleure hiérarchie d'information et crédibilité renforcée.",
     projectUrl: "https://www.getdocextract.com/",
     src: "/realisations/docextract.png",
-    segment: "Produit du studio — en production",
+    segment: "Produit du studio, en production",
     scope: ["Hiérarchie B2B", "Crédibilité", "Lecture rapide"],
   },
   {
@@ -65,7 +65,7 @@ const projectsFr = [
       "Optimisation du design pour rendre l'expertise plus tangible: structure éditoriale plus propre, points de confiance mieux visibles et contacts facilités.",
     projectUrl: "https://www.pont-facturx.com/",
     src: "/realisations/pont-facturx.png",
-    segment: "Produit du studio — en production",
+    segment: "Produit du studio, en production",
     scope: ["Structure éditoriale", "Signaux de confiance", "Contact facilité"],
   },
 ];
@@ -79,7 +79,7 @@ const projectsEn = [
       "Visual redesign focused on clarity: immediate positioning, cleaner sections, and more convincing storytelling from the first seconds.",
     projectUrl: "https://pick4me.be/",
     src: "/realisations/pick4me.png",
-    segment: "Studio product — live",
+    segment: "Studio product, live",
     scope: ["Positioning", "Cleaner sections", "Clearer CTAs"],
   },
   {
@@ -90,19 +90,19 @@ const projectsEn = [
       "Free esports prediction platform (LoL, Valorant, CS2): strong identity, direct sign-up path and a readable interface despite dense data.",
     projectUrl: "https://goodcall.gg/en/",
     src: "/realisations/goodcall.png",
-    segment: "Studio product — live",
+    segment: "Studio product, live",
     scope: ["Brand identity", "Managed density", "Sign-up path"],
   },
   {
     id: "manteigaria",
-    name: "Manteigaria — Before / After",
+    name: "Manteigaria: Before / After",
     designation: "Artisan bakery • Local business",
     quote:
       "From a dense website to a clearer and more narrative experience. Result: stronger brand perception and a smoother path to action.",
     projectUrl: "https://manteigaria-redesign.vercel.app/",
     beforeUrl: "https://manteigaria.com/fr/",
     src: "/realisations/manteigaria-before.png",
-    segment: "Concept — uncommissioned redesign",
+    segment: "Concept, uncommissioned redesign",
     scope: ["Before / after", "Storytelling", "Artisan image"],
   },
   {
@@ -113,7 +113,7 @@ const projectsEn = [
       "More structured presentation to communicate business value quickly: better information hierarchy and stronger credibility.",
     projectUrl: "https://www.getdocextract.com/",
     src: "/realisations/docextract.png",
-    segment: "Studio product — live",
+    segment: "Studio product, live",
     scope: ["B2B hierarchy", "Credibility", "Fast reading"],
   },
   {
@@ -124,7 +124,7 @@ const projectsEn = [
       "Design optimization to make expertise more tangible: cleaner editorial structure, more visible trust signals, and easier contact actions.",
     projectUrl: "https://www.pont-facturx.com/",
     src: "/realisations/pont-facturx.png",
-    segment: "Studio product — live",
+    segment: "Studio product, live",
     scope: ["Editorial structure", "Trust signals", "Easier contact"],
   },
 ];

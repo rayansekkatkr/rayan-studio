@@ -141,7 +141,7 @@ export function LocalSeoLanding({ city, citySlug, sector, sectorSlug, content }:
         {content.faq.length > 0 ? (
           <section className="mt-8 rounded-none border border-[#2a231d]/14 bg-[#fffaf0]/82 p-5 shadow-[6px_6px_0_rgba(42,35,29,0.08)]">
             <h2 className="font-display text-2xl font-semibold text-[#17120f]">
-              Questions fréquentes — {sector.toLowerCase()} à {city}
+              Questions fréquentes : {sector.toLowerCase()} à {city}
             </h2>
             <div className="mt-4 space-y-3">
               {content.faq.map((entry) => (

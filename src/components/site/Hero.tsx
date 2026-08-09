@@ -126,7 +126,7 @@ export function Hero({ locale = "fr" }: { locale?: Locale }) {
         <div
           className="relative mb-3 min-h-[320px] border border-[#2a231d]/14 bg-[#fffaf0] p-2.5 shadow-[8px_8px_0_rgba(42,35,29,0.1)] md:p-3 lg:mb-0"
         >
-          <div className="absolute -right-3 -top-3 hidden border border-[#2a231d]/14 bg-[#d94f2b] px-3 py-2 text-[10px] font-black uppercase tracking-[0.14em] text-white shadow-[4px_4px_0_rgba(42,35,29,0.12)] sm:block">
+          <div className="absolute -top-3 right-3 hidden border border-[#2a231d]/14 bg-[#d94f2b] px-4 py-2.5 text-[11px] font-black uppercase tracking-[0.14em] text-white shadow-[4px_4px_0_rgba(42,35,29,0.12)] sm:block">
             {t.badge}
           </div>
 

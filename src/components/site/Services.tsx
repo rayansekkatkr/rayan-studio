@@ -1,8 +1,7 @@
 "use client";
 
 import { motion, useReducedMotion } from "framer-motion";
-import { ArrowUpRight, CheckCircle2, Layers3, RefreshCw } from "lucide-react";
-import { Badge } from "@/components/ui/badge";
+import { ArrowUpRight, CheckCircle2, Layers3, RefreshCw, Workflow } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { isEnglish, type Locale } from "@/lib/i18n";
 import { Card } from "@/components/ui/card";
@@ -32,6 +31,17 @@ const servicesFr = [
     outcomes: ["Page claire et responsive", "Contact WhatsApp ou formulaire", "Mise en ligne accompagnée"],
     cta: "Créer mon premier site",
   },
+  {
+    icon: Workflow,
+    tag: "Sur mesure",
+    title: "Application sur mesure",
+    href: "/fr/application-web-sur-mesure",
+    subtitle: "Pour automatiser une tâche ou outiller votre activité",
+    description:
+      "Facturation, réservations, suivi, tableaux de bord ou toute tâche qui vous fait perdre du temps : expliquez-moi le besoin, je vous dis dès le diagnostic si c'est réalisable, et comment.",
+    outcomes: ["4 produits du studio en production", "Faisabilité annoncée au diagnostic", "Développement et hébergement gérés"],
+    cta: "Expliquer mon projet",
+  },
 ];
 
 const servicesEn = [
@@ -57,6 +67,17 @@ const servicesEn = [
     outcomes: ["Clear responsive page", "WhatsApp or form contact", "Launch guidance included"],
     cta: "Create my first website",
   },
+  {
+    icon: Workflow,
+    tag: "Custom build",
+    title: "Custom application",
+    href: "/en/custom-web-application",
+    subtitle: "Automate a task or build a tool around your business",
+    description:
+      "Invoicing, bookings, tracking, dashboards or any task that wastes your time: explain the need, and I tell you at the diagnosis stage whether it is feasible, and how.",
+    outcomes: ["4 studio products in production", "Feasibility confirmed at diagnosis", "Development and hosting handled"],
+    cta: "Explain my project",
+  },
 ];
 
 const trustPillsFr = ["Interlocuteur unique", "Diagnostic gratuit", "Technique prise en charge"];
@@ -76,16 +97,16 @@ export function Services({ locale = "fr" }: { locale?: Locale }) {
         <Reveal>
           <SectionHeading
             eyebrow="Services"
-            title={en ? "Two offers, one objective: make your business look credible online" : "Deux offres, un objectif : rendre votre entreprise crédible en ligne"}
+            title={en ? "Three offers, one objective: make your business work better online" : "Trois offres, un objectif : faire mieux travailler votre entreprise en ligne"}
             description={
               en
-                ? "For dated websites and businesses that still do not have a proper site."
-                : "Pour les sites datés et les entreprises qui n'ont pas encore de vraie présence en ligne."
+                ? "For dated websites, businesses without a proper site, and teams losing time on manual tasks."
+                : "Pour les sites datés, les entreprises sans vrai site, et celles qui perdent du temps sur des tâches manuelles."
             }
           />
         </Reveal>
 
-        <div className="mt-8 grid items-stretch gap-6 lg:grid-cols-2">
+        <div className="mt-8 grid items-stretch gap-6 md:grid-cols-2 lg:grid-cols-3">
           {services.map((service, index) => (
             <Reveal key={service.title} delay={index * 0.08} className="h-full">
               <motion.div
@@ -132,19 +153,13 @@ export function Services({ locale = "fr" }: { locale?: Locale }) {
                       ))}
                     </div>
 
-                    <div className="mt-6 flex items-center justify-between">
-                      <Badge variant="neutral" className="rounded-none border-[#2a231d]/14 bg-[#f5f1e8] text-[#63584d]">
-                        {en ? "Built for small business" : "Pensé TPE"}
-                      </Badge>
-
-                      <div className="flex flex-wrap justify-end gap-2">
-                        <Button asChild size="sm" variant="glass" className="h-10 px-4">
-                          <a href={service.href}>{en ? "Details" : "Détails"}</a>
-                        </Button>
-                        <Button asChild size="sm" className="h-10 px-5">
-                          <a href={`/${locale}#contact`}>{service.cta}</a>
-                        </Button>
-                      </div>
+                    <div className="mt-6 flex flex-wrap items-center gap-2">
+                      <Button asChild size="sm" variant="glass" className="h-10 flex-1 px-4">
+                        <a href={service.href}>{en ? "Details" : "Détails"}</a>
+                      </Button>
+                      <Button asChild size="sm" className="h-10 flex-1 px-4">
+                        <a href={`/${locale}#contact`}>{service.cta}</a>
+                      </Button>
                     </div>
                   </div>
                 </Card>

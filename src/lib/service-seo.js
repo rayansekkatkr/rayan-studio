@@ -263,7 +263,7 @@ const SERVICE_SEO_PAGES = [
     primaryCta: "Discuter de mon site",
     secondaryCta: "Voir la méthode",
     secondaryHref: "/fr/a-propos-methodologie-preuves",
-    proofLabel: "Pensé TPE",
+    proofLabel: "Fonctionnement",
     proofValue: "Un interlocuteur unique pour le design, le SEO, les DNS et la mise en ligne",
     sections: [
       {
@@ -307,6 +307,69 @@ const SERVICE_SEO_PAGES = [
         question: "Puis-je commencer petit puis améliorer ensuite ?",
         answer:
           "Oui. L'objectif est de poser une base propre, puis d'ajouter des pages ou contenus selon les retours et priorités.",
+      },
+    ],
+  },
+  {
+    locale: "fr",
+    slug: "application-web-sur-mesure",
+    intent: "application",
+    path: "/fr/application-web-sur-mesure",
+    alternatePath: "/en/custom-web-application",
+    eyebrow: "Application sur mesure",
+    title: "Application web sur mesure pour automatiser votre activité",
+    metaTitle: "Application web sur mesure pour TPE et indépendants",
+    description:
+      "Développement d'applications web sur mesure pour TPE : facturation, réservations, suivi d'activité, automatisation de tâches. Expliquez votre besoin, la faisabilité est validée dès le diagnostic gratuit.",
+    intro:
+      "Certaines tâches vous font perdre des heures chaque semaine : devis, factures, réservations, suivi, ressaisies. Une application simple, construite pour votre façon de travailler, peut les réduire ou les faire disparaître. Vous m'expliquez le projet, je vous dis honnêtement dès le diagnostic si c'est réalisable, et comment.",
+    primaryCta: "Expliquer mon projet",
+    secondaryCta: "Voir les produits du studio",
+    secondaryHref: "/fr#realisations",
+    proofLabel: "Faisabilité d'abord",
+    proofValue: "Une réponse honnête dès le diagnostic : réalisable, à adapter, ou à déconseiller",
+    sections: [
+      {
+        title: "Des exemples, pas des limites",
+        items: [
+          "Devis et facturation adaptés à votre façon de vendre.",
+          "Réservations, prises de rendez-vous ou commandes en ligne.",
+          "Tableaux de bord, suivi d'activité, extraction de documents, automatisation de tâches répétitives.",
+        ],
+      },
+      {
+        title: "Comment ça se passe",
+        items: [
+          "Vous m'expliquez le besoin avec vos mots, sans vocabulaire technique.",
+          "Au diagnostic gratuit, je vous dis si c'est réalisable, en combien de temps et avec quelles limites.",
+          "Si un outil existant fait déjà le travail mieux et moins cher, je vous le dis aussi.",
+        ],
+      },
+      {
+        title: "Pourquoi me confier ce type de projet",
+        items: [
+          "Quatre produits développés par le studio sont déjà en production (facturation, extraction de documents, marketplace, plateforme e-sport).",
+          "Ingénieur full-stack : conception, développement, hébergement et mise en production gérés au même endroit.",
+          "Vous restez propriétaire du code, des données et des comptes.",
+        ],
+      },
+    ],
+    process: ["Écoute du besoin", "Faisabilité", "Devis gratuit", "Développement", "Mise en production"],
+    faq: [
+      {
+        question: "Comment savoir si mon idée est réalisable ?",
+        answer:
+          "Expliquez-la simplement via le formulaire ou WhatsApp. Au diagnostic gratuit, je vous réponds honnêtement : réalisable tel quel, réalisable en adaptant le périmètre, ou déconseillé, avec les raisons.",
+      },
+      {
+        question: "Quels types d'applications pouvez-vous développer ?",
+        answer:
+          "Le champ est large : facturation, réservations, suivi de commandes, tableaux de bord, traitement de documents, automatisations. La facturation n'est qu'un exemple : décrivez votre besoin réel, même inhabituel.",
+      },
+      {
+        question: "Combien coûte une application sur mesure ?",
+        answer:
+          "Cela dépend entièrement du périmètre. Le devis est gratuit, écrit et envoyé après le diagnostic : vous savez précisément ce qui est inclus avant de décider.",
       },
     ],
   },
@@ -451,7 +514,7 @@ const SERVICE_SEO_PAGES = [
     primaryCta: "Discuss my website",
     secondaryCta: "See the method",
     secondaryHref: "/en/a-propos-methodologie-preuves",
-    proofLabel: "Built for small business",
+    proofLabel: "How it works",
     proofValue: "One direct contact for design, SEO, DNS, hosting and launch",
     sections: [
       {
@@ -495,6 +558,69 @@ const SERVICE_SEO_PAGES = [
         question: "Can the website start small and grow later?",
         answer:
           "Yes. The first version can stay focused, then new pages or sections can be added as priorities become clearer.",
+      },
+    ],
+  },
+  {
+    locale: "en",
+    slug: "custom-web-application",
+    intent: "application",
+    path: "/en/custom-web-application",
+    alternatePath: "/fr/application-web-sur-mesure",
+    eyebrow: "Custom application",
+    title: "Custom web applications to automate your business",
+    metaTitle: "Custom web application for small businesses",
+    description:
+      "Custom web application development for small businesses: invoicing, bookings, activity tracking, task automation. Explain your need, and feasibility is confirmed during the free diagnosis.",
+    intro:
+      "Some tasks eat hours every week: quotes, invoices, bookings, tracking, re-typing data. A simple application built around the way you actually work can shrink them or remove them entirely. You explain the project, and I tell you honestly at the diagnosis stage whether it is feasible, and how.",
+    primaryCta: "Explain my project",
+    secondaryCta: "See the studio's products",
+    secondaryHref: "/en#realisations",
+    proofLabel: "Feasibility first",
+    proofValue: "An honest answer at the diagnosis stage: feasible, needs adjusting, or not worth building",
+    sections: [
+      {
+        title: "Examples, not limits",
+        items: [
+          "Quotes and invoicing adapted to how you actually sell.",
+          "Bookings, appointments or online orders.",
+          "Dashboards, activity tracking, document processing, automation of repetitive tasks.",
+        ],
+      },
+      {
+        title: "How it works",
+        items: [
+          "You explain the need in your own words, no technical vocabulary required.",
+          "During the free diagnosis, I tell you whether it is feasible, how long it takes and what the limits are.",
+          "If an existing tool already does the job better and cheaper, I tell you that too.",
+        ],
+      },
+      {
+        title: "Why trust the studio with this",
+        items: [
+          "Four products built by the studio are already in production (invoicing, document extraction, marketplace, esports platform).",
+          "Full-stack engineer: design, development, hosting and deployment handled in one place.",
+          "You own the code, the data and every account.",
+        ],
+      },
+    ],
+    process: ["Listening", "Feasibility", "Free quote", "Development", "Production launch"],
+    faq: [
+      {
+        question: "How do I know if my idea is feasible?",
+        answer:
+          "Explain it simply through the form or WhatsApp. During the free diagnosis I answer honestly: feasible as is, feasible with an adjusted scope, or not recommended, with the reasons.",
+      },
+      {
+        question: "What kinds of applications can you build?",
+        answer:
+          "The range is wide: invoicing, bookings, order tracking, dashboards, document processing, automations. Invoicing is only an example: describe your actual need, even an unusual one.",
+      },
+      {
+        question: "How much does a custom application cost?",
+        answer:
+          "It depends entirely on the scope. The quote is free, written, and sent after the diagnosis: you know exactly what is included before deciding.",
       },
     ],
   },
