@@ -12,6 +12,12 @@ const { createUnsubscribeToken } = require('./tokens');
 
 const HARD_MAX_SENDS = 20;
 const MAX_SEND_ATTEMPTS = 3;
+const SEND_TIMEOUT_MS = 15_000;
+const RESEND_IDEMPOTENCY_WINDOW_MS = 24 * 60 * 60 * 1000;
+
+function sleep(ms) {
+  return new Promise((resolve) => setTimeout(resolve, ms));
+}
 
 /**
  * Garde-fous d'envoi réel. TOUTES les conditions doivent être vraies.
@@ -33,10 +39,14 @@ function checkSendGuards({ env, countryPolicy }) {
   return { allowed: reasons.length === 0, reasons };
 }
 
-/** Plafond strict : toute valeur invalide ou supérieure est ramenée à 20. */
+/**
+ * Plafond strict, fail closed : une valeur invalide ou négative donne 0
+ * (aucun envoi), jamais le maximum. Une valeur trop haute est ramenée à 20.
+ */
 function clampMaxSends(requested) {
+  if (requested === undefined || requested === null || requested === '') return HARD_MAX_SENDS;
   const n = Number(requested);
-  if (!Number.isFinite(n) || n <= 0) return HARD_MAX_SENDS;
+  if (!Number.isFinite(n) || n < 0) return 0;
   return Math.min(Math.floor(n), HARD_MAX_SENDS);
 }
 
@@ -107,9 +117,12 @@ async function sendReserved(client, message, { resendFetcher = fetch, env = proc
       `UPDATE outreach_messages SET attempt_count = $2, last_attempt_at = now() WHERE id = $1`,
       [message.id, attempt + 1],
     );
+    const controller = new AbortController();
+    const timer = setTimeout(() => controller.abort(), SEND_TIMEOUT_MS);
     try {
       const response = await resendFetcher('https://api.resend.com/emails', {
         method: 'POST',
+        signal: controller.signal,
         headers: {
           Authorization: `Bearer ${env.RESEND_API_KEY}`,
           'Content-Type': 'application/json',
@@ -151,10 +164,13 @@ async function sendReserved(client, message, { resendFetcher = fetch, env = proc
       lastError = `http_${response.status}`;
     } catch (error) {
       lastError = error.name === 'AbortError' ? 'timeout' : (error.code || 'network');
+    } finally {
+      clearTimeout(timer);
     }
-    // ambigu (5xx, 429, réseau, timeout) : nouvelle tentative avec la
-    // même clé d'idempotence — Resend renverra l'id original si le
+    // ambigu (5xx, 429, réseau, timeout) : backoff puis nouvelle tentative
+    // avec la même clé d'idempotence — Resend renverra l'id original si le
     // premier appel avait été accepté.
+    await sleep(Math.min(Number(env.RESEND_BACKOFF_BASE_MS || 2000) * 2 ** attempt, 10_000));
   }
 
   await client.query(
@@ -168,8 +184,44 @@ async function sendReserved(client, message, { resendFetcher = fetch, env = proc
   return { outcome: 'possibly_sent', code: lastError };
 }
 
+/**
+ * Reprise des messages restés RESERVED (crash entre l'acceptation Resend
+ * et le commit). Dans la fenêtre d'idempotence : retente avec la MÊME
+ * clé (réconciliation sûre). Au-delà : POSSIBLY_SENT, entreprise bloquée.
+ * À appeler au début de chaque run.
+ */
+async function recoverStalledReservations(client, { resendFetcher, env = process.env, now = Date.now() } = {}) {
+  const { rows } = await client.query(
+    `SELECT id, business_id, subject, body, provider_idempotency_key, attempt_count, reserved_at,
+            (SELECT email FROM contacts WHERE contacts.id = outreach_messages.contact_id) AS to
+     FROM outreach_messages
+     WHERE status = 'RESERVED' AND dry_run = false
+       AND reserved_at < now() - interval '30 minutes'`,
+  );
+  const results = { retried: 0, possiblySent: 0 };
+  for (const row of rows) {
+    const age = now - new Date(row.reserved_at).getTime();
+    if (age < RESEND_IDEMPOTENCY_WINDOW_MS) {
+      await sendReserved(client, row, { resendFetcher, env });
+      results.retried += 1;
+    } else {
+      await client.query(
+        `UPDATE outreach_messages SET status = 'POSSIBLY_SENT', last_error_code = 'stalled_beyond_idempotency_window' WHERE id = $1`,
+        [row.id],
+      );
+      await client.query(
+        `UPDATE businesses SET status = 'POSSIBLY_SENT', status_reason = 'stalled_reservation', updated_at = now() WHERE id = $1`,
+        [row.business_id],
+      );
+      results.possiblySent += 1;
+    }
+  }
+  return results;
+}
+
 module.exports = {
   HARD_MAX_SENDS,
+  recoverStalledReservations,
   checkSendGuards,
   clampMaxSends,
   isSuppressed,

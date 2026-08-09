@@ -53,11 +53,22 @@ export async function POST(request: NextRequest) {
        RETURNING id`,
       [verification.eventId, event.type, JSON.stringify({ email_id: event.data?.email_id || null })],
     );
-    if (inserted.rows.length === 0) {
-      await client.query("COMMIT");
-      return NextResponse.json({ duplicate: true }, { status: 200 });
+    let eventRowId: number | null = inserted.rows[0]?.id ?? null;
+    if (eventRowId === null) {
+      // Événement déjà reçu : ne re-traiter QUE s'il est resté non apparié
+      // (course webhook/envoi). Un événement déjà traité est un vrai doublon.
+      const existing = await client.query(
+        `SELECT id, processed_at FROM email_provider_events WHERE provider = 'resend' AND event_id = $1`,
+        [verification.eventId],
+      );
+      if (existing.rows.length === 0 || existing.rows[0].processed_at !== null) {
+        await client.query("COMMIT");
+        return NextResponse.json({ duplicate: true }, { status: 200 });
+      }
+      eventRowId = existing.rows[0].id;
     }
 
+    let matched = !transition.businessStatus; // les événements sans transition sont traités d'office
     if (transition.businessStatus && event.data?.email_id) {
       const { rows } = await client.query(
         `SELECT om.business_id, c.email_hmac, b.canonical_domain
@@ -68,6 +79,7 @@ export async function POST(request: NextRequest) {
         [event.data.email_id],
       );
       if (rows.length > 0) {
+        matched = true;
         const { business_id: businessId, email_hmac: emailHmac, canonical_domain: domain } = rows[0];
         await client.query(
           `UPDATE businesses SET status = $2, updated_at = now() WHERE id = $1`,
@@ -90,6 +102,14 @@ export async function POST(request: NextRequest) {
       }
     }
 
+    if (matched) {
+      // Non apparié (processed_at NULL) : l'événement reste en attente et
+      // sera réconcilié après l'enregistrement du resend_email_id.
+      await client.query(
+        `UPDATE email_provider_events SET processed_at = now() WHERE id = $1`,
+        [eventRowId],
+      );
+    }
     await client.query("COMMIT");
   } catch (error) {
     await client.query("ROLLBACK").catch(() => undefined);

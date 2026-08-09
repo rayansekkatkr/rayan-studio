@@ -18,6 +18,7 @@ const FULL_ENV = {
   SEND_DNS_VERIFIED: 'true',
   RESEND_API_KEY: 're_x',
   RESEND_FROM: 'Rayan <rayan@outreach.rayanstudios.com>',
+  RESEND_BACKOFF_BASE_MS: '1',
 };
 const FR_POLICY = { country_code: 'FR', enabled: true, policy_version: 'fr-v1' };
 
@@ -42,13 +43,15 @@ test('checkSendGuards : chaque condition manquante bloque (fail closed)', () => 
   }
 });
 
-test('clampMaxSends : borne dure à 20 quelle que soit la demande', () => {
+test('clampMaxSends : plafond dur à 20, valeurs invalides fail closed à 0', () => {
   assert.equal(clampMaxSends(20), 20);
   assert.equal(clampMaxSends(5), 5);
+  assert.equal(clampMaxSends(0), 0);
   assert.equal(clampMaxSends(500), HARD_MAX_SENDS);
   assert.equal(clampMaxSends('9999'), HARD_MAX_SENDS);
-  assert.equal(clampMaxSends(-1), HARD_MAX_SENDS);
-  assert.equal(clampMaxSends('abc'), HARD_MAX_SENDS);
+  assert.equal(clampMaxSends(undefined), HARD_MAX_SENDS, 'absent = défaut 20');
+  assert.equal(clampMaxSends(-1), 0, 'négatif = aucun envoi');
+  assert.equal(clampMaxSends('abc'), 0, 'invalide = aucun envoi');
 });
 
 /** Fake outbox émulant l'index unique partiel (business_id WHERE dry_run=false). */

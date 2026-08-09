@@ -37,6 +37,9 @@ function sanitizeExcerpt(value, maxLength = 160) {
       .replace(/[\u0000-\u001f\u007f]/g, ' ')
       .replace(/https?:\/\/\S+/gi, '')
       .replace(/[a-z0-9._%+-]+@[a-z0-9.-]+/gi, '')
+      .replace(/(?:\+33|0)\s?[1-9](?:[\s.-]?\d{2}){4}/g, '')
+      .replace(/\b\d{1,4}\s?(?:bis|ter)?[,\s]+(?:rue|avenue|av|boulevard|bd|place|chemin|impasse|quai|allee|allée)\b[^,.]*/gi, '')
+      .replace(/\b\d{5}\b/g, '')
       .replace(/[<>{}]/g, ' ')
       .replace(/\s+/g, ' ')
       .trim()
@@ -128,7 +131,7 @@ function validateLlmOutput(output, { campaignCandidate, evidenceUrls }) {
   if (!body) return { valid: false, reason: 'body_missing' };
 
   const words = body.trim().split(/\s+/).length;
-  if (words < 60 || words > 160) return { valid: false, reason: 'body_length' };
+  if (words < 70 || words > 135) return { valid: false, reason: 'body_length' };
   if (!body.includes('{{business_name}}')) return { valid: false, reason: 'missing_placeholder' };
 
   const urls = body.match(/https?:\/\/\S+/gi) || [];

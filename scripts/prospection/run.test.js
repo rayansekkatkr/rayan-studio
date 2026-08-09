@@ -13,12 +13,19 @@ test('chooseCampaign : processus manuel observé -> application', () => {
 test('chooseCampaign : site daté observable -> refonte', () => {
   assert.equal(chooseCampaign({ https: false, hasViewportMeta: true }), 'refonte');
   assert.equal(chooseCampaign({ https: true, hasViewportMeta: false }), 'refonte');
-  assert.equal(chooseCampaign({ https: true, hasViewportMeta: true, oldestCopyrightYear: 2015 }), 'refonte');
-  assert.equal(chooseCampaign({ https: true, hasViewportMeta: true, builderHints: ['wix.com'] }), 'refonte');
+  assert.equal(chooseCampaign({ https: true, hasViewportMeta: true, newestCopyrightYear: 2015 }), 'refonte');
+});
+
+test('chooseCampaign : pas de faux positifs (plage copyright, CMS)', () => {
+  const currentYear = new Date().getFullYear();
+  // « © 2010-2026 » : oldest 2010 mais newest à jour -> site vivant
+  assert.equal(chooseCampaign({ https: true, hasViewportMeta: true, oldestCopyrightYear: 2010, newestCopyrightYear: currentYear }), null);
+  // Un CMS/builder n'est jamais un problème autonome
+  assert.equal(chooseCampaign({ https: true, hasViewportMeta: true, builderHints: ['wordpress'] }), null);
 });
 
 test('chooseCampaign : aucun problème observable -> null (pas de prospection)', () => {
-  assert.equal(chooseCampaign({ https: true, hasViewportMeta: true, oldestCopyrightYear: new Date().getFullYear(), builderHints: [] }), null);
+  assert.equal(chooseCampaign({ https: true, hasViewportMeta: true, newestCopyrightYear: new Date().getFullYear(), builderHints: [] }), null);
   assert.equal(chooseCampaign(null), null);
 });
 

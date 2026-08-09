@@ -55,11 +55,11 @@ async function ingestCandidate(client, candidate, secret = process.env.SUPPRESSI
   if (decision.action === 'CREATE') {
     const domain = canonicalDomain(candidate.website);
     const { rows } = await client.query(
-      `INSERT INTO businesses (canonical_domain, name_normalized, country_code, city, postal_code)
-       VALUES ($1, $2, $3, $4, $5)
+      `INSERT INTO businesses (canonical_domain, name_normalized, display_name, country_code, city, postal_code)
+       VALUES ($1, $2, $3, $4, $5, $6)
        ON CONFLICT (canonical_domain) WHERE canonical_domain IS NOT NULL DO NOTHING
        RETURNING id`,
-      [domain, nameNormalized, candidate.countryCode, candidate.city || null, candidate.postalCode || null],
+      [domain, nameNormalized, candidate.name || null, candidate.countryCode, candidate.city || null, candidate.postalCode || null],
     );
     if (rows.length === 0) {
       // course : le domaine vient d'être créé par un autre chemin

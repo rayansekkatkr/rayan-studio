@@ -5,6 +5,17 @@ Pipeline B2B faible volume : découverte (SIRENE + Brave), audit de sites
 « exactement une fois », désinscription et webhooks hébergés dans le site
 Next. Maximum 20 emails/semaine, fail closed partout.
 
+## Limites explicites de la V1
+
+- **Création Express : hors périmètre V1.** SIRENE ne fournit pas d'email
+  et une entreprise sans site n'offre aucune source conforme (règle : ne
+  jamais deviner une adresse). Les entreprises sans site sont ingérées
+  mais jamais contactées. La campagne sera activée quand une source
+  d'emails conforme existera.
+- **Playwright : reporté.** Les sites nécessitant JavaScript sont écartés
+  (`SKIPPED js_required_no_fallback`) au lieu d'être audités à l'aveugle.
+- Répartition effective V1 : refonte + application uniquement.
+
 ## Architecture
 
 ```
@@ -12,7 +23,8 @@ run.js (hebdo, GitHub Actions)
   ├─ providers/sirene.js      découverte France (officiel, 30 req/min)
   ├─ providers/brave.js       site officiel (URL seule, rien d'autre persisté)
   ├─ ingest.js                identité multi-clés, conflit = fail closed
-  ├─ crawl.js + ssrf-guard.js audit 3 pages max, robots.txt, signaux datés
+  ├─ crawl.js + ssrf-guard.js audit 3 pages max, robots.txt, signaux datés,
+  │                           vérification site↔entreprise avant association
   ├─ qualify.js               LLM OpenAI : signaux structurés uniquement,
   │                           jamais d'email/nom/adresse/ID, placeholders
   └─ send.js                  garde-fous cumulatifs, outbox atomique,
@@ -127,7 +139,7 @@ Québec (CASL), Maroc, Tunisie : désactivés, travaux dédiés requis.
 
 ## Garanties de test
 
-`npm test` (scripts/) : 115 tests dont identité multi-sources, dédup
+`npm test` (scripts/) : 120 tests dont identité multi-sources, dédup
 legacy, SSRF (IPv4/IPv6/redirections), minimisation LLM, injection,
 réservation atomique, retry même clé, POSSIBLY_SENT, signatures webhook.
 En CI, un service Postgres exécute aussi la migration base vide/existante.

@@ -24,7 +24,7 @@ const GENERIC_EMAIL_DOMAINS = new Set([
 const EXAMPLE_EMAILS = /example|exemple|yourmail|votremail|email@|test@|noreply|no-reply|sentry|wixpress/i;
 
 /** Extrait les emails d'un HTML : mailto d'abord, texte ensuite. */
-function extractEmails(html, pageDomain) {
+function extractEmails(html, pageDomain, pageUrl = null) {
   const $ = cheerio.load(html);
   const found = new Map();
 
@@ -38,7 +38,7 @@ function extractEmails(html, pageDomain) {
     // local seulement si elle est publiée sur le site officiel.
     if (!sameDomain && GENERIC_EMAIL_DOMAINS.has(domain) && sourceKind !== 'mailto') return;
     if (!found.has(email)) {
-      found.set(email, { email, isFunctional, sameDomain, source: sourceKind });
+      found.set(email, { email, isFunctional, sameDomain, source: sourceKind, sourceUrl: pageUrl });
     }
   };
 
@@ -82,6 +82,7 @@ function extractSignals(html, { finalUrl, status }) {
     hasReservationHint: /réserv|reservation|booking|commander|commande en ligne/i.test(text),
     manualProcessHint: /réservation par téléphone|réserver par téléphone|commande par téléphone|devis par mail|devis par email|formulaire pdf|téléchargez le formulaire|commandez par whatsapp/i.test(text),
     oldestCopyrightYear: copyrightYears.length ? Math.min(...copyrightYears) : null,
+    newestCopyrightYear: copyrightYears.length ? Math.max(...copyrightYears) : null,
     wordCount: text.split(/\s+/).filter(Boolean).length,
     builderHints: ['wix.com', 'squarespace', 'jimdo', 'weebly', 'wordpress', 'pagesjaunes'].filter((h) => htmlLower.includes(h)),
     jsRequiredHint: text.replace(/\s+/g, '').length < 200 && /enable javascript|activez javascript|<noscript/i.test(html),
@@ -155,7 +156,7 @@ async function auditWebsite(siteUrl, deps = {}) {
   const homeSignals = extractSignals(home.body, { finalUrl: home.url, status: home.status });
   pages.push({ url: home.url, method: 'http', signals: homeSignals });
 
-  let emails = extractEmails(home.body, domain);
+  let emails = extractEmails(home.body, domain, home.url);
   const internal = pickInternalPages(home.body, home.url)
     .filter((u) => isAllowedByRobots(robotsTxt, new URL(u).pathname));
 
@@ -165,7 +166,7 @@ async function auditWebsite(siteUrl, deps = {}) {
       if (!page.ok) continue;
       const signals = extractSignals(page.body, { finalUrl: page.url, status: page.status });
       pages.push({ url: page.url, method: 'http', signals });
-      const pageEmails = extractEmails(page.body, domain);
+      const pageEmails = extractEmails(page.body, domain, page.url);
       const known = new Set(emails.map((e) => e.email));
       emails = emails.concat(pageEmails.filter((e) => !known.has(e.email)));
     } catch {
@@ -203,8 +204,49 @@ function buildEvidence(pages) {
   }));
 }
 
+
+/**
+ * Vérifie qu'un site correspond bien à l'entreprise découverte avant
+ * toute association d'identité (anti "premier résultat Brave").
+ * Match exigé : majorité des tokens significatifs du nom présents,
+ * ET au moins un ancrage local (ville, code postal ou SIREN/SIRET).
+ * Fonction pure sur le HTML de la page d'accueil (+ mentions légales si
+ * fournies). En cas de doute : { matched: false } -> fail closed.
+ */
+function verifyWebsiteMatch(html, { name, city, postalCode, siren }) {
+  if (!html || !name) return { matched: false, reason: 'missing_input' };
+  const haystack = html
+    .normalize('NFD')
+    .replace(/[\u0300-\u036f]/g, '')
+    .toLowerCase();
+
+  const tokens = String(name)
+    .normalize('NFD')
+    .replace(/[\u0300-\u036f]/g, '')
+    .toLowerCase()
+    .replace(/[^a-z0-9]+/g, ' ')
+    .split(' ')
+    .filter((t) => t.length >= 3 && !['les', 'des', 'sarl', 'sas', 'sasu', 'eurl'].includes(t));
+  if (tokens.length === 0) return { matched: false, reason: 'no_name_tokens' };
+  const hits = tokens.filter((t) => haystack.includes(t)).length;
+  const nameOk = hits / tokens.length >= 0.6;
+
+  const cityOk = city
+    ? haystack.includes(String(city).normalize('NFD').replace(/[\u0300-\u036f]/g, '').toLowerCase().split(' ')[0])
+    : false;
+  const postalOk = postalCode ? haystack.includes(String(postalCode).replace(/\s+/g, '')) : false;
+  const sirenOk = siren ? haystack.replace(/[\s.]/g, '').includes(String(siren).replace(/\s+/g, '')) : false;
+
+  const anchorOk = cityOk || postalOk || sirenOk;
+  if (nameOk && anchorOk) {
+    return { matched: true, anchors: { nameHits: hits, nameTokens: tokens.length, cityOk, postalOk, sirenOk } };
+  }
+  return { matched: false, reason: nameOk ? 'no_local_anchor' : 'name_mismatch' };
+}
+
 module.exports = {
   extractEmails,
+  verifyWebsiteMatch,
   extractSignals,
   pickInternalPages,
   isAllowedByRobots,
