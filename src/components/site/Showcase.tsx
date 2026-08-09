@@ -24,6 +24,17 @@ const projectsFr = [
     scope: ["Positionnement", "Sections plus lisibles", "CTA clarifiés"],
   },
   {
+    id: "goodcall",
+    name: "GoodCall",
+    designation: "Plateforme e-sport • Web & mobile",
+    quote:
+      "Plateforme de pronostics e-sport gratuite (LoL, Valorant, CS2) : identité forte, parcours d'inscription direct et interface lisible malgré la densité de données.",
+    projectUrl: "https://goodcall.gg/en/",
+    src: "/realisations/goodcall.png",
+    segment: "Produit du studio — en production",
+    scope: ["Identité de marque", "Densité maîtrisée", "Parcours d'inscription"],
+  },
+  {
     id: "manteigaria",
     name: "Manteigaria — Avant / Après",
     designation: "Boulangerie artisanale • Commerce local",
@@ -70,6 +81,17 @@ const projectsEn = [
     src: "/realisations/pick4me.png",
     segment: "Studio product — live",
     scope: ["Positioning", "Cleaner sections", "Clearer CTAs"],
+  },
+  {
+    id: "goodcall",
+    name: "GoodCall",
+    designation: "Esports platform • Web & mobile",
+    quote:
+      "Free esports prediction platform (LoL, Valorant, CS2): strong identity, direct sign-up path and a readable interface despite dense data.",
+    projectUrl: "https://goodcall.gg/en/",
+    src: "/realisations/goodcall.png",
+    segment: "Studio product — live",
+    scope: ["Brand identity", "Managed density", "Sign-up path"],
   },
   {
     id: "manteigaria",
