@@ -5,13 +5,17 @@
   "description": "Automated daily outreach script",
   "main": "outreach.js",
   "scripts": {
-    "test": "node --test outreach.test.js freelance-opportunities.test.js freelance-contact-queue.test.js message-humanizer.test.js workflow-session-report.test.js",
+    "test": "node --test outreach.test.js freelance-opportunities.test.js freelance-contact-queue.test.js message-humanizer.test.js workflow-session-report.test.js prospection/*.test.js",
+    "prospection:migrate": "node prospection/migrate.js",
     "opportunities": "node freelance-opportunities.js",
     "freelance:contacts": "node freelance-contact-queue.js",
     "outreach": "node outreach.js"
   },
   "dependencies": {
     "axios": "^1.7.0",
-    "nodemailer": "^6.9.0"
+    "cheerio": "^1.2.0",
+    "nodemailer": "^6.9.0",
+    "pg": "^8.23.0",
+    "tldts": "^7.4.10"
   }
 }
