@@ -11,9 +11,11 @@ test("service SEO pages expose the phase 1 French and English routes", () => {
   const paths = getAllServiceSeoPages().map((page) => page.path).sort();
 
   assert.deepEqual(paths, [
+    "/en/custom-web-application",
     "/en/small-business-website",
     "/en/small-business-website-redesign-cost",
     "/en/website-redesign",
+    "/fr/application-web-sur-mesure",
     "/fr/checklist-refonte-site-internet",
     "/fr/cout-refonte-site-internet-petite-entreprise",
     "/fr/creation-site-vitrine",
@@ -44,11 +46,12 @@ test("service SEO pages expose enough content for non-thin pages", () => {
 test("service SEO pages by locale returns only matching localized routes", () => {
   assert.deepEqual(
     getServiceSeoPagesByLocale("en").map((page) => page.path).sort(),
-    ["/en/small-business-website", "/en/small-business-website-redesign-cost", "/en/website-redesign"],
+    ["/en/custom-web-application", "/en/small-business-website", "/en/small-business-website-redesign-cost", "/en/website-redesign"],
   );
   assert.deepEqual(
     getServiceSeoPagesByLocale("fr").map((page) => page.path).sort(),
     [
+      "/fr/application-web-sur-mesure",
       "/fr/checklist-refonte-site-internet",
       "/fr/cout-refonte-site-internet-petite-entreprise",
       "/fr/creation-site-vitrine",

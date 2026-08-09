@@ -144,7 +144,7 @@ const SECTOR_FAQ_BUILDERS = {
     },
     {
       question: `Faut-il un module de réservation en ligne ?`,
-      answer: `Pas forcément. Un bouton d'appel direct et un lien WhatsApp bien placés suffisent souvent pour un restaurant indépendant. Un module de réservation devient utile quand le volume le justifie — c'est un point que je cadre avec vous au diagnostic.`,
+      answer: `Pas forcément. Un bouton d'appel direct et un lien WhatsApp bien placés suffisent souvent pour un restaurant indépendant. Un module de réservation devient utile quand le volume le justifie. C'est un point que je cadre avec vous au diagnostic.`,
     },
     {
       question: `Le site peut-il aider face aux plateformes d'avis et de livraison ?`,
@@ -158,7 +158,7 @@ const SECTOR_FAQ_BUILDERS = {
     },
     {
       question: `Que mettre en avant en priorité ?`,
-      answer: `Ce qui vous différencie : torréfaction, brunch, terrasse, événements. Puis les informations pratiques — horaires, adresse, contact — visibles sans défilement sur mobile.`,
+      answer: `Ce qui vous différencie : torréfaction, brunch, terrasse, événements. Puis les informations pratiques (horaires, adresse, contact), visibles sans défilement sur mobile.`,
     },
     {
       question: `Le site remplace-t-il les réseaux sociaux ?`,
@@ -182,7 +182,7 @@ const SECTOR_FAQ_BUILDERS = {
   boulangerie: (cityLabel, districtsText) => [
     {
       question: `Qu'est-ce qu'un bon site pour une boulangerie à ${cityLabel} ?`,
-      answer: `Un site qui montre le savoir-faire (photos réelles des produits), affiche les horaires sans ambiguïté et explique comment commander — notamment pour les demandes traiteur ou les gâteaux sur commande. ${districtsText ? `C'est ce qui fait revenir la clientèle de quartier, que vous soyez installé dans un secteur comme ${districtsText} ou ailleurs.` : ""}`,
+      answer: `Un site qui montre le savoir-faire (photos réelles des produits), affiche les horaires sans ambiguïté et explique comment commander, notamment pour les demandes traiteur ou les gâteaux sur commande. ${districtsText ? `C'est ce qui fait revenir la clientèle de quartier, que vous soyez installé dans un secteur comme ${districtsText} ou ailleurs.` : ""}`,
     },
     {
       question: `Faut-il vendre en ligne ?`,
@@ -196,7 +196,7 @@ const SECTOR_FAQ_BUILDERS = {
   patisserie: (cityLabel, districtsText) => [
     {
       question: `Comment présenter une pâtisserie en ligne à ${cityLabel} ?`,
-      answer: `Par l'image avant tout : des photos produits soignées déclenchent l'envie et justifient le positionnement. Ensuite, un parcours simple pour les commandes d'événements — gâteaux personnalisés, mariages, entreprises${districtsText ? ` — pour des clients venus de quartiers comme ${districtsText} ou d'ailleurs` : ""}.`,
+      answer: `Par l'image avant tout : des photos produits soignées déclenchent l'envie et justifient le positionnement. Ensuite, un parcours simple pour les commandes d'événements (gâteaux personnalisés, mariages, entreprises)${districtsText ? `, pour des clients venus de quartiers comme ${districtsText} ou d'ailleurs` : ""}.`,
     },
     {
       question: `Comment gérer les commandes spéciales ?`,
@@ -204,7 +204,7 @@ const SECTOR_FAQ_BUILDERS = {
     },
     {
       question: `Le site peut-il montrer les créations récentes ?`,
-      answer: `Oui, soit par une galerie simple à mettre à jour, soit en intégrant votre flux Instagram — je recommande la solution que vous tiendrez réellement à jour.`,
+      answer: `Oui, soit par une galerie simple à mettre à jour, soit en intégrant votre flux Instagram. Je recommande la solution que vous tiendrez réellement à jour.`,
     },
   ],
   bar: (cityLabel, districtsText) => [
@@ -224,11 +224,11 @@ const SECTOR_FAQ_BUILDERS = {
   "commerce-local": (cityLabel, districtsText) => [
     {
       question: `Pourquoi un commerce local à ${cityLabel} a-t-il besoin d'un site ?`,
-      answer: `Parce que la recherche commence en ligne, même pour un achat en boutique. Un site clair — offre, horaires, adresse, contact — capte ces recherches${districtsText ? `, que le client vienne d'un quartier comme ${districtsText} ou d'ailleurs dans la ville` : ""}, et renvoie une image à la hauteur de votre travail.`,
+      answer: `Parce que la recherche commence en ligne, même pour un achat en boutique. Un site clair (offre, horaires, adresse, contact) capte ces recherches${districtsText ? `, que le client vienne d'un quartier comme ${districtsText} ou d'ailleurs dans la ville` : ""}, et renvoie une image à la hauteur de votre travail.`,
     },
     {
       question: `Que faut-il montrer en premier ?`,
-      answer: `Ce que vous vendez, pour qui, et comment vous joindre — le tout lisible en un écran mobile. Les détails (histoire, équipe, services) viennent après.`,
+      answer: `Ce que vous vendez, pour qui, et comment vous joindre, le tout lisible en un écran mobile. Les détails (histoire, équipe, services) viennent après.`,
     },
     {
       question: `Un site vitrine peut-il évoluer vers la vente en ligne ?`,

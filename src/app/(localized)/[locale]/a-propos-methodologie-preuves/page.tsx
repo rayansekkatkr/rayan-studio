@@ -199,8 +199,8 @@ export default function AboutMethodPage({ params }: { params: { locale: string }
           </h2>
           <p className="mt-3 text-sm leading-7 text-[#63584d]">
             {en
-              ? `${BRAND.founder}, full-stack engineer with 5+ years of experience in web development and DevOps (including STMicroelectronics and UNYC). Based in Seoul, working 100% remotely with French-speaking clients. Every studio website is designed, developed and launched by me: visual direction, code, SEO, DNS and deployment — one single point of contact from brief to launch.`
-              : `${BRAND.founder}, ingénieur full-stack, plus de 5 ans d'expérience en développement web et DevOps (notamment chez STMicroelectronics et UNYC). Basé à Séoul, je travaille 100 % à distance avec des clients francophones. Chaque site du studio est conçu, développé et mis en ligne par moi : direction visuelle, code, SEO, DNS et déploiement — un seul interlocuteur du brief à la mise en ligne.`}
+              ? `${BRAND.founder}, full-stack engineer with 5+ years of experience in web development and DevOps (including STMicroelectronics and UNYC). Based in Seoul, working 100% remotely with French-speaking clients. Every studio website is designed, developed and launched by me: visual direction, code, SEO, DNS and deployment, with one single point of contact from brief to launch.`
+              : `${BRAND.founder}, ingénieur full-stack, plus de 5 ans d'expérience en développement web et DevOps (notamment chez STMicroelectronics et UNYC). Basé à Séoul, je travaille 100 % à distance avec des clients francophones. Chaque site du studio est conçu, développé et mis en ligne par moi : direction visuelle, code, SEO, DNS et déploiement, avec un seul interlocuteur du brief à la mise en ligne.`}
           </p>
           <p className="mt-3 text-sm text-[#63584d]">
             {en

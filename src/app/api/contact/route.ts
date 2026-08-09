@@ -84,7 +84,7 @@ export async function POST(request: NextRequest) {
   const senderEmail = process.env.BREVO_SENDER_EMAIL;
   const senderName = process.env.BREVO_SENDER_NAME || BRAND.name;
   const toEmail = process.env.BREVO_TO_EMAIL;
-  const subject = process.env.BREVO_SUBJECT || `Nouveau lead qualifié — ${BRAND.name}`;
+  const subject = process.env.BREVO_SUBJECT || `Nouveau lead qualifié - ${BRAND.name}`;
 
   if (!brevoApiKey || !senderEmail || !toEmail) {
     return NextResponse.json({ error: "Configuration email manquante côté serveur." }, { status: 500 });
