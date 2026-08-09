@@ -1,6 +1,7 @@
 import { BRAND } from "@/lib/brand";
 import { isEnglish, type Locale } from "@/lib/i18n";
 import { getServiceSeoPagesByLocale } from "@/lib/service-seo";
+import { ManageCookiesButton } from "./ManageCookiesButton";
 
 export function Footer({ locale = "fr" }: { locale?: Locale }) {
   const en = isEnglish(locale);
@@ -47,6 +48,7 @@ export function Footer({ locale = "fr" }: { locale?: Locale }) {
             <a href="/cgv" className="transition-colors hover:text-[#c2461f]">
               {en ? "Terms of sale" : "CGV"}
             </a>
+            <ManageCookiesButton label={en ? "Manage cookies" : "Gérer les cookies"} />
           </div>
         </div>
       </div>

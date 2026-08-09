@@ -23,15 +23,13 @@ export function CookieConsent() {
   useEffect(() => {
     setIsEnglish(window.location.pathname.startsWith("/en"));
     const saved = window.localStorage.getItem(CONSENT_KEY);
-    if (saved === "accepted") {
-      updateConsent(true);
-      return;
+    if (saved !== "accepted" && saved !== "declined") {
+      setVisible(true);
     }
-    if (saved === "declined") {
-      updateConsent(false);
-      return;
-    }
-    setVisible(true);
+
+    const reopen = () => setVisible(true);
+    window.addEventListener("rs-open-consent", reopen);
+    return () => window.removeEventListener("rs-open-consent", reopen);
   }, []);
 
   if (!visible) return null;
@@ -53,6 +51,7 @@ export function CookieConsent() {
           className="rounded-none border border-[#17120f] bg-[#17120f] px-4 py-2 text-sm font-black text-[#fffaf0]"
           onClick={() => {
             window.localStorage.setItem(CONSENT_KEY, "accepted");
+            window.dispatchEvent(new Event("rs-consent-granted"));
             updateConsent(true);
             trackEvent("cookie_consent", { choice: "accepted" });
             setVisible(false);

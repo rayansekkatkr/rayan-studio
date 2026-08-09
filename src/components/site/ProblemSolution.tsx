@@ -1,8 +1,7 @@
 "use client";
 
-import { motion, useReducedMotion } from "framer-motion";
+import { motion } from "framer-motion";
 import { AlertTriangle, CheckCircle2 } from "lucide-react";
-import { useEffect, useState } from "react";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { isEnglish, type Locale } from "@/lib/i18n";
 import { Reveal } from "./Reveal";
@@ -85,17 +84,6 @@ export function ProblemSolution({ locale = "fr" }: { locale?: Locale }) {
   const problems = en ? problemsEn : problemsFr;
   const solutions = en ? solutionsEn : solutionsFr;
   const focusItems = en ? focusItemsEn : focusItemsFr;
-  const [isMobile, setIsMobile] = useState(false);
-  const reducedMotion = useReducedMotion();
-  const shouldAnimate = !reducedMotion && !isMobile;
-
-  useEffect(() => {
-    const media = window.matchMedia("(max-width: 1024px)");
-    const onChange = () => setIsMobile(media.matches);
-    onChange();
-    media.addEventListener("change", onChange);
-    return () => media.removeEventListener("change", onChange);
-  }, []);
 
   return (
     <section id="probleme-solution" className="section-screen relative px-4 md:px-8">
@@ -139,11 +127,7 @@ export function ProblemSolution({ locale = "fr" }: { locale?: Locale }) {
             </Reveal>
 
             <Reveal delay={0.06}>
-              <motion.div
-                className="relative mx-auto w-full max-w-[320px] rounded-none border border-[#2a231d]/14 bg-[#fffaf0]/86 px-5 py-6 shadow-[6px_6px_0_rgba(42,35,29,0.08)] backdrop-blur-xl"
-                animate={shouldAnimate ? { y: [0, -5, 0] } : undefined}
-                transition={{ duration: 6, repeat: Infinity, ease: "easeInOut" }}
-              >
+              <div className="relative mx-auto w-full max-w-[320px] rounded-none border border-[#2a231d]/14 bg-[#fffaf0]/86 px-5 py-6 shadow-[6px_6px_0_rgba(42,35,29,0.08)] backdrop-blur-xl">
                 <p className="text-[11px] font-black uppercase tracking-[0.16em] text-[#c2461f]">
                   {en ? "Creative direction" : "Direction créative"}
                 </p>
@@ -158,7 +142,7 @@ export function ProblemSolution({ locale = "fr" }: { locale?: Locale }) {
                     </div>
                   ))}
                 </div>
-              </motion.div>
+              </div>
             </Reveal>
 
             <Reveal delay={0.12}>

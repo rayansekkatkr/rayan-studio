@@ -1,6 +1,6 @@
 import type { Metadata, Viewport } from "next";
 import { Plus_Jakarta_Sans, Sora } from "next/font/google";
-import Script from "next/script";
+import { AnalyticsLoader } from "@/components/site/AnalyticsLoader";
 import { CookieConsent } from "@/components/site/CookieConsent";
 import { BRAND, getSiteUrl } from "@/lib/brand";
 import { getGoogleSiteVerification } from "@/lib/seo-verification";
@@ -112,27 +112,7 @@ export function RootBody({ children }: { children: React.ReactNode }) {
       <a href="#main-content" className="skip-link">
         Aller au contenu principal
       </a>
-      {gaId ? (
-        <>
-          <Script src={`https://www.googletagmanager.com/gtag/js?id=${gaId}`} strategy="afterInteractive" />
-          <Script id="google-analytics" strategy="afterInteractive">
-            {`
-              window.dataLayer = window.dataLayer || [];
-              function gtag(){dataLayer.push(arguments);}
-              window.gtag = gtag;
-              gtag('js', new Date());
-              gtag('consent', 'default', {
-                analytics_storage: 'denied',
-                ad_storage: 'denied',
-                ad_user_data: 'denied',
-                ad_personalization: 'denied',
-                wait_for_update: 500
-              });
-              gtag('config', '${gaId}', { anonymize_ip: true });
-            `}
-          </Script>
-        </>
-      ) : null}
+      {gaId ? <AnalyticsLoader gaId={gaId} /> : null}
       {children}
       {gaId ? <CookieConsent /> : null}
     </body>

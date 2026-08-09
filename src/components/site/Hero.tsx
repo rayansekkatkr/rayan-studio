@@ -1,6 +1,6 @@
 "use client";
 
-import { motion, useReducedMotion } from "framer-motion";
+import { motion } from "framer-motion";
 import { ArrowRight, CheckCircle2, Search, Server, Sparkles } from "lucide-react";
 import { trackEvent } from "@/lib/analytics";
 import { isEnglish, type Locale } from "@/lib/i18n";
@@ -74,7 +74,6 @@ const introItem = {
 export function Hero({ locale = "fr" }: { locale?: Locale }) {
   const en = isEnglish(locale);
   const t = en ? copy.en : copy.fr;
-  const reducedMotion = useReducedMotion();
 
   return (
     <section
@@ -224,16 +223,14 @@ export function Hero({ locale = "fr" }: { locale?: Locale }) {
         </motion.div>
       </motion.div>
 
-      <motion.a
+      <a
         href={`/${locale}#services`}
         aria-label={t.scroll}
         className="absolute bottom-3 right-5 z-20 hidden items-center gap-3 text-[10px] font-black uppercase tracking-[0.2em] text-[#63584d] md:flex"
-        animate={reducedMotion ? undefined : { y: [0, 7, 0] }}
-        transition={{ duration: 2.6, repeat: Infinity, ease: "easeInOut" }}
       >
         <span>{t.scroll}</span>
         <span className="h-10 w-px bg-current" />
-      </motion.a>
+      </a>
     </section>
   );
 }
