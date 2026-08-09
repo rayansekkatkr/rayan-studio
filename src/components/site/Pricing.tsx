@@ -3,7 +3,7 @@
 import { motion } from "framer-motion";
 import { ArrowRight, Check, Sparkles, X } from "lucide-react";
 import type { FormEvent } from "react";
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
@@ -166,9 +166,13 @@ export function Pricing({ locale = "fr" }: { locale?: Locale }) {
   const [errorMessage, setErrorMessage] = useState<string | null>(null);
 
   const isModalOpen = Boolean(selectedOffer && formData);
+  const modalCloseRef = useRef<HTMLButtonElement>(null);
+  const modalTriggerRef = useRef<HTMLElement | null>(null);
 
   useEffect(() => {
     if (!isModalOpen) return;
+
+    modalCloseRef.current?.focus();
 
     const handleKeyDown = (event: KeyboardEvent) => {
       if (event.key === "Escape") {
@@ -183,12 +187,14 @@ export function Pricing({ locale = "fr" }: { locale?: Locale }) {
     return () => {
       document.removeEventListener("keydown", handleKeyDown);
       document.body.style.overflow = "";
+      modalTriggerRef.current?.focus();
     };
   }, [isModalOpen]);
 
   function openPricingModal(offerKey: PricingOfferKey) {
     const defaults = buildPricingLeadDefaults(offerKey, locale) as PricingLeadForm;
 
+    modalTriggerRef.current = document.activeElement as HTMLElement | null;
     setSelectedOffer(offerKey);
     setFormData(defaults);
     setIsSent(false);
@@ -330,7 +336,7 @@ export function Pricing({ locale = "fr" }: { locale?: Locale }) {
 
         <Reveal delay={0.14}>
           <div className="mt-7 rounded-none border border-[#2a231d]/14 bg-[linear-gradient(145deg,rgba(255,250,240,0.95),rgba(232,224,210,0.78))] p-4 shadow-[8px_8px_0_rgba(42,35,29,0.09)] sm:p-5">
-            <p className="text-xs font-black uppercase tracking-[0.12em] text-[#d94f2b]">
+            <p className="text-xs font-black uppercase tracking-[0.12em] text-[#c2461f]">
               {en ? "Optional recurring support" : "Support récurrent optionnel"}
             </p>
             <h3 className="font-display mt-2 text-xl font-semibold text-[#17120f] sm:text-2xl">{maintenance.title}</h3>
@@ -373,7 +379,7 @@ export function Pricing({ locale = "fr" }: { locale?: Locale }) {
           >
             <div className="grid border-b border-[#2a231d]/14 bg-[linear-gradient(135deg,rgba(255,250,240,1),rgba(245,241,232,0.92))] sm:grid-cols-[0.9fr_1.1fr]">
               <div className="border-b border-[#2a231d]/14 p-5 sm:border-b-0 sm:border-r sm:p-6">
-                <p className="text-[10px] font-black uppercase tracking-[0.18em] text-[#d94f2b]">
+                <p className="text-[10px] font-black uppercase tracking-[0.18em] text-[#c2461f]">
                   {en ? "Selected option" : "Option choisie"}
                 </p>
                 <h3 id="pricing-modal-title" className="font-display mt-3 text-3xl font-semibold text-[#17120f]">
@@ -413,9 +419,10 @@ export function Pricing({ locale = "fr" }: { locale?: Locale }) {
                     </h4>
                   </div>
                   <button
+                    ref={modalCloseRef}
                     type="button"
                     onClick={closePricingModal}
-                    className="inline-flex h-10 w-10 shrink-0 items-center justify-center rounded-none border border-[#2a231d]/14 bg-[#f5f1e8] text-[#17120f] transition hover:-translate-y-0.5 hover:bg-[#fffaf0]"
+                    className="inline-flex h-11 w-11 shrink-0 items-center justify-center rounded-none border border-[#2a231d]/14 bg-[#f5f1e8] text-[#17120f] transition hover:-translate-y-0.5 hover:bg-[#fffaf0]"
                     aria-label={en ? "Close" : "Fermer"}
                   >
                     <X size={17} />
@@ -429,6 +436,7 @@ export function Pricing({ locale = "fr" }: { locale?: Locale }) {
                     </label>
                     <Input
                       id="pricing-firstName"
+                      autoComplete="given-name"
                       value={formData.firstName}
                       placeholder="Marie"
                       onChange={(event) => setFormData((prev) => prev ? { ...prev, firstName: event.target.value } : prev)}
@@ -456,6 +464,7 @@ export function Pricing({ locale = "fr" }: { locale?: Locale }) {
                   <Input
                     id="pricing-email"
                     type="email"
+                    autoComplete="email"
                     value={formData.email}
                     placeholder={en ? "you@business.com" : "vous@commerce.fr"}
                     onChange={(event) => setFormData((prev) => prev ? { ...prev, email: event.target.value } : prev)}
@@ -470,6 +479,7 @@ export function Pricing({ locale = "fr" }: { locale?: Locale }) {
                   <Input
                     id="pricing-siteUrl"
                     type="url"
+                    autoComplete="url"
                     value={formData.siteUrl}
                     placeholder={en ? "https://your-business.com" : "https://votre-entreprise.fr"}
                     onChange={(event) => setFormData((prev) => prev ? { ...prev, siteUrl: event.target.value } : prev)}
@@ -517,7 +527,7 @@ export function Pricing({ locale = "fr" }: { locale?: Locale }) {
                 </p>
 
                 {isSent ? (
-                  <p className="rounded-none border border-[#2a231d]/14 bg-[#f5f1e8] px-3 py-2 text-sm font-bold text-[#17120f]">
+                  <p role="status" className="rounded-none border border-[#2a231d]/14 bg-[#f5f1e8] px-3 py-2 text-sm font-bold text-[#17120f]">
                     {en
                       ? "Thanks, your request has been sent. I will reply very soon."
                       : "Merci, votre demande est bien envoyée. Je vous réponds très vite."}
@@ -525,7 +535,7 @@ export function Pricing({ locale = "fr" }: { locale?: Locale }) {
                 ) : null}
 
                 {errorMessage ? (
-                  <p className="rounded-none border border-rose-200 bg-rose-50 px-3 py-2 text-sm font-medium text-rose-700">
+                  <p role="alert" className="rounded-none border border-rose-200 bg-rose-50 px-3 py-2 text-sm font-medium text-rose-700">
                     {errorMessage}
                   </p>
                 ) : null}

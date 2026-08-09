@@ -104,7 +104,7 @@ export function Services({ locale = "fr" }: { locale?: Locale }) {
                           <service.icon size={19} />
                         </span>
                         <div>
-                          <p className="text-[11px] font-black uppercase tracking-[0.14em] text-[#d94f2b]">
+                          <p className="text-[11px] font-black uppercase tracking-[0.14em] text-[#c2461f]">
                             {service.tag}
                           </p>
                           <h3 className="font-display mt-1 text-2xl font-semibold text-[#17120f]">{service.title}</h3>
@@ -130,7 +130,7 @@ export function Services({ locale = "fr" }: { locale?: Locale }) {
                           transition={{ duration: 0.45, delay: itemIndex * 0.06, ease: [0.22, 1, 0.36, 1] }}
                           className="flex items-center gap-2.5 rounded-none border border-[#2a231d]/12 bg-[#f5f1e8] px-4 py-3 text-sm font-bold text-[#342b24]"
                         >
-                          <CheckCircle2 size={16} className="text-[#d94f2b]" />
+                          <CheckCircle2 size={16} className="text-[#c2461f]" />
                           {outcome}
                         </motion.div>
                       ))}

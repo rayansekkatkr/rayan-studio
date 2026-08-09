@@ -99,7 +99,7 @@ export function Hero({ locale = "fr" }: { locale?: Locale }) {
         <div className="min-w-0 py-3 md:py-4 lg:py-0">
           <motion.p
             variants={introItem}
-            className="inline-flex max-w-full border border-[#2a231d]/12 bg-[#fffaf0]/78 px-3 py-1.5 text-[10px] font-black uppercase leading-relaxed tracking-[0.16em] text-[#d94f2b] shadow-[3px_3px_0_rgba(42,35,29,0.1)] md:text-[11px]"
+            className="inline-flex max-w-full border border-[#2a231d]/12 bg-[#fffaf0]/78 px-3 py-1.5 text-[10px] font-black uppercase leading-relaxed tracking-[0.16em] text-[#c2461f] shadow-[3px_3px_0_rgba(42,35,29,0.1)] md:text-[11px]"
           >
             {t.label}
           </motion.p>
@@ -159,7 +159,7 @@ export function Hero({ locale = "fr" }: { locale?: Locale }) {
 
           <div className="mb-2.5 flex flex-wrap items-center justify-between gap-2 border-b border-[#2a231d]/12 pb-2.5">
             <div>
-              <p className="text-[10px] font-black uppercase tracking-[0.18em] text-[#d94f2b]">{t.dossierTitle}</p>
+              <p className="text-[10px] font-black uppercase tracking-[0.18em] text-[#c2461f]">{t.dossierTitle}</p>
               <p className="font-display text-lg font-semibold leading-tight text-[#17120f]">{t.dossierSubtitle}</p>
             </div>
             <p className="border border-[#2a231d]/14 bg-[#f5f1e8] px-2.5 py-1 text-[10px] font-black uppercase tracking-[0.12em] text-[#63584d]">
@@ -178,7 +178,7 @@ export function Hero({ locale = "fr" }: { locale?: Locale }) {
                 <Search size={17} />
               </span>
               <div>
-                <p className="text-[10px] font-black uppercase tracking-[0.18em] text-[#d94f2b]">
+                <p className="text-[10px] font-black uppercase tracking-[0.18em] text-[#c2461f]">
                   {t.diagnosticTitle}
                 </p>
                 <p className="font-display text-base font-semibold text-[#17120f]">
@@ -190,7 +190,7 @@ export function Hero({ locale = "fr" }: { locale?: Locale }) {
             <div className="mt-2.5 grid gap-2 sm:grid-cols-3">
               {t.diagnosticItems.map((item) => (
                 <div key={item} className="flex items-center gap-2 border border-[#2a231d]/12 bg-[#fffaf0] px-2.5 py-2 text-xs font-semibold text-[#342b24]">
-                  <CheckCircle2 size={15} className="text-[#d94f2b]" />
+                  <CheckCircle2 size={15} className="text-[#c2461f]" />
                   {item}
                 </div>
               ))}
@@ -257,7 +257,7 @@ function AuditPanel({
           : "border-[#2a231d]/16 bg-[#f5f1e8] text-[#17120f]"
       }`}
     >
-      <p className={`text-[10px] font-black uppercase tracking-[0.18em] ${dark ? "text-[#f0a064]" : "text-[#d94f2b]"}`}>
+      <p className={`text-[10px] font-black uppercase tracking-[0.18em] ${dark ? "text-[#f0a064]" : "text-[#c2461f]"}`}>
         {title}
       </p>
       <div className="mt-3 space-y-1.5">
@@ -268,7 +268,7 @@ function AuditPanel({
               dark ? "border-white/14 bg-white/7 text-[#f7ead8]" : "border-[#2a231d]/12 bg-[#fffaf0] text-[#342b24]"
             }`}
           >
-            <span className={`text-xs font-black ${dark ? "text-[#f0a064]" : "text-[#d94f2b]"}`}>
+            <span className={`text-xs font-black ${dark ? "text-[#f0a064]" : "text-[#c2461f]"}`}>
               0{index + 1}
             </span>
             {item}

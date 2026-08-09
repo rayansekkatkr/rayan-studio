@@ -109,6 +109,9 @@ export function RootBody({ children }: { children: React.ReactNode }) {
 
   return (
     <body className={`${bodyFont.variable} ${displayFont.variable} antialiased`}>
+      <a href="#main-content" className="skip-link">
+        Aller au contenu principal
+      </a>
       {gaId ? (
         <>
           <Script src={`https://www.googletagmanager.com/gtag/js?id=${gaId}`} strategy="afterInteractive" />

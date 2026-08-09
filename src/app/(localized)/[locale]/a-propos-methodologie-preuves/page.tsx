@@ -1,5 +1,7 @@
 import type { Metadata } from "next";
 import { redirect } from "next/navigation";
+import { Footer } from "@/components/site/Footer";
+import { Navbar } from "@/components/site/Navbar";
 import { BRAND, getSiteUrl } from "@/lib/brand";
 import { isEnglish, normalizeLocale, type Locale } from "@/lib/i18n";
 
@@ -119,10 +121,12 @@ export default function AboutMethodPage({ params }: { params: { locale: string }
   };
 
   return (
-    <main className="min-h-screen px-4 pb-14 pt-28 md:px-8">
+    <>
+      <Navbar locale={locale} />
+      <main id="main-content" className="min-h-screen px-4 pb-14 pt-28 md:px-8">
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }} />
       <div className="mx-auto max-w-5xl">
-        <p className="inline-flex rounded-none border border-[#2a231d]/14 bg-[#fffaf0] px-3 py-1 text-xs font-black uppercase tracking-[0.12em] text-[#d94f2b] shadow-[3px_3px_0_rgba(42,35,29,0.08)]">
+        <p className="inline-flex rounded-none border border-[#2a231d]/14 bg-[#fffaf0] px-3 py-1 text-xs font-black uppercase tracking-[0.12em] text-[#c2461f] shadow-[3px_3px_0_rgba(42,35,29,0.08)]">
           {BRAND.name}
         </p>
         <h1 className="font-display mt-5 text-4xl font-semibold text-[#17120f] md:text-5xl">
@@ -200,12 +204,14 @@ export default function AboutMethodPage({ params }: { params: { locale: string }
           </p>
           <p className="mt-2 text-sm text-[#63584d]">
             {en ? "Direct contact:" : "Contact direct:"}{" "}
-            <a href={BRAND.whatsappUrl} target="_blank" rel="noreferrer" className="font-semibold text-[#d94f2b] underline">
+            <a href={BRAND.whatsappUrl} target="_blank" rel="noreferrer" className="font-semibold text-[#c2461f] underline">
               WhatsApp
             </a>
           </p>
         </section>
       </div>
-    </main>
+      </main>
+      <Footer locale={locale} />
+    </>
   );
 }

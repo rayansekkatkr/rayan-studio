@@ -50,7 +50,7 @@ export function TestimonialsColumn(props: {
                   />
                   <div className="flex flex-col">
                     <p className="text-sm font-black leading-5 text-[#17120f]">{name}</p>
-                    <p className="text-xs leading-5 text-[#8a7d6f]">{role}</p>
+                    <p className="text-xs leading-5 text-[#6f6355]">{role}</p>
                   </div>
                 </div>
               </article>

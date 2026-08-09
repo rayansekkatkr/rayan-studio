@@ -76,6 +76,7 @@ const SERVICE_SEO_PAGES = [
       "Le bon budget dépend rarement d'une seule page ou d'un design plus joli. Il dépend surtout de ce qu'il faut clarifier : message, parcours mobile, SEO, domaine, hébergement, formulaire et mise en ligne.",
     primaryCta: "Demander un chiffrage clair",
     secondaryCta: "Voir la checklist",
+    secondaryHref: "/fr/checklist-refonte-site-internet",
     proofLabel: "Budget lisible",
     proofValue: "Une offre cadrée avant de designer, coder ou migrer",
     sections: [
@@ -137,6 +138,7 @@ const SERVICE_SEO_PAGES = [
       "Avant de refaire un site, il faut savoir ce qui bloque vraiment. Cette checklist aide à séparer les problèmes de design, de message, de parcours client et de technique.",
     primaryCta: "Recevoir un diagnostic",
     secondaryCta: "Voir le coût d'une refonte",
+    secondaryHref: "/fr/cout-refonte-site-internet-petite-entreprise",
     proofLabel: "Avant refonte",
     proofValue: "Une liste courte pour prioriser ce qui impacte la confiance et le contact",
     sections: [
@@ -260,6 +262,7 @@ const SERVICE_SEO_PAGES = [
       "Pour une petite entreprise, le site doit aller droit au but: expliquer, rassurer, montrer le sérieux de l'activité et faciliter le contact.",
     primaryCta: "Discuter de mon site",
     secondaryCta: "Voir la méthode",
+    secondaryHref: "/fr/a-propos-methodologie-preuves",
     proofLabel: "Pensé TPE",
     proofValue: "Un interlocuteur unique pour le design, le SEO, les DNS et la mise en ligne",
     sections: [
@@ -384,6 +387,7 @@ const SERVICE_SEO_PAGES = [
       "A redesign budget is not only about a new look. It depends on the message, mobile journey, SEO base, domain, hosting, forms, redirects and launch details that need to be handled.",
     primaryCta: "Ask for a clear estimate",
     secondaryCta: "See the method",
+    secondaryHref: "/en/a-propos-methodologie-preuves",
     proofLabel: "Clear scope",
     proofValue: "A practical estimate before design, development or migration starts",
     sections: [
@@ -446,6 +450,7 @@ const SERVICE_SEO_PAGES = [
       "A small business website should be easy to understand, easy to trust and easy to contact from. The goal is not more complexity. It is more clarity.",
     primaryCta: "Discuss my website",
     secondaryCta: "See the method",
+    secondaryHref: "/en/a-propos-methodologie-preuves",
     proofLabel: "Built for small business",
     proofValue: "One direct contact for design, SEO, DNS, hosting and launch",
     sections: [

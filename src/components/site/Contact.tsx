@@ -61,7 +61,7 @@ export function Contact({ locale = "fr" }: { locale?: Locale }) {
                 onClick={() => trackEvent("email_click", { location: "contact" })}
                 className="flex items-center gap-3 rounded-none border border-[#2a231d]/14 bg-[#f5f1e8] px-4 py-3 text-sm font-bold text-[#63584d]"
               >
-                <Mail size={16} className="text-[#d94f2b]" />
+                <Mail size={16} className="text-[#c2461f]" />
                 {BRAND.email}
               </a>
               <a
@@ -71,7 +71,7 @@ export function Contact({ locale = "fr" }: { locale?: Locale }) {
                 onClick={() => trackEvent("whatsapp_click", { location: "contact" })}
                 className="flex items-center gap-3 rounded-none border border-[#2a231d]/14 bg-[#f5f1e8] px-4 py-3 text-sm font-bold text-[#63584d]"
               >
-                <Phone size={16} className="text-[#d94f2b]" />
+                <Phone size={16} className="text-[#c2461f]" />
                 {BRAND.phoneDisplay} (WhatsApp)
               </a>
               <div className="border border-[#2a231d]/14 bg-[#17120f] p-4 text-[#fffaf0]">
@@ -88,7 +88,7 @@ export function Contact({ locale = "fr" }: { locale?: Locale }) {
                 </div>
               </div>
               <div className="border border-[#2a231d]/14 bg-[#f5f1e8] p-4">
-                <p className="text-[10px] font-black uppercase tracking-[0.16em] text-[#d94f2b]">
+                <p className="text-[10px] font-black uppercase tracking-[0.16em] text-[#c2461f]">
                   {en ? "Diagnosis deliverable" : "Livrable diagnostic"}
                 </p>
                 <p className="mt-2 text-sm font-semibold text-[#342b24]">
@@ -99,7 +99,7 @@ export function Contact({ locale = "fr" }: { locale?: Locale }) {
                 <div className="mt-3 grid gap-2">
                   {diagnosticDeliverables.map((point) => (
                     <div key={point} className="flex items-start gap-2 text-sm font-semibold text-[#63584d]">
-                      <CheckCircle2 size={15} className="mt-0.5 shrink-0 text-[#d94f2b]" />
+                      <CheckCircle2 size={15} className="mt-0.5 shrink-0 text-[#c2461f]" />
                       <span>{point}</span>
                     </div>
                   ))}
@@ -193,6 +193,7 @@ export function Contact({ locale = "fr" }: { locale?: Locale }) {
                     </label>
                     <Input
                       id="firstName"
+                      autoComplete="given-name"
                       placeholder={en ? "Marie" : "Marie"}
                       value={formData.firstName}
                       onChange={(event) => setFormData((prev) => ({ ...prev, firstName: event.target.value }))}
@@ -220,6 +221,7 @@ export function Contact({ locale = "fr" }: { locale?: Locale }) {
                   <Input
                     id="email"
                     type="email"
+                    autoComplete="email"
                     placeholder={en ? "you@business.com" : "vous@commerce.fr"}
                     value={formData.email}
                     onChange={(event) => setFormData((prev) => ({ ...prev, email: event.target.value }))}
@@ -234,6 +236,7 @@ export function Contact({ locale = "fr" }: { locale?: Locale }) {
                   <Input
                     id="siteUrl"
                     type="url"
+                    autoComplete="url"
                     placeholder={en ? "https://your-business.com" : "https://votre-entreprise.fr"}
                     value={formData.siteUrl}
                     onChange={(event) => setFormData((prev) => ({ ...prev, siteUrl: event.target.value }))}
@@ -280,14 +283,14 @@ export function Contact({ locale = "fr" }: { locale?: Locale }) {
                 </p>
 
                 {isSent ? (
-                  <p className="rounded-none border border-[#2a231d]/14 bg-[#f5f1e8] px-3 py-2 text-sm font-bold text-[#17120f]">
+                  <p role="status" className="rounded-none border border-[#2a231d]/14 bg-[#f5f1e8] px-3 py-2 text-sm font-bold text-[#17120f]">
                     {en
                       ? "Thank you, your request has been sent successfully. I'll reply very soon."
                       : "Merci, votre demande est bien envoyée. Je vous réponds très vite."}
                   </p>
                 ) : null}
                 {errorMessage ? (
-                  <p className="rounded-none border border-rose-200 bg-rose-50 px-3 py-2 text-sm font-medium text-rose-700">
+                  <p role="alert" className="rounded-none border border-rose-200 bg-rose-50 px-3 py-2 text-sm font-medium text-rose-700">
                     {errorMessage}
                   </p>
                 ) : null}

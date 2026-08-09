@@ -43,7 +43,7 @@ export function CookieConsent() {
           ? "We use analytics cookies to improve the website. You can accept or decline these cookies."
           : "Nous utilisons des cookies de mesure d'audience pour améliorer le site. Vous pouvez accepter ou refuser ces cookies."}
         {" "}
-        <Link href="/politique-confidentialite" className="font-black text-[#d94f2b] underline underline-offset-2">
+        <Link href="/politique-confidentialite" className="font-black text-[#c2461f] underline underline-offset-2">
           {isEnglish ? "Learn more" : "En savoir plus"}
         </Link>
       </p>

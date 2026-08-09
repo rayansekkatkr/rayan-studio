@@ -131,7 +131,7 @@ export function Testimonials({ locale = "fr" }: { locale?: Locale }) {
                       className="flex min-h-[250px] flex-col justify-between rounded-none border border-[#2a231d]/14 bg-[#f5f1e8] p-4 shadow-[5px_5px_0_rgba(42,35,29,0.08)]"
                     >
                       <div>
-                        <p className="inline-flex border border-[#2a231d]/12 bg-[#fffaf0] px-2.5 py-1 text-[10px] font-black uppercase tracking-[0.14em] text-[#d94f2b]">
+                        <p className="inline-flex border border-[#2a231d]/12 bg-[#fffaf0] px-2.5 py-1 text-[10px] font-black uppercase tracking-[0.14em] text-[#c2461f]">
                           {item.label}
                         </p>
                         <h4 className="font-display mt-4 text-xl font-semibold leading-tight text-[#17120f]">{item.title}</h4>
@@ -147,7 +147,7 @@ export function Testimonials({ locale = "fr" }: { locale?: Locale }) {
                       ? "The goal is not to decorate the page with testimonials, but to show what changes in perception, clarity, and contact."
                       : "Le but n'est pas de décorer la page avec des témoignages, mais de montrer ce qui change en perception, en clarté et en contact."}
                   </p>
-                  <p className="mt-3 shrink-0 text-[11px] font-black uppercase tracking-[0.14em] text-[#8a7d6f] md:mt-0">
+                  <p className="mt-3 shrink-0 text-[11px] font-black uppercase tracking-[0.14em] text-[#6f6355] md:mt-0">
                     {en ? "Post-delivery reading" : "Lecture post-livraison"}
                   </p>
                 </div>

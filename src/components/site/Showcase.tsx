@@ -167,7 +167,7 @@ function ProjectThumb({
         <span
           className={cn(
             "mt-0.5 truncate text-[10px] uppercase tracking-[0.08em] transition-colors",
-            isActive ? "text-[#fffaf0]/60" : "text-[#8a7d6f]",
+            isActive ? "text-[#fffaf0]/60" : "text-[#6f6355]",
           )}
         >
           {designation}
@@ -228,7 +228,7 @@ export function Showcase({ locale = "fr" }: { locale?: Locale }) {
                 </span>
                 {en ? "Active project" : "Projet actif"}
               </span>
-              <span className="text-[11px] font-black uppercase tracking-[0.14em] tabular-nums text-[#8a7d6f]">
+              <span className="text-[11px] font-black uppercase tracking-[0.14em] tabular-nums text-[#6f6355]">
                 0{activeIndex + 1} <span className="text-[#bdb09e]">/ 0{projects.length}</span>
               </span>
             </div>
@@ -264,7 +264,7 @@ export function Showcase({ locale = "fr" }: { locale?: Locale }) {
 
                 {/* Meta */}
                 <div className="flex flex-col">
-                  <p className="text-[10px] font-black uppercase tracking-[0.16em] text-[#8a7d6f]">
+                  <p className="text-[10px] font-black uppercase tracking-[0.16em] text-[#6f6355]">
                     {en ? "Project in focus" : "Projet en focus"}
                   </p>
                   <div className="mt-1.5 flex flex-wrap items-baseline gap-x-3 gap-y-1">
@@ -283,14 +283,14 @@ export function Showcase({ locale = "fr" }: { locale?: Locale }) {
                       exit={{ opacity: 0, y: -40 }}
                       transition={{ type: "spring", duration: 0.58, bounce: 0 }}
                     />
-                    <span className="inline-flex rounded-none border border-[#2a231d]/14 bg-[#f5f1e8] px-2 py-0.5 text-[10px] font-black uppercase tracking-[0.1em] text-[#d94f2b]">
+                    <span className="inline-flex rounded-none border border-[#2a231d]/14 bg-[#f5f1e8] px-2 py-0.5 text-[10px] font-black uppercase tracking-[0.1em] text-[#c2461f]">
                       {activeProject.segment}
                     </span>
                   </div>
-                  <p className="mt-1 text-xs font-medium text-[#8a7d6f]">{activeProject.designation}</p>
+                  <p className="mt-1 text-xs font-medium text-[#6f6355]">{activeProject.designation}</p>
                   <p className="mt-2.5 text-sm leading-relaxed text-[#63584d]">{activeProject.quote}</p>
 
-                  <p className="mt-3 text-[10px] font-black uppercase tracking-[0.14em] text-[#8a7d6f]">
+                  <p className="mt-3 text-[10px] font-black uppercase tracking-[0.14em] text-[#6f6355]">
                     {en ? "What was worked on" : "Ce qui a été travaillé"}
                   </p>
                   <div className="mt-1.5 flex flex-wrap gap-1.5">
@@ -335,10 +335,10 @@ export function Showcase({ locale = "fr" }: { locale?: Locale }) {
               {/* Visual selector */}
               <div className="flex flex-col p-4 md:p-5">
                 <div className="mb-2.5 flex items-center justify-between px-0.5">
-                  <p className="text-[11px] font-black uppercase tracking-[0.14em] text-[#8a7d6f]">
+                  <p className="text-[11px] font-black uppercase tracking-[0.14em] text-[#6f6355]">
                     {en ? "Visual selection" : "Sélection visuelle"}
                   </p>
-                  <span className="inline-flex items-center gap-1 text-[11px] font-black uppercase tracking-[0.1em] text-[#d94f2b]">
+                  <span className="inline-flex items-center gap-1 text-[11px] font-black uppercase tracking-[0.1em] text-[#c2461f]">
                     {en ? "Click to switch" : "Cliquer pour changer"}
                     <ArrowUpRight size={12} />
                   </span>

@@ -73,6 +73,13 @@ export function HomePage({ locale }: { locale: Locale }) {
     "@context": "https://schema.org",
     "@graph": [
       {
+        "@type": "Person",
+        "@id": `${siteUrl}#founder`,
+        name: BRAND.founder,
+        email: BRAND.email,
+        worksFor: { "@id": `${siteUrl}#professional-service` },
+      },
+      {
         "@type": "ProfessionalService",
         "@id": `${siteUrl}#professional-service`,
         name: BRAND.name,
@@ -84,27 +91,35 @@ export function HomePage({ locale }: { locale: Locale }) {
           "@type": "City",
           name: city,
         })),
-        address: {
-          "@type": "PostalAddress",
-          addressCountry: "FR",
-        },
         availableLanguage: ["fr", "en"],
         email: BRAND.email,
         telephone: BRAND.phoneRaw,
         priceRange: "€€",
-        founder: {
-          "@type": "Person",
-          name: BRAND.founder,
+        founder: { "@id": `${siteUrl}#founder` },
+        contactPoint: {
+          "@type": "ContactPoint",
+          contactType: "customer service",
+          telephone: BRAND.phoneRaw,
+          email: BRAND.email,
+          url: BRAND.whatsappUrl,
+          availableLanguage: ["fr", "en"],
         },
-        sameAs: [BRAND.whatsappUrl],
       },
       {
-        "@type": "LocalBusiness",
-        "@id": `${siteUrl}#local-business`,
+        "@type": "WebSite",
+        "@id": `${siteUrl}#website`,
         name: BRAND.name,
+        url: siteUrl,
+        inLanguage: ["fr", "en"],
+        publisher: { "@id": `${siteUrl}#professional-service` },
+      },
+      {
+        "@type": "WebPage",
+        "@id": `${siteUrl}/${locale}#webpage`,
         url: `${siteUrl}/${locale}`,
-        email: BRAND.email,
-        telephone: BRAND.phoneRaw,
+        inLanguage: locale,
+        isPartOf: { "@id": `${siteUrl}#website` },
+        about: { "@id": `${siteUrl}#professional-service` },
       },
       {
         "@type": "Service",
@@ -131,7 +146,7 @@ export function HomePage({ locale }: { locale: Locale }) {
   };
 
   return (
-    <main className="relative min-h-screen overflow-x-hidden isolate">
+    <main id="main-content" className="relative min-h-screen overflow-x-hidden isolate">
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }} />
       <div className="pointer-events-none fixed inset-0 -z-20 hero-aurora" />
       <div className="pointer-events-none fixed inset-0 -z-10 hero-vignette" />
