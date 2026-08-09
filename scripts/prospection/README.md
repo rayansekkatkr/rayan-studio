@@ -100,6 +100,13 @@ appel Resend. Le rapport de sortie ne contient que des agrégats.
 4. Vérifier le statut « verified » dans Resend, puis seulement
    `SEND_DNS_VERIFIED=true`.
 
+## Avant les premiers envois réels (en plus de la procédure ci-dessous)
+
+- Épinglage IP anti-DNS-rebinding dans le crawler (mitigation partielle
+  actuelle : double résolution validée).
+- Revue manuelle des premiers `verifyWebsiteMatch` : les noms très
+  génériques peuvent encore produire un mauvais rapprochement.
+
 ## Procédure d'activation (dans cet ordre, jamais autrement)
 
 1. Import legacy exécuté et vérifié (comptes attendus).
@@ -139,7 +146,7 @@ Québec (CASL), Maroc, Tunisie : désactivés, travaux dédiés requis.
 
 ## Garanties de test
 
-`npm test` (scripts/) : 123 tests dont identité multi-sources, dédup
+`npm test` (scripts/) : 124 tests dont identité multi-sources, dédup
 legacy, SSRF (IPv4/IPv6/redirections), minimisation LLM, injection,
 réservation atomique, retry même clé, POSSIBLY_SENT, signatures webhook.
 En CI, un service Postgres exécute aussi la migration base vide/existante.

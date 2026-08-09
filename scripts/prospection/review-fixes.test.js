@@ -187,3 +187,17 @@ test('ingestCandidate ATTACH : une entreprise sans domaine reçoit son domaine v
   assert.equal(result.outcome, 'attached');
   assert.deepEqual(state.domainUpdates, [{ id: 'b1', domain: 'epidor.fr' }]);
 });
+
+// Round 3 — pas de placeholder dans l'objet
+const { validateLlmOutput: validateR3 } = require('./qualify');
+test('validateLlmOutput rejette un placeholder dans l\'objet', () => {
+  const body = Array(75).fill('mot').join(' ') + ' {{business_name}} {{offer_link}}';
+  const out = {
+    decision: 'send', campaign: 'refonte',
+    observation: 'Le site n\'est pas servi en HTTPS, constat vérifiable.',
+    evidence_url: 'https://x.fr/', confidence: 0.9,
+    subject: 'Un mot pour {{business_name}}', body,
+  };
+  const result = validateR3(out, { campaignCandidate: 'refonte', evidenceUrls: ['https://x.fr/'] });
+  assert.equal(result.reason, 'placeholder_in_subject');
+});

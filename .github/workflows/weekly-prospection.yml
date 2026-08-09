@@ -59,10 +59,16 @@ jobs:
           RESEND_REPLY_TO: ${{ vars.RESEND_REPLY_TO }}
           RESEND_WEBHOOK_SECRET: ${{ secrets.RESEND_WEBHOOK_SECRET }}
           # Envoi réel : décision explicite via variables du dépôt, jamais
-          # via un input de workflow. dry_run=true force le mode brouillon.
+          # via un input de workflow. Table de vérité de DRY_RUN :
+          #   SEND_ENABLED != 'true'                       -> 'true'  (toujours dry-run)
+          #   schedule + SEND_ENABLED='true'               -> 'false' (envoi réel)
+          #   dispatch + dry_run coché                     -> 'true'
+          #   dispatch + dry_run décoché + envoi activé    -> 'false'
+          # (sur schedule, inputs.dry_run n'existe pas : la 1re clause
+          #  garantit le dry-run tant que l'envoi n'est pas activé)
           SEND_ENABLED: ${{ vars.SEND_ENABLED }}
           SEND_DNS_VERIFIED: ${{ vars.SEND_DNS_VERIFIED }}
           ENABLED_COUNTRIES: ${{ vars.ENABLED_COUNTRIES }}
-          DRY_RUN: ${{ github.event_name == 'schedule' && vars.SEND_ENABLED == 'true' && 'false' || inputs.dry_run == false && 'false' || 'true' }}
+          DRY_RUN: ${{ vars.SEND_ENABLED != 'true' && 'true' || github.event_name == 'workflow_dispatch' && inputs.dry_run == true && 'true' || 'false' }}
           MAX_SENDS: ${{ inputs.max_sends || '20' }}
         run: node prospection/run.js

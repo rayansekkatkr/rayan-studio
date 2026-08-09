@@ -127,6 +127,7 @@ function validateLlmOutput(output, { campaignCandidate, evidenceUrls }) {
   if (!subject || subject.length > 60 || /\p{Extended_Pictographic}/u.test(subject)) {
     return { valid: false, reason: 'subject' };
   }
+  if (subject.includes('{{')) return { valid: false, reason: 'placeholder_in_subject' };
   if (!body) return { valid: false, reason: 'body_missing' };
 
   const words = body.trim().split(/\s+/).length;
@@ -171,8 +172,13 @@ async function qualifyProspect(input, fetcher = fetch) {
   if (!model) throw new Error('OPENAI_MODEL manquant (jamais de modèle par défaut codé en dur).');
 
   const payload = buildLlmPayload(input);
-  const response = await fetcher('https://api.openai.com/v1/chat/completions', {
+  const controller = new AbortController();
+  const timer = setTimeout(() => controller.abort(), 30_000);
+  let response;
+  try {
+    response = await fetcher('https://api.openai.com/v1/chat/completions', {
     method: 'POST',
+    signal: controller.signal,
     headers: { Authorization: `Bearer ${apiKey}`, 'Content-Type': 'application/json' },
     body: JSON.stringify({
       model,
@@ -184,6 +190,9 @@ async function qualifyProspect(input, fetcher = fetch) {
       ],
     }),
   });
+  } finally {
+    clearTimeout(timer);
+  }
   if (!response.ok) throw new Error(`OpenAI ${response.status}`);
   const data = await response.json();
   let parsed;
