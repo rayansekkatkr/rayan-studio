@@ -1,6 +1,6 @@
 {
-  "runAt": "2026-08-10T09:42:11.914Z",
-  "status": "no_candidates",
+  "runAt": "2026-08-11T09:08:45.372Z",
+  "status": "ready",
   "sourceMode": "default_platforms",
   "sourceCount": 18,
   "sources": [
@@ -149,11 +149,11 @@
       "autoDiscovered": true
     }
   ],
-  "scannedOpportunities": 246,
-  "scoredCandidateCount": 76,
+  "scannedOpportunities": 258,
+  "scoredCandidateCount": 82,
   "remotePolicy": "explicit_remote_only",
-  "remoteRejectedCount": 76,
-  "candidateCount": 0,
+  "remoteRejectedCount": 81,
+  "candidateCount": 1,
   "maxOpportunities": 30,
   "minScore": 35,
   "nextStep": "Review candidates from the automatic platform catalog, then paste the proposalDraft into the platform.",
@@ -179,6 +179,31 @@
       "note": "Approche manuelle, ton humain, pas de message automatique en masse."
     }
   ],
-  "candidates": [],
+  "candidates": [
+    {
+      "source": "Codeur - remote full stack web developer",
+      "sourceUrl": "https://www.codeur.com/projects?keywords=remote%20full%20stack%20web%20developer",
+      "platform": "codeur",
+      "searchQuery": "remote full stack web developer",
+      "remoteGuaranteed": false,
+      "title": "Recherche formateur Bootcamp Agents IA / RAG / MCP / Claude / Mistral Il y a 20 heures Ouvert 1 000 € à 10 000 € 26 Offres 4616 Vues Nous recherchons un formateur / coach senior en agents IA pour accompagner notre équipe de développement dans un bootcamp distanciel orienté réalisation. Contexte : nous développons une plateforme ERP / IA pour TPE, basée sur Node.js, TypeScript, ... Formation Machine Learning ChatGPT +21 Herve Bansay Akli Lacene Hugo Battoue Latika Sood Lucas Kacem De Vincenzi",
+      "description": "",
+      "sourceDescription": "Découvrez les derniers projets disponibles sur Codeur.com et trouvez plus de cent nouvelles missions en freelance chaque jour.",
+      "url": "https://www.codeur.com/projects/488039-recherche-formateur-bootcamp-agents-ia-rag-mcp-claude-mistral",
+      "extractionMethod": "anchor",
+      "score": 70,
+      "fit": "high",
+      "reasons": [
+        "profil full-stack/platform",
+        "automation, paiement ou integration",
+        "profil TPE/local",
+        "budget mentionne"
+      ],
+      "remoteOnly": true,
+      "remoteStatus": "remote",
+      "remoteReason": "teletravail explicite dans la mission",
+      "proposalDraft": "Bonjour,\n\nJ'ai vu votre mission \"Recherche formateur Bootcamp Agents IA / RAG / MCP / Claude / Mistral\". Je peux vous aider sur la partie site.\n\nJe commencerais par clarifier la structure et les priorites, puis je peux prendre en charge la maquette, le developpement, le responsive, le SEO de depart, le domaine/DNS et la mise en ligne.\n\nQuelques exemples de mon travail: https://www.rayanstudios.com/fr\n\nSi vous avez l'URL actuelle, 2-3 references ou une contrainte de delai/budget, je peux vous repondre avec un perimetre concret et une estimation plus precise.\n\nBonne journee,\nRayan\nMission: https://www.codeur.com/projects/488039-recherche-formateur-bootcamp-agents-ia-rag-mcp-claude-mistral"
+    }
+  ],
   "errors": []
 }
