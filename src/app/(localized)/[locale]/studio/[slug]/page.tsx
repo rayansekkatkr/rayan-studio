@@ -97,13 +97,14 @@ function buildFaqJsonLd(locale: Locale) {
   };
 }
 
-export function generateMetadata({
+export async function generateMetadata({
   params,
 }: {
-  params: { locale: string; slug: string };
-}): Metadata {
-  const locale = normalizeLocale(params.locale) as Locale;
-  const key = resolveStudioSlug(locale, params.slug);
+  params: Promise<{ locale: string; slug: string }>;
+}): Promise<Metadata> {
+  const p = await params;
+  const locale = normalizeLocale(p.locale) as Locale;
+  const key = resolveStudioSlug(locale, p.slug);
   if (!key) return {};
   const meta = PAGE_META[key][locale];
   const otherLocale: Locale = locale === "fr" ? "en" : "fr";
@@ -125,9 +126,10 @@ const PAGES: Record<StudioPageKey, (locale: Locale) => React.ReactNode> = {
   faq: (locale) => <FaqPage locale={locale} />,
 };
 
-export default function Page({ params }: { params: { locale: string; slug: string } }) {
-  const locale = normalizeLocale(params.locale) as Locale;
-  const key = resolveStudioSlug(locale, params.slug);
+export default async function Page({ params }: { params: Promise<{ locale: string; slug: string }> }) {
+  const p = await params;
+  const locale = normalizeLocale(p.locale) as Locale;
+  const key = resolveStudioSlug(locale, p.slug);
   if (!key) notFound();
   const siteUrl = getSiteUrl();
   const fr = locale === "fr";

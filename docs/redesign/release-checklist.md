@@ -1,5 +1,13 @@
 # Rayan Studio redesign release checklist
 
+## Framework security
+- Next.js upgraded from 14.2.35 to 15.5.21 (maintenance LTS) with React 19.2.8 before release.
+- App Router params/headers migrated to the async Next 15 APIs (no sync compat shim retained).
+- Transitive advisories remediated via npm overrides: postcss deduped to 8.5.26, sharp forced to 0.35.3.
+- No high or critical vulnerabilities reported by `npm audit --omit=dev` at release verification
+  time (0 critical / 0 high / 0 moderate / 0 low against the official npm registry).
+- The full production gate below was re-run on Next 15.5.21.
+
 Date: 2026-08-12. Every result below is the actual outcome of the Lot 06 final clean gate
 (fresh `npm ci` after `rm -rf node_modules .next`), with the E2E and smoke runs executed
 against the production build (`next start`, port 3000), not the dev server.

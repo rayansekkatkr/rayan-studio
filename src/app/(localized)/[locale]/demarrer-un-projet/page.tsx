@@ -14,7 +14,7 @@ export function generateStaticParams() {
   return [{ locale: "fr" }, { locale: "en" }];
 }
 
-export function generateMetadata(): Metadata {
+export async function generateMetadata(): Promise<Metadata> {
   return buildLocalizedMetadata({
     locale: "fr",
     title: "Démarrer un projet",
@@ -25,8 +25,9 @@ export function generateMetadata(): Metadata {
   });
 }
 
-export default function Page({ params }: { params: { locale: string } }) {
-  const locale = normalizeLocale(params.locale) as Locale;
+export default async function Page({ params }: { params: Promise<{ locale: string }> }) {
+  const p = await params;
+  const locale = normalizeLocale(p.locale) as Locale;
   if (locale !== "fr") {
     redirect("/en/start-a-project");
   }

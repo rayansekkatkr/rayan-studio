@@ -22,9 +22,10 @@ export function generateStaticParams(): Params[] {
   }));
 }
 
-export function generateMetadata({ params }: { params: Params }): Metadata {
-  const sector = getSectorBySlug(params.sector);
-  const city = getCityBySlug(params.city);
+export async function generateMetadata({ params }: { params: Promise<Params> }): Promise<Metadata> {
+  const p = await params;
+  const sector = getSectorBySlug(p.sector);
+  const city = getCityBySlug(p.city);
 
   if (!sector || !city) {
     return {};
@@ -64,9 +65,10 @@ function getLocalSeoContent(
   });
 }
 
-export default function Page({ params }: { params: Params }) {
-  const sector = getSectorBySlug(params.sector);
-  const city = getCityBySlug(params.city);
+export default async function Page({ params }: { params: Promise<Params> }) {
+  const p = await params;
+  const sector = getSectorBySlug(p.sector);
+  const city = getCityBySlug(p.city);
 
   if (!sector || !city) {
     notFound();

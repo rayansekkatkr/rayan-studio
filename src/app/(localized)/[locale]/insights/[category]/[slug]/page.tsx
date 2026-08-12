@@ -21,15 +21,16 @@ export function generateStaticParams() {
   );
 }
 
-export function generateMetadata({
+export async function generateMetadata({
   params,
 }: {
-  params: { locale: string; category: string; slug: string };
-}): Metadata {
-  const locale = normalizeLocale(params.locale) as Locale;
-  const category = resolveInsightCategorySlug(locale, params.category);
+  params: Promise<{ locale: string; category: string; slug: string }>;
+}): Promise<Metadata> {
+  const p = await params;
+  const locale = normalizeLocale(p.locale) as Locale;
+  const category = resolveInsightCategorySlug(locale, p.category);
   if (!category) return {};
-  const insight = resolveInsightSlug(locale, category, params.slug);
+  const insight = resolveInsightSlug(locale, category, p.slug);
   if (!insight) return {};
   const otherLocale: Locale = locale === "fr" ? "en" : "fr";
 
@@ -42,15 +43,16 @@ export function generateMetadata({
   });
 }
 
-export default function Page({
+export default async function Page({
   params,
 }: {
-  params: { locale: string; category: string; slug: string };
+  params: Promise<{ locale: string; category: string; slug: string }>;
 }) {
-  const locale = normalizeLocale(params.locale) as Locale;
-  const category = resolveInsightCategorySlug(locale, params.category);
+  const p = await params;
+  const locale = normalizeLocale(p.locale) as Locale;
+  const category = resolveInsightCategorySlug(locale, p.category);
   if (!category) notFound();
-  const insight = resolveInsightSlug(locale, category, params.slug);
+  const insight = resolveInsightSlug(locale, category, p.slug);
   if (!insight) notFound();
   const siteUrl = getSiteUrl();
   const fr = locale === "fr";

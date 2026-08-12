@@ -69,6 +69,12 @@ Intentionally retained:
   release-lot rule "when uncertain, keep and document". Their removal is a post-release
   cleanup candidate.
 
+## Framework note (security follow-up)
+
+The release runs on Next.js 15.5.21 / React 19.2.8 (upgraded from 14.2.35 / 18.3.1 as a
+pre-merge security requirement). All App Router pages/layouts/metadata were migrated to the
+async `params` / `headers()` APIs. Production `npm audit --omit=dev`: 0 high / 0 critical.
+
 ## Not done, deliberately
 
 - No image quality reduction.

@@ -11,14 +11,15 @@ export function generateStaticParams() {
   return SUPPORTED_LOCALES.map((locale) => ({ locale }));
 }
 
-export default function LocaleLayout({
+export default async function LocaleLayout({
   children,
   params,
 }: {
   children: React.ReactNode;
-  params: { locale: string };
+  params: Promise<{ locale: string }>;
 }) {
-  const lang = SUPPORTED_LOCALES.includes(params.locale as Locale) ? (params.locale as Locale) : "fr";
+  const p = await params;
+  const lang = SUPPORTED_LOCALES.includes(p.locale as Locale) ? (p.locale as Locale) : "fr";
 
   return (
     <html lang={lang}>
