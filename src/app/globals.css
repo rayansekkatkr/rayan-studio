@@ -286,3 +286,18 @@ section[id] {
   content-visibility: auto;
   contain-intrinsic-size: auto 900px;
 }
+
+/* Homepage chapter rhythm (desktop only): flagships immersive, supporting chapters large. */
+@media (min-width: 1024px) {
+  .home-chapter-immersive {
+    min-height: 100svh;
+  }
+
+  .home-chapter-featured {
+    min-height: 88svh;
+  }
+
+  .home-chapter-large {
+    min-height: 82svh;
+  }
+}

@@ -50,24 +50,60 @@ test.describe("homepage", () => {
     });
   }
 
-  test("desktop homepage chapters fill at least one viewport", async ({ page, isMobile }) => {
+  test("desktop homepage follows the approved visual hierarchy", async ({ page, isMobile }) => {
     test.skip(isMobile, "desktop-only chapter layout");
+    // Hierarchy is calibrated for real desktop screens, not the 1280x720 default.
+    await page.setViewportSize({ width: 1440, height: 900 });
     await page.goto("/fr");
     const viewport = page.viewportSize()?.height ?? 0;
     const tolerance = 8;
 
-    for (const key of ["pick4me", "pont-facturx", "goodcall"]) {
-      const height = await page
-        .locator(`[data-featured-project="${key}"]`)
-        .evaluate((el) => el.getBoundingClientRect().height);
-      expect(height, `${key} chapter height`).toBeGreaterThanOrEqual(viewport - tolerance);
+    const heightOf = async (selector: string) =>
+      page.locator(selector).first().evaluate((el) => el.getBoundingClientRect().height);
+
+    // Editorial featured chapters: large, but below the immersive treatment.
+    for (const key of ["pick4me", "pont-facturx"]) {
+      const height = await heightOf(`[data-featured-project="${key}"]`);
+      expect(height, `${key} large`).toBeGreaterThanOrEqual(viewport * 0.8);
+      expect(height, `${key} below immersive`).toBeLessThan(viewport);
     }
-    for (const id of ["services", "studio", "method", "offers", "insights"]) {
-      const height = await page
-        .locator(`section#${id} > div`)
-        .first()
-        .evaluate((el) => el.getBoundingClientRect().height);
-      expect(height, `${id} chapter height`).toBeGreaterThanOrEqual(viewport - tolerance);
+
+    // GoodCall stays immersive: at least one viewport, may grow naturally.
+    const goodcall = await heightOf(`[data-featured-project="goodcall"]`);
+    expect(goodcall, "goodcall immersive").toBeGreaterThanOrEqual(viewport - tolerance);
+
+    // Large supporting chapters: substantial but below the flagship treatment.
+    for (const id of ["services", "studio", "offers"]) {
+      const height = await heightOf(`section#${id} > div`);
+      expect(height, `${id} substantial`).toBeGreaterThanOrEqual(viewport * 0.6);
+      expect(height, `${id} below immersive`).toBeLessThan(viewport - tolerance);
+    }
+
+    // Compact editorial sections: clearly below one viewport.
+    for (const id of ["method", "insights"]) {
+      const height = await heightOf(`section#${id} > div`);
+      expect(height, `${id} compact`).toBeLessThan(viewport - tolerance);
+      expect(height, `${id} not collapsed`).toBeGreaterThan(viewport * 0.3);
+    }
+  });
+
+  test("desktop featured work gives the product visual the dominant column", async ({
+    page,
+    isMobile,
+  }) => {
+    test.skip(isMobile, "desktop-only two-column composition");
+    await page.setViewportSize({ width: 1440, height: 900 });
+    await page.goto("/fr");
+
+    for (const key of ["pick4me", "pont-facturx"]) {
+      const section = page.locator(`[data-featured-project="${key}"]`);
+      const widthOf = (attr: string) =>
+        section.locator(`[${attr}]`).first().evaluate((el) => el.getBoundingClientRect().width);
+      const [copy, media] = await Promise.all([
+        widthOf("data-project-copy"),
+        widthOf("data-project-media"),
+      ]);
+      expect(media, `${key} media dominates copy`).toBeGreaterThan(copy);
     }
   });
 
