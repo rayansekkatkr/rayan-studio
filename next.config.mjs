@@ -1,3 +1,5 @@
+import { LEGACY_REDIRECTS } from "./config/legacy-redirects.mjs";
+
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   images: {
@@ -9,13 +11,7 @@ const nextConfig = {
     ],
   },
   async redirects() {
-    return [
-      {
-        source: "/a-propos-methodologie-preuves",
-        destination: "/fr/a-propos-methodologie-preuves",
-        permanent: true,
-      },
-    ];
+    return LEGACY_REDIRECTS;
   },
   async headers() {
     return [

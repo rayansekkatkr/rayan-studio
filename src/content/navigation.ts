@@ -1,3 +1,4 @@
+import { FEATURED_INSIGHT } from "@/content/insights";
 import { getProject } from "@/content/projects";
 import type { Locale } from "@/lib/i18n";
 import {
@@ -143,9 +144,9 @@ export function getNavigation(locale: Locale): NavMenu[] {
       ],
       featured: {
         eyebrow: "FEATURED",
-        title: fr ? "Guides pratiques" : "Practical guides",
-        href: insightPath(locale, "guides"),
-        cta: fr ? "Parcourir les guides" : "Browse guides",
+        title: FEATURED_INSIGHT.title[locale],
+        href: insightPath(locale, FEATURED_INSIGHT.category, FEATURED_INSIGHT.slug[locale]),
+        cta: fr ? "Lire le guide" : "Read the guide",
       },
     },
   ];
