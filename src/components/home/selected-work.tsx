@@ -22,7 +22,7 @@ export function SelectedWork({ locale }: { locale: Locale }) {
             key={project.key}
             data-featured-project={project.key}
             className={cn(
-              "py-[var(--rs-section-space)] lg:flex lg:min-h-[100svh] lg:items-center",
+              "home-chapter-immersive py-[var(--rs-section-space)] lg:flex lg:items-center",
               dark ? "rs-theme-dark bg-rs-bg text-rs-fg" : "bg-rs-surface text-rs-fg",
             )}
           >
