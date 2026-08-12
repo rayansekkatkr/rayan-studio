@@ -12,19 +12,19 @@ export function InsightsPreview({ locale }: { locale: Locale }) {
   const fr = locale === "fr";
 
   const entries = (["prepare-saas", "application-launch-checklist", "redesign-or-new"] as const).map(
-    (key, index) => {
+    (key) => {
       const insight = getInsight(key);
       return {
         kind: KIND_LABELS[insight.category as keyof typeof KIND_LABELS],
         title: insight.title[locale],
+        description: insight.description[locale],
         href: insightPath(locale, insight.category, insight.slug[locale]),
-        featured: index === 0,
       };
     },
   );
 
   return (
-    <div className="bg-rs-bg py-[var(--rs-section-space)] lg:flex lg:min-h-[100svh] lg:items-center">
+    <div className="bg-rs-bg py-[var(--rs-section-space)]">
       <Container>
         <Eyebrow>Insights</Eyebrow>
         <h2 className="mt-4 max-w-2xl text-3xl font-semibold tracking-tight md:text-4xl">
@@ -41,15 +41,12 @@ export function InsightsPreview({ locale }: { locale: Locale }) {
                 destination: entry.href,
                 locale,
               }}
-              className={
-                entry.featured
-                  ? "group rounded-[var(--rs-radius-md)] border border-[var(--rs-border-strong)] bg-rs-surface p-6 transition-colors duration-150 hover:border-rs-accent md:row-span-2"
-                  : "group rounded-[var(--rs-radius-md)] border border-[var(--rs-border)] bg-rs-surface p-6 transition-colors duration-150 hover:border-rs-accent"
-              }
+              className="group flex flex-col rounded-[var(--rs-radius-md)] border border-[var(--rs-border)] bg-rs-surface p-6 transition-colors duration-150 hover:border-rs-accent"
             >
               <p className="text-xs font-semibold uppercase tracking-[0.18em] text-rs-muted">{entry.kind}</p>
               <p className="mt-3 text-xl font-semibold leading-snug">{entry.title}</p>
-              <span className="mt-4 inline-flex items-center gap-1 text-sm font-medium text-rs-accent">
+              <p className="mt-3 text-sm leading-relaxed text-rs-muted">{entry.description}</p>
+              <span className="mt-auto inline-flex items-center gap-1 pt-4 text-sm font-medium text-rs-accent">
                 {fr ? "Lire" : "Read"}
                 <ArrowUpRight
                   aria-hidden
