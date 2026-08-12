@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { CommercialPageShell } from "@/components/layout/commercial-page-shell";
 import { InsightArticle } from "@/components/insights/insight-article";
+import { buildInsightBreadcrumbItems } from "@/components/insights/insight-breadcrumb";
 import { INSIGHTS, resolveInsightSlug } from "@/content/insights";
 import { BRAND, getSiteUrl } from "@/lib/brand";
 import { SUPPORTED_LOCALES, normalizeLocale, type Locale } from "@/lib/i18n";
@@ -55,11 +56,7 @@ export default function Page({
   const fr = locale === "fr";
   const articleUrl = `${siteUrl}${insightPath(locale, category, insight.slug[locale])}`;
 
-  const breadcrumb = buildBreadcrumbJsonLd([
-    { name: fr ? "Accueil" : "Home", path: `${siteUrl}/${locale}` },
-    { name: "Insights", path: `${siteUrl}${insightPath(locale)}` },
-    { name: insight.title[locale], path: articleUrl },
-  ]);
+  const breadcrumb = buildBreadcrumbJsonLd(buildInsightBreadcrumbItems(locale, insight, siteUrl));
 
   const articleJsonLd = {
     "@context": "https://schema.org",
