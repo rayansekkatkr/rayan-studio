@@ -1,5 +1,6 @@
 import { BRAND } from "@/lib/brand";
 import { isEnglish, type Locale } from "@/lib/i18n";
+import { contactPath } from "@/lib/site-routes";
 import { getServiceSeoPagesByLocale } from "@/lib/service-seo";
 import { ManageCookiesButton } from "./ManageCookiesButton";
 
@@ -21,7 +22,7 @@ export function Footer({ locale = "fr" }: { locale?: Locale }) {
             <a href={`/${locale}#services`} className="transition-colors hover:text-[#c2461f]">
               {en ? "Services" : "Services"}
             </a>
-            <a href={`/${locale}#contact`} className="transition-colors hover:text-[#c2461f]">
+            <a href={contactPath(locale)} className="transition-colors hover:text-[#c2461f]">
               {en ? "Contact" : "Contact"}
             </a>
             <a href={`/${locale}/a-propos-methodologie-preuves`} className="transition-colors hover:text-[#c2461f]">

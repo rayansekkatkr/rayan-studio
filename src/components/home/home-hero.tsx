@@ -1,6 +1,6 @@
 import Image from "next/image";
-import Link from "next/link";
 import { ArrowRight } from "lucide-react";
+import { TrackedLink } from "@/components/analytics/tracked-link";
 import { ParallaxMedia } from "@/components/motion/parallax-media";
 import { Container } from "@/components/ui/container";
 import { getProject } from "@/content/projects";
@@ -28,19 +28,31 @@ export function HomeHero({ locale }: { locale: Locale }) {
               : "Applications, platforms and web experiences designed to solve real problems, simplify operations and support growth."}
           </p>
           <div className="mt-10 flex flex-wrap items-center gap-4">
-            <Link
+            <TrackedLink
               href={startProjectPath(locale)}
+              event={{
+                ctaId: "hero_start_project",
+                source: "home_hero",
+                destination: startProjectPath(locale),
+                locale,
+              }}
               className="inline-flex items-center gap-2 rounded-full bg-rs-fg px-7 py-3.5 text-base font-semibold text-[var(--rs-dark)] transition-colors duration-150 hover:bg-rs-accent hover:text-rs-fg"
             >
               {fr ? "Parler de votre projet" : "Start a project"}
               <ArrowRight aria-hidden className="h-4 w-4" />
-            </Link>
-            <Link
+            </TrackedLink>
+            <TrackedLink
               href={workPath(locale)}
+              event={{
+                ctaId: "hero_view_work",
+                source: "home_hero",
+                destination: workPath(locale),
+                locale,
+              }}
               className="inline-flex items-center rounded-full border border-[var(--rs-border-strong)] px-7 py-3.5 text-base font-medium text-rs-fg transition-colors duration-150 hover:border-rs-accent hover:text-rs-accent"
             >
               {fr ? "Voir nos réalisations" : "View our work"}
-            </Link>
+            </TrackedLink>
           </div>
         </div>
 

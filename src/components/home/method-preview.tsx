@@ -1,5 +1,5 @@
-import Link from "next/link";
 import { ArrowRight } from "lucide-react";
+import { TrackedLink } from "@/components/analytics/tracked-link";
 import { Container } from "@/components/ui/container";
 import { Eyebrow } from "@/components/ui/eyebrow";
 import type { Locale } from "@/lib/i18n";
@@ -31,13 +31,19 @@ export function MethodPreview({ locale }: { locale: Locale }) {
             </li>
           ))}
         </ol>
-        <Link
+        <TrackedLink
           href={studioPath(locale, "method")}
+          event={{
+            ctaId: "home_method",
+            source: "home_method_preview",
+            destination: studioPath(locale, "method"),
+            locale,
+          }}
           className="mt-10 inline-flex items-center gap-2 text-base font-semibold text-rs-accent transition-colors duration-150 hover:text-rs-fg"
         >
           {fr ? "Voir la méthode en détail" : "See the method in detail"}
           <ArrowRight aria-hidden className="h-4 w-4" />
-        </Link>
+        </TrackedLink>
       </Container>
     </div>
   );

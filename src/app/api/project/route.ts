@@ -1,19 +1,23 @@
 import { NextRequest, NextResponse } from "next/server";
 import { LeadProviderError, sendBrevoLeadEmail } from "@/lib/forms/brevo";
-import { renderContactEmail } from "@/lib/forms/email-rendering";
+import { renderProjectEmail } from "@/lib/forms/email-rendering";
 import { isRateLimited } from "@/lib/forms/rate-limit";
-import { validateContactSubmission } from "@/lib/forms/validation";
+import { validateProjectSubmission } from "@/lib/forms/validation";
+import type { ValidationErrorCode } from "@/lib/forms/types";
 
 const ERROR_MESSAGES: Record<string, { status: number; error: string }> = {
   INVALID_REQUEST: { status: 400, error: "Requête invalide." },
-  MISSING_FIELDS: { status: 400, error: "Merci de remplir tous les champs." },
+  MISSING_FIELDS: { status: 400, error: "Merci de remplir tous les champs requis." },
   INVALID_EMAIL: { status: 400, error: "Adresse email invalide." },
+  INVALID_PROJECT_TYPE: { status: 400, error: "Type de projet invalide." },
+  INVALID_STAGE: { status: 400, error: "État du projet invalide." },
+  INVALID_TIMING: { status: 400, error: "Timing invalide." },
   RATE_LIMITED: { status: 429, error: "Trop de tentatives. Réessayez dans quelques minutes." },
   EMAIL_CONFIG_MISSING: { status: 500, error: "Configuration email manquante côté serveur." },
-  SEND_FAILED: { status: 502, error: "L'envoi a échoué. Vos informations sont conservées, vous pouvez réessayer." },
+  SEND_FAILED: { status: 502, error: "L'envoi a échoué. Vos réponses sont conservées, vous pouvez réessayer." },
 };
 
-function errorResponse(code: keyof typeof ERROR_MESSAGES) {
+function errorResponse(code: ValidationErrorCode | "RATE_LIMITED" | "EMAIL_CONFIG_MISSING" | "SEND_FAILED") {
   const entry = ERROR_MESSAGES[code];
   return NextResponse.json({ error: entry.error, code }, { status: entry.status });
 }
@@ -40,23 +44,17 @@ export async function POST(request: NextRequest) {
     return NextResponse.json({ ok: true }, { status: 200 });
   }
 
-  const validation = validateContactSubmission(payload);
+  const validation = validateProjectSubmission(payload);
   if (!validation.ok) {
-    return errorResponse(
-      validation.code === "INVALID_EMAIL"
-        ? "INVALID_EMAIL"
-        : validation.code === "MISSING_FIELDS"
-          ? "MISSING_FIELDS"
-          : "INVALID_REQUEST",
-    );
+    return errorResponse(validation.code);
   }
 
   const ip = getClientIp(request);
-  if (isRateLimited(`contact:${ip}`)) {
+  if (isRateLimited(`project:${ip}`)) {
     return errorResponse("RATE_LIMITED");
   }
 
-  const rendered = renderContactEmail(validation.value);
+  const rendered = renderProjectEmail(validation.value);
 
   try {
     await sendBrevoLeadEmail({

@@ -1,5 +1,5 @@
-import Link from "next/link";
 import { ArrowUpRight } from "lucide-react";
+import { TrackedLink } from "@/components/analytics/tracked-link";
 import { Container } from "@/components/ui/container";
 import { Eyebrow } from "@/components/ui/eyebrow";
 import type { Locale } from "@/lib/i18n";
@@ -29,9 +29,15 @@ export function InsightsPreview({ locale }: { locale: Locale }) {
         </h2>
         <div className="mt-10 grid gap-6 md:grid-cols-3">
           {entries.map((entry) => (
-            <Link
+            <TrackedLink
               key={entry.title}
               href={entry.href}
+              event={{
+                ctaId: "home_insights",
+                source: "home_insights_preview",
+                destination: entry.href,
+                locale,
+              }}
               className={
                 entry.featured
                   ? "group rounded-[var(--rs-radius-md)] border border-[var(--rs-border-strong)] bg-rs-surface p-6 transition-colors duration-150 hover:border-rs-accent md:row-span-2"
@@ -47,7 +53,7 @@ export function InsightsPreview({ locale }: { locale: Locale }) {
                   className="h-4 w-4 transition-transform duration-150 group-hover:-translate-y-0.5 group-hover:translate-x-0.5"
                 />
               </span>
-            </Link>
+            </TrackedLink>
           ))}
         </div>
       </Container>

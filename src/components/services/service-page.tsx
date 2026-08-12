@@ -1,5 +1,5 @@
-import Link from "next/link";
 import { ArrowRight } from "lucide-react";
+import { TrackedLink } from "@/components/analytics/tracked-link";
 import { Container } from "@/components/ui/container";
 import { Eyebrow } from "@/components/ui/eyebrow";
 import type { ServiceRecord } from "@/content/services";
@@ -112,13 +112,19 @@ export function ServicePage({ locale, service }: { locale: Locale; service: Serv
           <p className="mt-4 text-base text-rs-muted">
             {fr ? "Pas besoin d'avoir déjà un cahier des charges." : "No specification document needed to start."}
           </p>
-          <Link
+          <TrackedLink
             href={startProjectPath(locale)}
+            event={{
+              ctaId: "service_start_project",
+              source: `service_${service.key}`,
+              destination: startProjectPath(locale),
+              locale,
+            }}
             className="mt-8 inline-flex items-center gap-2 rounded-full bg-rs-fg px-7 py-3.5 text-base font-semibold text-[var(--rs-dark)] transition-colors duration-150 hover:bg-rs-accent hover:text-rs-fg"
           >
             {fr ? "Parler de votre projet" : "Start a project"}
             <ArrowRight aria-hidden className="h-4 w-4" />
-          </Link>
+          </TrackedLink>
         </Container>
       </section>
     </article>

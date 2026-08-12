@@ -1,5 +1,5 @@
-import Link from "next/link";
 import { ArrowRight } from "lucide-react";
+import { TrackedLink } from "@/components/analytics/tracked-link";
 import { Container } from "@/components/ui/container";
 import { Eyebrow } from "@/components/ui/eyebrow";
 import type { ProjectRecord } from "@/content/projects";
@@ -113,8 +113,14 @@ export function CaseStudyPage({ locale, project }: { locale: Locale; project: Pr
           <h2 className="mx-auto max-w-2xl text-3xl font-semibold tracking-tight md:text-4xl">
             {fr ? "Vous construisez quelque chose de similaire ?" : "Building something similar?"}
           </h2>
-          <Link
+          <TrackedLink
             href={startProjectPath(locale)}
+            event={{
+              ctaId: "case_study_start_project",
+              source: `case_study_${project.key}`,
+              destination: startProjectPath(locale),
+              locale,
+            }}
             className={cn(
               "mt-8 inline-flex items-center gap-2 rounded-full px-7 py-3.5 text-base font-semibold transition-colors duration-150",
               dark
@@ -124,7 +130,7 @@ export function CaseStudyPage({ locale, project }: { locale: Locale; project: Pr
           >
             {fr ? "Parler de votre projet" : "Start a project"}
             <ArrowRight aria-hidden className="h-4 w-4" />
-          </Link>
+          </TrackedLink>
         </Container>
       </section>
     </article>
