@@ -3,6 +3,7 @@
 import { useCallback, useEffect, useRef, useState } from "react";
 import Link from "next/link";
 import { Menu, X } from "lucide-react";
+import { TrackedLink } from "@/components/analytics/tracked-link";
 import { getNavigation, type NavMenuKey } from "@/content/navigation";
 import type { Locale } from "@/lib/i18n";
 import { startProjectPath } from "@/lib/site-routes";
@@ -137,8 +138,14 @@ export function SiteHeader({ locale, topTheme = "light" }: SiteHeaderProps) {
 
           <div className="hidden items-center gap-5 lg:flex">
             <LanguageSwitch locale={locale} tone={inverse ? "inverse" : "default"} />
-            <Link
+            <TrackedLink
               href={startProjectPath(locale)}
+              event={{
+                ctaId: "nav_start_project",
+                source: "site_header",
+                destination: startProjectPath(locale),
+                locale,
+              }}
               onClick={closeMenus}
               className={cn(
                 "inline-flex items-center rounded-full px-5 py-2.5 text-sm font-semibold transition-colors duration-150",
@@ -148,7 +155,7 @@ export function SiteHeader({ locale, topTheme = "light" }: SiteHeaderProps) {
               )}
             >
               {fr ? "Parler de votre projet" : "Start a project"}
-            </Link>
+            </TrackedLink>
           </div>
 
           <button

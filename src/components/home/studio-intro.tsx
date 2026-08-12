@@ -1,5 +1,5 @@
-import Link from "next/link";
 import { ArrowRight } from "lucide-react";
+import { TrackedLink } from "@/components/analytics/tracked-link";
 import { Container } from "@/components/ui/container";
 import { Eyebrow } from "@/components/ui/eyebrow";
 import type { Locale } from "@/lib/i18n";
@@ -36,13 +36,19 @@ export function StudioIntro({ locale }: { locale: Locale }) {
             </li>
           ))}
         </ul>
-        <Link
+        <TrackedLink
           href={studioPath(locale, "studio")}
+          event={{
+            ctaId: "home_studio",
+            source: "home_studio_intro",
+            destination: studioPath(locale, "studio"),
+            locale,
+          }}
           className="mt-10 inline-flex items-center gap-2 text-base font-semibold text-rs-accent transition-colors duration-150 hover:text-rs-fg"
         >
           {fr ? "Découvrir le studio" : "Discover the studio"}
           <ArrowRight aria-hidden className="h-4 w-4" />
-        </Link>
+        </TrackedLink>
       </Container>
     </div>
   );

@@ -1,5 +1,5 @@
-import Link from "next/link";
 import { ArrowRight } from "lucide-react";
+import { TrackedLink } from "@/components/analytics/tracked-link";
 import { Container } from "@/components/ui/container";
 import type { Locale } from "@/lib/i18n";
 import { startProjectPath } from "@/lib/site-routes";
@@ -18,13 +18,19 @@ export function FinalCta({ locale }: { locale: Locale }) {
             ? "Parlons de votre projet, de votre idée ou du problème que vous cherchez à résoudre."
             : "Let's talk about your project, your idea or the problem you are trying to solve."}
         </p>
-        <Link
+        <TrackedLink
           href={startProjectPath(locale)}
+          event={{
+            ctaId: "final_start_project",
+            source: "home_final_cta",
+            destination: startProjectPath(locale),
+            locale,
+          }}
           className="mt-10 inline-flex items-center gap-2 rounded-full bg-rs-fg px-8 py-4 text-base font-semibold text-[var(--rs-dark)] transition-colors duration-150 hover:bg-rs-accent hover:text-rs-fg"
         >
           {fr ? "Parler de votre projet" : "Start a project"}
           <ArrowRight aria-hidden className="h-4 w-4" />
-        </Link>
+        </TrackedLink>
       </Container>
     </div>
   );

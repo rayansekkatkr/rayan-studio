@@ -1,4 +1,5 @@
 import { CommercialPageShell } from "@/components/layout/commercial-page-shell";
+import { FunnelTracking } from "@/components/site/FunnelTracking";
 import { BRAND, getSiteUrl } from "@/lib/brand";
 import type { Locale } from "@/lib/i18n";
 import { ExpertiseStrip } from "./expertise-strip";
@@ -67,6 +68,7 @@ export function HomePage({ locale }: { locale: Locale }) {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(buildHomeJsonLd(locale)) }}
       />
+      <FunnelTracking />
       <section id="hero" data-home-section>
         <HomeHero locale={locale} />
       </section>

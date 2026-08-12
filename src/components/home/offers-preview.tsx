@@ -1,5 +1,5 @@
-import Link from "next/link";
 import { ArrowRight } from "lucide-react";
+import { TrackedLink } from "@/components/analytics/tracked-link";
 import { Container } from "@/components/ui/container";
 import { Eyebrow } from "@/components/ui/eyebrow";
 import type { Locale } from "@/lib/i18n";
@@ -48,13 +48,19 @@ export function OffersPreview({ locale }: { locale: Locale }) {
             ? "Une proposition détaillée avec périmètre, planning et budget vous est envoyée après un premier échange de cadrage."
             : "A detailed proposal with scope, planning and budget is sent after a first framing conversation."}
         </p>
-        <Link
+        <TrackedLink
           href={studioPath(locale, "offers")}
+          event={{
+            ctaId: "home_offers",
+            source: "home_offers_preview",
+            destination: studioPath(locale, "offers"),
+            locale,
+          }}
           className="mt-8 inline-flex items-center gap-2 text-base font-semibold text-rs-accent transition-colors duration-150 hover:text-rs-fg"
         >
           {fr ? "Voir les offres" : "View offers"}
           <ArrowRight aria-hidden className="h-4 w-4" />
-        </Link>
+        </TrackedLink>
       </Container>
     </div>
   );
