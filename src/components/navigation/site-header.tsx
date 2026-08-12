@@ -13,7 +13,13 @@ import { MobileMenu } from "./mobile-menu";
 
 const MOBILE_MENU_ID = "mobile-site-menu";
 
-export function SiteHeader({ locale }: { locale: Locale }) {
+type SiteHeaderProps = {
+  locale: Locale;
+  /** Foreground contrast for the transparent top state, set by the page hosting the header. */
+  topTheme?: "light" | "dark";
+};
+
+export function SiteHeader({ locale, topTheme = "light" }: SiteHeaderProps) {
   const fr = locale === "fr";
   const menus = getNavigation(locale);
   const [openMenu, setOpenMenu] = useState<NavMenuKey | null>(null);
@@ -64,8 +70,13 @@ export function SiteHeader({ locale }: { locale: Locale }) {
     return () => document.removeEventListener("keydown", handleKeyDown);
   }, [mobileOpen, openMenu]);
 
+  const solid = scrolled || openMenu !== null || mobileOpen;
+  const inverse = topTheme === "dark" && !solid;
+
   return (
     <header
+      data-top-theme={topTheme}
+      data-surface={solid ? "solid" : "transparent"}
       className={cn(
         "fixed inset-x-0 top-0 z-50 transition-transform duration-200",
         hidden && !openMenu && !mobileOpen && "-translate-y-full",
@@ -75,7 +86,7 @@ export function SiteHeader({ locale }: { locale: Locale }) {
       <div
         className={cn(
           "relative transition-colors duration-200",
-          scrolled || openMenu || mobileOpen
+          solid
             ? "border-b border-[var(--rs-border)] bg-rs-surface/90 backdrop-blur"
             : "bg-transparent",
         )}
@@ -84,7 +95,10 @@ export function SiteHeader({ locale }: { locale: Locale }) {
           <Link
             href={`/${locale}`}
             onClick={closeMenus}
-            className="text-sm font-bold uppercase tracking-[0.22em] text-rs-fg"
+            className={cn(
+              "text-sm font-bold uppercase tracking-[0.22em]",
+              inverse ? "text-[var(--rs-dark-fg)]" : "text-rs-fg",
+            )}
           >
             RAYAN STUDIO
           </Link>
@@ -108,7 +122,11 @@ export function SiteHeader({ locale }: { locale: Locale }) {
                   }}
                   className={cn(
                     "rounded-full px-4 py-2 text-sm font-medium transition-colors duration-150",
-                    expanded ? "text-rs-accent" : "text-rs-fg hover:text-rs-accent",
+                    expanded
+                      ? "text-rs-accent"
+                      : inverse
+                        ? "text-[var(--rs-dark-fg)] hover:text-[var(--rs-dark-muted)]"
+                        : "text-rs-fg hover:text-rs-accent",
                   )}
                 >
                   {menu.label}
@@ -118,11 +136,16 @@ export function SiteHeader({ locale }: { locale: Locale }) {
           </nav>
 
           <div className="hidden items-center gap-5 lg:flex">
-            <LanguageSwitch locale={locale} />
+            <LanguageSwitch locale={locale} tone={inverse ? "inverse" : "default"} />
             <Link
               href={startProjectPath(locale)}
               onClick={closeMenus}
-              className="inline-flex items-center rounded-full bg-rs-fg px-5 py-2.5 text-sm font-semibold text-rs-bg transition-colors duration-150 hover:bg-rs-accent"
+              className={cn(
+                "inline-flex items-center rounded-full px-5 py-2.5 text-sm font-semibold transition-colors duration-150",
+                inverse
+                  ? "bg-[var(--rs-dark-fg)] text-[var(--rs-dark)] hover:bg-rs-accent hover:text-[var(--rs-dark-fg)]"
+                  : "bg-rs-fg text-rs-bg hover:bg-rs-accent",
+              )}
             >
               {fr ? "Parler de votre projet" : "Start a project"}
             </Link>
@@ -135,7 +158,10 @@ export function SiteHeader({ locale }: { locale: Locale }) {
             aria-controls={MOBILE_MENU_ID}
             aria-label={mobileOpen ? (fr ? "Fermer le menu" : "Close menu") : fr ? "Ouvrir le menu" : "Open menu"}
             onClick={() => setMobileOpen((open) => !open)}
-            className="inline-flex h-10 w-10 items-center justify-center rounded-full text-rs-fg lg:hidden"
+            className={cn(
+              "inline-flex h-10 w-10 items-center justify-center rounded-full lg:hidden",
+              inverse ? "text-[var(--rs-dark-fg)]" : "text-rs-fg",
+            )}
           >
             {mobileOpen ? <X aria-hidden className="h-5 w-5" /> : <Menu aria-hidden className="h-5 w-5" />}
           </button>

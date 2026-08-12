@@ -43,22 +43,35 @@ function equivalentPath(pathname: string | null, from: Locale, to: Locale): stri
   return `/${to}`;
 }
 
-export function LanguageSwitch({ locale, className }: { locale: Locale; className?: string }) {
+type LanguageSwitchProps = {
+  locale: Locale;
+  className?: string;
+  /** "inverse" renders light foreground for use over a dark transparent header. */
+  tone?: "default" | "inverse";
+};
+
+export function LanguageSwitch({ locale, className, tone = "default" }: LanguageSwitchProps) {
   const pathname = usePathname();
+  const inverse = tone === "inverse";
+  const activeClass = inverse ? "text-[var(--rs-dark-fg)]" : "text-rs-fg";
+  const mutedClass = inverse ? "text-[var(--rs-dark-muted)]" : "text-rs-muted";
+  const idleClass = inverse
+    ? "text-[var(--rs-dark-muted)] transition-colors duration-150 hover:text-[var(--rs-dark-fg)]"
+    : "text-rs-muted transition-colors duration-150 hover:text-rs-fg";
 
   return (
     <div className={cn("flex items-center gap-1 text-sm font-medium", className)}>
       {(["fr", "en"] as const).map((target, index) => (
         <span key={target} className="flex items-center">
-          {index > 0 ? <span aria-hidden className="mx-1 text-rs-muted">/</span> : null}
+          {index > 0 ? <span aria-hidden className={cn("mx-1", mutedClass)}>/</span> : null}
           {target === locale ? (
-            <span aria-current="true" className="text-rs-fg">
+            <span aria-current="true" className={activeClass}>
               {target.toUpperCase()}
             </span>
           ) : (
             <Link
               href={equivalentPath(pathname, locale, target)}
-              className="text-rs-muted transition-colors duration-150 hover:text-rs-fg"
+              className={idleClass}
               aria-label={target === "fr" ? "Version française" : "English version"}
             >
               {target.toUpperCase()}

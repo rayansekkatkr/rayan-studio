@@ -30,4 +30,26 @@ describe("SiteHeader", () => {
     expect(button).toHaveAttribute("aria-expanded", "false");
     expect(button).toHaveAttribute("aria-controls", "mobile-site-menu");
   });
+
+  it("exposes the dark-hero foreground state when topTheme is dark", () => {
+    render(<SiteHeader locale="fr" topTheme="dark" />);
+    const header = screen.getByRole("banner");
+    expect(header).toHaveAttribute("data-top-theme", "dark");
+    expect(header).toHaveAttribute("data-surface", "transparent");
+  });
+
+  it("keeps the normal foreground state by default (light top theme)", () => {
+    render(<SiteHeader locale="fr" />);
+    const header = screen.getByRole("banner");
+    expect(header).toHaveAttribute("data-top-theme", "light");
+    expect(header).toHaveAttribute("data-surface", "transparent");
+  });
+
+  it("switches to the opaque surface state once scrolled past the threshold", () => {
+    render(<SiteHeader locale="fr" topTheme="dark" />);
+    const header = screen.getByRole("banner");
+    Object.defineProperty(window, "scrollY", { value: 30, writable: true });
+    fireEvent.scroll(window);
+    expect(header).toHaveAttribute("data-surface", "solid");
+  });
 });
