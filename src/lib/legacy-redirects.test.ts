@@ -1,7 +1,5 @@
 import { createRequire } from "node:module";
 import { describe, expect, it } from "vitest";
-// eslint-disable-next-line @typescript-eslint/ban-ts-comment
-// @ts-ignore plain .mjs config module without type declarations
 import { LEGACY_REDIRECTS } from "../../config/legacy-redirects.mjs";
 import { INSIGHTS } from "@/content/insights";
 import { SERVICES } from "@/content/services";
