@@ -28,5 +28,11 @@ export default defineConfig({
     url: "http://127.0.0.1:3000/fr",
     reuseExistingServer: !process.env.CI,
     timeout: 120_000,
+    env: {
+      ...process.env,
+      // Non-production test id so the real CookieConsent mounts during E2E.
+      // Ordinary tests pre-set consent to "declined", so no GTM request occurs.
+      NEXT_PUBLIC_GA_ID: "G-TEST",
+    },
   },
 });

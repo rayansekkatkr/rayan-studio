@@ -1,8 +1,8 @@
 import { expect, test } from "@playwright/test";
-import { acceptAnalytics } from "./fixtures";
+import { declineAnalytics } from "./fixtures";
 
 test.beforeEach(async ({ page }) => {
-  await acceptAnalytics(page);
+  await declineAnalytics(page);
   await page.emulateMedia({ reducedMotion: "reduce" });
 });
 
@@ -24,9 +24,21 @@ test.describe("reduced motion", () => {
     await expect(heroMedia).toBeInViewport();
 
     const box1 = await heroMedia.boundingBox();
-    await expect(heroMedia).toBeVisible();
+    // Observe distinct rendered frames before re-measuring: under reduced
+    // motion the media must not need continuous movement to stay in place.
+    await page.evaluate(
+      () =>
+        new Promise<void>((resolve) => {
+          requestAnimationFrame(() => {
+            requestAnimationFrame(() => resolve());
+          });
+        }),
+    );
     const box2 = await heroMedia.boundingBox();
-    expect(box1?.y).toBeCloseTo(box2?.y ?? -1, 0);
+    expect(box1).not.toBeNull();
+    expect(box2).not.toBeNull();
+    expect(Math.abs((box1?.y ?? 0) - (box2?.y ?? 1))).toBeLessThanOrEqual(1);
+    expect(Math.abs((box1?.x ?? 0) - (box2?.x ?? 1))).toBeLessThanOrEqual(1);
 
     if (!isMobile) {
       await page.evaluate(() => window.scrollTo(0, 0));

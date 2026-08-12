@@ -29,9 +29,11 @@ against the production build (`next start`, port 3000), not the dev server.
 - Desktop Chromium: PASS (Playwright chromium-desktop, 0 failures)
 - Mobile Chromium: PASS (iPhone 13 profile forced to Chromium, 0 failures)
 - Reduced motion: PASS (H1/media visible and stable, navigation and CTAs usable)
-- Axe critical pages: PASS (10 pages × 2 profiles, wcag2a/wcag2aa/wcag21a/wcag21aa, 0 violations;
-  consent-banner scan skipped because NEXT_PUBLIC_GA_ID is not configured in test envs, banner
-  behavior covered by unit tests)
+- Axe critical pages: PASS (10 pages × 2 profiles, wcag2a/wcag2aa/wcag21a/wcag21aa, 0 violations)
+- Cookie consent banner: PASS (real CookieConsent mounted with the non-production GA test id
+  `G-TEST` provided by the Playwright webServer env, FR banner scanned by Axe while visible on
+  both profiles with 0 violations, EN banner render also asserted; ordinary E2E tests pre-set
+  consent to "declined" so no Google Tag Manager request occurs)
 
 ## Quality (final clean gate results)
 - npm run lint: PASS (No issues found)
@@ -40,7 +42,8 @@ against the production build (`next start`, port 3000), not the dev server.
 - npm test: PASS ×3 consecutive (32 files, 141/141 each run)
 - npm --prefix scripts test: PASS (124 tests: 123 pass, 0 fail, 1 pre-existing skip)
 - npm run build: PASS (exit 0, 167 static pages)
-- npm run test:e2e: PASS (85 passed, 0 failed, 13 expected device/env skips, 0 retries, against next start)
+- npm run test:e2e: PASS (89 passed, 0 failed, 11 expected device-scoped skips, 0 retries, against
+  next start built and served with NEXT_PUBLIC_GA_ID=G-TEST so the consent scan executed there)
 - npm run smoke:routes: PASS (141 canonical routes, including 70 local SEO routes, all 2xx)
 
 ## Human perception review

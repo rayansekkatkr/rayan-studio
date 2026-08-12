@@ -2,7 +2,7 @@ import { expect, test } from "@playwright/test";
 // eslint-disable-next-line
 import { LEGACY_REDIRECTS } from "../config/legacy-redirects.mjs";
 import { getAllLocalSeoCombos } from "../src/lib/local-seo";
-import { acceptAnalytics } from "./fixtures";
+import { declineAnalytics } from "./fixtures";
 
 type Redirect = { source: string; destination: string; permanent: boolean };
 const redirects = LEGACY_REDIRECTS as Redirect[];
@@ -20,7 +20,7 @@ test.describe("local SEO routes", () => {
   });
 
   test("representative local page renders the studio shell and local intent", async ({ page }) => {
-    await acceptAnalytics(page);
+    await declineAnalytics(page);
     await page.goto("/site/restaurant/paris");
     await expect(page.getByRole("link", { name: "RAYAN STUDIO" }).first()).toBeVisible();
     await expect(page.getByRole("heading", { level: 1 })).toContainText(/restaurant/i);

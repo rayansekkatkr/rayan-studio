@@ -1,8 +1,8 @@
 import { expect, test } from "@playwright/test";
-import { acceptAnalytics } from "./fixtures";
+import { declineAnalytics } from "./fixtures";
 
 test.beforeEach(async ({ page }) => {
-  await acceptAnalytics(page);
+  await declineAnalytics(page);
 });
 
 test.describe("desktop mega navigation", () => {

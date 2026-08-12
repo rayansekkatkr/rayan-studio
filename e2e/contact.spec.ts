@@ -1,8 +1,8 @@
 import { expect, test } from "@playwright/test";
-import { acceptAnalytics, mockContactError, mockContactSuccess } from "./fixtures";
+import { declineAnalytics, mockContactError, mockContactSuccess } from "./fixtures";
 
 test.beforeEach(async ({ page }) => {
-  await acceptAnalytics(page);
+  await declineAnalytics(page);
 });
 
 async function fillContactForm(page: import("@playwright/test").Page) {

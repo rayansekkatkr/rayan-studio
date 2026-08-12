@@ -1,6 +1,6 @@
 import AxeBuilder from "@axe-core/playwright";
 import { expect, test } from "@playwright/test";
-import { acceptAnalytics } from "./fixtures";
+import { declineAnalytics } from "./fixtures";
 
 const CRITICAL_PAGES = [
   "/fr",
@@ -27,7 +27,7 @@ test.describe("accessibility", () => {
   for (const path of CRITICAL_PAGES) {
     test(`${path} has no WCAG A/AA violations`, async ({ page }) => {
       // Deliberate consent choice so the page is scanned in its settled state.
-      await acceptAnalytics(page);
+      await declineAnalytics(page);
       await page.goto(path);
       await page.waitForLoadState("networkidle");
 
@@ -37,18 +37,21 @@ test.describe("accessibility", () => {
   }
 
   test("cookie consent banner itself passes WCAG A/AA while visible", async ({ page }) => {
-    // No stored choice: the banner must be visible and accessible.
+    // No stored choice: the real CookieConsent must mount (the E2E server runs
+    // with the non-production test id NEXT_PUBLIC_GA_ID=G-TEST) and be scanned
+    // while visible. This test fails if the banner does not render.
     await page.goto("/fr");
+    await expect(page.getByRole("button", { name: "Accepter" })).toBeVisible();
+    await expect(page.getByRole("button", { name: "Refuser" })).toBeVisible();
 
-    const acceptButton = page.getByRole("button", { name: "Accepter" });
-    const bannerMounted = (await acceptButton.count()) > 0;
-    // RootBody only mounts CookieConsent when NEXT_PUBLIC_GA_ID is configured.
-    // Local/CI E2E runs have no GA ID, so the banner cannot render there; its
-    // behavior stays covered by CookieConsent unit tests (Lot 04).
-    test.skip(!bannerMounted, "NEXT_PUBLIC_GA_ID not configured; consent banner not mounted");
-
-    await expect(acceptButton).toBeVisible();
     const results = await new AxeBuilder({ page }).withTags(WCAG_TAGS).analyze();
     expect(results.violations, formatViolations(results.violations)).toEqual([]);
+  });
+
+  test("EN consent banner renders localized choices", async ({ page }) => {
+    await page.goto("/en");
+    await expect(page.getByRole("button", { name: "Accept" })).toBeVisible();
+    await expect(page.getByRole("button", { name: "Decline" })).toBeVisible();
+    await expect(page.getByRole("link", { name: "Learn more" })).toBeVisible();
   });
 });
