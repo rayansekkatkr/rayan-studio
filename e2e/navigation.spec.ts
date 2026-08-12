@@ -39,6 +39,53 @@ test.describe("desktop mega navigation", () => {
   });
 });
 
+test.describe("mobile navigation", () => {
+  test.skip(({ isMobile }) => !isMobile, "mobile-only menu");
+
+  test("full mobile menu journey with focus return and scroll unlock", async ({ page }) => {
+    await page.goto("/fr");
+    const toggle = page.getByRole("button", { name: "Ouvrir le menu" });
+    await expect(toggle).toBeVisible();
+    await expect(toggle).toHaveAttribute("aria-expanded", "false");
+
+    await toggle.click();
+    await expect(page.getByRole("button", { name: "Fermer le menu" })).toHaveAttribute(
+      "aria-expanded",
+      "true",
+    );
+
+    const menu = page.locator("#mobile-site-menu");
+    await menu.getByRole("button", { name: "Services", exact: true }).click();
+    const serviceLink = menu.getByRole("link", { name: "Applications web & SaaS", exact: true });
+    await expect(serviceLink).toBeVisible();
+    await serviceLink.click();
+    await expect(page).toHaveURL(/\/fr\/services\/applications-web-saas$/);
+
+    const bodyOverflow = await page.evaluate(() => document.body.style.overflow);
+    expect(bodyOverflow).not.toBe("hidden");
+
+    const toggleAgain = page.getByRole("button", { name: "Ouvrir le menu" });
+    await toggleAgain.click();
+    await expect(page.locator("#mobile-site-menu")).toBeVisible();
+    await page.keyboard.press("Escape");
+    await expect(page.locator("#mobile-site-menu")).toHaveCount(0);
+    await expect(toggleAgain).toBeFocused();
+
+    const overflowAfterEscape = await page.evaluate(() => document.body.style.overflow);
+    expect(overflowAfterEscape).not.toBe("hidden");
+  });
+
+  test("mobile language switch reaches the EN equivalent", async ({ page }) => {
+    await page.goto("/fr/studio/offres");
+    await page.getByRole("button", { name: "Ouvrir le menu" }).click();
+    await page
+      .locator("#mobile-site-menu")
+      .getByRole("link", { name: "English version" })
+      .click();
+    await expect(page).toHaveURL(/\/en\/studio\/offers$/);
+  });
+});
+
 test.describe("language switch equivalence", () => {
   test.skip(({ isMobile }) => isMobile, "desktop header language switch");
 

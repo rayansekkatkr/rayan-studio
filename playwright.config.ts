@@ -19,7 +19,8 @@ export default defineConfig({
     },
     {
       name: "chromium-mobile",
-      use: { ...devices["iPhone 13"] },
+      // iPhone 13 profile defaults to WebKit; V1 CI is Chromium-only by decision.
+      use: { ...devices["iPhone 13"], browserName: "chromium" },
     },
   ],
   webServer: {
