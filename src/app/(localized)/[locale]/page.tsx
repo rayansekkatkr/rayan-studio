@@ -1,8 +1,8 @@
 import type { Metadata } from "next";
 import { redirect } from "next/navigation";
-import { HomePage } from "@/components/site/HomePage";
-import { BRAND } from "@/lib/brand";
+import { HomePage } from "@/components/home/home-page";
 import { isEnglish, normalizeLocale, type Locale } from "@/lib/i18n";
+import { buildLocalizedMetadata } from "@/lib/seo";
 
 export function generateStaticParams() {
   return [{ locale: "fr" }, { locale: "en" }];
@@ -12,41 +12,17 @@ export function generateMetadata({ params }: { params: { locale: string } }): Me
   const locale = normalizeLocale(params.locale) as Locale;
   const en = isEnglish(locale);
 
-  return {
-    title: en ? "Website redesign for small businesses" : "Refonte de sites pour petites entreprises",
+  return buildLocalizedMetadata({
+    locale,
+    title: en
+      ? "Software studio for SaaS, web applications and digital products"
+      : "Studio software, SaaS et expériences web sur mesure",
     description: en
-      ? "Independent studio for redesigning dated websites or creating a first proper website: design, local SEO, DNS, hosting, VPS and launch."
-      : "Studio indépendant pour refondre un site daté ou créer le premier vrai site d'une petite entreprise: design, SEO local, DNS, hébergement, VPS et mise en ligne.",
-    alternates: {
-      canonical: `/${locale}`,
-      languages: {
-        fr: "/fr",
-        en: "/en",
-        "x-default": "/fr",
-      },
-    },
-    openGraph: {
-      type: "website",
-      url: `/${locale}`,
-      locale: en ? "en_US" : "fr_FR",
-      title: en
-        ? `${BRAND.name} | Website redesign for small businesses`
-        : `${BRAND.name} | Refonte de sites pour petites entreprises`,
-      description: en
-        ? "Independent studio for redesigning dated websites or creating a first proper website: design, local SEO, DNS, hosting, VPS and launch."
-        : "Studio indépendant pour refondre un site daté ou créer le premier vrai site d'une petite entreprise : design, SEO local, DNS, hébergement, VPS et mise en ligne.",
-      siteName: BRAND.name,
-    },
-    twitter: {
-      card: "summary_large_image",
-      title: en
-        ? `${BRAND.name} | Website redesign for small businesses`
-        : `${BRAND.name} | Refonte de sites pour petites entreprises`,
-      description: en
-        ? "Independent studio for small businesses: redesign of dated websites, local SEO, DNS, hosting, VPS and launch."
-        : "Studio indépendant pour petites entreprises : refonte de site daté, SEO local, DNS, hébergement, VPS et déploiement.",
-    },
-  };
+      ? "Independent studio designing and building custom applications, SaaS platforms and premium websites, with one point of contact from framing to production."
+      : "Studio indépendant qui conçoit et développe applications, plateformes SaaS et sites web premium, avec un interlocuteur unique du cadrage à la mise en production.",
+    path: `/${locale}`,
+    alternatePath: en ? "/fr" : "/en",
+  });
 }
 
 export default function Page({ params }: { params: { locale: string } }) {
