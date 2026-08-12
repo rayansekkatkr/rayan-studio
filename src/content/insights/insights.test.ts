@@ -94,6 +94,17 @@ describe("insights registry", () => {
     expect(serialized).not.toMatch(/dans un monde de plus en plus|in today's rapidly evolving/i);
   });
 
+  it("keeps the lightweight slug map in sync with the registry", async () => {
+    const { INSIGHT_SLUG_PAIRS } = await import("@/content/insights/slugs");
+    expect(INSIGHT_SLUG_PAIRS).toEqual(
+      INSIGHTS.map((insight) => ({
+        category: insight.category,
+        fr: insight.slug.fr,
+        en: insight.slug.en,
+      })),
+    );
+  });
+
   it("uses the launch publication date without fabricated history", () => {
     for (const insight of INSIGHTS) {
       expect(insight.publishedAt).toBe("2026-08-12");
