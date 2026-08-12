@@ -50,13 +50,14 @@ export function generateStaticParams() {
   );
 }
 
-export function generateMetadata({
+export async function generateMetadata({
   params,
 }: {
-  params: { locale: string; category: string };
-}): Metadata {
-  const locale = normalizeLocale(params.locale) as Locale;
-  const category = resolveInsightCategorySlug(locale, params.category);
+  params: Promise<{ locale: string; category: string }>;
+}): Promise<Metadata> {
+  const p = await params;
+  const locale = normalizeLocale(p.locale) as Locale;
+  const category = resolveInsightCategorySlug(locale, p.category);
   if (!category) return {};
   const meta = CATEGORY_META[category][locale];
   const otherLocale: Locale = locale === "fr" ? "en" : "fr";
@@ -70,9 +71,10 @@ export function generateMetadata({
   });
 }
 
-export default function Page({ params }: { params: { locale: string; category: string } }) {
-  const locale = normalizeLocale(params.locale) as Locale;
-  const category = resolveInsightCategorySlug(locale, params.category);
+export default async function Page({ params }: { params: Promise<{ locale: string; category: string }> }) {
+  const p = await params;
+  const locale = normalizeLocale(p.locale) as Locale;
+  const category = resolveInsightCategorySlug(locale, p.category);
   if (!category) notFound();
   const fr = locale === "fr";
   const meta = CATEGORY_META[category][locale];

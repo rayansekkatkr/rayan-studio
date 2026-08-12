@@ -18,13 +18,14 @@ export function generateStaticParams() {
   );
 }
 
-export function generateMetadata({
+export async function generateMetadata({
   params,
 }: {
-  params: { locale: string; slug: string };
-}): Metadata {
-  const locale = normalizeLocale(params.locale) as Locale;
-  const resolved = resolveProjectPage(params.slug);
+  params: Promise<{ locale: string; slug: string }>;
+}): Promise<Metadata> {
+  const p = await params;
+  const locale = normalizeLocale(p.locale) as Locale;
+  const resolved = resolveProjectPage(p.slug);
   if (!resolved) return {};
   const { project } = resolved;
   const otherLocale: Locale = locale === "fr" ? "en" : "fr";
@@ -39,9 +40,10 @@ export function generateMetadata({
   });
 }
 
-export default function Page({ params }: { params: { locale: string; slug: string } }) {
-  const locale = normalizeLocale(params.locale) as Locale;
-  const resolved = resolveProjectPage(params.slug);
+export default async function Page({ params }: { params: Promise<{ locale: string; slug: string }> }) {
+  const p = await params;
+  const locale = normalizeLocale(p.locale) as Locale;
+  const resolved = resolveProjectPage(p.slug);
   if (!resolved) notFound();
   const { kind, project } = resolved;
   const siteUrl = getSiteUrl();

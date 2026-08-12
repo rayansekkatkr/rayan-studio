@@ -47,8 +47,9 @@ export function generateStaticParams() {
   return [{ locale: "fr" }, { locale: "en" }];
 }
 
-export function generateMetadata({ params }: { params: { locale: string } }): Metadata {
-  const locale = normalizeLocale(params.locale) as Locale;
+export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }): Promise<Metadata> {
+  const p = await params;
+  const locale = normalizeLocale(p.locale) as Locale;
   const en = isEnglish(locale);
 
   return {
@@ -66,10 +67,11 @@ export function generateMetadata({ params }: { params: { locale: string } }): Me
   };
 }
 
-export default function AboutMethodPage({ params }: { params: { locale: string } }) {
-  const locale = normalizeLocale(params.locale) as Locale;
+export default async function AboutMethodPage({ params }: { params: Promise<{ locale: string }> }) {
+  const p = await params;
+  const locale = normalizeLocale(p.locale) as Locale;
 
-  if (params.locale !== locale) {
+  if (p.locale !== locale) {
     redirect(`/${locale}/a-propos-methodologie-preuves`);
   }
 

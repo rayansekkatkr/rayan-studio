@@ -10,8 +10,9 @@ export function generateStaticParams() {
   return [{ locale: "fr" }, { locale: "en" }];
 }
 
-export function generateMetadata({ params }: { params: { locale: string } }): Metadata {
-  const locale = normalizeLocale(params.locale) as Locale;
+export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }): Promise<Metadata> {
+  const p = await params;
+  const locale = normalizeLocale(p.locale) as Locale;
   const en = isEnglish(locale);
 
   return buildLocalizedMetadata({
@@ -25,8 +26,9 @@ export function generateMetadata({ params }: { params: { locale: string } }): Me
   });
 }
 
-export default function Page({ params }: { params: { locale: string } }) {
-  const locale = normalizeLocale(params.locale) as Locale;
+export default async function Page({ params }: { params: Promise<{ locale: string }> }) {
+  const p = await params;
+  const locale = normalizeLocale(p.locale) as Locale;
 
   return (
     <CommercialPageShell locale={locale} headerTopTheme="dark">

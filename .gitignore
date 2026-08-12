@@ -46,3 +46,7 @@ next-env.d.ts
 
 # Données prospects : jamais dans le dépôt (mini-CRM legacy conservé en local uniquement)
 scripts/contacted.json
+
+# Playwright
+/playwright-report/
+/test-results/

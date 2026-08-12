@@ -29,9 +29,10 @@ function buildLanguageAlternates(page: { locale: Locale; path: string; alternate
   return languages;
 }
 
-export function generateMetadata({ params }: { params: Params }): Metadata {
-  const locale = normalizeLocale(params.locale);
-  const page = getServiceSeoPage(locale, params.service);
+export async function generateMetadata({ params }: { params: Promise<Params> }): Promise<Metadata> {
+  const p = await params;
+  const locale = normalizeLocale(p.locale);
+  const page = getServiceSeoPage(locale, p.service);
 
   if (!page) return {};
 
@@ -60,14 +61,15 @@ export function generateMetadata({ params }: { params: Params }): Metadata {
   };
 }
 
-export default function Page({ params }: { params: Params }) {
-  const locale = normalizeLocale(params.locale);
+export default async function Page({ params }: { params: Promise<Params> }) {
+  const p = await params;
+  const locale = normalizeLocale(p.locale);
 
-  if (params.locale !== locale) {
-    redirect(`/${locale}/${params.service}`);
+  if (p.locale !== locale) {
+    redirect(`/${locale}/${p.service}`);
   }
 
-  const page = getServiceSeoPage(locale, params.service);
+  const page = getServiceSeoPage(locale, p.service);
 
   if (!page) {
     notFound();

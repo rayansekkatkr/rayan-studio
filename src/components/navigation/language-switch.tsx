@@ -2,6 +2,7 @@
 
 import Link from "next/link";
 import { usePathname } from "next/navigation";
+import { translateInsightSlug } from "@/content/insights/slugs";
 import type { Locale } from "@/lib/i18n";
 import {
   resolveInsightCategorySlug,
@@ -36,7 +37,12 @@ function equivalentPath(pathname: string | null, from: Locale, to: Locale): stri
   if (segments[0] === "insights") {
     if (!segments[1]) return insightPath(to);
     const key = resolveInsightCategorySlug(from, segments[1]);
-    return key ? insightPath(to, key) : insightPath(to);
+    if (!key) return insightPath(to);
+    if (segments[2]) {
+      const translated = translateInsightSlug(from, to, key, segments[2]);
+      if (translated) return insightPath(to, key, translated);
+    }
+    return insightPath(to, key);
   }
   if (segments[0] === "contact") return contactPath(to);
   if (rest === "/demarrer-un-projet" || rest === "/start-a-project") return startProjectPath(to);

@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { BRAND } from "@/lib/brand";
 import { isEnglish, type Locale } from "@/lib/i18n";
 import { contactPath } from "@/lib/site-routes";
@@ -16,9 +17,9 @@ export function Footer({ locale = "fr" }: { locale?: Locale }) {
             © {new Date().getFullYear()} {BRAND.name}. {en ? "All rights reserved." : "Tous droits réservés."}
           </p>
           <div className="mt-3 flex flex-wrap gap-4 text-xs uppercase tracking-[0.15em]">
-            <a href={`/${locale}#hero`} className="transition-colors hover:text-[#c2461f]">
+            <Link href={`/${locale}#hero`} className="transition-colors hover:text-[#c2461f]">
               {en ? "Home" : "Accueil"}
-            </a>
+            </Link>
             <a href={`/${locale}#services`} className="transition-colors hover:text-[#c2461f]">
               {en ? "Services" : "Services"}
             </a>
@@ -46,15 +47,15 @@ export function Footer({ locale = "fr" }: { locale?: Locale }) {
             ))}
           </div>
           <div className="flex flex-wrap gap-4 text-xs uppercase tracking-[0.15em] lg:justify-end">
-            <a href="/mentions-legales" className="transition-colors hover:text-[#c2461f]">
+            <Link href="/mentions-legales" className="transition-colors hover:text-[#c2461f]">
               {en ? "Legal notice" : "Mentions légales"}
-            </a>
-            <a href="/politique-confidentialite" className="transition-colors hover:text-[#c2461f]">
+            </Link>
+            <Link href="/politique-confidentialite" className="transition-colors hover:text-[#c2461f]">
               {en ? "Privacy policy" : "Politique de confidentialité"}
-            </a>
-            <a href="/cgv" className="transition-colors hover:text-[#c2461f]">
+            </Link>
+            <Link href="/cgv" className="transition-colors hover:text-[#c2461f]">
               {en ? "Terms of sale" : "CGV"}
-            </a>
+            </Link>
             <ManageCookiesButton label={en ? "Manage cookies" : "Gérer les cookies"} />
           </div>
         </div>

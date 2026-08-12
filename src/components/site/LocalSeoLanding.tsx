@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { SiteFooter } from "@/components/navigation/site-footer";
 import { SiteHeader } from "@/components/navigation/site-header";
 import { BRAND, getSiteUrl } from "@/lib/brand";
@@ -78,9 +79,9 @@ export function LocalSeoLanding({ city, citySlug, sector, sectorSlug, content }:
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }} />
         <div className="mx-auto max-w-5xl">
           <nav aria-label="Fil d'Ariane" className="text-xs font-semibold uppercase tracking-[0.12em] text-rs-muted">
-            <a href="/fr" className="transition-colors duration-150 hover:text-rs-accent">
+            <Link href="/fr" className="transition-colors duration-150 hover:text-rs-accent">
               Accueil
-            </a>
+            </Link>
             <span aria-hidden="true"> / </span>
             <span>{sector}</span>
             <span aria-hidden="true"> / </span>

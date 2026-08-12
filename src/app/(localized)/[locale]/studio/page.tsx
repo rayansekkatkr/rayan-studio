@@ -8,7 +8,8 @@ export function generateStaticParams() {
   return [{ locale: "fr" }, { locale: "en" }];
 }
 
-export default function Page({ params }: { params: { locale: string } }) {
-  const locale = normalizeLocale(params.locale) as Locale;
+export default async function Page({ params }: { params: Promise<{ locale: string }> }) {
+  const p = await params;
+  const locale = normalizeLocale(p.locale) as Locale;
   redirect(studioPath(locale, "studio"));
 }
