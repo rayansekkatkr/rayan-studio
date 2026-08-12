@@ -1,22 +1,22 @@
 # Freelance Opportunities - session report
 
-Generated at: 2026-08-11T09:08:45.422Z
+Generated at: 2026-08-12T09:19:27.627Z
 Status: success
 Event: schedule
 Branch: main
-Commit: 24f9f38b
+Commit: 93b93df7
 Actor: rayansekkatkr
-Run: https://github.com/rayansekkatkr/rayan-studio/actions/runs/31476311798
+Run: https://github.com/rayansekkatkr/rayan-studio/actions/runs/31582316480
 
 ## Summary
 
 - Report status: ready
 - Source mode: default_platforms
 - Sources/searches: 18
-- Scanned: 258
-- Scored candidates: 82
+- Scanned: 268
+- Scored candidates: 84
 - Remote policy: explicit_remote_only
-- Remote rejected: 81
+- Remote rejected: 83
 - Candidates: 1
 - Sent/prepared: 0
 - Errors: 0

@@ -1,5 +1,5 @@
 {
-  "runAt": "2026-08-11T09:08:45.372Z",
+  "runAt": "2026-08-12T09:19:27.583Z",
   "status": "ready",
   "sourceMode": "default_platforms",
   "sourceCount": 18,
@@ -149,10 +149,10 @@
       "autoDiscovered": true
     }
   ],
-  "scannedOpportunities": 258,
-  "scoredCandidateCount": 82,
+  "scannedOpportunities": 268,
+  "scoredCandidateCount": 84,
   "remotePolicy": "explicit_remote_only",
-  "remoteRejectedCount": 81,
+  "remoteRejectedCount": 83,
   "candidateCount": 1,
   "maxOpportunities": 30,
   "minScore": 35,
@@ -186,7 +186,7 @@
       "platform": "codeur",
       "searchQuery": "remote full stack web developer",
       "remoteGuaranteed": false,
-      "title": "Recherche formateur Bootcamp Agents IA / RAG / MCP / Claude / Mistral Il y a 20 heures Ouvert 1 000 € à 10 000 € 26 Offres 4616 Vues Nous recherchons un formateur / coach senior en agents IA pour accompagner notre équipe de développement dans un bootcamp distanciel orienté réalisation. Contexte : nous développons une plateforme ERP / IA pour TPE, basée sur Node.js, TypeScript, ... Formation Machine Learning ChatGPT +21 Herve Bansay Akli Lacene Hugo Battoue Latika Sood Lucas Kacem De Vincenzi",
+      "title": "Recherche formateur Bootcamp Agents IA / RAG / MCP / Claude / Mistral Il y a 2 jours Ouvert 1 000 € à 10 000 € 31 Offres 6989 Vues Nous recherchons un formateur / coach senior en agents IA pour accompagner notre équipe de développement dans un bootcamp distanciel orienté réalisation. Contexte : nous développons une plateforme ERP / IA pour TPE, basée sur Node.js, TypeScript, ... Formation Machine Learning ChatGPT +26 EncureIT_Systems Herve Bansay Akli Lacene Hugo Battoue Latika Sood",
       "description": "",
       "sourceDescription": "Découvrez les derniers projets disponibles sur Codeur.com et trouvez plus de cent nouvelles missions en freelance chaque jour.",
       "url": "https://www.codeur.com/projects/488039-recherche-formateur-bootcamp-agents-ia-rag-mcp-claude-mistral",
