@@ -61,11 +61,16 @@ test.describe("homepage", () => {
     const heightOf = async (selector: string) =>
       page.locator(selector).first().evaluate((el) => el.getBoundingClientRect().height);
 
-    // Flagship case studies stay immersive: at least one viewport.
-    for (const key of ["pick4me", "pont-facturx", "goodcall"]) {
+    // Editorial featured chapters: large, but below the immersive treatment.
+    for (const key of ["pick4me", "pont-facturx"]) {
       const height = await heightOf(`[data-featured-project="${key}"]`);
-      expect(height, `${key} immersive`).toBeGreaterThanOrEqual(viewport - tolerance);
+      expect(height, `${key} large`).toBeGreaterThanOrEqual(viewport * 0.8);
+      expect(height, `${key} below immersive`).toBeLessThan(viewport);
     }
+
+    // GoodCall stays immersive: at least one viewport, may grow naturally.
+    const goodcall = await heightOf(`[data-featured-project="goodcall"]`);
+    expect(goodcall, "goodcall immersive").toBeGreaterThanOrEqual(viewport - tolerance);
 
     // Large supporting chapters: substantial but below the flagship treatment.
     for (const id of ["services", "studio", "offers"]) {
@@ -79,6 +84,26 @@ test.describe("homepage", () => {
       const height = await heightOf(`section#${id} > div`);
       expect(height, `${id} compact`).toBeLessThan(viewport - tolerance);
       expect(height, `${id} not collapsed`).toBeGreaterThan(viewport * 0.3);
+    }
+  });
+
+  test("desktop featured work gives the product visual the dominant column", async ({
+    page,
+    isMobile,
+  }) => {
+    test.skip(isMobile, "desktop-only two-column composition");
+    await page.setViewportSize({ width: 1440, height: 900 });
+    await page.goto("/fr");
+
+    for (const key of ["pick4me", "pont-facturx"]) {
+      const section = page.locator(`[data-featured-project="${key}"]`);
+      const widthOf = (attr: string) =>
+        section.locator(`[${attr}]`).first().evaluate((el) => el.getBoundingClientRect().width);
+      const [copy, media] = await Promise.all([
+        widthOf("data-project-copy"),
+        widthOf("data-project-media"),
+      ]);
+      expect(media, `${key} media dominates copy`).toBeGreaterThan(copy);
     }
   });
 
