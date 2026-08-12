@@ -86,6 +86,48 @@ test.describe("mobile navigation", () => {
   });
 });
 
+test.describe("header and mega-menu surfaces", () => {
+  test.skip(({ isMobile }) => isMobile, "desktop surface contract");
+
+  const TRANSPARENT = new Set(["rgba(0, 0, 0, 0)", "transparent"]);
+
+  test("solid header has a real light background and dark brand text", async ({ page }) => {
+    await page.goto("/fr");
+    const header = page.locator("header");
+    await expect(header).toHaveAttribute("data-surface", "transparent");
+
+    // scroll down past threshold then slightly up so the header is shown solid
+    await page.evaluate(() => window.scrollTo(0, 900));
+    await page.evaluate(() => window.scrollTo(0, 850));
+    await expect(header).toHaveAttribute("data-surface", "solid");
+
+    const surface = header.locator("> div").first();
+    const bg = await surface.evaluate((el) => getComputedStyle(el).backgroundColor);
+    expect(TRANSPARENT.has(bg), `solid header bg=${bg}`).toBe(false);
+    const match = bg.match(/rgba?\((\d+), (\d+), (\d+)/);
+    expect(match, bg).not.toBeNull();
+    const [r, g, b] = match!.slice(1, 4).map(Number);
+    expect(r + g + b, `light surface expected, got ${bg}`).toBeGreaterThan(600);
+
+    const brand = page.getByRole("link", { name: "RAYAN STUDIO", exact: true });
+    const color = await brand.evaluate((el) => getComputedStyle(el).color);
+    const cm = color.match(/rgba?\((\d+), (\d+), (\d+)/);
+    const [cr, cg, cb] = cm!.slice(1, 4).map(Number);
+    expect(cr + cg + cb, `dark brand text expected, got ${color}`).toBeLessThan(300);
+  });
+
+  test("open mega-menu panel has a real non-transparent surface", async ({ page }) => {
+    await page.goto("/fr");
+    await page.getByRole("button", { name: "Services", exact: true }).click();
+    const panel = page.locator("#mega-menu-services");
+    await expect(
+      panel.getByRole("link", { name: "Applications web & SaaS", exact: true }),
+    ).toBeVisible();
+    const bg = await panel.evaluate((el) => getComputedStyle(el).backgroundColor);
+    expect(TRANSPARENT.has(bg), `mega panel bg=${bg}`).toBe(false);
+  });
+});
+
 test.describe("language switch equivalence", () => {
   test.skip(({ isMobile }) => isMobile, "desktop header language switch");
 

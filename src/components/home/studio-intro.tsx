@@ -13,7 +13,7 @@ export function StudioIntro({ locale }: { locale: Locale }) {
     : ["One point of contact", "From idea to production", "Architecture built to last", "Clear communication"];
 
   return (
-    <div className="rs-theme-dark bg-rs-bg py-[var(--rs-section-space)] text-rs-fg">
+    <div className="rs-theme-dark bg-rs-bg py-[var(--rs-section-space)] text-rs-fg lg:flex lg:min-h-[100svh] lg:items-center">
       <Container>
         <Eyebrow>{fr ? "Pourquoi Rayan Studio" : "Why Rayan Studio"}</Eyebrow>
         <h2 className="mt-4 max-w-3xl text-3xl font-semibold leading-tight tracking-tight md:text-5xl">

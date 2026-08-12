@@ -33,6 +33,10 @@
   --rs-radius-lg: 2rem;
   --rs-motion-fast: 160ms;
   --rs-motion-medium: 240ms;
+  /* Fixed overlay surfaces: explicit rgba because Tailwind cannot derive
+     opacity variants from opaque var() color tokens. */
+  --rs-header-surface: rgba(255, 255, 255, 0.92);
+  --rs-mega-surface: rgba(255, 255, 255, 0.96);
 }
 
 .rs-theme-dark {

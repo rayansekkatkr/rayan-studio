@@ -50,6 +50,50 @@ test.describe("homepage", () => {
     });
   }
 
+  test("desktop homepage chapters fill at least one viewport", async ({ page, isMobile }) => {
+    test.skip(isMobile, "desktop-only chapter layout");
+    await page.goto("/fr");
+    const viewport = page.viewportSize()?.height ?? 0;
+    const tolerance = 8;
+
+    for (const key of ["pick4me", "pont-facturx", "goodcall"]) {
+      const height = await page
+        .locator(`[data-featured-project="${key}"]`)
+        .evaluate((el) => el.getBoundingClientRect().height);
+      expect(height, `${key} chapter height`).toBeGreaterThanOrEqual(viewport - tolerance);
+    }
+    for (const id of ["services", "studio", "method", "offers", "insights"]) {
+      const height = await page
+        .locator(`section#${id} > div`)
+        .first()
+        .evaluate((el) => el.getBoundingClientRect().height);
+      expect(height, `${id} chapter height`).toBeGreaterThanOrEqual(viewport - tolerance);
+    }
+  });
+
+  test("mobile homepage sections flow naturally without clipping", async ({ page, isMobile }) => {
+    test.skip(!isMobile, "mobile-only flow check");
+    await page.goto("/fr");
+    const overflow = await page.evaluate(
+      () => document.documentElement.scrollWidth - document.documentElement.clientWidth,
+    );
+    expect(overflow, "horizontal overflow").toBeLessThanOrEqual(1);
+
+    // A content-heavy section must not be clamped to the viewport height.
+    const viewport = page.viewportSize()?.height ?? 0;
+    const heroHeight = await page
+      .locator("section#hero > div")
+      .first()
+      .evaluate((el) => el.getBoundingClientRect().height);
+    expect(heroHeight).toBeGreaterThan(0);
+    const offersHeight = await page
+      .locator("section#offers > div")
+      .first()
+      .evaluate((el) => el.getBoundingClientRect().height);
+    // natural flow: content may be shorter or taller than one screen, never zero/clipped
+    expect(offersHeight).toBeGreaterThan(viewport * 0.3);
+  });
+
   test("FR work CTA navigates to /fr/work", async ({ page }) => {
     await page.goto("/fr");
     await page.getByRole("link", { name: "Voir nos réalisations" }).click();

@@ -33,7 +33,7 @@ export function CookieConsent() {
   if (!visible) return null;
 
   return (
-    <aside className="fixed inset-x-3 bottom-3 z-[80] mx-auto max-w-[calc(100vw-1.5rem)] rounded-[var(--rs-radius-md)] border border-[var(--rs-border)] bg-rs-surface/95 p-4 shadow-[0_16px_40px_-24px_rgba(11,11,14,0.4)] backdrop-blur-xl sm:max-w-4xl">
+    <aside className="fixed inset-x-3 bottom-3 z-[80] mx-auto max-w-[calc(100vw-1.5rem)] rounded-[var(--rs-radius-md)] border border-[var(--rs-border)] bg-[var(--rs-mega-surface)] p-4 shadow-[0_16px_40px_-24px_rgba(11,11,14,0.4)] backdrop-blur-xl sm:max-w-4xl">
       <p className="text-sm text-rs-muted">
         {isEnglish
           ? "We use analytics cookies to improve the website. You can accept or decline these cookies."

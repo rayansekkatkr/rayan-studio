@@ -88,7 +88,7 @@ export function SiteHeader({ locale, topTheme = "light" }: SiteHeaderProps) {
         className={cn(
           "relative transition-colors duration-200",
           solid
-            ? "border-b border-[var(--rs-border)] bg-rs-surface/90 backdrop-blur"
+            ? "border-b border-[var(--rs-border)] bg-[var(--rs-header-surface)] backdrop-blur"
             : "bg-transparent",
         )}
       >
