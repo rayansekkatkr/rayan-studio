@@ -8,9 +8,10 @@
     "start": "next start",
     "lint": "next lint",
     "typecheck": "tsc --noEmit",
+    "check:copy": "node scripts/check-public-copy.mjs",
     "test": "vitest run",
     "test:watch": "vitest",
-    "verify": "npm run lint && npm run typecheck && npm test && npm run build"
+    "verify": "npm run lint && npm run typecheck && npm run check:copy && npm test && npm run build"
   },
   "dependencies": {
     "@paper-design/shaders-react": "^0.0.72",
