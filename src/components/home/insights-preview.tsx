@@ -2,23 +2,26 @@ import { ArrowUpRight } from "lucide-react";
 import { TrackedLink } from "@/components/analytics/tracked-link";
 import { Container } from "@/components/ui/container";
 import { Eyebrow } from "@/components/ui/eyebrow";
+import { getInsight } from "@/content/insights";
 import type { Locale } from "@/lib/i18n";
 import { insightPath } from "@/lib/site-routes";
+
+const KIND_LABELS = { guides: "Guide", articles: "Article", checklists: "Checklist", templates: "Template", tools: "Tool" } as const;
 
 export function InsightsPreview({ locale }: { locale: Locale }) {
   const fr = locale === "fr";
 
-  const entries = fr
-    ? [
-        { kind: "Guide", title: "Comment préparer un projet SaaS", href: insightPath(locale, "guides"), featured: true },
-        { kind: "Checklist", title: "Lancer un MVP", href: insightPath(locale, "checklists"), featured: false },
-        { kind: "Guide", title: "Refonte ou reconstruction ?", href: insightPath(locale, "guides"), featured: false },
-      ]
-    : [
-        { kind: "Guide", title: "How to prepare a SaaS project", href: insightPath(locale, "guides"), featured: true },
-        { kind: "Checklist", title: "Launching an MVP", href: insightPath(locale, "checklists"), featured: false },
-        { kind: "Guide", title: "Redesign or rebuild?", href: insightPath(locale, "guides"), featured: false },
-      ];
+  const entries = (["prepare-saas", "application-launch-checklist", "redesign-or-new"] as const).map(
+    (key, index) => {
+      const insight = getInsight(key);
+      return {
+        kind: KIND_LABELS[insight.category as keyof typeof KIND_LABELS],
+        title: insight.title[locale],
+        href: insightPath(locale, insight.category, insight.slug[locale]),
+        featured: index === 0,
+      };
+    },
+  );
 
   return (
     <div className="bg-rs-bg py-[var(--rs-section-space)]">
