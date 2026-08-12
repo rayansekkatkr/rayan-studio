@@ -17,7 +17,7 @@ export function DesktopMegaMenu({ menu, panelId, onNavigate }: DesktopMegaMenuPr
     <div
       id={panelId}
       className={cn(
-        "absolute inset-x-0 top-full border-b border-[var(--rs-border)] bg-rs-surface/95 shadow-[0_24px_48px_-32px_rgba(11,11,14,0.35)] backdrop-blur",
+        "absolute inset-x-0 top-full border-b border-[var(--rs-border)] bg-[var(--rs-mega-surface)] shadow-[0_24px_48px_-32px_rgba(11,11,14,0.35)] backdrop-blur",
       )}
     >
       <div className="mx-auto grid w-full max-w-[var(--rs-container)] gap-10 px-5 py-10 md:grid-cols-[repeat(3,minmax(0,1fr))] md:px-8">
