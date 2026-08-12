@@ -17,12 +17,15 @@ export function SelectedWork({ locale }: { locale: Locale }) {
       {FEATURED_PROJECTS.map((project, index) => {
         const dark = project.tone === "dark";
         const wide = project.tone === "energy";
+        // Reversed chapters put the media column first, so the ratio flips with it.
+        const reversed = !wide && index % 2 === 1;
         return (
           <div
             key={project.key}
             data-featured-project={project.key}
             className={cn(
-              "home-chapter-immersive py-[var(--rs-section-space)] lg:flex lg:items-center",
+              "py-[var(--rs-section-space)] lg:flex lg:items-center",
+              wide ? "home-chapter-immersive" : "home-chapter-featured",
               dark ? "rs-theme-dark bg-rs-bg text-rs-fg" : "bg-rs-surface text-rs-fg",
             )}
           >
@@ -31,10 +34,12 @@ export function SelectedWork({ locale }: { locale: Locale }) {
                 <div
                   className={cn(
                     "grid items-center gap-10",
-                    wide ? "md:grid-cols-1" : "md:grid-cols-2",
+                    wide && "md:grid-cols-1",
+                    !wide && "md:grid-cols-2",
+                    !wide && (reversed ? "xl:grid-cols-[3fr_2fr]" : "xl:grid-cols-[2fr_3fr]"),
                   )}
                 >
-                  <div className={cn(!wide && index % 2 === 1 && "md:order-2")}>
+                  <div data-project-copy className={cn(reversed && "md:order-2")}>
                     <Eyebrow>{`0${index + 1}`}</Eyebrow>
                     <h3 className="mt-3 text-3xl font-semibold tracking-tight md:text-5xl">
                       {project.title}
@@ -53,7 +58,7 @@ export function SelectedWork({ locale }: { locale: Locale }) {
                       <ArrowUpRight aria-hidden className="h-4 w-4" />
                     </Link>
                   </div>
-                  <div className={cn(!wide && index % 2 === 1 && "md:order-1")}>
+                  <div data-project-media className={cn(reversed && "md:order-1")}>
                     <div className="overflow-hidden rounded-[var(--rs-radius-md)] border border-[var(--rs-border)]">
                       <Image
                         src={project.heroImage}
@@ -62,9 +67,13 @@ export function SelectedWork({ locale }: { locale: Locale }) {
                             ? `Interface du produit ${project.title}`
                             : `${project.title} product interface`
                         }
-                        width={wide ? 1600 : 1080}
-                        height={wide ? 900 : 720}
-                        sizes={wide ? "100vw" : "(min-width: 768px) 50vw, 100vw"}
+                        width={1600}
+                        height={wide ? 900 : 904}
+                        sizes={
+                          wide
+                            ? "100vw"
+                            : "(min-width: 1280px) 60vw, (min-width: 768px) 50vw, 100vw"
+                        }
                         className="h-auto w-full object-cover"
                       />
                     </div>

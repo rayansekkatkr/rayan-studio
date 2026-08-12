@@ -293,6 +293,10 @@ section[id] {
     min-height: 100svh;
   }
 
+  .home-chapter-featured {
+    min-height: 88svh;
+  }
+
   .home-chapter-large {
     min-height: 82svh;
   }
