@@ -3,21 +3,23 @@
 import { useEffect } from "react";
 import { trackEvent } from "@/lib/analytics";
 
-const SECTION_IDS = [
+const HOME_SECTION_IDS = [
   "hero",
-  "probleme-solution",
+  "expertise",
+  "selected-work",
   "services",
-  "realisations",
-  "process",
-  "tarifs",
-  "temoignages",
-  "faq",
-  "contact",
-];
+  "studio",
+  "method",
+  "offers",
+  "insights",
+  "final-cta",
+] as const;
 
 const SCROLL_THRESHOLDS = [25, 50, 75, 90];
 
-export function FunnelTracking() {
+export function FunnelTracking({ sectionIds }: { sectionIds?: readonly string[] }) {
+  const ids = sectionIds ?? HOME_SECTION_IDS;
+
   useEffect(() => {
     const seen = new Set<number>();
 
@@ -56,14 +58,13 @@ export function FunnelTracking() {
       { threshold: 0.45 },
     );
 
-    for (const id of SECTION_IDS) {
+    for (const id of ids) {
       const element = document.getElementById(id);
       if (element) observer.observe(element);
     }
 
     return () => observer.disconnect();
-  }, []);
+  }, [ids]);
 
   return null;
 }
-
