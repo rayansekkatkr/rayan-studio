@@ -11,6 +11,38 @@
   --text-primary: #17120f;
   --text-secondary: #63584d;
   --accent: #d94f2b;
+
+  --rs-bg: #f4f4f1;
+  --rs-surface: #ffffff;
+  --rs-surface-subtle: #ecece7;
+  --rs-fg: #0b0b0e;
+  --rs-muted: #696970;
+  --rs-accent: #5957d9;
+  --rs-accent-hover: #4745bd;
+  --rs-border: rgba(11, 11, 14, 0.14);
+  --rs-border-strong: rgba(11, 11, 14, 0.28);
+  --rs-dark: #09090c;
+  --rs-dark-surface: #121218;
+  --rs-dark-fg: #f7f7f4;
+  --rs-dark-muted: #a2a2aa;
+  --rs-container: 86rem;
+  --rs-reading: 46rem;
+  --rs-section-space: clamp(5rem, 9vw, 9rem);
+  --rs-radius-sm: 0.75rem;
+  --rs-radius-md: 1.25rem;
+  --rs-radius-lg: 2rem;
+  --rs-motion-fast: 160ms;
+  --rs-motion-medium: 240ms;
+}
+
+.rs-theme-dark {
+  --rs-bg: var(--rs-dark);
+  --rs-surface: var(--rs-dark-surface);
+  --rs-surface-subtle: #1a1a21;
+  --rs-fg: var(--rs-dark-fg);
+  --rs-muted: var(--rs-dark-muted);
+  --rs-border: rgba(247, 247, 244, 0.14);
+  --rs-border-strong: rgba(247, 247, 244, 0.28);
 }
 
 * {
@@ -29,7 +61,7 @@ body {
   min-height: 100vh;
   overflow-x: clip;
   width: 100%;
-  font-family: var(--font-body), sans-serif;
+  font-family: var(--font-sans), sans-serif;
   color: var(--text-primary);
   background:
     linear-gradient(rgba(23, 18, 15, 0.01) 1px, transparent 1px),
@@ -72,7 +104,7 @@ body::after {
 }
 
 .font-display {
-  font-family: var(--font-display), sans-serif;
+  font-family: var(--font-sans), sans-serif;
 }
 
 .brand-wordmark {
