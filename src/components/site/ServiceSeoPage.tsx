@@ -1,6 +1,7 @@
 import { ArrowRight, Check, FileSearch, MessageSquareText } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { BRAND, getSiteUrl } from "@/lib/brand";
+import { startProjectPath, studioPath } from "@/lib/site-routes";
 import { Footer } from "./Footer";
 import { Navbar } from "./Navbar";
 
@@ -90,13 +91,13 @@ export function ServiceSeoPage({ page }: { page: ServiceSeoPageData }) {
             <p className="mt-6 max-w-2xl text-lg leading-8 text-[#63584d]">{page.intro}</p>
             <div className="mt-8 flex flex-wrap gap-3">
               <Button asChild>
-                <a href={`/${page.locale}#contact`}>
+                <a href={startProjectPath(page.locale)}>
                   {page.primaryCta}
                   <ArrowRight size={15} className="ml-2" />
                 </a>
               </Button>
               <Button asChild variant="outline">
-                <a href={page.secondaryHref ?? `/${page.locale}#tarifs`}>{page.secondaryCta}</a>
+                <a href={page.secondaryHref ?? studioPath(page.locale, "offers")}>{page.secondaryCta}</a>
               </Button>
             </div>
           </div>

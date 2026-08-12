@@ -7,6 +7,7 @@ import { type MouseEvent, useEffect, useRef, useState } from "react";
 import { Button } from "@/components/ui/button";
 import { BRAND } from "@/lib/brand";
 import { isEnglish, type Locale } from "@/lib/i18n";
+import { contactPath, startProjectPath, studioPath } from "@/lib/site-routes";
 
 export function Navbar({ locale = "fr" }: { locale?: Locale }) {
   const en = isEnglish(locale);
@@ -63,10 +64,10 @@ export function Navbar({ locale = "fr" }: { locale?: Locale }) {
   const links = [
     { label: en ? "Services" : "Services", href: `/${locale}#services` },
     { label: en ? "Work" : "Réalisations", href: `/${locale}#realisations` },
-    { label: en ? "Offers" : "Offres", href: `/${locale}#tarifs` },
+    { label: en ? "Offers" : "Offres", href: studioPath(locale, "offers") },
     { label: en ? "About" : "À propos", href: `/${locale}/a-propos-methodologie-preuves` },
     { label: "FAQ", href: `/${locale}#faq` },
-    { label: en ? "Contact" : "Contact", href: `/${locale}#contact` },
+    { label: en ? "Contact" : "Contact", href: contactPath(locale) },
   ];
 
   const closeMenu = () => {
@@ -143,7 +144,7 @@ export function Navbar({ locale = "fr" }: { locale?: Locale }) {
         </Link>
 
         <Button asChild size="sm" className="group hidden sm:inline-flex">
-          <Link href={`/${locale}#contact`} onClick={(event) => scrollToSection(event, `/${locale}#contact`)}>
+          <Link href={startProjectPath(locale)}>
             {en ? "Audit" : "Diagnostic"}
             <ArrowUpRight size={15} className="ml-1 transition-transform duration-300 group-hover:translate-x-0.5" />
           </Link>
@@ -207,7 +208,7 @@ export function Navbar({ locale = "fr" }: { locale?: Locale }) {
                   {en ? "Passer en français" : "Switch to English"}
                 </Link>
                 <Button asChild size="sm" className="mt-2.5 w-full">
-                  <a href={`/${locale}#contact`} onClick={(event) => scrollToSection(event, `/${locale}#contact`)}>
+                  <a href={startProjectPath(locale)} onClick={closeMenu}>
                     {en ? "Audit" : "Diagnostic"}
                     <ArrowUpRight size={15} className="ml-1" />
                   </a>

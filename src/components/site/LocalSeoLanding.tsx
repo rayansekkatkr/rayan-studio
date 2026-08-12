@@ -2,6 +2,7 @@ import { Button } from "@/components/ui/button";
 import { BRAND, getSiteUrl } from "@/lib/brand";
 import { localSeoCities, localSeoSectors, type LocalSeoCitySlug, type LocalSeoSectorSlug } from "@/lib/local-seo";
 import type { LocalSeoContent } from "@/lib/local-seo-content";
+import { startProjectPath } from "@/lib/site-routes";
 import { Footer } from "./Footer";
 import { Navbar } from "./Navbar";
 
@@ -156,7 +157,7 @@ export function LocalSeoLanding({ city, citySlug, sector, sectorSlug, content }:
 
         <div className="mt-8 flex flex-wrap gap-3">
           <Button asChild>
-            <a href="/fr#contact">Recevoir un diagnostic adapté à mon activité</a>
+            <a href={startProjectPath("fr")}>Recevoir un diagnostic adapté à mon activité</a>
           </Button>
           <Button asChild variant="outline">
             <a href={BRAND.whatsappUrl} target="_blank" rel="noreferrer">
