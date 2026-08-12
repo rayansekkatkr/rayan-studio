@@ -23,7 +23,7 @@ export function OffersPreview({ locale }: { locale: Locale }) {
       ];
 
   return (
-    <div className="bg-rs-subtle py-[var(--rs-section-space)]">
+    <div className="bg-rs-subtle py-[var(--rs-section-space)] lg:flex lg:min-h-[100svh] lg:items-center">
       <Container>
         <Eyebrow>{fr ? "Offres" : "Offers"}</Eyebrow>
         <h2 className="mt-4 max-w-2xl text-3xl font-semibold tracking-tight md:text-4xl">

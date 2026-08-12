@@ -24,7 +24,7 @@ export function ServicesOverview({ locale }: { locale: Locale }) {
   const fr = locale === "fr";
 
   return (
-    <div className="bg-rs-bg py-[var(--rs-section-space)]">
+    <div className="bg-rs-bg py-[var(--rs-section-space)] lg:flex lg:min-h-[100svh] lg:items-center">
       <Container>
         <Eyebrow>Services</Eyebrow>
         <div className="mt-8 grid gap-12 md:grid-cols-2">
