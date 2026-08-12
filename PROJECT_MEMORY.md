@@ -4,6 +4,22 @@ Derniere mise a jour: 2026-06-13
 
 Ce fichier sert de memoire vivante pour le projet. A chaque chantier important, le mettre a jour avant de terminer: etat du site, decisions, points techniques, risques, prochaine etape.
 
+## CURRENT PUBLIC SITE POSITIONING - 2026-08-12
+
+The validated public Rayan Studio website positioning is now a premium independent software and digital studio, approximately 70% software and 30% premium web.
+
+Public-site priorities:
+- software first: SaaS, web applications, MVPs, APIs/backends, automation/AI, DevOps/cloud;
+- premium website creation/redesign remains a clear secondary entry point;
+- present Rayan Studio honestly as an independent studio with direct founder involvement, never as a fabricated large agency;
+- no public fixed prices; use the `Offres` model and quote after project framing;
+- never invent metrics, testimonials, client logos, team size or outcomes;
+- public FR/EN marketing copy must not use the em dash character;
+- preserve the 70 `/site/[sector]/[city]` local SEO pages as a separate acquisition surface with their local/TPE intent;
+- preserve existing outreach/prospection constraints unless a separate approved change explicitly modifies them.
+
+This section supersedes older TPE-first instructions for the main public website only. Historical records, local SEO intent and prospection-specific rules remain historical/operational context and must not be rewritten merely to match the new homepage positioning.
+
 ## Resume Executif
 
 Rayan Studio est un site Next.js 14 pour vendre des prestations de creation et de refonte de sites vitrines premium. La cible prioritaire clarifiee est les petites entreprises/TPE qui ont un site date, peu convaincant, ou aucun site. Les commerces locaux restent une cible forte, mais le positionnement ne doit pas etre limite au CHR.
