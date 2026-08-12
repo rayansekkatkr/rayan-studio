@@ -79,13 +79,13 @@ test.describe("project intake", () => {
     await expect(page.getByRole("heading", { level: 1, name: "Start a project" })).toBeVisible();
 
     await checkRadio(page, "MVP", true);
-    await page.getByRole("button", { name: "Next" }).click();
+    await page.getByRole("button", { name: "Next", exact: true }).click();
     await checkRadio(page, "An idea");
-    await page.getByRole("button", { name: "Next" }).click();
+    await page.getByRole("button", { name: "Next", exact: true }).click();
     await page.getByLabel("Project objective").fill("Validate a product idea quickly.");
-    await page.getByRole("button", { name: "Next" }).click();
+    await page.getByRole("button", { name: "Next", exact: true }).click();
     await checkRadio(page, "As soon as possible");
-    await page.getByRole("button", { name: "Next" }).click();
+    await page.getByRole("button", { name: "Next", exact: true }).click();
     await page.getByLabel("Name", { exact: true }).fill("Rayan");
     await page.getByLabel("Company", { exact: true }).fill("Studio");
     await page.getByLabel("Email").fill("rayan@example.com");
