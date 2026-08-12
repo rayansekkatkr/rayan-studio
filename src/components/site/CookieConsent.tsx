@@ -33,20 +33,20 @@ export function CookieConsent() {
   if (!visible) return null;
 
   return (
-    <aside className="fixed inset-x-3 bottom-3 z-[80] mx-auto max-w-[calc(100vw-1.5rem)] rounded-none border border-[#2a231d]/14 bg-[#fffaf0]/94 p-4 shadow-[6px_6px_0_rgba(42,35,29,0.1)] backdrop-blur-xl sm:max-w-4xl">
-      <p className="text-sm text-[#63584d]">
+    <aside className="fixed inset-x-3 bottom-3 z-[80] mx-auto max-w-[calc(100vw-1.5rem)] rounded-[var(--rs-radius-md)] border border-[var(--rs-border)] bg-rs-surface/95 p-4 shadow-[0_16px_40px_-24px_rgba(11,11,14,0.4)] backdrop-blur-xl sm:max-w-4xl">
+      <p className="text-sm text-rs-muted">
         {isEnglish
           ? "We use analytics cookies to improve the website. You can accept or decline these cookies."
           : "Nous utilisons des cookies de mesure d'audience pour améliorer le site. Vous pouvez accepter ou refuser ces cookies."}
         {" "}
-        <Link href="/politique-confidentialite" className="font-black text-[#c2461f] underline underline-offset-2">
+        <Link href="/politique-confidentialite" className="font-semibold text-rs-accent underline underline-offset-2">
           {isEnglish ? "Learn more" : "En savoir plus"}
         </Link>
       </p>
       <div className="mt-3 flex flex-wrap gap-2.5">
         <button
           type="button"
-          className="rounded-none border border-[#17120f] bg-[#17120f] px-4 py-2 text-sm font-black text-[#fffaf0]"
+          className="rounded-full bg-rs-fg px-5 py-2.5 text-sm font-semibold text-rs-bg transition-colors duration-150 hover:bg-rs-accent"
           onClick={() => {
             window.localStorage.setItem(CONSENT_KEY, "accepted");
             window.dispatchEvent(new Event("rs-consent-granted"));
@@ -59,7 +59,7 @@ export function CookieConsent() {
         </button>
         <button
           type="button"
-          className="rounded-none border border-[#2a231d]/14 bg-[#fffaf0] px-4 py-2 text-sm font-black text-[#63584d]"
+          className="rounded-full border border-[var(--rs-border-strong)] bg-rs-surface px-5 py-2.5 text-sm font-semibold text-rs-fg transition-colors duration-150 hover:border-rs-accent"
           onClick={() => {
             window.localStorage.setItem(CONSENT_KEY, "declined");
             window.dispatchEvent(new Event("rs-consent-revoked"));
