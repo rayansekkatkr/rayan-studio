@@ -24,7 +24,7 @@ export const docextract: ProjectRecord = {
     fr: "Produit du studio, en production",
     en: "Studio product, live",
   },
-  technologies: [],
+  technologies: ["Next.js", "Prisma", "Stripe"],
   challenge: { fr: [], en: [] },
   solution: { fr: [], en: [] },
   capabilities: [],
