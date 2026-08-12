@@ -1,20 +1,20 @@
 import type { Metadata, Viewport } from "next";
-import { Plus_Jakarta_Sans, Sora } from "next/font/google";
+import { Plus_Jakarta_Sans, Source_Serif_4 } from "next/font/google";
 import { AnalyticsLoader } from "@/components/site/AnalyticsLoader";
 import { CookieConsent } from "@/components/site/CookieConsent";
 import { WebVitalsReporter } from "@/components/site/WebVitalsReporter";
 import { BRAND, getSiteUrl } from "@/lib/brand";
 import { getGoogleSiteVerification } from "@/lib/seo-verification";
 
-const bodyFont = Plus_Jakarta_Sans({
+const sansFont = Plus_Jakarta_Sans({
   subsets: ["latin"],
-  variable: "--font-body",
+  variable: "--font-sans",
   display: "swap",
 });
 
-const displayFont = Sora({
+const serifFont = Source_Serif_4({
   subsets: ["latin"],
-  variable: "--font-display",
+  variable: "--font-serif",
   display: "swap",
 });
 
@@ -109,7 +109,7 @@ export function RootBody({ children, locale = "fr" }: { children: React.ReactNod
   const gaId = process.env.NEXT_PUBLIC_GA_ID;
 
   return (
-    <body className={`${bodyFont.variable} ${displayFont.variable} antialiased`}>
+    <body className={`${sansFont.variable} ${serifFont.variable} antialiased`}>
       <a href="#main-content" className="skip-link">
         {locale === "en" ? "Skip to main content" : "Aller au contenu principal"}
       </a>

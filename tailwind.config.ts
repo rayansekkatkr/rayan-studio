@@ -8,6 +8,23 @@ const config: Config = {
   ],
   theme: {
     extend: {
+      colors: {
+        rs: {
+          bg: "var(--rs-bg)",
+          surface: "var(--rs-surface)",
+          subtle: "var(--rs-surface-subtle)",
+          fg: "var(--rs-fg)",
+          muted: "var(--rs-muted)",
+          accent: "var(--rs-accent)",
+          "accent-hover": "var(--rs-accent-hover)",
+          border: "var(--rs-border)",
+          dark: "var(--rs-dark)",
+        },
+      },
+      fontFamily: {
+        sans: ["var(--font-sans)", "sans-serif"],
+        serif: ["var(--font-serif)", "serif"],
+      },
       keyframes: {
         "accordion-down": {
           from: { height: "0" },
