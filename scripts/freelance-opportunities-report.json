@@ -1,6 +1,6 @@
 {
-  "runAt": "2026-08-14T09:15:00.475Z",
-  "status": "no_candidates",
+  "runAt": "2026-08-17T08:54:04.519Z",
+  "status": "ready",
   "sourceMode": "default_platforms",
   "sourceCount": 18,
   "sources": [
@@ -149,11 +149,11 @@
       "autoDiscovered": true
     }
   ],
-  "scannedOpportunities": 248,
-  "scoredCandidateCount": 75,
+  "scannedOpportunities": 280,
+  "scoredCandidateCount": 89,
   "remotePolicy": "explicit_remote_only",
-  "remoteRejectedCount": 75,
-  "candidateCount": 0,
+  "remoteRejectedCount": 88,
+  "candidateCount": 1,
   "maxOpportunities": 30,
   "minScore": 35,
   "nextStep": "Review candidates from the automatic platform catalog, then paste the proposalDraft into the platform.",
@@ -179,6 +179,28 @@
       "note": "Approche manuelle, ton humain, pas de message automatique en masse."
     }
   ],
-  "candidates": [],
+  "candidates": [
+    {
+      "source": "Freelancer - remote full stack web developer",
+      "sourceUrl": "https://www.freelancer.com/jobs/website-development",
+      "platform": "freelancer",
+      "searchQuery": "remote full stack web developer",
+      "remoteGuaranteed": false,
+      "title": "WordPress Website Designer &ndash; Remote",
+      "description": "",
+      "sourceDescription": "World's largest website for Website Development Jobs. Find $$$ Website Development Jobs or hire a Website Developer to bid on your Website Development Job at Freelancer. 12m+ Jobs!",
+      "url": "https://www.freelancer.com/projects/elementor/wordpress-website-designer-remote",
+      "extractionMethod": "anchor",
+      "score": 55,
+      "fit": "medium",
+      "reasons": [
+        "besoin site/refonte"
+      ],
+      "remoteOnly": true,
+      "remoteStatus": "remote",
+      "remoteReason": "teletravail explicite dans la mission",
+      "proposalDraft": "Hi,\n\nI saw your project \"WordPress Website Designer &ndash; Remote\" and it looks close to the kind of full-stack/platform work I handle.\n\nMy strongest fit here is turning the business goal into a clean, responsive implementation with the technical setup around launch handled properly.\n\nI can help clarify the scope, then take care of the implementation, API/backend work, responsive front-end, deployment details, and clean handover.\n\nPortfolio: https://www.rayanstudios.com/fr\n\nIf you can share the current stack, priority features and timeline, I can reply with a concrete scope and estimate.\n\nBest,\nRayan\nMission: https://www.freelancer.com/projects/elementor/wordpress-website-designer-remote"
+    }
+  ],
   "errors": []
 }
