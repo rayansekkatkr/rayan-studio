@@ -1,5 +1,5 @@
 {
-  "runAt": "2026-09-01T13:26:34.404Z",
+  "runAt": "2026-09-02T12:43:53.172Z",
   "status": "no_candidates",
   "sourceMode": "default_platforms",
   "sourceCount": 18,
@@ -149,10 +149,10 @@
       "autoDiscovered": true
     }
   ],
-  "scannedOpportunities": 246,
-  "scoredCandidateCount": 79,
+  "scannedOpportunities": 240,
+  "scoredCandidateCount": 75,
   "remotePolicy": "explicit_remote_only",
-  "remoteRejectedCount": 79,
+  "remoteRejectedCount": 75,
   "candidateCount": 0,
   "maxOpportunities": 30,
   "minScore": 35,
