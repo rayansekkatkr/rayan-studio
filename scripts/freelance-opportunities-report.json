@@ -1,5 +1,5 @@
 {
-  "runAt": "2026-09-08T12:50:00.069Z",
+  "runAt": "2026-09-09T12:55:43.363Z",
   "status": "ready",
   "sourceMode": "default_platforms",
   "sourceCount": 18,
@@ -149,10 +149,10 @@
       "autoDiscovered": true
     }
   ],
-  "scannedOpportunities": 268,
-  "scoredCandidateCount": 90,
+  "scannedOpportunities": 263,
+  "scoredCandidateCount": 81,
   "remotePolicy": "explicit_remote_only",
-  "remoteRejectedCount": 89,
+  "remoteRejectedCount": 80,
   "candidateCount": 1,
   "maxOpportunities": 30,
   "minScore": 35,
@@ -186,7 +186,7 @@
       "platform": "codeur",
       "searchQuery": "remote full stack web developer",
       "remoteGuaranteed": false,
-      "title": "Formateur VMware NSX: Troubleshooting and Operations [V4.x] Il y a 23 heures Ouvert 500 € à 1 000 € 5 Offres 2653 Vues Durée 5 jours en distanciel Programme 1 - Introduction 2 - Opérations et outils NSX Expliquer et valider les outils de dépannage natifs (tableaux de bord, traceflow, mise en miroir de ports) pour NSX Configurer syslog, IPFIX et les collectes de j... Formation Infrastructure et réseaux Admin système, sécurité Akli Lacene Tom Wemmert Eméry Guendehou Alexandre Uzan Romain Gendry",
+      "title": "Formateur VMware NSX: Troubleshooting and Operations [V4.x] Il y a 2 jours Ouvert 500 € à 1 000 € 6 Offres 3562 Vues Durée 5 jours en distanciel Programme 1 - Introduction 2 - Opérations et outils NSX Expliquer et valider les outils de dépannage natifs (tableaux de bord, traceflow, mise en miroir de ports) pour NSX Configurer syslog, IPFIX et les collectes de j... Formation Infrastructure et réseaux Admin système, sécurité +1 Akli Lacene emeraude-it Tom Wemmert Eméry Guendehou Alexandre Uzan",
       "description": "",
       "sourceDescription": "Découvrez les derniers projets disponibles sur Codeur.com et trouvez plus de cent nouvelles missions en freelance chaque jour.",
       "url": "https://www.codeur.com/projects/489351-formateur-vmware-nsx-troubleshooting-and-operations-v4-x",
