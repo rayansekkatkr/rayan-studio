@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import { useEffect, useState } from "react";
-import { CONSENT_KEY, trackEvent } from "@/lib/analytics";
+import { readConsent, saveConsent, trackEvent } from "@/lib/analytics";
 import { legalPath } from "@/lib/site-routes";
 
 function updateConsent(granted: boolean) {
@@ -21,8 +21,7 @@ export function CookieConsent() {
 
   useEffect(() => {
     setIsEnglish(window.location.pathname.startsWith("/en"));
-    const saved = window.localStorage.getItem(CONSENT_KEY);
-    if (saved !== "accepted" && saved !== "declined") {
+    if (readConsent() === null) {
       setVisible(true);
     }
 
@@ -52,7 +51,7 @@ export function CookieConsent() {
           type="button"
           className="rounded-full bg-rs-fg px-5 py-2.5 text-sm font-semibold text-rs-bg transition-colors duration-150 hover:bg-rs-accent"
           onClick={() => {
-            window.localStorage.setItem(CONSENT_KEY, "accepted");
+            saveConsent("accepted");
             window.dispatchEvent(new Event("rs-consent-granted"));
             updateConsent(true);
             trackEvent("cookie_consent", { choice: "accepted" });
@@ -65,7 +64,7 @@ export function CookieConsent() {
           type="button"
           className="rounded-full border border-[var(--rs-border-strong)] bg-rs-surface px-5 py-2.5 text-sm font-semibold text-rs-fg transition-colors duration-150 hover:border-rs-accent"
           onClick={() => {
-            window.localStorage.setItem(CONSENT_KEY, "declined");
+            saveConsent("declined");
             window.dispatchEvent(new Event("rs-consent-revoked"));
             updateConsent(false);
             setVisible(false);

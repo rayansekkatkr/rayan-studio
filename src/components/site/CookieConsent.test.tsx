@@ -1,7 +1,7 @@
 import { act, render, screen } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
 import { beforeEach, describe, expect, it, vi } from "vitest";
-import { CONSENT_KEY } from "@/lib/analytics";
+import { CONSENT_KEY, CONSENT_MAX_AGE_MS, saveConsent } from "@/lib/analytics";
 import { CookieConsent } from "@/components/site/CookieConsent";
 
 beforeEach(() => {
@@ -53,6 +53,13 @@ describe("CookieConsent", () => {
       window.dispatchEvent(new Event("rs-open-consent"));
     });
     expect(screen.getByRole("button", { name: /Accepter/i })).toBeInTheDocument();
+  });
+
+  it("shows the banner again once a saved choice is older than 6 months", () => {
+    saveConsent("accepted", Date.now() - CONSENT_MAX_AGE_MS - 1);
+    render(<CookieConsent />);
+    expect(screen.getByRole("button", { name: /Accepter/i })).toBeInTheDocument();
+    expect(window.localStorage.getItem(CONSENT_KEY)).toBeNull();
   });
 
   it("renders FR copy on FR paths and EN copy on EN paths", () => {

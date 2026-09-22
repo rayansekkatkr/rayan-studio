@@ -16,7 +16,15 @@ export type LegalDoc = {
 // prospection from scripts/outreach.js and scripts/prospection/. Keep them in sync.
 
 const UPDATED = { fr: "Dernière mise à jour : 22 septembre 2026", en: "Last updated: 22 September 2026" };
-const LEGAL_NOTICE_UPDATED = { fr: "Dernière mise à jour : 5 avril 2026", en: "Last updated: 5 April 2026" };
+const LEGAL_NOTICE_UPDATED = UPDATED;
+
+// Identity details copied from the founder's other site (pont-facturx.com/legal/mentions).
+const LEGAL_IDENTITY = {
+  status: "Micro-entrepreneur",
+  siret: "980 099 766 00019",
+  vat: { fr: "Non assujetti", en: "Not subject to VAT" },
+  address: "8 allée du pré",
+};
 
 function terms(locale: Locale): LegalDoc {
   if (locale === "en") {
@@ -440,8 +448,8 @@ function privacy(locale: Locale): LegalDoc {
               </li>
               <li>IP address used for rate limiting: 10 minutes, in server memory only.</li>
               <li>
-                Cookie choice: stored in your browser until you change it via &quot;Manage cookies&quot; or clear
-                your site data.
+                Cookie choice: stored in your browser for 6 months, after which the banner is shown again. You
+                can change it earlier via &quot;Manage cookies&quot; or by clearing your site data.
               </li>
               <li>
                 Audience measurement: analytics cookies expire after 13 months at most; the associated data is kept
@@ -652,8 +660,8 @@ function privacy(locale: Locale): LegalDoc {
             </li>
             <li>Adresse IP utilisée pour la limitation anti-abus : 10 minutes, en mémoire du serveur uniquement.</li>
             <li>
-              Choix cookies : dans votre navigateur, jusqu&apos;à modification via « Gérer les cookies » ou
-              suppression de vos données de site.
+              Choix cookies : dans votre navigateur pendant 6 mois, puis le bandeau est de nouveau affiché. Vous
+              pouvez le modifier avant via « Gérer les cookies » ou en supprimant vos données de site.
             </li>
             <li>
               Mesure d&apos;audience : les cookies de mesure expirent au plus tard après 13 mois ; les données
@@ -745,8 +753,6 @@ function privacy(locale: Locale): LegalDoc {
   };
 }
 
-// Content unchanged on purpose: legal identity details (status, SIRET, address)
-// are not in the repository and must never be invented.
 function legalNotice(locale: Locale): LegalDoc {
   const mail = <a href={`mailto:${BRAND.email}`}>{BRAND.email}</a>;
 
@@ -764,6 +770,14 @@ function legalNotice(locale: Locale): LegalDoc {
               {BRAND.name}
               <br />
               Publication director: {BRAND.founder}
+              <br />
+              Legal form: {LEGAL_IDENTITY.status}
+              <br />
+              SIRET: {LEGAL_IDENTITY.siret}
+              <br />
+              VAT: {LEGAL_IDENTITY.vat.en}
+              <br />
+              Registered address: {LEGAL_IDENTITY.address}
               <br />
               Email: {mail}
               <br />
@@ -822,6 +836,14 @@ function legalNotice(locale: Locale): LegalDoc {
             {BRAND.name}
             <br />
             Responsable de publication : {BRAND.founder}
+            <br />
+            Forme juridique : {LEGAL_IDENTITY.status}
+            <br />
+            SIRET : {LEGAL_IDENTITY.siret}
+            <br />
+            TVA : {LEGAL_IDENTITY.vat.fr}
+            <br />
+            Siège social : {LEGAL_IDENTITY.address}
             <br />
             Email : {mail}
             <br />
