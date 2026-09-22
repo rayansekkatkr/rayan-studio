@@ -23,7 +23,7 @@ const LEGAL_IDENTITY = {
   status: "Micro-entrepreneur",
   siret: "980 099 766 00019",
   vat: { fr: "Non assujetti", en: "Not subject to VAT" },
-  address: "8 allée du pré",
+  address: "8 allée du pré, 72190 Saint-Pavace, France",
 };
 
 function terms(locale: Locale): LegalDoc {
