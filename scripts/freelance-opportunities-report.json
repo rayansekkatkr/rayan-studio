@@ -1,6 +1,6 @@
 {
-  "runAt": "2026-09-21T15:03:38.088Z",
-  "status": "ready",
+  "runAt": "2026-09-22T13:21:19.965Z",
+  "status": "no_candidates",
   "sourceMode": "default_platforms",
   "sourceCount": 18,
   "sources": [
@@ -149,11 +149,11 @@
       "autoDiscovered": true
     }
   ],
-  "scannedOpportunities": 270,
-  "scoredCandidateCount": 87,
+  "scannedOpportunities": 274,
+  "scoredCandidateCount": 91,
   "remotePolicy": "explicit_remote_only",
-  "remoteRejectedCount": 86,
-  "candidateCount": 1,
+  "remoteRejectedCount": 91,
+  "candidateCount": 0,
   "maxOpportunities": 30,
   "minScore": 35,
   "nextStep": "Review candidates from the automatic platform catalog, then paste the proposalDraft into the platform.",
@@ -179,29 +179,6 @@
       "note": "Approche manuelle, ton humain, pas de message automatique en masse."
     }
   ],
-  "candidates": [
-    {
-      "source": "Codeur - remote full stack web developer",
-      "sourceUrl": "https://www.codeur.com/projects?keywords=remote%20full%20stack%20web%20developer",
-      "platform": "codeur",
-      "searchQuery": "remote full stack web developer",
-      "remoteGuaranteed": false,
-      "title": "Scrum Master Senior SAFe / Azure DevOps – Mission longue 100% Remote Il y a 24 heures Ouvert 500 à 800 €/jour 11 Offres 2504 Vues Dans le cadre d’un programme de transformation digitale, nous recherchons un Scrum Master Senior disposant d’une solide expérience SAFe et Azure DevOps. Missions : Accompagner une ou plusieurs équipes Agile. Animer les cérémonies Scrum : Daily, ... Agile / Scrum Gestion de projet +6 Stéphane Bieber Herve Bansay Rhys Kamga Yatma Gueye Akrem Baroudi",
-      "description": "",
-      "sourceDescription": "Découvrez les derniers projets disponibles sur Codeur.com et trouvez plus de cent nouvelles missions en freelance chaque jour.",
-      "url": "https://www.codeur.com/projects/490010-scrum-master-senior-safe-azure-devops-mission-longue-100-remote",
-      "extractionMethod": "anchor",
-      "score": 45,
-      "fit": "medium",
-      "reasons": [
-        "DevOps, CI/CD ou deploiement",
-        "budget mentionne"
-      ],
-      "remoteOnly": true,
-      "remoteStatus": "remote",
-      "remoteReason": "teletravail explicite dans la mission",
-      "proposalDraft": "Bonjour,\n\nJ'ai vu votre mission \"Scrum Master Senior SAFe / Azure DevOps – Mission longue 100% Remote\". Je peux vous aider sur la partie site.\n\nJe commencerais par clarifier la structure et les priorites, puis je peux prendre en charge la maquette, le developpement, le responsive, le SEO de depart, le domaine/DNS et la mise en ligne.\n\nQuelques exemples de mon travail: https://www.rayanstudios.com/fr\n\nSi vous avez l'URL actuelle, 2-3 references ou une contrainte de delai/budget, je peux vous repondre avec un perimetre concret et une estimation plus precise.\n\nBonne journee,\nRayan\nMission: https://www.codeur.com/projects/490010-scrum-master-senior-safe-azure-devops-mission-longue-100-remote"
-    }
-  ],
+  "candidates": [],
   "errors": []
 }
