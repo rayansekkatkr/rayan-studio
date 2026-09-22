@@ -75,3 +75,16 @@ export function contactPath(locale: Locale) {
 export function startProjectPath(locale: Locale) {
   return locale === "fr" ? "/fr/demarrer-un-projet" : "/en/start-a-project";
 }
+
+export type LegalDocKey = "legal" | "privacy" | "terms";
+
+// FR legal pages keep their historical root URLs; EN versions live under /en.
+const LEGAL_PATHS: Record<LegalDocKey, Record<Locale, string>> = {
+  legal: { fr: "/mentions-legales", en: "/en/legal" },
+  privacy: { fr: "/politique-confidentialite", en: "/en/privacy" },
+  terms: { fr: "/cgv", en: "/en/terms" },
+};
+
+export function legalPath(locale: Locale, doc: LegalDocKey) {
+  return LEGAL_PATHS[doc][locale];
+}

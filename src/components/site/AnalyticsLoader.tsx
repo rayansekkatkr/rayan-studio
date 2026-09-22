@@ -4,6 +4,9 @@ import Script from "next/script";
 import { useEffect, useState } from "react";
 import { hasAnalyticsConsent } from "@/lib/analytics";
 
+// 13 months: CNIL ceiling for audience-measurement cookies, documented in the privacy policy.
+const COOKIE_EXPIRES_SECONDS = 13 * 30 * 24 * 60 * 60;
+
 export function AnalyticsLoader({ gaId }: { gaId: string }) {
   const [enabled, setEnabled] = useState(false);
 
@@ -39,7 +42,7 @@ export function AnalyticsLoader({ gaId }: { gaId: string }) {
             ad_user_data: 'denied',
             ad_personalization: 'denied'
           });
-          gtag('config', '${gaId}', { anonymize_ip: true });
+          gtag('config', '${gaId}', { anonymize_ip: true, cookie_expires: ${COOKIE_EXPIRES_SECONDS} });
         `}
       </Script>
     </>

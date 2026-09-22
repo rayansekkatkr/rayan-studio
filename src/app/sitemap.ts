@@ -7,11 +7,13 @@ import { getAllLocalSeoCombos } from "@/lib/local-seo";
 import {
   contactPath,
   insightPath,
+  legalPath,
   servicePath,
   startProjectPath,
   studioPath,
   workPath,
   type InsightCategoryKey,
+  type LegalDocKey,
   type StudioPageKey,
 } from "@/lib/site-routes";
 
@@ -25,6 +27,7 @@ const INSIGHT_CATEGORIES: InsightCategoryKey[] = [
   "tools",
 ];
 const STUDIO_PAGES: StudioPageKey[] = ["studio", "rayan", "method", "offers", "faq"];
+const LEGAL_DOCS: LegalDocKey[] = ["legal", "privacy", "terms"];
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const baseUrl = getSiteUrl();
@@ -108,16 +111,9 @@ export default function sitemap(): MetadataRoute.Sitemap {
     }));
   }
 
-  const legalEntries: MetadataRoute.Sitemap = [
-    "/mentions-legales",
-    "/politique-confidentialite",
-    "/cgv",
-  ].map((path) => ({
-    url: `${baseUrl}${path}`,
-    lastModified,
-    changeFrequency: "monthly" as const,
-    priority: 0.4,
-  }));
+  const legalEntries: MetadataRoute.Sitemap = LEGAL_DOCS.flatMap((doc) =>
+    localizedPair(legalPath("fr", doc), legalPath("en", doc), 0.4),
+  );
 
   return [
     ...localizedPair("/fr", "/en", 1, "weekly"),

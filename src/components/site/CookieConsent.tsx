@@ -3,6 +3,7 @@
 import Link from "next/link";
 import { useEffect, useState } from "react";
 import { CONSENT_KEY, trackEvent } from "@/lib/analytics";
+import { legalPath } from "@/lib/site-routes";
 
 function updateConsent(granted: boolean) {
   if (typeof window === "undefined" || typeof window.gtag !== "function") return;
@@ -39,7 +40,10 @@ export function CookieConsent() {
           ? "We use analytics cookies to improve the website. You can accept or decline these cookies."
           : "Nous utilisons des cookies de mesure d'audience pour améliorer le site. Vous pouvez accepter ou refuser ces cookies."}
         {" "}
-        <Link href="/politique-confidentialite" className="font-semibold text-rs-accent underline underline-offset-2">
+        <Link
+          href={legalPath(isEnglish ? "en" : "fr", "privacy")}
+          className="font-semibold text-rs-accent underline underline-offset-2"
+        >
           {isEnglish ? "Learn more" : "En savoir plus"}
         </Link>
       </p>

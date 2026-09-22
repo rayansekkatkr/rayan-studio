@@ -1,7 +1,7 @@
 import Link from "next/link";
 import { BRAND } from "@/lib/brand";
 import { isEnglish, type Locale } from "@/lib/i18n";
-import { contactPath } from "@/lib/site-routes";
+import { contactPath, legalPath } from "@/lib/site-routes";
 import { getServiceSeoPagesByLocale } from "@/lib/service-seo";
 import { ManageCookiesButton } from "./ManageCookiesButton";
 
@@ -47,13 +47,13 @@ export function Footer({ locale = "fr" }: { locale?: Locale }) {
             ))}
           </div>
           <div className="flex flex-wrap gap-4 text-xs uppercase tracking-[0.15em] lg:justify-end">
-            <Link href="/mentions-legales" className="transition-colors hover:text-[#c2461f]">
+            <Link href={legalPath(locale, "legal")} className="transition-colors hover:text-[#c2461f]">
               {en ? "Legal notice" : "Mentions légales"}
             </Link>
-            <Link href="/politique-confidentialite" className="transition-colors hover:text-[#c2461f]">
+            <Link href={legalPath(locale, "privacy")} className="transition-colors hover:text-[#c2461f]">
               {en ? "Privacy policy" : "Politique de confidentialité"}
             </Link>
-            <Link href="/cgv" className="transition-colors hover:text-[#c2461f]">
+            <Link href={legalPath(locale, "terms")} className="transition-colors hover:text-[#c2461f]">
               {en ? "Terms of sale" : "CGV"}
             </Link>
             <ManageCookiesButton label={en ? "Manage cookies" : "Gérer les cookies"} />
