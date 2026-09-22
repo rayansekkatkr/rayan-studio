@@ -23,7 +23,7 @@ const LEGAL_IDENTITY = {
   status: "Micro-entrepreneur",
   siret: "980 099 766 00019",
   vat: { fr: "Non assujetti", en: "Not subject to VAT" },
-  address: "8 allée du pré",
+  address: "8 allée du pré, 72190 Saint-Pavace, France",
 };
 
 function terms(locale: Locale): LegalDoc {
@@ -453,7 +453,7 @@ function privacy(locale: Locale): LegalDoc {
               </li>
               <li>
                 Audience measurement: analytics cookies expire after 13 months at most; the associated data is kept
-                by Google Analytics for 14 months at most.
+                by Google Analytics for 14 months at most from your last visit.
               </li>
               <li>
                 B2B prospecting: 3 years at most from collection or from the last exchange without a reply.
@@ -665,7 +665,7 @@ function privacy(locale: Locale): LegalDoc {
             </li>
             <li>
               Mesure d&apos;audience : les cookies de mesure expirent au plus tard après 13 mois ; les données
-              associées sont conservées par Google Analytics 14 mois au maximum.
+              associées sont conservées par Google Analytics 14 mois au maximum à compter de votre dernière visite.
             </li>
             <li>
               Prospection B2B : 3 ans au maximum à compter de la collecte ou du dernier échange resté sans
