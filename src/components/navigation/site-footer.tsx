@@ -2,7 +2,7 @@ import Link from "next/link";
 import { ManageCookiesButton } from "@/components/site/ManageCookiesButton";
 import { getNavigation } from "@/content/navigation";
 import type { Locale } from "@/lib/i18n";
-import { contactPath, startProjectPath } from "@/lib/site-routes";
+import { contactPath, legalPath, startProjectPath } from "@/lib/site-routes";
 import { LanguageSwitch } from "./language-switch";
 
 export function SiteFooter({ locale }: { locale: Locale }) {
@@ -11,9 +11,9 @@ export function SiteFooter({ locale }: { locale: Locale }) {
   const year = new Date().getFullYear();
 
   const legalLinks = [
-    { label: fr ? "Mentions légales" : "Legal notice", href: "/mentions-legales" },
-    { label: fr ? "Politique de confidentialité" : "Privacy policy", href: "/politique-confidentialite" },
-    { label: "CGV", href: "/cgv" },
+    { label: fr ? "Mentions légales" : "Legal notice", href: legalPath(locale, "legal") },
+    { label: fr ? "Politique de confidentialité" : "Privacy policy", href: legalPath(locale, "privacy") },
+    { label: fr ? "CGV" : "Terms of sale", href: legalPath(locale, "terms") },
   ];
 
   return (

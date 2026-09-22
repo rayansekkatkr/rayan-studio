@@ -1,6 +1,6 @@
 # Rayan Studio - Memoire Projet
 
-Derniere mise a jour: 2026-06-13
+Derniere mise a jour: 2026-09-22
 
 Ce fichier sert de memoire vivante pour le projet. A chaque chantier important, le mettre a jour avant de terminer: etat du site, decisions, points techniques, risques, prochaine etape.
 
@@ -22,9 +22,9 @@ This section supersedes older TPE-first instructions for the main public website
 
 ## Resume Executif
 
-Rayan Studio est un site Next.js 14 pour vendre des prestations de creation et de refonte de sites vitrines premium. La cible prioritaire clarifiee est les petites entreprises/TPE qui ont un site date, peu convaincant, ou aucun site. Les commerces locaux restent une cible forte, mais le positionnement ne doit pas etre limite au CHR.
+Rayan Studio est un site Next.js 14 (FR/EN) qui presente un studio independant de Product & Software Engineering, founder-led : applications web et SaaS, MVP, APIs/backends, automatisation et IA, DevOps/cloud, et en second plan sites web premium et refontes (voir la section de positionnement ci-dessus, validee le 2026-08-12). Le site vend un interlocuteur unique du cadrage a la mise en production, avec des etudes de cas (Pick4Me, Pont Factur-X, GoodCall, DocExtract, Manteigaria en concept assume), une methode, des offres sans prix public et deux formulaires (contact, qualification projet).
 
-Le positionnement commercial actuel est clair: direction visuelle, UX orientee conversion, developpement, SEO local, DNS, deploiement, VPS et accompagnement direct. Le site doit maintenant quitter une esthetique trop generique/AI pour devenir une vraie vitrine d'agence de refonte web: plus specifique, plus credible, plus visuelle, plus orientee preuve.
+Les paragraphes historiques ci-dessous (cible TPE/commerces locaux, refonte de sites vitrines, tarifs) decrivent des etats anterieurs du site. Ils restent utiles pour comprendre les 70 landings locales et le journal, mais ne sont plus le positionnement du site principal.
 
 Objectif business personnel: atteindre au minimum 1000 a 1500 EUR de revenus mensuels nets/viables pour subvenir aux besoins du fondateur vivant en Coree du Sud. La strategie doit donc privilegier des offres simples a vendre, une acquisition directe et un volume de projets realiste pour une personne seule.
 
@@ -589,3 +589,17 @@ Quand un changement important est fait:
 - Reste a faire (P1 SEO technique, non commence): `<html lang="fr">` en dur dans `layout.tsx:123` sert du `lang=fr` sur `/en`; `openGraph.locale: "fr_FR"` global jamais surcharge par locale; badge "Refonte" en dur `Hero.tsx:155`; aria-label "Ouvrir le menu" non localise `Navbar.tsx:111`; `canonical: "/"` sur une URL de simple redirection; pas de `x-default`; `LocalBusiness` sans adresse physique (`addressCountry` seul) a remplacer par `ProfessionalService`; `NEXT_PUBLIC_SITE_URL` doit passer en `https://www.rayanstudios.com` **cote hebergeur** (la prod sert www, toutes les URLs derivees pointent vers le non-www).
 - Hygiene repo constatee: `out/` contient trois copies (`_next/`, `_next 2/`, `_next 3/`, doublons Finder) et n'est pas exclu d'ESLint, d'ou 2 erreurs `react/no-find-dom-node` dans du vendor minifie sans rapport avec le code source.
 - Non verifie: les hooks `.claude/settings.json` et le serveur MCP `ruflo` ne sont pas encore actifs dans cette session — ils ne se chargent qu'au demarrage de Claude Code, donc leur comportement reel reste a confirmer apres redemarrage. Aucun `npm run build` ni `npm run lint` lance: cette session n'a touche aucun fichier de `src/`.
+
+### 2026-09-22
+
+- Audit externe (ChatGPT) du site relu et trie en trois categories : verifie dans le code, recommandation commerciale, hypothese dependant du statut. Decisions utilisateur : **pas de tarif public** (memoire Claude `feedback-no-public-pricing`), **pas de preuve business inventee** (aucun client mesurable a ce jour, preuves = perimetre technique reel). Faux positifs de l'audit ecartes : honeypot deja accessible (`aria-hidden`, `tabIndex=-1`), schema Person + `sameAs` LinkedIn deja present. Roadmap actee : P0 legal + memoire projet (cette entree) ; P1 remonter « vous gardez le code, les donnees et les acces », FAQ « seul ou en equipe », process apres CTA, budget facultatif dans le formulaire projet (champ `budget` deja present cote API) ; P2 case studies avec faits existants uniquement ; SEO editorial et outils interactifs reportes.
+- **P0 branche `fix/legal-pages`** :
+  - Contenu legal centralise dans `src/content/legal.tsx` (FR/EN), rendu par `src/components/site/LegalDocument.tsx` via `CommercialPageShell` (les pages FR utilisaient encore `Navbar`/`Footer` legacy). Chemins dans `site-routes.ts` (`legalPath`, `LegalDocKey`) ; footers (`site-footer.tsx`, `Footer.tsx`), bandeau cookies et sitemap passent par ce helper.
+  - CGV : perimetre passe de « creation et refonte de sites internet » a l'offre software complete ; clauses ajoutees sans nouveau chiffre commercial : recette, hebergement/donnees/services tiers, maintenance hors perimetre, confidentialite, open source/licences tierces.
+  - Politique de confidentialite reecrite sur le code reel : champs exacts des deux formulaires (`validation.ts`), IP en memoire 10 min (rate limit), honeypot, GA charge uniquement apres acceptation (`AnalyticsLoader`), cle localStorage `rayan_cookie_consent_v1`, sous-traitants reels (Vercel, Brevo, Google, Resend, Neon, OpenAI), section prospection B2B alignee sur `scripts/prospection/README.md` (SIRENE + Brave, signaux minimises vers OpenAI, desinscription HMAC). Durees par finalite : contact sans suite 3 ans, client contrat + 10 ans comptable, IP 10 min, cookies GA 13 mois, donnees GA 14 mois max, prospection 3 ans max. `daily-outreach` (Google Places + Gmail) confirme `disabled_manually` via `gh workflow list` : non documente.
+  - `AnalyticsLoader` : `cookie_expires` 13 mois ajoute au `gtag('config')` pour rendre vraie la duree annoncee.
+  - EN : `/en/legal`, `/en/privacy`, `/en/terms` (`generateStaticParams` en `en` seul, `/fr/terms` -> 404), hreflang FR<->EN sur les six pages, sitemap en paires localisees.
+  - Mentions legales : contenu FR inchange + traduction EN. Statut juridique, SIRET et adresse professionnelle absents du depot : **non inventes, a fournir par l'utilisateur**.
+  - `CLAUDE.md` et ce Resume Executif reecrits sur le positionnement Product & Software Engineering ; structure `src/app` et commandes mises a jour ; acquisition : `weekly-prospection` actif, `daily-outreach` desactive.
+  - Verification : `npm run typecheck`, `npm run lint`, `npm run check:copy`, `npm test` 144/144, `npm run build` 170 pages, `npm start` + curl : 200 sur les six pages, 404 sur `/fr/terms`, hreflang et canonical corrects, anciens textes absents, liens footer EN vers `/en/*`, sitemap 6 URLs legales, `cookie_expires` present dans les chunks.
+  - Reste a faire / non verifie : mentions legales completes (statut, SIRET, adresse) ; **aucun job de purge n'existe pour la duree de 3 ans annoncee en prospection** (a creer avant activation `SEND_ENABLED`) ; le choix cookies n'expire jamais (la CNIL recommande de redemander apres 6 mois) ; retention 14 mois a verifier dans la propriete GA4 ; `src/components/site/HomePage.tsx` (legacy, non importe, ancienne copy « commerces locaux ») a supprimer sur demande.
