@@ -62,6 +62,10 @@ jobs:
           FREELANCE_REQUIRE_REMOTE: "true"
           MAX_OPPORTUNITIES: ${{ github.event_name == 'workflow_dispatch' && inputs.max_opportunities || '30' }}
           STUDIO_URL: ${{ vars.STUDIO_URL || 'https://www.rayanstudios.com' }}
+          # Report email: sent only when there is something to read.
+          GMAIL_USER: ${{ secrets.GMAIL_USER }}
+          GMAIL_APP_PASSWORD: ${{ secrets.GMAIL_APP_PASSWORD }}
+          FREELANCE_REPORT_TO: ${{ vars.FREELANCE_REPORT_TO }}
 
       - name: Write workflow session report
         if: always()

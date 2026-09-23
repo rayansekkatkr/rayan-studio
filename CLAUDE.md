@@ -126,8 +126,11 @@ Trois workflows GitHub Actions :
 - `daily-outreach.yml` → `scripts/outreach.js` (Google Places + Gmail, `contacted.json`).
   **Désactivé manuellement depuis août 2026**, remplacé par le pipeline ci-dessus. Ne pas
   réactiver sans décision explicite.
-- `freelance-opportunities.yml` → `scripts/freelance-opportunities.js`. **N'envoie rien** : produit
-  des `proposalDraft` à relire et coller manuellement. Ne pas automatiser l'envoi.
+- `freelance-opportunities.yml` → `scripts/freelance-opportunities.js`. **Ne candidate jamais** :
+  produit des `proposalDraft` à relire et coller manuellement. Le rapport est emailé à Rayan via
+  Gmail (`GMAIL_USER`/`GMAIL_APP_PASSWORD`, destinataire `FREELANCE_REPORT_TO`) uniquement s'il
+  contient des candidates ou des missions « à vérifier » (statut remote `unknown` ou `hybrid`).
+  Ne pas automatiser la candidature.
 
 Contraintes dures :
 
