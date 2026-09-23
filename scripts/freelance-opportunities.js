@@ -16,6 +16,9 @@ const FETCH_TIMEOUT_MS = readPositiveInteger(process.env.FREELANCE_FETCH_TIMEOUT
 const REQUEST_DELAY_MS = readPositiveInteger(process.env.FREELANCE_REQUEST_DELAY_MS, 1500);
 const MIN_SCORE = readPositiveInteger(process.env.FREELANCE_MIN_SCORE, 35);
 const MAX_DEFAULT_SOURCES = readPositiveInteger(process.env.FREELANCE_MAX_DEFAULT_SOURCES, 18);
+const MAX_TO_VERIFY = readPositiveInteger(process.env.FREELANCE_MAX_TO_VERIFY, 10);
+const MAX_REJECTED_SAMPLE = 20;
+const TO_VERIFY_STATUSES = new Set(['unknown', 'hybrid']);
 
 const WEB_INTENT_PATTERNS = [
   /refonte/i,
@@ -159,12 +162,15 @@ const REMOTE_PATTERNS = [
   /travail\s+a\s+distance/i,
 ];
 
+const HYBRID_PATTERNS = [
+  /hybride/i,
+  /\bhybrid\b/i,
+];
+
 const ONSITE_PATTERNS = [
   /on[-\s]?site/i,
   /sur\s+site/i,
   /presentiel/i,
-  /hybride/i,
-  /\bhybrid\b/i,
   /in[-\s]?person/i,
   /office[-\s]?based/i,
   /in\s+office/i,
@@ -556,11 +562,20 @@ function getRemoteStatus(opportunity) {
     `${opportunity.title || ''} ${opportunity.description || ''} ${opportunity.url || ''}`,
   );
 
+  // Hybrid before onsite: "hybride, deux jours sur site" is hybrid, not onsite.
+  if (hasAnyPattern(contentText, HYBRID_PATTERNS)) {
+    return {
+      remoteOnly: false,
+      remoteStatus: 'hybrid',
+      remoteReason: 'mission hybride, presence a confirmer',
+    };
+  }
+
   if (hasAnyPattern(contentText, ONSITE_PATTERNS)) {
     return {
       remoteOnly: false,
-      remoteStatus: 'onsite_or_hybrid',
-      remoteReason: 'mention sur site, presentiel ou hybride',
+      remoteStatus: 'onsite',
+      remoteReason: 'mention sur site ou presentiel',
     };
   }
 
@@ -949,6 +964,20 @@ function buildReport({
   const candidates = remoteFilteredCandidates
     .sort((a, b) => b.score - a.score)
     .slice(0, maxOpportunities);
+  const byScore = (a, b) => b.score - a.score;
+  // Location not stated or hybrid: worth a human look, never an automatic reject.
+  const toVerify = scoredCandidates
+    .filter((opportunity) => TO_VERIFY_STATUSES.has(opportunity.remoteStatus))
+    .sort(byScore)
+    .slice(0, MAX_TO_VERIFY);
+  // Compact sample of everything the remote policy dropped, to calibrate the rules.
+  const remoteRejected = scoredCandidates
+    .filter((opportunity) => !opportunity.remoteOnly)
+    .sort(byScore)
+    .slice(0, MAX_REJECTED_SAMPLE)
+    .map(({ title, url, platform, source, score, remoteStatus, remoteReason }) => ({
+      title, url, platform, source, score, remoteStatus, remoteReason,
+    }));
 
   const hasSources = sources.length > 0;
 
@@ -962,7 +991,9 @@ function buildReport({
     scoredCandidateCount: scoredCandidates.length,
     remotePolicy: requireRemoteOnly ? 'explicit_remote_only' : 'disabled',
     remoteRejectedCount,
+    remoteRejected,
     candidateCount: candidates.length,
+    toVerifyCount: toVerify.length,
     maxOpportunities,
     minScore,
     nextStep: hasSources
@@ -974,8 +1005,56 @@ function buildReport({
       : 'Configure FREELANCE_SEARCH_URLS or FREELANCE_SOURCE_FILE with public search/result pages to scan.',
     platformPlaybook: PLATFORM_PLAYBOOK,
     candidates,
+    toVerify,
     errors,
   };
+}
+
+function renderOpportunityBlock(item) {
+  return [
+    `### ${cleanMissionTitle(item.title)}`,
+    `${item.platform || item.source || 'plateforme inconnue'} | score ${item.score} | ${item.remoteReason}`,
+    item.url,
+    '',
+    item.proposalDraft,
+    '',
+  ].join('\n');
+}
+
+/** Plain-text email of what deserves a human look. Null when there is nothing to read. */
+function renderReportEmail(report) {
+  const candidates = report.candidates || [];
+  const toVerify = report.toVerify || [];
+  if (candidates.length === 0 && toVerify.length === 0) return null;
+
+  const subject = `[Missions] ${candidates.length} candidate${candidates.length > 1 ? 's' : ''}, ${toVerify.length} a verifier`;
+  const lines = [
+    `Scan du ${report.runAt}: ${report.scannedOpportunities} annonces, ${report.scoredCandidateCount} scorees, ${report.remoteRejectedCount} rejetees (remote).`,
+    '',
+    `## Candidates (${candidates.length})`,
+    '',
+    ...candidates.map(renderOpportunityBlock),
+    `## A verifier: localisation non precisee ou hybride (${toVerify.length})`,
+    '',
+    ...toVerify.map(renderOpportunityBlock),
+    `Rapport complet: ${REPORT_FILE}`,
+  ];
+
+  return { subject, text: lines.join('\n') };
+}
+
+async function sendReportEmail(email, {
+  user = process.env.GMAIL_USER,
+  pass = process.env.GMAIL_APP_PASSWORD,
+  to = process.env.FREELANCE_REPORT_TO || user,
+} = {}) {
+  if (!email) return 'nothing_to_send';
+  if (!user || !pass) return 'no_credentials';
+
+  const nodemailer = require('nodemailer');
+  const transporter = nodemailer.createTransport({ service: 'gmail', auth: { user, pass } });
+  await transporter.sendMail({ from: `Rayan Studio <${user}>`, to, subject: email.subject, text: email.text });
+  return 'sent';
 }
 
 async function resolveSourceHtml(source) {
@@ -1087,7 +1166,14 @@ async function main() {
   });
 
   saveReport(report);
-  console.log(`Termine - ${report.candidateCount} candidat(s) dans ${REPORT_FILE}`);
+  console.log(`Termine - ${report.candidateCount} candidat(s), ${report.toVerifyCount} a verifier dans ${REPORT_FILE}`);
+
+  try {
+    const outcome = await sendReportEmail(renderReportEmail(report));
+    console.log(`[EMAIL] ${outcome}`);
+  } catch (err) {
+    console.error(`[EMAIL] echec: ${err.message}`);
+  }
 }
 
 if (require.main === module) {
@@ -1102,5 +1188,7 @@ module.exports = {
   extractOpportunitiesFromHtml,
   getRemoteStatus,
   loadSearchSources,
+  renderReportEmail,
   scoreOpportunity,
+  sendReportEmail,
 };

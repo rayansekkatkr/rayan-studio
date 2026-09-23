@@ -8,6 +8,7 @@ const {
   extractOpportunitiesFromHtml,
   getRemoteStatus,
   loadSearchSources,
+  renderReportEmail,
   scoreOpportunity,
 } = require('./freelance-opportunities');
 
@@ -101,9 +102,23 @@ test('getRemoteStatus only accepts explicit remote or guaranteed remote platform
   assert.equal(remotePlatform.remoteOnly, true);
   assert.equal(remotePlatform.remoteStatus, 'remote_platform');
   assert.equal(hybrid.remoteOnly, false);
-  assert.equal(hybrid.remoteStatus, 'onsite_or_hybrid');
+  assert.equal(hybrid.remoteStatus, 'hybrid');
   assert.equal(unknown.remoteOnly, false);
   assert.equal(unknown.remoteStatus, 'unknown');
+});
+
+test('getRemoteStatus separates explicit onsite from hybrid missions', () => {
+  const onsite = getRemoteStatus({
+    title: 'Developpeur web',
+    description: 'Poste en presentiel a Lyon, pas de teletravail.',
+  });
+  const hybrid = getRemoteStatus({
+    title: 'Developpeur web',
+    description: 'Mission hybride, deux jours sur site par mois.',
+  });
+
+  assert.equal(onsite.remoteStatus, 'onsite');
+  assert.equal(hybrid.remoteStatus, 'hybrid');
 });
 
 test('getRemoteStatus accepts PeoplePerHour remote job listing pages as remote context', () => {
@@ -415,4 +430,84 @@ test('buildReport keeps only remote opportunities by default', () => {
   assert.equal(report.remoteRejectedCount, 2);
   assert.equal(report.candidates[0].url, 'https://platform.example/projects/remote-full-stack');
   assert.equal(report.candidates[0].remoteOnly, true);
+});
+
+const TO_VERIFY_OPPORTUNITIES = [
+  {
+    source: 'Source onsite',
+    title: 'Full-stack developer for SaaS admin platform',
+    description: 'Poste en presentiel a Paris avec Next.js, Node.js and Stripe API integration.',
+    url: 'https://platform.example/projects/onsite-full-stack',
+  },
+  {
+    source: 'Source hybrid',
+    title: 'Full-stack developer for SaaS admin platform',
+    description: 'Mission hybride a Paris avec Next.js, Node.js and Stripe API integration.',
+    url: 'https://platform.example/projects/hybrid-full-stack',
+  },
+  {
+    source: 'Source unknown',
+    title: 'DevOps deployment for web app',
+    description: 'Docker, Kubernetes, GitHub Actions CI/CD, SSL and VPS setup.',
+    url: 'https://platform.example/projects/devops-deployment',
+  },
+];
+
+test('buildReport lists unknown and hybrid missions to verify, keeps a sample of rejects', () => {
+  const report = buildReport({
+    sources: [{ name: 'Source', url: 'https://platform.example/search' }],
+    opportunities: TO_VERIFY_OPPORTUNITIES,
+    errors: [],
+    maxOpportunities: 30,
+    sourceMode: 'configured_sources',
+  });
+
+  assert.equal(report.candidateCount, 0);
+  assert.equal(report.toVerifyCount, 2);
+  assert.deepEqual(
+    report.toVerify.map((item) => item.remoteStatus).sort(),
+    ['hybrid', 'unknown'],
+  );
+  assert.ok(report.toVerify.every((item) => typeof item.proposalDraft === 'string'));
+  assert.equal(report.remoteRejected.length, 3);
+  assert.ok(report.remoteRejected.every((item) => item.url && item.remoteStatus && typeof item.score === 'number'));
+  assert.ok(!('proposalDraft' in report.remoteRejected[0]), 'reject sample stays compact');
+});
+
+test('renderReportEmail summarises candidates and to-verify missions with their drafts', () => {
+  const report = buildReport({
+    sources: [{ name: 'Source', url: 'https://platform.example/search' }],
+    opportunities: [
+      {
+        source: 'Source remote',
+        title: 'Remote full-stack developer for SaaS admin platform',
+        description: 'Fully remote mission with Next.js, Node.js and Stripe API integration.',
+        url: 'https://platform.example/projects/remote-full-stack',
+      },
+      ...TO_VERIFY_OPPORTUNITIES,
+    ],
+    errors: [],
+    maxOpportunities: 30,
+    sourceMode: 'configured_sources',
+  });
+
+  const email = renderReportEmail(report);
+
+  assert.equal(email.subject, '[Missions] 1 candidate, 2 a verifier');
+  assert.match(email.text, /https:\/\/platform\.example\/projects\/remote-full-stack/);
+  assert.match(email.text, /https:\/\/platform\.example\/projects\/hybrid-full-stack/);
+  assert.match(email.text, /Bonjour,|Hi,/);
+  assert.doesNotMatch(email.text, /onsite-full-stack/);
+});
+
+test('renderReportEmail returns null when there is nothing to read', () => {
+  const report = buildReport({
+    sources: [{ name: 'Source', url: 'https://platform.example/search' }],
+    opportunities: [TO_VERIFY_OPPORTUNITIES[0]],
+    errors: [],
+    maxOpportunities: 30,
+    sourceMode: 'configured_sources',
+  });
+
+  assert.equal(renderReportEmail(report), null);
 });
