@@ -79,7 +79,7 @@ export function LocalSeoLanding({ city, citySlug, sector, sectorSlug, content }:
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }} />
         <div className="mx-auto max-w-5xl">
           <nav aria-label="Fil d'Ariane" className="text-xs font-semibold uppercase tracking-[0.12em] text-rs-muted">
-            <Link href="/fr" className="transition-colors duration-150 hover:text-rs-accent">
+            <Link href="/fr" className="transition-colors duration-150 hover:text-rs-accent-fg">
               Accueil
             </Link>
             <span aria-hidden="true"> / </span>
@@ -88,10 +88,10 @@ export function LocalSeoLanding({ city, citySlug, sector, sectorSlug, content }:
             <span className="text-rs-fg">{city}</span>
           </nav>
 
-          <p className="mt-4 inline-flex rounded-full border border-[var(--rs-border)] bg-rs-surface px-3 py-1 text-xs font-semibold uppercase tracking-[0.12em] text-rs-accent">
+          <p className="mt-4 inline-flex rounded-full border border-[var(--rs-border)] bg-rs-surface px-3 py-1 text-xs font-semibold uppercase tracking-[0.12em] text-rs-accent-fg">
             {city} · {sector}
           </p>
-          <h1 className="mt-5 text-4xl font-semibold leading-tight tracking-tight text-rs-fg md:text-5xl">
+          <h1 className="mt-5 text-3xl font-semibold leading-tight tracking-tight text-rs-fg md:text-4xl">
             {content.title}
           </h1>
           <p className="mt-5 max-w-3xl text-lg leading-relaxed text-rs-muted">{content.subtitle}</p>
@@ -116,7 +116,7 @@ export function LocalSeoLanding({ city, citySlug, sector, sectorSlug, content }:
 
           <div className="mt-8 grid gap-4 md:grid-cols-[1.08fr_0.92fr]">
             <section className="rounded-[var(--rs-radius-md)] border border-[var(--rs-border)] bg-rs-surface p-5">
-              <h2 className="text-[11px] font-semibold uppercase tracking-[0.12em] text-rs-accent">
+              <h2 className="text-[11px] font-semibold uppercase tracking-[0.12em] text-rs-accent-fg">
                 Contexte local à {city}
               </h2>
               <p className="mt-3 text-sm leading-7 text-rs-muted">{content.localContext}</p>
@@ -124,7 +124,7 @@ export function LocalSeoLanding({ city, citySlug, sector, sectorSlug, content }:
             </section>
 
             <section className="rs-theme-dark rounded-[var(--rs-radius-md)] border border-[var(--rs-border)] bg-rs-bg p-5 text-rs-fg">
-              <h2 className="text-[11px] font-semibold uppercase tracking-[0.12em] text-rs-accent">
+              <h2 className="text-[11px] font-semibold uppercase tracking-[0.12em] text-rs-accent-fg">
                 Points à corriger
               </h2>
               <div className="mt-3 space-y-2">
@@ -144,7 +144,7 @@ export function LocalSeoLanding({ city, citySlug, sector, sectorSlug, content }:
             <div className="mt-4 grid gap-3 md:grid-cols-4">
               {content.checklist.map((item, index) => (
                 <div key={item} className="rounded-[var(--rs-radius-sm)] border border-[var(--rs-border)] bg-rs-subtle px-3 py-3">
-                  <p className="text-[10px] font-semibold uppercase tracking-[0.14em] text-rs-accent">
+                  <p className="text-[10px] font-semibold uppercase tracking-[0.14em] text-rs-accent-fg">
                     {String(index + 1).padStart(2, "0")}
                   </p>
                   <p className="mt-1 text-sm font-semibold text-rs-fg">{item}</p>
@@ -180,7 +180,7 @@ export function LocalSeoLanding({ city, citySlug, sector, sectorSlug, content }:
               href={BRAND.whatsappUrl}
               target="_blank"
               rel="noreferrer"
-              className="inline-flex items-center rounded-full border border-[var(--rs-border-strong)] px-6 py-3 text-sm font-medium text-rs-fg transition-colors duration-150 hover:border-rs-accent hover:text-rs-accent"
+              className="inline-flex items-center rounded-full border border-[var(--rs-border-strong)] px-6 py-3 text-sm font-medium text-rs-fg transition-colors duration-150 hover:border-rs-accent hover:text-rs-accent-fg"
             >
               Parler sur WhatsApp
             </a>
@@ -194,7 +194,7 @@ export function LocalSeoLanding({ city, citySlug, sector, sectorSlug, content }:
                 <a
                   key={link.href}
                   href={link.href}
-                  className="rounded-[var(--rs-radius-sm)] border border-[var(--rs-border)] bg-rs-subtle px-3 py-3 text-sm font-semibold text-rs-fg transition-colors duration-150 hover:text-rs-accent"
+                  className="rounded-[var(--rs-radius-sm)] border border-[var(--rs-border)] bg-rs-subtle px-3 py-3 text-sm font-semibold text-rs-fg transition-colors duration-150 hover:text-rs-accent-fg"
                 >
                   {link.label}
                 </a>
@@ -211,7 +211,7 @@ export function LocalSeoLanding({ city, citySlug, sector, sectorSlug, content }:
                 <a
                   key={item.slug}
                   href={`/site/${sectorSlug}/${item.slug}`}
-                  className="rounded-full border border-[var(--rs-border)] bg-rs-subtle px-3 py-1.5 text-xs font-semibold text-rs-fg transition-colors duration-150 hover:text-rs-accent"
+                  className="rounded-full border border-[var(--rs-border)] bg-rs-subtle px-3 py-1.5 text-xs font-semibold text-rs-fg transition-colors duration-150 hover:text-rs-accent-fg"
                 >
                   {item.label}
                 </a>
@@ -225,7 +225,7 @@ export function LocalSeoLanding({ city, citySlug, sector, sectorSlug, content }:
                 <a
                   key={item.slug}
                   href={`/site/${item.slug}/${citySlug}`}
-                  className="rounded-full border border-[var(--rs-border)] bg-rs-subtle px-3 py-1.5 text-xs font-semibold text-rs-fg transition-colors duration-150 hover:text-rs-accent"
+                  className="rounded-full border border-[var(--rs-border)] bg-rs-subtle px-3 py-1.5 text-xs font-semibold text-rs-fg transition-colors duration-150 hover:text-rs-accent-fg"
                 >
                   {item.label}
                 </a>

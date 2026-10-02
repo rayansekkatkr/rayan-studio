@@ -10,7 +10,7 @@ export function FinalCta({ locale }: { locale: Locale }) {
   return (
     <div className="rs-theme-dark bg-rs-bg py-[var(--rs-section-space)] text-rs-fg">
       <Container className="text-center">
-        <h2 className="mx-auto max-w-3xl text-3xl font-semibold leading-tight tracking-tight md:text-5xl">
+        <h2 className="mx-auto max-w-3xl text-[1.75rem] font-semibold leading-tight tracking-tight md:text-4xl">
           {fr ? "Vous avez quelque chose à construire ?" : "Do you have something to build?"}
         </h2>
         <p className="mx-auto mt-6 max-w-[var(--rs-reading)] text-lg leading-relaxed text-rs-muted">

@@ -49,11 +49,11 @@ export const METHOD_CONTENT: Record<
     intro: "Cinq étapes, toujours dans le même ordre, adaptées à la taille réelle de chaque projet.",
     reassurance: "Vous n'avez pas besoin d'arriver avec un cahier des charges parfait.",
     stages: [
-      { number: "01", name: "Discover", body: "Comprendre le besoin, les utilisateurs, les contraintes et les priorités." },
-      { number: "02", name: "Design", body: "Définir le produit, les parcours et l'architecture avant de construire." },
-      { number: "03", name: "Build", body: "Développer par itérations, intégrer les services nécessaires et tester." },
-      { number: "04", name: "Launch", body: "Préparer l'infrastructure, valider et mettre en production proprement." },
-      { number: "05", name: "Improve", body: "Maintenir, observer et faire évoluer le produit selon les besoins réels." },
+      { number: "01", name: "Découvrir", body: "Comprendre le besoin, les utilisateurs, les contraintes et les priorités." },
+      { number: "02", name: "Concevoir", body: "Définir le produit, les parcours et l'architecture avant de construire." },
+      { number: "03", name: "Construire", body: "Développer par itérations, intégrer les services nécessaires et tester." },
+      { number: "04", name: "Lancer", body: "Préparer l'infrastructure, valider et mettre en production proprement." },
+      { number: "05", name: "Améliorer", body: "Maintenir, observer et faire évoluer le produit selon les besoins réels." },
     ],
   },
   en: {

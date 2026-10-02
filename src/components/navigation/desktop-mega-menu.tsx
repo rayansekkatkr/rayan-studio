@@ -39,7 +39,7 @@ export function DesktopMegaMenu({ menu, panelId, onNavigate }: DesktopMegaMenuPr
                     <Link
                       href={link.href}
                       onClick={onNavigate}
-                      className="text-[18px] font-medium leading-snug text-rs-fg transition-colors duration-150 hover:text-rs-accent focus-visible:text-rs-accent"
+                      className="text-[18px] font-medium leading-snug text-rs-fg transition-colors duration-150 hover:text-rs-accent-fg focus-visible:text-rs-accent-fg"
                     >
                       {link.label}
                     </Link>
@@ -72,7 +72,7 @@ export function DesktopMegaMenu({ menu, panelId, onNavigate }: DesktopMegaMenuPr
                 />
               </div>
             ) : null}
-            <span className="mt-4 inline-flex items-center gap-1 text-sm font-medium text-rs-accent">
+            <span className="mt-4 inline-flex items-center gap-1 text-sm font-medium text-rs-accent-fg">
               {menu.featured.cta}
               <ArrowUpRight aria-hidden className="h-4 w-4 transition-transform duration-150 group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
             </span>

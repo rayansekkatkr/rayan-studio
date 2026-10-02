@@ -399,7 +399,7 @@ export function ProjectForm({ locale }: { locale: Locale }) {
           <button
             type="button"
             onClick={goBack}
-            className="inline-flex items-center rounded-full border border-[var(--rs-border-strong)] px-6 py-3 text-base font-medium text-rs-fg transition-colors duration-150 hover:border-rs-accent hover:text-rs-accent"
+            className="inline-flex items-center rounded-full border border-[var(--rs-border-strong)] px-6 py-3 text-base font-medium text-rs-fg transition-colors duration-150 hover:border-rs-accent hover:text-rs-accent-fg"
           >
             {fr ? "Retour" : "Back"}
           </button>

@@ -16,10 +16,10 @@ export function InsightsIndex({ locale }: { locale: Locale }) {
 
   return (
     <div>
-      <div className="rs-theme-dark bg-rs-bg pb-16 pt-32 text-rs-fg md:pb-20 md:pt-40">
+      <div className="rs-theme-dark bg-rs-bg pb-16 pt-28 text-rs-fg md:pb-20 md:pt-32">
         <Container>
-          <Eyebrow>Insights</Eyebrow>
-          <h1 className="mt-4 max-w-3xl text-3xl font-semibold leading-[1.08] tracking-tight md:text-5xl">
+          <Eyebrow>{locale === "fr" ? "Ressources" : "Insights"}</Eyebrow>
+          <h1 className="mt-4 max-w-3xl text-[1.75rem] font-semibold leading-[1.08] tracking-tight md:text-4xl">
             {fr
               ? "Guides, ressources et retours d'expérience pour mieux construire vos produits digitaux."
               : "Guides, resources and practical thinking for building better digital products."}
@@ -59,7 +59,7 @@ export function InsightsIndex({ locale }: { locale: Locale }) {
             </p>
             <Link
               href={insightPath(locale, "tools")}
-              className="mt-5 inline-flex items-center gap-2 text-base font-semibold text-rs-accent transition-colors duration-150 hover:text-rs-fg"
+              className="mt-5 inline-flex items-center gap-2 text-base font-semibold text-rs-accent-fg transition-colors duration-150 hover:text-rs-fg"
             >
               {fr ? "Utiliser l'outil" : "Use the tool"}
               <ArrowRight aria-hidden className="h-4 w-4" />

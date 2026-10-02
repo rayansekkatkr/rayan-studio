@@ -37,7 +37,7 @@ export function ServiceProof({ locale, projectKeys }: { locale: Locale; projectK
               <p className="mt-1 text-sm text-rs-muted">{project.status[locale]}</p>
             ) : null}
             <p className="mt-3 text-sm leading-relaxed text-rs-muted">{project.summary[locale]}</p>
-            <span className="mt-4 inline-flex items-center gap-1 text-sm font-medium text-rs-accent">
+            <span className="mt-4 inline-flex items-center gap-1 text-sm font-medium text-rs-accent-fg">
               {fr ? "Voir le projet" : "View project"}
               <ArrowUpRight
                 aria-hidden

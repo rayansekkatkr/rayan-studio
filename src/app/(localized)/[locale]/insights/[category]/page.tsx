@@ -30,7 +30,7 @@ const CATEGORY_META: Record<InsightCategoryKey, Record<Locale, { title: string; 
     en: { title: "Checklists", description: "Actionable checklists to launch an application or redesign a website without missing anything." },
   },
   templates: {
-    fr: { title: "Templates", description: "Des trames prêtes à copier pour cadrer vos projets digitaux." },
+    fr: { title: "Modèles", description: "Des trames prêtes à copier pour cadrer vos projets digitaux." },
     en: { title: "Templates", description: "Ready-to-copy templates to frame your digital projects." },
   },
   tools: {
@@ -82,10 +82,10 @@ export default async function Page({ params }: { params: Promise<{ locale: strin
 
   return (
     <CommercialPageShell locale={locale} headerTopTheme="dark">
-      <div className="rs-theme-dark bg-rs-bg pb-16 pt-32 text-rs-fg md:pb-20 md:pt-40">
+      <div className="rs-theme-dark bg-rs-bg pb-16 pt-28 text-rs-fg md:pb-20 md:pt-32">
         <Container>
-          <Eyebrow>Insights</Eyebrow>
-          <h1 className="mt-4 max-w-3xl text-3xl font-semibold leading-[1.08] tracking-tight md:text-5xl">
+          <Eyebrow>{locale === "fr" ? "Ressources" : "Insights"}</Eyebrow>
+          <h1 className="mt-4 max-w-3xl text-[1.75rem] font-semibold leading-[1.08] tracking-tight md:text-4xl">
             {meta.title}
           </h1>
           <p className="mt-6 max-w-[var(--rs-reading)] text-lg leading-relaxed text-rs-muted">

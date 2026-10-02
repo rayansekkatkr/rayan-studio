@@ -37,7 +37,7 @@ export function getNavigation(locale: Locale): NavMenu[] {
       label: "Services",
       groups: [
         {
-          label: "BUILD",
+          label: fr ? "CONCEVOIR" : "BUILD",
           links: [
             { label: fr ? "Applications web & SaaS" : "Web applications & SaaS", href: servicePath(locale, "applications") },
             { label: fr ? "MVP & produits digitaux" : "MVP & digital products", href: servicePath(locale, "mvp") },
@@ -45,21 +45,21 @@ export function getNavigation(locale: Locale): NavMenu[] {
           ],
         },
         {
-          label: "OPTIMIZE",
+          label: fr ? "OPTIMISER" : "OPTIMIZE",
           links: [
             { label: fr ? "Automatisation & IA" : "Automation & AI", href: servicePath(locale, "automation") },
             { label: fr ? "Sites premium & refonte" : "Premium websites & redesign", href: servicePath(locale, "web") },
           ],
         },
         {
-          label: "RUN",
+          label: fr ? "EXPLOITER" : "RUN",
           links: [
             { label: fr ? "DevOps, cloud & déploiement" : "DevOps, cloud & deployment", href: servicePath(locale, "devops") },
           ],
         },
       ],
       featured: {
-        eyebrow: "FEATURED",
+        eyebrow: fr ? "À LA UNE" : "FEATURED",
         title: "Pick4Me",
         href: workPath(locale, "pick4me"),
         image: pick4me?.heroImage,
@@ -68,10 +68,10 @@ export function getNavigation(locale: Locale): NavMenu[] {
     },
     {
       key: "work",
-      label: "Work",
+      label: fr ? "Réalisations" : "Work",
       groups: [
         {
-          label: "SELECTED WORK",
+          label: fr ? "PROJETS PHARES" : "SELECTED WORK",
           links: [
             { label: "Pick4Me", href: workPath(locale, "pick4me") },
             { label: "Pont Factur-X", href: workPath(locale, "pont-facturx") },
@@ -79,7 +79,7 @@ export function getNavigation(locale: Locale): NavMenu[] {
           ],
         },
         {
-          label: "EXPLORE",
+          label: fr ? "EXPLORER" : "EXPLORE",
           links: [
             { label: fr ? "Tous les projets" : "All projects", href: workPath(locale) },
             { label: fr ? "Études de cas" : "Case studies", href: workPath(locale) },
@@ -87,7 +87,7 @@ export function getNavigation(locale: Locale): NavMenu[] {
         },
       ],
       featured: {
-        eyebrow: "FEATURED",
+        eyebrow: fr ? "À LA UNE" : "FEATURED",
         title: "Pick4Me",
         href: workPath(locale, "pick4me"),
         image: pick4me?.heroImage,
@@ -124,7 +124,7 @@ export function getNavigation(locale: Locale): NavMenu[] {
     },
     {
       key: "insights",
-      label: "Insights",
+      label: fr ? "Ressources" : "Insights",
       groups: [
         {
           label: "GUIDES",
@@ -134,16 +134,16 @@ export function getNavigation(locale: Locale): NavMenu[] {
           ],
         },
         {
-          label: "RESOURCES",
+          label: fr ? "OUTILS & MODÈLES" : "RESOURCES",
           links: [
             { label: "Checklists", href: insightPath(locale, "checklists") },
-            { label: "Templates", href: insightPath(locale, "templates") },
+            { label: fr ? "Modèles" : "Templates", href: insightPath(locale, "templates") },
             { label: fr ? "Outils" : "Tools", href: insightPath(locale, "tools") },
           ],
         },
       ],
       featured: {
-        eyebrow: "FEATURED",
+        eyebrow: fr ? "À LA UNE" : "FEATURED",
         title: FEATURED_INSIGHT.title[locale],
         href: insightPath(locale, FEATURED_INSIGHT.category, FEATURED_INSIGHT.slug[locale]),
         cta: fr ? "Lire le guide" : "Read the guide",

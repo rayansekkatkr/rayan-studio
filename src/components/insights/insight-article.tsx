@@ -29,10 +29,10 @@ export function InsightArticle({ locale, insight }: { locale: Locale; insight: I
 
   return (
     <article>
-      <div className="rs-theme-dark bg-rs-bg pb-14 pt-32 text-rs-fg md:pb-16 md:pt-40">
+      <div className="rs-theme-dark bg-rs-bg pb-14 pt-28 text-rs-fg md:pb-16 md:pt-32">
         <Container>
-          <Eyebrow>Insights</Eyebrow>
-          <h1 className="mt-4 max-w-3xl text-3xl font-semibold leading-[1.08] tracking-tight md:text-5xl">
+          <Eyebrow>{locale === "fr" ? "Ressources" : "Insights"}</Eyebrow>
+          <h1 className="mt-4 max-w-3xl text-[1.75rem] font-semibold leading-[1.08] tracking-tight md:text-4xl">
             {insight.title[locale]}
           </h1>
           <p className="mt-5 max-w-[var(--rs-reading)] text-lg leading-relaxed text-rs-muted">
@@ -55,7 +55,7 @@ export function InsightArticle({ locale, insight }: { locale: Locale; insight: I
             <div className="flex flex-wrap items-center gap-6">
               <Link
                 href={servicePath(locale, insight.relatedService)}
-                className="inline-flex items-center gap-1.5 text-base font-semibold text-rs-accent transition-colors duration-150 hover:text-rs-fg"
+                className="inline-flex items-center gap-1.5 text-base font-semibold text-rs-accent-fg transition-colors duration-150 hover:text-rs-fg"
               >
                 {fr ? `Service lié : ${service.eyebrow.fr}` : `Related service: ${service.eyebrow.en}`}
                 <ArrowUpRight aria-hidden className="h-4 w-4" />

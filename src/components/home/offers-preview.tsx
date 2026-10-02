@@ -26,7 +26,7 @@ export function OffersPreview({ locale }: { locale: Locale }) {
     <div className="home-chapter-large bg-rs-subtle py-[var(--rs-section-space)] lg:flex lg:items-center">
       <Container>
         <Eyebrow>{fr ? "Offres" : "Offers"}</Eyebrow>
-        <h2 className="mt-4 max-w-2xl text-3xl font-semibold tracking-tight md:text-4xl">
+        <h2 className="mt-4 max-w-2xl text-[1.75rem] font-semibold tracking-tight md:text-3xl">
           {fr ? "Quatre façons de travailler ensemble." : "Four ways to work together."}
         </h2>
         <div className="mt-10 grid gap-6 sm:grid-cols-2">
@@ -56,7 +56,7 @@ export function OffersPreview({ locale }: { locale: Locale }) {
             destination: studioPath(locale, "offers"),
             locale,
           }}
-          className="mt-8 inline-flex items-center gap-2 text-base font-semibold text-rs-accent transition-colors duration-150 hover:text-rs-fg"
+          className="mt-8 inline-flex items-center gap-2 text-base font-semibold text-rs-accent-fg transition-colors duration-150 hover:text-rs-fg"
         >
           {fr ? "Voir les offres" : "View offers"}
           <ArrowRight aria-hidden className="h-4 w-4" />

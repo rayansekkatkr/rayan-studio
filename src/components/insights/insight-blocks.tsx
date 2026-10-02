@@ -8,7 +8,7 @@ export function InsightBlocks({ blocks }: { blocks: InsightBlock[] }) {
         switch (block.type) {
           case "heading":
             return block.level === 2 ? (
-              <h2 key={index} className="pt-4 text-2xl font-semibold tracking-tight md:text-3xl">
+              <h2 key={index} className="pt-4 text-xl font-semibold tracking-tight md:text-2xl">
                 {block.text}
               </h2>
             ) : (
@@ -37,7 +37,7 @@ export function InsightBlocks({ blocks }: { blocks: InsightBlock[] }) {
               <ul key={index} className="space-y-2.5">
                 {block.items.map((item) => (
                   <li key={item} className="flex gap-3 text-lg leading-relaxed text-rs-muted">
-                    <Check aria-hidden className="mt-1.5 h-4 w-4 shrink-0 text-rs-accent" />
+                    <Check aria-hidden className="mt-1.5 h-4 w-4 shrink-0 text-rs-accent-fg" />
                     {item}
                   </li>
                 ))}

@@ -35,7 +35,7 @@ export function WorkProjectBlock({
           <div className={cn("grid items-center gap-10", wide ? "md:grid-cols-1" : "md:grid-cols-2")}>
             <div className={cn(!wide && index % 2 === 1 && "md:order-2")}>
               <Eyebrow>{`0${index + 1}`}</Eyebrow>
-              <h2 className="mt-3 text-3xl font-semibold tracking-tight md:text-5xl">
+              <h2 className="mt-3 text-[1.75rem] font-semibold tracking-tight md:text-4xl">
                 {project.title}
               </h2>
               <p className="mt-3 text-sm font-medium uppercase tracking-[0.14em] text-rs-muted">
@@ -49,7 +49,7 @@ export function WorkProjectBlock({
               ) : null}
               <Link
                 href={workPath(locale, project.slug)}
-                className="mt-7 inline-flex items-center gap-1.5 text-base font-semibold text-rs-accent transition-colors duration-150 hover:text-rs-fg"
+                className="mt-7 inline-flex items-center gap-1.5 text-base font-semibold text-rs-accent-fg transition-colors duration-150 hover:text-rs-fg"
               >
                 {fr ? "Voir l'étude de cas" : "View case study"}
                 <ArrowUpRight aria-hidden className="h-4 w-4" />

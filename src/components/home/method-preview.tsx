@@ -8,7 +8,7 @@ import { studioPath } from "@/lib/site-routes";
 const STAGES = [
   {
     number: "01",
-    name: "Discover",
+    name: { fr: "Découvrir", en: "Discover" },
     description: {
       fr: "Comprendre le besoin, les utilisateurs et les contraintes.",
       en: "Understand the problem, users and constraints.",
@@ -16,7 +16,7 @@ const STAGES = [
   },
   {
     number: "02",
-    name: "Design",
+    name: { fr: "Concevoir", en: "Design" },
     description: {
       fr: "Structurer l'expérience, les parcours et les interfaces.",
       en: "Structure the experience, flows and interfaces.",
@@ -24,7 +24,7 @@ const STAGES = [
   },
   {
     number: "03",
-    name: "Build",
+    name: { fr: "Construire", en: "Build" },
     description: {
       fr: "Développer le produit et connecter les services nécessaires.",
       en: "Develop the product and connect the required services.",
@@ -32,7 +32,7 @@ const STAGES = [
   },
   {
     number: "04",
-    name: "Launch",
+    name: { fr: "Lancer", en: "Launch" },
     description: {
       fr: "Tester, déployer et préparer une mise en production fiable.",
       en: "Test, deploy and prepare a reliable production release.",
@@ -40,7 +40,7 @@ const STAGES = [
   },
   {
     number: "05",
-    name: "Improve",
+    name: { fr: "Améliorer", en: "Improve" },
     description: {
       fr: "Mesurer, corriger et faire évoluer le produit dans le temps.",
       en: "Measure, refine and evolve the product over time.",
@@ -55,14 +55,14 @@ export function MethodPreview({ locale }: { locale: Locale }) {
     <div className="bg-rs-surface py-[var(--rs-section-space)]">
       <Container>
         <Eyebrow>{fr ? "Méthode" : "Method"}</Eyebrow>
-        <h2 className="mt-4 max-w-2xl text-3xl font-semibold tracking-tight md:text-4xl">
+        <h2 className="mt-4 max-w-2xl text-[1.75rem] font-semibold tracking-tight md:text-3xl">
           {fr ? "Une méthode simple, du cadrage à la production." : "A simple method, from framing to production."}
         </h2>
         <ol className="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-5">
           {STAGES.map((stage) => (
             <li key={stage.number} className="border-t border-[var(--rs-border)] pt-4">
-              <p className="text-sm font-semibold text-rs-accent">{stage.number}</p>
-              <p className="mt-2 text-xl font-semibold">{stage.name}</p>
+              <p className="text-sm font-semibold text-rs-accent-fg">{stage.number}</p>
+              <p className="mt-2 text-xl font-semibold">{stage.name[locale]}</p>
               <p className="mt-2 text-sm leading-relaxed text-rs-muted">
                 {stage.description[locale]}
               </p>
@@ -77,7 +77,7 @@ export function MethodPreview({ locale }: { locale: Locale }) {
             destination: studioPath(locale, "method"),
             locale,
           }}
-          className="mt-10 inline-flex items-center gap-2 text-base font-semibold text-rs-accent transition-colors duration-150 hover:text-rs-fg"
+          className="mt-10 inline-flex items-center gap-2 text-base font-semibold text-rs-accent-fg transition-colors duration-150 hover:text-rs-fg"
         >
           {fr ? "Voir la méthode en détail" : "See the method in detail"}
           <ArrowRight aria-hidden className="h-4 w-4" />

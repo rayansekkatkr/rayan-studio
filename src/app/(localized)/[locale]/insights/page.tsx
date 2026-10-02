@@ -17,7 +17,7 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
 
   return buildLocalizedMetadata({
     locale,
-    title: "Insights",
+    title: en ? "Insights" : "Ressources",
     description: en
       ? "Guides, checklists, templates and tools for preparing and building digital products: SaaS, MVP, websites and launches."
       : "Guides, checklists, templates et outils pour préparer et construire vos produits digitaux : SaaS, MVP, sites web et lancements.",

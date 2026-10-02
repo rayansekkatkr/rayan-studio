@@ -111,7 +111,7 @@ export function ProjectReadinessTool({ locale }: { locale: Locale }) {
             <p className="text-base leading-relaxed text-rs-fg">{result}</p>
             <Link
               href={startProjectPath(locale)}
-              className="mt-4 inline-flex items-center gap-2 text-base font-semibold text-rs-accent transition-colors duration-150 hover:text-rs-fg"
+              className="mt-4 inline-flex items-center gap-2 text-base font-semibold text-rs-accent-fg transition-colors duration-150 hover:text-rs-fg"
             >
               {fr ? "Parler de votre projet" : "Start a project"}
               <ArrowRight aria-hidden className="h-4 w-4" />

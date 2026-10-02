@@ -6,9 +6,9 @@ import { Eyebrow } from "@/components/ui/eyebrow";
 import type { Locale } from "@/lib/i18n";
 import { servicePath, type ServiceKey } from "@/lib/site-routes";
 
-const GROUPS: Array<{ label: string; keys: ServiceKey[] }> = [
-  { label: "SOFTWARE", keys: ["applications", "mvp", "backends", "automation"] },
-  { label: "WEB & INFRASTRUCTURE", keys: ["web", "devops"] },
+const GROUPS: Array<{ id: string; label: Record<Locale, string>; keys: ServiceKey[] }> = [
+  { id: "software", label: { fr: "LOGICIEL", en: "SOFTWARE" }, keys: ["applications", "mvp", "backends", "automation"] },
+  { id: "web", label: { fr: "WEB & INFRASTRUCTURE", en: "WEB & INFRASTRUCTURE" }, keys: ["web", "devops"] },
 ];
 
 const LABELS: Record<ServiceKey, Record<Locale, string>> = {
@@ -27,23 +27,24 @@ export function ServicesOverview({ locale }: { locale: Locale }) {
     <div className="home-chapter-large bg-rs-bg py-[var(--rs-section-space)] lg:flex lg:items-center">
       <Container>
         <Eyebrow>Services</Eyebrow>
+        <h2 className="sr-only">{fr ? "Nos services" : "Our services"}</h2>
         <div className="mt-8 grid gap-12 md:grid-cols-2">
           {GROUPS.map((group) => (
-            <div key={group.label}>
+            <div key={group.id}>
               <p className="text-xs font-semibold uppercase tracking-[0.18em] text-rs-muted">
-                {group.label}
+                {group.label[locale]}
               </p>
               <ul className="mt-5 divide-y divide-[var(--rs-border)] border-t border-[var(--rs-border)]">
                 {group.keys.map((key) => (
                   <li key={key}>
                     <Link
                       href={servicePath(locale, key)}
-                      className="group flex items-center justify-between py-5 text-2xl font-semibold tracking-tight text-rs-fg transition-colors duration-150 hover:text-rs-accent md:text-3xl"
+                      className="group flex items-center justify-between py-5 text-xl font-semibold tracking-tight text-rs-fg transition-colors duration-150 hover:text-rs-accent-fg md:text-2xl"
                     >
                       {LABELS[key][locale]}
                       <ArrowUpRight
                         aria-hidden
-                        className="h-6 w-6 text-rs-muted transition-all duration-150 group-hover:-translate-y-0.5 group-hover:translate-x-0.5 group-hover:text-rs-accent"
+                        className="h-6 w-6 text-rs-muted transition-all duration-150 group-hover:-translate-y-0.5 group-hover:translate-x-0.5 group-hover:text-rs-accent-fg"
                       />
                     </Link>
                   </li>
@@ -60,7 +61,7 @@ export function ServicesOverview({ locale }: { locale: Locale }) {
             destination: `/${locale}/services`,
             locale,
           }}
-          className="mt-10 inline-flex items-center gap-2 text-base font-semibold text-rs-accent transition-colors duration-150 hover:text-rs-fg"
+          className="mt-10 inline-flex items-center gap-2 text-base font-semibold text-rs-accent-fg transition-colors duration-150 hover:text-rs-fg"
         >
           {fr ? "Découvrir nos services" : "Explore our services"}
           <ArrowRight aria-hidden className="h-4 w-4" />
