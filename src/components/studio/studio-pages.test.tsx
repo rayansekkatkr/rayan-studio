@@ -29,11 +29,11 @@ describe("Studio pages", () => {
   it("renders the five approved method stages with the reassurance line", () => {
     const { container } = render(<MethodPage locale="fr" />);
     const methodText = container.textContent ?? "";
-    expect(methodText).toMatch(/Discover/);
-    expect(methodText).toMatch(/Design/);
-    expect(methodText).toMatch(/Build/);
-    expect(methodText).toMatch(/Launch/);
-    expect(methodText).toMatch(/Improve/);
+    expect(methodText).toMatch(/Découvrir/);
+    expect(methodText).toMatch(/Concevoir/);
+    expect(methodText).toMatch(/Construire/);
+    expect(methodText).toMatch(/Lancer/);
+    expect(methodText).toMatch(/Améliorer/);
     expect(methodText).toContain("Vous n'avez pas besoin d'arriver avec un cahier des charges parfait.");
     expect(methodText).not.toContain("—");
   });

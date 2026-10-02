@@ -34,10 +34,10 @@ export default async function Page({ params }: { params: Promise<{ locale: strin
 
   return (
     <CommercialPageShell locale="fr" headerTopTheme="dark">
-      <div className="rs-theme-dark bg-rs-bg pb-16 pt-32 text-rs-fg md:pb-20 md:pt-40">
+      <div className="rs-theme-dark bg-rs-bg pb-16 pt-28 text-rs-fg md:pb-20 md:pt-32">
         <Container>
           <Eyebrow>Projet</Eyebrow>
-          <h1 className="mt-4 max-w-3xl text-3xl font-semibold leading-[1.08] tracking-tight md:text-5xl">
+          <h1 className="mt-4 max-w-3xl text-[1.75rem] font-semibold leading-[1.08] tracking-tight md:text-4xl">
             Démarrer un projet
           </h1>
           <p className="mt-6 max-w-[var(--rs-reading)] text-lg leading-relaxed text-rs-muted">

@@ -12,10 +12,10 @@ export function OffersPage({ locale }: { locale: Locale }) {
 
   return (
     <article>
-      <div className="rs-theme-dark bg-rs-bg pb-16 pt-32 text-rs-fg md:pb-20 md:pt-40">
+      <div className="rs-theme-dark bg-rs-bg pb-16 pt-28 text-rs-fg md:pb-20 md:pt-32">
         <Container>
           <Eyebrow>{fr ? "Offres" : "Offers"}</Eyebrow>
-          <h1 className="mt-4 max-w-3xl text-3xl font-semibold leading-[1.08] tracking-tight md:text-5xl">
+          <h1 className="mt-4 max-w-3xl text-[1.75rem] font-semibold leading-[1.08] tracking-tight md:text-4xl">
             {content.title}
           </h1>
           <p className="mt-6 max-w-[var(--rs-reading)] text-lg leading-relaxed text-rs-muted">
@@ -51,7 +51,7 @@ export function OffersPage({ locale }: { locale: Locale }) {
                 </ul>
                 <Link
                   href={startProjectPath(locale)}
-                  className="mt-6 inline-flex items-center gap-2 text-base font-semibold text-rs-accent transition-colors duration-150 hover:text-rs-fg"
+                  className="mt-6 inline-flex items-center gap-2 text-base font-semibold text-rs-accent-fg transition-colors duration-150 hover:text-rs-fg"
                 >
                   {content.ctaLabel}
                   <ArrowRight aria-hidden className="h-4 w-4" />

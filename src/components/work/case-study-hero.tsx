@@ -10,7 +10,7 @@ export function CaseStudyHero({ locale, project }: { locale: Locale; project: Pr
   return (
     <Container>
       <Eyebrow>{project.categories[locale].join(" · ")}</Eyebrow>
-      <h1 className="mt-4 text-4xl font-semibold tracking-tight md:text-6xl">{project.title}</h1>
+      <h1 className="mt-4 text-3xl font-semibold tracking-tight md:text-5xl">{project.title}</h1>
       <p className="mt-4 max-w-[var(--rs-reading)] text-lg leading-relaxed text-rs-muted">
         {project.summary[locale]}
       </p>

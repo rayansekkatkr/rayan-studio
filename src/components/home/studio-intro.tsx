@@ -16,7 +16,7 @@ export function StudioIntro({ locale }: { locale: Locale }) {
     <div className="home-chapter-large rs-theme-dark bg-rs-bg py-[var(--rs-section-space)] text-rs-fg lg:flex lg:items-center">
       <Container>
         <Eyebrow>{fr ? "Pourquoi Rayan Studio" : "Why Rayan Studio"}</Eyebrow>
-        <h2 className="mt-4 max-w-3xl text-3xl font-semibold leading-tight tracking-tight md:text-5xl">
+        <h2 className="mt-4 max-w-3xl text-[1.75rem] font-semibold leading-tight tracking-tight md:text-4xl">
           {fr
             ? "La souplesse d'un studio indépendant. La rigueur d'une équipe produit."
             : "The flexibility of an independent studio. The rigor of a product team."}
@@ -44,7 +44,7 @@ export function StudioIntro({ locale }: { locale: Locale }) {
             destination: studioPath(locale, "studio"),
             locale,
           }}
-          className="mt-10 inline-flex items-center gap-2 text-base font-semibold text-rs-accent transition-colors duration-150 hover:text-rs-fg"
+          className="mt-10 inline-flex items-center gap-2 text-base font-semibold text-rs-accent-fg transition-colors duration-150 hover:text-rs-fg"
         >
           {fr ? "Découvrir le studio" : "Discover the studio"}
           <ArrowRight aria-hidden className="h-4 w-4" />

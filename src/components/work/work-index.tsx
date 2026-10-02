@@ -10,10 +10,10 @@ export function WorkIndex({ locale }: { locale: Locale }) {
 
   return (
     <div>
-      <div className="rs-theme-dark bg-rs-bg pb-16 pt-32 text-rs-fg md:pb-20 md:pt-40">
+      <div className="rs-theme-dark bg-rs-bg pb-16 pt-28 text-rs-fg md:pb-20 md:pt-32">
         <Container>
           <Eyebrow>Work</Eyebrow>
-          <h1 className="mt-4 max-w-3xl text-4xl font-semibold leading-[1.05] tracking-tight md:text-6xl">
+          <h1 className="mt-4 max-w-3xl text-3xl font-semibold leading-[1.05] tracking-tight md:text-5xl">
             {fr ? "Des produits conçus pour être utilisés." : "Products built to be used."}
           </h1>
           <p className="mt-6 max-w-[var(--rs-reading)] text-lg leading-relaxed text-rs-muted">

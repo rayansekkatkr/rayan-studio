@@ -73,7 +73,7 @@ export function HomePage({ locale }: { locale: Locale }) {
         <HomeHero locale={locale} />
       </section>
       <section id="expertise" data-home-section>
-        <ExpertiseStrip />
+        <ExpertiseStrip locale={locale} />
       </section>
       <section id="selected-work" data-home-section>
         <SelectedWork locale={locale} />

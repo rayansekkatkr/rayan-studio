@@ -39,7 +39,7 @@ export function SiteFooter({ locale }: { locale: Locale }) {
                     <li key={`${link.href}-${link.label}`}>
                       <Link
                         href={link.href}
-                        className="text-sm text-rs-fg transition-colors duration-150 hover:text-rs-accent"
+                        className="text-sm text-rs-fg transition-colors duration-150 hover:text-rs-accent-fg"
                       >
                         {link.label}
                       </Link>

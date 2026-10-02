@@ -12,10 +12,10 @@ export function ServicePage({ locale, service }: { locale: Locale; service: Serv
 
   return (
     <article>
-      <section data-service-section="hero" className="rs-theme-dark bg-rs-bg pb-16 pt-32 text-rs-fg md:pb-20 md:pt-40">
+      <section data-service-section="hero" className="rs-theme-dark bg-rs-bg pb-16 pt-28 text-rs-fg md:pb-20 md:pt-32">
         <Container>
           <Eyebrow>{service.eyebrow[locale]}</Eyebrow>
-          <h1 className="mt-4 max-w-4xl text-3xl font-semibold leading-[1.08] tracking-tight md:text-5xl">
+          <h1 className="mt-4 max-w-4xl text-[1.75rem] font-semibold leading-[1.08] tracking-tight md:text-4xl">
             {service.title[locale]}
           </h1>
           <p className="mt-6 max-w-[var(--rs-reading)] text-lg leading-relaxed text-rs-muted">
@@ -27,7 +27,7 @@ export function ServicePage({ locale, service }: { locale: Locale; service: Serv
       <section data-service-section="need" className="bg-rs-bg py-[var(--rs-section-space)]">
         <Container>
           <Eyebrow>{fr ? "Le besoin" : "The need"}</Eyebrow>
-          <p className="mt-5 max-w-[var(--rs-reading)] text-xl leading-relaxed text-rs-fg md:text-2xl">
+          <p className="mt-5 max-w-[var(--rs-reading)] text-lg leading-relaxed text-rs-fg md:text-xl">
             {service.problem[locale]}
           </p>
         </Container>
@@ -53,7 +53,7 @@ export function ServicePage({ locale, service }: { locale: Locale; service: Serv
           <ol className="mt-8 grid gap-6 md:grid-cols-2">
             {service.approach[locale].map((step, index) => (
               <li key={step} className="flex gap-4">
-                <span className="text-sm font-semibold text-rs-accent">{`0${index + 1}`}</span>
+                <span className="text-sm font-semibold text-rs-accent-fg">{`0${index + 1}`}</span>
                 <p className="text-base leading-relaxed text-rs-fg">{step}</p>
               </li>
             ))}
@@ -106,7 +106,7 @@ export function ServicePage({ locale, service }: { locale: Locale; service: Serv
 
       <section data-service-section="cta" className="rs-theme-dark bg-rs-bg py-[var(--rs-section-space)] text-rs-fg">
         <Container className="text-center">
-          <h2 className="mx-auto max-w-2xl text-3xl font-semibold tracking-tight md:text-4xl">
+          <h2 className="mx-auto max-w-2xl text-[1.75rem] font-semibold tracking-tight md:text-3xl">
             {fr ? "Parlons de ce que vous cherchez à construire." : "Let's talk about what you want to build."}
           </h2>
           <p className="mt-4 text-base text-rs-muted">
