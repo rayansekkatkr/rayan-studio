@@ -19,7 +19,7 @@ const projectsFr = [
     quote:
       "Refonte visuelle orientée clarté: positionnement immédiat, sections plus lisibles et storytelling plus convaincant dès les premières secondes.",
     projectUrl: "https://pick4me.be/",
-    src: "/realisations/pick4me.png",
+    src: "/realisations/pick4me.webp",
     segment: "Produit du studio, en production",
     scope: ["Positionnement", "Sections plus lisibles", "CTA clarifiés"],
   },
@@ -78,7 +78,7 @@ const projectsEn = [
     quote:
       "Visual redesign focused on clarity: immediate positioning, cleaner sections, and more convincing storytelling from the first seconds.",
     projectUrl: "https://pick4me.be/",
-    src: "/realisations/pick4me.png",
+    src: "/realisations/pick4me.webp",
     segment: "Studio product, live",
     scope: ["Positioning", "Cleaner sections", "Clearer CTAs"],
   },

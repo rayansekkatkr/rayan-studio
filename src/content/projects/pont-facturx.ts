@@ -7,6 +7,7 @@ export const pontFacturx: ProjectRecord = {
   kind: "product",
   liveUrl: "https://www.pont-facturx.com/",
   heroImage: "/realisations/pont-facturx.webp",
+  year: "2025",
   links: [
     { label: { fr: "Voir le produit en ligne", en: "See the live product" }, href: "https://www.pont-facturx.com/" },
   ],

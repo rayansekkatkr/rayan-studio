@@ -7,6 +7,7 @@ export const goodcall: ProjectRecord = {
   kind: "product",
   liveUrl: "https://goodcall.gg/en/",
   heroImage: "/realisations/goodcall.webp",
+  year: "2026",
   links: [
     { label: { fr: "Voir le site", en: "Visit the website" }, href: "https://goodcall.gg/" },
     { label: { fr: "App Store", en: "App Store" }, href: "https://apps.apple.com/app/id6785190257" },
