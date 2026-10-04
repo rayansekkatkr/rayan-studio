@@ -14,15 +14,15 @@ export function HomeHero({ locale }: { locale: Locale }) {
   const goodcall = getProject("goodcall");
 
   return (
-    <div className="rs-theme-dark overflow-hidden bg-rs-bg pb-20 pt-32 text-rs-fg md:pb-28 md:pt-44">
+    <div className="rs-theme-dark overflow-hidden bg-rs-bg pb-16 pt-28 text-rs-fg md:pb-20 md:pt-32">
       <Container>
         <div className="max-w-3xl">
-          <h1 className="text-4xl font-semibold leading-[1.04] tracking-tight md:text-6xl lg:text-7xl">
+          <h1 className="text-[2rem] font-semibold leading-[1.06] tracking-tight md:text-5xl lg:text-[3.5rem]">
             {fr
               ? "Des produits digitaux conçus pour faire avancer votre entreprise."
               : "Digital products built to move your business forward."}
           </h1>
-          <p className="mt-6 max-w-[var(--rs-reading)] text-lg leading-relaxed text-rs-muted md:text-xl">
+          <p className="mt-6 max-w-[var(--rs-reading)] text-lg leading-relaxed text-rs-muted">
             {fr
               ? "Applications, plateformes et expériences web conçues pour résoudre de vrais problèmes, simplifier vos opérations et soutenir votre croissance."
               : "Applications, platforms and web experiences designed to solve real problems, simplify operations and support growth."}
@@ -49,14 +49,14 @@ export function HomeHero({ locale }: { locale: Locale }) {
                 destination: workPath(locale),
                 locale,
               }}
-              className="inline-flex items-center rounded-full border border-[var(--rs-border-strong)] px-7 py-3.5 text-base font-medium text-rs-fg transition-colors duration-150 hover:border-rs-accent hover:text-rs-accent"
+              className="inline-flex items-center rounded-full border border-[var(--rs-border-strong)] px-7 py-3.5 text-base font-medium text-rs-fg transition-colors duration-150 hover:border-rs-accent hover:text-rs-accent-fg"
             >
               {fr ? "Voir nos réalisations" : "View our work"}
             </TrackedLink>
           </div>
         </div>
 
-        <div className="relative mt-16 md:mt-24">
+        <div className="relative mt-12 md:mt-16">
           <div className="grid gap-6 md:grid-cols-[minmax(0,7fr)_minmax(0,5fr)]">
             {pick4me ? (
               <ParallaxMedia className="relative" strength={24}>

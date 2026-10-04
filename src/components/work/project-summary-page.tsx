@@ -12,12 +12,12 @@ export function ProjectSummaryPage({ locale, project }: { locale: Locale; projec
 
   return (
     <article>
-      <div className="pb-12 pt-32 md:pt-40">
+      <div className="pb-12 pt-28 md:pt-32">
         <Container>
           <Eyebrow>{project.categories[locale].join(" · ")}</Eyebrow>
-          <h1 className="mt-4 text-4xl font-semibold tracking-tight md:text-6xl">{project.title}</h1>
+          <h1 className="mt-4 text-3xl font-semibold tracking-tight md:text-5xl">{project.title}</h1>
           {project.status ? (
-            <p className="mt-3 text-base font-semibold text-rs-accent">{project.status[locale]}</p>
+            <p className="mt-3 text-base font-semibold text-rs-accent-fg">{project.status[locale]}</p>
           ) : null}
           <p className="mt-5 max-w-[var(--rs-reading)] text-lg leading-relaxed text-rs-muted">
             {project.summary[locale]}
@@ -52,7 +52,7 @@ export function ProjectSummaryPage({ locale, project }: { locale: Locale; projec
                 href={project.liveUrl}
                 target="_blank"
                 rel="noreferrer"
-                className="inline-flex items-center gap-1.5 text-base font-semibold text-rs-accent transition-colors duration-150 hover:text-rs-fg"
+                className="inline-flex items-center gap-1.5 text-base font-semibold text-rs-accent-fg transition-colors duration-150 hover:text-rs-fg"
               >
                 {project.kind === "concept"
                   ? fr
@@ -84,7 +84,7 @@ export function ProjectSummaryPage({ locale, project }: { locale: Locale; projec
           </div>
 
           <div className="mt-16 border-t border-[var(--rs-border)] pt-10 text-center">
-            <h2 className="mx-auto max-w-2xl text-2xl font-semibold tracking-tight md:text-3xl">
+            <h2 className="mx-auto max-w-2xl text-xl font-semibold tracking-tight md:text-2xl">
               {fr ? "Vous construisez quelque chose de similaire ?" : "Building something similar?"}
             </h2>
             <Link

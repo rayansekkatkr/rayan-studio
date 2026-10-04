@@ -6,7 +6,7 @@ export const INSIGHT_CATEGORY_LABELS: Record<InsightCategoryKey, Record<Locale, 
   articles: { fr: "Articles", en: "Articles" },
   guides: { fr: "Guides", en: "Guides" },
   checklists: { fr: "Checklists", en: "Checklists" },
-  templates: { fr: "Templates", en: "Templates" },
+  templates: { fr: "Modèles", en: "Templates" },
   tools: { fr: "Outils", en: "Tools" },
 };
 

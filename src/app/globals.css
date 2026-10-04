@@ -19,6 +19,9 @@
   --rs-muted: #696970;
   --rs-accent: #5957d9;
   --rs-accent-hover: #4745bd;
+  /* Accent used as text or icon colour. Kept separate from --rs-accent so the
+     dark theme can lighten text without lowering contrast on accent fills. */
+  --rs-accent-fg: var(--rs-accent);
   --rs-border: rgba(11, 11, 14, 0.14);
   --rs-border-strong: rgba(11, 11, 14, 0.28);
   --rs-dark: #09090c;
@@ -27,7 +30,7 @@
   --rs-dark-muted: #a2a2aa;
   --rs-container: 86rem;
   --rs-reading: 46rem;
-  --rs-section-space: clamp(5rem, 9vw, 9rem);
+  --rs-section-space: clamp(4.5rem, 8vw, 7.25rem);
   --rs-radius-sm: 0.75rem;
   --rs-radius-md: 1.25rem;
   --rs-radius-lg: 2rem;
@@ -45,6 +48,8 @@
   --rs-surface-subtle: #1a1a21;
   --rs-fg: var(--rs-dark-fg);
   --rs-muted: var(--rs-dark-muted);
+  /* 6.5:1 on --rs-dark, 5.7:1 on #1a1a21 (WCAG AA). */
+  --rs-accent-fg: #8a88f2;
   --rs-border: rgba(247, 247, 244, 0.14);
   --rs-border-strong: rgba(247, 247, 244, 0.28);
 }
@@ -290,14 +295,14 @@ section[id] {
 /* Homepage chapter rhythm (desktop only): flagships immersive, supporting chapters large. */
 @media (min-width: 1024px) {
   .home-chapter-immersive {
-    min-height: 100svh;
+    min-height: 76svh;
   }
 
   .home-chapter-featured {
-    min-height: 88svh;
+    min-height: 64svh;
   }
 
   .home-chapter-large {
-    min-height: 82svh;
+    min-height: 56svh;
   }
 }

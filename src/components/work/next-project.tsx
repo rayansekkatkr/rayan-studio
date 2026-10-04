@@ -21,11 +21,11 @@ export function NextProject({ locale, project }: { locale: Locale; project: Proj
       >
         <div>
           <Eyebrow>{fr ? "Projet suivant" : "Next project"}</Eyebrow>
-          <p className="mt-3 text-3xl font-semibold tracking-tight md:text-4xl">{next.title}</p>
+          <p className="mt-3 text-[1.75rem] font-semibold tracking-tight md:text-3xl">{next.title}</p>
           <p className="mt-2 text-sm font-medium uppercase tracking-[0.14em] text-rs-muted">
             {next.categories[locale].join(" · ")}
           </p>
-          <span className="mt-6 inline-flex items-center gap-2 text-base font-semibold text-rs-accent">
+          <span className="mt-6 inline-flex items-center gap-2 text-base font-semibold text-rs-accent-fg">
             {fr ? "Découvrir" : "Discover"}
             <ArrowRight
               aria-hidden

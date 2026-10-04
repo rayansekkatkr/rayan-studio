@@ -25,7 +25,7 @@ test.describe("desktop mega navigation", () => {
 
   test("Work menu navigates to a flagship case study", async ({ page }) => {
     await page.goto("/fr");
-    await page.getByRole("button", { name: "Work", exact: true }).click();
+    await page.getByRole("button", { name: "Réalisations", exact: true }).click();
     await page.locator("#mega-menu-work").getByRole("link", { name: "Pont Factur-X", exact: true }).click();
     await expect(page).toHaveURL(/\/fr\/work\/pont-facturx$/);
     await expect(page.getByRole("heading", { level: 1, name: "Pont Factur-X" })).toBeVisible();

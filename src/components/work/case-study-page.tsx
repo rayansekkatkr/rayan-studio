@@ -19,7 +19,7 @@ export function CaseStudyPage({ locale, project }: { locale: Locale; project: Pr
 
   return (
     <article className={cn(dark && "rs-theme-dark bg-rs-bg text-rs-fg")}>
-      <section data-case-section="hero" className="pb-12 pt-32 md:pt-40">
+      <section data-case-section="hero" className="pb-12 pt-28 md:pt-32">
         <CaseStudyHero locale={locale} project={project} />
       </section>
 
@@ -46,7 +46,7 @@ export function CaseStudyPage({ locale, project }: { locale: Locale; project: Pr
           <ul className="mt-6 max-w-[var(--rs-reading)] space-y-4">
             {project.solution[locale].map((item) => (
               <li key={item} className="flex gap-3 text-lg leading-relaxed">
-                <span aria-hidden className="mt-1 text-rs-accent">
+                <span aria-hidden className="mt-1 text-rs-accent-fg">
                   ·
                 </span>
                 {item}
@@ -110,7 +110,7 @@ export function CaseStudyPage({ locale, project }: { locale: Locale; project: Pr
 
       <section data-case-section="cta" className="pb-[var(--rs-section-space)]">
         <Container className="text-center">
-          <h2 className="mx-auto max-w-2xl text-3xl font-semibold tracking-tight md:text-4xl">
+          <h2 className="mx-auto max-w-2xl text-[1.75rem] font-semibold tracking-tight md:text-3xl">
             {fr ? "Vous construisez quelque chose de similaire ?" : "Building something similar?"}
           </h2>
           <TrackedLink

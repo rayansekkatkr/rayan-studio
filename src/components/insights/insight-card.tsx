@@ -42,7 +42,7 @@ export function InsightCard({
       <p className="mt-2 line-clamp-3 text-sm leading-relaxed text-rs-muted">
         {insight.description[locale]}
       </p>
-      <span className="mt-4 inline-flex items-center gap-1 text-sm font-medium text-rs-accent">
+      <span className="mt-4 inline-flex items-center gap-1 text-sm font-medium text-rs-accent-fg">
         {fr ? "Lire" : "Read"}
         <ArrowUpRight
           aria-hidden

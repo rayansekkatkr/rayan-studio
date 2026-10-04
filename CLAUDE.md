@@ -33,7 +33,7 @@ cadratin « — » dans la copy publique** (`npm run check:copy` l'impose).
 
 ## Stack & structure
 
-App unique **Next.js 14.2.5 App Router**, npm, TypeScript strict, React 18.
+App unique **Next.js 15.5 App Router**, npm, TypeScript strict, React 19.
 
 - `src/app/(localized)/[locale]/` — home, `services/[slug]`, `work/[slug]`, `studio/[slug]`
   (studio, rayan, méthode, offres, FAQ), `insights/…`, contact, démarrer un projet, et pages
@@ -146,6 +146,6 @@ Contraintes dures :
   `git restore`, `git stash` ni reverter sans accord.
 - Avant de modifier un composant, le relire dans son état courant, pas dans son état commité.
 - Commits : Conventional Commits (`feat:`, `fix:`, `chore:`), sujet court.
-  **Jamais de trailer `Co-Authored-By`.**
+  **Jamais de trailer `Co-Authored-By` ni `Claude-Session`, et aucune mention « Generated with Claude Code » ni lien de session dans les commits et les descriptions de PR.**
 - Après un chantier important : mettre à jour `PROJECT_MEMORY.md` (entrée de journal + sections
   impactées + commandes de vérification + points non vérifiés).

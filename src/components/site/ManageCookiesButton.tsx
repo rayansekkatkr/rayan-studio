@@ -4,7 +4,7 @@ export function ManageCookiesButton({ label }: { label: string }) {
   return (
     <button
       type="button"
-      className="transition-colors duration-150 hover:text-rs-accent"
+      className="transition-colors duration-150 hover:text-rs-accent-fg"
       onClick={() => window.dispatchEvent(new Event("rs-open-consent"))}
     >
       {label}

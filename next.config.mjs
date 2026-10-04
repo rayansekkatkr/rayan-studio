@@ -2,6 +2,10 @@ import { LEGACY_REDIRECTS } from "./config/legacy-redirects.mjs";
 
 /** @type {import('next').NextConfig} */
 const nextConfig = {
+  experimental: {
+    // Custom 404 for unmatched URLs across the (default) and (localized) root layouts.
+    globalNotFound: true,
+  },
   images: {
     remotePatterns: [
       {
