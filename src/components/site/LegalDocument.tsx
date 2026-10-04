@@ -7,10 +7,10 @@ import type { Locale } from "@/lib/i18n";
 export function LegalDocument({ locale, doc }: { locale: Locale; doc: LegalDoc }) {
   return (
     <CommercialPageShell locale={locale} headerTopTheme="dark">
-      <div className="rs-theme-dark bg-rs-bg pb-12 pt-32 text-rs-fg md:pb-16 md:pt-40">
+      <div className="rs-theme-dark bg-rs-bg pb-12 pt-28 text-rs-fg md:pb-16 md:pt-32">
         <Container>
           <Eyebrow>{doc.eyebrow}</Eyebrow>
-          <h1 className="mt-4 max-w-3xl text-3xl font-semibold leading-[1.08] tracking-tight md:text-5xl">
+          <h1 className="mt-4 max-w-3xl text-[1.75rem] font-semibold leading-[1.08] tracking-tight md:text-4xl">
             {doc.title}
           </h1>
           <p className="mt-6 text-sm text-rs-muted">{doc.updated}</p>
@@ -22,7 +22,7 @@ export function LegalDocument({ locale, doc }: { locale: Locale; doc: LegalDoc }
             {doc.sections.map((section) => (
               <section key={section.heading}>
                 <h2 className="text-xl font-semibold text-rs-fg">{section.heading}</h2>
-                <div className="mt-3 space-y-3 [&_a]:font-semibold [&_a]:text-rs-accent [&_a]:underline [&_a]:underline-offset-2 [&_ul]:list-disc [&_ul]:space-y-1 [&_ul]:pl-5">
+                <div className="mt-3 space-y-3 [&_a]:font-semibold [&_a]:text-rs-accent-fg [&_a]:underline [&_a]:underline-offset-2 [&_ul]:list-disc [&_ul]:space-y-1 [&_ul]:pl-5">
                   {section.body}
                 </div>
               </section>

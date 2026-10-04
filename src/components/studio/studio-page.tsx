@@ -12,13 +12,13 @@ export function StudioPage({ locale }: { locale: Locale }) {
 
   return (
     <article>
-      <div className="rs-theme-dark bg-rs-bg pb-16 pt-32 text-rs-fg md:pb-20 md:pt-40">
+      <div className="rs-theme-dark bg-rs-bg pb-16 pt-28 text-rs-fg md:pb-20 md:pt-32">
         <Container>
           <Eyebrow>{fr ? "Le studio" : "The studio"}</Eyebrow>
-          <h1 className="mt-4 max-w-4xl text-3xl font-semibold leading-[1.08] tracking-tight md:text-5xl">
+          <h1 className="mt-4 max-w-4xl text-[1.75rem] font-semibold leading-[1.08] tracking-tight md:text-4xl">
             {content.hero.title}
           </h1>
-          <p className="mt-8 text-2xl font-semibold text-rs-accent md:text-3xl">{content.hero.keyIdea}</p>
+          <p className="mt-8 text-xl font-semibold text-rs-accent-fg md:text-2xl">{content.hero.keyIdea}</p>
         </Container>
       </div>
 
@@ -41,14 +41,14 @@ export function StudioPage({ locale }: { locale: Locale }) {
           <div className="mt-12 flex flex-wrap gap-4">
             <Link
               href={studioPath(locale, "rayan")}
-              className="inline-flex items-center gap-2 text-base font-semibold text-rs-accent transition-colors duration-150 hover:text-rs-fg"
+              className="inline-flex items-center gap-2 text-base font-semibold text-rs-accent-fg transition-colors duration-150 hover:text-rs-fg"
             >
               {fr ? "Rencontrer Rayan Sekkat" : "Meet Rayan Sekkat"}
               <ArrowRight aria-hidden className="h-4 w-4" />
             </Link>
             <Link
               href={startProjectPath(locale)}
-              className="inline-flex items-center gap-2 text-base font-semibold text-rs-accent transition-colors duration-150 hover:text-rs-fg"
+              className="inline-flex items-center gap-2 text-base font-semibold text-rs-accent-fg transition-colors duration-150 hover:text-rs-fg"
             >
               {fr ? "Démarrer un projet" : "Start a project"}
               <ArrowRight aria-hidden className="h-4 w-4" />

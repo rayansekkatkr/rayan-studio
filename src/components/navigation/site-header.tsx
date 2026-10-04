@@ -124,10 +124,10 @@ export function SiteHeader({ locale, topTheme = "light" }: SiteHeaderProps) {
                   className={cn(
                     "rounded-full px-4 py-2 text-sm font-medium transition-colors duration-150",
                     expanded
-                      ? "text-rs-accent"
+                      ? "text-rs-accent-fg"
                       : inverse
                         ? "text-[var(--rs-dark-fg)] hover:text-[var(--rs-dark-muted)]"
-                        : "text-rs-fg hover:text-rs-accent",
+                        : "text-rs-fg hover:text-rs-accent-fg",
                   )}
                 >
                   {menu.label}

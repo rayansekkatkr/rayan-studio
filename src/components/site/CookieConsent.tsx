@@ -41,7 +41,7 @@ export function CookieConsent() {
         {" "}
         <Link
           href={legalPath(isEnglish ? "en" : "fr", "privacy")}
-          className="font-semibold text-rs-accent underline underline-offset-2"
+          className="font-semibold text-rs-accent-fg underline underline-offset-2"
         >
           {isEnglish ? "Learn more" : "En savoir plus"}
         </Link>

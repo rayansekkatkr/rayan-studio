@@ -14,6 +14,7 @@ export function SelectedWork({ locale }: { locale: Locale }) {
 
   return (
     <div>
+      <h2 className="sr-only">{fr ? "Nos réalisations" : "Selected work"}</h2>
       {FEATURED_PROJECTS.map((project, index) => {
         const dark = project.tone === "dark";
         const wide = project.tone === "energy";
@@ -41,7 +42,7 @@ export function SelectedWork({ locale }: { locale: Locale }) {
                 >
                   <div data-project-copy className={cn(reversed && "md:order-2")}>
                     <Eyebrow>{`0${index + 1}`}</Eyebrow>
-                    <h3 className="mt-3 text-3xl font-semibold tracking-tight md:text-5xl">
+                    <h3 className="mt-3 text-[1.75rem] font-semibold tracking-tight md:text-4xl">
                       {project.title}
                     </h3>
                     <p className="mt-3 text-sm font-medium uppercase tracking-[0.14em] text-rs-muted">
@@ -52,7 +53,7 @@ export function SelectedWork({ locale }: { locale: Locale }) {
                     </p>
                     <Link
                       href={workPath(locale, project.slug)}
-                      className="mt-7 inline-flex items-center gap-1.5 text-base font-semibold text-rs-accent transition-colors duration-150 hover:text-rs-fg"
+                      className="mt-7 inline-flex items-center gap-1.5 text-base font-semibold text-rs-accent-fg transition-colors duration-150 hover:text-rs-fg"
                     >
                       {fr ? "Voir l'étude de cas" : "View case study"}
                       <ArrowUpRight aria-hidden className="h-4 w-4" />

@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { redirect } from "next/navigation";
 import { HomePage } from "@/components/home/home-page";
+import { BRAND } from "@/lib/brand";
 import { isEnglish, normalizeLocale, type Locale } from "@/lib/i18n";
 import { buildLocalizedMetadata } from "@/lib/seo";
 
@@ -16,8 +17,8 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
   return buildLocalizedMetadata({
     locale,
     title: en
-      ? "Software studio for SaaS, web applications and digital products"
-      : "Studio software, SaaS et expériences web sur mesure",
+      ? `Software studio for SaaS, web applications and digital products | ${BRAND.name}`
+      : `Studio software, SaaS et expériences web sur mesure | ${BRAND.name}`,
     description: en
       ? "Independent studio designing and building custom applications, SaaS platforms and premium websites, with one point of contact from framing to production."
       : "Studio indépendant qui conçoit et développe applications, plateformes SaaS et sites web premium, avec un interlocuteur unique du cadrage à la mise en production.",

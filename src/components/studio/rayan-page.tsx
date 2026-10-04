@@ -12,10 +12,10 @@ export function RayanPage({ locale }: { locale: Locale }) {
 
   return (
     <article>
-      <div className="rs-theme-dark bg-rs-bg pb-16 pt-32 text-rs-fg md:pb-20 md:pt-40">
+      <div className="rs-theme-dark bg-rs-bg pb-16 pt-28 text-rs-fg md:pb-20 md:pt-32">
         <Container>
           <Eyebrow>{fr ? "Fondateur" : "Founder"}</Eyebrow>
-          <h1 className="mt-4 text-4xl font-semibold tracking-tight md:text-6xl">{content.name}</h1>
+          <h1 className="mt-4 text-3xl font-semibold tracking-tight md:text-5xl">{content.name}</h1>
           <p className="mt-3 text-xl font-medium text-rs-muted">{content.role}</p>
         </Container>
       </div>
@@ -76,7 +76,7 @@ export function RayanPage({ locale }: { locale: Locale }) {
               href={BRAND.linkedinUrl}
               target="_blank"
               rel="noreferrer"
-              className="inline-flex items-center gap-1.5 text-base font-semibold text-rs-accent transition-colors duration-150 hover:text-rs-fg"
+              className="inline-flex items-center gap-1.5 text-base font-semibold text-rs-accent-fg transition-colors duration-150 hover:text-rs-fg"
             >
               LinkedIn
               <ArrowUpRight aria-hidden className="h-4 w-4" />
@@ -85,14 +85,14 @@ export function RayanPage({ locale }: { locale: Locale }) {
               href={BRAND.portfolioUrl}
               target="_blank"
               rel="noreferrer"
-              className="inline-flex items-center gap-1.5 text-base font-semibold text-rs-accent transition-colors duration-150 hover:text-rs-fg"
+              className="inline-flex items-center gap-1.5 text-base font-semibold text-rs-accent-fg transition-colors duration-150 hover:text-rs-fg"
             >
               Portfolio
               <ArrowUpRight aria-hidden className="h-4 w-4" />
             </a>
             <Link
               href={`/${locale}/work`}
-              className="inline-flex items-center gap-1.5 text-base font-semibold text-rs-accent transition-colors duration-150 hover:text-rs-fg"
+              className="inline-flex items-center gap-1.5 text-base font-semibold text-rs-accent-fg transition-colors duration-150 hover:text-rs-fg"
             >
               {fr ? "Voir les projets du studio" : "See the studio's work"}
               <ArrowUpRight aria-hidden className="h-4 w-4" />

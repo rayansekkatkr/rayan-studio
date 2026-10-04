@@ -26,8 +26,8 @@ export function InsightsPreview({ locale }: { locale: Locale }) {
   return (
     <div className="bg-rs-bg py-[var(--rs-section-space)]">
       <Container>
-        <Eyebrow>Insights</Eyebrow>
-        <h2 className="mt-4 max-w-2xl text-3xl font-semibold tracking-tight md:text-4xl">
+        <Eyebrow>{locale === "fr" ? "Ressources" : "Insights"}</Eyebrow>
+        <h2 className="mt-4 max-w-2xl text-[1.75rem] font-semibold tracking-tight md:text-3xl">
           {fr ? "Des ressources utiles avant de vous lancer." : "Useful resources before you start."}
         </h2>
         <div className="mt-10 grid gap-6 md:grid-cols-3">
@@ -46,7 +46,7 @@ export function InsightsPreview({ locale }: { locale: Locale }) {
               <p className="text-xs font-semibold uppercase tracking-[0.18em] text-rs-muted">{entry.kind}</p>
               <p className="mt-3 text-xl font-semibold leading-snug">{entry.title}</p>
               <p className="mt-3 text-sm leading-relaxed text-rs-muted">{entry.description}</p>
-              <span className="mt-auto inline-flex items-center gap-1 pt-4 text-sm font-medium text-rs-accent">
+              <span className="mt-auto inline-flex items-center gap-1 pt-4 text-sm font-medium text-rs-accent-fg">
                 {fr ? "Lire" : "Read"}
                 <ArrowUpRight
                   aria-hidden

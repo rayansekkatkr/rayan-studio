@@ -16,10 +16,10 @@ export function ServicesIndex({ locale }: { locale: Locale }) {
 
   return (
     <div>
-      <div className="rs-theme-dark bg-rs-bg pb-16 pt-32 text-rs-fg md:pb-20 md:pt-40">
+      <div className="rs-theme-dark bg-rs-bg pb-16 pt-28 text-rs-fg md:pb-20 md:pt-32">
         <Container>
           <Eyebrow>Services</Eyebrow>
-          <h1 className="mt-4 max-w-3xl text-3xl font-semibold leading-[1.08] tracking-tight md:text-5xl">
+          <h1 className="mt-4 max-w-3xl text-[1.75rem] font-semibold leading-[1.08] tracking-tight md:text-4xl">
             {fr ? "Services software, web et cloud" : "Software, web and cloud services"}
           </h1>
           <p className="mt-6 max-w-[var(--rs-reading)] text-lg leading-relaxed text-rs-muted">
@@ -45,11 +45,11 @@ export function ServicesIndex({ locale }: { locale: Locale }) {
                     return (
                       <li key={key}>
                         <Link href={servicePath(locale, key)} className="group block py-6">
-                          <span className="flex items-center justify-between text-2xl font-semibold tracking-tight text-rs-fg transition-colors duration-150 group-hover:text-rs-accent">
+                          <span className="flex items-center justify-between text-2xl font-semibold tracking-tight text-rs-fg transition-colors duration-150 group-hover:text-rs-accent-fg">
                             {service.eyebrow[locale]}
                             <ArrowUpRight
                               aria-hidden
-                              className="h-6 w-6 text-rs-muted transition-all duration-150 group-hover:-translate-y-0.5 group-hover:translate-x-0.5 group-hover:text-rs-accent"
+                              className="h-6 w-6 text-rs-muted transition-all duration-150 group-hover:-translate-y-0.5 group-hover:translate-x-0.5 group-hover:text-rs-accent-fg"
                             />
                           </span>
                           <span className="mt-2 block max-w-xl text-base leading-relaxed text-rs-muted">
