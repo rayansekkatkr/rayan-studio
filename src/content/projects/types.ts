@@ -10,6 +10,8 @@ export type ProjectRecord = {
   kind: "product" | "concept";
   year?: string;
   liveUrl?: string;
+  /** Public links shown on the case study (store pages, product site...). */
+  links?: Array<{ label: LocalizedText; href: string }>;
   beforeUrl?: string;
   heroImage: string;
   featuredOrder?: number;

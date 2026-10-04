@@ -6,7 +6,10 @@ export const pontFacturx: ProjectRecord = {
   title: "Pont Factur-X",
   kind: "product",
   liveUrl: "https://www.pont-facturx.com/",
-  heroImage: "/realisations/pont-facturx.png",
+  heroImage: "/realisations/pont-facturx.webp",
+  links: [
+    { label: { fr: "Voir le produit en ligne", en: "See the live product" }, href: "https://www.pont-facturx.com/" },
+  ],
   featuredOrder: 2,
   tone: "dark",
   categories: {
@@ -14,8 +17,8 @@ export const pontFacturx: ProjectRecord = {
     en: ["B2B Software", "E-invoicing", "API", "Automation"],
   },
   summary: {
-    fr: "Logiciel B2B dédié à la facturation électronique au format Factur-X.",
-    en: "B2B software dedicated to Factur-X electronic invoicing.",
+    fr: "Logiciel B2B de facturation électronique : conversion de PDF existants en Factur-X, création de factures et API pour les éditeurs.",
+    en: "B2B e-invoicing software: converts existing PDFs to Factur-X, creates invoices and offers an API for software vendors.",
   },
   role: {
     fr: "Conception, design et développement par le studio",
@@ -136,24 +139,28 @@ export const pontFacturx: ProjectRecord = {
   outcome: {
     fr: [
       "Le produit couvre le workflow de facturation électronique de bout en bout : import de documents, conversion Factur-X, contrôle et transmission, y compris vers Chorus Pro.",
+      "Deux parcours mènent au même fichier : convertir un PDF existant, généralement en moins de 15 secondes, ou créer la facture depuis un formulaire, avec avoirs liés à la facture d'origine. La sortie est un PDF/A-3 avec le XML CII embarqué.",
+      "Une API REST documentée en OpenAPI 3.0, avec clé de test et clé de production, permet aux éditeurs et intégrateurs de brancher la conversion sur leurs outils. Hébergement en Europe (France), chiffrement TLS 1.3.",
     ],
     en: [
       "The product covers the electronic-invoicing workflow end to end: document import, Factur-X conversion, checking and transmission, including to Chorus Pro.",
+      "Two paths lead to the same file: convert an existing PDF, usually in under 15 seconds, or create the invoice from a form, with credit notes linked to the original invoice. The output is a PDF/A-3 with the CII XML embedded.",
+      "A REST API documented in OpenAPI 3.0, with test and production keys, lets software vendors and integrators plug the conversion into their tools. Hosted in Europe (France), TLS 1.3 encryption.",
     ],
   },
   gallery: [
     {
-      src: "/realisations/pont-facturx.png",
+      src: "/realisations/pont-facturx-format.webp",
       alt: {
-        fr: "Interface complète du produit Pont Factur-X",
-        en: "Full Pont Factur-X product interface",
+        fr: "Pont Factur-X : la facture PDF et les données XML CII embarquées, côte à côte",
+        en: "Pont Factur-X: the PDF invoice and its embedded CII XML data, side by side",
       },
     },
     {
-      src: "/realisations/pont-facturx.png",
+      src: "/realisations/pont-facturx-conversion.webp",
       alt: {
-        fr: "Détail de l'interface Pont Factur-X (recadrage)",
-        en: "Pont Factur-X interface detail (crop)",
+        fr: "Pont Factur-X : dépôt d'une facture PDF et conversion en trois étapes",
+        en: "Pont Factur-X: PDF invoice upload and three-step conversion",
       },
     },
   ],
