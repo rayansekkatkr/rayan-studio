@@ -17,7 +17,7 @@ export const goodcall: ProjectRecord = {
     },
   ],
   featuredOrder: 3,
-  tone: "energy",
+  tone: "light",
   categories: {
     fr: ["Esport", "Pronostics", "Social", "Classements"],
     en: ["Esports", "Predictions", "Social", "Rankings"],

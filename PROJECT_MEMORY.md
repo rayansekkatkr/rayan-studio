@@ -616,3 +616,4 @@ Quand un changement important est fait:
 - Verification : typecheck, lint, check:copy, 145 tests, build 170 pages, `next start` + Playwright sur `/fr/work/pont-facturx`, `/fr/work/goodcall` et l'accueil.
 - Reponses utilisateur : PFX 2025, GoodCall juillet 2026, Pick4Me avril 2026 (champ `year` renseigne : 2025 / 2026 / 2026) ; aucune metrique publiable ; aucun projet client citable.
 - Pick4Me : nouvelle capture du site pick4me.be (`pick4me.webp`, ancien `pick4me.png` supprime), prise en masquant le badge « L'application n°1 de livraison locale » (affirmation non prouvee, toujours presente sur pick4me.be) ; liens site, App Store et Google Play.
+- GoodCall passe de `tone: "energy"` (image pleine largeur, prevue pour l'ancien visuel tres panoramique) a `tone: "light"` : la nouvelle capture 16:9 occupait presque tout l'ecran ; elle s'affiche maintenant en deux colonnes comme Pick4Me et Pont Factur-X (761 x 428 px sur l'accueil a 1440 px, au lieu de pleine largeur).
