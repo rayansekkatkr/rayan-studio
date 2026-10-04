@@ -102,6 +102,10 @@ test.describe("header and mega-menu surfaces", () => {
     await expect(header).toHaveAttribute("data-surface", "solid");
 
     const surface = header.locator("> div").first();
+    // The surface fades in through a colour transition: wait for it to settle.
+    await expect
+      .poll(() => surface.evaluate((el) => getComputedStyle(el).backgroundColor))
+      .not.toMatch(/^(transparent|rgba\(0, 0, 0, 0\))$/);
     const bg = await surface.evaluate((el) => getComputedStyle(el).backgroundColor);
     expect(TRANSPARENT.has(bg), `solid header bg=${bg}`).toBe(false);
     const match = bg.match(/rgba?\((\d+), (\d+), (\d+)/);

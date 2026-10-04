@@ -6,7 +6,13 @@ export const pick4me: ProjectRecord = {
   title: "Pick4Me",
   kind: "product",
   liveUrl: "https://pick4me.be/",
-  heroImage: "/realisations/pick4me.png",
+  heroImage: "/realisations/pick4me.webp",
+  year: "2026",
+  links: [
+    { label: { fr: "Voir le site", en: "Visit the website" }, href: "https://pick4me.be/" },
+    { label: { fr: "App Store", en: "App Store" }, href: "https://apps.apple.com/us/app/pick4me-faites-vous-livrer/id6759987332" },
+    { label: { fr: "Google Play", en: "Google Play" }, href: "https://play.google.com/store/apps/details?id=be.pick4me.app" },
+  ],
   featuredOrder: 1,
   tone: "light",
   categories: {
@@ -145,17 +151,10 @@ export const pick4me: ProjectRecord = {
   },
   gallery: [
     {
-      src: "/realisations/pick4me.png",
+      src: "/realisations/pick4me.webp",
       alt: {
-        fr: "Interface complète du produit Pick4Me",
-        en: "Full Pick4Me product interface",
-      },
-    },
-    {
-      src: "/realisations/pick4me.png",
-      alt: {
-        fr: "Détail de l'interface Pick4Me (recadrage)",
-        en: "Pick4Me interface detail (crop)",
+        fr: "Pick4Me : site du produit et écran d'accueil de l'application mobile avec suivi de livraison en direct",
+        en: "Pick4Me: product website and mobile app home screen with live delivery tracking",
       },
     },
   ],

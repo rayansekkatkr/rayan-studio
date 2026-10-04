@@ -26,7 +26,7 @@ describe("content registries", () => {
       "docextract",
       "manteigaria",
     ]);
-    expect(getProject("pick4me")?.heroImage).toBe("/realisations/pick4me.png");
+    expect(getProject("pick4me")?.heroImage).toBe("/realisations/pick4me.webp");
     expect(getProject("manteigaria")?.kind).toBe("concept");
   });
 

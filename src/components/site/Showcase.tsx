@@ -19,7 +19,7 @@ const projectsFr = [
     quote:
       "Refonte visuelle orientée clarté: positionnement immédiat, sections plus lisibles et storytelling plus convaincant dès les premières secondes.",
     projectUrl: "https://pick4me.be/",
-    src: "/realisations/pick4me.png",
+    src: "/realisations/pick4me.webp",
     segment: "Produit du studio, en production",
     scope: ["Positionnement", "Sections plus lisibles", "CTA clarifiés"],
   },
@@ -30,7 +30,7 @@ const projectsFr = [
     quote:
       "Plateforme de pronostics e-sport gratuite (LoL, Valorant, CS2) : identité forte, parcours d'inscription direct et interface lisible malgré la densité de données.",
     projectUrl: "https://goodcall.gg/en/",
-    src: "/realisations/goodcall.png",
+    src: "/realisations/goodcall.webp",
     segment: "Produit du studio, en production",
     scope: ["Identité de marque", "Densité maîtrisée", "Parcours d'inscription"],
   },
@@ -64,7 +64,7 @@ const projectsFr = [
     quote:
       "Optimisation du design pour rendre l'expertise plus tangible: structure éditoriale plus propre, points de confiance mieux visibles et contacts facilités.",
     projectUrl: "https://www.pont-facturx.com/",
-    src: "/realisations/pont-facturx.png",
+    src: "/realisations/pont-facturx.webp",
     segment: "Produit du studio, en production",
     scope: ["Structure éditoriale", "Signaux de confiance", "Contact facilité"],
   },
@@ -78,7 +78,7 @@ const projectsEn = [
     quote:
       "Visual redesign focused on clarity: immediate positioning, cleaner sections, and more convincing storytelling from the first seconds.",
     projectUrl: "https://pick4me.be/",
-    src: "/realisations/pick4me.png",
+    src: "/realisations/pick4me.webp",
     segment: "Studio product, live",
     scope: ["Positioning", "Cleaner sections", "Clearer CTAs"],
   },
@@ -89,7 +89,7 @@ const projectsEn = [
     quote:
       "Free esports prediction platform (LoL, Valorant, CS2): strong identity, direct sign-up path and a readable interface despite dense data.",
     projectUrl: "https://goodcall.gg/en/",
-    src: "/realisations/goodcall.png",
+    src: "/realisations/goodcall.webp",
     segment: "Studio product, live",
     scope: ["Brand identity", "Managed density", "Sign-up path"],
   },
@@ -123,7 +123,7 @@ const projectsEn = [
     quote:
       "Design optimization to make expertise more tangible: cleaner editorial structure, more visible trust signals, and easier contact actions.",
     projectUrl: "https://www.pont-facturx.com/",
-    src: "/realisations/pont-facturx.png",
+    src: "/realisations/pont-facturx.webp",
     segment: "Studio product, live",
     scope: ["Editorial structure", "Trust signals", "Easier contact"],
   },

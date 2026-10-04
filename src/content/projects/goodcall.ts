@@ -6,16 +6,25 @@ export const goodcall: ProjectRecord = {
   title: "GoodCall",
   kind: "product",
   liveUrl: "https://goodcall.gg/en/",
-  heroImage: "/realisations/goodcall.png",
+  heroImage: "/realisations/goodcall.webp",
+  year: "2026",
+  links: [
+    { label: { fr: "Voir le site", en: "Visit the website" }, href: "https://goodcall.gg/" },
+    { label: { fr: "App Store", en: "App Store" }, href: "https://apps.apple.com/app/id6785190257" },
+    {
+      label: { fr: "Google Play", en: "Google Play" },
+      href: "https://play.google.com/store/apps/details?id=com.rayansekkat.goodcall",
+    },
+  ],
   featuredOrder: 3,
-  tone: "energy",
+  tone: "light",
   categories: {
     fr: ["Esport", "Pronostics", "Social", "Classements"],
     en: ["Esports", "Predictions", "Social", "Rankings"],
   },
   summary: {
-    fr: "Plateforme gratuite de pronostics esport couvrant LoL, Valorant et CS2.",
-    en: "Free esports prediction platform covering LoL, Valorant and CS2.",
+    fr: "Application gratuite de pronostics esport (iOS, Android et web) couvrant LoL, Valorant et CS2.",
+    en: "Free esports prediction app (iOS, Android and web) covering LoL, Valorant and CS2.",
   },
   role: {
     fr: "Conception, design et développement par le studio",
@@ -136,24 +145,21 @@ export const goodcall: ProjectRecord = {
   outcome: {
     fr: [
       "Le produit livre une expérience de pronostic esport complète et gratuite : matchs, pronostics, points, classements et ligues privées, sur web et mobile.",
+      "Les applications iOS et Android sont publiées sur l'App Store et Google Play, avec une interface en six langues : français, anglais, espagnol, italien, portugais (Brésil) et coréen.",
+      "Un barème fixe pour tous les matchs (+10 pour le bon vainqueur, +15 pour le score exact), sans mise ni cote, avec classements mondial, régional et par saison.",
     ],
     en: [
       "The product delivers a complete, free esports prediction experience: matches, predictions, points, rankings and private leagues, on web and mobile.",
+      "The iOS and Android apps are published on the App Store and Google Play, with an interface in six languages: French, English, Spanish, Italian, Portuguese (Brazil) and Korean.",
+      "A fixed scoring system for every match (+10 for the right winner, +15 for the exact score), with no stakes or odds, plus global, regional and season leaderboards.",
     ],
   },
   gallery: [
     {
-      src: "/realisations/goodcall.png",
+      src: "/realisations/goodcall-classements.webp",
       alt: {
-        fr: "Interface complète du produit GoodCall",
-        en: "Full GoodCall product interface",
-      },
-    },
-    {
-      src: "/realisations/goodcall.png",
-      alt: {
-        fr: "Détail de l'interface GoodCall (recadrage)",
-        en: "GoodCall interface detail (crop)",
+        fr: "GoodCall : écran des classements mondial, région et saison dans l'application mobile",
+        en: "GoodCall: global, regional and season leaderboards in the mobile app",
       },
     },
   ],

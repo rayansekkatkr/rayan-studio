@@ -61,17 +61,14 @@ test.describe("homepage", () => {
     const heightOf = async (selector: string) =>
       page.locator(selector).first().evaluate((el) => el.getBoundingClientRect().height);
 
-    // Editorial featured chapters: large, but below the immersive treatment
-    // (min-height 64svh since the 2026-10-03 tighter scale, content ~74% of 900px).
-    for (const key of ["pick4me", "pont-facturx"]) {
+    // Editorial featured chapters: large, but below one viewport (min-height 64svh
+    // since the 2026-10-03 tighter scale, content ~74% of 900px). GoodCall joined
+    // the standard two-column layout with its 16:9 capture (2026-10-04).
+    for (const key of ["pick4me", "pont-facturx", "goodcall"]) {
       const height = await heightOf(`[data-featured-project="${key}"]`);
       expect(height, `${key} large`).toBeGreaterThanOrEqual(viewport * 0.65);
       expect(height, `${key} below immersive`).toBeLessThan(viewport);
     }
-
-    // GoodCall stays immersive: at least one viewport, may grow naturally.
-    const goodcall = await heightOf(`[data-featured-project="goodcall"]`);
-    expect(goodcall, "goodcall immersive").toBeGreaterThanOrEqual(viewport - tolerance);
 
     // Large supporting chapters: substantial but below the flagship treatment.
     for (const id of ["services", "studio", "offers"]) {
@@ -96,7 +93,7 @@ test.describe("homepage", () => {
     await page.setViewportSize({ width: 1440, height: 900 });
     await page.goto("/fr");
 
-    for (const key of ["pick4me", "pont-facturx"]) {
+    for (const key of ["pick4me", "pont-facturx", "goodcall"]) {
       const section = page.locator(`[data-featured-project="${key}"]`);
       const widthOf = (attr: string) =>
         section.locator(`[${attr}]`).first().evaluate((el) => el.getBoundingClientRect().width);
