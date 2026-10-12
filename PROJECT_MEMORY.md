@@ -644,3 +644,12 @@ Quand un changement important est fait:
   - Tests : `cra-page.test.tsx` (page autonome, CTA, sujet prerempli, copy sans promesse ni prix ni tiret cadratin, exemption precise), `e2e/cra.spec.ts`, routes et axe etendus aux deux pages FR.
 - Verification (copie Linux) : typecheck, lint, check:copy, vitest 153/153, build 172 pages, Playwright cra/accessibility/routes 70/70 (fix axe : tableau des echeances sans wrapper `overflow-x-auto`), captures desktop et mobile relues.
 - Non verifie / a faire : PDF de la check-list contre email (Brevo) avec mise a jour de la politique de confidentialite ; article 2 « SBOM firmware C/C++ » apres test sur un projet STM32Cube ; version EN ; entretiens responsables firmware ; RC Pro. Constat preexistant : `body.scrollWidth` depasse la largeur d'ecran sur toutes les pages (`documentElement` non, pas de scroll visible).
+
+### 2026-10-13
+
+- Version anglaise de l'offre CRA ajoutee sur la meme branche `feat/cra-offer` (decision utilisateur : dans cette PR). `/en/cyber-resilience-act` et `/en/insights/checklists/cra-24-hour-vulnerability-reporting-checklist` publies ; carte « Security & CRA compliance » dans le menu, le footer, l'accueil et `/en/services` ; hreflang FR/EN et sitemap en paire.
+- `src/content/cra.ts` : type `CraPageContent`, `CRA_CONTENT.fr/en`, `getCraPage(locale)` ; libelles d'interface (`ui`) sortis du composant. `craPath(locale)` remplace `hasCraPage` (supprime). Header : lien FR/EN vers la meme page dans l'autre langue (seul lien sortant hors check-list et pages legales) ; bouton du header masque sous `sm` (header non sticky, CTA du hero juste en dessous). Sujet prerempli EN : « CRA assessment ».
+- Copy EN : meme structure que le FR (test de forme), « In English or French » au lieu de « En français » ; intervenant : « works remotely for clients in France and Belgium, in French or English » (**a confirmer par Rayan**) ; CSIRT : « coordinator CSIRT of the Member State where the manufacturer is established (ANSSI in France) ».
+- Correctif : titre `... | Rayan Studio | Rayan Studio` sur la page CRA (le template du layout ajoute deja la marque).
+- `availableLocales` conserve (plus aucun article FR seul aujourd'hui, utile pour l'article 2 SBOM), teste sur un enregistrement synthetique.
+- Verification : typecheck, lint, check:copy, vitest 158/158, build 174 pages, Playwright complet (build avec `NEXT_PUBLIC_GA_ID=G-TEST`, sinon les tests du bandeau cookies echouent), captures EN desktop et header mobile FR/EN.

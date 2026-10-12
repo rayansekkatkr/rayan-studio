@@ -1,4 +1,4 @@
-// Cyber Resilience Act offer page (FR only while demand is being tested).
+// Cyber Resilience Act offer page, in French and English.
 // Regulatory statements are checked against Regulation (EU) 2024/2847:
 // art. 14 (reporting steps and deadlines), art. 64 §10 (the small-enterprise
 // exemption covers only the 24 h early warning), art. 69 §3 (reporting also
@@ -6,18 +6,96 @@
 // Never promise compliance or certification: the manufacturer signs its own
 // EU declaration of conformity.
 
-export const CRA_PAGE = {
+import type { Locale } from "@/lib/i18n";
+
+type TitledText = { title: string; body: string };
+
+export type CraOffer = {
+  id: "diagnostic" | "veille";
+  name: string;
+  terms: string;
+  ordered: boolean;
+  items: string[];
+};
+
+export type CraPageContent = {
+  seo: { title: string; description: string };
+  ui: {
+    navLabel: string;
+    sections: { id: "obligations" | "offres" | "methode" | "faq"; label: string }[];
+    headerCta: string;
+    languageSwitch: { label: string; ariaLabel: string };
+    tableCaption: string;
+    tableHeaders: [string, string, string];
+    offersEyebrow: string;
+    offersTitle: string;
+    notDoneTitle: string;
+    methodEyebrow: string;
+    methodTitle: string;
+    aboutEyebrow: string;
+    faqTitle: string;
+    diagnosticEyebrow: string;
+    footer: { legal: string; privacy: string; terms: string; cookies: string };
+  };
+  hero: { eyebrow: string; title: string; lead: string; primaryCta: string; secondaryCta: string; note: string };
+  reporting: {
+    eyebrow: string;
+    title: string;
+    lead: string;
+    steps: { step: string; deadline: string; content: string }[];
+    incidentNote: string;
+    facts: TitledText[];
+  };
+  firmware: { eyebrow: string; title: string; lead: string; points: TitledText[]; conclusion: string };
+  offers: CraOffer[];
+  notDone: TitledText[];
+  method: TitledText[];
+  about: { title: string; lead: string; items: TitledText[] };
+  faq: { question: string; answer: string }[];
+  finalCta: { title: string; body: string; formSubject: string };
+  serviceCard: { title: string; description: string };
+  checklist: { title: string; body: string; link: string };
+};
+
+const FR: CraPageContent = {
   seo: {
     title: "Conformité Cyber Resilience Act (CRA) pour les PME d'objets connectés",
     description:
       "Inventaire SBOM de votre firmware, veille des vulnérabilités et déclarations ENISA préparées. Un accompagnement CRA en français pour les petits fabricants d'objets connectés.",
+  },
+  ui: {
+    navLabel: "Sections de la page",
+    sections: [
+      { id: "obligations", label: "Obligations" },
+      { id: "offres", label: "Offres" },
+      { id: "methode", label: "Méthode" },
+      { id: "faq", label: "FAQ" },
+    ],
+    headerCta: "Réserver un diagnostic",
+    languageSwitch: { label: "EN", ariaLabel: "English version" },
+    tableCaption: "Les trois étapes de déclaration d'une vulnérabilité activement exploitée",
+    tableHeaders: ["Étape", "Délai", "Ce qu'elle contient"],
+    offersEyebrow: "Offres",
+    offersTitle: "Deux façons de travailler ensemble.",
+    notDoneTitle: "Ce que je ne fais pas",
+    methodEyebrow: "Méthode",
+    methodTitle: "Quatre étapes, du premier échange à la restitution.",
+    aboutEyebrow: "Intervenant",
+    faqTitle: "Questions fréquentes",
+    diagnosticEyebrow: "Diagnostic",
+    footer: {
+      legal: "Mentions légales",
+      privacy: "Politique de confidentialité",
+      terms: "CGV",
+      cookies: "Gérer les cookies",
+    },
   },
   hero: {
     eyebrow: "Cyber Resilience Act",
     title: "La conformité CRA pour les petits fabricants d'objets connectés.",
     lead: "L'inventaire de votre firmware, la veille des failles, et un expert qui vous dit quoi faire. En français, sans contrat grand compte.",
     primaryCta: "Réserver un diagnostic",
-    secondaryCta: "Lire la check-list « Prêt à déclarer en 24 h ? »",
+    secondaryCta: "Lire la check-list « Prêt à déclarer en 24\u00a0h\u00a0? »",
     note: "J'accompagne vers la conformité. Vous restez responsable de votre déclaration UE de conformité.",
   },
   reporting: {
@@ -229,4 +307,259 @@ export const CRA_PAGE = {
     body: "La check-list des vérifications à faire avant qu'une faille exploitée touche votre produit : inventaire, veille, rôles, modèles de déclaration.",
     link: "Lire la check-list",
   },
-} as const;
+};
+
+const EN: CraPageContent = {
+  seo: {
+    title: "Cyber Resilience Act (CRA) compliance for connected-device SMEs",
+    description:
+      "Firmware SBOM inventory, vulnerability monitoring and prepared ENISA reports. CRA support for small connected-device manufacturers, in English or French.",
+  },
+  ui: {
+    navLabel: "Page sections",
+    sections: [
+      { id: "obligations", label: "Obligations" },
+      { id: "offres", label: "Offers" },
+      { id: "methode", label: "Method" },
+      { id: "faq", label: "FAQ" },
+    ],
+    headerCta: "Book an assessment",
+    languageSwitch: { label: "FR", ariaLabel: "Version française" },
+    tableCaption: "The three steps for reporting an actively exploited vulnerability",
+    tableHeaders: ["Step", "Deadline", "What it contains"],
+    offersEyebrow: "Offers",
+    offersTitle: "Two ways to work together.",
+    notDoneTitle: "What I do not do",
+    methodEyebrow: "Method",
+    methodTitle: "Four steps, from the first call to the handover.",
+    aboutEyebrow: "About",
+    faqTitle: "Frequently asked questions",
+    diagnosticEyebrow: "Assessment",
+    footer: {
+      legal: "Legal notice",
+      privacy: "Privacy policy",
+      terms: "Terms of sale",
+      cookies: "Manage cookies",
+    },
+  },
+  hero: {
+    eyebrow: "Cyber Resilience Act",
+    title: "CRA compliance for small connected-device manufacturers.",
+    lead: "Your firmware inventory, vulnerability monitoring, and an expert who tells you what to do. In English or French, without an enterprise contract.",
+    primaryCta: "Book an assessment",
+    secondaryCta: "Read the checklist “Ready to report within 24 hours?”",
+    note: "I guide you towards compliance. You remain responsible for your EU declaration of conformity.",
+  },
+  reporting: {
+    eyebrow: "Already in force",
+    title: "Since 11 September 2026, an exploited vulnerability is reported in three steps.",
+    lead: "A manufacturer selling a product with embedded or downloadable software in the EU must report every actively exploited vulnerability. Reports go through ENISA's single reporting platform to the coordinator CSIRT of the Member State where the manufacturer is established (ANSSI in France).",
+    steps: [
+      {
+        step: "Early warning",
+        deadline: "24 hours after becoming aware of the exploitation",
+        content: "The alert and the Member States where the product is sold",
+      },
+      {
+        step: "Notification",
+        deadline: "72 hours",
+        content: "The product, the nature of the exploitation, the measures taken and those users can apply",
+      },
+      {
+        step: "Final report",
+        deadline: "14 days after a fix is available",
+        content: "Severity, impact and the published fix",
+      },
+    ],
+    incidentNote:
+      "A severe incident follows the same 24-hour and 72-hour deadlines, with a final report one month after the notification.",
+    facts: [
+      {
+        title: "Products already sold are covered.",
+        body: "The reporting obligation also applies to products placed on the market before December 2027.",
+      },
+      {
+        title: "Your users must be informed",
+        body: "of the vulnerability and the measures to take.",
+      },
+      {
+        title: "On 11 December 2027,",
+        body: "all essential requirements apply and new products carry the CE marking under the CRA.",
+      },
+    ],
+  },
+  firmware: {
+    eyebrow: "Embedded firmware",
+    title: "Why it is harder for C/C++ firmware",
+    lead: "On a web application, an SBOM takes one command. On embedded firmware, the inventory is often the longest part.",
+    points: [
+      {
+        title: "No package manager.",
+        body: "Vendor HAL, RTOS, network stack, TLS library: the code is copied into the repository and its version is rarely tracked.",
+      },
+      {
+        title: "Locally modified code.",
+        body: "A component patched in-house is no longer the upstream version. Knowing whether a CVE affects you means reading the code.",
+      },
+      {
+        title: "Vulnerability identifiers that fit poorly.",
+        body: "Public database identifiers cover embedded components poorly: false positives on one side, missed vulnerabilities on the other.",
+      },
+      {
+        title: "Several firmware variants.",
+        body: "Each target or build configuration has its own inventory.",
+      },
+    ],
+    conclusion:
+      "The answer: an SBOM produced by your CI on every build, from the actual sources, rather than a hand-maintained list.",
+  },
+  offers: [
+    {
+      id: "diagnostic",
+      name: "CRA assessment",
+      terms: "Fixed price, given after a first 30-minute call, with the duration based on the number of products.",
+      ordered: true,
+      items: [
+        "Classification of each product (default, important class I or II, critical) and the conformity assessment route that follows.",
+        "SBOM generated in your CI (CycloneDX or SPDX) for one reference firmware.",
+        "Gaps against the essential requirements and the reporting obligations.",
+        "Prioritised action plan, separating what your team can do on its own.",
+        "Ready-to-use reporting procedure: who detects, who decides, who reports, with templates for the early warning, the notification and the final report.",
+      ],
+    },
+    {
+      id: "veille",
+      name: "Managed vulnerability monitoring",
+      terms: "Monthly subscription, quoted on the number of products monitored.",
+      ordered: false,
+      items: [
+        "Tracking of your firmware SBOMs, updated with every release.",
+        "Triage of each new vulnerability: does it affect your build, is it exploitable, is it exploited?",
+        "Written recommendation: fix, mitigate, monitor or dismiss with a justification.",
+        "Reports prepared for the ENISA platform when an exploited vulnerability affects you, ready to review and submit.",
+        "Monthly review and written report.",
+        "Alerts picked up within 4 business hours, Monday to Friday, 9 am to 6 pm Paris time. Absences are announced in advance, with the steps to follow in the meantime.",
+      ],
+    },
+  ],
+  notDone: [
+    {
+      title: "No certification and no guaranteed compliance.",
+      body: "The EU declaration of conformity is yours.",
+    },
+    {
+      title: "No submission on your behalf.",
+      body: "I prepare the reports, you submit them.",
+    },
+    {
+      title: "No legal advice.",
+      body: "For interpreting the text and your contracts, your lawyer remains the contact.",
+    },
+    {
+      title: "No notified-body assessment.",
+      body: "If your product requires one, I help you prepare the technical file.",
+    },
+    {
+      title: "No 24/7 on-call.",
+      body: "The 24-hour clock starts when you become aware of the exploitation: my job is to make sure you are ready at that moment.",
+    },
+  ],
+  method: [
+    {
+      title: "30-minute call",
+      body: "Your products, your build chain, your timeline. The fixed price is given at the end.",
+    },
+    {
+      title: "Read access",
+      body: "To the repository and the CI, then integration of SBOM generation.",
+    },
+    {
+      title: "Analysis",
+      body: "Classification, gaps, known vulnerabilities in your components.",
+    },
+    {
+      title: "Handover",
+      body: "Report, action plan and reporting procedure. Monitoring can take over.",
+    },
+  ],
+  about: {
+    title: "Who does the work",
+    lead: "Rayan Sekkat, DevOps engineer based in Seoul, works remotely for clients in France and Belgium, in French or English.",
+    items: [
+      {
+        title: "2024, DevOps consultant for STMicroelectronics:",
+        body: "releasing the STM32Cube tools on a GitLab CI/CD platform running more than 170 pipelines a day, with Windows, Linux and macOS delivery.",
+      },
+      {
+        title: "Freelance DevOps and security work",
+        body: "for clients in France and Belgium.",
+      },
+      {
+        title: "Tools used:",
+        body: "Syft, Trivy, Dependency-Track, OSV-Scanner.",
+      },
+    ],
+  },
+  faq: [
+    {
+      question: "Is my product covered?",
+      answer:
+        "Yes if it contains software, can connect to a device or a network, and is sold in the EU. Medical devices, vehicles and aviation fall under their own rules.",
+    },
+    {
+      question: "I am a small company: can I be fined?",
+      answer:
+        "Yes, except on one point. Micro and small enterprises are not fined for missing the 24-hour early warning deadline. The 72-hour notification, the final report and all other obligations apply.",
+    },
+    {
+      question: "Are products I have already sold covered?",
+      answer:
+        "For reporting exploited vulnerabilities, yes, whatever their date of placing on the market. The essential requirements apply to products placed on the market from 11 December 2027.",
+    },
+    {
+      question: "Do I need a notified body?",
+      answer:
+        "By default, no: self-assessment is enough. Important class I products (smart locks, security cameras, baby monitors, alarm systems, routers, connected toys, health-monitoring wearables) can self-assess if they apply harmonised standards. Otherwise, and for class II, a third party is required.",
+    },
+    {
+      question: "What is an actively exploited vulnerability?",
+      answer:
+        "A vulnerability for which there is reliable evidence that a malicious actor has exploited it without permission. A published CVE with no known exploitation does not trigger a report.",
+    },
+    {
+      question: "What about the open-source components I integrate?",
+      answer:
+        "You are responsible for the third-party components integrated in your product. If you find a vulnerability in one of them, you also report it to its maintainer.",
+    },
+    {
+      question: "How large are the fines?",
+      answer:
+        "Up to €15 million or 2.5% of worldwide annual turnover for the essential requirements and the reporting obligations. These are ceilings, set case by case by the market surveillance authority.",
+    },
+    {
+      question: "Do you work with engineering consultancies?",
+      answer: "Yes: as a subcontractor on the CRA part of your client projects, or as a pair on an assessment.",
+    },
+  ],
+  finalCta: {
+    title: "Review your products in 30 minutes.",
+    body: "You leave with the likely classification of your products and the fixed price of the assessment. Describe your products and your build chain in a few lines.",
+    formSubject: "CRA assessment",
+  },
+  serviceCard: {
+    title: "Security & CRA compliance",
+    description:
+      "Firmware SBOM inventory, vulnerability monitoring and prepared ENISA reports, for connected-device manufacturers subject to the Cyber Resilience Act.",
+  },
+  checklist: {
+    title: "CRA: are you ready to report a vulnerability within 24 hours?",
+    body: "The checklist of what to prepare before an exploited vulnerability hits your product: inventory, monitoring, roles, reporting templates.",
+    link: "Read the checklist",
+  },
+};
+
+export const CRA_CONTENT: Record<Locale, CraPageContent> = { fr: FR, en: EN };
+
+export function getCraPage(locale: Locale): CraPageContent {
+  return CRA_CONTENT[locale];
+}

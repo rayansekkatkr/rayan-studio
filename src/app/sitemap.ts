@@ -67,7 +67,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
       ...SERVICES.flatMap((service) =>
         localizedPair(servicePath("fr", service.key), servicePath("en", service.key), 0.9),
       ),
-      ...singleLocale(craPath("fr"), 0.9),
+      ...localizedPair(craPath("fr"), craPath("en"), 0.9),
     ];
   }
 

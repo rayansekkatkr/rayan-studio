@@ -5,30 +5,26 @@ import { ContactForm } from "@/components/forms/contact-form";
 import { ManageCookiesButton } from "@/components/site/ManageCookiesButton";
 import { Container } from "@/components/ui/container";
 import { Eyebrow } from "@/components/ui/eyebrow";
-import { CRA_PAGE } from "@/content/cra";
+import { getCraPage, type CraPageContent } from "@/content/cra";
 import { getInsight } from "@/content/insights";
 import { BRAND } from "@/lib/brand";
-import { insightPath, legalPath } from "@/lib/site-routes";
-
-const SECTIONS = [
-  { id: "obligations", label: "Obligations" },
-  { id: "offres", label: "Offres" },
-  { id: "methode", label: "Méthode" },
-  { id: "faq", label: "FAQ" },
-] as const;
+import type { Locale } from "@/lib/i18n";
+import { craPath, insightPath, legalPath } from "@/lib/site-routes";
 
 const FORM_ANCHOR = "#diagnostic";
 
 // Standalone offer page: its own header and footer, no link to the studio's
-// web offers, every call to action leads to the diagnostic form below.
-export function CraPage() {
+// web offers (only to the same page in the other language), every call to
+// action leads to the diagnostic form below.
+export function CraPage({ locale }: { locale: Locale }) {
+  const content = getCraPage(locale);
   const checklist = getInsight("cra-reporting-checklist");
-  const checklistHref = insightPath("fr", checklist.category, checklist.slug.fr);
-  const { hero, reporting, firmware, offers, notDone, method, about, faq, finalCta } = CRA_PAGE;
+  const checklistHref = insightPath(locale, checklist.category, checklist.slug[locale]);
+  const { ui, hero, reporting, firmware, offers, notDone, method, about, faq, finalCta } = content;
 
   return (
     <>
-      <CraHeader />
+      <CraHeader locale={locale} content={content} />
       <main id="main-content" className="bg-rs-bg text-rs-fg">
         <section id="hero" className="rs-theme-dark bg-rs-bg pb-16 pt-14 text-rs-fg md:pb-24 md:pt-20">
           <Container>
@@ -40,7 +36,7 @@ export function CraPage() {
             <div className="mt-10 flex flex-wrap items-center gap-4">
               <TrackedLink
                 href={FORM_ANCHOR}
-                event={{ ctaId: "cra_hero_diagnostic", source: "cra_hero", destination: FORM_ANCHOR, locale: "fr" }}
+                event={{ ctaId: "cra_hero_diagnostic", source: "cra_hero", destination: FORM_ANCHOR, locale }}
                 className="inline-flex items-center gap-2 rounded-full bg-rs-fg px-7 py-3.5 text-base font-semibold text-[var(--rs-dark)] transition-colors duration-150 hover:bg-rs-accent hover:text-rs-fg"
               >
                 {hero.primaryCta}
@@ -48,7 +44,7 @@ export function CraPage() {
               </TrackedLink>
               <TrackedLink
                 href={checklistHref}
-                event={{ ctaId: "cra_hero_checklist", source: "cra_hero", destination: checklistHref, locale: "fr" }}
+                event={{ ctaId: "cra_hero_checklist", source: "cra_hero", destination: checklistHref, locale }}
                 className="inline-flex items-center rounded-full border border-[var(--rs-border-strong)] px-7 py-3.5 text-base font-medium text-rs-fg transition-colors duration-150 hover:border-rs-accent hover:text-rs-accent-fg"
               >
                 {hero.secondaryCta}
@@ -67,12 +63,12 @@ export function CraPage() {
             <p className="mt-5 max-w-[var(--rs-reading)] text-lg leading-relaxed text-rs-muted">{reporting.lead}</p>
             <div className="mt-10">
               <table className="w-full border-collapse text-left text-sm md:text-base">
-                <caption className="sr-only">{"Les trois étapes de déclaration d'une vulnérabilité activement exploitée"}</caption>
+                <caption className="sr-only">{ui.tableCaption}</caption>
                 <thead>
                   <tr className="border-b border-[var(--rs-border-strong)] text-xs font-semibold uppercase tracking-[0.14em] text-rs-muted">
-                    <th scope="col" className="py-3 pr-3 md:pr-6">Étape</th>
-                    <th scope="col" className="py-3 pr-3 md:pr-6">Délai</th>
-                    <th scope="col" className="py-3">{"Ce qu'elle contient"}</th>
+                    <th scope="col" className="py-3 pr-3 md:pr-6">{ui.tableHeaders[0]}</th>
+                    <th scope="col" className="py-3 pr-3 md:pr-6">{ui.tableHeaders[1]}</th>
+                    <th scope="col" className="py-3">{ui.tableHeaders[2]}</th>
                   </tr>
                 </thead>
                 <tbody>
@@ -116,10 +112,8 @@ export function CraPage() {
 
         <section id="offres" className="py-[var(--rs-section-space)]">
           <Container>
-            <Eyebrow>Offres</Eyebrow>
-            <h2 className="mt-4 max-w-3xl text-[1.75rem] font-semibold tracking-tight md:text-3xl">
-              Deux façons de travailler ensemble.
-            </h2>
+            <Eyebrow>{ui.offersEyebrow}</Eyebrow>
+            <h2 className="mt-4 max-w-3xl text-[1.75rem] font-semibold tracking-tight md:text-3xl">{ui.offersTitle}</h2>
             <div className="mt-10 grid gap-6 lg:grid-cols-2">
               {offers.map((offer) => {
                 const ListTag = offer.ordered ? "ol" : "ul";
@@ -144,7 +138,7 @@ export function CraPage() {
               })}
             </div>
 
-            <h3 className="mt-16 text-xl font-semibold tracking-tight">Ce que je ne fais pas</h3>
+            <h3 className="mt-16 text-xl font-semibold tracking-tight">{ui.notDoneTitle}</h3>
             <ul className="mt-6 grid gap-x-8 gap-y-5 md:grid-cols-2">
               {notDone.map((item) => (
                 <li key={item.title} className="border-t border-[var(--rs-border)] pt-4 text-base leading-relaxed">
@@ -157,10 +151,8 @@ export function CraPage() {
 
         <section id="methode" className="bg-rs-surface py-[var(--rs-section-space)]">
           <Container>
-            <Eyebrow>Méthode</Eyebrow>
-            <h2 className="mt-4 max-w-2xl text-[1.75rem] font-semibold tracking-tight md:text-3xl">
-              Quatre étapes, du premier échange à la restitution.
-            </h2>
+            <Eyebrow>{ui.methodEyebrow}</Eyebrow>
+            <h2 className="mt-4 max-w-2xl text-[1.75rem] font-semibold tracking-tight md:text-3xl">{ui.methodTitle}</h2>
             <ol className="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
               {method.map((step, index) => (
                 <li key={step.title} className="border-t border-[var(--rs-border)] pt-4">
@@ -175,7 +167,7 @@ export function CraPage() {
 
         <section id="intervenant" className="py-[var(--rs-section-space)]">
           <Container>
-            <Eyebrow>Intervenant</Eyebrow>
+            <Eyebrow>{ui.aboutEyebrow}</Eyebrow>
             <h2 className="mt-4 text-[1.75rem] font-semibold tracking-tight md:text-3xl">{about.title}</h2>
             <p className="mt-5 max-w-[var(--rs-reading)] text-lg leading-relaxed text-rs-muted">{about.lead}</p>
             <ul className="mt-8 max-w-[var(--rs-reading)] space-y-4">
@@ -191,7 +183,7 @@ export function CraPage() {
         <section id="faq" className="bg-rs-surface py-[var(--rs-section-space)]">
           <Container>
             <Eyebrow>FAQ</Eyebrow>
-            <h2 className="mt-4 text-[1.75rem] font-semibold tracking-tight md:text-3xl">Questions fréquentes</h2>
+            <h2 className="mt-4 text-[1.75rem] font-semibold tracking-tight md:text-3xl">{ui.faqTitle}</h2>
             <div className="mt-8 max-w-3xl divide-y divide-[var(--rs-border)] border-y border-[var(--rs-border)]">
               {faq.map((item) => (
                 <details key={item.question} className="group py-5">
@@ -212,41 +204,45 @@ export function CraPage() {
           <Container>
             <div className="grid gap-12 lg:grid-cols-2">
               <div>
-                <Eyebrow>Diagnostic</Eyebrow>
+                <Eyebrow>{ui.diagnosticEyebrow}</Eyebrow>
                 <h2 className="mt-4 max-w-xl text-[1.75rem] font-semibold tracking-tight md:text-3xl">{finalCta.title}</h2>
                 <p className="mt-5 max-w-xl text-lg leading-relaxed text-rs-muted">{finalCta.body}</p>
                 <div className="mt-10 max-w-xl rounded-[var(--rs-radius-md)] border border-[var(--rs-border)] p-6">
-                  <p className="text-base font-semibold">{CRA_PAGE.checklist.title}</p>
-                  <p className="mt-2 text-sm leading-relaxed text-rs-muted">{CRA_PAGE.checklist.body}</p>
+                  <p className="text-base font-semibold">{content.checklist.title}</p>
+                  <p className="mt-2 text-sm leading-relaxed text-rs-muted">{content.checklist.body}</p>
                   <TrackedLink
                     href={checklistHref}
-                    event={{ ctaId: "cra_footer_checklist", source: "cra_diagnostic", destination: checklistHref, locale: "fr" }}
+                    event={{ ctaId: "cra_footer_checklist", source: "cra_diagnostic", destination: checklistHref, locale }}
                     className="mt-4 inline-flex items-center gap-2 text-base font-semibold text-rs-accent-fg transition-colors duration-150 hover:text-rs-fg"
                   >
-                    {CRA_PAGE.checklist.link}
+                    {content.checklist.link}
                     <ArrowRight aria-hidden className="h-4 w-4" />
                   </TrackedLink>
                 </div>
               </div>
-              <ContactForm locale="fr" initialSubject={finalCta.formSubject} />
+              <ContactForm locale={locale} initialSubject={finalCta.formSubject} />
             </div>
           </Container>
         </section>
       </main>
-      <CraFooter />
+      <CraFooter locale={locale} content={content} />
     </>
   );
 }
 
-function CraHeader() {
+type ChromeProps = { locale: Locale; content: CraPageContent };
+
+function CraHeader({ locale, content }: ChromeProps) {
+  const { ui } = content;
+  const other: Locale = locale === "fr" ? "en" : "fr";
   return (
     <header className="rs-theme-dark border-b border-[var(--rs-border)] bg-rs-bg text-rs-fg">
       <div className="mx-auto flex h-16 w-full max-w-[var(--rs-container)] items-center justify-between gap-6 px-5 md:px-8">
-        <a href="#hero" className="text-sm font-bold uppercase tracking-[0.22em] text-rs-fg">
+        <a href="#hero" className="whitespace-nowrap text-sm font-bold uppercase tracking-[0.22em] text-rs-fg">
           {BRAND.name}
         </a>
-        <nav aria-label="Sections de la page" className="hidden items-center gap-1 md:flex">
-          {SECTIONS.map((section) => (
+        <nav aria-label={ui.navLabel} className="hidden items-center gap-1 md:flex">
+          {ui.sections.map((section) => (
             <a
               key={section.id}
               href={`#${section.id}`}
@@ -256,24 +252,37 @@ function CraHeader() {
             </a>
           ))}
         </nav>
-        <TrackedLink
-          href={FORM_ANCHOR}
-          event={{ ctaId: "cra_header_diagnostic", source: "cra_header", destination: FORM_ANCHOR, locale: "fr" }}
-          className="inline-flex items-center rounded-full bg-rs-fg px-5 py-2.5 text-sm font-semibold text-[var(--rs-dark)] transition-colors duration-150 hover:bg-rs-accent hover:text-rs-fg"
-        >
-          Réserver un diagnostic
-        </TrackedLink>
+        {/* The header does not stick: on phones the hero call to action sits right below, so only the language switch stays. */}
+        <div className="flex items-center gap-2">
+          <Link
+            href={craPath(other)}
+            hrefLang={other}
+            lang={other}
+            aria-label={ui.languageSwitch.ariaLabel}
+            className="rounded-full px-3 py-2 text-sm font-semibold text-rs-muted transition-colors duration-150 hover:text-rs-fg"
+          >
+            {ui.languageSwitch.label}
+          </Link>
+          <TrackedLink
+            href={FORM_ANCHOR}
+            event={{ ctaId: "cra_header_diagnostic", source: "cra_header", destination: FORM_ANCHOR, locale }}
+            className="hidden items-center whitespace-nowrap rounded-full bg-rs-fg px-5 py-2.5 text-sm font-semibold text-[var(--rs-dark)] transition-colors duration-150 hover:bg-rs-accent hover:text-rs-fg sm:inline-flex"
+          >
+            {ui.headerCta}
+          </TrackedLink>
+        </div>
       </div>
     </header>
   );
 }
 
-function CraFooter() {
+function CraFooter({ locale, content }: ChromeProps) {
+  const { footer } = content.ui;
   const year = new Date().getFullYear();
   const links = [
-    { label: "Mentions légales", href: legalPath("fr", "legal") },
-    { label: "Politique de confidentialité", href: legalPath("fr", "privacy") },
-    { label: "CGV", href: legalPath("fr", "terms") },
+    { label: footer.legal, href: legalPath(locale, "legal") },
+    { label: footer.privacy, href: legalPath(locale, "privacy") },
+    { label: footer.terms, href: legalPath(locale, "terms") },
   ];
 
   return (
@@ -289,7 +298,7 @@ function CraFooter() {
             </li>
           ))}
           <li>
-            <ManageCookiesButton label="Gérer les cookies" />
+            <ManageCookiesButton label={footer.cookies} />
           </li>
         </ul>
       </div>

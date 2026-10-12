@@ -38,8 +38,9 @@ App unique **Next.js 15.5 App Router**, npm, TypeScript strict, React 19.
 - `src/app/(localized)/[locale]/` — home, `services/[slug]`, `work/[slug]`, `studio/[slug]`
   (studio, rayan, méthode, offres, FAQ), `insights/…`, contact, démarrer un projet, et pages
   légales EN (`legal`, `privacy`, `terms`, générées pour `en` seulement).
-  `cyber-resilience-act` : offre CRA, page FR seule (header/footer minimaux, sans lien vers les
-  offres web). Les insights se publient par langue (`availableLocales`).
+  `cyber-resilience-act` : offre CRA FR/EN (header/footer minimaux, sans lien vers les offres
+  web, contenu dans `src/content/cra.ts`). Un insight peut être limité à une langue
+  (`availableLocales`).
 - `src/app/(default)/` — pages légales FR aux URLs racines historiques (`/cgv`,
   `/mentions-legales`, `/politique-confidentialite`) + `site/[sector]/[city]` (70 landings SEO
   locales).
@@ -83,7 +84,7 @@ npm run typecheck      # tsc --noEmit
 npm run lint
 npm run check:copy     # interdit le tiret cadratin dans la copy publique
 npm test               # vitest (unitaires + composants)
-npm run build          # 172 pages statiques
+npm run build          # 174 pages statiques
 npm run test:e2e       # Playwright, lance son propre dev server sur :3000
 npm run verify         # lint + typecheck + check:copy + test + build
 git diff --check

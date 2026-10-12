@@ -71,13 +71,14 @@ describe("canonical sitemap", () => {
     }
   });
 
-  it("lists FR-only pages once, without an EN counterpart", () => {
+  it("lists the CRA page in both locales with FR/EN alternates", () => {
+    const cra = entries.find((entry) => entry.url === `${base}/en/cyber-resilience-act`);
+    expect(cra?.alternates?.languages).toMatchObject({
+      fr: `${base}/fr/cyber-resilience-act`,
+      en: `${base}/en/cyber-resilience-act`,
+      "x-default": `${base}/fr/cyber-resilience-act`,
+    });
     expectUrl("/fr/cyber-resilience-act");
-    expect(urls).not.toContain(`${base}/en/cyber-resilience-act`);
-    const cra = INSIGHTS.find((item) => item.key === "cra-reporting-checklist");
-    if (!cra) throw new Error("CRA checklist missing");
-    expectUrl(insightPath("fr", cra.category, cra.slug.fr));
-    expect(urls).not.toContain(`${base}${insightPath("en", cra.category, cra.slug.en)}`);
   });
 
   it("excludes every legacy redirect source", () => {

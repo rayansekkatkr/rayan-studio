@@ -117,18 +117,18 @@ describe("insights registry", () => {
     expect(getInsight("cra-reporting-checklist").publishedAt).toBe("2026-10-12");
   });
 
-  it("publishes the CRA checklist in French only", () => {
+  it("publishes the CRA checklist in both languages, with calls to action to the offer page", () => {
     const cra = getInsight("cra-reporting-checklist");
-    expect(isInsightAvailable(cra, "fr")).toBe(true);
-    expect(isInsightAvailable(cra, "en")).toBe(false);
     expect(resolveInsightSlug("fr", "checklists", cra.slug.fr)?.key).toBe("cra-reporting-checklist");
-    expect(resolveInsightSlug("en", "checklists", cra.slug.en)).toBeNull();
-    expect(getInsightsByCategory("checklists", "en").map((insight) => insight.key)).not.toContain(
-      "cra-reporting-checklist",
-    );
-    expect(getInsightsByCategory("checklists", "fr").map((insight) => insight.key)).toContain(
-      "cra-reporting-checklist",
-    );
+    expect(resolveInsightSlug("en", "checklists", cra.slug.en)?.key).toBe("cra-reporting-checklist");
     expect(cra.cta?.fr?.primaryHref).toBe("/fr/cyber-resilience-act#diagnostic");
+    expect(cra.cta?.en?.primaryHref).toBe("/en/cyber-resilience-act#diagnostic");
+  });
+
+  it("hides a record from the locales it is not published in", () => {
+    const frOnly = { ...getInsight("cra-reporting-checklist"), availableLocales: ["fr"] as const };
+    expect(isInsightAvailable(frOnly, "fr")).toBe(true);
+    expect(isInsightAvailable(frOnly, "en")).toBe(false);
+    expect(isInsightAvailable(getInsight("prepare-saas"), "en")).toBe(true);
   });
 });
