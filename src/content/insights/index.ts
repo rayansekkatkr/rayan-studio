@@ -1,6 +1,7 @@
 import type { Locale } from "@/lib/i18n";
 import type { InsightCategoryKey } from "@/lib/site-routes";
 import { applicationLaunchChecklist } from "./application-launch-checklist";
+import { craReportingChecklist } from "./cra-reporting-checklist";
 import { legacyRedesignChecklist } from "./legacy-redesign-checklist";
 import { mvpV1 } from "./mvp-v1";
 import { noCodeSaasCustom } from "./no-code-saas-custom";
@@ -17,7 +18,16 @@ export const INSIGHTS: readonly InsightRecord[] = [
   projectBriefTemplate,
   noCodeSaasCustom,
   legacyRedesignChecklist,
+  craReportingChecklist,
 ];
+
+export function isInsightAvailable(insight: InsightRecord, locale: Locale): boolean {
+  return insight.availableLocales ? insight.availableLocales.includes(locale) : true;
+}
+
+export function getInsightsForLocale(locale: Locale): InsightRecord[] {
+  return INSIGHTS.filter((insight) => isInsightAvailable(insight, locale));
+}
 
 export const FEATURED_INSIGHT: InsightRecord =
   INSIGHTS.find((insight) => insight.featured) ?? INSIGHTS[0];
@@ -28,8 +38,11 @@ export function getInsight(key: InsightKey): InsightRecord {
   return insight;
 }
 
-export function getInsightsByCategory(category: InsightCategoryKey): InsightRecord[] {
-  return INSIGHTS.filter((insight) => insight.category === category);
+/** Without a locale: every record of the category. With one: only those published in it. */
+export function getInsightsByCategory(category: InsightCategoryKey, locale?: Locale): InsightRecord[] {
+  return INSIGHTS.filter(
+    (insight) => insight.category === category && (!locale || isInsightAvailable(insight, locale)),
+  );
 }
 
 export function resolveInsightSlug(
@@ -38,8 +51,12 @@ export function resolveInsightSlug(
   slug: string,
 ): InsightRecord | null {
   return (
-    INSIGHTS.find((insight) => insight.category === category && insight.slug[locale] === slug) ??
-    null
+    INSIGHTS.find(
+      (insight) =>
+        insight.category === category &&
+        insight.slug[locale] === slug &&
+        isInsightAvailable(insight, locale),
+    ) ?? null
   );
 }
 

@@ -9,10 +9,10 @@ import { InsightCard } from "./insight-card";
 
 export function InsightsIndex({ locale }: { locale: Locale }) {
   const fr = locale === "fr";
-  const guides = getInsightsByCategory("guides").filter((insight) => !insight.featured);
-  const articles = getInsightsByCategory("articles");
-  const checklists = getInsightsByCategory("checklists");
-  const templates = getInsightsByCategory("templates");
+  const guides = getInsightsByCategory("guides", locale).filter((insight) => !insight.featured);
+  const articles = getInsightsByCategory("articles", locale);
+  const checklists = getInsightsByCategory("checklists", locale);
+  const templates = getInsightsByCategory("templates", locale);
 
   return (
     <div>

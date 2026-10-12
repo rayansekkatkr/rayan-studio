@@ -1,8 +1,11 @@
+import { CRA_PAGE } from "@/content/cra";
 import { FEATURED_INSIGHT } from "@/content/insights";
 import { getProject } from "@/content/projects";
 import type { Locale } from "@/lib/i18n";
 import {
   contactPath,
+  craPath,
+  hasCraPage,
   insightPath,
   servicePath,
   startProjectPath,
@@ -55,6 +58,7 @@ export function getNavigation(locale: Locale): NavMenu[] {
           label: fr ? "EXPLOITER" : "RUN",
           links: [
             { label: fr ? "DevOps, cloud & déploiement" : "DevOps, cloud & deployment", href: servicePath(locale, "devops") },
+            ...(hasCraPage(locale) ? [{ label: CRA_PAGE.serviceCard.title, href: craPath(locale) }] : []),
           ],
         },
       ],

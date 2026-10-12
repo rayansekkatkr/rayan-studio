@@ -4,7 +4,8 @@ import { TrackedLink } from "@/components/analytics/tracked-link";
 import { Container } from "@/components/ui/container";
 import { Eyebrow } from "@/components/ui/eyebrow";
 import type { Locale } from "@/lib/i18n";
-import { servicePath, type ServiceKey } from "@/lib/site-routes";
+import { CRA_PAGE } from "@/content/cra";
+import { craPath, hasCraPage, servicePath, type ServiceKey } from "@/lib/site-routes";
 
 const GROUPS: Array<{ id: string; label: Record<Locale, string>; keys: ServiceKey[] }> = [
   { id: "software", label: { fr: "LOGICIEL", en: "SOFTWARE" }, keys: ["applications", "mvp", "backends", "automation"] },
@@ -49,6 +50,20 @@ export function ServicesOverview({ locale }: { locale: Locale }) {
                     </Link>
                   </li>
                 ))}
+                {group.id === "web" && hasCraPage(locale) ? (
+                  <li>
+                    <Link
+                      href={craPath(locale)}
+                      className="group flex items-center justify-between py-5 text-xl font-semibold tracking-tight text-rs-fg transition-colors duration-150 hover:text-rs-accent-fg md:text-2xl"
+                    >
+                      {CRA_PAGE.serviceCard.title}
+                      <ArrowUpRight
+                        aria-hidden
+                        className="h-6 w-6 text-rs-muted transition-all duration-150 group-hover:-translate-y-0.5 group-hover:translate-x-0.5 group-hover:text-rs-accent-fg"
+                      />
+                    </Link>
+                  </li>
+                ) : null}
               </ul>
             </div>
           ))}

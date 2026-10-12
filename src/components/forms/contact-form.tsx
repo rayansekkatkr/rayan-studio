@@ -48,9 +48,17 @@ const MESSAGES: Record<Locale, Record<string, string>> = {
   },
 };
 
-export function ContactForm({ locale }: { locale: Locale }) {
+export function ContactForm({
+  locale,
+  initialSubject = "",
+}: {
+  locale: Locale;
+  /** Prefills the subject, e.g. when the form sits on a dedicated offer page. */
+  initialSubject?: string;
+}) {
   const fr = locale === "fr";
-  const [formState, setFormState] = useState<ContactFormState>(EMPTY_STATE);
+  const initialState: ContactFormState = { ...EMPTY_STATE, subject: initialSubject };
+  const [formState, setFormState] = useState<ContactFormState>(initialState);
   const [status, setStatus] = useState<SubmissionState>("idle");
   const [statusMessage, setStatusMessage] = useState("");
   const startedRef = useRef(false);
@@ -83,7 +91,7 @@ export function ContactForm({ locale }: { locale: Locale }) {
         setStatus("success");
         setStatusMessage(MESSAGES[locale].SUCCESS);
         trackEvent("contact_form_success");
-        setFormState(EMPTY_STATE);
+        setFormState(initialState);
         startedRef.current = false;
         return;
       }

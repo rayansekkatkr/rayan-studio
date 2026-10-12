@@ -3,7 +3,7 @@ import { notFound } from "next/navigation";
 import { CommercialPageShell } from "@/components/layout/commercial-page-shell";
 import { InsightArticle } from "@/components/insights/insight-article";
 import { buildInsightBreadcrumbItems } from "@/components/insights/insight-breadcrumb";
-import { INSIGHTS, resolveInsightSlug } from "@/content/insights";
+import { INSIGHTS, isInsightAvailable, resolveInsightSlug } from "@/content/insights";
 import { BRAND, getSiteUrl } from "@/lib/brand";
 import { SUPPORTED_LOCALES, normalizeLocale, type Locale } from "@/lib/i18n";
 import { buildBreadcrumbJsonLd, buildLocalizedMetadata } from "@/lib/seo";
@@ -13,7 +13,7 @@ export const dynamicParams = false;
 
 export function generateStaticParams() {
   return SUPPORTED_LOCALES.flatMap((locale) =>
-    INSIGHTS.map((insight) => ({
+    INSIGHTS.filter((insight) => isInsightAvailable(insight, locale)).map((insight) => ({
       locale,
       category: insightPath(locale, insight.category).split("/").pop() as string,
       slug: insight.slug[locale],
@@ -39,7 +39,9 @@ export async function generateMetadata({
     title: insight.title[locale],
     description: insight.description[locale],
     path: insightPath(locale, category, insight.slug[locale]),
-    alternatePath: insightPath(otherLocale, category, insight.slug[otherLocale]),
+    alternatePath: isInsightAvailable(insight, otherLocale)
+      ? insightPath(otherLocale, category, insight.slug[otherLocale])
+      : undefined,
   });
 }
 

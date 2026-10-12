@@ -6,8 +6,8 @@ import type { InsightCategoryKey } from "@/lib/site-routes";
 // consistency test in insights.test.ts fails if this map drifts from INSIGHTS.
 export const INSIGHT_SLUG_PAIRS: ReadonlyArray<{
   category: InsightCategoryKey;
-  fr: string;
-  en: string;
+  fr: string | null;
+  en: string | null;
 }> = [
   { category: "guides", fr: "preparer-projet-saas", en: "prepare-saas-project" },
   { category: "guides", fr: "mvp-fonctionnalites-v1", en: "mvp-v1-features" },
@@ -16,6 +16,8 @@ export const INSIGHT_SLUG_PAIRS: ReadonlyArray<{
   { category: "templates", fr: "template-cahier-des-charges-digital", en: "digital-project-brief-template" },
   { category: "guides", fr: "no-code-saas-ou-sur-mesure", en: "no-code-saas-or-custom-development" },
   { category: "checklists", fr: "checklist-refonte-site-internet", en: "website-redesign-checklist" },
+  // FR only for now: the EN slug stays null until the article is published in English.
+  { category: "checklists", fr: "cra-declarer-faille-24h", en: null },
 ];
 
 export function translateInsightSlug(
@@ -27,5 +29,5 @@ export function translateInsightSlug(
   const pair = INSIGHT_SLUG_PAIRS.find(
     (entry) => entry.category === category && entry[from] === slug,
   );
-  return pair ? pair[to] : null;
+  return pair?.[to] ?? null;
 }

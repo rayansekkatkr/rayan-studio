@@ -76,6 +76,22 @@ export function startProjectPath(locale: Locale) {
   return locale === "fr" ? "/fr/demarrer-un-projet" : "/en/start-a-project";
 }
 
+/**
+ * Cyber Resilience Act offer: a standalone FR page while demand is being tested.
+ * The EN version comes later; until then `hasCraPage("en")` is false.
+ */
+const CRA_PATHS: Partial<Record<Locale, string>> = { fr: "/fr/cyber-resilience-act" };
+
+export function hasCraPage(locale: Locale): boolean {
+  return Boolean(CRA_PATHS[locale]);
+}
+
+export function craPath(locale: Locale = "fr"): string {
+  const path = CRA_PATHS[locale];
+  if (!path) throw new Error(`No Cyber Resilience Act page for locale: ${locale}`);
+  return path;
+}
+
 export type LegalDocKey = "legal" | "privacy" | "terms";
 
 // FR legal pages keep their historical root URLs; EN versions live under /en.

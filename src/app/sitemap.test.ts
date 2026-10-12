@@ -1,7 +1,7 @@
 import { describe, expect, it } from "vitest";
 import sitemap from "@/app/sitemap";
 import { LEGACY_REDIRECTS } from "../../config/legacy-redirects.mjs";
-import { INSIGHTS } from "@/content/insights";
+import { INSIGHTS, isInsightAvailable } from "@/content/insights";
 import { PROJECTS } from "@/content/projects";
 import { SERVICES } from "@/content/services";
 import { getSiteUrl } from "@/lib/brand";
@@ -65,10 +65,19 @@ describe("canonical sitemap", () => {
       for (const category of ["articles", "guides", "checklists", "templates", "tools"] as const) {
         expectUrl(insightPath(locale, category));
       }
-      for (const insight of INSIGHTS) {
+      for (const insight of INSIGHTS.filter((item) => isInsightAvailable(item, locale))) {
         expectUrl(insightPath(locale, insight.category, insight.slug[locale]));
       }
     }
+  });
+
+  it("lists FR-only pages once, without an EN counterpart", () => {
+    expectUrl("/fr/cyber-resilience-act");
+    expect(urls).not.toContain(`${base}/en/cyber-resilience-act`);
+    const cra = INSIGHTS.find((item) => item.key === "cra-reporting-checklist");
+    if (!cra) throw new Error("CRA checklist missing");
+    expectUrl(insightPath("fr", cra.category, cra.slug.fr));
+    expect(urls).not.toContain(`${base}${insightPath("en", cra.category, cra.slug.en)}`);
   });
 
   it("excludes every legacy redirect source", () => {

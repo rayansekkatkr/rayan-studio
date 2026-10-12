@@ -4,7 +4,8 @@ import { Container } from "@/components/ui/container";
 import { Eyebrow } from "@/components/ui/eyebrow";
 import { SERVICES } from "@/content/services";
 import type { Locale } from "@/lib/i18n";
-import { servicePath, startProjectPath, type ServiceKey } from "@/lib/site-routes";
+import { CRA_PAGE } from "@/content/cra";
+import { craPath, hasCraPage, servicePath, startProjectPath, type ServiceKey } from "@/lib/site-routes";
 
 const GROUPS: Array<{ label: string; keys: ServiceKey[] }> = [
   { label: "SOFTWARE", keys: ["applications", "mvp", "backends", "automation"] },
@@ -59,6 +60,22 @@ export function ServicesIndex({ locale }: { locale: Locale }) {
                       </li>
                     );
                   })}
+                  {group.label === "WEB & INFRASTRUCTURE" && hasCraPage(locale) ? (
+                    <li>
+                      <Link href={craPath(locale)} className="group block py-6">
+                        <span className="flex items-center justify-between text-2xl font-semibold tracking-tight text-rs-fg transition-colors duration-150 group-hover:text-rs-accent-fg">
+                          {CRA_PAGE.serviceCard.title}
+                          <ArrowUpRight
+                            aria-hidden
+                            className="h-6 w-6 text-rs-muted transition-all duration-150 group-hover:-translate-y-0.5 group-hover:translate-x-0.5 group-hover:text-rs-accent-fg"
+                          />
+                        </span>
+                        <span className="mt-2 block max-w-xl text-base leading-relaxed text-rs-muted">
+                          {CRA_PAGE.serviceCard.description}
+                        </span>
+                      </Link>
+                    </li>
+                  ) : null}
                 </ul>
               </div>
             ))}
