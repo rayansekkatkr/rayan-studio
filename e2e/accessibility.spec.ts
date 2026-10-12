@@ -14,7 +14,9 @@ const CRITICAL_PAGES = [
   "/fr/demarrer-un-projet",
   "/site/restaurant/paris",
   "/fr/cyber-resilience-act",
+  "/en/cyber-resilience-act",
   "/fr/insights/checklists/cra-declarer-faille-24h",
+  "/en/insights/checklists/cra-24-hour-vulnerability-reporting-checklist",
 ];
 
 const WCAG_TAGS = ["wcag2a", "wcag2aa", "wcag21a", "wcag21aa"];

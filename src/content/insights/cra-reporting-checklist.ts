@@ -1,9 +1,6 @@
 import { craPath } from "@/lib/site-routes";
 import type { InsightRecord } from "./types";
 
-// Published in French only while the Cyber Resilience Act offer is tested.
-// The English text is ready but stays unrouted until "en" joins availableLocales
-// (and the EN slug replaces null in slugs.ts).
 export const craReportingChecklist: InsightRecord = {
   key: "cra-reporting-checklist",
   category: "checklists",
@@ -18,13 +15,18 @@ export const craReportingChecklist: InsightRecord = {
   },
   publishedAt: "2026-10-12",
   relatedService: "devops",
-  availableLocales: ["fr"],
   cta: {
     fr: {
       serviceLabel: "Accompagnement Cyber Resilience Act",
       serviceHref: craPath("fr"),
       primaryLabel: "Réserver un diagnostic",
       primaryHref: `${craPath("fr")}#diagnostic`,
+    },
+    en: {
+      serviceLabel: "Cyber Resilience Act support",
+      serviceHref: craPath("en"),
+      primaryLabel: "Book an assessment",
+      primaryHref: `${craPath("en")}#diagnostic`,
     },
   },
   blocks: {

@@ -16,8 +16,7 @@ export const INSIGHT_SLUG_PAIRS: ReadonlyArray<{
   { category: "templates", fr: "template-cahier-des-charges-digital", en: "digital-project-brief-template" },
   { category: "guides", fr: "no-code-saas-ou-sur-mesure", en: "no-code-saas-or-custom-development" },
   { category: "checklists", fr: "checklist-refonte-site-internet", en: "website-redesign-checklist" },
-  // FR only for now: the EN slug stays null until the article is published in English.
-  { category: "checklists", fr: "cra-declarer-faille-24h", en: null },
+  { category: "checklists", fr: "cra-declarer-faille-24h", en: "cra-24-hour-vulnerability-reporting-checklist" },
 ];
 
 export function translateInsightSlug(
