@@ -2,18 +2,19 @@ import Link from "next/link";
 import { ArrowRight, ArrowUpRight } from "lucide-react";
 import { Container } from "@/components/ui/container";
 import { Eyebrow } from "@/components/ui/eyebrow";
-import { INSIGHTS, type InsightRecord } from "@/content/insights";
+import { INSIGHTS, isInsightAvailable, type InsightRecord } from "@/content/insights";
 import { getService } from "@/content/services";
 import type { Locale } from "@/lib/i18n";
 import { insightPath, servicePath, startProjectPath } from "@/lib/site-routes";
 import { InsightBlocks } from "./insight-blocks";
 import { InsightCard } from "./insight-card";
 
-function relatedInsights(current: InsightRecord): InsightRecord[] {
-  const sameCategory = INSIGHTS.filter(
+function relatedInsights(current: InsightRecord, locale: Locale): InsightRecord[] {
+  const published = INSIGHTS.filter((insight) => isInsightAvailable(insight, locale));
+  const sameCategory = published.filter(
     (insight) => insight.key !== current.key && insight.category === current.category,
   );
-  const sameService = INSIGHTS.filter(
+  const sameService = published.filter(
     (insight) =>
       insight.key !== current.key &&
       insight.category !== current.category &&
@@ -25,7 +26,13 @@ function relatedInsights(current: InsightRecord): InsightRecord[] {
 export function InsightArticle({ locale, insight }: { locale: Locale; insight: InsightRecord }) {
   const fr = locale === "fr";
   const service = getService(insight.relatedService);
-  const related = relatedInsights(insight);
+  const related = relatedInsights(insight, locale);
+  const cta = insight.cta?.[locale] ?? {
+    serviceLabel: fr ? `Service lié : ${service.eyebrow.fr}` : `Related service: ${service.eyebrow.en}`,
+    serviceHref: servicePath(locale, insight.relatedService),
+    primaryLabel: fr ? "Parler de votre projet" : "Start a project",
+    primaryHref: startProjectPath(locale),
+  };
 
   return (
     <article>
@@ -54,17 +61,17 @@ export function InsightArticle({ locale, insight }: { locale: Locale; insight: I
           <footer className="mt-16 border-t border-[var(--rs-border)] pt-10">
             <div className="flex flex-wrap items-center gap-6">
               <Link
-                href={servicePath(locale, insight.relatedService)}
+                href={cta.serviceHref}
                 className="inline-flex items-center gap-1.5 text-base font-semibold text-rs-accent-fg transition-colors duration-150 hover:text-rs-fg"
               >
-                {fr ? `Service lié : ${service.eyebrow.fr}` : `Related service: ${service.eyebrow.en}`}
+                {cta.serviceLabel}
                 <ArrowUpRight aria-hidden className="h-4 w-4" />
               </Link>
               <Link
-                href={startProjectPath(locale)}
+                href={cta.primaryHref}
                 className="inline-flex items-center gap-2 rounded-full bg-rs-fg px-6 py-3 text-base font-semibold text-rs-bg transition-colors duration-150 hover:bg-rs-accent"
               >
-                {fr ? "Parler de votre projet" : "Start a project"}
+                {cta.primaryLabel}
                 <ArrowRight aria-hidden className="h-4 w-4" />
               </Link>
             </div>

@@ -6,7 +6,8 @@ type LocalizedMetadataInput = {
   title: string;
   description: string;
   path: string;
-  alternatePath: string;
+  /** Equivalent page in the other locale. Omit for a page published in one locale only. */
+  alternatePath?: string;
   image?: string;
 };
 
@@ -15,17 +16,17 @@ export function buildLocalizedMetadata(input: LocalizedMetadataInput): Metadata 
   const frPath = locale === "fr" ? path : alternatePath;
   const enPath = locale === "en" ? path : alternatePath;
   const ogImage = image ?? "/og-image";
+  const languages: Record<string, string> = {};
+  if (frPath) languages.fr = frPath;
+  if (enPath) languages.en = enPath;
+  if (frPath) languages["x-default"] = frPath;
 
   return {
     title,
     description,
     alternates: {
       canonical: path,
-      languages: {
-        fr: frPath,
-        en: enPath,
-        "x-default": frPath,
-      },
+      languages,
     },
     openGraph: {
       type: "website",

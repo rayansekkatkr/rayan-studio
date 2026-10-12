@@ -1,11 +1,12 @@
 import type { MetadataRoute } from "next";
-import { INSIGHTS } from "@/content/insights";
+import { INSIGHTS, isInsightAvailable } from "@/content/insights";
 import { PROJECTS } from "@/content/projects";
 import { SERVICES } from "@/content/services";
 import { getSiteUrl } from "@/lib/brand";
 import { getAllLocalSeoCombos } from "@/lib/local-seo";
 import {
   contactPath,
+  craPath,
   insightPath,
   legalPath,
   servicePath,
@@ -55,12 +56,18 @@ export default function sitemap(): MetadataRoute.Sitemap {
     }));
   }
 
+  // A page published in a single locale: no hreflang alternates.
+  function singleLocale(path: string, priority: number): MetadataRoute.Sitemap {
+    return [{ url: `${baseUrl}${path}`, lastModified, changeFrequency: "monthly", priority }];
+  }
+
   function serviceEntries(): MetadataRoute.Sitemap {
     return [
       ...localizedPair("/fr/services", "/en/services", 0.9),
       ...SERVICES.flatMap((service) =>
         localizedPair(servicePath("fr", service.key), servicePath("en", service.key), 0.9),
       ),
+      ...singleLocale(craPath("fr"), 0.9),
     ];
   }
 
@@ -92,13 +99,15 @@ export default function sitemap(): MetadataRoute.Sitemap {
       ...INSIGHT_CATEGORIES.flatMap((category) =>
         localizedPair(insightPath("fr", category), insightPath("en", category), 0.7),
       ),
-      ...INSIGHTS.flatMap((insight) =>
-        localizedPair(
-          insightPath("fr", insight.category, insight.slug.fr),
-          insightPath("en", insight.category, insight.slug.en),
-          0.7,
-        ),
-      ),
+      ...INSIGHTS.flatMap((insight) => {
+        const fr = isInsightAvailable(insight, "fr");
+        const en = isInsightAvailable(insight, "en");
+        const frPath = insightPath("fr", insight.category, insight.slug.fr);
+        const enPath = insightPath("en", insight.category, insight.slug.en);
+        if (fr && en) return localizedPair(frPath, enPath, 0.7);
+        if (fr) return singleLocale(frPath, 0.7);
+        return en ? singleLocale(enPath, 0.7) : [];
+      }),
     ];
   }
 

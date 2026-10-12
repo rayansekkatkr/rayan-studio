@@ -8,7 +8,8 @@ export type InsightKey =
   | "application-launch-checklist"
   | "project-brief-template"
   | "no-code-saas-custom"
-  | "legacy-redesign-checklist";
+  | "legacy-redesign-checklist"
+  | "cra-reporting-checklist";
 
 export type InsightBlock =
   | { type: "paragraph"; text: string }
@@ -28,4 +29,18 @@ export type InsightRecord = {
   featured?: boolean;
   relatedService: ServiceKey;
   blocks: Record<Locale, InsightBlock[]>;
+  /**
+   * Locales the article is published in. Defaults to every locale. Content for a
+   * locale left out stays in the record, ready, but is never routed, listed or linked.
+   */
+  availableLocales?: readonly Locale[];
+  /** Replaces the default footer links (related service, start a project). */
+  cta?: Partial<Record<Locale, InsightCta>>;
+};
+
+export type InsightCta = {
+  serviceLabel: string;
+  serviceHref: string;
+  primaryLabel: string;
+  primaryHref: string;
 };

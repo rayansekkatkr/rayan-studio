@@ -4,6 +4,7 @@ import {
   INSIGHTS,
   getInsight,
   getInsightsByCategory,
+  isInsightAvailable,
   resolveInsightSlug,
 } from "@/content/insights";
 import { SERVICES } from "@/content/services";
@@ -17,7 +18,10 @@ const EXPECTED_KEYS = [
   "project-brief-template",
   "no-code-saas-custom",
   "legacy-redesign-checklist",
+  "cra-reporting-checklist",
 ];
+
+const LAUNCH_KEYS = EXPECTED_KEYS.filter((key) => key !== "cra-reporting-checklist");
 
 const PLACEHOLDER_RE = /TODO|Coming soon|Bientôt disponible|Lorem ipsum/i;
 
@@ -83,6 +87,7 @@ describe("insights registry", () => {
     expect(getInsightsByCategory("checklists").map((insight) => insight.key)).toEqual([
       "application-launch-checklist",
       "legacy-redesign-checklist",
+      "cra-reporting-checklist",
     ]);
     expect(getInsight("project-brief-template").category).toBe("templates");
   });
@@ -99,15 +104,31 @@ describe("insights registry", () => {
     expect(INSIGHT_SLUG_PAIRS).toEqual(
       INSIGHTS.map((insight) => ({
         category: insight.category,
-        fr: insight.slug.fr,
-        en: insight.slug.en,
+        fr: isInsightAvailable(insight, "fr") ? insight.slug.fr : null,
+        en: isInsightAvailable(insight, "en") ? insight.slug.en : null,
       })),
     );
   });
 
   it("uses the launch publication date without fabricated history", () => {
-    for (const insight of INSIGHTS) {
+    for (const insight of INSIGHTS.filter((item) => LAUNCH_KEYS.includes(item.key))) {
       expect(insight.publishedAt).toBe("2026-08-12");
     }
+    expect(getInsight("cra-reporting-checklist").publishedAt).toBe("2026-10-12");
+  });
+
+  it("publishes the CRA checklist in French only", () => {
+    const cra = getInsight("cra-reporting-checklist");
+    expect(isInsightAvailable(cra, "fr")).toBe(true);
+    expect(isInsightAvailable(cra, "en")).toBe(false);
+    expect(resolveInsightSlug("fr", "checklists", cra.slug.fr)?.key).toBe("cra-reporting-checklist");
+    expect(resolveInsightSlug("en", "checklists", cra.slug.en)).toBeNull();
+    expect(getInsightsByCategory("checklists", "en").map((insight) => insight.key)).not.toContain(
+      "cra-reporting-checklist",
+    );
+    expect(getInsightsByCategory("checklists", "fr").map((insight) => insight.key)).toContain(
+      "cra-reporting-checklist",
+    );
+    expect(cra.cta?.fr?.primaryHref).toBe("/fr/cyber-resilience-act#diagnostic");
   });
 });

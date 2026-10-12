@@ -72,12 +72,25 @@ test.describe("canonical route families", () => {
     "/en/insights/guides/prepare-saas-project",
     "/fr/contact",
     "/en/contact",
+    "/fr/cyber-resilience-act",
+    "/fr/insights/checklists/cra-declarer-faille-24h",
   ];
 
   for (const route of FAMILIES) {
     test(`${route} returns 200 without redirect`, async ({ request }) => {
       const response = await request.get(route, { maxRedirects: 0 });
       expect(response.status()).toBe(200);
+    });
+  }
+
+  // FR-only while the CRA offer is tested: no English page or article yet.
+  for (const route of [
+    "/en/cyber-resilience-act",
+    "/en/insights/checklists/cra-24-hour-vulnerability-reporting-checklist",
+  ]) {
+    test(`${route} is not published`, async ({ request }) => {
+      const response = await request.get(route, { maxRedirects: 0 });
+      expect(response.status()).toBe(404);
     });
   }
 });

@@ -78,7 +78,7 @@ export default async function Page({ params }: { params: Promise<{ locale: strin
   if (!category) notFound();
   const fr = locale === "fr";
   const meta = CATEGORY_META[category][locale];
-  const insights = getInsightsByCategory(category);
+  const insights = getInsightsByCategory(category, locale);
 
   return (
     <CommercialPageShell locale={locale} headerTopTheme="dark">
@@ -112,7 +112,7 @@ export default async function Page({ params }: { params: Promise<{ locale: strin
                 {fr ? "Guides utiles" : "Useful guides"}
               </h2>
               <div className="mt-5 grid gap-6 md:grid-cols-3">
-                {getInsightsByCategory("guides").map((insight) => (
+                {getInsightsByCategory("guides", locale).map((insight) => (
                   <InsightCard key={insight.key} locale={locale} insight={insight} />
                 ))}
               </div>
