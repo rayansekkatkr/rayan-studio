@@ -1,5 +1,5 @@
 {
-  "runAt": "2026-10-12T17:43:43.295Z",
+  "runAt": "2026-10-13T15:51:56.214Z",
   "status": "ready",
   "sourceMode": "default_platforms",
   "sourceCount": 18,
@@ -149,13 +149,31 @@
       "autoDiscovered": true
     }
   ],
-  "scannedOpportunities": 250,
-  "scoredCandidateCount": 72,
+  "scannedOpportunities": 240,
+  "scoredCandidateCount": 71,
   "remotePolicy": "explicit_remote_only",
-  "remoteRejectedCount": 71,
+  "remoteRejectedCount": 70,
   "remoteRejected": [
     {
-      "title": "Montage site Il y a 10 mois Ouvert 500 € à 1 000 € 79 Offres 3379 Vues Résumé du Site — Plateforme Lavage Auto à Domicile Votre site est une marketplace qui met en relation les particuliers cherchant un lavage auto à domicile et les professionnels du lavage automobile. Fonctionnalités pour les particuliers : - Recher... Marketplace Création de site internet Site E-commerce +74 Stéphane Bieber Dan Salczer Mylène Gandubert Herve Bansay ERALION",
+      "title": "Developpements web application médicale Il y a 4 heures Ouvert 200 à 500 €/jour 70 Offres 1235 Vues MEDICODE développe des applications médicales et est spécialisée dans le domaine de l ‘obstétrique. Elle a pour clients les services maternité des hôpitaux Stack technique - Front-end : Next.js (App Router), React, TypeScript, Material UI 6,... Développement spécifique Full-stack React +65 Codes Castle Herve Bansay Julien Lajardie Louis Cremers Mirai-Tech",
+      "url": "https://www.codeur.com/projects/491205-developpements-web-application-medicale",
+      "platform": "codeur",
+      "source": "Codeur - remote full stack web developer",
+      "score": 100,
+      "remoteStatus": "unknown",
+      "remoteReason": "teletravail non mentionne"
+    },
+    {
+      "title": "Creation d'un site web collaboratif de reference de part de flan Il y a 19 heures Ouvert Moins de 500 € 95 Offres 4795 Vues Tout part d’une question très simple : où trouver une excellente part de flan ? Quand on aime cette pâtisserie, on découvre des adresses par hasard, grâce à une recommandation, une photo sur les réseaux sociaux ou une boulangerie devant laquelle ... Développement spécifique Création de site internet Full-stack +90 Dan Salczer LaFactoryInc Christiane Cicatello easytech2 Fabien Berthelet",
+      "url": "https://www.codeur.com/projects/491178-creation-d-un-site-web-collaboratif-de-reference-de-part-de-flan",
+      "platform": "codeur",
+      "source": "Codeur - remote full stack web developer",
+      "score": 100,
+      "remoteStatus": "unknown",
+      "remoteReason": "teletravail non mentionne"
+    },
+    {
+      "title": "Montage site Il y a 10 mois Ouvert 500 € à 1 000 € 85 Offres 4017 Vues Résumé du Site — Plateforme Lavage Auto à Domicile Votre site est une marketplace qui met en relation les particuliers cherchant un lavage auto à domicile et les professionnels du lavage automobile. Fonctionnalités pour les particuliers : - Recher... Marketplace Création de site internet Site E-commerce +80 Stéphane Bieber Dan Salczer Mylène Gandubert Herve Bansay ERALION",
       "url": "https://www.codeur.com/projects/472335-montage-site",
       "platform": "codeur",
       "source": "Codeur - remote full stack web developer",
@@ -164,43 +182,16 @@
       "remoteReason": "teletravail non mentionne"
     },
     {
-      "title": "Developpeur no code +voice flow Il y a 5 heures Ouvert 500 € à 1 000 € 56 Offres 1232 Vues Bonjour, Je recherche un développeur freelance capable de créer des sites web modernes, responsifs et professionnels pour différents types d’entreprises. Les besoins principaux concernent le développement frontend et full-stack, la création de s... Création de site internet No code Front-end +51 ERALION Websource Germain Fardoux Nolwenn Drai--Laguens Kévin Guiot",
-      "url": "https://www.codeur.com/projects/491140-developpeur-no-code-voice-flow",
+      "title": "Refonte de site web - évolution vers application Il y a 6 heures Ouvert 1 000 € à 10 000 € 132 Offres 2038 Vues Fournisseur français de fluides frigorigènes. Nous refondons notre site et consultons plusieurs prestataires. Il ne s'agit pas d'un site vitrine. Le projet comprend un catalogue produits filtrable, un espace client avec gestion des droits et ac... Développement spécifique React Full-stack +127 Dan Salczer Geoffrey Davoine Larbi Touati Rabie Sukkar Mirai-Tech",
+      "url": "https://www.codeur.com/projects/491192-refonte-de-site-web-evolution-vers-application",
       "platform": "codeur",
       "source": "Codeur - remote full stack web developer",
-      "score": 100,
+      "score": 90,
       "remoteStatus": "unknown",
       "remoteReason": "teletravail non mentionne"
     },
     {
-      "title": "Recherche développeur WooCommerce Il y a 3 jours Ouvert 1 000 € à 10 000 € 112 Offres 5762 Vues Création d'une boutique en ligne avec reservation (depuis un site existant) Audit / Conseil / Analyse technique - Etude de faisabilité Installation & configuration Wordpress Déploiement d'une installation WordPress dernière version (6.9.4) sur ar... WooCommerce WordPress Site E-commerce +107 FullStackDeveloper Dan Salczer Florent Neyret Guillaume Boris Denneulin ERALION",
-      "url": "https://www.codeur.com/projects/491033-recherche-developpeur-woocommerce",
-      "platform": "codeur",
-      "source": "Codeur - remote full stack web developer",
-      "score": 100,
-      "remoteStatus": "unknown",
-      "remoteReason": "teletravail non mentionne"
-    },
-    {
-      "title": "Create Multi-Category E-commerce Website",
-      "url": "https://www.freelancer.com/projects/web-development/create-multi-category-commerce-website",
-      "platform": "freelancer",
-      "source": "Freelancer - remote full stack web developer",
-      "score": 95,
-      "remoteStatus": "unknown",
-      "remoteReason": "teletravail non mentionne"
-    },
-    {
-      "title": "Divi WordPress E-Commerce Developer Needed",
-      "url": "https://www.freelancer.com/projects/woocommerce/divi-wordpress-commerce-developer-needed",
-      "platform": "freelancer",
-      "source": "Freelancer - remote full stack web developer",
-      "score": 95,
-      "remoteStatus": "unknown",
-      "remoteReason": "teletravail non mentionne"
-    },
-    {
-      "title": "Modernisation d’un SaaS B2B immobilier — migration .NET, React et clou Il y a 11 heures Ouvert 500 à 800 €/jour 96 Offres 1984 Vues Je recherche un prestataire pour moderniser un SaaS B2B dans le secteur de l’immobilier et l’accompagner dans la durée. La base technique actuelle est vieillissante et montre ses limites. Je souhaite la faire évoluer pour disposer d’un socle pére... SaaS Migration ou refonte de site .NET +91 Mohamed Khlifi Studio_Bidibou MAETVIN Pierre Vaussanvin Codes Castle",
+      "title": "Modernisation d’un SaaS B2B immobilier — migration .NET, React et clou Il y a 1 jour Ouvert 500 à 800 €/jour 98 Offres 3769 Vues Je recherche un prestataire pour moderniser un SaaS B2B dans le secteur de l’immobilier et l’accompagner dans la durée. La base technique actuelle est vieillissante et montre ses limites. Je souhaite la faire évoluer pour disposer d’un socle pére... SaaS Migration ou refonte de site .NET +93 Mohamed Khlifi Studio_Bidibou MAETVIN Pierre Vaussanvin Codes Castle",
       "url": "https://www.codeur.com/projects/491121-modernisation-d-un-saas-b2b-immobilier-migration-net-react-et-clou",
       "platform": "codeur",
       "source": "Codeur - remote full stack web developer",
@@ -209,7 +200,7 @@
       "remoteReason": "teletravail non mentionne"
     },
     {
-      "title": "RECHERCHE DÉVELOPPEUR WEB – FORGE 44 : CONFIGURATEUR HISTORIQUE 2D/3D Il y a 20 heures Ouvert 500 € à 1 000 € 68 Offres 4460 Vues # Recherche développeur – Forge 44 : configurateur historique 2D/3D pour site web et borne tactile **Budget logiciel : moins de 3 000 €** ## 1. Présentation du projet Dans le cadre de la création de Bunker 44 Expérience, nous souhaitons dévelop... Développement spécifique JavaScript Front-end +63 Dan Salczer Interglade Solutions YMHB_web_dijon Slim Benhammouda ERALION",
+      "title": "RECHERCHE DÉVELOPPEUR WEB – FORGE 44 : CONFIGURATEUR HISTORIQUE 2D/3D Il y a 2 jours Ouvert 500 € à 1 000 € 70 Offres 6945 Vues # Recherche développeur – Forge 44 : configurateur historique 2D/3D pour site web et borne tactile **Budget logiciel : moins de 3 000 €** ## 1. Présentation du projet Dans le cadre de la création de Bunker 44 Expérience, nous souhaitons dévelop... Développement spécifique JavaScript Front-end +65 Dan Salczer Interglade Solutions YMHB_web_dijon Slim Benhammouda ERALION",
       "url": "https://www.codeur.com/projects/491110-recherche-developpeur-web-forge-44-configurateur-historique-2d-3d",
       "platform": "codeur",
       "source": "Codeur - remote full stack web developer",
@@ -218,7 +209,7 @@
       "remoteReason": "teletravail non mentionne"
     },
     {
-      "title": "URGENT – Création d'un site événementiel de volley-ball (Guyane CUP) Il y a 13 heures En cours Moins de 500 € 89 Offres 2205 Vues Bonjour, Nous recherchons un développeur web expérimenté et disponible immédiatement pour concevoir un site internet dédié à la Guyane CUP, une compétition de volley-ball organisée en Guyane française. Le site devra être moderne, responsive (ord... Création de site internet Site clé en main WordPress +84 Quentin Pollet LaFactoryInc Herman Razafindrakoto Nadra Harb ERALION",
+      "title": "URGENT – Création d'un site événementiel de volley-ball (Guyane CUP) Il y a 1 jour En cours Moins de 500 € 89 Offres 3426 Vues Bonjour, Nous recherchons un développeur web expérimenté et disponible immédiatement pour concevoir un site internet dédié à la Guyane CUP, une compétition de volley-ball organisée en Guyane française. Le site devra être moderne, responsive (ord... Création de site internet Site clé en main WordPress +84 Quentin Pollet LaFactoryInc Herman Razafindrakoto Nadra Harb ERALION",
       "url": "https://www.codeur.com/projects/491116-urgent-creation-d-un-site-evenementiel-de-volley-ball-guyane-cup",
       "platform": "codeur",
       "source": "Codeur - remote full stack web developer",
@@ -236,16 +227,16 @@
       "remoteReason": "teletravail non mentionne"
     },
     {
-      "title": "&Mu;&epsilon;&tau;&alpha;&phi;&omicron;&rho;ά &Iota;&sigma;&tau;&omicron;&sigma;&epsilon;&lambda;ί&delta;&alpha;&sigmaf; WordPress",
-      "url": "https://www.freelancer.com/projects/web-hosting/wordpress-40752659",
-      "platform": "freelancer",
-      "source": "Freelancer - remote devops deployment",
-      "score": 85,
+      "title": "Création et développement d’un site web sous Webflow ou wordress Il y a 4 heures Ouvert 500 € à 1 000 € 82 Offres 1213 Vues Recherche développeur Webflow spécialisé en SEO pour un site internet premium – Cabinet Anna K Présentation du projet Je recherche un développeur web expérimenté, spécialisé dans Webflow et le référencement naturel (SEO), pour concevoir et réali... Webflow Création de site internet SEO / GEO +77 Dan Salczer Paul Martinez Joffrey Klepman Elisabeth Crubillé Websource",
+      "url": "https://www.codeur.com/projects/491204-creation-et-developpement-d-un-site-web-sous-webflow-ou-wordress",
+      "platform": "codeur",
+      "source": "Codeur - remote full stack web developer",
+      "score": 80,
       "remoteStatus": "unknown",
       "remoteReason": "teletravail non mentionne"
     },
     {
-      "title": "Refonte site WordPress premium–Traiteur événementiel–Webdesign/DA+SEO Il y a 1 heure Ouvert 1 000 € à 10 000 € 64 Offres 759 Vues Nous souhaitons réaliser la refonte complète du site internet d’un traiteur événementiel établi en Île-de-France, dont l’activité est principalement orientée vers les entreprises, avec également une activité plus limitée auprès des particuliers (m... WordPress Migration ou refonte de site Web design +59 Dan Salczer Arvan Tadevossian WSAgency Karl Lameynardie ERALION",
+      "title": "Refonte site WordPress premium–Traiteur événementiel–Webdesign/DA+SEO Il y a 23 heures Ouvert 1 000 € à 10 000 € 109 Offres 5391 Vues Nous souhaitons réaliser la refonte complète du site internet d’un traiteur événementiel établi en Île-de-France, dont l’activité est principalement orientée vers les entreprises, avec également une activité plus limitée auprès des particuliers (m... WordPress Migration ou refonte de site Web design +104 Dan Salczer Arvan Tadevossian WSAgency Karl Lameynardie ERALION",
       "url": "https://www.codeur.com/projects/491169-refonte-site-wordpress-premium-traiteur-evenementiel-webdesign-da-seo",
       "platform": "codeur",
       "source": "Codeur - remote full stack web developer",
@@ -254,7 +245,7 @@
       "remoteReason": "teletravail non mentionne"
     },
     {
-      "title": "Modification plan 2D Il y a 8 heures Ouvert Moins de 500 € 9 Offres 1216 Vues Je recherche un architecture d’intérieur ou dessinateur CAO/DAO pour redessiner en 2D le plan existant d’un local professionnel d’environ 186 m². Je dispose déjà du plan d’architecte complet avec les cotations. Il ne s’agit donc pas de créer le lo... CAO DAO Dessin industriel +4 Freelance-Website Tom_Weisz Damien Blanchet Alexandre Taurines CDL-web",
+      "title": "Modification plan 2D Il y a 1 jour Ouvert Moins de 500 € 12 Offres 2663 Vues Je recherche un architecture d’intérieur ou dessinateur CAO/DAO pour redessiner en 2D le plan existant d’un local professionnel d’environ 186 m². Je dispose déjà du plan d’architecte complet avec les cotations. Il ne s’agit donc pas de créer le lo... CAO DAO Dessin industriel +7 Jonathane Khalfallah Vladislav Plamodealo Freelance-Website Tom_Weisz Damien Blanchet",
       "url": "https://www.codeur.com/projects/491133-modification-plan-2d",
       "platform": "codeur",
       "source": "Codeur - remote full stack web developer",
@@ -263,7 +254,16 @@
       "remoteReason": "teletravail non mentionne"
     },
     {
-      "title": "Formation individuelle et accompagnement technique – Agents IA, n8n, M Il y a 8 heures Ouvert Moins de 500 € 34 Offres 1275 Vues Recherche formateur / expert IA, n8n et Make – Accompagnement individuel sur projet réel Je recherche un expert en intelligence artificielle, agents IA et automatisation (n8n, Make, API, Claude, ChatGPT) pour une formation individuelle, pratique e... Formation ChatGPT Make +29 Christophe Ancey Herve Bansay Clément Remillieux Titouan Renard Websource",
+      "title": "Amélioration visuelle d'un site CMS Grav RacinesduCiel..com Il y a 1 heure Ouvert 500 € à 1 000 € 68 Offres 737 Vues Bonjour, Je dirige Racines du Ciel, une pratique artistique participative, et je cherche quelqu'un pour affiner l'aspect visuel de notre site racinesduciel.com, déjà sous Grav. Il ne s'agit pas d'une refonte, mais de quelques améliorations ciblées... CMS Web design CSS, HTML, XML +63 Dan Salczer Julien Lajardie SOKEO Kevin Boileux ERALION",
+      "url": "https://www.codeur.com/projects/491216-amelioration-visuelle-d-un-site-cms-grav-racinesduciel-com",
+      "platform": "codeur",
+      "source": "Codeur - remote full stack web developer",
+      "score": 75,
+      "remoteStatus": "unknown",
+      "remoteReason": "teletravail non mentionne"
+    },
+    {
+      "title": "Formation individuelle et accompagnement technique – Agents IA, n8n, M Il y a 1 jour Ouvert Moins de 500 € 39 Offres 3015 Vues Recherche formateur / expert IA, n8n et Make – Accompagnement individuel sur projet réel Je recherche un expert en intelligence artificielle, agents IA et automatisation (n8n, Make, API, Claude, ChatGPT) pour une formation individuelle, pratique e... Formation ChatGPT Make +34 Christophe Ancey Herve Bansay Clément Remillieux Titouan Renard Websource",
       "url": "https://www.codeur.com/projects/491134-formation-individuelle-et-accompagnement-technique-agents-ia-n8n-m",
       "platform": "codeur",
       "source": "Codeur - remote full stack web developer",
@@ -272,17 +272,8 @@
       "remoteReason": "teletravail non mentionne"
     },
     {
-      "title": "Recherche un prestataire réseau pour marque cosmétique eco responsable Il y a 9 heures Ouvert Moins de 500 € 27 Offres 1117 Vues je recherche une personne pour ma marque de cosmétique solaire eco responsable innovante. Pour les réseaux sociaux pour faire connaitre ma future marque. Il y aura tout à faire sur les réseaux . Ainsi qu'une création de site avec shopify. Il y aur... Community management Communication Marketing +22 Fabrice Rousseau Lisa Fourmont Younicom Nolwenn Drai--Laguens oxton-digital",
+      "title": "Recherche un prestataire réseau pour marque cosmétique eco responsable Il y a 1 jour Ouvert Moins de 500 € 31 Offres 2629 Vues je recherche une personne pour ma marque de cosmétique solaire eco responsable innovante. Pour les réseaux sociaux pour faire connaitre ma future marque. Il y aura tout à faire sur les réseaux . Ainsi qu'une création de site avec shopify. Il y aur... Community management Communication Marketing +26 Fabrice Rousseau Nadia-Anastasia Valentine Beaumont Lisa Fourmont Younicom",
       "url": "https://www.codeur.com/projects/491129-recherche-un-prestataire-reseau-pour-marque-cosmetique-eco-responsable",
-      "platform": "codeur",
-      "source": "Codeur - remote full stack web developer",
-      "score": 75,
-      "remoteStatus": "unknown",
-      "remoteReason": "teletravail non mentionne"
-    },
-    {
-      "title": "Application éducative en français pour lycéens et étudiants Il y a 1 jour Ouvert Moins de 500 € 61 Offres 5857 Vues Bonjour, je recherche un développeur ou une petite équipe pour créer Cursus Plus, une plateforme éducative en français destinée aux lycéens (seconde, première, terminale) et aux étudiants, toutes filières confondues. Fonctionnalités principales :... E-learning Développement spécifique Création de site internet +56 Dan Salczer LaFactoryInc easytech2 Guillaume Boris Denneulin Nolwenn Drai--Laguens",
-      "url": "https://www.codeur.com/projects/491078-application-educative-en-francais-pour-lyceens-et-etudiants",
       "platform": "codeur",
       "source": "Codeur - remote full stack web developer",
       "score": 75,
@@ -333,6 +324,15 @@
       "score": 75,
       "remoteStatus": "unknown",
       "remoteReason": "teletravail non mentionne"
+    },
+    {
+      "title": "Modern Responsive Website Design",
+      "url": "https://www.freelancer.com/projects/web-design/modern-responsive-website-design-40763602",
+      "platform": "freelancer",
+      "source": "Freelancer - remote full stack web developer",
+      "score": 70,
+      "remoteStatus": "unknown",
+      "remoteReason": "teletravail non mentionne"
     }
   ],
   "candidateCount": 1,
@@ -369,7 +369,7 @@
       "platform": "codeur",
       "searchQuery": "remote full stack web developer",
       "remoteGuaranteed": false,
-      "title": "Automatisation création de contacts en Aurea CRM avec Power Automate Il y a 9 heures Ouvert Moins de 500 € 32 Offres 1839 Vues Objet de la mission : m’accompagner à distance dans la création et la prise en main d’un flux Power Automate Desktop permettant d’utiliser mon fichier Excel existant pour créer des contacts dans Aurea CRM. La mission doit être réalisée en mode col... CRM No code Développement spécifique +27 Dan Salczer Herve Bansay Websource Khalid Boudrari Nolwenn Drai--Laguens",
+      "title": "Automatisation création de contacts en Aurea CRM avec Power Automate Il y a 1 jour Ouvert Moins de 500 € 35 Offres 5124 Vues Objet de la mission : m’accompagner à distance dans la création et la prise en main d’un flux Power Automate Desktop permettant d’utiliser mon fichier Excel existant pour créer des contacts dans Aurea CRM. La mission doit être réalisée en mode col... CRM No code Développement spécifique +30 Dan Salczer Herve Bansay Websource Khalid Boudrari Nolwenn Drai--Laguens",
       "description": "",
       "sourceDescription": "Découvrez les derniers projets disponibles sur Codeur.com et trouvez plus de cent nouvelles missions en freelance chaque jour.",
       "url": "https://www.codeur.com/projects/491122-automatisation-creation-de-contacts-en-aurea-crm-avec-power-automate",
@@ -394,7 +394,56 @@
       "platform": "codeur",
       "searchQuery": "remote full stack web developer",
       "remoteGuaranteed": false,
-      "title": "Montage site Il y a 10 mois Ouvert 500 € à 1 000 € 79 Offres 3379 Vues Résumé du Site — Plateforme Lavage Auto à Domicile Votre site est une marketplace qui met en relation les particuliers cherchant un lavage auto à domicile et les professionnels du lavage automobile. Fonctionnalités pour les particuliers : - Recher... Marketplace Création de site internet Site E-commerce +74 Stéphane Bieber Dan Salczer Mylène Gandubert Herve Bansay ERALION",
+      "title": "Developpements web application médicale Il y a 4 heures Ouvert 200 à 500 €/jour 70 Offres 1235 Vues MEDICODE développe des applications médicales et est spécialisée dans le domaine de l ‘obstétrique. Elle a pour clients les services maternité des hôpitaux Stack technique - Front-end : Next.js (App Router), React, TypeScript, Material UI 6,... Développement spécifique Full-stack React +65 Codes Castle Herve Bansay Julien Lajardie Louis Cremers Mirai-Tech",
+      "description": "",
+      "sourceDescription": "Découvrez les derniers projets disponibles sur Codeur.com et trouvez plus de cent nouvelles missions en freelance chaque jour.",
+      "url": "https://www.codeur.com/projects/491205-developpements-web-application-medicale",
+      "extractionMethod": "anchor",
+      "score": 100,
+      "fit": "high",
+      "reasons": [
+        "besoin site/refonte",
+        "profil full-stack/platform",
+        "UX, mobile ou conversion",
+        "budget mentionne"
+      ],
+      "remoteOnly": false,
+      "remoteStatus": "unknown",
+      "remoteReason": "teletravail non mentionne",
+      "proposalDraft": "Hi,\n\nI saw your project \"Developpements web application médicale\" and it looks close to the kind of full-stack/platform work I handle.\n\nMy strongest fit here is React/Node full-stack delivery, with the backend, API integrations and deployment side handled together rather than split across separate people.\n\nI can help clarify the scope, then take care of the implementation, API/backend work, responsive front-end, deployment details, and clean handover.\n\nPortfolio: https://www.rayanstudios.com/fr\n\nIf you can share the current stack, priority features and timeline, I can reply with a concrete scope and estimate.\n\nBest,\nRayan\nMission: https://www.codeur.com/projects/491205-developpements-web-application-medicale"
+    },
+    {
+      "source": "Codeur - remote full stack web developer",
+      "sourceUrl": "https://www.codeur.com/projects?keywords=remote%20full%20stack%20web%20developer",
+      "platform": "codeur",
+      "searchQuery": "remote full stack web developer",
+      "remoteGuaranteed": false,
+      "title": "Creation d'un site web collaboratif de reference de part de flan Il y a 19 heures Ouvert Moins de 500 € 95 Offres 4795 Vues Tout part d’une question très simple : où trouver une excellente part de flan ? Quand on aime cette pâtisserie, on découvre des adresses par hasard, grâce à une recommandation, une photo sur les réseaux sociaux ou une boulangerie devant laquelle ... Développement spécifique Création de site internet Full-stack +90 Dan Salczer LaFactoryInc Christiane Cicatello easytech2 Fabien Berthelet",
+      "description": "",
+      "sourceDescription": "Découvrez les derniers projets disponibles sur Codeur.com et trouvez plus de cent nouvelles missions en freelance chaque jour.",
+      "url": "https://www.codeur.com/projects/491178-creation-d-un-site-web-collaboratif-de-reference-de-part-de-flan",
+      "extractionMethod": "anchor",
+      "score": 100,
+      "fit": "high",
+      "reasons": [
+        "besoin site/refonte",
+        "profil full-stack/platform",
+        "UX, mobile ou conversion",
+        "profil TPE/local",
+        "budget mentionne"
+      ],
+      "remoteOnly": false,
+      "remoteStatus": "unknown",
+      "remoteReason": "teletravail non mentionne",
+      "proposalDraft": "Bonjour,\n\nJ'ai vu votre mission \"Creation d'un site web collaboratif de reference de part de flan\". Je peux vous aider sur la partie site.\n\nJe commencerais par clarifier la structure et les priorites, puis je peux prendre en charge la maquette, le developpement, le responsive, le SEO de depart, le domaine/DNS et la mise en ligne.\n\nQuelques exemples de mon travail: https://www.rayanstudios.com/fr\n\nSi vous avez l'URL actuelle, 2-3 references ou une contrainte de delai/budget, je peux vous repondre avec un perimetre concret et une estimation plus precise.\n\nBonne journee,\nRayan\nMission: https://www.codeur.com/projects/491178-creation-d-un-site-web-collaboratif-de-reference-de-part-de-flan"
+    },
+    {
+      "source": "Codeur - remote full stack web developer",
+      "sourceUrl": "https://www.codeur.com/projects?keywords=remote%20full%20stack%20web%20developer",
+      "platform": "codeur",
+      "searchQuery": "remote full stack web developer",
+      "remoteGuaranteed": false,
+      "title": "Montage site Il y a 10 mois Ouvert 500 € à 1 000 € 85 Offres 4017 Vues Résumé du Site — Plateforme Lavage Auto à Domicile Votre site est une marketplace qui met en relation les particuliers cherchant un lavage auto à domicile et les professionnels du lavage automobile. Fonctionnalités pour les particuliers : - Recher... Marketplace Création de site internet Site E-commerce +80 Stéphane Bieber Dan Salczer Mylène Gandubert Herve Bansay ERALION",
       "description": "",
       "sourceDescription": "Découvrez les derniers projets disponibles sur Codeur.com et trouvez plus de cent nouvelles missions en freelance chaque jour.",
       "url": "https://www.codeur.com/projects/472335-montage-site",
@@ -419,23 +468,22 @@
       "platform": "codeur",
       "searchQuery": "remote full stack web developer",
       "remoteGuaranteed": false,
-      "title": "Developpeur no code +voice flow Il y a 5 heures Ouvert 500 € à 1 000 € 56 Offres 1232 Vues Bonjour, Je recherche un développeur freelance capable de créer des sites web modernes, responsifs et professionnels pour différents types d’entreprises. Les besoins principaux concernent le développement frontend et full-stack, la création de s... Création de site internet No code Front-end +51 ERALION Websource Germain Fardoux Nolwenn Drai--Laguens Kévin Guiot",
+      "title": "Refonte de site web - évolution vers application Il y a 6 heures Ouvert 1 000 € à 10 000 € 132 Offres 2038 Vues Fournisseur français de fluides frigorigènes. Nous refondons notre site et consultons plusieurs prestataires. Il ne s'agit pas d'un site vitrine. Le projet comprend un catalogue produits filtrable, un espace client avec gestion des droits et ac... Développement spécifique React Full-stack +127 Dan Salczer Geoffrey Davoine Larbi Touati Rabie Sukkar Mirai-Tech",
       "description": "",
       "sourceDescription": "Découvrez les derniers projets disponibles sur Codeur.com et trouvez plus de cent nouvelles missions en freelance chaque jour.",
-      "url": "https://www.codeur.com/projects/491140-developpeur-no-code-voice-flow",
+      "url": "https://www.codeur.com/projects/491192-refonte-de-site-web-evolution-vers-application",
       "extractionMethod": "anchor",
-      "score": 100,
+      "score": 90,
       "fit": "high",
       "reasons": [
         "besoin site/refonte",
         "profil full-stack/platform",
-        "UX, mobile ou conversion",
         "budget mentionne"
       ],
       "remoteOnly": false,
       "remoteStatus": "unknown",
       "remoteReason": "teletravail non mentionne",
-      "proposalDraft": "Bonjour,\n\nJ'ai vu votre mission \"Developpeur no code +voice flow\". Je peux vous aider sur la partie site.\n\nJe commencerais par clarifier la structure et les priorites, puis je peux prendre en charge la maquette, le developpement, le responsive, le SEO de depart, le domaine/DNS et la mise en ligne.\n\nQuelques exemples de mon travail: https://www.rayanstudios.com/fr\n\nSi vous avez l'URL actuelle, 2-3 references ou une contrainte de delai/budget, je peux vous repondre avec un perimetre concret et une estimation plus precise.\n\nBonne journee,\nRayan\nMission: https://www.codeur.com/projects/491140-developpeur-no-code-voice-flow"
+      "proposalDraft": "Bonjour,\n\nJ'ai vu votre mission \"Refonte de site web - évolution vers application\". Je peux vous aider sur la partie site.\n\nJe commencerais par clarifier la structure et les priorites, puis je peux prendre en charge la maquette, le developpement, le responsive, le SEO de depart, le domaine/DNS et la mise en ligne.\n\nQuelques exemples de mon travail: https://www.rayanstudios.com/fr\n\nSi vous avez l'URL actuelle, 2-3 references ou une contrainte de delai/budget, je peux vous repondre avec un perimetre concret et une estimation plus precise.\n\nBonne journee,\nRayan\nMission: https://www.codeur.com/projects/491192-refonte-de-site-web-evolution-vers-application"
     },
     {
       "source": "Codeur - remote full stack web developer",
@@ -443,78 +491,7 @@
       "platform": "codeur",
       "searchQuery": "remote full stack web developer",
       "remoteGuaranteed": false,
-      "title": "Recherche développeur WooCommerce Il y a 3 jours Ouvert 1 000 € à 10 000 € 112 Offres 5762 Vues Création d'une boutique en ligne avec reservation (depuis un site existant) Audit / Conseil / Analyse technique - Etude de faisabilité Installation & configuration Wordpress Déploiement d'une installation WordPress dernière version (6.9.4) sur ar... WooCommerce WordPress Site E-commerce +107 FullStackDeveloper Dan Salczer Florent Neyret Guillaume Boris Denneulin ERALION",
-      "description": "",
-      "sourceDescription": "Découvrez les derniers projets disponibles sur Codeur.com et trouvez plus de cent nouvelles missions en freelance chaque jour.",
-      "url": "https://www.codeur.com/projects/491033-recherche-developpeur-woocommerce",
-      "extractionMethod": "anchor",
-      "score": 100,
-      "fit": "high",
-      "reasons": [
-        "besoin site/refonte",
-        "profil full-stack/platform",
-        "DevOps, CI/CD ou deploiement",
-        "profil TPE/local",
-        "budget mentionne"
-      ],
-      "remoteOnly": false,
-      "remoteStatus": "unknown",
-      "remoteReason": "teletravail non mentionne",
-      "proposalDraft": "Bonjour,\n\nJ'ai vu votre mission \"Recherche développeur WooCommerce\". Je peux vous aider sur la partie site.\n\nJe commencerais par clarifier la structure et les priorites, puis je peux prendre en charge la maquette, le developpement, le responsive, le SEO de depart, le domaine/DNS et la mise en ligne.\n\nQuelques exemples de mon travail: https://www.rayanstudios.com/fr\n\nSi vous avez l'URL actuelle, 2-3 references ou une contrainte de delai/budget, je peux vous repondre avec un perimetre concret et une estimation plus precise.\n\nBonne journee,\nRayan\nMission: https://www.codeur.com/projects/491033-recherche-developpeur-woocommerce"
-    },
-    {
-      "source": "Freelancer - remote full stack web developer",
-      "sourceUrl": "https://www.freelancer.com/jobs/website-development",
-      "platform": "freelancer",
-      "searchQuery": "remote full stack web developer",
-      "remoteGuaranteed": false,
-      "title": "Create Multi-Category E-commerce Website",
-      "description": "",
-      "sourceDescription": "World's largest website for Website Development Jobs. Find $$$ Website Development Jobs or hire a Website Developer to bid on your Website Development Job at Freelancer. 12m+ Jobs!",
-      "url": "https://www.freelancer.com/projects/web-development/create-multi-category-commerce-website",
-      "extractionMethod": "anchor",
-      "score": 95,
-      "fit": "high",
-      "reasons": [
-        "besoin site/refonte",
-        "profil full-stack/platform",
-        "profil TPE/local"
-      ],
-      "remoteOnly": false,
-      "remoteStatus": "unknown",
-      "remoteReason": "teletravail non mentionne",
-      "proposalDraft": "Hi,\n\nI saw your project \"Create Multi-Category E-commerce Website\" and it looks close to the kind of full-stack/platform work I handle.\n\nMy strongest fit here is turning the business goal into a clean, responsive implementation with the technical setup around launch handled properly.\n\nI can help clarify the scope, then take care of the implementation, API/backend work, responsive front-end, deployment details, and clean handover.\n\nPortfolio: https://www.rayanstudios.com/fr\n\nIf you can share the current stack, priority features and timeline, I can reply with a concrete scope and estimate.\n\nBest,\nRayan\nMission: https://www.freelancer.com/projects/web-development/create-multi-category-commerce-website"
-    },
-    {
-      "source": "Freelancer - remote full stack web developer",
-      "sourceUrl": "https://www.freelancer.com/jobs/website-development",
-      "platform": "freelancer",
-      "searchQuery": "remote full stack web developer",
-      "remoteGuaranteed": false,
-      "title": "Divi WordPress E-Commerce Developer Needed",
-      "description": "",
-      "sourceDescription": "World's largest website for Website Development Jobs. Find $$$ Website Development Jobs or hire a Website Developer to bid on your Website Development Job at Freelancer. 12m+ Jobs!",
-      "url": "https://www.freelancer.com/projects/woocommerce/divi-wordpress-commerce-developer-needed",
-      "extractionMethod": "anchor",
-      "score": 95,
-      "fit": "high",
-      "reasons": [
-        "besoin site/refonte",
-        "profil full-stack/platform",
-        "profil TPE/local"
-      ],
-      "remoteOnly": false,
-      "remoteStatus": "unknown",
-      "remoteReason": "teletravail non mentionne",
-      "proposalDraft": "Hi,\n\nI saw your project \"Divi WordPress E-Commerce Developer Needed\" and it looks close to the kind of full-stack/platform work I handle.\n\nMy strongest fit here is turning the business goal into a clean, responsive implementation with the technical setup around launch handled properly.\n\nI can help clarify the scope, then take care of the implementation, API/backend work, responsive front-end, deployment details, and clean handover.\n\nPortfolio: https://www.rayanstudios.com/fr\n\nIf you can share the current stack, priority features and timeline, I can reply with a concrete scope and estimate.\n\nBest,\nRayan\nMission: https://www.freelancer.com/projects/woocommerce/divi-wordpress-commerce-developer-needed"
-    },
-    {
-      "source": "Codeur - remote full stack web developer",
-      "sourceUrl": "https://www.codeur.com/projects?keywords=remote%20full%20stack%20web%20developer",
-      "platform": "codeur",
-      "searchQuery": "remote full stack web developer",
-      "remoteGuaranteed": false,
-      "title": "Modernisation d’un SaaS B2B immobilier — migration .NET, React et clou Il y a 11 heures Ouvert 500 à 800 €/jour 96 Offres 1984 Vues Je recherche un prestataire pour moderniser un SaaS B2B dans le secteur de l’immobilier et l’accompagner dans la durée. La base technique actuelle est vieillissante et montre ses limites. Je souhaite la faire évoluer pour disposer d’un socle pére... SaaS Migration ou refonte de site .NET +91 Mohamed Khlifi Studio_Bidibou MAETVIN Pierre Vaussanvin Codes Castle",
+      "title": "Modernisation d’un SaaS B2B immobilier — migration .NET, React et clou Il y a 1 jour Ouvert 500 à 800 €/jour 98 Offres 3769 Vues Je recherche un prestataire pour moderniser un SaaS B2B dans le secteur de l’immobilier et l’accompagner dans la durée. La base technique actuelle est vieillissante et montre ses limites. Je souhaite la faire évoluer pour disposer d’un socle pére... SaaS Migration ou refonte de site .NET +93 Mohamed Khlifi Studio_Bidibou MAETVIN Pierre Vaussanvin Codes Castle",
       "description": "",
       "sourceDescription": "Découvrez les derniers projets disponibles sur Codeur.com et trouvez plus de cent nouvelles missions en freelance chaque jour.",
       "url": "https://www.codeur.com/projects/491121-modernisation-d-un-saas-b2b-immobilier-migration-net-react-et-clou",
@@ -537,7 +514,7 @@
       "platform": "codeur",
       "searchQuery": "remote full stack web developer",
       "remoteGuaranteed": false,
-      "title": "RECHERCHE DÉVELOPPEUR WEB – FORGE 44 : CONFIGURATEUR HISTORIQUE 2D/3D Il y a 20 heures Ouvert 500 € à 1 000 € 68 Offres 4460 Vues # Recherche développeur – Forge 44 : configurateur historique 2D/3D pour site web et borne tactile **Budget logiciel : moins de 3 000 €** ## 1. Présentation du projet Dans le cadre de la création de Bunker 44 Expérience, nous souhaitons dévelop... Développement spécifique JavaScript Front-end +63 Dan Salczer Interglade Solutions YMHB_web_dijon Slim Benhammouda ERALION",
+      "title": "RECHERCHE DÉVELOPPEUR WEB – FORGE 44 : CONFIGURATEUR HISTORIQUE 2D/3D Il y a 2 jours Ouvert 500 € à 1 000 € 70 Offres 6945 Vues # Recherche développeur – Forge 44 : configurateur historique 2D/3D pour site web et borne tactile **Budget logiciel : moins de 3 000 €** ## 1. Présentation du projet Dans le cadre de la création de Bunker 44 Expérience, nous souhaitons dévelop... Développement spécifique JavaScript Front-end +65 Dan Salczer Interglade Solutions YMHB_web_dijon Slim Benhammouda ERALION",
       "description": "",
       "sourceDescription": "Découvrez les derniers projets disponibles sur Codeur.com et trouvez plus de cent nouvelles missions en freelance chaque jour.",
       "url": "https://www.codeur.com/projects/491110-recherche-developpeur-web-forge-44-configurateur-historique-2d-3d",
@@ -560,7 +537,7 @@
       "platform": "codeur",
       "searchQuery": "remote full stack web developer",
       "remoteGuaranteed": false,
-      "title": "URGENT – Création d'un site événementiel de volley-ball (Guyane CUP) Il y a 13 heures En cours Moins de 500 € 89 Offres 2205 Vues Bonjour, Nous recherchons un développeur web expérimenté et disponible immédiatement pour concevoir un site internet dédié à la Guyane CUP, une compétition de volley-ball organisée en Guyane française. Le site devra être moderne, responsive (ord... Création de site internet Site clé en main WordPress +84 Quentin Pollet LaFactoryInc Herman Razafindrakoto Nadra Harb ERALION",
+      "title": "URGENT – Création d'un site événementiel de volley-ball (Guyane CUP) Il y a 1 jour En cours Moins de 500 € 89 Offres 3426 Vues Bonjour, Nous recherchons un développeur web expérimenté et disponible immédiatement pour concevoir un site internet dédié à la Guyane CUP, une compétition de volley-ball organisée en Guyane française. Le site devra être moderne, responsive (ord... Création de site internet Site clé en main WordPress +84 Quentin Pollet LaFactoryInc Herman Razafindrakoto Nadra Harb ERALION",
       "description": "",
       "sourceDescription": "Découvrez les derniers projets disponibles sur Codeur.com et trouvez plus de cent nouvelles missions en freelance chaque jour.",
       "url": "https://www.codeur.com/projects/491116-urgent-creation-d-un-site-evenementiel-de-volley-ball-guyane-cup",
@@ -601,26 +578,50 @@
       "proposalDraft": "Hi,\n\nI saw your project \"Website Analytics & Social Integration\" and it looks close to the kind of full-stack/platform work I handle.\n\nMy strongest fit here is API and payment integration work, including Stripe-style flows, backend reliability and practical production checks.\n\nI can help clarify the scope, then take care of the implementation, API/backend work, responsive front-end, deployment details, and clean handover.\n\nPortfolio: https://www.rayanstudios.com/fr\n\nIf you can share the current stack, priority features and timeline, I can reply with a concrete scope and estimate.\n\nBest,\nRayan\nMission: https://www.freelancer.com/projects/api/website-analytics-social-integration"
     },
     {
-      "source": "Freelancer - remote devops deployment",
-      "sourceUrl": "https://www.freelancer.com/jobs/website-management",
-      "platform": "freelancer",
-      "searchQuery": "remote devops deployment",
+      "source": "Codeur - remote full stack web developer",
+      "sourceUrl": "https://www.codeur.com/projects?keywords=remote%20full%20stack%20web%20developer",
+      "platform": "codeur",
+      "searchQuery": "remote full stack web developer",
       "remoteGuaranteed": false,
-      "title": "&Mu;&epsilon;&tau;&alpha;&phi;&omicron;&rho;ά &Iota;&sigma;&tau;&omicron;&sigma;&epsilon;&lambda;ί&delta;&alpha;&sigmaf; WordPress",
+      "title": "Création et développement d’un site web sous Webflow ou wordress Il y a 4 heures Ouvert 500 € à 1 000 € 82 Offres 1213 Vues Recherche développeur Webflow spécialisé en SEO pour un site internet premium – Cabinet Anna K Présentation du projet Je recherche un développeur web expérimenté, spécialisé dans Webflow et le référencement naturel (SEO), pour concevoir et réali... Webflow Création de site internet SEO / GEO +77 Dan Salczer Paul Martinez Joffrey Klepman Elisabeth Crubillé Websource",
       "description": "",
-      "sourceDescription": "World's largest website for Website Management Jobs. Find $$$ Website Management Jobs or hire a Website Manager to bid on your Website Management Job at Freelancer. 12m+ Jobs!",
-      "url": "https://www.freelancer.com/projects/web-hosting/wordpress-40752659",
+      "sourceDescription": "Découvrez les derniers projets disponibles sur Codeur.com et trouvez plus de cent nouvelles missions en freelance chaque jour.",
+      "url": "https://www.codeur.com/projects/491204-creation-et-developpement-d-un-site-web-sous-webflow-ou-wordress",
       "extractionMethod": "anchor",
-      "score": 85,
+      "score": 80,
       "fit": "high",
       "reasons": [
         "besoin site/refonte",
-        "DevOps, CI/CD ou deploiement"
+        "SEO ou visibilite locale",
+        "budget mentionne"
       ],
       "remoteOnly": false,
       "remoteStatus": "unknown",
       "remoteReason": "teletravail non mentionne",
-      "proposalDraft": "Hi,\n\nI saw your project \"&Mu;&epsilon;&tau;&alpha;&phi;&omicron;&rho;ά &Iota;&sigma;&tau;&omicron;&sigma;&epsilon;&lambda;ί&delta;&alpha;&sigmaf;\" and it looks close to the kind of full-stack/platform work I handle.\n\nMy strongest fit here is turning the business goal into a clean, responsive implementation with the technical setup around launch handled properly.\n\nI can help clarify the scope, then take care of the implementation, API/backend work, responsive front-end, deployment details, and clean handover.\n\nPortfolio: https://www.rayanstudios.com/fr\n\nIf you can share the current stack, priority features and timeline, I can reply with a concrete scope and estimate.\n\nBest,\nRayan\nMission: https://www.freelancer.com/projects/web-hosting/wordpress-40752659"
+      "proposalDraft": "Bonjour,\n\nJ'ai vu votre mission \"Création et développement d’un site web sous Webflow ou wordress\". Je peux vous aider sur la partie site.\n\nJe commencerais par clarifier la structure et les priorites, puis je peux prendre en charge la maquette, le developpement, le responsive, le SEO de depart, le domaine/DNS et la mise en ligne.\n\nQuelques exemples de mon travail: https://www.rayanstudios.com/fr\n\nSi vous avez l'URL actuelle, 2-3 references ou une contrainte de delai/budget, je peux vous repondre avec un perimetre concret et une estimation plus precise.\n\nBonne journee,\nRayan\nMission: https://www.codeur.com/projects/491204-creation-et-developpement-d-un-site-web-sous-webflow-ou-wordress"
+    },
+    {
+      "source": "Codeur - remote full stack web developer",
+      "sourceUrl": "https://www.codeur.com/projects?keywords=remote%20full%20stack%20web%20developer",
+      "platform": "codeur",
+      "searchQuery": "remote full stack web developer",
+      "remoteGuaranteed": false,
+      "title": "Refonte site WordPress premium–Traiteur événementiel–Webdesign/DA+SEO Il y a 23 heures Ouvert 1 000 € à 10 000 € 109 Offres 5391 Vues Nous souhaitons réaliser la refonte complète du site internet d’un traiteur événementiel établi en Île-de-France, dont l’activité est principalement orientée vers les entreprises, avec également une activité plus limitée auprès des particuliers (m... WordPress Migration ou refonte de site Web design +104 Dan Salczer Arvan Tadevossian WSAgency Karl Lameynardie ERALION",
+      "description": "",
+      "sourceDescription": "Découvrez les derniers projets disponibles sur Codeur.com et trouvez plus de cent nouvelles missions en freelance chaque jour.",
+      "url": "https://www.codeur.com/projects/491169-refonte-site-wordpress-premium-traiteur-evenementiel-webdesign-da-seo",
+      "extractionMethod": "anchor",
+      "score": 80,
+      "fit": "high",
+      "reasons": [
+        "besoin site/refonte",
+        "SEO ou visibilite locale",
+        "budget mentionne"
+      ],
+      "remoteOnly": false,
+      "remoteStatus": "unknown",
+      "remoteReason": "teletravail non mentionne",
+      "proposalDraft": "Bonjour,\n\nJ'ai vu votre mission \"Refonte site WordPress premium–Traiteur événementiel–Webdesign/DA+SEO\". Je peux vous aider sur la partie site.\n\nJe commencerais par clarifier la structure et les priorites, puis je peux prendre en charge la maquette, le developpement, le responsive, le SEO de depart, le domaine/DNS et la mise en ligne.\n\nQuelques exemples de mon travail: https://www.rayanstudios.com/fr\n\nSi vous avez l'URL actuelle, 2-3 references ou une contrainte de delai/budget, je peux vous repondre avec un perimetre concret et une estimation plus precise.\n\nBonne journee,\nRayan\nMission: https://www.codeur.com/projects/491169-refonte-site-wordpress-premium-traiteur-evenementiel-webdesign-da-seo"
     }
   ],
   "errors": []
