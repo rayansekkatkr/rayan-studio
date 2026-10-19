@@ -1,5 +1,5 @@
 {
-  "runAt": "2026-10-16T13:11:17.956Z",
+  "runAt": "2026-10-19T15:30:51.215Z",
   "status": "no_candidates",
   "sourceMode": "default_platforms",
   "sourceCount": 18,
@@ -149,14 +149,14 @@
       "autoDiscovered": true
     }
   ],
-  "scannedOpportunities": 252,
-  "scoredCandidateCount": 79,
+  "scannedOpportunities": 260,
+  "scoredCandidateCount": 77,
   "remotePolicy": "explicit_remote_only",
-  "remoteRejectedCount": 79,
+  "remoteRejectedCount": 77,
   "remoteRejected": [
     {
-      "title": "Une automatisation simple sur attitudesport.fr , sous [WordPress Il y a 2 heures Ouvert Moins de 500 € 81 Offres 982 Vues Objet : demande de devis pour automatiser la création et la promotion d’articles de blog Bonjour, Je souhaite mettre en place une automatisation simple pour mon site [adresse du site], sous [WordPress / autre CMS]. Fonctionnement souhaité Une f... WordPress API No code +76 Germain Fardoux Dan Salczer Adrien Lopez Florent Neyret Websource",
-      "url": "https://www.codeur.com/projects/491368-une-automatisation-simple-sur-attitudesport-fr-sous-wordpress",
+      "title": "Je souhaites une Refonte structurelle de mon site web Il y a 21 heures En cours Moins de 500 € 70 Offres 5368 Vues Je recherche un freelance qui peut faire la Refonte structurelle de mon ma boutique. Cela consiste à faire la restructuration de la page d'accueil, la réorganisation du menu, l'harmonisation graphique, restructuration « À propos », la barre d'anno... Migration ou refonte de site Site E-commerce Web design +65 Dan Salczer Chokri Selmi Denis Berger Tom_Weisz ERALION",
+      "url": "https://www.codeur.com/projects/491460-je-souhaites-une-refonte-structurelle-de-mon-site-web",
       "platform": "codeur",
       "source": "Codeur - remote full stack web developer",
       "score": 100,
@@ -164,7 +164,16 @@
       "remoteReason": "mention sur site ou presentiel"
     },
     {
-      "title": "Developpements web application médicale Il y a 3 jours Ouvert 200 à 500 €/jour 111 Offres 9454 Vues MEDICODE développe des applications médicales et est spécialisée dans le domaine de l ‘obstétrique. Elle a pour clients les services maternité des hôpitaux Stack technique - Front-end : Next.js (App Router), React, TypeScript, Material UI 6,... Développement spécifique Full-stack React +106 Codes Castle Herve Bansay Julien Lajardie Galo Mirai-Tech",
+      "title": "Recherche développeur Shopify Il y a 1 jour Ouvert 500 € à 1 000 € 32 Offres 6216 Vues Bonjour Nous recherchons pour le lancemeent d'un nouveau projet un dev Sa mission // terminer un site et le mettre en ligne template Wordpress woocommerce plugger les logitiels Sellsy et Agentova Aussi nous souhaitons un suivit a l'année Le dev... WordPress WooCommerce Site E-commerce +27 Dan Salczer Thibault Monteiro Websource Nolwenn Drai--Laguens EncureIT_Systems",
+      "url": "https://www.codeur.com/projects/491447-recherche-developpeur-shopify",
+      "platform": "codeur",
+      "source": "Codeur - remote full stack web developer",
+      "score": 100,
+      "remoteStatus": "unknown",
+      "remoteReason": "teletravail non mentionne"
+    },
+    {
+      "title": "Developpements web application médicale Il y a 6 jours Ouvert 200 à 500 €/jour 122 Offres 16455 Vues MEDICODE développe des applications médicales et est spécialisée dans le domaine de l ‘obstétrique. Elle a pour clients les services maternité des hôpitaux Stack technique - Front-end : Next.js (App Router), React, TypeScript, Material UI 6,... Développement spécifique Full-stack React +117 Codes Castle Herve Bansay Julien Lajardie Galo Mirai-Tech",
       "url": "https://www.codeur.com/projects/491205-developpements-web-application-medicale",
       "platform": "codeur",
       "source": "Codeur - remote full stack web developer",
@@ -173,17 +182,8 @@
       "remoteReason": "teletravail non mentionne"
     },
     {
-      "title": "Demande de devis – Refonte complète des photos de mon site PrestaShop Il y a 20 heures Ouvert Moins de 500 € 44 Offres 4260 Vues Demande de devis – Refonte complète des photos de mon site PrestaShop Bonjour, Je recherche un professionnel sérieux et minutieux pour effectuer la refonte complète des photos produits de mon site www.lavapote.fr. Je fournirai moi-même le backg... Photo Prestashop Site E-commerce +39 Dan Salczer Christiane Cicatello Websource Virginie Bootz Magicien Duweb",
-      "url": "https://www.codeur.com/projects/491348-demande-de-devis-refonte-complete-des-photos-de-mon-site-prestashop",
-      "platform": "codeur",
-      "source": "Codeur - remote full stack web developer",
-      "score": 100,
-      "remoteStatus": "onsite",
-      "remoteReason": "mention sur site ou presentiel"
-    },
-    {
-      "title": "Intégrer Stripe dans une page web Il y a 1 jour En cours Moins de 500 € 82 Offres 2744 Vues Je recherche un professionnel pour intégrer un bouton de paiement Stripe sur mon site web permettant à mes clients de réserver et de payer directement mes ateliers de peinture sur mon site internet. Communiquez-moi le prix forfaitaire de cette pr... Stripe Système de paiement API +77 Quentin Pollet Dan Salczer JUNR Raphael Temstet Websource",
-      "url": "https://www.codeur.com/projects/491315-integrer-stripe-dans-une-page-web",
+      "title": "Une automatisation simple sur attitudesport.fr , sous [WordPress Il y a 3 jours Ouvert Moins de 500 € 103 Offres 10505 Vues Objet : demande de devis pour automatiser la création et la promotion d’articles de blog Bonjour, Je souhaite mettre en place une automatisation simple pour mon site [adresse du site], sous [WordPress / autre CMS]. Fonctionnement souhaité Une f... WordPress API No code +98 Germain Fardoux Dan Salczer Adrien Lopez Florent Neyret Websource",
+      "url": "https://www.codeur.com/projects/491368-une-automatisation-simple-sur-attitudesport-fr-sous-wordpress",
       "platform": "codeur",
       "source": "Codeur - remote full stack web developer",
       "score": 100,
@@ -200,6 +200,15 @@
       "remoteReason": "teletravail non mentionne"
     },
     {
+      "title": "Consulting Services E-commerce Website",
+      "url": "https://www.freelancer.com/projects/woocommerce/consulting-services-commerce-website",
+      "platform": "freelancer",
+      "source": "Freelancer - remote full stack web developer",
+      "score": 95,
+      "remoteStatus": "unknown",
+      "remoteReason": "teletravail non mentionne"
+    },
+    {
       "title": "Business Website Hosting Needed",
       "url": "https://www.freelancer.com/projects/cpanel/business-website-hosting-needed",
       "platform": "freelancer",
@@ -209,8 +218,8 @@
       "remoteReason": "teletravail non mentionne"
     },
     {
-      "title": "Refonte de site WordPress Il y a 1 jour Ouvert 1 000 € à 10 000 € 135 Offres 5698 Vues Je cherche à optimiser mon site web existant, sans le refaire complètement. J'ai fait une audit de mon site par l'IA qui constate une sous-optimisation et des problèmes SEO. Idéalement j'aimerait trouver quelqu'un qui me conseillerait et ferait le... WordPress Migration ou refonte de site SEO / GEO +130 Dan Salczer Paul Martinez Christiane Cicatello SOKEO ERALION",
-      "url": "https://www.codeur.com/projects/491331-refonte-de-site-wordpress",
+      "title": "Recherche développeur PrestaShop – Intervention urgente Il y a 7 heures Ouvert Moins de 500 € 76 Offres 1483 Vues Nous recherchons un développeur expérimenté PrestaShop, disponible immédiatement, pour réaliser deux interventions : Travail n° 1 – Migration et mise à jour PrestaShop Transférer notre site PrestaShop actuel vers l'hébergeur o2switch. Mettre à ... Prestashop Migration Site E-commerce +71 Magicien Duweb Eric Theret Dan Salczer Julien Bénézet Websource",
+      "url": "https://www.codeur.com/projects/491477-recherche-developpeur-prestashop-intervention-urgente",
       "platform": "codeur",
       "source": "Codeur - remote full stack web developer",
       "score": 80,
@@ -218,17 +227,8 @@
       "remoteReason": "mention sur site ou presentiel"
     },
     {
-      "title": "Développeur Senior Fullstack (H/F) Il y a 2 mois Ouvert 500 à 800 €/jour 70 Offres 11067 Vues Développeur Senior Fullstack (H/F) – Paris – CDI & Freelance – Hybride Localisation - Paris Télétravail : 2 jours/semaine Démarrage : ASAP Contexte du poste Nous recherchons deux Développeurs Senior Fullstack pour rejoindre une équipe R&D de no... Full-stack Node.js React +65 Mehdi Stili walid_amlouk Herve Bansay Adrien Korbendau Fabien Berthelet",
-      "url": "https://www.codeur.com/projects/488151-developpeur-senior-fullstack-h-f",
-      "platform": "codeur",
-      "source": "Codeur - remote full stack web developer",
-      "score": 80,
-      "remoteStatus": "hybrid",
-      "remoteReason": "mission hybride, presence a confirmer"
-    },
-    {
-      "title": "Web app de mise en relation Pro BTP & Particuliers Il y a 6 heures Ouvert 1 000 € à 10 000 € 150 Offres 1787 Vues J'ai un projet entrepreneurial de mise en relation de professionnels du BTP/réparation/rénovation et de particuliers à Mayotte. Mon objectif est d'en développer la Web app, qui permettrait de réceptionner les demandes de \"travaux\" des particuliers... Marketplace Développement spécifique Création de site internet +145 Dan Salczer JUNR Julien Lajardie Rabie Sukkar Mirai-Tech",
-      "url": "https://www.codeur.com/projects/491361-web-app-de-mise-en-relation-pro-btp-particuliers",
+      "title": "Création de site vitrine et qualité logo Il y a 6 heures Ouvert Moins de 500 € 90 Offres 1602 Vues Bonjour, Je recherche un créatif indépendant doté d’une forte sensibilité pour l’univers du luxe et du minimalisme épuré. Le projet : Finaliser l’identité visuelle et concevoir le site internet vitrine (One-Page) de ma marque de soins d’exception,... Création de site internet Web design Logo +85 Dan Salczer Youcef Yahi L'expert Web Nicolas Rousselin Websource",
+      "url": "https://www.codeur.com/projects/491478-creation-de-site-vitrine-et-qualite-logo",
       "platform": "codeur",
       "source": "Codeur - remote full stack web developer",
       "score": 75,
@@ -236,8 +236,8 @@
       "remoteReason": "teletravail non mentionne"
     },
     {
-      "title": "Webmaster WordPress polyvalent pour gestion régulière du site Il y a 22 heures Ouvert Moins de 500 € 102 Offres 4762 Vues Je recherche une personne débrouillarde et autonome pour s’occuper régulièrement de mon site WordPress, quelques heures par semaine. Le site est notamment une plateforme qui se veut être une référence sur l'univers du mobilhome, qui s'adresse aux... WordPress Gestion site web Maintenance +97 Quentin Pollet Dan Salczer Joris Lamaque Kevin Boileux ERALION",
-      "url": "https://www.codeur.com/projects/491342-webmaster-wordpress-polyvalent-pour-gestion-reguliere-du-site",
+      "title": "Recherche développeur Wix Il y a 8 heures Ouvert 1 000 € à 10 000 € 73 Offres 1862 Vues Bonjour, Mon site Internet actuel a été réalisé avec Wix. Je recherche un développeur spécialisé dans Wix, Wix Bookings et éventuellement Velo by Wix, afin d’intégrer à mon site existant un système de réservation en ligne professionnel, adap... Wix Développement spécifique Système de paiement +68 Quentin Pollet Dan Salczer Julien Lajardie Rabie Sukkar Websource",
+      "url": "https://www.codeur.com/projects/491473-recherche-developpeur-wix",
       "platform": "codeur",
       "source": "Codeur - remote full stack web developer",
       "score": 75,
@@ -245,8 +245,17 @@
       "remoteReason": "mention sur site ou presentiel"
     },
     {
-      "title": "Recherche Freelance Meta Ads & SEA pour e-commerce au Maroc Il y a 1 jour Ouvert Moins de 500 € 24 Offres 3902 Vues Nous recherchons un véritable expert en acquisition payante (Social Ads) pour piloter nos campagnes e-commerce au Maroc. Attention : Nous avons déjà travaillé avec plusieurs prestataires qui n'ont pas donné satisfaction (manque de maîtrise du tra... SEM Google Ads Marketing +19 Dan Salczer Websource Nolwenn Drai--Laguens Fabrice Rousseau Advency_Media",
-      "url": "https://www.codeur.com/projects/491314",
+      "title": "Refonte et modernisation rapports pdf d'évaluation automobile Il y a 1 jour En cours Moins de 500 € 53 Offres 4307 Vues Je recherche un Freelance pour une refonte des rapports d'évaluation automobile générés sur mon site, qui sont au nombre 4 modèles de rapport, dans l'objectif de restructuration des blocs d'infos pour les rendre plus visibles et surtout modernisa... Mise en page Web design Développement spécifique +48 Quentin Pollet Dan Salczer Arthur Rouzeau Cherif Boukhennous. ERALION",
+      "url": "https://www.codeur.com/projects/491441-refonte-et-modernisation-rapports-pdf-d-evaluation-automobile",
+      "platform": "codeur",
+      "source": "Codeur - remote full stack web developer",
+      "score": 75,
+      "remoteStatus": "onsite",
+      "remoteReason": "mention sur site ou presentiel"
+    },
+    {
+      "title": "Connexion API Mobile Money RDC (M-Pesa, Orange, Airtel) sur appli POS Il y a 2 jours Ouvert Moins de 500 € 34 Offres 5595 Vues Nous recherchons un développeur freelance pour finaliser le backend de MAPESA.cd, une application web mobile destinée au marché de la RDC (statuts sponsorisés, campagnes publicitaires, parrainage). Un prototype de l'interface existe déjà, créé ave... Système de paiement API Développement spécifique +29 Dan Salczer Khalid Boudrari Strateg In Gabriel Genoni Adam Rotard",
+      "url": "https://www.codeur.com/projects/491423-connexion-api-mobile-money-rdc-m-pesa-orange-airtel-sur-appli-pos",
       "platform": "codeur",
       "source": "Codeur - remote full stack web developer",
       "score": 75,
@@ -254,8 +263,8 @@
       "remoteReason": "teletravail non mentionne"
     },
     {
-      "title": "Création d'un site vitrine professionnel pour une entreprise de réno Il y a 2 jours Ouvert 1 000 € à 10 000 € 185 Offres 8100 Vues Bonjour, Nous souhaitons créer un site vitrine moderne et professionnel pour une entreprise spécialisée dans les travaux de rénovation intérieure, notamment la peinture, la plomberie, l'électricité et l'aménagement. L'objectif est de présenter c... Création de site internet Site clé en main Web design +180 Dan Salczer JUNR Thibaud Lescroart Galo ERALION",
-      "url": "https://www.codeur.com/projects/491295-creation-d-un-site-vitrine-professionnel-pour-une-entreprise-de-reno",
+      "title": "Création d'un site vitrine d'une page pour de la voyance Il y a 3 jours Ouvert Moins de 500 € 122 Offres 9366 Vues Bonjour, je souhaite créer un site vitrine pour une activité de voyance. Le site comportera plusieurs pages (entre 1 et 3 pages pour commencer) avec une présentation, le détail des prestations et une page de contact. Le design doit être moderne, m... Création de site internet Site clé en main +117 Dan Salczer Alexandre Gomes L'expert Web Vincent Snieg ERALION",
+      "url": "https://www.codeur.com/projects/491393-creation-d-un-site-vitrine-d-une-page-pour-de-la-voyance",
       "platform": "codeur",
       "source": "Codeur - remote full stack web developer",
       "score": 75,
@@ -290,28 +299,10 @@
       "remoteReason": "teletravail non mentionne"
     },
     {
-      "title": "WordPress Development & SEO Expert Needed -- 4",
-      "url": "https://www.freelancer.com/projects/seo/wordpress-development-seo-expert-needed-40762745",
+      "title": "Clean Hacked WordPress SEO Spam",
+      "url": "https://www.freelancer.com/projects/security-auditing/clean-hacked-wordpress-seo-spam",
       "platform": "freelancer",
-      "source": "Freelancer - remote full stack web developer",
-      "score": 75,
-      "remoteStatus": "unknown",
-      "remoteReason": "teletravail non mentionne"
-    },
-    {
-      "title": "WordPress Development & SEO Expert Needed -- 3",
-      "url": "https://www.freelancer.com/projects/seo/wordpress-development-seo-expert-needed-40761657",
-      "platform": "freelancer",
-      "source": "Freelancer - remote full stack web developer",
-      "score": 75,
-      "remoteStatus": "unknown",
-      "remoteReason": "teletravail non mentionne"
-    },
-    {
-      "title": "WordPress Development & SEO Expert Needed -- 2",
-      "url": "https://www.freelancer.com/projects/seo/wordpress-development-seo-expert-needed",
-      "platform": "freelancer",
-      "source": "Freelancer - remote full stack web developer",
+      "source": "Freelancer - remote devops deployment",
       "score": 75,
       "remoteStatus": "unknown",
       "remoteReason": "teletravail non mentionne"
@@ -326,11 +317,20 @@
       "remoteReason": "teletravail non mentionne"
     },
     {
-      "title": "Recherche comptable Il y a 21 heures Ouvert Moins de 500 € 13 Offres 2941 Vues **Recherche comptable freelance – Mission ponctuelle e-commerce** Bonjour, Je recherche un comptable freelance ou une personne expérimentée en comptabilité pour une mission ponctuelle de reconstitution comptable d'une activité e-commerce Shopify... Comptabilité Data entry Administration +8 Margaux Lopez Nolwenn Drai--Laguens Tom Wemmert Vladislav Plamodealo Renaud Trelcat",
-      "url": "https://www.codeur.com/projects/491347-recherche-comptable",
+      "title": "Plateforme de réservation hôtelière B2B pour agences en Algérie Il y a 3 jours Ouvert 1 000 € à 10 000 € 116 Offres 10169 Vues Développement de une plateforme de réservation B2B destinée aux agences de voyages algériennes. Le projet comprend un moteur de recherche et de réservation d’hôtels en Algérie, en Tunisie et à l’international, l’intégration d’API/XML fournisseurs,... Développement spécifique API Full-stack +111 Dan Salczer JUNR Julien Lajardie Rabie Sukkar Fabien Berthelet",
+      "url": "https://www.codeur.com/projects/491388-plateforme-de-reservation-hoteliere-b2b-pour-agences-en-algerie",
       "platform": "codeur",
       "source": "Codeur - remote full stack web developer",
       "score": 70,
+      "remoteStatus": "unknown",
+      "remoteReason": "teletravail non mentionne"
+    },
+    {
+      "title": "Complete Fine Art Photography WordPress Website",
+      "url": "https://www.freelancer.com/projects/woocommerce/complete-fine-art-photography-wordpress",
+      "platform": "freelancer",
+      "source": "Freelancer - remote full stack web developer",
+      "score": 65,
       "remoteStatus": "unknown",
       "remoteReason": "teletravail non mentionne"
     }
@@ -370,7 +370,31 @@
       "platform": "codeur",
       "searchQuery": "remote full stack web developer",
       "remoteGuaranteed": false,
-      "title": "Developpements web application médicale Il y a 3 jours Ouvert 200 à 500 €/jour 111 Offres 9454 Vues MEDICODE développe des applications médicales et est spécialisée dans le domaine de l ‘obstétrique. Elle a pour clients les services maternité des hôpitaux Stack technique - Front-end : Next.js (App Router), React, TypeScript, Material UI 6,... Développement spécifique Full-stack React +106 Codes Castle Herve Bansay Julien Lajardie Galo Mirai-Tech",
+      "title": "Recherche développeur Shopify Il y a 1 jour Ouvert 500 € à 1 000 € 32 Offres 6216 Vues Bonjour Nous recherchons pour le lancemeent d'un nouveau projet un dev Sa mission // terminer un site et le mettre en ligne template Wordpress woocommerce plugger les logitiels Sellsy et Agentova Aussi nous souhaitons un suivit a l'année Le dev... WordPress WooCommerce Site E-commerce +27 Dan Salczer Thibault Monteiro Websource Nolwenn Drai--Laguens EncureIT_Systems",
+      "description": "",
+      "sourceDescription": "Découvrez les derniers projets disponibles sur Codeur.com et trouvez plus de cent nouvelles missions en freelance chaque jour.",
+      "url": "https://www.codeur.com/projects/491447-recherche-developpeur-shopify",
+      "extractionMethod": "anchor",
+      "score": 100,
+      "fit": "high",
+      "reasons": [
+        "besoin site/refonte",
+        "profil full-stack/platform",
+        "profil TPE/local",
+        "budget mentionne"
+      ],
+      "remoteOnly": false,
+      "remoteStatus": "unknown",
+      "remoteReason": "teletravail non mentionne",
+      "proposalDraft": "Bonjour,\n\nJ'ai vu votre mission \"Recherche développeur Shopify\". Je peux vous aider sur la partie site.\n\nJe commencerais par clarifier la structure et les priorites, puis je peux prendre en charge la maquette, le developpement, le responsive, le SEO de depart, le domaine/DNS et la mise en ligne.\n\nQuelques exemples de mon travail: https://www.rayanstudios.com/fr\n\nSi vous avez l'URL actuelle, 2-3 references ou une contrainte de delai/budget, je peux vous repondre avec un perimetre concret et une estimation plus precise.\n\nBonne journee,\nRayan\nMission: https://www.codeur.com/projects/491447-recherche-developpeur-shopify"
+    },
+    {
+      "source": "Codeur - remote full stack web developer",
+      "sourceUrl": "https://www.codeur.com/projects?keywords=remote%20full%20stack%20web%20developer",
+      "platform": "codeur",
+      "searchQuery": "remote full stack web developer",
+      "remoteGuaranteed": false,
+      "title": "Developpements web application médicale Il y a 6 jours Ouvert 200 à 500 €/jour 122 Offres 16455 Vues MEDICODE développe des applications médicales et est spécialisée dans le domaine de l ‘obstétrique. Elle a pour clients les services maternité des hôpitaux Stack technique - Front-end : Next.js (App Router), React, TypeScript, Material UI 6,... Développement spécifique Full-stack React +117 Codes Castle Herve Bansay Julien Lajardie Galo Mirai-Tech",
       "description": "",
       "sourceDescription": "Découvrez les derniers projets disponibles sur Codeur.com et trouvez plus de cent nouvelles missions en freelance chaque jour.",
       "url": "https://www.codeur.com/projects/491205-developpements-web-application-medicale",
@@ -413,6 +437,29 @@
       "proposalDraft": "Hi,\n\nI saw your project \"Responsive E-Commerce Website Build\" and it looks close to the kind of full-stack/platform work I handle.\n\nMy strongest fit here is turning the business goal into a clean, responsive implementation with the technical setup around launch handled properly.\n\nI can help clarify the scope, then take care of the implementation, API/backend work, responsive front-end, deployment details, and clean handover.\n\nPortfolio: https://www.rayanstudios.com/fr\n\nIf you can share the current stack, priority features and timeline, I can reply with a concrete scope and estimate.\n\nBest,\nRayan\nMission: https://www.freelancer.com/projects/ecommerce/responsive-commerce-website-build"
     },
     {
+      "source": "Freelancer - remote full stack web developer",
+      "sourceUrl": "https://www.freelancer.com/jobs/website-development",
+      "platform": "freelancer",
+      "searchQuery": "remote full stack web developer",
+      "remoteGuaranteed": false,
+      "title": "Consulting Services E-commerce Website",
+      "description": "",
+      "sourceDescription": "World's largest website for Website Development Jobs. Find $$$ Website Development Jobs or hire a Website Developer to bid on your Website Development Job at Freelancer. 12m+ Jobs!",
+      "url": "https://www.freelancer.com/projects/woocommerce/consulting-services-commerce-website",
+      "extractionMethod": "anchor",
+      "score": 95,
+      "fit": "high",
+      "reasons": [
+        "besoin site/refonte",
+        "profil full-stack/platform",
+        "profil TPE/local"
+      ],
+      "remoteOnly": false,
+      "remoteStatus": "unknown",
+      "remoteReason": "teletravail non mentionne",
+      "proposalDraft": "Hi,\n\nI saw your project \"Consulting Services E-commerce Website\" and it looks close to the kind of full-stack/platform work I handle.\n\nMy strongest fit here is turning the business goal into a clean, responsive implementation with the technical setup around launch handled properly.\n\nI can help clarify the scope, then take care of the implementation, API/backend work, responsive front-end, deployment details, and clean handover.\n\nPortfolio: https://www.rayanstudios.com/fr\n\nIf you can share the current stack, priority features and timeline, I can reply with a concrete scope and estimate.\n\nBest,\nRayan\nMission: https://www.freelancer.com/projects/woocommerce/consulting-services-commerce-website"
+    },
+    {
       "source": "Freelancer - remote devops deployment",
       "sourceUrl": "https://www.freelancer.com/jobs/website-management",
       "platform": "freelancer",
@@ -440,34 +487,10 @@
       "platform": "codeur",
       "searchQuery": "remote full stack web developer",
       "remoteGuaranteed": false,
-      "title": "Développeur Senior Fullstack (H/F) Il y a 2 mois Ouvert 500 à 800 €/jour 70 Offres 11067 Vues Développeur Senior Fullstack (H/F) – Paris – CDI & Freelance – Hybride Localisation - Paris Télétravail : 2 jours/semaine Démarrage : ASAP Contexte du poste Nous recherchons deux Développeurs Senior Fullstack pour rejoindre une équipe R&D de no... Full-stack Node.js React +65 Mehdi Stili walid_amlouk Herve Bansay Adrien Korbendau Fabien Berthelet",
+      "title": "Création de site vitrine et qualité logo Il y a 6 heures Ouvert Moins de 500 € 90 Offres 1602 Vues Bonjour, Je recherche un créatif indépendant doté d’une forte sensibilité pour l’univers du luxe et du minimalisme épuré. Le projet : Finaliser l’identité visuelle et concevoir le site internet vitrine (One-Page) de ma marque de soins d’exception,... Création de site internet Web design Logo +85 Dan Salczer Youcef Yahi L'expert Web Nicolas Rousselin Websource",
       "description": "",
       "sourceDescription": "Découvrez les derniers projets disponibles sur Codeur.com et trouvez plus de cent nouvelles missions en freelance chaque jour.",
-      "url": "https://www.codeur.com/projects/488151-developpeur-senior-fullstack-h-f",
-      "extractionMethod": "anchor",
-      "score": 80,
-      "fit": "high",
-      "reasons": [
-        "profil full-stack/platform",
-        "SEO ou visibilite locale",
-        "UX, mobile ou conversion",
-        "budget mentionne"
-      ],
-      "remoteOnly": false,
-      "remoteStatus": "hybrid",
-      "remoteReason": "mission hybride, presence a confirmer",
-      "proposalDraft": "Bonjour,\n\nJ'ai vu votre mission \"Développeur Senior Fullstack (H/F)\". Je peux vous aider sur la partie site.\n\nJe commencerais par clarifier la structure et les priorites, puis je peux prendre en charge la maquette, le developpement, le responsive, le SEO de depart, le domaine/DNS et la mise en ligne.\n\nQuelques exemples de mon travail: https://www.rayanstudios.com/fr\n\nSi vous avez l'URL actuelle, 2-3 references ou une contrainte de delai/budget, je peux vous repondre avec un perimetre concret et une estimation plus precise.\n\nBonne journee,\nRayan\nMission: https://www.codeur.com/projects/488151-developpeur-senior-fullstack-h-f"
-    },
-    {
-      "source": "Codeur - remote full stack web developer",
-      "sourceUrl": "https://www.codeur.com/projects?keywords=remote%20full%20stack%20web%20developer",
-      "platform": "codeur",
-      "searchQuery": "remote full stack web developer",
-      "remoteGuaranteed": false,
-      "title": "Web app de mise en relation Pro BTP & Particuliers Il y a 6 heures Ouvert 1 000 € à 10 000 € 150 Offres 1787 Vues J'ai un projet entrepreneurial de mise en relation de professionnels du BTP/réparation/rénovation et de particuliers à Mayotte. Mon objectif est d'en développer la Web app, qui permettrait de réceptionner les demandes de \"travaux\" des particuliers... Marketplace Développement spécifique Création de site internet +145 Dan Salczer JUNR Julien Lajardie Rabie Sukkar Mirai-Tech",
-      "description": "",
-      "sourceDescription": "Découvrez les derniers projets disponibles sur Codeur.com et trouvez plus de cent nouvelles missions en freelance chaque jour.",
-      "url": "https://www.codeur.com/projects/491361-web-app-de-mise-en-relation-pro-btp-particuliers",
+      "url": "https://www.codeur.com/projects/491478-creation-de-site-vitrine-et-qualite-logo",
       "extractionMethod": "anchor",
       "score": 75,
       "fit": "high",
@@ -479,7 +502,7 @@
       "remoteOnly": false,
       "remoteStatus": "unknown",
       "remoteReason": "teletravail non mentionne",
-      "proposalDraft": "Bonjour,\n\nJ'ai vu votre mission \"Web app de mise en relation Pro BTP & Particuliers\". Je peux vous aider sur la partie site.\n\nJe commencerais par clarifier la structure et les priorites, puis je peux prendre en charge la maquette, le developpement, le responsive, le SEO de depart, le domaine/DNS et la mise en ligne.\n\nQuelques exemples de mon travail: https://www.rayanstudios.com/fr\n\nSi vous avez l'URL actuelle, 2-3 references ou une contrainte de delai/budget, je peux vous repondre avec un perimetre concret et une estimation plus precise.\n\nBonne journee,\nRayan\nMission: https://www.codeur.com/projects/491361-web-app-de-mise-en-relation-pro-btp-particuliers"
+      "proposalDraft": "Bonjour,\n\nJ'ai vu votre mission \"Création de site vitrine et qualité logo\". Je peux vous aider sur la partie site.\n\nJe commencerais par clarifier la structure et les priorites, puis je peux prendre en charge la maquette, le developpement, le responsive, le SEO de depart, le domaine/DNS et la mise en ligne.\n\nQuelques exemples de mon travail: https://www.rayanstudios.com/fr\n\nSi vous avez l'URL actuelle, 2-3 references ou une contrainte de delai/budget, je peux vous repondre avec un perimetre concret et une estimation plus precise.\n\nBonne journee,\nRayan\nMission: https://www.codeur.com/projects/491478-creation-de-site-vitrine-et-qualite-logo"
     },
     {
       "source": "Codeur - remote full stack web developer",
@@ -487,23 +510,23 @@
       "platform": "codeur",
       "searchQuery": "remote full stack web developer",
       "remoteGuaranteed": false,
-      "title": "Recherche Freelance Meta Ads & SEA pour e-commerce au Maroc Il y a 1 jour Ouvert Moins de 500 € 24 Offres 3902 Vues Nous recherchons un véritable expert en acquisition payante (Social Ads) pour piloter nos campagnes e-commerce au Maroc. Attention : Nous avons déjà travaillé avec plusieurs prestataires qui n'ont pas donné satisfaction (manque de maîtrise du tra... SEM Google Ads Marketing +19 Dan Salczer Websource Nolwenn Drai--Laguens Fabrice Rousseau Advency_Media",
+      "title": "Connexion API Mobile Money RDC (M-Pesa, Orange, Airtel) sur appli POS Il y a 2 jours Ouvert Moins de 500 € 34 Offres 5595 Vues Nous recherchons un développeur freelance pour finaliser le backend de MAPESA.cd, une application web mobile destinée au marché de la RDC (statuts sponsorisés, campagnes publicitaires, parrainage). Un prototype de l'interface existe déjà, créé ave... Système de paiement API Développement spécifique +29 Dan Salczer Khalid Boudrari Strateg In Gabriel Genoni Adam Rotard",
       "description": "",
       "sourceDescription": "Découvrez les derniers projets disponibles sur Codeur.com et trouvez plus de cent nouvelles missions en freelance chaque jour.",
-      "url": "https://www.codeur.com/projects/491314",
+      "url": "https://www.codeur.com/projects/491423-connexion-api-mobile-money-rdc-m-pesa-orange-airtel-sur-appli-pos",
       "extractionMethod": "anchor",
       "score": 75,
       "fit": "high",
       "reasons": [
         "profil full-stack/platform",
-        "SEO ou visibilite locale",
-        "profil TPE/local",
+        "automation, paiement ou integration",
+        "UX, mobile ou conversion",
         "budget mentionne"
       ],
       "remoteOnly": false,
       "remoteStatus": "unknown",
       "remoteReason": "teletravail non mentionne",
-      "proposalDraft": "Bonjour,\n\nJ'ai vu votre mission \"Recherche Freelance Meta Ads & SEA pour e-commerce au Maroc\". Je peux vous aider sur la partie site.\n\nJe commencerais par clarifier la structure et les priorites, puis je peux prendre en charge la maquette, le developpement, le responsive, le SEO de depart, le domaine/DNS et la mise en ligne.\n\nQuelques exemples de mon travail: https://www.rayanstudios.com/fr\n\nSi vous avez l'URL actuelle, 2-3 references ou une contrainte de delai/budget, je peux vous repondre avec un perimetre concret et une estimation plus precise.\n\nBonne journee,\nRayan\nMission: https://www.codeur.com/projects/491314"
+      "proposalDraft": "Bonjour,\n\nJ'ai vu votre mission \"Connexion API Mobile Money RDC (M-Pesa, Orange, Airtel) sur appli POS\". Je peux vous aider sur la partie site.\n\nJe commencerais par clarifier la structure et les priorites, puis je peux prendre en charge la maquette, le developpement, le responsive, le SEO de depart, le domaine/DNS et la mise en ligne.\n\nQuelques exemples de mon travail: https://www.rayanstudios.com/fr\n\nSi vous avez l'URL actuelle, 2-3 references ou une contrainte de delai/budget, je peux vous repondre avec un perimetre concret et une estimation plus precise.\n\nBonne journee,\nRayan\nMission: https://www.codeur.com/projects/491423-connexion-api-mobile-money-rdc-m-pesa-orange-airtel-sur-appli-pos"
     },
     {
       "source": "Codeur - remote full stack web developer",
@@ -511,10 +534,10 @@
       "platform": "codeur",
       "searchQuery": "remote full stack web developer",
       "remoteGuaranteed": false,
-      "title": "Création d'un site vitrine professionnel pour une entreprise de réno Il y a 2 jours Ouvert 1 000 € à 10 000 € 185 Offres 8100 Vues Bonjour, Nous souhaitons créer un site vitrine moderne et professionnel pour une entreprise spécialisée dans les travaux de rénovation intérieure, notamment la peinture, la plomberie, l'électricité et l'aménagement. L'objectif est de présenter c... Création de site internet Site clé en main Web design +180 Dan Salczer JUNR Thibaud Lescroart Galo ERALION",
+      "title": "Création d'un site vitrine d'une page pour de la voyance Il y a 3 jours Ouvert Moins de 500 € 122 Offres 9366 Vues Bonjour, je souhaite créer un site vitrine pour une activité de voyance. Le site comportera plusieurs pages (entre 1 et 3 pages pour commencer) avec une présentation, le détail des prestations et une page de contact. Le design doit être moderne, m... Création de site internet Site clé en main +117 Dan Salczer Alexandre Gomes L'expert Web Vincent Snieg ERALION",
       "description": "",
       "sourceDescription": "Découvrez les derniers projets disponibles sur Codeur.com et trouvez plus de cent nouvelles missions en freelance chaque jour.",
-      "url": "https://www.codeur.com/projects/491295-creation-d-un-site-vitrine-professionnel-pour-une-entreprise-de-reno",
+      "url": "https://www.codeur.com/projects/491393-creation-d-un-site-vitrine-d-une-page-pour-de-la-voyance",
       "extractionMethod": "anchor",
       "score": 75,
       "fit": "high",
@@ -526,7 +549,7 @@
       "remoteOnly": false,
       "remoteStatus": "unknown",
       "remoteReason": "teletravail non mentionne",
-      "proposalDraft": "Bonjour,\n\nJ'ai vu votre mission \"Création d'un site vitrine professionnel pour une entreprise de réno\". Je peux vous aider sur la partie site.\n\nJe commencerais par clarifier la structure et les priorites, puis je peux prendre en charge la maquette, le developpement, le responsive, le SEO de depart, le domaine/DNS et la mise en ligne.\n\nQuelques exemples de mon travail: https://www.rayanstudios.com/fr\n\nSi vous avez l'URL actuelle, 2-3 references ou une contrainte de delai/budget, je peux vous repondre avec un perimetre concret et une estimation plus precise.\n\nBonne journee,\nRayan\nMission: https://www.codeur.com/projects/491295-creation-d-un-site-vitrine-professionnel-pour-une-entreprise-de-reno"
+      "proposalDraft": "Bonjour,\n\nJ'ai vu votre mission \"Création d'un site vitrine d'une page pour de la voyance\". Je peux vous aider sur la partie site.\n\nJe commencerais par clarifier la structure et les priorites, puis je peux prendre en charge la maquette, le developpement, le responsive, le SEO de depart, le domaine/DNS et la mise en ligne.\n\nQuelques exemples de mon travail: https://www.rayanstudios.com/fr\n\nSi vous avez l'URL actuelle, 2-3 references ou une contrainte de delai/budget, je peux vous repondre avec un perimetre concret et une estimation plus precise.\n\nBonne journee,\nRayan\nMission: https://www.codeur.com/projects/491393-creation-d-un-site-vitrine-d-une-page-pour-de-la-voyance"
     },
     {
       "source": "Freelancer - remote full stack web developer",
@@ -571,28 +594,6 @@
       "remoteStatus": "unknown",
       "remoteReason": "teletravail non mentionne",
       "proposalDraft": "Hi,\n\nI saw your project \"WordPress Development & SEO Expert Needed- 5\" and it looks close to the kind of full-stack/platform work I handle.\n\nMy strongest fit here is turning the business goal into a clean, responsive implementation with the technical setup around launch handled properly.\n\nI can help clarify the scope, then take care of the implementation, API/backend work, responsive front-end, deployment details, and clean handover.\n\nPortfolio: https://www.rayanstudios.com/fr\n\nIf you can share the current stack, priority features and timeline, I can reply with a concrete scope and estimate.\n\nBest,\nRayan\nMission: https://www.freelancer.com/projects/seo/wordpress-development-seo-expert-needed-40768443"
-    },
-    {
-      "source": "Freelancer - remote full stack web developer",
-      "sourceUrl": "https://www.freelancer.com/jobs/website-development",
-      "platform": "freelancer",
-      "searchQuery": "remote full stack web developer",
-      "remoteGuaranteed": false,
-      "title": "Theme Driven Local Service WordPress",
-      "description": "",
-      "sourceDescription": "World's largest website for Website Development Jobs. Find $$$ Website Development Jobs or hire a Website Developer to bid on your Website Development Job at Freelancer. 12m+ Jobs!",
-      "url": "https://www.freelancer.com/projects/web-design/theme-driven-local-service-wordpress",
-      "extractionMethod": "anchor",
-      "score": 75,
-      "fit": "high",
-      "reasons": [
-        "besoin site/refonte",
-        "SEO ou visibilite locale"
-      ],
-      "remoteOnly": false,
-      "remoteStatus": "unknown",
-      "remoteReason": "teletravail non mentionne",
-      "proposalDraft": "Hi,\n\nI saw your project \"Theme Driven Local Service WordPress\" and it looks close to the kind of full-stack/platform work I handle.\n\nMy strongest fit here is turning the business goal into a clean, responsive implementation with the technical setup around launch handled properly.\n\nI can help clarify the scope, then take care of the implementation, API/backend work, responsive front-end, deployment details, and clean handover.\n\nPortfolio: https://www.rayanstudios.com/fr\n\nIf you can share the current stack, priority features and timeline, I can reply with a concrete scope and estimate.\n\nBest,\nRayan\nMission: https://www.freelancer.com/projects/web-design/theme-driven-local-service-wordpress"
     }
   ],
   "errors": []
