@@ -1,5 +1,5 @@
 {
-  "runAt": "2026-10-27T14:20:18.224Z",
+  "runAt": "2026-10-28T15:01:53.184Z",
   "status": "no_candidates",
   "sourceMode": "default_platforms",
   "sourceCount": 18,
@@ -149,13 +149,22 @@
       "autoDiscovered": true
     }
   ],
-  "scannedOpportunities": 202,
-  "scoredCandidateCount": 59,
+  "scannedOpportunities": 194,
+  "scoredCandidateCount": 55,
   "remotePolicy": "explicit_remote_only",
-  "remoteRejectedCount": 59,
+  "remoteRejectedCount": 55,
   "remoteRejected": [
     {
-      "title": "Expert WordPress / WooCommerce / Amelia + automatisation serrure Nuki Il y a 5 heures Ouvert Moins de 500 € 77 Offres 1507 Vues Bonjour, Nous gérons Studio KA, un studio de pole dance en location autonome. Notre site WordPress tourne avec WooCommerce et Amelia pour les réservations. Les clientes accèdent au studio avec une serrure connectée Nuki. Plusieurs problèmes persi... WordPress WooCommerce API +72 Magicien Duweb Paul Martinez TaskHub L'expert Web Websource",
+      "title": "Bonjour, Je suis Gabriel Scuta, artisan auto-entrepreneur plaquiste pe Il y a 20 heures Ouvert Moins de 500 € 131 Offres 3989 Vues Bonjour, Je suis Gabriel Scuta, artisan auto-entrepreneur plaquiste peintre à Fontaine-le-Comte, près de Poitiers. Je cherche quelqu'un de sérieux et abordable pour créer ma fiche Google professionnelle et un petit site Internet pour mon entrepris... Création de site internet Site clé en main SEO / GEO +126 Maxime Gillot nicolas_website4u Florent Bach Olivier Padacht Pour ERALION",
+      "url": "https://www.codeur.com/projects/491991-bonjour-je-suis-gabriel-scuta-artisan-auto-entrepreneur-plaquiste-pe",
+      "platform": "codeur",
+      "source": "Codeur - remote full stack web developer",
+      "score": 100,
+      "remoteStatus": "unknown",
+      "remoteReason": "teletravail non mentionne"
+    },
+    {
+      "title": "Expert WordPress / WooCommerce / Amelia + automatisation serrure Nuki Il y a 1 jour Ouvert Moins de 500 € 89 Offres 5164 Vues Bonjour, Nous gérons Studio KA, un studio de pole dance en location autonome. Notre site WordPress tourne avec WooCommerce et Amelia pour les réservations. Les clientes accèdent au studio avec une serrure connectée Nuki. Plusieurs problèmes persi... WordPress WooCommerce API +84 Magicien Duweb Paul Martinez TaskHub L'expert Web Websource",
       "url": "https://www.codeur.com/projects/491951-expert-wordpress-woocommerce-amelia-automatisation-serrure-nuki",
       "platform": "codeur",
       "source": "Codeur - remote full stack web developer",
@@ -164,7 +173,7 @@
       "remoteReason": "teletravail non mentionne"
     },
     {
-      "title": "Je voudrais créer un site web pour la vente de bijoux, habits etc... Il y a 8 heures Ouvert 500 € à 1 000 € 127 Offres 2232 Vues Je souhaite créer un site web de vente en ligne pour développer l'activité commerciale de ma mère et lui permettre de toucher une clientèle internationale. L'objectif est de créer une boutique en ligne moderne, élégante et facile à utiliser, qui ... Site E-commerce Création de site internet Site clé en main +122 Germain Fardoux Eric Theret Dan Salczer Veysel Artur Rodrigues Adaga ERALION",
+      "title": "Je voudrais créer un site web pour la vente de bijoux, habits etc... Il y a 1 jour Ouvert 500 € à 1 000 € 144 Offres 5720 Vues Je souhaite créer un site web de vente en ligne pour développer l'activité commerciale de ma mère et lui permettre de toucher une clientèle internationale. L'objectif est de créer une boutique en ligne moderne, élégante et facile à utiliser, qui ... Site E-commerce Création de site internet Site clé en main +139 Germain Fardoux Eric Theret Dan Salczer Veysel Artur Rodrigues Adaga ERALION",
       "url": "https://www.codeur.com/projects/491942-je-voudrais-creer-un-site-web-pour-la-vente-de-bijoux-habits-etc",
       "platform": "codeur",
       "source": "Codeur - remote full stack web developer",
@@ -173,7 +182,7 @@
       "remoteReason": "teletravail non mentionne"
     },
     {
-      "title": "E-commerce : catalogue, paiement sécurisé, personnalisation, commandes Il y a 22 heures Ouvert 1 000 € à 10 000 € 154 Offres 4727 Vues Je vous contacte pour le compte d’une sociéte de réalisation d’objets personnalisés (mariage, enterrement, baptêmes etc.) Nous souhaitons créer un site e-commerce professionnel comprenant un catalogue de produits, le paiement sécurisé, la personn... Site E-commerce Système de paiement Création de site internet +149 Germain Fardoux Louis Jodon De Villeroché William Delhomme Alexandre Cooreman Mirai-Tech",
+      "title": "E-commerce : catalogue, paiement sécurisé, personnalisation, commandes Il y a 2 jours Ouvert 1 000 € à 10 000 € 163 Offres 7284 Vues Je vous contacte pour le compte d’une sociéte de réalisation d’objets personnalisés (mariage, enterrement, baptêmes etc.) Nous souhaitons créer un site e-commerce professionnel comprenant un catalogue de produits, le paiement sécurisé, la personn... Site E-commerce Système de paiement Création de site internet +158 Germain Fardoux Louis Jodon De Villeroché William Delhomme Alexandre Cooreman Mirai-Tech",
       "url": "https://www.codeur.com/projects/491915-e-commerce-catalogue-paiement-securise-personnalisation-commandes",
       "platform": "codeur",
       "source": "Codeur - remote full stack web developer",
@@ -182,16 +191,16 @@
       "remoteReason": "teletravail non mentionne"
     },
     {
-      "title": "Site web Il y a 1 jour Ouvert Moins de 500 € 93 Offres 5503 Vues Site internet – Bunker 44 Experience Le site internet de Bunker 44 Experience sera avant tout un site vitrine immersif, permettant de présenter l'entreprise, son musée immersif consacré à la Seconde Guerre mondiale, son bar à l'ambiance années 1... Création de site internet Site E-commerce Système de paiement +88 Paul Martinez Anywwwhere Alexandre Cooreman Elisabeth Crubillé ERALION",
-      "url": "https://www.codeur.com/projects/491861-site-web",
+      "title": "Web App Flutter de transport collaboratif de colis (type BlaBlaCar) – Il y a 3 heures Ouvert 500 € à 1 000 € 67 Offres 992 Vues Nous recherchons un développeur Flutter Web expérimenté pour créer une plateforme de transport collaboratif de colis, mettant en relation des particuliers qui envoient des colis avec des voyageurs effectuant déjà un trajet. Stack imposée Front :... Flutter Développement spécifique API +62 Dan Salczer Adrien Korbendau TaskHub Houssem Talbi Mirai-Tech",
+      "url": "https://www.codeur.com/projects/492006-web-app-flutter-de-transport-collaboratif-de-colis-type-blablacar",
       "platform": "codeur",
       "source": "Codeur - remote full stack web developer",
-      "score": 100,
+      "score": 90,
       "remoteStatus": "unknown",
       "remoteReason": "teletravail non mentionne"
     },
     {
-      "title": "Expert Google Shopping / Merchant Center Il y a 2 minutes Ouvert Moins de 500 € 5 Offres 108 Vues Nous possédons un site e-commerce sous WooCommerceavec un catalogue de 147 produits. Nous souhaitons structurer et optimiser notre visibilité sur Google Shopping. Objectifs de la mission : 1. Configuration du flux produits : Créer, nettoyer et... Google Ads SEM WooCommerce Germain Fardoux VIVADO Louis Schinkler Karl Lameynardie Cherif Boukhennous.",
+      "title": "Expert Google Shopping / Merchant Center Il y a 1 jour Ouvert Moins de 500 € 47 Offres 3975 Vues Nous possédons un site e-commerce sous WooCommerceavec un catalogue de 147 produits. Nous souhaitons structurer et optimiser notre visibilité sur Google Shopping. Objectifs de la mission : 1. Configuration du flux produits : Créer, nettoyer et... Google Ads SEM WooCommerce +42 Nicolas Dugelay Valentine Beaumont Nicolas Chauvrat Alain Houessou Websource",
       "url": "https://www.codeur.com/projects/491975-expert-google-shopping-merchant-center",
       "platform": "codeur",
       "source": "Codeur - remote full stack web developer",
@@ -200,16 +209,7 @@
       "remoteReason": "teletravail non mentionne"
     },
     {
-      "title": "Développement web, front-end et intégration SaaS Il y a 31 minutes Ouvert Moins de 500 € 20 Offres 455 Vues Noam — Développeur web & SaaS Front-end · Interfaces SaaS · Intégration web · IA Je conçois et développe des interfaces web modernes et des applications SaaS avec Next.js, React, TypeScript et Tailwind CSS. Je travaille sur des projets concrets, d... Front-end React SaaS +15 Herve Bansay TaskHub Websource Kévin Guiot Gabriel Genoni",
-      "url": "https://www.codeur.com/projects/491972-developpement-web-front-end-et-integration-saas",
-      "platform": "codeur",
-      "source": "Codeur - remote full stack web developer",
-      "score": 90,
-      "remoteStatus": "unknown",
-      "remoteReason": "teletravail non mentionne"
-    },
-    {
-      "title": "Déploiement backend Symfony + connexion application Flutter existante Il y a 3 heures Ouvert Moins de 500 € 55 Offres 919 Vues **Titre : Déploiement backend Symfony + connexion application Flutter existante — Budget 100 €** Bonjour, Je recherche un développeur freelance pour une intervention technique ponctuelle sur mon application mobile Chatfix. **Situation actuelle ... Symfony Flutter API +50 Dan Salczer Websource Khalid Boudrari Quentin Pollet Kévin Guiot",
+      "title": "Déploiement backend Symfony + connexion application Flutter existante Il y a 1 jour Ouvert Moins de 500 € 70 Offres 4670 Vues **Titre : Déploiement backend Symfony + connexion application Flutter existante — Budget 100 €** Bonjour, Je recherche un développeur freelance pour une intervention technique ponctuelle sur mon application mobile Chatfix. **Situation actuelle ... Symfony Flutter API +65 Dan Salczer Websource Khalid Boudrari Quentin Pollet Jaroslaw Chmielewski",
       "url": "https://www.codeur.com/projects/491968-deploiement-backend-symfony-connexion-application-flutter-existante",
       "platform": "codeur",
       "source": "Codeur - remote full stack web developer",
@@ -218,7 +218,7 @@
       "remoteReason": "teletravail non mentionne"
     },
     {
-      "title": "Correction urgente des erreurs SEO techniques de notre site internet Il y a 8 heures Ouvert Moins de 500 € 70 Offres 1960 Vues Bonjour, Nous recherchons un freelance expert en SEO technique pour corriger rapidement plusieurs erreurs identifiées lors d'un audit de notre site internet. Voici les problèmes à résoudre : Erreurs critiques : 8 pages sans méta-description : ... SEO / GEO Référencement, liens Gestion site web +65 Quentin Pollet akata_goavana Thibault Monteiro TaskHub Younicom",
+      "title": "Correction urgente des erreurs SEO techniques de notre site internet Il y a 1 jour Ouvert Moins de 500 € 82 Offres 5320 Vues Bonjour, Nous recherchons un freelance expert en SEO technique pour corriger rapidement plusieurs erreurs identifiées lors d'un audit de notre site internet. Voici les problèmes à résoudre : Erreurs critiques : 8 pages sans méta-description : ... SEO / GEO Référencement, liens Gestion site web +77 Quentin Pollet akata_goavana Thibault Monteiro TaskHub Younicom",
       "url": "https://www.codeur.com/projects/491932-correction-urgente-des-erreurs-seo-techniques-de-notre-site-internet",
       "platform": "codeur",
       "source": "Codeur - remote full stack web developer",
@@ -227,17 +227,8 @@
       "remoteReason": "mention sur site ou presentiel"
     },
     {
-      "title": "Création d’une plateforme de recrutement évolutive Il y a 2 jours Ouvert 500 € à 1 000 € 144 Offres 5509 Vues Recherche développeur – Création d’une plateforme de recrutement évolutive Nous recherchons un développeur pour concevoir un site web professionnel dédié à la publication d’offres d’emploi et à la réception de candidatures. Fonctionnalités atten... Développement spécifique Création de site internet Full-stack +139 Adrien Korbendau MAETVIN AppWire Jonathan Petit Mirai-Tech",
-      "url": "https://www.codeur.com/projects/491855-creation-d-une-plateforme-de-recrutement-evolutive",
-      "platform": "codeur",
-      "source": "Codeur - remote full stack web developer",
-      "score": 90,
-      "remoteStatus": "unknown",
-      "remoteReason": "teletravail non mentionne"
-    },
-    {
-      "title": "Travel Agency & Tour Booking Website",
-      "url": "https://www.freelancer.com/projects/full-stack-development/travel-agency-tour-booking-website",
+      "title": "SaaS Website Content Revamp",
+      "url": "https://www.freelancer.com/projects/saas-development/saas-website-content-revamp",
       "platform": "freelancer",
       "source": "Freelancer - remote full stack web developer",
       "score": 85,
@@ -245,25 +236,43 @@
       "remoteReason": "teletravail non mentionne"
     },
     {
-      "title": "Project pilote Il y a 2 jours Ouvert Moins de 500 € 46 Offres 5211 Vues Vous développez FRAUD‑RISK.CO.UK, une plateforme britannique d’évaluation des risques de fraude et de sensibilisation destinée aux entreprises, associations, organisations du NHS, collectivités locales et autres organismes publics. Elle combine un... AWS Cloud computing Base de données +41 genialpro Mirai-Tech Quentin Pollet Lucas Kacem De Vincenzi Aymeric Filliot",
-      "url": "https://www.codeur.com/projects/491853-project-pilote",
+      "title": "Publicité Il y a 28 minutes Ouvert Moins de 500 € 15 Offres 312 Vues Recherche professionnel en publicité / marketing digital pour mon site de voyance Bonjour, Je viens de lancer mon propre site de voyance et de rituels spirituels, www.6sens-voyance.com, et je recherche une personne sérieuse et expérimentée pour ... Publicité Marketing Google Ads +10 BoostMyPresta Axel Gouet Jonathan Bourrat Thibault Monteiro Freelance-Website",
+      "url": "https://www.codeur.com/projects/492016-publicite",
       "platform": "codeur",
       "source": "Codeur - remote full stack web developer",
       "score": 80,
+      "remoteStatus": "onsite",
+      "remoteReason": "mention sur site ou presentiel"
+    },
+    {
+      "title": "Montage vidéo Il y a 15 minutes Ouvert 1 000 € à 10 000 € 6 Offres 222 Vues 🚨 **RECRUTEMENT – MONTEUR VIDÉO / CRÉATEUR DE CONTENU 🎥⚽** Nous sommes une **agence spécialisée dans la représentation et l'accompagnement de joueurs de football** et nous recherchons un profil créatif et motivé pour développer notre présence sur... Audio, Video, Multimedia Motion design Community management +1 Thibaut Cohen TaskHub Freelance-Website Raphaël Prudhomme C Cedric Roux",
+      "url": "https://www.codeur.com/projects/492021-montage-video",
+      "platform": "codeur",
+      "source": "Codeur - remote full stack web developer",
+      "score": 75,
       "remoteStatus": "unknown",
       "remoteReason": "teletravail non mentionne"
     },
     {
-      "title": "Logo & Website Design for Luxury Hotel",
-      "url": "https://www.freelancer.com/projects/website-development/logo-website-design-for-luxury",
-      "platform": "freelancer",
-      "source": "Freelancer - remote full stack web developer",
-      "score": 80,
+      "title": "Photos, vidéo et animation de site – location de voitures Guadeloupe Il y a 9 heures Ouvert 1 000 € à 10 000 € 19 Offres 2110 Vues Bonjour, Ice Cleaning est une agence de location de voitures de courte durée installée aux Abymes (Guadeloupe), avec une clientèle principalement touristique. Dans le cadre d'une demande de subvention « Chèque TIC » auprès de la Région Guadeloupe... Photo Audio, Video, Multimedia Gestion site web +14 Stéphane Bieber Lucas Martinelle Websource Nolwenn Drai--Laguens Kévin Guiot",
+      "url": "https://www.codeur.com/projects/491999-photos-video-et-animation-de-site-location-de-voitures-guadeloupe",
+      "platform": "codeur",
+      "source": "Codeur - remote full stack web developer",
+      "score": 75,
+      "remoteStatus": "onsite",
+      "remoteReason": "mention sur site ou presentiel"
+    },
+    {
+      "title": "Création d’un site WordPress professionnel Il y a 1 jour Ouvert Moins de 500 € 118 Offres 4605 Vues Bonjour, Je recherche un freelance pour créer un site WordPress professionnel, moderne et responsive. Le site devra être facile à administrer et optimisé pour les ordinateurs, tablettes et téléphones. Je souhaite également une structure adaptée ... WordPress Création de site internet Web design +113 ERALION TaskHub Damien Gros Nicolas Rousselin Younicom",
+      "url": "https://www.codeur.com/projects/491976-creation-d-un-site-wordpress-professionnel",
+      "platform": "codeur",
+      "source": "Codeur - remote full stack web developer",
+      "score": 75,
       "remoteStatus": "unknown",
       "remoteReason": "teletravail non mentionne"
     },
     {
-      "title": "Site WordPress bilingue EN/FR avec réservation en ligne Il y a 4 heures Ouvert 1 000 € à 10 000 € 133 Offres 1444 Vues Bonjour, Je recherche un freelance pour créer le site de BeyondParis Escape : des excursions privées à la journée autour de Paris (Fontainebleau, Moret-sur-Loing, Barbizon…), surtout pour des voyageurs anglophones. Mon besoin porte principalemen... WordPress Création de site internet Site clé en main +128 Germain Fardoux Louis Jodon De Villeroché Dan Salczer Karl Lameynardie ERALION",
+      "title": "Site WordPress bilingue EN/FR avec réservation en ligne Il y a 1 jour Ouvert 1 000 € à 10 000 € 162 Offres 5419 Vues Bonjour, Je recherche un freelance pour créer le site de BeyondParis Escape : des excursions privées à la journée autour de Paris (Fontainebleau, Moret-sur-Loing, Barbizon…), surtout pour des voyageurs anglophones. Mon besoin porte principalemen... WordPress Création de site internet Site clé en main +157 Germain Fardoux Louis Jodon De Villeroché Dan Salczer Karl Lameynardie ERALION",
       "url": "https://www.codeur.com/projects/491958-site-wordpress-bilingue-en-fr-avec-reservation-en-ligne",
       "platform": "codeur",
       "source": "Codeur - remote full stack web developer",
@@ -272,16 +281,7 @@
       "remoteReason": "teletravail non mentionne"
     },
     {
-      "title": "Web Designer pour une plateforme d'essayage virtuel par IA Il y a 8 heures Ouvert 500 € à 1 000 € 58 Offres 2199 Vues Bonjour, Je recherche un web designer pour repenser le design de mon produit basé sur l'IA, afin de le rendre plus simple à utiliser et plus attractif pour les clients. Il s'agit d'une plateforme d'essayage virtuel destinée aussi bien aux partic... Web design Experience utilisateur Migration ou refonte de site +53 TaskHub Gregory Younes Mirai-Tech Codes Castle Nolwenn Drai--Laguens",
-      "url": "https://www.codeur.com/projects/491935-web-designer-pour-une-plateforme-d-essayage-virtuel-par-ia",
-      "platform": "codeur",
-      "source": "Codeur - remote full stack web developer",
-      "score": 75,
-      "remoteStatus": "unknown",
-      "remoteReason": "teletravail non mentionne"
-    },
-    {
-      "title": "Add instagram Il y a 20 heures Ouvert 500 € à 1 000 € 22 Offres 3126 Vues Bonjour J'ai une question. Nous possédons une marque de mode de luxe et rencontrons des difficultés à augmenter nos ventes via notre site web. Notre marketing se concentre sur Instagram et nous souhaiterions savoir s'il est possible de cibler les ... Marketing Publicité Community management +17 Fabrice Rousseau Valentine Beaumont Nicolas Chauvrat Pauline Sadaillan Nolwenn Drai--Laguens",
+      "title": "Add instagram Il y a 2 jours Ouvert 500 € à 1 000 € 24 Offres 5238 Vues Bonjour J'ai une question. Nous possédons une marque de mode de luxe et rencontrons des difficultés à augmenter nos ventes via notre site web. Notre marketing se concentre sur Instagram et nous souhaiterions savoir s'il est possible de cibler les ... Marketing Publicité Community management +19 Fabrice Rousseau Valentine Beaumont Nicolas Chauvrat Pauline Sadaillan Nolwenn Drai--Laguens",
       "url": "https://www.codeur.com/projects/491924-add-instagram",
       "platform": "codeur",
       "source": "Codeur - remote full stack web developer",
@@ -290,22 +290,13 @@
       "remoteReason": "teletravail non mentionne"
     },
     {
-      "title": "Add instagram Il y a 20 heures Ouvert 500 € à 1 000 € 17 Offres 3099 Vues Bonjour J'ai une question. Nous possédons une marque de mode de luxe et rencontrons des difficultés à augmenter nos ventes via notre site web. Notre marketing se concentre sur Instagram et nous souhaiterions savoir s'il est possible de cibler les ... Marketing Publicité Community management +12 Younicom Nolwenn Drai--Laguens Advency_Media Anthony Menard Axel Gouet",
+      "title": "Add instagram Il y a 2 jours Ouvert 500 € à 1 000 € 20 Offres 5421 Vues Bonjour J'ai une question. Nous possédons une marque de mode de luxe et rencontrons des difficultés à augmenter nos ventes via notre site web. Notre marketing se concentre sur Instagram et nous souhaiterions savoir s'il est possible de cibler les ... Marketing Publicité Community management +15 Younicom Nolwenn Drai--Laguens Advency_Media Anthony Menard Axel Gouet",
       "url": "https://www.codeur.com/projects/491923-add-instagram",
       "platform": "codeur",
       "source": "Codeur - remote full stack web developer",
       "score": 75,
       "remoteStatus": "unknown",
       "remoteReason": "teletravail non mentionne"
-    },
-    {
-      "title": "Creation site internet assurance Il y a 2 jours Ouvert 500 € à 1 000 € 155 Offres 6869 Vues Je veux créer un site internet dans le secteur d'assurance. Je propose plusieurs produits assurance : Pour les particuliers : AUTO/MOTO, Habitation, Santé, Prévoyance, Scolaire, Pour les pros: MRP, Bureaux, locaux, construction, auto/mot, taxi/vt... Création de site internet Site clé en main +150 Thibaut Cohen Cherif Boukhennous. Jonathan Petit Yanis Bouchfira ERALION",
-      "url": "https://www.codeur.com/projects/491835-creation-site-internet-assurance",
-      "platform": "codeur",
-      "source": "Codeur - remote full stack web developer",
-      "score": 75,
-      "remoteStatus": "onsite",
-      "remoteReason": "mention sur site ou presentiel"
     },
     {
       "title": "WordPress Development & SEO Expert Needed- 7",
@@ -326,13 +317,22 @@
       "remoteReason": "teletravail non mentionne"
     },
     {
-      "title": "Création site Shopify haut de gamme avec animations 3D pour AMB Il y a 1 jour Ouvert Moins de 500 € 63 Offres 4202 Vues Bonjour, Je recherche un freelance pour créer le site e-commerce de ma marque de vêtements AMB, sur Shopify. Je souhaite un univers sombre, minimaliste et haut de gamme, avec une vraie identité visuelle. L’objectif est de mettre en valeur des co... Shopify Site E-commerce Web design +58 Youcef Yahi Nicolas Chauvrat Germain Fardoux Virginie Bootz Nolwenn Drai--Laguens",
+      "title": "Création site Shopify haut de gamme avec animations 3D pour AMB Il y a 2 jours Ouvert Moins de 500 € 65 Offres 6366 Vues Bonjour, Je recherche un freelance pour créer le site e-commerce de ma marque de vêtements AMB, sur Shopify. Je souhaite un univers sombre, minimaliste et haut de gamme, avec une vraie identité visuelle. L’objectif est de mettre en valeur des co... Shopify Site E-commerce Web design +60 Youcef Yahi Nicolas Chauvrat Germain Fardoux Virginie Bootz Nolwenn Drai--Laguens",
       "url": "https://www.codeur.com/projects/491894-creation-site-shopify-haut-de-gamme-avec-animations-3d-pour-amb",
       "platform": "codeur",
       "source": "Codeur - remote full stack web developer",
       "score": 70,
       "remoteStatus": "onsite",
       "remoteReason": "mention sur site ou presentiel"
+    },
+    {
+      "title": "Recherche développeur Shopify Il y a 2 jours Ouvert Moins de 500 € 72 Offres 6476 Vues Création d’une boutique Shopify Casques et accessoires vélo et sport Outdoor Nous recherchons une personne pour concevoir une boutique e-commerce style ABUS OU BELL dédiée à une marque spécialisée dans les casques de vélo, accessoires liés à l’un... Shopify Site E-commerce Web design +67 Germain Fardoux Dan Salczer Punit Kotecha Nicolas Chauvrat Younicom",
+      "url": "https://www.codeur.com/projects/491884-recherche-developpeur-shopify",
+      "platform": "codeur",
+      "source": "Codeur - remote full stack web developer",
+      "score": 70,
+      "remoteStatus": "unknown",
+      "remoteReason": "teletravail non mentionne"
     }
   ],
   "candidateCount": 0,
@@ -370,7 +370,32 @@
       "platform": "codeur",
       "searchQuery": "remote full stack web developer",
       "remoteGuaranteed": false,
-      "title": "Expert WordPress / WooCommerce / Amelia + automatisation serrure Nuki Il y a 5 heures Ouvert Moins de 500 € 77 Offres 1507 Vues Bonjour, Nous gérons Studio KA, un studio de pole dance en location autonome. Notre site WordPress tourne avec WooCommerce et Amelia pour les réservations. Les clientes accèdent au studio avec une serrure connectée Nuki. Plusieurs problèmes persi... WordPress WooCommerce API +72 Magicien Duweb Paul Martinez TaskHub L'expert Web Websource",
+      "title": "Bonjour, Je suis Gabriel Scuta, artisan auto-entrepreneur plaquiste pe Il y a 20 heures Ouvert Moins de 500 € 131 Offres 3989 Vues Bonjour, Je suis Gabriel Scuta, artisan auto-entrepreneur plaquiste peintre à Fontaine-le-Comte, près de Poitiers. Je cherche quelqu'un de sérieux et abordable pour créer ma fiche Google professionnelle et un petit site Internet pour mon entrepris... Création de site internet Site clé en main SEO / GEO +126 Maxime Gillot nicolas_website4u Florent Bach Olivier Padacht Pour ERALION",
+      "description": "",
+      "sourceDescription": "Découvrez les derniers projets disponibles sur Codeur.com et trouvez plus de cent nouvelles missions en freelance chaque jour.",
+      "url": "https://www.codeur.com/projects/491991-bonjour-je-suis-gabriel-scuta-artisan-auto-entrepreneur-plaquiste-pe",
+      "extractionMethod": "anchor",
+      "score": 100,
+      "fit": "high",
+      "reasons": [
+        "besoin site/refonte",
+        "SEO ou visibilite locale",
+        "UX, mobile ou conversion",
+        "profil TPE/local",
+        "budget mentionne"
+      ],
+      "remoteOnly": false,
+      "remoteStatus": "unknown",
+      "remoteReason": "teletravail non mentionne",
+      "proposalDraft": "Bonjour,\n\nJ'ai vu votre mission \"Bonjour, Je suis Gabriel Scuta, artisan auto-entrepreneur plaquiste pe\". Je peux vous aider sur la partie site.\n\nJe commencerais par clarifier la structure et les priorites, puis je peux prendre en charge la maquette, le developpement, le responsive, le SEO de depart, le domaine/DNS et la mise en ligne.\n\nQuelques exemples de mon travail: https://www.rayanstudios.com/fr\n\nSi vous avez l'URL actuelle, 2-3 references ou une contrainte de delai/budget, je peux vous repondre avec un perimetre concret et une estimation plus precise.\n\nBonne journee,\nRayan\nMission: https://www.codeur.com/projects/491991-bonjour-je-suis-gabriel-scuta-artisan-auto-entrepreneur-plaquiste-pe"
+    },
+    {
+      "source": "Codeur - remote full stack web developer",
+      "sourceUrl": "https://www.codeur.com/projects?keywords=remote%20full%20stack%20web%20developer",
+      "platform": "codeur",
+      "searchQuery": "remote full stack web developer",
+      "remoteGuaranteed": false,
+      "title": "Expert WordPress / WooCommerce / Amelia + automatisation serrure Nuki Il y a 1 jour Ouvert Moins de 500 € 89 Offres 5164 Vues Bonjour, Nous gérons Studio KA, un studio de pole dance en location autonome. Notre site WordPress tourne avec WooCommerce et Amelia pour les réservations. Les clientes accèdent au studio avec une serrure connectée Nuki. Plusieurs problèmes persi... WordPress WooCommerce API +84 Magicien Duweb Paul Martinez TaskHub L'expert Web Websource",
       "description": "",
       "sourceDescription": "Découvrez les derniers projets disponibles sur Codeur.com et trouvez plus de cent nouvelles missions en freelance chaque jour.",
       "url": "https://www.codeur.com/projects/491951-expert-wordpress-woocommerce-amelia-automatisation-serrure-nuki",
@@ -395,7 +420,7 @@
       "platform": "codeur",
       "searchQuery": "remote full stack web developer",
       "remoteGuaranteed": false,
-      "title": "Je voudrais créer un site web pour la vente de bijoux, habits etc... Il y a 8 heures Ouvert 500 € à 1 000 € 127 Offres 2232 Vues Je souhaite créer un site web de vente en ligne pour développer l'activité commerciale de ma mère et lui permettre de toucher une clientèle internationale. L'objectif est de créer une boutique en ligne moderne, élégante et facile à utiliser, qui ... Site E-commerce Création de site internet Site clé en main +122 Germain Fardoux Eric Theret Dan Salczer Veysel Artur Rodrigues Adaga ERALION",
+      "title": "Je voudrais créer un site web pour la vente de bijoux, habits etc... Il y a 1 jour Ouvert 500 € à 1 000 € 144 Offres 5720 Vues Je souhaite créer un site web de vente en ligne pour développer l'activité commerciale de ma mère et lui permettre de toucher une clientèle internationale. L'objectif est de créer une boutique en ligne moderne, élégante et facile à utiliser, qui ... Site E-commerce Création de site internet Site clé en main +139 Germain Fardoux Eric Theret Dan Salczer Veysel Artur Rodrigues Adaga ERALION",
       "description": "",
       "sourceDescription": "Découvrez les derniers projets disponibles sur Codeur.com et trouvez plus de cent nouvelles missions en freelance chaque jour.",
       "url": "https://www.codeur.com/projects/491942-je-voudrais-creer-un-site-web-pour-la-vente-de-bijoux-habits-etc",
@@ -420,7 +445,7 @@
       "platform": "codeur",
       "searchQuery": "remote full stack web developer",
       "remoteGuaranteed": false,
-      "title": "E-commerce : catalogue, paiement sécurisé, personnalisation, commandes Il y a 22 heures Ouvert 1 000 € à 10 000 € 154 Offres 4727 Vues Je vous contacte pour le compte d’une sociéte de réalisation d’objets personnalisés (mariage, enterrement, baptêmes etc.) Nous souhaitons créer un site e-commerce professionnel comprenant un catalogue de produits, le paiement sécurisé, la personn... Site E-commerce Système de paiement Création de site internet +149 Germain Fardoux Louis Jodon De Villeroché William Delhomme Alexandre Cooreman Mirai-Tech",
+      "title": "E-commerce : catalogue, paiement sécurisé, personnalisation, commandes Il y a 2 jours Ouvert 1 000 € à 10 000 € 163 Offres 7284 Vues Je vous contacte pour le compte d’une sociéte de réalisation d’objets personnalisés (mariage, enterrement, baptêmes etc.) Nous souhaitons créer un site e-commerce professionnel comprenant un catalogue de produits, le paiement sécurisé, la personn... Site E-commerce Système de paiement Création de site internet +158 Germain Fardoux Louis Jodon De Villeroché William Delhomme Alexandre Cooreman Mirai-Tech",
       "description": "",
       "sourceDescription": "Découvrez les derniers projets disponibles sur Codeur.com et trouvez plus de cent nouvelles missions en freelance chaque jour.",
       "url": "https://www.codeur.com/projects/491915-e-commerce-catalogue-paiement-securise-personnalisation-commandes",
@@ -446,24 +471,22 @@
       "platform": "codeur",
       "searchQuery": "remote full stack web developer",
       "remoteGuaranteed": false,
-      "title": "Site web Il y a 1 jour Ouvert Moins de 500 € 93 Offres 5503 Vues Site internet – Bunker 44 Experience Le site internet de Bunker 44 Experience sera avant tout un site vitrine immersif, permettant de présenter l'entreprise, son musée immersif consacré à la Seconde Guerre mondiale, son bar à l'ambiance années 1... Création de site internet Site E-commerce Système de paiement +88 Paul Martinez Anywwwhere Alexandre Cooreman Elisabeth Crubillé ERALION",
+      "title": "Web App Flutter de transport collaboratif de colis (type BlaBlaCar) – Il y a 3 heures Ouvert 500 € à 1 000 € 67 Offres 992 Vues Nous recherchons un développeur Flutter Web expérimenté pour créer une plateforme de transport collaboratif de colis, mettant en relation des particuliers qui envoient des colis avec des voyageurs effectuant déjà un trajet. Stack imposée Front :... Flutter Développement spécifique API +62 Dan Salczer Adrien Korbendau TaskHub Houssem Talbi Mirai-Tech",
       "description": "",
       "sourceDescription": "Découvrez les derniers projets disponibles sur Codeur.com et trouvez plus de cent nouvelles missions en freelance chaque jour.",
-      "url": "https://www.codeur.com/projects/491861-site-web",
+      "url": "https://www.codeur.com/projects/492006-web-app-flutter-de-transport-collaboratif-de-colis-type-blablacar",
       "extractionMethod": "anchor",
-      "score": 100,
+      "score": 90,
       "fit": "high",
       "reasons": [
         "besoin site/refonte",
         "profil full-stack/platform",
-        "automation, paiement ou integration",
-        "profil TPE/local",
         "budget mentionne"
       ],
       "remoteOnly": false,
       "remoteStatus": "unknown",
       "remoteReason": "teletravail non mentionne",
-      "proposalDraft": "Bonjour,\n\nJ'ai vu votre mission \"Site web\". Je peux vous aider sur la partie site.\n\nJe commencerais par clarifier la structure et les priorites, puis je peux prendre en charge la maquette, le developpement, le responsive, le SEO de depart, le domaine/DNS et la mise en ligne.\n\nQuelques exemples de mon travail: https://www.rayanstudios.com/fr\n\nSi vous avez l'URL actuelle, 2-3 references ou une contrainte de delai/budget, je peux vous repondre avec un perimetre concret et une estimation plus precise.\n\nBonne journee,\nRayan\nMission: https://www.codeur.com/projects/491861-site-web"
+      "proposalDraft": "Bonjour,\n\nJ'ai vu votre mission \"Web App Flutter de transport collaboratif de colis (type BlaBlaCar) –\". Je peux vous aider sur la partie site.\n\nJe commencerais par clarifier la structure et les priorites, puis je peux prendre en charge la maquette, le developpement, le responsive, le SEO de depart, le domaine/DNS et la mise en ligne.\n\nQuelques exemples de mon travail: https://www.rayanstudios.com/fr\n\nSi vous avez l'URL actuelle, 2-3 references ou une contrainte de delai/budget, je peux vous repondre avec un perimetre concret et une estimation plus precise.\n\nBonne journee,\nRayan\nMission: https://www.codeur.com/projects/492006-web-app-flutter-de-transport-collaboratif-de-colis-type-blablacar"
     },
     {
       "source": "Codeur - remote full stack web developer",
@@ -471,7 +494,7 @@
       "platform": "codeur",
       "searchQuery": "remote full stack web developer",
       "remoteGuaranteed": false,
-      "title": "Expert Google Shopping / Merchant Center Il y a 2 minutes Ouvert Moins de 500 € 5 Offres 108 Vues Nous possédons un site e-commerce sous WooCommerceavec un catalogue de 147 produits. Nous souhaitons structurer et optimiser notre visibilité sur Google Shopping. Objectifs de la mission : 1. Configuration du flux produits : Créer, nettoyer et... Google Ads SEM WooCommerce Germain Fardoux VIVADO Louis Schinkler Karl Lameynardie Cherif Boukhennous.",
+      "title": "Expert Google Shopping / Merchant Center Il y a 1 jour Ouvert Moins de 500 € 47 Offres 3975 Vues Nous possédons un site e-commerce sous WooCommerceavec un catalogue de 147 produits. Nous souhaitons structurer et optimiser notre visibilité sur Google Shopping. Objectifs de la mission : 1. Configuration du flux produits : Créer, nettoyer et... Google Ads SEM WooCommerce +42 Nicolas Dugelay Valentine Beaumont Nicolas Chauvrat Alain Houessou Websource",
       "description": "",
       "sourceDescription": "Découvrez les derniers projets disponibles sur Codeur.com et trouvez plus de cent nouvelles missions en freelance chaque jour.",
       "url": "https://www.codeur.com/projects/491975-expert-google-shopping-merchant-center",
@@ -496,30 +519,7 @@
       "platform": "codeur",
       "searchQuery": "remote full stack web developer",
       "remoteGuaranteed": false,
-      "title": "Développement web, front-end et intégration SaaS Il y a 31 minutes Ouvert Moins de 500 € 20 Offres 455 Vues Noam — Développeur web & SaaS Front-end · Interfaces SaaS · Intégration web · IA Je conçois et développe des interfaces web modernes et des applications SaaS avec Next.js, React, TypeScript et Tailwind CSS. Je travaille sur des projets concrets, d... Front-end React SaaS +15 Herve Bansay TaskHub Websource Kévin Guiot Gabriel Genoni",
-      "description": "",
-      "sourceDescription": "Découvrez les derniers projets disponibles sur Codeur.com et trouvez plus de cent nouvelles missions en freelance chaque jour.",
-      "url": "https://www.codeur.com/projects/491972-developpement-web-front-end-et-integration-saas",
-      "extractionMethod": "anchor",
-      "score": 90,
-      "fit": "high",
-      "reasons": [
-        "besoin site/refonte",
-        "profil full-stack/platform",
-        "budget mentionne"
-      ],
-      "remoteOnly": false,
-      "remoteStatus": "unknown",
-      "remoteReason": "teletravail non mentionne",
-      "proposalDraft": "Bonjour,\n\nJ'ai vu votre mission \"Développement web, front-end et intégration SaaS\". Je peux vous aider sur la partie site.\n\nJe commencerais par clarifier la structure et les priorites, puis je peux prendre en charge la maquette, le developpement, le responsive, le SEO de depart, le domaine/DNS et la mise en ligne.\n\nQuelques exemples de mon travail: https://www.rayanstudios.com/fr\n\nSi vous avez l'URL actuelle, 2-3 references ou une contrainte de delai/budget, je peux vous repondre avec un perimetre concret et une estimation plus precise.\n\nBonne journee,\nRayan\nMission: https://www.codeur.com/projects/491972-developpement-web-front-end-et-integration-saas"
-    },
-    {
-      "source": "Codeur - remote full stack web developer",
-      "sourceUrl": "https://www.codeur.com/projects?keywords=remote%20full%20stack%20web%20developer",
-      "platform": "codeur",
-      "searchQuery": "remote full stack web developer",
-      "remoteGuaranteed": false,
-      "title": "Déploiement backend Symfony + connexion application Flutter existante Il y a 3 heures Ouvert Moins de 500 € 55 Offres 919 Vues **Titre : Déploiement backend Symfony + connexion application Flutter existante — Budget 100 €** Bonjour, Je recherche un développeur freelance pour une intervention technique ponctuelle sur mon application mobile Chatfix. **Situation actuelle ... Symfony Flutter API +50 Dan Salczer Websource Khalid Boudrari Quentin Pollet Kévin Guiot",
+      "title": "Déploiement backend Symfony + connexion application Flutter existante Il y a 1 jour Ouvert Moins de 500 € 70 Offres 4670 Vues **Titre : Déploiement backend Symfony + connexion application Flutter existante — Budget 100 €** Bonjour, Je recherche un développeur freelance pour une intervention technique ponctuelle sur mon application mobile Chatfix. **Situation actuelle ... Symfony Flutter API +65 Dan Salczer Websource Khalid Boudrari Quentin Pollet Jaroslaw Chmielewski",
       "description": "",
       "sourceDescription": "Découvrez les derniers projets disponibles sur Codeur.com et trouvez plus de cent nouvelles missions en freelance chaque jour.",
       "url": "https://www.codeur.com/projects/491968-deploiement-backend-symfony-connexion-application-flutter-existante",
@@ -538,38 +538,15 @@
       "proposalDraft": "Bonjour,\n\nJ'ai vu votre mission \"Déploiement backend Symfony + connexion application Flutter existante\". Je peux vous aider sur la partie site.\n\nJe commencerais par clarifier la structure et les priorites, puis je peux prendre en charge la maquette, le developpement, le responsive, le SEO de depart, le domaine/DNS et la mise en ligne.\n\nQuelques exemples de mon travail: https://www.rayanstudios.com/fr\n\nSi vous avez l'URL actuelle, 2-3 references ou une contrainte de delai/budget, je peux vous repondre avec un perimetre concret et une estimation plus precise.\n\nBonne journee,\nRayan\nMission: https://www.codeur.com/projects/491968-deploiement-backend-symfony-connexion-application-flutter-existante"
     },
     {
-      "source": "Codeur - remote full stack web developer",
-      "sourceUrl": "https://www.codeur.com/projects?keywords=remote%20full%20stack%20web%20developer",
-      "platform": "codeur",
-      "searchQuery": "remote full stack web developer",
-      "remoteGuaranteed": false,
-      "title": "Création d’une plateforme de recrutement évolutive Il y a 2 jours Ouvert 500 € à 1 000 € 144 Offres 5509 Vues Recherche développeur – Création d’une plateforme de recrutement évolutive Nous recherchons un développeur pour concevoir un site web professionnel dédié à la publication d’offres d’emploi et à la réception de candidatures. Fonctionnalités atten... Développement spécifique Création de site internet Full-stack +139 Adrien Korbendau MAETVIN AppWire Jonathan Petit Mirai-Tech",
-      "description": "",
-      "sourceDescription": "Découvrez les derniers projets disponibles sur Codeur.com et trouvez plus de cent nouvelles missions en freelance chaque jour.",
-      "url": "https://www.codeur.com/projects/491855-creation-d-une-plateforme-de-recrutement-evolutive",
-      "extractionMethod": "anchor",
-      "score": 90,
-      "fit": "high",
-      "reasons": [
-        "besoin site/refonte",
-        "profil full-stack/platform",
-        "budget mentionne"
-      ],
-      "remoteOnly": false,
-      "remoteStatus": "unknown",
-      "remoteReason": "teletravail non mentionne",
-      "proposalDraft": "Bonjour,\n\nJ'ai vu votre mission \"Création d’une plateforme de recrutement évolutive\". Je peux vous aider sur la partie site.\n\nJe commencerais par clarifier la structure et les priorites, puis je peux prendre en charge la maquette, le developpement, le responsive, le SEO de depart, le domaine/DNS et la mise en ligne.\n\nQuelques exemples de mon travail: https://www.rayanstudios.com/fr\n\nSi vous avez l'URL actuelle, 2-3 references ou une contrainte de delai/budget, je peux vous repondre avec un perimetre concret et une estimation plus precise.\n\nBonne journee,\nRayan\nMission: https://www.codeur.com/projects/491855-creation-d-une-plateforme-de-recrutement-evolutive"
-    },
-    {
       "source": "Freelancer - remote full stack web developer",
       "sourceUrl": "https://www.freelancer.com/jobs/website-development",
       "platform": "freelancer",
       "searchQuery": "remote full stack web developer",
       "remoteGuaranteed": false,
-      "title": "Travel Agency & Tour Booking Website",
+      "title": "SaaS Website Content Revamp",
       "description": "",
       "sourceDescription": "World's largest website for Website Development Jobs. Find $$$ Website Development Jobs or hire a Website Developer to bid on your Website Development Job at Freelancer. 12m+ Jobs!",
-      "url": "https://www.freelancer.com/projects/full-stack-development/travel-agency-tour-booking-website",
+      "url": "https://www.freelancer.com/projects/saas-development/saas-website-content-revamp",
       "extractionMethod": "anchor",
       "score": 85,
       "fit": "high",
@@ -580,7 +557,7 @@
       "remoteOnly": false,
       "remoteStatus": "unknown",
       "remoteReason": "teletravail non mentionne",
-      "proposalDraft": "Hi,\n\nI saw your project \"Travel Agency & Tour Booking Website\" and it looks close to the kind of full-stack/platform work I handle.\n\nMy strongest fit here is taking a web product from a clear scope to a working, maintainable implementation.\n\nI can help clarify the scope, then take care of the implementation, API/backend work, responsive front-end, deployment details, and clean handover.\n\nPortfolio: https://www.rayanstudios.com/fr\n\nIf you can share the current stack, priority features and timeline, I can reply with a concrete scope and estimate.\n\nBest,\nRayan\nMission: https://www.freelancer.com/projects/full-stack-development/travel-agency-tour-booking-website"
+      "proposalDraft": "Hi,\n\nI saw your project \"SaaS Website Content Revamp\" and it looks close to the kind of full-stack/platform work I handle.\n\nMy strongest fit here is taking a web product from a clear scope to a working, maintainable implementation.\n\nI can help clarify the scope, then take care of the implementation, API/backend work, responsive front-end, deployment details, and clean handover.\n\nPortfolio: https://www.rayanstudios.com/fr\n\nIf you can share the current stack, priority features and timeline, I can reply with a concrete scope and estimate.\n\nBest,\nRayan\nMission: https://www.freelancer.com/projects/saas-development/saas-website-content-revamp"
     },
     {
       "source": "Codeur - remote full stack web developer",
@@ -588,23 +565,45 @@
       "platform": "codeur",
       "searchQuery": "remote full stack web developer",
       "remoteGuaranteed": false,
-      "title": "Project pilote Il y a 2 jours Ouvert Moins de 500 € 46 Offres 5211 Vues Vous développez FRAUD‑RISK.CO.UK, une plateforme britannique d’évaluation des risques de fraude et de sensibilisation destinée aux entreprises, associations, organisations du NHS, collectivités locales et autres organismes publics. Elle combine un... AWS Cloud computing Base de données +41 genialpro Mirai-Tech Quentin Pollet Lucas Kacem De Vincenzi Aymeric Filliot",
+      "title": "Montage vidéo Il y a 15 minutes Ouvert 1 000 € à 10 000 € 6 Offres 222 Vues 🚨 **RECRUTEMENT – MONTEUR VIDÉO / CRÉATEUR DE CONTENU 🎥⚽** Nous sommes une **agence spécialisée dans la représentation et l'accompagnement de joueurs de football** et nous recherchons un profil créatif et motivé pour développer notre présence sur... Audio, Video, Multimedia Motion design Community management +1 Thibaut Cohen TaskHub Freelance-Website Raphaël Prudhomme C Cedric Roux",
       "description": "",
       "sourceDescription": "Découvrez les derniers projets disponibles sur Codeur.com et trouvez plus de cent nouvelles missions en freelance chaque jour.",
-      "url": "https://www.codeur.com/projects/491853-project-pilote",
+      "url": "https://www.codeur.com/projects/492021-montage-video",
       "extractionMethod": "anchor",
-      "score": 80,
+      "score": 75,
       "fit": "high",
       "reasons": [
-        "DevOps, CI/CD ou deploiement",
-        "SEO ou visibilite locale",
+        "besoin site/refonte",
         "UX, mobile ou conversion",
         "budget mentionne"
       ],
       "remoteOnly": false,
       "remoteStatus": "unknown",
       "remoteReason": "teletravail non mentionne",
-      "proposalDraft": "Hi,\n\nI saw your project \"Project pilote\" and it looks close to the kind of full-stack/platform work I handle.\n\nMy strongest fit here is the DevOps and deployment side: Docker, CI/CD, VPS/cloud setup, SSL/DNS and production handover.\n\nI can help clarify the scope, then take care of the implementation, API/backend work, responsive front-end, deployment details, and clean handover.\n\nPortfolio: https://www.rayanstudios.com/fr\n\nIf you can share the current stack, priority features and timeline, I can reply with a concrete scope and estimate.\n\nBest,\nRayan\nMission: https://www.codeur.com/projects/491853-project-pilote"
+      "proposalDraft": "Hi,\n\nI saw your project \"Montage vidéo\" and it looks close to the kind of full-stack/platform work I handle.\n\nMy strongest fit here is taking a web product from a clear scope to a working, maintainable implementation.\n\nI can help clarify the scope, then take care of the implementation, API/backend work, responsive front-end, deployment details, and clean handover.\n\nPortfolio: https://www.rayanstudios.com/fr\n\nIf you can share the current stack, priority features and timeline, I can reply with a concrete scope and estimate.\n\nBest,\nRayan\nMission: https://www.codeur.com/projects/492021-montage-video"
+    },
+    {
+      "source": "Codeur - remote full stack web developer",
+      "sourceUrl": "https://www.codeur.com/projects?keywords=remote%20full%20stack%20web%20developer",
+      "platform": "codeur",
+      "searchQuery": "remote full stack web developer",
+      "remoteGuaranteed": false,
+      "title": "Création d’un site WordPress professionnel Il y a 1 jour Ouvert Moins de 500 € 118 Offres 4605 Vues Bonjour, Je recherche un freelance pour créer un site WordPress professionnel, moderne et responsive. Le site devra être facile à administrer et optimisé pour les ordinateurs, tablettes et téléphones. Je souhaite également une structure adaptée ... WordPress Création de site internet Web design +113 ERALION TaskHub Damien Gros Nicolas Rousselin Younicom",
+      "description": "",
+      "sourceDescription": "Découvrez les derniers projets disponibles sur Codeur.com et trouvez plus de cent nouvelles missions en freelance chaque jour.",
+      "url": "https://www.codeur.com/projects/491976-creation-d-un-site-wordpress-professionnel",
+      "extractionMethod": "anchor",
+      "score": 75,
+      "fit": "high",
+      "reasons": [
+        "besoin site/refonte",
+        "UX, mobile ou conversion",
+        "budget mentionne"
+      ],
+      "remoteOnly": false,
+      "remoteStatus": "unknown",
+      "remoteReason": "teletravail non mentionne",
+      "proposalDraft": "Bonjour,\n\nJ'ai vu votre mission \"Création d’un site WordPress professionnel\". Je peux vous aider sur la partie site.\n\nJe commencerais par clarifier la structure et les priorites, puis je peux prendre en charge la maquette, le developpement, le responsive, le SEO de depart, le domaine/DNS et la mise en ligne.\n\nQuelques exemples de mon travail: https://www.rayanstudios.com/fr\n\nSi vous avez l'URL actuelle, 2-3 references ou une contrainte de delai/budget, je peux vous repondre avec un perimetre concret et une estimation plus precise.\n\nBonne journee,\nRayan\nMission: https://www.codeur.com/projects/491976-creation-d-un-site-wordpress-professionnel"
     }
   ],
   "errors": []
