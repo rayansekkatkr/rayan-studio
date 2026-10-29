@@ -8,7 +8,8 @@ contient que les invariants valables à CHAQUE session.
 inspect → change → verify → learn, conditions d'arrêt, gestion du contexte, error recovery).
 
 App = **Rayan Studio** (`rayanstudios.com`), site d'un **studio indépendant de Product & Software
-Engineering** : applications web et SaaS, MVP, APIs/backends, automatisation et IA, DevOps/cloud,
+Engineering** : applications web et SaaS, MVP, APIs/backends, automatisation et IA, IA générative
+en entreprise (Claude, ChatGPT, Copilot), DevOps/cloud,
 et en second plan sites web premium et refontes.
 
 ## Produit (garde-fou n°1)
@@ -84,7 +85,7 @@ npm run typecheck      # tsc --noEmit
 npm run lint
 npm run check:copy     # interdit le tiret cadratin dans la copy publique
 npm test               # vitest (unitaires + composants)
-npm run build          # 174 pages statiques
+npm run build          # 176 pages statiques
 npm run test:e2e       # Playwright, lance son propre dev server sur :3000
 npm run verify         # lint + typecheck + check:copy + test + build
 git diff --check

@@ -64,6 +64,8 @@ test.describe("canonical route families", () => {
   const FAMILIES: string[] = [
     "/fr/services/applications-web-saas",
     "/en/services/web-applications-saas",
+    "/fr/services/ia-generative-entreprise",
+    "/en/services/generative-ai-business",
     "/fr/studio/offres",
     "/en/studio/offers",
     "/fr/work/pick4me",

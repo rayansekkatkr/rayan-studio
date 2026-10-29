@@ -653,3 +653,11 @@ Quand un changement important est fait:
 - Correctif : titre `... | Rayan Studio | Rayan Studio` sur la page CRA (le template du layout ajoute deja la marque).
 - `availableLocales` conserve (plus aucun article FR seul aujourd'hui, utile pour l'article 2 SBOM), teste sur un enregistrement synthetique.
 - Verification : typecheck, lint, check:copy, vitest 158/158, build 174 pages, Playwright complet (build avec `NEXT_PUBLIC_GA_ID=G-TEST`, sinon les tests du bandeau cookies echouent), captures EN desktop et header mobile FR/EN.
+
+### 2026-10-30
+
+- Nouveau service **IA générative en entreprise** (cle `ai`, `src/content/services/ai.ts`) : `/fr/services/ia-generative-entreprise`, `/en/services/generative-ai-business`. Perimetre valide par Rayan : choix et deploiement de Claude, ChatGPT ou Microsoft 365 Copilot (espace entreprise, SSO, droits, connecteurs), assistants sur mesure via API sur les documents du client (RAG), charte d'usage et RGPD, formation des equipes.
+- **Aucune reference client** sur ce type de deploiement (reponse de Rayan) : preuves = DocExtract et Pont Factur-X, comme le service Automatisation & IA. Pas de promesse de conformite RGPD : validation juridique laissee au DPO ou juriste du client.
+- Faits verifies le 2026-10-30 : offres entreprise Claude (SSO, SCIM, journaux d'audit, connecteurs, pas d'entrainement par defaut), ChatGPT Business (ex-Team) et Enterprise (pas d'entrainement par defaut, SSO), AI Act art. 4 modifie par le reglement (UE) 2026/1744 (Digital Omnibus, en vigueur le 27/07/2026) : obligation de moyens « prendre des mesures qui favorisent la maitrise de l'IA ». La copy reste generique (« aider leurs equipes a s'y former ») pour rester vraie.
+- Ajoute au menu (groupe OPTIMISER), a l'accueil (groupe LOGICIEL), a `/services`, au sitemap (paire FR/EN) ; tests registre (7 services), site-routes et e2e routes mis a jour.
+- Verification : typecheck, lint, check:copy, vitest 158/158, build 176 pages, Playwright complet, captures desktop et accueil relues.

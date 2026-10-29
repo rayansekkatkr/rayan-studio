@@ -1,3 +1,4 @@
+import { ai } from "./ai";
 import { applications } from "./applications";
 import { automation } from "./automation";
 import { backends } from "./backends";
@@ -6,7 +7,7 @@ import { mvp } from "./mvp";
 import { web } from "./web";
 import type { ServiceKey } from "@/lib/site-routes";
 
-export const SERVICES = [applications, mvp, backends, automation, web, devops] as const;
+export const SERVICES = [applications, mvp, backends, automation, ai, web, devops] as const;
 
 export function getService(key: ServiceKey) {
   const service = SERVICES.find((item) => item.key === key);

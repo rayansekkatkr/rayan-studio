@@ -30,12 +30,13 @@ describe("content registries", () => {
     expect(getProject("manteigaria")?.kind).toBe("concept");
   });
 
-  it("registers exactly the six approved services", () => {
+  it("registers exactly the seven approved services", () => {
     expect(SERVICES.map((service) => service.key)).toEqual([
       "applications",
       "mvp",
       "backends",
       "automation",
+      "ai",
       "web",
       "devops",
     ]);
