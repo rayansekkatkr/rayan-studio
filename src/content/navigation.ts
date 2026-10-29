@@ -50,6 +50,7 @@ export function getNavigation(locale: Locale): NavMenu[] {
           label: fr ? "OPTIMISER" : "OPTIMIZE",
           links: [
             { label: fr ? "Automatisation & IA" : "Automation & AI", href: servicePath(locale, "automation") },
+            { label: fr ? "IA générative en entreprise" : "Generative AI for business", href: servicePath(locale, "ai") },
             { label: fr ? "Sites premium & refonte" : "Premium websites & redesign", href: servicePath(locale, "web") },
           ],
         },

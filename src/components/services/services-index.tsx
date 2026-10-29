@@ -8,7 +8,7 @@ import { getCraPage } from "@/content/cra";
 import { craPath, servicePath, startProjectPath, type ServiceKey } from "@/lib/site-routes";
 
 const GROUPS: Array<{ label: string; keys: ServiceKey[] }> = [
-  { label: "SOFTWARE", keys: ["applications", "mvp", "backends", "automation"] },
+  { label: "SOFTWARE", keys: ["applications", "mvp", "backends", "automation", "ai"] },
   { label: "WEB & INFRASTRUCTURE", keys: ["web", "devops"] },
 ];
 

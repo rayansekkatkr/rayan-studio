@@ -21,6 +21,8 @@ describe("site routes", () => {
     expect(servicePath("en", "backends")).toBe("/en/services/apis-backends");
     expect(servicePath("fr", "automation")).toBe("/fr/services/automatisation-ia");
     expect(servicePath("en", "automation")).toBe("/en/services/automation-ai");
+    expect(servicePath("fr", "ai")).toBe("/fr/services/ia-generative-entreprise");
+    expect(servicePath("en", "ai")).toBe("/en/services/generative-ai-business");
     expect(servicePath("fr", "web")).toBe("/fr/services/sites-web-refonte");
     expect(servicePath("en", "web")).toBe("/en/services/premium-websites-redesign");
     expect(servicePath("fr", "devops")).toBe("/fr/services/devops-cloud");

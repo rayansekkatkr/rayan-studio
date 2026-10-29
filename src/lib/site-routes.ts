@@ -1,6 +1,6 @@
 import type { Locale } from "@/lib/i18n";
 
-export type ServiceKey = "applications" | "mvp" | "backends" | "automation" | "web" | "devops";
+export type ServiceKey = "applications" | "mvp" | "backends" | "automation" | "ai" | "web" | "devops";
 export type StudioPageKey = "studio" | "rayan" | "method" | "offers" | "faq";
 export type InsightCategoryKey = "articles" | "guides" | "checklists" | "templates" | "tools";
 
@@ -9,6 +9,7 @@ const SERVICE_SLUGS: Record<ServiceKey, Record<Locale, string>> = {
   mvp: { fr: "mvp-produits-digitaux", en: "mvp-digital-products" },
   backends: { fr: "apis-backends", en: "apis-backends" },
   automation: { fr: "automatisation-ia", en: "automation-ai" },
+  ai: { fr: "ia-generative-entreprise", en: "generative-ai-business" },
   web: { fr: "sites-web-refonte", en: "premium-websites-redesign" },
   devops: { fr: "devops-cloud", en: "devops-cloud" },
 };

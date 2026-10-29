@@ -8,7 +8,7 @@ import { getCraPage } from "@/content/cra";
 import { craPath, servicePath, type ServiceKey } from "@/lib/site-routes";
 
 const GROUPS: Array<{ id: string; label: Record<Locale, string>; keys: ServiceKey[] }> = [
-  { id: "software", label: { fr: "LOGICIEL", en: "SOFTWARE" }, keys: ["applications", "mvp", "backends", "automation"] },
+  { id: "software", label: { fr: "LOGICIEL", en: "SOFTWARE" }, keys: ["applications", "mvp", "backends", "automation", "ai"] },
   { id: "web", label: { fr: "WEB & INFRASTRUCTURE", en: "WEB & INFRASTRUCTURE" }, keys: ["web", "devops"] },
 ];
 
@@ -17,6 +17,7 @@ const LABELS: Record<ServiceKey, Record<Locale, string>> = {
   mvp: { fr: "MVP & produits digitaux", en: "MVP & digital products" },
   backends: { fr: "APIs & backends", en: "APIs & backends" },
   automation: { fr: "Automatisation & IA", en: "Automation & AI" },
+  ai: { fr: "IA générative en entreprise", en: "Generative AI for business" },
   web: { fr: "Sites premium & refonte", en: "Premium websites & redesign" },
   devops: { fr: "DevOps, cloud & déploiement", en: "DevOps, cloud & deployment" },
 };
