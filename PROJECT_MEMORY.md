@@ -684,3 +684,11 @@ Quand un changement important est fait:
 - Verification : typecheck, lint, check:copy, vitest 161/161, build 182 pages (polices Google simulees via `NEXT_FONT_GOOGLE_MOCKED_RESPONSES`, fonts.googleapis.com bloque dans le cloud), Playwright complet 124/124 avec `NEXT_PUBLIC_GA_ID=G-TEST`, captures desktop pleine page des 11 pages modifiees et mobile 390 relues.
 - A completer par Rayan : autres projets clients (aucun detail fourni, rien n'a ete invente).
 - Non verifie : rendu avec les vraies polices, Lighthouse en prod, version EN relue a l'oeil (seulement testee).
+
+### 2026-10-30 (logos de la stack, formulaires, offres)
+
+- **Logos** : `src/content/tech-icons.ts` genere depuis simple-icons 16.36.0 (CC0, marques citees uniquement pour nommer les technos). Couleur de marque conservee sauf si elle est trop sombre ou trop claire pour l'un des deux themes (`currentColor`). Pas de logo officiel disponible pour AWS, OpenAI, Microsoft (Copilot Studio, Power Automate) et Playwright : icone generique lucide (`GENERIC_ICONS` dans `ui/tech-chips.tsx`). Copilot Studio ne doit pas recevoir le logo GitHub Copilot (autre produit). Pour une nouvelle techno : regenerer le fichier ou ajouter une icone generique.
+- `TechStack` : groupes en cartes, variante `compact` supprimee (plus utilisee).
+- **Demarrer un projet / Start a project / Contact** : nouveau `contact/contact-layout.tsx`. Formulaire dans une carte etiree a la hauteur du panneau lateral (grille 3/2), panneau `ContactAside` en une seule carte (reponse 24 h ouvrees, etapes, contact direct) sans la stack : les deux colonnes finissent a la meme hauteur, plus de grand vide sous le formulaire.
+- **Offres** (`studio/offers-page.tsx`) : hero photo (`network-cubes`), cartes avec photo et titre en surimpression (`OFFER_PHOTOS` dans `visuals.ts`, meme ordre que `OFFERS_CONTENT`), liste « Peut inclure » en deux colonnes avec coches.
+- Verification : typecheck, lint, check:copy, vitest 161/161, build 182 pages (polices simulees), Playwright 123/124 puis `project-form.spec.ts` relance seul 6/6 (echec intermittent sur le retry apres erreur simulee), captures desktop et mobile relues.

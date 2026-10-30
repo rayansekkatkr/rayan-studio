@@ -2,8 +2,7 @@ import type { Metadata } from "next";
 import { redirect } from "next/navigation";
 import { CommercialPageShell } from "@/components/layout/commercial-page-shell";
 import { ProjectForm } from "@/components/forms/project-form";
-import { Container } from "@/components/ui/container";
-import { ContactAside } from "@/components/contact/contact-aside";
+import { ContactLayout } from "@/components/contact/contact-layout";
 import { PageHero } from "@/components/ui/page-hero";
 import { PAGE_HERO_PHOTOS } from "@/content/visuals";
 import { normalizeLocale, type Locale } from "@/lib/i18n";
@@ -47,14 +46,9 @@ export default async function Page({ params }: { params: Promise<{ locale: strin
         }
         image={PAGE_HERO_PHOTOS.contact}
       />
-      <div className="bg-rs-bg py-[var(--rs-section-space)]">
-        <Container>
-          <div className="grid gap-12 lg:grid-cols-[minmax(0,7fr)_minmax(0,4fr)]">
-            <ProjectForm locale="en" />
-            <ContactAside locale="en" source="project" />
-          </div>
-        </Container>
-      </div>
+      <ContactLayout locale="en" source="project">
+        <ProjectForm locale="en" />
+      </ContactLayout>
     </CommercialPageShell>
   );
 }

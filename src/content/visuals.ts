@@ -29,4 +29,13 @@ export const PAGE_HERO_PHOTOS = {
   studio: "/images/seoul-night.webp",
   insights: "/images/notebook.webp",
   contact: "/images/desk-night.webp",
+  offers: "/images/network-cubes.webp",
 } as const;
+
+/** Offer cards, in the order of OFFERS_CONTENT (applications, MVP, websites, ongoing support). */
+export const OFFER_PHOTOS = [
+  "/images/devices.webp",
+  "/images/wireframe.webp",
+  "/services/web.webp",
+  "/services/devops.webp",
+] as const;

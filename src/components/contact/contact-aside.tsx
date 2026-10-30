@@ -1,6 +1,5 @@
 import { Clock, Mail, MessageCircle } from "lucide-react";
 import { TrackedLink } from "@/components/analytics/tracked-link";
-import { TechStack } from "@/components/ui/tech-stack";
 import { BRAND } from "@/lib/brand";
 import type { Locale } from "@/lib/i18n";
 
@@ -20,8 +19,8 @@ export function ContactAside({ locale, source }: { locale: Locale; source: "proj
       ];
 
   return (
-    <aside className="space-y-6 lg:sticky lg:top-28">
-      <div className="rounded-[var(--rs-radius-md)] border border-[var(--rs-border-strong)] bg-rs-surface p-6">
+    <aside className="flex flex-col divide-y divide-[var(--rs-border)] rounded-[var(--rs-radius-md)] border border-[var(--rs-border)] bg-rs-surface">
+      <div className="p-6 md:p-7">
         <p className="flex items-center gap-2 text-lg font-semibold">
           <Clock aria-hidden className="h-5 w-5 text-rs-accent-fg" />
           {fr ? "Réponse sous 24 h ouvrées" : "Reply within 24 business hours"}
@@ -33,7 +32,7 @@ export function ContactAside({ locale, source }: { locale: Locale; source: "proj
         </p>
       </div>
 
-      <div className="rounded-[var(--rs-radius-md)] border border-[var(--rs-border)] bg-rs-surface p-6">
+      <div className="p-6 md:p-7">
         <p className="text-xs font-semibold uppercase tracking-[0.18em] text-rs-muted">
           {fr ? "Ce qui se passe ensuite" : "What happens next"}
         </p>
@@ -49,7 +48,7 @@ export function ContactAside({ locale, source }: { locale: Locale; source: "proj
         </ol>
       </div>
 
-      <div className="rounded-[var(--rs-radius-md)] border border-[var(--rs-border)] bg-rs-surface p-6">
+      <div className="p-6 md:p-7">
         <p className="text-xs font-semibold uppercase tracking-[0.18em] text-rs-muted">
           {fr ? "Ou écrivez directement" : "Or write directly"}
         </p>
@@ -75,9 +74,6 @@ export function ContactAside({ locale, source }: { locale: Locale; source: "proj
         </div>
       </div>
 
-      <div className="rounded-[var(--rs-radius-md)] border border-[var(--rs-border)] bg-rs-surface p-6">
-        <TechStack locale={locale} compact />
-      </div>
     </aside>
   );
 }

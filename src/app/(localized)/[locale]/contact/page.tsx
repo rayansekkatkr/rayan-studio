@@ -1,10 +1,9 @@
 import type { Metadata } from "next";
 import { CommercialPageShell } from "@/components/layout/commercial-page-shell";
 import { ContactForm } from "@/components/forms/contact-form";
-import { Container } from "@/components/ui/container";
 import Link from "next/link";
 import { ArrowRight } from "lucide-react";
-import { ContactAside } from "@/components/contact/contact-aside";
+import { ContactLayout } from "@/components/contact/contact-layout";
 import { PageHero } from "@/components/ui/page-hero";
 import { PAGE_HERO_PHOTOS } from "@/content/visuals";
 import { startProjectPath } from "@/lib/site-routes";
@@ -60,14 +59,9 @@ export default async function Page({ params }: { params: Promise<{ locale: strin
           <ArrowRight aria-hidden className="h-4 w-4" />
         </Link>
       </PageHero>
-      <div className="bg-rs-bg py-[var(--rs-section-space)]">
-        <Container>
-          <div className="grid gap-12 lg:grid-cols-[minmax(0,7fr)_minmax(0,4fr)]">
-            <ContactForm locale={locale} />
-            <ContactAside locale={locale} source="contact" />
-          </div>
-        </Container>
-      </div>
+      <ContactLayout locale={locale} source="contact">
+        <ContactForm locale={locale} />
+      </ContactLayout>
     </CommercialPageShell>
   );
 }

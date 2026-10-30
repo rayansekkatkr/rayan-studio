@@ -255,7 +255,7 @@ export function ProjectForm({ locale }: { locale: Locale }) {
     "mt-1.5 w-full rounded-[var(--rs-radius-sm)] border border-[var(--rs-border)] bg-rs-surface px-4 py-3 text-base text-rs-fg outline-none transition-colors duration-150 focus:border-rs-accent";
 
   return (
-    <form onSubmit={handleSubmit} noValidate className="max-w-2xl">
+    <form onSubmit={handleSubmit} noValidate>
       <ProjectStepper currentStep={step} totalSteps={5} label={stepLabel} />
 
       <h2 ref={headingRef} tabIndex={-1} className="mt-6 outline-none sr-only">
