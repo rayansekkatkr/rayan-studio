@@ -8,6 +8,7 @@ import type { Locale } from "@/lib/i18n";
 import { cn } from "@/lib/utils";
 import { getCraPage } from "@/content/cra";
 import { craPath, servicePath, type ServiceKey } from "@/lib/site-routes";
+import { SERVICE_VISUALS as VISUALS } from "@/content/visuals";
 
 const GROUPS: Array<{ id: string; label: Record<Locale, string>; keys: ServiceKey[] }> = [
   { id: "software", label: { fr: "Logiciel", en: "Software" }, keys: ["applications", "mvp", "backends", "automation", "ai"] },
@@ -22,19 +23,6 @@ const LABELS: Record<ServiceKey, Record<Locale, string>> = {
   ai: { fr: "IA générative en entreprise", en: "Generative AI for business" },
   web: { fr: "Sites premium & refonte", en: "Premium websites & redesign" },
   devops: { fr: "DevOps, cloud & déploiement", en: "DevOps, cloud & deployment" },
-};
-
-// Card visuals: the studio's own product screens for the software services,
-// free-licence Unsplash photos (public/services, credits in PROJECT_MEMORY.md) for the rest.
-const VISUALS: Record<ServiceKey | "cra", string> = {
-  applications: "/realisations/pick4me.webp",
-  mvp: "/realisations/goodcall.webp",
-  backends: "/realisations/pont-facturx-conversion.webp",
-  automation: "/realisations/docextract.png",
-  ai: "/services/ai.webp",
-  web: "/services/web.webp",
-  devops: "/services/devops.webp",
-  cra: "/services/cra.webp",
 };
 
 function ServiceCard({ href, label, visual, kicker }: { href: string; label: string; visual: string; kicker: string }) {

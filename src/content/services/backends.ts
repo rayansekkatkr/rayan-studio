@@ -64,7 +64,7 @@ export const backends: ServiceRecord = {
       "Logging and monitoring to diagnose quickly in production.",
     ],
   },
-  technologies: ["Node.js", "TypeScript", "PostgreSQL", "REST", "Webhooks"],
+  technologies: ["Node.js", "NestJS", "TypeScript", "Python", "FastAPI", "PostgreSQL", "Redis", "REST", "Webhooks"],
   proofProjects: ["pick4me", "pont-facturx"],
   faq: {
     fr: [

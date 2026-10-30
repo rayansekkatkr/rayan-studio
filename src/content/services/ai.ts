@@ -101,17 +101,19 @@ export const ai: ServiceRecord = {
       "Connexion unique et comptes gérés depuis votre annuaire (Google Workspace, Microsoft Entra ID), quand l'offre le permet.",
       "Assistants sur mesure : clés d'API côté serveur, seulement les données que vous choisissez, réponses qui citent leurs sources.",
       "Journalisation et plafonds de coût pour les usages via l'API.",
+      "La qualité de la recherche documentaire est mesurée sur des questions de référence avant la mise en production, comme sur le démonstrateur Ops Knowledge Agent.",
       "Configuration documentée et passation à votre équipe.",
     ],
     en: [
       "Single sign-on and accounts managed from your directory (Google Workspace, Microsoft Entra ID), when the offer supports it.",
       "Custom assistants: API keys kept server side, only the data you choose, answers that cite their sources.",
       "Logging and cost caps for API usage.",
+      "Retrieval quality is measured on reference questions before going live, as in the Ops Knowledge Agent demonstrator.",
       "Documented configuration and handover to your team.",
     ],
   },
-  technologies: ["Claude", "ChatGPT", "Microsoft 365 Copilot", "API", "RAG", "SSO"],
-  proofProjects: ["docextract", "pont-facturx"],
+  technologies: ["Claude", "ChatGPT", "Microsoft 365 Copilot", "Copilot Studio", "API", "RAG", "MCP", "SSO"],
+  proofProjects: ["ops-knowledge-agent", "docextract", "pont-facturx"],
   faq: {
     fr: [
       {

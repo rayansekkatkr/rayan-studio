@@ -63,7 +63,7 @@ export const automation: ServiceRecord = {
     ],
   },
   technologies: ["Node.js", "TypeScript", "APIs", "OCR", "LLM"],
-  proofProjects: ["docextract", "pont-facturx"],
+  proofProjects: ["docextract", "pont-facturx", "ops-knowledge-agent"],
   faq: {
     fr: [
       {

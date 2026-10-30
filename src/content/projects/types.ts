@@ -1,13 +1,22 @@
 import type { Locale } from "@/lib/i18n";
 
-export type ProjectKey = "pick4me" | "pont-facturx" | "goodcall" | "docextract" | "manteigaria";
+export type ProjectKey =
+  | "pick4me"
+  | "pont-facturx"
+  | "goodcall"
+  | "docextract"
+  | "manteigaria"
+  | "ops-knowledge-agent"
+  | "ci-cd-platform"
+  | "product-infrastructure";
 export type LocalizedText = Record<Locale, string>;
 
 export type ProjectRecord = {
   key: ProjectKey;
   slug: string;
   title: string;
-  kind: "product" | "concept";
+  /** product: the studio's own product; concept: uncommissioned; demo: public demonstrator; mission: client engagement. */
+  kind: "product" | "concept" | "demo" | "mission";
   year?: string;
   liveUrl?: string;
   /** Public links shown on the case study (store pages, product site...). */

@@ -18,14 +18,19 @@ describe("content registries", () => {
     ]);
   });
 
-  it("registers the five real project surfaces currently available", () => {
+  it("registers the eight real project surfaces currently available", () => {
     expect(PROJECTS.map((project) => project.key)).toEqual([
       "pick4me",
       "pont-facturx",
       "goodcall",
+      "ops-knowledge-agent",
+      "ci-cd-platform",
+      "product-infrastructure",
       "docextract",
       "manteigaria",
     ]);
+    expect(getProject("ops-knowledge-agent")?.kind).toBe("demo");
+    expect(getProject("ci-cd-platform")?.kind).toBe("mission");
     expect(getProject("pick4me")?.heroImage).toBe("/realisations/pick4me.webp");
     expect(getProject("manteigaria")?.kind).toBe("concept");
   });
@@ -41,7 +46,8 @@ describe("content registries", () => {
       "devops",
     ]);
     expect(getService("applications").proofProjects).toContain("pick4me");
-    expect(getService("automation").proofProjects).toEqual(["docextract", "pont-facturx"]);
+    expect(getService("automation").proofProjects).toEqual(["docextract", "pont-facturx", "ops-knowledge-agent"]);
+    expect(getService("devops").proofProjects).toEqual(["ci-cd-platform", "product-infrastructure"]);
   });
 
   it("contains no public em dash copy", () => {

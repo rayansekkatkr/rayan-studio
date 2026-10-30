@@ -5,6 +5,8 @@ import { Eyebrow } from "@/components/ui/eyebrow";
 import { FEATURED_INSIGHT, getInsightsByCategory } from "@/content/insights";
 import type { Locale } from "@/lib/i18n";
 import { insightPath } from "@/lib/site-routes";
+import { PageHero } from "@/components/ui/page-hero";
+import { PAGE_HERO_PHOTOS } from "@/content/visuals";
 import { InsightCard } from "./insight-card";
 
 export function InsightsIndex({ locale }: { locale: Locale }) {
@@ -16,16 +18,16 @@ export function InsightsIndex({ locale }: { locale: Locale }) {
 
   return (
     <div>
-      <div className="rs-theme-dark bg-rs-bg pb-16 pt-28 text-rs-fg md:pb-20 md:pt-32">
-        <Container>
-          <Eyebrow>{locale === "fr" ? "Ressources" : "Insights"}</Eyebrow>
-          <h1 className="mt-4 max-w-3xl text-[1.75rem] font-semibold leading-[1.08] tracking-tight md:text-4xl">
-            {fr
-              ? "Guides, ressources et retours d'expérience pour mieux construire vos produits digitaux."
-              : "Guides, resources and practical thinking for building better digital products."}
-          </h1>
-        </Container>
-      </div>
+      <PageHero
+        eyebrow={fr ? "Ressources" : "Insights"}
+        title={
+          fr
+            ? "Guides, ressources et retours d'expérience pour mieux construire vos produits digitaux."
+            : "Guides, resources and practical thinking for building better digital products."
+        }
+        image={PAGE_HERO_PHOTOS.insights}
+        titleClassName="lg:text-[2.75rem]"
+      />
 
       <div className="bg-rs-bg py-[var(--rs-section-space)]">
         <Container>

@@ -5,6 +5,9 @@ import { Eyebrow } from "@/components/ui/eyebrow";
 import type { ServiceRecord } from "@/content/services";
 import type { Locale } from "@/lib/i18n";
 import { startProjectPath } from "@/lib/site-routes";
+import { PageHero } from "@/components/ui/page-hero";
+import { TechChips } from "@/components/ui/tech-chips";
+import { SERVICE_HERO_PHOTOS } from "@/content/visuals";
 import { ServiceProof } from "./service-proof";
 
 export function ServicePage({ locale, service }: { locale: Locale; service: ServiceRecord }) {
@@ -12,16 +15,33 @@ export function ServicePage({ locale, service }: { locale: Locale; service: Serv
 
   return (
     <article>
-      <section data-service-section="hero" className="rs-theme-dark bg-rs-bg pb-16 pt-28 text-rs-fg md:pb-20 md:pt-32">
-        <Container>
-          <Eyebrow>{service.eyebrow[locale]}</Eyebrow>
-          <h1 className="mt-4 max-w-4xl text-[1.75rem] font-semibold leading-[1.08] tracking-tight md:text-4xl">
-            {service.title[locale]}
-          </h1>
-          <p className="mt-6 max-w-[var(--rs-reading)] text-lg leading-relaxed text-rs-muted">
-            {service.description[locale]}
-          </p>
-        </Container>
+      <section data-service-section="hero">
+        <PageHero
+          eyebrow={service.eyebrow[locale]}
+          title={service.title[locale]}
+          lead={<p>{service.description[locale]}</p>}
+          image={SERVICE_HERO_PHOTOS[service.key]}
+          titleClassName="lg:text-[2.75rem]"
+        >
+          <div className="mt-10 flex flex-wrap items-center gap-4">
+            <TrackedLink
+              href={startProjectPath(locale)}
+              event={{
+                ctaId: "service_hero_start_project",
+                source: `service_${service.key}`,
+                destination: startProjectPath(locale),
+                locale,
+              }}
+              className="inline-flex items-center gap-2 rounded-full bg-rs-fg px-7 py-3.5 text-base font-semibold text-[var(--rs-dark)] transition-colors duration-150 hover:bg-rs-accent hover:text-rs-fg"
+            >
+              {fr ? "Demander un devis" : "Request a quote"}
+              <ArrowRight aria-hidden className="h-4 w-4" />
+            </TrackedLink>
+            <p className="text-sm text-rs-muted">
+              {fr ? "Réponse sous 24 h ouvrées" : "Reply within 24 business hours"}
+            </p>
+          </div>
+        </PageHero>
       </section>
 
       <section data-service-section="need" className="bg-rs-bg py-[var(--rs-section-space)]">
@@ -72,9 +92,12 @@ export function ServicePage({ locale, service }: { locale: Locale; service: Serv
             ))}
           </ul>
           {service.technologies.length > 0 ? (
-            <p className="mt-8 text-sm font-medium uppercase tracking-[0.14em] text-rs-muted">
-              {service.technologies.join(" · ")}
-            </p>
+            <div className="mt-10">
+              <p className="text-xs font-semibold uppercase tracking-[0.18em] text-rs-muted">
+                {fr ? "Technologies" : "Technologies"}
+              </p>
+              <TechChips items={service.technologies} className="mt-4" />
+            </div>
           ) : null}
         </Container>
       </section>
@@ -110,7 +133,9 @@ export function ServicePage({ locale, service }: { locale: Locale; service: Serv
             {fr ? "Parlons de ce que vous cherchez à construire." : "Let's talk about what you want to build."}
           </h2>
           <p className="mt-4 text-base text-rs-muted">
-            {fr ? "Pas besoin d'avoir déjà un cahier des charges." : "No specification document needed to start."}
+            {fr
+              ? "Pas besoin d'avoir déjà un cahier des charges. Réponse sous 24 h ouvrées, devis gratuit après un premier échange."
+              : "No specification document needed to start. Reply within 24 business hours, free quote after a first conversation."}
           </p>
           <TrackedLink
             href={startProjectPath(locale)}

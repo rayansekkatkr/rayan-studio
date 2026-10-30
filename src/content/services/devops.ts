@@ -66,8 +66,8 @@ export const devops: ServiceRecord = {
       "Backup and restore plans that are actually tested.",
     ],
   },
-  technologies: ["GitHub Actions", "Docker", "Linux", "Nginx", "PostgreSQL"],
-  proofProjects: [],
+  technologies: ["GitLab CI", "GitHub Actions", "Docker", "Kubernetes", "Terraform", "Ansible", "AWS", "Prometheus", "Grafana", "Caddy", "Nginx", "Linux"],
+  proofProjects: ["ci-cd-platform", "product-infrastructure"],
   faq: {
     fr: [
       {

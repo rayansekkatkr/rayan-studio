@@ -1,92 +1,119 @@
+import Image from "next/image";
 import Link from "next/link";
 import { ArrowRight, ArrowUpRight } from "lucide-react";
 import { Container } from "@/components/ui/container";
-import { Eyebrow } from "@/components/ui/eyebrow";
+import { PageHero } from "@/components/ui/page-hero";
+import { TechStack } from "@/components/ui/tech-stack";
 import { SERVICES } from "@/content/services";
-import type { Locale } from "@/lib/i18n";
 import { getCraPage } from "@/content/cra";
+import { PAGE_HERO_PHOTOS, SERVICE_VISUALS } from "@/content/visuals";
+import type { Locale } from "@/lib/i18n";
 import { craPath, servicePath, startProjectPath, type ServiceKey } from "@/lib/site-routes";
+import { cn } from "@/lib/utils";
 
-const GROUPS: Array<{ label: string; keys: ServiceKey[] }> = [
-  { label: "SOFTWARE", keys: ["applications", "mvp", "backends", "automation", "ai"] },
-  { label: "WEB & INFRASTRUCTURE", keys: ["web", "devops"] },
+const GROUPS: Array<{ id: string; label: Record<Locale, string>; keys: ServiceKey[] }> = [
+  { id: "software", label: { fr: "Logiciel", en: "Software" }, keys: ["applications", "mvp", "backends", "automation", "ai"] },
+  { id: "web", label: { fr: "Web & infrastructure", en: "Web & infrastructure" }, keys: ["web", "devops"] },
 ];
+
+function Card({ href, title, body, visual }: { href: string; title: string; body: string; visual: string }) {
+  return (
+    <li>
+      <Link
+        href={href}
+        className="group flex h-full flex-col overflow-hidden rounded-[var(--rs-radius-md)] border border-[var(--rs-border)] bg-rs-surface transition-colors duration-150 hover:border-[var(--rs-border-strong)]"
+      >
+        <div className="relative aspect-[16/9] overflow-hidden bg-[var(--rs-dark)]">
+          <Image
+            src={visual}
+            alt=""
+            fill
+            sizes="(min-width: 1024px) 30vw, (min-width: 640px) 46vw, 100vw"
+            className={cn(
+              "object-cover transition-transform duration-500 ease-out group-hover:scale-[1.04]",
+              visual.startsWith("/realisations/") ? "object-left-top" : "object-center",
+            )}
+          />
+        </div>
+        <div className="flex flex-1 flex-col p-6">
+          <span className="flex items-start justify-between gap-4 text-xl font-semibold tracking-tight text-rs-fg transition-colors duration-150 group-hover:text-rs-accent-fg">
+            {title}
+            <ArrowUpRight
+              aria-hidden
+              className="mt-1 h-5 w-5 shrink-0 text-rs-muted transition-all duration-150 group-hover:-translate-y-0.5 group-hover:translate-x-0.5 group-hover:text-rs-accent-fg"
+            />
+          </span>
+          <span className="mt-2 block text-sm leading-relaxed text-rs-muted">{body}</span>
+        </div>
+      </Link>
+    </li>
+  );
+}
 
 export function ServicesIndex({ locale }: { locale: Locale }) {
   const fr = locale === "fr";
+  const cra = getCraPage(locale).serviceCard;
 
   return (
     <div>
-      <div className="rs-theme-dark bg-rs-bg pb-16 pt-28 text-rs-fg md:pb-20 md:pt-32">
-        <Container>
-          <Eyebrow>Services</Eyebrow>
-          <h1 className="mt-4 max-w-3xl text-[1.75rem] font-semibold leading-[1.08] tracking-tight md:text-4xl">
-            {fr ? "Services software, web et cloud" : "Software, web and cloud services"}
-          </h1>
-          <p className="mt-6 max-w-[var(--rs-reading)] text-lg leading-relaxed text-rs-muted">
+      <PageHero
+        eyebrow="Services"
+        title={fr ? "Services software, web et cloud" : "Software, web and cloud services"}
+        lead={
+          <p>
             {fr
-              ? "Du produit SaaS complet au site vitrine premium : chaque service part de votre besoin métier, pas d'une technologie."
-              : "From a full SaaS product to a premium website: every service starts from your business need, not from a technology."}
+              ? "Du produit SaaS complet au site vitrine premium, en passant par l'IA générative et le DevOps : chaque service part de votre besoin métier, pas d'une technologie."
+              : "From a full SaaS product to a premium website, including generative AI and DevOps: every service starts from your business need, not from a technology."}
           </p>
-        </Container>
-      </div>
+        }
+        image={PAGE_HERO_PHOTOS.services}
+      />
 
       <div className="bg-rs-bg py-[var(--rs-section-space)]">
         <Container>
-          <div className="grid gap-14 md:grid-cols-2">
+          <div className="space-y-14">
             {GROUPS.map((group) => (
-              <div key={group.label}>
-                <p className="text-xs font-semibold uppercase tracking-[0.18em] text-rs-muted">
-                  {group.label}
-                </p>
-                <ul className="mt-5 divide-y divide-[var(--rs-border)] border-t border-[var(--rs-border)]">
+              <div key={group.id}>
+                <p className="text-xs font-semibold uppercase tracking-[0.18em] text-rs-muted">{group.label[locale]}</p>
+                <ul className="mt-5 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
                   {group.keys.map((key) => {
                     const service = SERVICES.find((item) => item.key === key);
                     if (!service) return null;
                     return (
-                      <li key={key}>
-                        <Link href={servicePath(locale, key)} className="group block py-6">
-                          <span className="flex items-center justify-between text-2xl font-semibold tracking-tight text-rs-fg transition-colors duration-150 group-hover:text-rs-accent-fg">
-                            {service.eyebrow[locale]}
-                            <ArrowUpRight
-                              aria-hidden
-                              className="h-6 w-6 text-rs-muted transition-all duration-150 group-hover:-translate-y-0.5 group-hover:translate-x-0.5 group-hover:text-rs-accent-fg"
-                            />
-                          </span>
-                          <span className="mt-2 block max-w-xl text-base leading-relaxed text-rs-muted">
-                            {service.description[locale]}
-                          </span>
-                        </Link>
-                      </li>
+                      <Card
+                        key={key}
+                        href={servicePath(locale, key)}
+                        title={service.eyebrow[locale]}
+                        body={service.description[locale]}
+                        visual={SERVICE_VISUALS[key]}
+                      />
                     );
                   })}
-                  {group.label === "WEB & INFRASTRUCTURE" ? (
-                    <li>
-                      <Link href={craPath(locale)} className="group block py-6">
-                        <span className="flex items-center justify-between text-2xl font-semibold tracking-tight text-rs-fg transition-colors duration-150 group-hover:text-rs-accent-fg">
-                          {getCraPage(locale).serviceCard.title}
-                          <ArrowUpRight
-                            aria-hidden
-                            className="h-6 w-6 text-rs-muted transition-all duration-150 group-hover:-translate-y-0.5 group-hover:translate-x-0.5 group-hover:text-rs-accent-fg"
-                          />
-                        </span>
-                        <span className="mt-2 block max-w-xl text-base leading-relaxed text-rs-muted">
-                          {getCraPage(locale).serviceCard.description}
-                        </span>
-                      </Link>
-                    </li>
+                  {group.id === "web" ? (
+                    <Card href={craPath(locale)} title={cra.title} body={cra.description} visual={SERVICE_VISUALS.cra} />
                   ) : null}
                 </ul>
               </div>
             ))}
           </div>
-          <Link
-            href={startProjectPath(locale)}
-            className="mt-14 inline-flex items-center gap-2 rounded-full bg-rs-fg px-7 py-3.5 text-base font-semibold text-rs-bg transition-colors duration-150 hover:bg-rs-accent"
-          >
-            {fr ? "Parler de votre projet" : "Start a project"}
-            <ArrowRight aria-hidden className="h-4 w-4" />
-          </Link>
+        </Container>
+      </div>
+
+      <div className="rs-theme-dark bg-rs-bg py-[var(--rs-section-space)] text-rs-fg">
+        <Container>
+          <TechStack locale={locale} />
+          <div className="mt-14 flex flex-wrap items-center gap-5">
+            <Link
+              href={startProjectPath(locale)}
+              className="inline-flex items-center gap-2 rounded-full bg-rs-fg px-7 py-3.5 text-base font-semibold text-[var(--rs-dark)] transition-colors duration-150 hover:bg-rs-accent hover:text-rs-fg"
+            >
+              {fr ? "Demander un devis" : "Request a quote"}
+              <ArrowRight aria-hidden className="h-4 w-4" />
+            </Link>
+            <p className="text-sm text-rs-muted">
+              {fr ? "Réponse sous 24 h ouvrées, devis gratuit après un premier échange." : "Reply within 24 business hours, free quote after a first conversation."}
+            </p>
+          </div>
         </Container>
       </div>
     </div>

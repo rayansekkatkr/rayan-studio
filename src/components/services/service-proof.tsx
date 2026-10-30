@@ -5,6 +5,7 @@ import { getProject } from "@/content/projects";
 import type { ProjectKey } from "@/content/projects";
 import type { Locale } from "@/lib/i18n";
 import { workPath } from "@/lib/site-routes";
+import { projectImageAlt } from "@/components/work/project-labels";
 
 export function ServiceProof({ locale, projectKeys }: { locale: Locale; projectKeys: ProjectKey[] }) {
   const fr = locale === "fr";
@@ -25,7 +26,7 @@ export function ServiceProof({ locale, projectKeys }: { locale: Locale; projectK
           <div className="relative aspect-[16/9] overflow-hidden border-b border-[var(--rs-border)]">
             <Image
               src={project.heroImage}
-              alt={fr ? `Interface du produit ${project.title}` : `${project.title} product interface`}
+              alt={projectImageAlt(project, locale)}
               fill
               sizes="(min-width: 768px) 50vw, 100vw"
               className="object-cover object-top"

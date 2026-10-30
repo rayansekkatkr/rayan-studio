@@ -83,10 +83,11 @@ export function getNavigation(locale: Locale): NavMenu[] {
           ],
         },
         {
-          label: fr ? "EXPLORER" : "EXPLORE",
+          label: fr ? "IA & DEVOPS" : "AI & DEVOPS",
           links: [
+            { label: "Ops Knowledge Agent", href: workPath(locale, "ops-knowledge-agent") },
+            { label: fr ? "Plateforme CI/CD" : "CI/CD platform", href: workPath(locale, "plateforme-ci-cd") },
             { label: fr ? "Tous les projets" : "All projects", href: workPath(locale) },
-            { label: fr ? "Études de cas" : "Case studies", href: workPath(locale) },
           ],
         },
       ],
@@ -121,6 +122,7 @@ export function getNavigation(locale: Locale): NavMenu[] {
           label: "CONTACT",
           links: [
             { label: fr ? "Démarrer un projet" : "Start a project", href: startProjectPath(locale) },
+            { label: fr ? "Demander un devis" : "Request a quote", href: startProjectPath(locale) },
             { label: fr ? "Nous contacter" : "Contact us", href: contactPath(locale) },
           ],
         },
