@@ -72,27 +72,39 @@ export function SiteHeader({ locale, topTheme = "light" }: SiteHeaderProps) {
   }, [mobileOpen, openMenu]);
 
   const solid = scrolled || openMenu !== null || mobileOpen;
+  // Once the page scrolls, the bar detaches into a floating pill. The open
+  // mobile menu keeps the full-width bar it is anchored to.
+  const floating = scrolled && !mobileOpen;
   const inverse = topTheme === "dark" && !solid;
 
   return (
     <header
       data-top-theme={topTheme}
       data-surface={solid ? "solid" : "transparent"}
+      data-floating={floating ? "true" : "false"}
       className={cn(
-        "fixed inset-x-0 top-0 z-50 transition-transform duration-200",
-        hidden && !openMenu && !mobileOpen && "-translate-y-full",
+        "fixed inset-x-0 top-0 z-50 transition-[transform,padding] duration-300",
+        floating && "px-3 pt-3",
+        hidden && !openMenu && !mobileOpen && "-translate-y-[calc(100%+3rem)]",
       )}
       onMouseLeave={closeMenus}
     >
       <div
         className={cn(
-          "relative transition-colors duration-200",
-          solid
-            ? "border-b border-[var(--rs-border)] bg-[var(--rs-header-surface)] backdrop-blur"
-            : "bg-transparent",
+          "relative transition-all duration-300",
+          floating
+            ? "mx-auto max-w-[min(var(--rs-container),76rem)] rounded-full border border-[var(--rs-border)] bg-[var(--rs-header-surface)] shadow-[0_16px_40px_-24px_rgba(11,11,14,0.45)] backdrop-blur-md"
+            : solid
+              ? "border-b border-[var(--rs-border)] bg-[var(--rs-header-surface)] backdrop-blur"
+              : "bg-transparent",
         )}
       >
-        <div className="mx-auto flex h-16 w-full max-w-[var(--rs-container)] items-center justify-between px-5 md:px-8">
+        <div
+          className={cn(
+            "mx-auto flex w-full max-w-[var(--rs-container)] items-center justify-between transition-all duration-300",
+            floating ? "h-14 pl-6 pr-2.5" : "h-16 px-5 md:px-8",
+          )}
+        >
           <Link
             href={`/${locale}`}
             onClick={closeMenus}
@@ -179,6 +191,7 @@ export function SiteHeader({ locale, topTheme = "light" }: SiteHeaderProps) {
             <DesktopMegaMenu
               key={menu.key}
               menu={menu}
+              floating={floating}
               panelId={`mega-menu-${menu.key}`}
               onNavigate={closeMenus}
             />
