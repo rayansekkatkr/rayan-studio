@@ -55,3 +55,20 @@ describe("content registries", () => {
     expect(strings.filter((text) => text.includes("—"))).toEqual([]);
   });
 });
+
+describe("accent highlights", () => {
+  it("are exact substrings of the text they colour", () => {
+    for (const service of SERVICES) {
+      for (const locale of ["fr", "en"] as const) {
+        const highlight = service.problemHighlight?.[locale];
+        if (highlight) expect(service.problem[locale]).toContain(highlight);
+      }
+    }
+    for (const project of PROJECTS) {
+      for (const locale of ["fr", "en"] as const) {
+        const highlight = project.challengeHighlight?.[locale];
+        if (highlight) expect(project.challenge[locale][0]).toContain(highlight);
+      }
+    }
+  });
+});

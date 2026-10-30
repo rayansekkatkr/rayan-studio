@@ -4,12 +4,12 @@ import { ArrowUpRight } from "lucide-react";
 import { Container } from "@/components/ui/container";
 import { Eyebrow } from "@/components/ui/eyebrow";
 import { TechChips } from "@/components/ui/tech-chips";
+import { ArticleAsideCard, ArticleLayout, AsideLinkLabel } from "@/components/article/article-layout";
+import { ArticleBlock, NumberedGrid, NumberedList, PullQuote } from "@/components/article/article-blocks";
 import { ClosingCta } from "@/components/ui/closing-cta";
 import type { ProjectRecord } from "@/content/projects";
 import type { Locale } from "@/lib/i18n";
 import { workPath } from "@/lib/site-routes";
-import { cn } from "@/lib/utils";
-import { BALANCED_GRID, balancedSpan } from "@/components/ui/balanced-grid";
 import { KIND_LABELS, projectImageAlt } from "./project-labels";
 
 export function ProjectSummaryPage({ locale, project }: { locale: Locale; project: ProjectRecord }) {
@@ -31,6 +31,33 @@ export function ProjectSummaryPage({ locale, project }: { locale: Locale; projec
     ...project.capabilities.map((capability) => ({ title: capability.title[locale], body: capability.body[locale] })),
     ...project.engineering[locale],
   ];
+  const challenge = project.challenge[locale];
+  const blocks: Array<{ id: string; label: string; content?: React.ReactNode }> = [];
+  if (challenge.length > 0) blocks.push({ id: "contexte", label: fr ? "Le contexte" : "The context" });
+  if (project.solution[locale].length > 0)
+    blocks.push({
+      id: "mis-en-place",
+      label: fr ? "Ce qui a été mis en place" : "What was put in place",
+      content: <NumberedList items={project.solution[locale]} />,
+    });
+  if (cards.length > 0)
+    blocks.push({ id: "details", label: fr ? "Dans le détail" : "In detail", content: <NumberedGrid items={cards} /> });
+  if (project.outcome[locale].length > 0)
+    blocks.push({
+      id: "resultat",
+      label: fr ? "Résultat" : "Outcome",
+      content: (
+        <div className="space-y-3 rounded-[var(--rs-radius-md)] border border-[color-mix(in_srgb,var(--rs-accent)_35%,transparent)] bg-[color-mix(in_srgb,var(--rs-accent)_7%,transparent)] p-6 md:p-8">
+          {project.outcome[locale].map((item) => (
+            <p key={item} className="text-lg font-medium leading-relaxed md:text-xl">
+              {item}
+            </p>
+          ))}
+        </div>
+      ),
+    });
+  if (project.technologies.length > 0)
+    blocks.push({ id: "technologies", label: "Technologies", content: <TechChips items={project.technologies} /> });
   const hasStory =
     project.challenge[locale].length > 0 || project.solution[locale].length > 0 || project.outcome[locale].length > 0;
 
@@ -98,76 +125,55 @@ export function ProjectSummaryPage({ locale, project }: { locale: Locale; projec
       </div>
 
       {hasStory ? (
-        <div className="bg-rs-bg py-14 md:py-16">
-          <Container>
-            <div className="grid gap-12 lg:grid-cols-[minmax(0,5fr)_minmax(0,7fr)]">
-              {project.challenge[locale].length > 0 ? (
-                <div>
-                  <Eyebrow>{fr ? "Le contexte" : "The context"}</Eyebrow>
-                  {project.challenge[locale].map((paragraph) => (
-                    <p key={paragraph} className="mt-5 text-xl leading-relaxed">
-                      {paragraph}
-                    </p>
-                  ))}
-                </div>
-              ) : null}
-              {project.solution[locale].length > 0 ? (
-                <div>
-                  <Eyebrow>{fr ? "Ce qui a été mis en place" : "What was put in place"}</Eyebrow>
-                  <ul className="mt-5 space-y-4">
-                    {project.solution[locale].map((item) => (
-                      <li key={item} className="flex gap-3 text-lg leading-relaxed">
-                        <span aria-hidden className="mt-2.5 h-1.5 w-1.5 shrink-0 rounded-full bg-rs-accent" />
-                        {item}
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-              ) : null}
-            </div>
-
-            {cards.length > 0 ? (
-              <div className={cn("mt-12 grid gap-5 sm:grid-cols-2", BALANCED_GRID)}>
-                {cards.map((card, index) => (
-                  <div
-                    key={card.title}
-                    className={cn(
-                      "rounded-[var(--rs-radius-md)] border border-[var(--rs-border)] bg-rs-surface p-6",
-                      balancedSpan(index, cards.length),
-                    )}
-                  >
-                    <p className="text-lg font-semibold">{card.title}</p>
-                    <p className="mt-2 text-sm leading-relaxed text-rs-muted">{card.body}</p>
-                  </div>
-                ))}
-              </div>
-            ) : null}
-
-            {project.outcome[locale].length > 0 ? (
-              <div className="mt-12 rounded-[var(--rs-radius-md)] border border-[color-mix(in_srgb,var(--rs-accent)_35%,transparent)] bg-[color-mix(in_srgb,var(--rs-accent)_7%,transparent)] p-6 md:p-8">
-                <Eyebrow>{fr ? "Résultat" : "Outcome"}</Eyebrow>
-                {project.outcome[locale].map((item) => (
-                  <p key={item} className="mt-4 text-lg font-medium leading-relaxed md:text-xl">
-                    {item}
+        <ArticleLayout
+          locale={locale}
+          toc={blocks.map((block) => ({ id: block.id, label: block.label }))}
+          aside={
+            <ArticleAsideCard image={project.heroImage}>
+              {links[0] ? (
+                <a href={links[0].href} target="_blank" rel="noreferrer" className="hover:underline">
+                  <AsideLinkLabel>{links[0].label[locale]}</AsideLinkLabel>
+                </a>
+              ) : (
+                <span>{project.title}</span>
+              )}
+            </ArticleAsideCard>
+          }
+        >
+          {blocks.map((block, index) =>
+            block.id === "contexte" ? (
+              <PullQuote
+                key={block.id}
+                id={block.id}
+                eyebrow={`01 · ${block.label}`}
+                text={challenge[0]}
+                highlight={project.challengeHighlight?.[locale]}
+              >
+                {challenge.slice(1).map((paragraph) => (
+                  <p key={paragraph} className="mt-5 max-w-[var(--rs-reading)] text-lg leading-relaxed text-rs-muted">
+                    {paragraph}
                   </p>
                 ))}
+              </PullQuote>
+            ) : (
+              <ArticleBlock key={block.id} id={block.id} index={index + 1} title={block.label}>
+                {block.content}
+              </ArticleBlock>
+            ),
+          )}
+        </ArticleLayout>
+      ) : (
+        <div className="py-12">
+          <Container>
+            {project.technologies.length > 0 ? (
+              <div>
+                <p className="text-xs font-semibold uppercase tracking-[0.18em] text-rs-muted">Technologies</p>
+                <TechChips items={project.technologies} className="mt-4" />
               </div>
             ) : null}
           </Container>
         </div>
-      ) : null}
-
-      <div className="pb-12">
-        <Container>
-          {project.technologies.length > 0 ? (
-            <div className="border-t border-[var(--rs-border)] pt-8">
-              <p className="text-xs font-semibold uppercase tracking-[0.18em] text-rs-muted">Technologies</p>
-              <TechChips items={project.technologies} className="mt-4" />
-            </div>
-          ) : null}
-
-        </Container>
-      </div>
+      )}
       <ClosingCta
         locale={locale}
         ctaId="project_summary_start_project"

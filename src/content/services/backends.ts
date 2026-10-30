@@ -16,6 +16,10 @@ export const backends: ServiceRecord = {
     fr: "Un backend fragile se paie longtemps : pannes difficiles à diagnostiquer, données incohérentes, intégrations qui cassent et fonctionnalités impossibles à ajouter proprement.",
     en: "A fragile backend is paid for over a long time: outages hard to diagnose, inconsistent data, breaking integrations and features impossible to add cleanly.",
   },
+  problemHighlight: {
+    fr: "pannes difficiles à diagnostiquer",
+    en: "outages hard to diagnose",
+  },
   useCases: {
     fr: [
       { title: "APIs", body: "Des interfaces claires et documentées pour vos applications et vos partenaires." },

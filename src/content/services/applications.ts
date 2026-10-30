@@ -16,6 +16,10 @@ export const applications: ServiceRecord = {
     fr: "Les outils génériques finissent par contraindre votre fonctionnement : processus tordus pour rentrer dans le logiciel, données éparpillées, fonctionnalités payées mais inutiles.",
     en: "Generic tools end up constraining how you work: processes twisted to fit the software, scattered data, features you pay for but never use.",
   },
+  problemHighlight: {
+    fr: "processus tordus pour rentrer dans le logiciel",
+    en: "processes twisted to fit the software",
+  },
   useCases: {
     fr: [
       { title: "Produits SaaS", body: "Un produit par abonnement, de la première version au produit exploité en production." },

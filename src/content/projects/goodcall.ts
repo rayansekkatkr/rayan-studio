@@ -43,6 +43,10 @@ export const goodcall: ProjectRecord = {
       "Present a large amount of information about competitions, predictions and rankings without making the experience hard to read or use on mobile.",
     ],
   },
+  challengeHighlight: {
+    fr: "sans rendre l'expérience difficile à lire",
+    en: "without making the experience hard to read",
+  },
   solution: {
     fr: [
       "Hiérarchiser les informations autour des matchs et pronostics.",

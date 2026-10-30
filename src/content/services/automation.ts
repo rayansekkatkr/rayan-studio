@@ -16,6 +16,10 @@ export const automation: ServiceRecord = {
     fr: "Des heures perdues chaque semaine en saisies, copier-coller et vérifications manuelles, et des promesses d'IA génériques qui ne correspondent pas à vos vrais processus.",
     en: "Hours lost every week on data entry, copy-paste and manual checks, plus generic AI promises that do not match your real processes.",
   },
+  problemHighlight: {
+    fr: "Des heures perdues chaque semaine",
+    en: "Hours lost every week",
+  },
   useCases: {
     fr: [
       { title: "Workflows automatisés", body: "Les étapes répétitives de vos processus exécutées sans intervention manuelle." },

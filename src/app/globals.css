@@ -388,3 +388,16 @@ section[id] {
     min-height: 62svh;
   }
 }
+
+/* Editorial article layout (services and work pages): numbers as visual anchors. */
+.num-outline {
+  color: transparent;
+  -webkit-text-stroke: 1.2px color-mix(in srgb, var(--rs-accent) 45%, transparent);
+}
+
+.num-gradient {
+  background: linear-gradient(180deg, var(--rs-accent) 30%, color-mix(in srgb, var(--rs-accent) 25%, white));
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}

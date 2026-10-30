@@ -38,6 +38,10 @@ export const pontFacturx: ProjectRecord = {
       "Make an electronic-invoicing workflow understandable for business users while handling the constraints of document generation, validation and exchange.",
     ],
   },
+  challengeHighlight: {
+    fr: "compréhensible pour des utilisateurs métier",
+    en: "understandable for business users",
+  },
   solution: {
     fr: [
       "Clarifier les étapes de conversion et de traitement documentaire.",

@@ -16,6 +16,10 @@ export const web: ServiceRecord = {
     fr: "Un site daté ou peu convaincant fait perdre des clients avant même le premier échange : il ne reflète ni la qualité de votre travail ni le sérieux de votre entreprise.",
     en: "A dated or unconvincing website loses clients before the first exchange: it reflects neither the quality of your work nor the seriousness of your company.",
   },
+  problemHighlight: {
+    fr: "fait perdre des clients avant même le premier échange",
+    en: "loses clients before the first exchange",
+  },
   useCases: {
     fr: [
       { title: "Direction visuelle", body: "Une identité en ligne cohérente avec votre positionnement réel." },

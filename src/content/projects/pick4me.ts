@@ -42,6 +42,10 @@ export const pick4me: ProjectRecord = {
       "The product had to keep an understandable journey despite multiple roles, mission states and business actions.",
     ],
   },
+  challengeHighlight: {
+    fr: "créer, accepter et suivre des missions",
+    en: "create, accept and track missions",
+  },
   solution: {
     fr: [
       "Structurer les parcours autour du cycle de vie d'une mission.",

@@ -9,6 +9,8 @@ export type ServiceRecord = {
   title: Record<Locale, string>;
   description: Record<Locale, string>;
   problem: Record<Locale, string>;
+  /** Exact substring of `problem` shown in the accent colour on the service page. */
+  problemHighlight?: Record<Locale, string>;
   useCases: Record<Locale, Array<{ title: string; body: string }>>;
   approach: Record<Locale, string[]>;
   engineering: Record<Locale, string[]>;

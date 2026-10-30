@@ -31,6 +31,8 @@ export type ProjectRecord = {
   status?: LocalizedText;
   technologies: string[];
   challenge: Record<Locale, string[]>;
+  /** Exact substring of the first challenge paragraph shown in the accent colour. */
+  challengeHighlight?: Record<Locale, string>;
   solution: Record<Locale, string[]>;
   capabilities: Array<{ title: LocalizedText; body: LocalizedText }>;
   productUx: Record<Locale, string[]>;

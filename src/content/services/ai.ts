@@ -20,6 +20,10 @@ export const ai: ServiceRecord = {
     fr: "Vos équipes utilisent déjà l'IA, souvent avec des comptes personnels et sans règle sur les données qu'elles y collent. Les offres se multiplient, et personne n'a le temps de les comparer, de les configurer et de former les équipes.",
     en: "Your teams already use AI, often on personal accounts and with no rule on the data they paste into it. Offers keep multiplying, and nobody has the time to compare them, configure them and train the teams.",
   },
+  problemHighlight: {
+    fr: "souvent avec des comptes personnels",
+    en: "often on personal accounts",
+  },
   useCases: {
     fr: [
       {

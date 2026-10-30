@@ -16,6 +16,10 @@ export const mvp: ServiceRecord = {
     fr: "Beaucoup de projets échouent avant d'exister : trop de fonctionnalités prévues, trop de temps avant la première mise en ligne, et plus de budget quand les vrais retours utilisateurs arrivent.",
     en: "Many projects fail before existing: too many planned features, too much time before the first release, and no budget left when real user feedback arrives.",
   },
+  problemHighlight: {
+    fr: "trop de temps avant la première mise en ligne",
+    en: "too much time before the first release",
+  },
   useCases: {
     fr: [
       { title: "Définition du périmètre", body: "Séparer ce qui est indispensable à la V1 de ce qui peut attendre." },

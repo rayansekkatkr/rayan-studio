@@ -16,6 +16,10 @@ export const devops: ServiceRecord = {
     fr: "Des mises en production stressantes, des serveurs que personne n'ose toucher et des incidents découverts par les utilisateurs plutôt que par la supervision.",
     en: "Stressful releases, servers nobody dares to touch and incidents discovered by users rather than by monitoring.",
   },
+  problemHighlight: {
+    fr: "des incidents découverts par les utilisateurs",
+    en: "incidents discovered by users",
+  },
   useCases: {
     fr: [
       { title: "CI/CD", body: "Des mises en production automatisées, testées et répétables." },

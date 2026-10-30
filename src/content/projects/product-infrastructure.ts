@@ -33,6 +33,10 @@ export const productInfrastructure: ProjectRecord = {
       "Ship and run several products in production with safe, repeatable deployments, without a dedicated operations team.",
     ],
   },
+  challengeHighlight: {
+    fr: "sans équipe d'exploitation dédiée",
+    en: "without a dedicated operations team",
+  },
   solution: {
     fr: [
       "Intégration continue GitHub Actions sur chaque changement : lint, vérification des types, tests et build.",

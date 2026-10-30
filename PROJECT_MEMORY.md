@@ -714,3 +714,13 @@ Quand un changement important est fait:
 - **Boutons** : « Parler de votre projet » pour l'en-tete et les appels generaux, « Demander un devis » sur les pages service, l'index services et Offres (`OFFERS_CONTENT.ctaLabel`). Doublon « Demarrer un projet » retire du menu Studio > Contact (meme URL que « Demander un devis »).
 - Verification : typecheck, lint, check:copy, vitest 161/161, build 182 pages (polices simulees), Playwright 124/124, mesure des fonds apres correction (2 bandes par page, 4 sur l'accueil), captures relues.
 - Non verifie : typographie avec les vraies polices, mobile en detail.
+
+### 2026-10-31 (mise en page article sur services et realisations)
+
+- Demande de Rayan : sections sous le hero trop fades. 3 maquettes (icones, bento, editorial photo), puis 3 variantes du style editorial ; choix : **C3 « Sommaire & article »**.
+- `src/components/article/` : `ArticleLayout` (grille `15rem` + colonne de lecture, sommaire collant desktop uniquement + carte photo avec lien), `ArticleToc` (client, IntersectionObserver, `aria-current="location"`), blocs `ArticleBlock` (titre numerote avec filet), `PullQuote` (filet violet, sous-chaine en couleur d'accent), `NumberedGrid` (2 colonnes, numeros en contour ; liste impaire = cellule CTA si `trailing`, sinon derniere ligne pleine largeur), `BigSteps` (grands chiffres en degrade), `NumberedList`. Classes `.num-outline` et `.num-gradient` dans `globals.css`.
+- Pages service : besoin en citation, cas d'usage, approche, engineering + technos, projets, FAQ avec lien contact (meme ordre et memes `data-service-section`). Nouveaux ctaId : `service_aside_start_project`. La carte FAQ laterale est remplacee par une ligne « Une autre question ? ».
+- Etudes de cas : apercu, puis article (defi en citation, reponse, construit, Product & UX, Engineering, technos, resultat) ; galerie, projet suivant et CTA en pleine largeur apres. Ordre `data-case-section` inchange. `capabilities-grid.tsx` et `engineering-section.tsx` supprimes (remplaces par `NumberedGrid`).
+- Fiches resumees (Ops Agent, CI/CD, infrastructure) : meme article (contexte, mis en place, dans le detail, resultat, technologies) quand il y a un contenu ; DocExtract et Manteigaria gardent seulement les technos.
+- Contenu : `problemHighlight` (services) et `challengeHighlight` (projets), sous-chaines exactes verifiees par `content-registry.test.ts`.
+- Verification : typecheck, lint, check:copy, vitest 162/162, build 182 pages (polices simulees), Playwright 124/124, captures desktop (APIs & backends, Pick4Me, Ops Agent) et mobile 390 (pas de debordement).
