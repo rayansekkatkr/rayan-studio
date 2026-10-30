@@ -15,10 +15,10 @@ export function TechStack({ locale }: { locale: Locale }) {
         {TECH_STACK.map((group) => (
           <div
             key={group.label.en}
-            className="rounded-[var(--rs-radius-md)] border border-[var(--rs-border)] bg-gradient-to-b from-white/[0.05] to-white/[0.01] p-5"
+            className="rounded-[var(--rs-radius-md)] border border-[var(--rs-border)] bg-rs-surface p-5"
           >
             <p className="text-sm font-semibold text-rs-fg">{group.label[locale]}</p>
-            <TechChips items={group.items} className="mt-4" />
+            <TechChips items={group.items} inset className="mt-4" />
           </div>
         ))}
       </div>

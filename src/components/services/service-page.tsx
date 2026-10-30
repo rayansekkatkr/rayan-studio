@@ -9,6 +9,7 @@ import { contactPath, startProjectPath } from "@/lib/site-routes";
 import { PageHero } from "@/components/ui/page-hero";
 import { TechChips } from "@/components/ui/tech-chips";
 import { SERVICE_HERO_PHOTOS } from "@/content/visuals";
+import { ClosingCta } from "@/components/ui/closing-cta";
 import { ServiceProof } from "./service-proof";
 
 export function ServicePage({ locale, service }: { locale: Locale; service: ServiceRecord }) {
@@ -102,12 +103,12 @@ export function ServicePage({ locale, service }: { locale: Locale; service: Serv
         </Container>
       </div>
 
-      <section data-service-section="engineering" className="rs-theme-dark bg-rs-bg py-14 text-rs-fg md:py-20">
+      <section data-service-section="engineering" className="border-t border-[var(--rs-border)] py-14 md:py-20">
         <Container>
           <Eyebrow>Engineering</Eyebrow>
           <ul className="mt-8 grid gap-5 md:grid-cols-2">
             {service.engineering[locale].map((item) => (
-              <li key={item} className="rounded-[var(--rs-radius-sm)] border border-[var(--rs-border)] px-5 py-4 text-base leading-relaxed">
+              <li key={item} className="rounded-[var(--rs-radius-md)] border border-[var(--rs-border)] bg-rs-surface px-5 py-4 text-base leading-relaxed">
                 {item}
               </li>
             ))}
@@ -123,7 +124,7 @@ export function ServicePage({ locale, service }: { locale: Locale; service: Serv
         </Container>
       </section>
 
-      <section data-service-section="proof" className="bg-rs-bg py-14 md:py-20">
+      <section data-service-section="proof" className="border-t border-[var(--rs-border)] py-14 md:py-20">
         <Container>
           <Eyebrow>{fr ? "Projets" : "Work"}</Eyebrow>
           <div className="mt-8">
@@ -132,7 +133,7 @@ export function ServicePage({ locale, service }: { locale: Locale; service: Serv
         </Container>
       </section>
 
-      <section data-service-section="faq" className="bg-rs-surface py-14 md:py-20">
+      <section data-service-section="faq" className="border-t border-[var(--rs-border)] py-14 md:py-20">
         <Container>
           <div className="grid gap-10 lg:grid-cols-[minmax(0,7fr)_minmax(0,5fr)] lg:gap-14">
             <div>
@@ -152,64 +153,50 @@ export function ServicePage({ locale, service }: { locale: Locale; service: Serv
                 ))}
               </div>
             </div>
-            <div className="relative isolate self-start overflow-hidden rounded-[var(--rs-radius-md)] border border-[var(--rs-border)] bg-[var(--rs-dark)] p-7 text-white">
-              <Image
-                src={SERVICE_HERO_PHOTOS[service.key]}
-                alt=""
-                fill
-                sizes="(min-width: 1024px) 35vw, 100vw"
-                className="-z-20 object-cover opacity-35"
-              />
-              <div aria-hidden className="absolute inset-0 -z-10 bg-gradient-to-t from-[var(--rs-dark)] via-[rgba(9,9,12,0.7)] to-[rgba(9,9,12,0.35)]" />
-              <p className="flex items-center gap-2 text-sm font-semibold text-white/80">
-                <Clock aria-hidden className="h-4 w-4" />
-                {fr ? "Réponse sous 24 h ouvrées" : "Reply within 24 business hours"}
-              </p>
-              <p className="mt-4 text-2xl font-semibold tracking-tight">
-                {fr ? "Une question qui n'est pas dans la liste ?" : "A question that isn't listed?"}
-              </p>
-              <p className="mt-2 text-sm leading-relaxed text-white/75">
-                {fr
-                  ? "Décrivez votre situation en quelques lignes : vous échangez directement avec Rayan Sekkat."
-                  : "Describe your situation in a few lines: you talk directly with Rayan Sekkat."}
-              </p>
-              <TrackedLink
-                href={contactPath(locale)}
-                event={{ ctaId: "service_faq_contact", source: `service_${service.key}`, destination: contactPath(locale), locale }}
-                className="mt-6 inline-flex items-center gap-2 rounded-full bg-white px-6 py-3 text-sm font-semibold text-[var(--rs-dark)] transition-colors duration-150 hover:bg-rs-accent hover:text-white"
-              >
-                {fr ? "Poser une question" : "Ask a question"}
-                <ArrowRight aria-hidden className="h-4 w-4" />
-              </TrackedLink>
+            <div className="self-start overflow-hidden rounded-[var(--rs-radius-md)] border border-[var(--rs-border)] bg-rs-surface">
+              <div className="relative aspect-[16/7] bg-[var(--rs-dark)]">
+                <Image
+                  src={SERVICE_HERO_PHOTOS[service.key]}
+                  alt=""
+                  fill
+                  sizes="(min-width: 1024px) 35vw, 100vw"
+                  className="object-cover opacity-80"
+                />
+              </div>
+              <div className="p-6 md:p-7">
+                <p className="flex items-center gap-2 text-sm font-semibold text-rs-accent-fg">
+                  <Clock aria-hidden className="h-4 w-4" />
+                  {fr ? "Réponse sous 24 h ouvrées" : "Reply within 24 business hours"}
+                </p>
+                <p className="mt-3 text-xl font-semibold tracking-tight">
+                  {fr ? "Une question qui n'est pas dans la liste ?" : "A question that isn't listed?"}
+                </p>
+                <p className="mt-2 text-sm leading-relaxed text-rs-muted">
+                  {fr
+                    ? "Décrivez votre situation en quelques lignes : vous échangez directement avec Rayan Sekkat."
+                    : "Describe your situation in a few lines: you talk directly with Rayan Sekkat."}
+                </p>
+                <TrackedLink
+                  href={contactPath(locale)}
+                  event={{ ctaId: "service_faq_contact", source: `service_${service.key}`, destination: contactPath(locale), locale }}
+                  className="mt-5 inline-flex items-center gap-2 text-base font-semibold text-rs-accent-fg transition-colors duration-150 hover:text-rs-fg"
+                >
+                  {fr ? "Poser une question" : "Ask a question"}
+                  <ArrowRight aria-hidden className="h-4 w-4" />
+                </TrackedLink>
+              </div>
             </div>
           </div>
         </Container>
       </section>
 
-      <section data-service-section="cta" className="rs-theme-dark bg-rs-bg py-16 text-rs-fg md:py-20">
-        <Container className="text-center">
-          <h2 className="mx-auto max-w-2xl text-[1.75rem] font-semibold tracking-tight md:text-3xl">
-            {fr ? "Parlons de ce que vous cherchez à construire." : "Let's talk about what you want to build."}
-          </h2>
-          <p className="mt-4 text-base text-rs-muted">
-            {fr
-              ? "Pas besoin d'avoir déjà un cahier des charges. Réponse sous 24 h ouvrées, devis gratuit après un premier échange."
-              : "No specification document needed to start. Reply within 24 business hours, free quote after a first conversation."}
-          </p>
-          <TrackedLink
-            href={startProjectPath(locale)}
-            event={{
-              ctaId: "service_start_project",
-              source: `service_${service.key}`,
-              destination: startProjectPath(locale),
-              locale,
-            }}
-            className="mt-8 inline-flex items-center gap-2 rounded-full bg-rs-fg px-7 py-3.5 text-base font-semibold text-[var(--rs-dark)] transition-colors duration-150 hover:bg-rs-accent hover:text-rs-fg"
-          >
-            {fr ? "Parler de votre projet" : "Start a project"}
-            <ArrowRight aria-hidden className="h-4 w-4" />
-          </TrackedLink>
-        </Container>
+      <section data-service-section="cta">
+        <ClosingCta
+          locale={locale}
+          ctaId="service_start_project"
+          source={`service_${service.key}`}
+          label={fr ? "Demander un devis" : "Request a quote"}
+        />
       </section>
     </article>
   );

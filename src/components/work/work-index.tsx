@@ -3,6 +3,7 @@ import { Eyebrow } from "@/components/ui/eyebrow";
 import { FEATURED_PROJECTS } from "@/content/projects";
 import type { Locale } from "@/lib/i18n";
 import { HeroScreenRow } from "@/components/home/hero-screen-wall";
+import { ClosingCta } from "@/components/ui/closing-cta";
 import { MoreWorkGrid } from "./more-work-grid";
 import { WorkProjectBlock } from "./work-project-block";
 
@@ -32,6 +33,7 @@ export function WorkIndex({ locale }: { locale: Locale }) {
       ))}
 
       <MoreWorkGrid locale={locale} />
+      <ClosingCta locale={locale} ctaId="work_start_project" source="work_index" />
     </div>
   );
 }

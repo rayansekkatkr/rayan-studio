@@ -55,14 +55,18 @@ export function TechIcon({ name, className }: { name: string; className?: string
   return <Icon aria-hidden className={cn("h-4 w-4 shrink-0 text-rs-accent-fg", className)} />;
 }
 
-export function TechChips({ items, className }: { items: string[]; className?: string }) {
+/** `inset`: chips placed inside a white card take the page background so they stay visible. */
+export function TechChips({ items, className, inset = false }: { items: string[]; className?: string; inset?: boolean }) {
   if (items.length === 0) return null;
   return (
     <ul className={cn("flex flex-wrap gap-2", className)}>
       {items.map((item) => (
         <li
           key={item}
-          className="inline-flex items-center gap-2 rounded-full border border-[var(--rs-border)] bg-rs-surface py-1.5 pl-3 pr-3.5 text-sm font-medium text-rs-fg"
+          className={cn(
+            "inline-flex items-center gap-2 rounded-full border border-[var(--rs-border)] py-1.5 pl-3 pr-3.5 text-sm font-medium text-rs-fg",
+            inset ? "bg-rs-bg" : "bg-rs-surface",
+          )}
         >
           <TechIcon name={item} />
           {item}

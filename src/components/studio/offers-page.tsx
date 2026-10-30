@@ -3,6 +3,7 @@ import Link from "next/link";
 import { ArrowRight, Check, Clock } from "lucide-react";
 import { Container } from "@/components/ui/container";
 import { PageHero } from "@/components/ui/page-hero";
+import { ClosingCta } from "@/components/ui/closing-cta";
 import { OFFERS_CONTENT } from "@/content/studio";
 import { OFFER_PHOTOS, PAGE_HERO_PHOTOS } from "@/content/visuals";
 import type { Locale } from "@/lib/i18n";
@@ -26,7 +27,7 @@ export function OffersPage({ locale }: { locale: Locale }) {
         </p>
       </PageHero>
 
-      <div className="bg-rs-bg py-[var(--rs-section-space)]">
+      <div className="py-[var(--rs-section-space)]">
         <Container>
           <div className="grid gap-6 md:grid-cols-2">
             {content.offers.map((offer, index) => (
@@ -88,6 +89,12 @@ export function OffersPage({ locale }: { locale: Locale }) {
           </div>
         </Container>
       </div>
+      <ClosingCta
+        locale={locale}
+        ctaId="offers_start_project"
+        source="offers_page"
+        label={fr ? "Demander un devis" : "Request a quote"}
+      />
     </article>
   );
 }

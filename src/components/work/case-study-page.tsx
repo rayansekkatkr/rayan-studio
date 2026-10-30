@@ -1,12 +1,10 @@
-import { ArrowRight, Check } from "lucide-react";
-import { TrackedLink } from "@/components/analytics/tracked-link";
+import { Check } from "lucide-react";
+import { ClosingCta } from "@/components/ui/closing-cta";
 import { Container } from "@/components/ui/container";
 import { Eyebrow } from "@/components/ui/eyebrow";
 import { TechChips } from "@/components/ui/tech-chips";
 import type { ProjectRecord } from "@/content/projects";
 import type { Locale } from "@/lib/i18n";
-import { startProjectPath } from "@/lib/site-routes";
-import { cn } from "@/lib/utils";
 import { CapabilitiesGrid } from "./capabilities-grid";
 import { CaseStudyHero } from "./case-study-hero";
 import { CaseStudyOverview } from "./case-study-overview";
@@ -20,16 +18,19 @@ const SECTION = "py-12 md:py-16";
 
 export function CaseStudyPage({ locale, project }: { locale: Locale; project: ProjectRecord }) {
   const fr = locale === "fr";
-  const dark = project.tone === "dark";
   const gallery = project.gallery.filter((item) => item.src !== project.heroImage);
 
   return (
-    <article className={cn(dark && "rs-theme-dark bg-rs-bg text-rs-fg")}>
-      <section data-case-section="hero" className="pb-8 pt-28 md:pt-32">
+    <article>
+      <section
+        data-case-section="hero"
+        className="rs-theme-dark relative isolate overflow-hidden bg-rs-bg pb-12 pt-28 text-rs-fg md:pb-16 md:pt-32"
+      >
+        <div aria-hidden className="hero-glow absolute inset-0 -z-10" />
         <CaseStudyHero locale={locale} project={project} />
       </section>
 
-      <section data-case-section="overview" className="pb-4">
+      <section data-case-section="overview" className="pt-8">
         <CaseStudyOverview locale={locale} project={project} />
       </section>
 
@@ -74,7 +75,7 @@ export function CaseStudyPage({ locale, project }: { locale: Locale; project: Pr
         <CapabilitiesGrid locale={locale} project={project} />
       </section>
 
-      <div className="border-y border-[var(--rs-border)] bg-[color-mix(in_srgb,var(--rs-surface-subtle)_45%,transparent)] py-12 md:py-16">
+      <div className="border-t border-[var(--rs-border)] py-12 md:py-16">
         <Container>
           <div className="grid gap-10 lg:grid-cols-[minmax(0,5fr)_minmax(0,7fr)] lg:gap-14">
             <section data-case-section="product-ux">
@@ -130,39 +131,13 @@ export function CaseStudyPage({ locale, project }: { locale: Locale; project: Pr
         <NextProject locale={locale} project={project} />
       </section>
 
-      <section data-case-section="cta" className="pb-16 md:pb-20">
-        <Container>
-          <div className="flex flex-col items-start justify-between gap-6 border-t border-[var(--rs-border)] pt-10 md:flex-row md:items-center">
-            <div>
-              <h2 className="text-2xl font-semibold tracking-tight md:text-3xl">
-                {fr ? "Vous construisez quelque chose de similaire ?" : "Building something similar?"}
-              </h2>
-              <p className="mt-2 text-base text-rs-muted">
-                {fr
-                  ? "Réponse sous 24 h ouvrées, devis gratuit après un premier échange."
-                  : "Reply within 24 business hours, free quote after a first conversation."}
-              </p>
-            </div>
-            <TrackedLink
-              href={startProjectPath(locale)}
-              event={{
-                ctaId: "case_study_start_project",
-                source: `case_study_${project.key}`,
-                destination: startProjectPath(locale),
-                locale,
-              }}
-              className={cn(
-                "inline-flex shrink-0 items-center gap-2 rounded-full px-7 py-3.5 text-base font-semibold transition-colors duration-150",
-                dark
-                  ? "bg-rs-fg text-[var(--rs-dark)] hover:bg-rs-accent hover:text-rs-fg"
-                  : "bg-rs-fg text-rs-bg hover:bg-rs-accent",
-              )}
-            >
-              {fr ? "Parler de votre projet" : "Start a project"}
-              <ArrowRight aria-hidden className="h-4 w-4" />
-            </TrackedLink>
-          </div>
-        </Container>
+      <section data-case-section="cta">
+        <ClosingCta
+          locale={locale}
+          ctaId="case_study_start_project"
+          source={`case_study_${project.key}`}
+          title={fr ? "Vous construisez quelque chose de similaire ?" : "Building something similar?"}
+        />
       </section>
     </article>
   );

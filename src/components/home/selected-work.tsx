@@ -16,7 +16,6 @@ export function SelectedWork({ locale }: { locale: Locale }) {
     <div>
       <h2 className="sr-only">{fr ? "Nos réalisations" : "Selected work"}</h2>
       {FEATURED_PROJECTS.map((project, index) => {
-        const dark = project.tone === "dark";
         const wide = project.tone === "energy";
         // Reversed chapters put the media column first, so the ratio flips with it.
         const reversed = !wide && index % 2 === 1;
@@ -27,7 +26,7 @@ export function SelectedWork({ locale }: { locale: Locale }) {
             className={cn(
               "py-[var(--rs-section-space)] lg:flex lg:items-center",
               wide ? "home-chapter-immersive" : "home-chapter-featured",
-              dark ? "rs-theme-dark bg-rs-bg text-rs-fg" : "bg-rs-surface text-rs-fg",
+              index > 0 && "border-t border-[var(--rs-border)]",
             )}
           >
             <Container>

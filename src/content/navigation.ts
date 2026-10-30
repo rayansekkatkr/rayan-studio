@@ -121,7 +121,6 @@ export function getNavigation(locale: Locale): NavMenu[] {
         {
           label: "CONTACT",
           links: [
-            { label: fr ? "Démarrer un projet" : "Start a project", href: startProjectPath(locale) },
             { label: fr ? "Demander un devis" : "Request a quote", href: startProjectPath(locale) },
             { label: fr ? "Nous contacter" : "Contact us", href: contactPath(locale) },
           ],

@@ -62,7 +62,7 @@ export function ServicesOverview({ locale }: { locale: Locale }) {
   const fr = locale === "fr";
 
   return (
-    <div className="home-chapter-large bg-rs-bg py-[var(--rs-section-space)] lg:flex lg:items-center">
+    <div className="home-chapter-large border-t border-[var(--rs-border)] py-[var(--rs-section-space)] lg:flex lg:items-center">
       <Container>
         <Eyebrow>Services</Eyebrow>
         <h2 className="sr-only">{fr ? "Nos services" : "Our services"}</h2>

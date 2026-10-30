@@ -14,7 +14,7 @@ export function MoreWorkGrid({ locale }: { locale: Locale }) {
   const secondary = PROJECTS.filter((project) => !project.featuredOrder);
 
   return (
-    <div className="bg-rs-bg py-14 md:py-20">
+    <div className="border-t border-[var(--rs-border)] py-14 md:py-20">
       <Container>
         <h2 className="text-xs font-semibold uppercase tracking-[0.18em] text-rs-muted">
           {fr ? "Autres projets : IA, DevOps et produits" : "More work: AI, DevOps and products"}

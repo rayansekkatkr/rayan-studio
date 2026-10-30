@@ -52,7 +52,7 @@ export function MethodPreview({ locale }: { locale: Locale }) {
   const fr = locale === "fr";
 
   return (
-    <div className="bg-rs-surface py-[var(--rs-section-space)]">
+    <div className="border-t border-[var(--rs-border)] py-[var(--rs-section-space)]">
       <Container>
         <Eyebrow>{fr ? "Méthode" : "Method"}</Eyebrow>
         <h2 className="mt-4 max-w-2xl text-[1.75rem] font-semibold tracking-tight md:text-3xl">

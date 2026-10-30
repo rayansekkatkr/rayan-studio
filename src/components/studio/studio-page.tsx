@@ -4,10 +4,11 @@ import { ArrowRight, Clock, MapPin, UserRound } from "lucide-react";
 import { Container } from "@/components/ui/container";
 import { PageHero } from "@/components/ui/page-hero";
 import { TechStack } from "@/components/ui/tech-stack";
+import { ClosingCta } from "@/components/ui/closing-cta";
 import { STUDIO_CONTENT } from "@/content/studio";
 import { PAGE_HERO_PHOTOS } from "@/content/visuals";
 import type { Locale } from "@/lib/i18n";
-import { startProjectPath, studioPath, workPath } from "@/lib/site-routes";
+import { studioPath, workPath } from "@/lib/site-routes";
 
 export function StudioPage({ locale }: { locale: Locale }) {
   const fr = locale === "fr";
@@ -47,7 +48,7 @@ export function StudioPage({ locale }: { locale: Locale }) {
         <p className="mt-8 text-xl font-semibold text-rs-accent-fg md:text-2xl">{content.hero.keyIdea}</p>
       </PageHero>
 
-      <div className="bg-rs-bg py-[var(--rs-section-space)]">
+      <div className="py-[var(--rs-section-space)]">
         <Container>
           <div className="grid items-center gap-12 lg:grid-cols-[minmax(0,6fr)_minmax(0,5fr)]">
             <p className="max-w-[var(--rs-reading)] text-xl leading-relaxed text-rs-fg">{content.hero.body}</p>
@@ -82,10 +83,10 @@ export function StudioPage({ locale }: { locale: Locale }) {
         </Container>
       </div>
 
-      <div className="rs-theme-dark bg-rs-bg py-[var(--rs-section-space)] text-rs-fg">
+      <div className="border-t border-[var(--rs-border)] py-[var(--rs-section-space)]">
         <Container>
           <TechStack locale={locale} />
-          <div className="mt-14 flex flex-wrap gap-x-8 gap-y-4">
+          <div className="mt-10 flex flex-wrap gap-x-8 gap-y-4">
             <Link
               href={studioPath(locale, "rayan")}
               className="inline-flex items-center gap-2 text-base font-semibold text-rs-accent-fg transition-colors duration-150 hover:text-rs-fg"
@@ -100,16 +101,11 @@ export function StudioPage({ locale }: { locale: Locale }) {
               {fr ? "Voir les réalisations" : "See the work"}
               <ArrowRight aria-hidden className="h-4 w-4" />
             </Link>
-            <Link
-              href={startProjectPath(locale)}
-              className="inline-flex items-center gap-2 text-base font-semibold text-rs-accent-fg transition-colors duration-150 hover:text-rs-fg"
-            >
-              {fr ? "Démarrer un projet" : "Start a project"}
-              <ArrowRight aria-hidden className="h-4 w-4" />
-            </Link>
           </div>
         </Container>
       </div>
+
+      <ClosingCta locale={locale} ctaId="studio_start_project" source="studio_page" />
     </article>
   );
 }

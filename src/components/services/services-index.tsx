@@ -4,6 +4,7 @@ import { ArrowRight, ArrowUpRight } from "lucide-react";
 import { Container } from "@/components/ui/container";
 import { PageHero } from "@/components/ui/page-hero";
 import { TechStack } from "@/components/ui/tech-stack";
+import { ClosingCta } from "@/components/ui/closing-cta";
 import { SERVICES } from "@/content/services";
 import { getCraPage } from "@/content/cra";
 import { PAGE_HERO_PHOTOS, SERVICE_VISUALS } from "@/content/visuals";
@@ -70,7 +71,7 @@ export function ServicesIndex({ locale }: { locale: Locale }) {
         image={PAGE_HERO_PHOTOS.services}
       />
 
-      <div className="bg-rs-bg py-[var(--rs-section-space)]">
+      <div className="py-[var(--rs-section-space)]">
         <Container>
           <div className="space-y-14">
             {GROUPS.map((group) => (
@@ -107,23 +108,18 @@ export function ServicesIndex({ locale }: { locale: Locale }) {
         </Container>
       </div>
 
-      <div className="rs-theme-dark bg-rs-bg py-[var(--rs-section-space)] text-rs-fg">
+      <div className="border-t border-[var(--rs-border)] py-[var(--rs-section-space)]">
         <Container>
           <TechStack locale={locale} />
-          <div className="mt-14 flex flex-wrap items-center gap-5">
-            <Link
-              href={startProjectPath(locale)}
-              className="inline-flex items-center gap-2 rounded-full bg-rs-fg px-7 py-3.5 text-base font-semibold text-[var(--rs-dark)] transition-colors duration-150 hover:bg-rs-accent hover:text-rs-fg"
-            >
-              {fr ? "Demander un devis" : "Request a quote"}
-              <ArrowRight aria-hidden className="h-4 w-4" />
-            </Link>
-            <p className="text-sm text-rs-muted">
-              {fr ? "Réponse sous 24 h ouvrées, devis gratuit après un premier échange." : "Reply within 24 business hours, free quote after a first conversation."}
-            </p>
-          </div>
         </Container>
       </div>
+
+      <ClosingCta
+        locale={locale}
+        ctaId="services_start_project"
+        source="services_index"
+        label={fr ? "Demander un devis" : "Request a quote"}
+      />
     </div>
   );
 }

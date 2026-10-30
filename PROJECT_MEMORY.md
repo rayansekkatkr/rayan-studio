@@ -702,3 +702,15 @@ Quand un changement important est fait:
 - **Pages service** : besoin (colonne gauche collante + lien) a cote des cas d'usage en cartes, approche en 4 etapes numerotees, FAQ avec icone plus et carte « Une question qui n'est pas dans la liste ? » (photo du service, lien contact, ctaId `service_faq_contact`), nouveau ctaId `service_need_start_project`. Espacements `py-14 md:py-20`.
 - Blocs projets de la page Realisations et « Autres projets » : `py-14 md:py-20`.
 - Verification : typecheck, lint, check:copy, vitest 161/161, build 182 pages (polices simulees), Playwright complet 124/124, captures desktop relues (Pick4Me, Pont Factur-X, Realisations, service Applications, Services, Ressources, Ops Knowledge Agent).
+
+### 2026-10-30 (audit design : fonds, espacements, boutons)
+
+- Audit (mesure du fond tous les 40 px sur 20 pages) : 4 fonds clairs differents (#f4f4f1, #fff, #ecece7, teinte translucide), jusqu'a 11 bandes et 5 sections sombres sur l'accueil, projets en theme sombre ou clair selon `tone`, bande CTA sombre suivie d'un footer clair.
+- **Regle adoptee (a respecter)** : un seul fond de page (`--rs-bg`, beige). Les sections se separent par `border-t`, la profondeur vient des cartes blanches. Le sombre est reserve au haut de page (`PageHero`, heros dedies) et a une seule section de l'accueil (`studio-intro`). Pas de bande sombre ni blanche pleine largeur ailleurs.
+- **Fin de page** : `ui/closing-cta.tsx`, carte sombre arrondie avec `hero-glow` posee sur le fond clair (accueil, services, pages service, realisations, etudes de cas, fiches resumees, studio, offres). Formulaire CRA : meme principe (carte sombre).
+- **Projets** : toutes les pages ont un haut sombre et un contenu clair, quel que soit `tone` ; header toujours `topTheme="dark"` sur `/work/[slug]`. `tone` ne sert plus qu'au cadrage des images. Page Realisations et accueil : blocs projets sur le meme fond, seul le cote de l'image alterne.
+- **Stack** : cartes blanches sur fond clair, puces `inset` (fond de page) pour rester visibles.
+- **Espacements** : `--rs-section-space` ramene a `clamp(3.5rem, 6vw, 5rem)` (proche de `py-14 md:py-20`). `.home-chapter-large` passe a 62svh pour garder la hierarchie de l'accueil (test e2e).
+- **Boutons** : « Parler de votre projet » pour l'en-tete et les appels generaux, « Demander un devis » sur les pages service, l'index services et Offres (`OFFERS_CONTENT.ctaLabel`). Doublon « Demarrer un projet » retire du menu Studio > Contact (meme URL que « Demander un devis »).
+- Verification : typecheck, lint, check:copy, vitest 161/161, build 182 pages (polices simulees), Playwright 124/124, mesure des fonds apres correction (2 bandes par page, 4 sur l'accueil), captures relues.
+- Non verifie : typographie avec les vraies polices, mobile en detail.

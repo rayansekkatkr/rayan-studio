@@ -1,12 +1,13 @@
 import Image from "next/image";
 import Link from "next/link";
-import { ArrowRight, ArrowUpRight } from "lucide-react";
+import { ArrowUpRight } from "lucide-react";
 import { Container } from "@/components/ui/container";
 import { Eyebrow } from "@/components/ui/eyebrow";
 import { TechChips } from "@/components/ui/tech-chips";
+import { ClosingCta } from "@/components/ui/closing-cta";
 import type { ProjectRecord } from "@/content/projects";
 import type { Locale } from "@/lib/i18n";
-import { startProjectPath, workPath } from "@/lib/site-routes";
+import { workPath } from "@/lib/site-routes";
 import { cn } from "@/lib/utils";
 import { BALANCED_GRID, balancedSpan } from "@/components/ui/balanced-grid";
 import { KIND_LABELS, projectImageAlt } from "./project-labels";
@@ -156,7 +157,7 @@ export function ProjectSummaryPage({ locale, project }: { locale: Locale; projec
         </div>
       ) : null}
 
-      <div className="bg-rs-bg pb-16 md:pb-20">
+      <div className="pb-12">
         <Container>
           {project.technologies.length > 0 ? (
             <div className="border-t border-[var(--rs-border)] pt-8">
@@ -165,23 +166,14 @@ export function ProjectSummaryPage({ locale, project }: { locale: Locale; projec
             </div>
           ) : null}
 
-          <div className="mt-12 border-t border-[var(--rs-border)] pt-10 text-center">
-            <h2 className="mx-auto max-w-2xl text-xl font-semibold tracking-tight md:text-2xl">
-              {fr ? "Vous construisez quelque chose de similaire ?" : "Building something similar?"}
-            </h2>
-            <p className="mt-3 text-base text-rs-muted">
-              {fr ? "Réponse sous 24 h ouvrées." : "Reply within 24 business hours."}
-            </p>
-            <Link
-              href={startProjectPath(locale)}
-              className="mt-6 inline-flex items-center gap-2 rounded-full bg-rs-fg px-7 py-3.5 text-base font-semibold text-rs-bg transition-colors duration-150 hover:bg-rs-accent"
-            >
-              {fr ? "Parler de votre projet" : "Start a project"}
-              <ArrowRight aria-hidden className="h-4 w-4" />
-            </Link>
-          </div>
         </Container>
       </div>
+      <ClosingCta
+        locale={locale}
+        ctaId="project_summary_start_project"
+        source={`project_${project.key}`}
+        title={fr ? "Vous construisez quelque chose de similaire ?" : "Building something similar?"}
+      />
     </article>
   );
 }
