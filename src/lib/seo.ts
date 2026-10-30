@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { BRAND } from "@/lib/brand";
 import type { Locale } from "@/lib/i18n";
 
 type LocalizedMetadataInput = {
@@ -55,5 +56,40 @@ export function buildBreadcrumbJsonLd(items: Array<{ name: string; path: string 
       name: item.name,
       item: item.path,
     })),
+  };
+}
+
+export function buildFaqJsonLd(items: Array<{ question: string; answer: string }>) {
+  return {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: items.map((item) => ({
+      "@type": "Question",
+      name: item.question,
+      acceptedAnswer: { "@type": "Answer", text: item.answer },
+    })),
+  };
+}
+
+/** `Service` offered by the studio, linked to the ProfessionalService node of the home page. */
+export function buildServiceJsonLd(input: {
+  siteUrl: string;
+  path: string;
+  name: string;
+  description: string;
+  serviceType: string;
+  locale: "fr" | "en";
+}) {
+  return {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    "@id": `${input.siteUrl}${input.path}#service`,
+    name: input.name,
+    description: input.description,
+    serviceType: input.serviceType,
+    url: `${input.siteUrl}${input.path}`,
+    provider: { "@type": "ProfessionalService", "@id": `${input.siteUrl}/#studio`, name: BRAND.name, url: input.siteUrl },
+    areaServed: input.locale === "fr" ? "FR" : "Worldwide",
+    availableLanguage: ["fr", "en"],
   };
 }

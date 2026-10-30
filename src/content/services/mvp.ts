@@ -12,6 +12,22 @@ export const mvp: ServiceRecord = {
     fr: "Cadrage, priorisation et développement d'une première version prête pour la production : assez complète pour convaincre, assez focalisée pour sortir vite.",
     en: "Framing, prioritization and development of a first production-ready version: complete enough to convince, focused enough to ship fast.",
   },
+  seo: {
+    fr: { title: "Développement de MVP et lancement de produit digital", description: "Développement de MVP pour startups et porteurs de projet : cadrage, priorisation, première version en production et itérations après les premiers retours. Devis gratuit." },
+    en: { title: "MVP development and digital product launch", description: "MVP development for startups and founders: scoping, prioritisation, a first version in production and iterations after the first feedback. Free quote." },
+  },
+  benefits: {
+    fr: [
+      { title: "Des retours utilisateurs plus tôt", body: "Une première version en ligne rapidement, pour tester l'idée sur de vrais utilisateurs." },
+      { title: "Un budget concentré sur l'essentiel", body: "Les fonctionnalités sont triées : ce qui prouve la valeur d'abord, le reste ensuite." },
+      { title: "Une base réutilisable", body: "Le MVP est construit proprement pour devenir la V2, pas pour être jeté." },
+    ],
+    en: [
+      { title: "User feedback sooner", body: "A first version online quickly, to test the idea with real users." },
+      { title: "A budget focused on what matters", body: "Features are sorted: what proves value first, the rest later." },
+      { title: "A reusable foundation", body: "The MVP is built cleanly to become V2, not to be thrown away." },
+    ],
+  },
   problem: {
     fr: "Beaucoup de projets échouent avant d'exister : trop de fonctionnalités prévues, trop de temps avant la première mise en ligne, et plus de budget quand les vrais retours utilisateurs arrivent.",
     en: "Many projects fail before existing: too many planned features, too much time before the first release, and no budget left when real user feedback arrives.",

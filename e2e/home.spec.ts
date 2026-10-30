@@ -11,12 +11,20 @@ test.describe("homepage", () => {
     await expect(
       page.getByRole("heading", {
         level: 1,
-        name: "Des produits digitaux conçus pour faire avancer votre entreprise.",
+        name: "Sites web, applications et logiciels sur mesure.",
       }),
     ).toBeVisible();
 
-    const startCta = page.getByRole("link", { name: "Parler de votre projet" }).first();
-    await expect(startCta).toHaveAttribute("href", "/fr/demarrer-un-projet");
+    const quoteCta = page.getByRole("link", { name: "Demander un devis gratuit" }).first();
+    await expect(quoteCta).toHaveAttribute("href", "/fr/devis-gratuit");
+    await expect(page.getByRole("link", { name: /Sites web & refonte/ }).first()).toHaveAttribute(
+      "href",
+      "/fr/site-internet-commerces-pme",
+    );
+    await expect(page.getByRole("link", { name: /Applications & SaaS/ }).first()).toHaveAttribute(
+      "href",
+      "/fr/developpement-application-saas",
+    );
     await expect(page.getByRole("link", { name: "Voir nos réalisations" })).toHaveAttribute(
       "href",
       "/fr/work",
@@ -28,12 +36,12 @@ test.describe("homepage", () => {
     await expect(
       page.getByRole("heading", {
         level: 1,
-        name: "Digital products built to move your business forward.",
+        name: "Websites, applications and custom software.",
       }),
     ).toBeVisible();
 
-    const startCta = page.getByRole("link", { name: "Start a project" }).first();
-    await expect(startCta).toHaveAttribute("href", "/en/start-a-project");
+    const quoteCta = page.getByRole("link", { name: "Get a free quote" }).first();
+    await expect(quoteCta).toHaveAttribute("href", "/en/free-quote");
     await expect(page.getByRole("link", { name: "View our work" })).toHaveAttribute(
       "href",
       "/en/work",

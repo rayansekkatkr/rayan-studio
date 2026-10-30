@@ -12,7 +12,7 @@ test.describe("reduced motion", () => {
 
     const h1 = page.getByRole("heading", {
       level: 1,
-      name: "Des produits digitaux conçus pour faire avancer votre entreprise.",
+      name: "Sites web, applications et logiciels sur mesure.",
     });
     await expect(h1).toBeVisible();
     const h1Opacity = await h1.evaluate((node) => getComputedStyle(node).opacity);

@@ -2,6 +2,7 @@ import { ClosingCta } from "@/components/ui/closing-cta";
 import { TechChips } from "@/components/ui/tech-chips";
 import type { ProjectRecord } from "@/content/projects";
 import type { Locale } from "@/lib/i18n";
+import { saasLandingPath, smbLandingPath } from "@/lib/site-routes";
 import { ArticleAsideCard, ArticleLayout, AsideLinkLabel } from "@/components/article/article-layout";
 import { ArticleBlock, NumberedGrid, NumberedList, PullQuote } from "@/components/article/article-blocks";
 import { CaseStudyHero } from "./case-study-hero";
@@ -126,6 +127,11 @@ export function CaseStudyPage({ locale, project }: { locale: Locale; project: Pr
           ctaId="case_study_start_project"
           source={`case_study_${project.key}`}
           title={fr ? "Vous construisez quelque chose de similaire ?" : "Building something similar?"}
+          secondary={
+            project.key === "manteigaria"
+              ? { label: fr ? "Voir l'offre sites web" : "See the website offer", href: smbLandingPath(locale), ctaId: "project_to_websites_offer" }
+              : { label: fr ? "Voir l'offre applications & SaaS" : "See the applications & SaaS offer", href: saasLandingPath(locale), ctaId: "project_to_saas_offer" }
+          }
         />
       </section>
     </article>

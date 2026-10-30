@@ -94,3 +94,20 @@ const LEGAL_PATHS: Record<LegalDocKey, Record<Locale, string>> = {
 export function legalPath(locale: Locale, doc: LegalDocKey) {
   return LEGAL_PATHS[doc][locale];
 }
+
+/** Short free-quote form (name, email, project type, message). */
+export function quotePath(locale: Locale, type?: QuoteType) {
+  const base = locale === "fr" ? "/fr/devis-gratuit" : "/en/free-quote";
+  return type ? `${base}?type=${type}` : base;
+}
+
+export type QuoteType = "site" | "app" | "other";
+
+/** The two commercial landings: websites for small businesses, applications and SaaS. */
+export function smbLandingPath(locale: Locale) {
+  return locale === "fr" ? "/fr/site-internet-commerces-pme" : "/en/websites-small-businesses";
+}
+
+export function saasLandingPath(locale: Locale) {
+  return locale === "fr" ? "/fr/developpement-application-saas" : "/en/application-saas-development";
+}

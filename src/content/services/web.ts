@@ -12,6 +12,22 @@ export const web: ServiceRecord = {
     fr: "Création et refonte de sites premium pour entreprises et commerces : direction visuelle, développement, performance et SEO, avec une mise en ligne accompagnée de bout en bout.",
     en: "Creation and redesign of premium websites for companies and local businesses: visual direction, development, performance and SEO, with launch support end to end.",
   },
+  seo: {
+    fr: { title: "Création et refonte de site internet premium", description: "Création et refonte de sites internet pour entreprises, commerces et restaurants : design sur mesure, mobile, performance et référencement local. Maquette gratuite sous 24 h ouvrées." },
+    en: { title: "Premium website design and redesign", description: "Website design and redesign for companies, shops and restaurants: custom design, mobile, performance and local SEO. Free mockup within 24 business hours." },
+  },
+  benefits: {
+    fr: [
+      { title: "Une image à la hauteur de votre travail", body: "Un site qui inspire confiance dès la première visite." },
+      { title: "Plus de demandes entrantes", body: "Un chemin clair vers l'appel, le formulaire ou la réservation." },
+      { title: "Être trouvé sur Google", body: "Structure, performance et référencement local pris en compte dès la conception." },
+    ],
+    en: [
+      { title: "An image that matches your work", body: "A website that builds trust from the first visit." },
+      { title: "More incoming enquiries", body: "A clear path to calling, the form or booking." },
+      { title: "Be found on Google", body: "Structure, performance and local SEO handled from the design stage." },
+    ],
+  },
   problem: {
     fr: "Un site daté ou peu convaincant fait perdre des clients avant même le premier échange : il ne reflète ni la qualité de votre travail ni le sérieux de votre entreprise.",
     en: "A dated or unconvincing website loses clients before the first exchange: it reflects neither the quality of your work nor the seriousness of your company.",

@@ -5,7 +5,7 @@ import { ServicePage } from "@/components/services/service-page";
 import { SERVICES, getService } from "@/content/services";
 import { getSiteUrl } from "@/lib/brand";
 import { SUPPORTED_LOCALES, normalizeLocale, type Locale } from "@/lib/i18n";
-import { buildBreadcrumbJsonLd, buildLocalizedMetadata } from "@/lib/seo";
+import { buildBreadcrumbJsonLd, buildFaqJsonLd, buildLocalizedMetadata, buildServiceJsonLd } from "@/lib/seo";
 import { resolveServiceSlug, servicePath } from "@/lib/site-routes";
 
 export const dynamicParams = false;
@@ -30,8 +30,8 @@ export async function generateMetadata({
 
   return buildLocalizedMetadata({
     locale,
-    title: service.eyebrow[locale],
-    description: service.description[locale],
+    title: service.seo[locale].title,
+    description: service.seo[locale].description,
     path: servicePath(locale, key),
     alternatePath: servicePath(otherLocale, key),
   });
@@ -56,7 +56,20 @@ export default async function Page({ params }: { params: Promise<{ locale: strin
     <CommercialPageShell locale={locale} headerTopTheme="dark">
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumb) }}
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify([
+            breadcrumb,
+            buildServiceJsonLd({
+              siteUrl,
+              path: servicePath(locale, key),
+              name: service.seo[locale].title,
+              description: service.seo[locale].description,
+              serviceType: service.eyebrow[locale],
+              locale,
+            }),
+            buildFaqJsonLd(service.faq[locale]),
+          ]),
+        }}
       />
       <ServicePage locale={locale} service={service} />
     </CommercialPageShell>

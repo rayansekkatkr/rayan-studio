@@ -16,12 +16,9 @@ describe("SiteHeader", () => {
     expect(trigger).toHaveAttribute("aria-expanded", "false");
   });
 
-  it("uses the canonical start-project path", () => {
+  it("sends the header CTA to the free-quote page", () => {
     render(<SiteHeader locale="en" />);
-    expect(screen.getByRole("link", { name: /Start a project/i })).toHaveAttribute(
-      "href",
-      "/en/start-a-project",
-    );
+    expect(screen.getByRole("link", { name: /Get a free quote/i })).toHaveAttribute("href", "/en/free-quote");
   });
 
   it("exposes a mobile menu button with aria controls", () => {

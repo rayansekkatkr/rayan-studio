@@ -9,7 +9,8 @@ import { SERVICES } from "@/content/services";
 import { getCraPage } from "@/content/cra";
 import { PAGE_HERO_PHOTOS, SERVICE_VISUALS } from "@/content/visuals";
 import type { Locale } from "@/lib/i18n";
-import { craPath, servicePath, startProjectPath, type ServiceKey } from "@/lib/site-routes";
+import { craPath, quotePath, servicePath, type ServiceKey } from "@/lib/site-routes";
+import { AudiencePaths } from "@/components/trust/audience-paths";
 import { cn } from "@/lib/utils";
 import { BALANCED_GRID, balancedSpan } from "@/components/ui/balanced-grid";
 
@@ -71,6 +72,17 @@ export function ServicesIndex({ locale }: { locale: Locale }) {
         image={PAGE_HERO_PHOTOS.services}
       />
 
+      <div className="pt-[var(--rs-section-space)]">
+        <Container>
+          <p className="text-xs font-semibold uppercase tracking-[0.18em] text-rs-muted">
+            {fr ? "Deux façons de démarrer" : "Two ways to start"}
+          </p>
+          <div className="mt-5">
+            <AudiencePaths locale={locale} source="services_index" />
+          </div>
+        </Container>
+      </div>
+
       <div className="py-[var(--rs-section-space)]">
         <Container>
           <div className="space-y-14">
@@ -118,7 +130,8 @@ export function ServicesIndex({ locale }: { locale: Locale }) {
         locale={locale}
         ctaId="services_start_project"
         source="services_index"
-        label={fr ? "Demander un devis" : "Request a quote"}
+        href={quotePath(locale)}
+        label={fr ? "Demander un devis gratuit" : "Get a free quote"}
       />
     </div>
   );

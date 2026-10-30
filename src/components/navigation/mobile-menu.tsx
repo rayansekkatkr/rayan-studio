@@ -5,7 +5,7 @@ import Link from "next/link";
 import { ChevronDown } from "lucide-react";
 import type { NavMenu } from "@/content/navigation";
 import type { Locale } from "@/lib/i18n";
-import { startProjectPath } from "@/lib/site-routes";
+import { quotePath } from "@/lib/site-routes";
 import { cn } from "@/lib/utils";
 import { LanguageSwitch } from "./language-switch";
 
@@ -116,11 +116,11 @@ export function MobileMenu({ id, locale, menus, onClose }: MobileMenuProps) {
           <LanguageSwitch locale={locale} />
         </div>
         <Link
-          href={startProjectPath(locale)}
+          href={quotePath(locale)}
           onClick={onClose}
           className="mt-6 inline-flex items-center justify-center rounded-full bg-rs-fg px-6 py-3.5 text-base font-semibold text-rs-bg transition-colors duration-150 hover:bg-rs-accent"
         >
-          {fr ? "Parler de votre projet" : "Start a project"}
+          {fr ? "Demander un devis gratuit" : "Get a free quote"}
         </Link>
       </nav>
     </div>

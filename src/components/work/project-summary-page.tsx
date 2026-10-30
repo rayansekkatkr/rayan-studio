@@ -9,7 +9,7 @@ import { ArticleBlock, NumberedGrid, NumberedList, PullQuote } from "@/component
 import { ClosingCta } from "@/components/ui/closing-cta";
 import type { ProjectRecord } from "@/content/projects";
 import type { Locale } from "@/lib/i18n";
-import { workPath } from "@/lib/site-routes";
+import { saasLandingPath, smbLandingPath, workPath } from "@/lib/site-routes";
 import { KIND_LABELS, projectImageAlt } from "./project-labels";
 
 export function ProjectSummaryPage({ locale, project }: { locale: Locale; project: ProjectRecord }) {
@@ -179,7 +179,12 @@ export function ProjectSummaryPage({ locale, project }: { locale: Locale; projec
         ctaId="project_summary_start_project"
         source={`project_${project.key}`}
         title={fr ? "Vous construisez quelque chose de similaire ?" : "Building something similar?"}
-      />
+          secondary={
+            project.key === "manteigaria"
+              ? { label: fr ? "Voir l'offre sites web" : "See the website offer", href: smbLandingPath(locale), ctaId: "project_to_websites_offer" }
+              : { label: fr ? "Voir l'offre applications & SaaS" : "See the applications & SaaS offer", href: saasLandingPath(locale), ctaId: "project_to_saas_offer" }
+          }
+        />
     </article>
   );
 }

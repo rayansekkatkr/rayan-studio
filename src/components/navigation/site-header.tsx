@@ -6,7 +6,7 @@ import { Menu, X } from "lucide-react";
 import { TrackedLink } from "@/components/analytics/tracked-link";
 import { getNavigation, type NavMenuKey } from "@/content/navigation";
 import type { Locale } from "@/lib/i18n";
-import { startProjectPath } from "@/lib/site-routes";
+import { quotePath } from "@/lib/site-routes";
 import { cn } from "@/lib/utils";
 import { DesktopMegaMenu } from "./desktop-mega-menu";
 import { LanguageSwitch } from "./language-switch";
@@ -151,11 +151,11 @@ export function SiteHeader({ locale, topTheme = "light" }: SiteHeaderProps) {
           <div className="hidden items-center gap-5 lg:flex">
             <LanguageSwitch locale={locale} tone={inverse ? "inverse" : "default"} />
             <TrackedLink
-              href={startProjectPath(locale)}
+              href={quotePath(locale)}
               event={{
-                ctaId: "nav_start_project",
+                ctaId: "nav_free_quote",
                 source: "site_header",
-                destination: startProjectPath(locale),
+                destination: quotePath(locale),
                 locale,
               }}
               onClick={closeMenus}
@@ -166,7 +166,7 @@ export function SiteHeader({ locale, topTheme = "light" }: SiteHeaderProps) {
                   : "bg-rs-fg text-rs-bg hover:bg-rs-accent",
               )}
             >
-              {fr ? "Parler de votre projet" : "Start a project"}
+              {fr ? "Demander un devis gratuit" : "Get a free quote"}
             </TrackedLink>
           </div>
 

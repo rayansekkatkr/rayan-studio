@@ -17,11 +17,11 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
   return buildLocalizedMetadata({
     locale,
     title: en
-      ? `Software studio for SaaS, web applications and digital products | ${BRAND.name}`
-      : `Studio software, SaaS et expériences web sur mesure | ${BRAND.name}`,
+      ? `Websites, web applications and custom SaaS | ${BRAND.name}`
+      : `Création de sites web, applications et SaaS sur mesure | ${BRAND.name}`,
     description: en
-      ? "Independent studio designing and building custom applications, SaaS platforms and premium websites, with one point of contact from framing to production."
-      : "Studio indépendant qui conçoit et développe applications, plateformes SaaS et sites web premium, avec un interlocuteur unique du cadrage à la mise en production.",
+      ? "Independent studio building websites for small businesses and custom applications and SaaS for startups and companies, with one point of contact. Free quote, reply within 24 business hours."
+      : "Studio indépendant : sites internet pour commerces et PME, applications et SaaS sur mesure pour startups et entreprises, avec un interlocuteur unique. Devis gratuit, réponse sous 24 h ouvrées.",
     path: `/${locale}`,
     alternatePath: en ? "/fr" : "/en",
   });

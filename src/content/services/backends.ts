@@ -12,6 +12,22 @@ export const backends: ServiceRecord = {
     fr: "Conception et développement d'APIs et de backends fiables : authentification, paiements, intégrations, données et temps réel, au service de vos applications web et mobiles.",
     en: "Design and development of reliable APIs and backends: authentication, payments, integrations, data and real time, powering your web and mobile applications.",
   },
+  seo: {
+    fr: { title: "Développement d'API et de backend sur mesure", description: "Conception d'API et de backends fiables : authentification, paiements, intégrations, données et temps réel, pour vos applications web et mobiles. Devis gratuit." },
+    en: { title: "Custom API and backend development", description: "Reliable APIs and backends: authentication, payments, integrations, data and real time, for your web and mobile applications. Free quote." },
+  },
+  benefits: {
+    fr: [
+      { title: "Moins de pannes en production", body: "Erreurs gérées, reprises prévues et supervision en place avant la mise en ligne." },
+      { title: "Des intégrations qui tiennent", body: "Paiements, outils métier et partenaires connectés sans ressaisie ni bricolage." },
+      { title: "Une équipe qui peut reprendre", body: "Code documenté et modèle de données clair : d'autres développeurs peuvent intervenir sans vous bloquer." },
+    ],
+    en: [
+      { title: "Fewer production incidents", body: "Errors handled, retries planned and monitoring in place before launch." },
+      { title: "Integrations that hold", body: "Payments, business tools and partners connected with no re-typing or hacks." },
+      { title: "A team can take over", body: "Documented code and a clear data model: other developers can step in without blocking you." },
+    ],
+  },
   problem: {
     fr: "Un backend fragile se paie longtemps : pannes difficiles à diagnostiquer, données incohérentes, intégrations qui cassent et fonctionnalités impossibles à ajouter proprement.",
     en: "A fragile backend is paid for over a long time: outages hard to diagnose, inconsistent data, breaking integrations and features impossible to add cleanly.",

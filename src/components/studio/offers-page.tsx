@@ -7,7 +7,7 @@ import { ClosingCta } from "@/components/ui/closing-cta";
 import { OFFERS_CONTENT } from "@/content/studio";
 import { OFFER_PHOTOS, PAGE_HERO_PHOTOS } from "@/content/visuals";
 import type { Locale } from "@/lib/i18n";
-import { startProjectPath } from "@/lib/site-routes";
+import { quotePath } from "@/lib/site-routes";
 
 export function OffersPage({ locale }: { locale: Locale }) {
   const fr = locale === "fr";
@@ -77,7 +77,7 @@ export function OffersPage({ locale }: { locale: Locale }) {
                     ))}
                   </ul>
                   <Link
-                    href={startProjectPath(locale)}
+                    href={quotePath(locale, index === 1 || index === 0 ? "app" : index === 2 ? "site" : "other")}
                     className="mt-auto inline-flex items-center gap-2 pt-7 text-base font-semibold text-rs-accent-fg transition-colors duration-150 hover:text-rs-fg"
                   >
                     {content.ctaLabel}
@@ -93,7 +93,8 @@ export function OffersPage({ locale }: { locale: Locale }) {
         locale={locale}
         ctaId="offers_start_project"
         source="offers_page"
-        label={fr ? "Demander un devis" : "Request a quote"}
+        href={quotePath(locale)}
+        label={fr ? "Demander un devis gratuit" : "Get a free quote"}
       />
     </article>
   );

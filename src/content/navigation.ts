@@ -6,7 +6,10 @@ import {
   contactPath,
   craPath,
   insightPath,
+  quotePath,
+  saasLandingPath,
   servicePath,
+  smbLandingPath,
   startProjectPath,
   studioPath,
   workPath,
@@ -39,24 +42,27 @@ export function getNavigation(locale: Locale): NavMenu[] {
       label: "Services",
       groups: [
         {
+          label: fr ? "PAR BESOIN" : "BY NEED",
+          links: [
+            { label: fr ? "Sites web pour commerces & PME" : "Websites for small businesses", href: smbLandingPath(locale) },
+            { label: fr ? "Applications & SaaS sur mesure" : "Custom applications & SaaS", href: saasLandingPath(locale) },
+            { label: fr ? "Demander un devis gratuit" : "Get a free quote", href: quotePath(locale) },
+          ],
+        },
+        {
           label: fr ? "CONCEVOIR" : "BUILD",
           links: [
             { label: fr ? "Applications web & SaaS" : "Web applications & SaaS", href: servicePath(locale, "applications") },
             { label: fr ? "MVP & produits digitaux" : "MVP & digital products", href: servicePath(locale, "mvp") },
             { label: "APIs & backends", href: servicePath(locale, "backends") },
-          ],
-        },
-        {
-          label: fr ? "OPTIMISER" : "OPTIMIZE",
-          links: [
-            { label: fr ? "Automatisation & IA" : "Automation & AI", href: servicePath(locale, "automation") },
-            { label: fr ? "IA générative en entreprise" : "Generative AI for business", href: servicePath(locale, "ai") },
             { label: fr ? "Sites premium & refonte" : "Premium websites & redesign", href: servicePath(locale, "web") },
           ],
         },
         {
-          label: fr ? "EXPLOITER" : "RUN",
+          label: fr ? "OPTIMISER & EXPLOITER" : "OPTIMIZE & RUN",
           links: [
+            { label: fr ? "Automatisation & IA" : "Automation & AI", href: servicePath(locale, "automation") },
+            { label: fr ? "IA générative en entreprise" : "Generative AI for business", href: servicePath(locale, "ai") },
             { label: fr ? "DevOps, cloud & déploiement" : "DevOps, cloud & deployment", href: servicePath(locale, "devops") },
             { label: getCraPage(locale).serviceCard.title, href: craPath(locale) },
           ],
@@ -121,7 +127,8 @@ export function getNavigation(locale: Locale): NavMenu[] {
         {
           label: "CONTACT",
           links: [
-            { label: fr ? "Demander un devis" : "Request a quote", href: startProjectPath(locale) },
+            { label: fr ? "Demander un devis gratuit" : "Get a free quote", href: quotePath(locale) },
+            { label: fr ? "Parcours projet détaillé" : "Detailed project brief", href: startProjectPath(locale) },
             { label: fr ? "Nous contacter" : "Contact us", href: contactPath(locale) },
           ],
         },

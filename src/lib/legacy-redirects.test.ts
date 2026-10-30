@@ -3,7 +3,7 @@ import { describe, expect, it } from "vitest";
 import { LEGACY_REDIRECTS } from "../../config/legacy-redirects.mjs";
 import { INSIGHTS } from "@/content/insights";
 import { SERVICES } from "@/content/services";
-import { insightPath, servicePath, startProjectPath, studioPath } from "@/lib/site-routes";
+import { insightPath, saasLandingPath, servicePath, smbLandingPath, startProjectPath, studioPath } from "@/lib/site-routes";
 
 const require = createRequire(import.meta.url);
 const { getAllServiceSeoPages } = require("../../src/lib/service-seo.js") as {
@@ -22,6 +22,8 @@ function canonicalRoutes(): Set<string> {
     routes.add(`/${locale}/insights`);
     routes.add(`/${locale}/contact`);
     routes.add(startProjectPath(locale));
+    routes.add(smbLandingPath(locale));
+    routes.add(saasLandingPath(locale));
     for (const service of SERVICES) routes.add(servicePath(locale, service.key));
     for (const page of ["studio", "rayan", "method", "offers", "faq"] as const) {
       routes.add(studioPath(locale, page));

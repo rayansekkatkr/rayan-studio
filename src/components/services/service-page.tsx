@@ -1,8 +1,8 @@
-import { ArrowRight, Clock, Plus } from "lucide-react";
+import { ArrowRight, Check, Clock, Plus } from "lucide-react";
 import { TrackedLink } from "@/components/analytics/tracked-link";
 import type { ServiceRecord } from "@/content/services";
 import type { Locale } from "@/lib/i18n";
-import { contactPath, startProjectPath } from "@/lib/site-routes";
+import { contactPath, quotePath, saasLandingPath, smbLandingPath } from "@/lib/site-routes";
 import { PageHero } from "@/components/ui/page-hero";
 import { TechChips } from "@/components/ui/tech-chips";
 import { SERVICE_HERO_PHOTOS } from "@/content/visuals";
@@ -13,6 +13,8 @@ import { ServiceProof } from "./service-proof";
 
 export function ServicePage({ locale, service }: { locale: Locale; service: ServiceRecord }) {
   const fr = locale === "fr";
+  const isWeb = service.key === "web";
+  const quote = quotePath(locale, isWeb ? "site" : "app");
 
   return (
     <article>
@@ -26,16 +28,16 @@ export function ServicePage({ locale, service }: { locale: Locale; service: Serv
         >
           <div className="mt-10 flex flex-wrap items-center gap-4">
             <TrackedLink
-              href={startProjectPath(locale)}
+              href={quote}
               event={{
-                ctaId: "service_hero_start_project",
+                ctaId: "service_hero_free_quote",
                 source: `service_${service.key}`,
-                destination: startProjectPath(locale),
+                destination: quote,
                 locale,
               }}
               className="inline-flex items-center gap-2 rounded-full bg-rs-fg px-7 py-3.5 text-base font-semibold text-[var(--rs-dark)] transition-colors duration-150 hover:bg-rs-accent hover:text-rs-fg"
             >
-              {fr ? "Demander un devis" : "Request a quote"}
+              {fr ? "Demander un devis gratuit" : "Get a free quote"}
               <ArrowRight aria-hidden className="h-4 w-4" />
             </TrackedLink>
             <p className="text-sm text-rs-muted">
@@ -49,6 +51,7 @@ export function ServicePage({ locale, service }: { locale: Locale; service: Serv
         locale={locale}
         toc={[
           { id: "besoin", label: fr ? "Le besoin" : "The need" },
+          { id: "benefices", label: fr ? "Ce que vous y gagnez" : "What you gain" },
           { id: "realisations-type", label: fr ? "Ce que nous construisons" : "What we build" },
           { id: "approche", label: fr ? "Approche" : "Approach" },
           { id: "engineering", label: "Engineering" },
@@ -58,8 +61,8 @@ export function ServicePage({ locale, service }: { locale: Locale; service: Serv
         aside={
           <ArticleAsideCard image={SERVICE_HERO_PHOTOS[service.key]}>
             <TrackedLink
-              href={startProjectPath(locale)}
-              event={{ ctaId: "service_aside_start_project", source: `service_${service.key}`, destination: startProjectPath(locale), locale }}
+              href={quote}
+              event={{ ctaId: "service_aside_free_quote", source: `service_${service.key}`, destination: quote, locale }}
               className="hover:underline"
             >
               <AsideLinkLabel>{fr ? "Décrire votre besoin" : "Describe your need"}</AsideLinkLabel>
@@ -75,13 +78,30 @@ export function ServicePage({ locale, service }: { locale: Locale; service: Serv
           highlight={service.problemHighlight?.[locale]}
         />
 
-        <ArticleBlock id="realisations-type" index={2} title={fr ? "Ce que nous construisons" : "What we build"} data-service-section="use-cases">
+        <ArticleBlock id="benefices" index={2} title={fr ? "Ce que vous y gagnez" : "What you gain"}>
+          <ul className="grid gap-4 md:grid-cols-3">
+            {service.benefits[locale].map((benefit) => (
+              <li
+                key={benefit.title}
+                className="rounded-[var(--rs-radius-md)] border border-[var(--rs-border)] bg-rs-surface p-5"
+              >
+                <span className="flex h-8 w-8 items-center justify-center rounded-full bg-rs-accent">
+                  <Check aria-hidden className="h-4 w-4 text-white" />
+                </span>
+                <h3 className="mt-4 text-lg font-semibold leading-snug">{benefit.title}</h3>
+                <p className="mt-1.5 text-sm leading-relaxed text-rs-muted">{benefit.body}</p>
+              </li>
+            ))}
+          </ul>
+        </ArticleBlock>
+
+        <ArticleBlock id="realisations-type" index={3} title={fr ? "Ce que nous construisons" : "What we build"} data-service-section="use-cases">
           <NumberedGrid
             items={service.useCases[locale]}
             trailing={
               <TrackedLink
-                href={startProjectPath(locale)}
-                event={{ ctaId: "service_need_start_project", source: `service_${service.key}`, destination: startProjectPath(locale), locale }}
+                href={quote}
+                event={{ ctaId: "service_need_free_quote", source: `service_${service.key}`, destination: quote, locale }}
                 className="inline-flex items-center gap-2 text-base font-semibold text-rs-accent-fg transition-colors duration-150 hover:text-rs-fg"
               >
                 {fr ? "Décrire votre besoin" : "Describe your need"}
@@ -91,11 +111,11 @@ export function ServicePage({ locale, service }: { locale: Locale; service: Serv
           />
         </ArticleBlock>
 
-        <ArticleBlock id="approche" index={3} title={fr ? "Approche" : "Approach"} data-service-section="approach">
+        <ArticleBlock id="approche" index={4} title={fr ? "Approche" : "Approach"} data-service-section="approach">
           <BigSteps steps={service.approach[locale]} />
         </ArticleBlock>
 
-        <ArticleBlock id="engineering" index={4} title="Engineering" data-service-section="engineering">
+        <ArticleBlock id="engineering" index={5} title="Engineering" data-service-section="engineering">
           <NumberedList items={service.engineering[locale]} />
           {service.technologies.length > 0 ? (
             <div className="mt-8">
@@ -105,11 +125,11 @@ export function ServicePage({ locale, service }: { locale: Locale; service: Serv
           ) : null}
         </ArticleBlock>
 
-        <ArticleBlock id="projets" index={5} title={fr ? "Projets" : "Work"} data-service-section="proof">
+        <ArticleBlock id="projets" index={6} title={fr ? "Projets" : "Work"} data-service-section="proof">
           <ServiceProof locale={locale} projectKeys={service.proofProjects} />
         </ArticleBlock>
 
-        <ArticleBlock id="faq" index={6} title="FAQ" data-service-section="faq">
+        <ArticleBlock id="faq" index={7} title="FAQ" data-service-section="faq">
           <div className="divide-y divide-[var(--rs-border)] border-y border-[var(--rs-border)]">
             {service.faq[locale].map((item) => (
               <details key={item.question} className="group py-5">
@@ -142,9 +162,21 @@ export function ServicePage({ locale, service }: { locale: Locale; service: Serv
       <section data-service-section="cta">
         <ClosingCta
           locale={locale}
-          ctaId="service_start_project"
+          ctaId="service_free_quote"
           source={`service_${service.key}`}
-          label={fr ? "Demander un devis" : "Request a quote"}
+          href={quote}
+          label={fr ? "Demander un devis gratuit" : "Get a free quote"}
+          secondary={{
+            label: isWeb
+              ? fr
+                ? "Voir l'offre sites web"
+                : "See the website offer"
+              : fr
+                ? "Voir l'offre applications & SaaS"
+                : "See the applications & SaaS offer",
+            href: isWeb ? smbLandingPath(locale) : saasLandingPath(locale),
+            ctaId: isWeb ? "service_to_websites_offer" : "service_to_saas_offer",
+          }}
         />
       </section>
     </article>

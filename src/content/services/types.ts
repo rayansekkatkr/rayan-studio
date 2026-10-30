@@ -8,6 +8,10 @@ export type ServiceRecord = {
   eyebrow: Record<Locale, string>;
   title: Record<Locale, string>;
   description: Record<Locale, string>;
+  /** Search-oriented title and meta description (the visible title stays editorial). */
+  seo: Record<Locale, { title: string; description: string }>;
+  /** What the client gets, shown before the list of what is built. */
+  benefits: Record<Locale, Array<{ title: string; body: string }>>;
   problem: Record<Locale, string>;
   /** Exact substring of `problem` shown in the accent colour on the service page. */
   problemHighlight?: Record<Locale, string>;
