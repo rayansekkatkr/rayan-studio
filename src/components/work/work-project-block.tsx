@@ -19,16 +19,12 @@ export function WorkProjectBlock({
   index: number;
 }) {
   const fr = locale === "fr";
-  const dark = project.tone === "dark";
   const wide = project.tone === "energy";
 
   return (
     <div
       data-work-project={project.key}
-      className={cn(
-        "py-[var(--rs-section-space)]",
-        dark ? "rs-theme-dark bg-rs-bg text-rs-fg" : "bg-rs-surface text-rs-fg",
-      )}
+      className={cn("py-14 md:py-20", index > 0 && "border-t border-[var(--rs-border)]")}
     >
       <Container>
         <Reveal>
@@ -56,7 +52,7 @@ export function WorkProjectBlock({
               </Link>
             </div>
             <div className={cn(!wide && index % 2 === 1 && "md:order-1")}>
-              <div className="overflow-hidden rounded-[var(--rs-radius-md)] border border-[var(--rs-border)]">
+              <div className="overflow-hidden rounded-[var(--rs-radius-md)] border border-[var(--rs-border)] bg-rs-surface shadow-[0_24px_60px_-40px_rgba(9,9,12,0.35)]">
                 <Image
                   src={project.heroImage}
                   alt={fr ? `Interface du produit ${project.title}` : `${project.title} product interface`}

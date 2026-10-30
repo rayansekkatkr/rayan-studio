@@ -111,7 +111,7 @@ export function ContactForm({
     "mt-1.5 w-full rounded-[var(--rs-radius-sm)] border border-[var(--rs-border)] bg-rs-surface px-4 py-3 text-base text-rs-fg outline-none transition-colors duration-150 focus:border-rs-accent";
 
   return (
-    <form onSubmit={handleSubmit} noValidate className="max-w-xl">
+    <form onSubmit={handleSubmit} noValidate>
       <div aria-hidden="true" className="absolute -left-[9999px] top-auto h-px w-px overflow-hidden">
         <label htmlFor="contact-company-website">Company website</label>
         <input

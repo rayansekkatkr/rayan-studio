@@ -4,34 +4,27 @@ import type { ProjectRecord } from "@/content/projects";
 import type { Locale } from "@/lib/i18n";
 import { cn } from "@/lib/utils";
 
-export function ProjectGallery({ locale, project }: { locale: Locale; project: ProjectRecord }) {
+/** Extra screens of a case study, side by side on desktop (the hero image is not repeated). */
+export function ProjectGallery({ locale, items }: { locale: Locale; items: ProjectRecord["gallery"] }) {
+  if (items.length === 0) return null;
   return (
     <Container>
-      <div className="grid gap-6">
-        {project.gallery.map((item, index) => {
-          const detail = index % 2 === 1;
-          return (
-            <div
-              key={`${item.src}-${index}`}
-              className={cn(
-                "overflow-hidden rounded-[var(--rs-radius-md)] border border-[var(--rs-border)]",
-                detail && "md:mx-auto md:w-2/3",
-              )}
-            >
-              <Image
-                src={item.src}
-                alt={item.alt[locale]}
-                width={detail ? 1080 : 1600}
-                height={detail ? 540 : 1000}
-                sizes={detail ? "(min-width: 768px) 66vw, 100vw" : "100vw"}
-                className={cn(
-                  "h-auto w-full object-cover",
-                  detail && "aspect-[2/1] object-top",
-                )}
-              />
-            </div>
-          );
-        })}
+      <div className={cn("grid gap-6", items.length > 1 && "md:grid-cols-2")}>
+        {items.map((item, index) => (
+          <div
+            key={`${item.src}-${index}`}
+            className="overflow-hidden rounded-[var(--rs-radius-md)] border border-[var(--rs-border)] bg-rs-surface"
+          >
+            <Image
+              src={item.src}
+              alt={item.alt[locale]}
+              width={1600}
+              height={1000}
+              sizes={items.length > 1 ? "(min-width: 768px) 50vw, 100vw" : "100vw"}
+              className={cn("h-auto w-full object-cover object-left-top", items.length > 1 && "aspect-[16/10]")}
+            />
+          </div>
+        ))}
       </div>
     </Container>
   );

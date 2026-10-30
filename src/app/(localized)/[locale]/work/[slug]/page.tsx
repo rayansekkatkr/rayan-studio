@@ -56,7 +56,7 @@ export default async function Page({ params }: { params: Promise<{ locale: strin
   ]);
 
   return (
-    <CommercialPageShell locale={locale} headerTopTheme={kind === "case-study" && project.tone === "dark" ? "dark" : "light"}>
+    <CommercialPageShell locale={locale} headerTopTheme="dark">
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumb) }}

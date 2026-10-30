@@ -1,8 +1,12 @@
 import type { Metadata } from "next";
 import { CommercialPageShell } from "@/components/layout/commercial-page-shell";
 import { ContactForm } from "@/components/forms/contact-form";
-import { Container } from "@/components/ui/container";
-import { Eyebrow } from "@/components/ui/eyebrow";
+import Link from "next/link";
+import { ArrowRight } from "lucide-react";
+import { ContactLayout } from "@/components/contact/contact-layout";
+import { PageHero } from "@/components/ui/page-hero";
+import { PAGE_HERO_PHOTOS } from "@/content/visuals";
+import { startProjectPath } from "@/lib/site-routes";
 import { isEnglish, normalizeLocale, type Locale } from "@/lib/i18n";
 import { buildLocalizedMetadata } from "@/lib/seo";
 
@@ -35,24 +39,29 @@ export default async function Page({ params }: { params: Promise<{ locale: strin
 
   return (
     <CommercialPageShell locale={locale} headerTopTheme="dark">
-      <div className="rs-theme-dark bg-rs-bg pb-16 pt-28 text-rs-fg md:pb-20 md:pt-32">
-        <Container>
-          <Eyebrow>Contact</Eyebrow>
-          <h1 className="mt-4 max-w-3xl text-[1.75rem] font-semibold leading-[1.08] tracking-tight md:text-4xl">
-            {fr ? "Une question ? Parlons-en." : "Have a question? Let's talk."}
-          </h1>
-          <p className="mt-6 max-w-[var(--rs-reading)] text-lg leading-relaxed text-rs-muted">
+      <PageHero
+        eyebrow="Contact"
+        title={fr ? "Une question ? Parlons-en." : "Have a question? Let's talk."}
+        lead={
+          <p>
             {fr
-              ? "Pour les questions générales et les échanges rapides. Première réponse sous 24h ouvrées."
-              : "For general questions and quick exchanges. First response within 24 business hours."}
+              ? "Pour les questions générales et les échanges rapides. Première réponse sous 24 h ouvrées. Pour un projet ou un devis, le formulaire projet va plus vite."
+              : "For general questions and quick exchanges. First response within 24 business hours. For a project or a quote, the project form is faster."}
           </p>
-        </Container>
-      </div>
-      <div className="bg-rs-bg py-[var(--rs-section-space)]">
-        <Container>
-          <ContactForm locale={locale} />
-        </Container>
-      </div>
+        }
+        image={PAGE_HERO_PHOTOS.contact}
+      >
+        <Link
+          href={startProjectPath(locale)}
+          className="mt-8 inline-flex items-center gap-2 rounded-full border border-[var(--rs-border-strong)] px-6 py-3 text-sm font-semibold text-rs-fg transition-colors duration-150 hover:border-rs-accent hover:text-rs-accent-fg"
+        >
+          {fr ? "Demander un devis" : "Request a quote"}
+          <ArrowRight aria-hidden className="h-4 w-4" />
+        </Link>
+      </PageHero>
+      <ContactLayout locale={locale} source="contact">
+        <ContactForm locale={locale} />
+      </ContactLayout>
     </CommercialPageShell>
   );
 }

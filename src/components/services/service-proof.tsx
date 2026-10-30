@@ -5,6 +5,8 @@ import { getProject } from "@/content/projects";
 import type { ProjectKey } from "@/content/projects";
 import type { Locale } from "@/lib/i18n";
 import { workPath } from "@/lib/site-routes";
+import { projectImageAlt } from "@/components/work/project-labels";
+import { cn } from "@/lib/utils";
 
 export function ServiceProof({ locale, projectKeys }: { locale: Locale; projectKeys: ProjectKey[] }) {
   const fr = locale === "fr";
@@ -13,31 +15,41 @@ export function ServiceProof({ locale, projectKeys }: { locale: Locale; projectK
     .filter((project): project is NonNullable<ReturnType<typeof getProject>> => project !== null);
 
   if (projects.length === 0) return null;
+  // A single project spans the row (image beside the text) instead of half a grid with an empty column.
+  const single = projects.length === 1;
 
   return (
-    <div className="grid gap-6 md:grid-cols-2">
+    <div className={cn("grid gap-6", projects.length === 2 && "md:grid-cols-2", projects.length >= 3 && "md:grid-cols-2 lg:grid-cols-3")}>
       {projects.map((project) => (
         <Link
           key={project.key}
           href={workPath(locale, project.slug)}
-          className="group overflow-hidden rounded-[var(--rs-radius-md)] border border-[var(--rs-border)] bg-rs-surface transition-colors duration-150 hover:border-[var(--rs-border-strong)]"
+          className={cn(
+            "group flex flex-col overflow-hidden rounded-[var(--rs-radius-md)] border border-[var(--rs-border)] bg-rs-surface transition-colors duration-150 hover:border-[var(--rs-border-strong)]",
+            single && "md:grid md:grid-cols-[minmax(0,7fr)_minmax(0,5fr)]",
+          )}
         >
-          <div className="relative aspect-[16/9] overflow-hidden border-b border-[var(--rs-border)]">
+          <div
+            className={cn(
+              "relative aspect-[16/9] overflow-hidden border-b border-[var(--rs-border)]",
+              single && "md:border-b-0 md:border-r",
+            )}
+          >
             <Image
               src={project.heroImage}
-              alt={fr ? `Interface du produit ${project.title}` : `${project.title} product interface`}
+              alt={projectImageAlt(project, locale)}
               fill
-              sizes="(min-width: 768px) 50vw, 100vw"
-              className="object-cover object-top"
+              sizes={single ? "(min-width: 768px) 58vw, 100vw" : "(min-width: 1024px) 33vw, (min-width: 768px) 50vw, 100vw"}
+              className="object-cover object-top transition-transform duration-500 ease-out group-hover:scale-[1.03]"
             />
           </div>
-          <div className="p-6">
-            <p className="text-lg font-semibold">{project.title}</p>
+          <div className={cn("flex flex-1 flex-col p-6", single && "md:justify-center md:p-10")}>
+            <p className={cn("font-semibold", single ? "text-2xl" : "text-lg")}>{project.title}</p>
             {project.status ? (
               <p className="mt-1 text-sm text-rs-muted">{project.status[locale]}</p>
             ) : null}
-            <p className="mt-3 text-sm leading-relaxed text-rs-muted">{project.summary[locale]}</p>
-            <span className="mt-4 inline-flex items-center gap-1 text-sm font-medium text-rs-accent-fg">
+            <p className={cn("mt-3 leading-relaxed text-rs-muted", single ? "text-base" : "text-sm")}>{project.summary[locale]}</p>
+            <span className={cn("inline-flex items-center gap-1 text-sm font-medium text-rs-accent-fg", single ? "mt-6" : "mt-auto pt-4")}>
               {fr ? "Voir le projet" : "View project"}
               <ArrowUpRight
                 aria-hidden

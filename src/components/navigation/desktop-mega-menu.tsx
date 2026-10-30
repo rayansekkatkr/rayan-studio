@@ -10,14 +10,17 @@ type DesktopMegaMenuProps = {
   menu: NavMenu;
   panelId: string;
   onNavigate: () => void;
+  /** The header is a floating pill: open the panel as a detached card below it. */
+  floating?: boolean;
 };
 
-export function DesktopMegaMenu({ menu, panelId, onNavigate }: DesktopMegaMenuProps) {
+export function DesktopMegaMenu({ menu, panelId, onNavigate, floating = false }: DesktopMegaMenuProps) {
   return (
     <div
       id={panelId}
       className={cn(
-        "absolute inset-x-0 top-full border-b border-[var(--rs-border)] bg-[var(--rs-mega-surface)] shadow-[0_24px_48px_-32px_rgba(11,11,14,0.35)] backdrop-blur",
+        "absolute inset-x-0 top-full border-[var(--rs-border)] bg-[var(--rs-mega-surface)] shadow-[0_24px_48px_-32px_rgba(11,11,14,0.35)] backdrop-blur",
+        floating ? "mt-2 overflow-hidden rounded-[var(--rs-radius-md)] border" : "border-b",
       )}
     >
       <div className="mx-auto grid w-full max-w-[var(--rs-container)] gap-10 px-5 py-10 md:grid-cols-[repeat(3,minmax(0,1fr))] md:px-8">

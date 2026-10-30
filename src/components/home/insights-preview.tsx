@@ -24,7 +24,7 @@ export function InsightsPreview({ locale }: { locale: Locale }) {
   );
 
   return (
-    <div className="bg-rs-bg py-[var(--rs-section-space)]">
+    <div className="border-t border-[var(--rs-border)] py-[var(--rs-section-space)]">
       <Container>
         <Eyebrow>{locale === "fr" ? "Ressources" : "Insights"}</Eyebrow>
         <h2 className="mt-4 max-w-2xl text-[1.75rem] font-semibold tracking-tight md:text-3xl">

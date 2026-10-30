@@ -1,11 +1,10 @@
-import { ArrowRight } from "lucide-react";
-import { TrackedLink } from "@/components/analytics/tracked-link";
+import { Check } from "lucide-react";
+import { ClosingCta } from "@/components/ui/closing-cta";
 import { Container } from "@/components/ui/container";
 import { Eyebrow } from "@/components/ui/eyebrow";
+import { TechChips } from "@/components/ui/tech-chips";
 import type { ProjectRecord } from "@/content/projects";
 import type { Locale } from "@/lib/i18n";
-import { startProjectPath } from "@/lib/site-routes";
-import { cn } from "@/lib/utils";
 import { CapabilitiesGrid } from "./capabilities-grid";
 import { CaseStudyHero } from "./case-study-hero";
 import { CaseStudyOverview } from "./case-study-overview";
@@ -13,125 +12,132 @@ import { EngineeringSection } from "./engineering-section";
 import { NextProject } from "./next-project";
 import { ProjectGallery } from "./project-gallery";
 
+// One rhythm for the whole page: sections are compact and grouped side by side
+// on desktop, instead of a long column of full-height blocks.
+const SECTION = "py-12 md:py-16";
+
 export function CaseStudyPage({ locale, project }: { locale: Locale; project: ProjectRecord }) {
   const fr = locale === "fr";
-  const dark = project.tone === "dark";
+  const gallery = project.gallery.filter((item) => item.src !== project.heroImage);
 
   return (
-    <article className={cn(dark && "rs-theme-dark bg-rs-bg text-rs-fg")}>
-      <section data-case-section="hero" className="pb-12 pt-28 md:pt-32">
+    <article>
+      <section
+        data-case-section="hero"
+        className="rs-theme-dark relative isolate overflow-hidden bg-rs-bg pb-12 pt-28 text-rs-fg md:pb-16 md:pt-32"
+      >
+        <div aria-hidden className="hero-glow absolute inset-0 -z-10" />
         <CaseStudyHero locale={locale} project={project} />
       </section>
 
-      <section data-case-section="overview" className="py-10">
+      <section data-case-section="overview" className="pt-8">
         <CaseStudyOverview locale={locale} project={project} />
       </section>
 
-      <section data-case-section="challenge" className="py-[var(--rs-section-space)]">
+      <div className={SECTION}>
         <Container>
-          <Eyebrow>{fr ? "Le défi" : "The challenge"}</Eyebrow>
-          <div className="mt-6 max-w-[var(--rs-reading)] space-y-4">
-            {project.challenge[locale].map((paragraph) => (
-              <p key={paragraph} className="text-xl leading-relaxed">
-                {paragraph}
-              </p>
-            ))}
+          <div className="grid gap-6 lg:grid-cols-2">
+            <section
+              data-case-section="challenge"
+              className="rounded-[var(--rs-radius-md)] border border-[var(--rs-border)] bg-rs-surface p-6 md:p-8"
+            >
+              <Eyebrow>{fr ? "Le défi" : "The challenge"}</Eyebrow>
+              <div className="mt-5 space-y-4">
+                {project.challenge[locale].map((paragraph) => (
+                  <p key={paragraph} className="text-lg leading-relaxed">
+                    {paragraph}
+                  </p>
+                ))}
+              </div>
+            </section>
+
+            <section
+              data-case-section="solution"
+              className="rounded-[var(--rs-radius-md)] border border-[var(--rs-border)] bg-rs-surface p-6 md:p-8"
+            >
+              <Eyebrow>{fr ? "La réponse" : "The solution"}</Eyebrow>
+              <ul className="mt-5 space-y-3.5">
+                {project.solution[locale].map((item) => (
+                  <li key={item} className="flex gap-3 text-base leading-relaxed">
+                    <span className="mt-1 flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-[color-mix(in_srgb,var(--rs-accent)_16%,transparent)]">
+                      <Check aria-hidden className="h-3 w-3 text-rs-accent-fg" />
+                    </span>
+                    {item}
+                  </li>
+                ))}
+              </ul>
+            </section>
           </div>
         </Container>
-      </section>
+      </div>
 
-      <section data-case-section="solution" className="py-[var(--rs-section-space)]">
-        <Container>
-          <Eyebrow>{fr ? "La réponse" : "The solution"}</Eyebrow>
-          <ul className="mt-6 max-w-[var(--rs-reading)] space-y-4">
-            {project.solution[locale].map((item) => (
-              <li key={item} className="flex gap-3 text-lg leading-relaxed">
-                <span aria-hidden className="mt-1 text-rs-accent-fg">
-                  ·
-                </span>
-                {item}
-              </li>
-            ))}
-          </ul>
-        </Container>
-      </section>
-
-      <section data-case-section="capabilities" className="py-[var(--rs-section-space)]">
+      <section data-case-section="capabilities" className="pb-12 md:pb-16">
         <CapabilitiesGrid locale={locale} project={project} />
       </section>
 
-      <section data-case-section="product-ux" className="py-[var(--rs-section-space)]">
+      <div className="border-t border-[var(--rs-border)] py-12 md:py-16">
         <Container>
-          <Eyebrow>Product & UX</Eyebrow>
-          <ul className="mt-6 max-w-[var(--rs-reading)] space-y-4">
-            {project.productUx[locale].map((item) => (
-              <li key={item} className="text-lg leading-relaxed text-rs-muted">
-                {item}
-              </li>
-            ))}
-          </ul>
+          <div className="grid gap-10 lg:grid-cols-[minmax(0,5fr)_minmax(0,7fr)] lg:gap-14">
+            <section data-case-section="product-ux">
+              <Eyebrow>Product & UX</Eyebrow>
+              <ul className="mt-5 space-y-4">
+                {project.productUx[locale].map((item) => (
+                  <li key={item} className="border-l-2 border-rs-accent pl-4 text-base leading-relaxed text-rs-muted">
+                    {item}
+                  </li>
+                ))}
+              </ul>
+            </section>
+            <section data-case-section="engineering">
+              <EngineeringSection locale={locale} project={project} />
+            </section>
+          </div>
         </Container>
-      </section>
+      </div>
 
-      <section data-case-section="engineering" className="py-[var(--rs-section-space)]">
-        <EngineeringSection locale={locale} project={project} />
-      </section>
-
-      <section data-case-section="technologies" className="py-10">
+      <section data-case-section="technologies" className="pt-12 md:pt-16">
         <Container>
           {project.technologies.length > 0 ? (
-            <p className="border-t border-[var(--rs-border)] pt-6 text-sm font-medium uppercase tracking-[0.14em] text-rs-muted">
-              {project.technologies.join(" · ")}
-            </p>
+            <div>
+              <p className="text-xs font-semibold uppercase tracking-[0.18em] text-rs-muted">Technologies</p>
+              <TechChips items={project.technologies} className="mt-4" />
+            </div>
           ) : null}
         </Container>
       </section>
 
-      <section data-case-section="outcome" className="py-[var(--rs-section-space)]">
+      <section data-case-section="outcome" className="pt-8">
         <Container>
-          <Eyebrow>{fr ? "Résultat" : "Outcome"}</Eyebrow>
-          <div className="mt-6 max-w-[var(--rs-reading)] space-y-4">
-            {project.outcome[locale].map((item) => (
-              <p key={item} className="text-xl font-medium leading-relaxed">
-                {item}
-              </p>
-            ))}
-          </div>
+          {project.outcome[locale].length > 0 ? (
+            <div className="rounded-[var(--rs-radius-md)] border border-[color-mix(in_srgb,var(--rs-accent)_35%,transparent)] bg-[color-mix(in_srgb,var(--rs-accent)_7%,transparent)] p-6 md:p-8">
+              <Eyebrow>{fr ? "Résultat" : "Outcome"}</Eyebrow>
+              <div className="mt-4 space-y-3">
+                {project.outcome[locale].map((item) => (
+                  <p key={item} className="text-lg font-medium leading-relaxed md:text-xl">
+                    {item}
+                  </p>
+                ))}
+              </div>
+            </div>
+          ) : null}
         </Container>
       </section>
 
-      <section data-case-section="gallery" className="py-[var(--rs-section-space)]">
-        <ProjectGallery locale={locale} project={project} />
+      <section data-case-section="gallery" className={gallery.length > 0 ? "pt-12 md:pt-16" : undefined}>
+        <ProjectGallery locale={locale} items={gallery} />
       </section>
 
-      <section data-case-section="next-project" className="py-[var(--rs-section-space)]">
+      <section data-case-section="next-project" className={SECTION}>
         <NextProject locale={locale} project={project} />
       </section>
 
-      <section data-case-section="cta" className="pb-[var(--rs-section-space)]">
-        <Container className="text-center">
-          <h2 className="mx-auto max-w-2xl text-[1.75rem] font-semibold tracking-tight md:text-3xl">
-            {fr ? "Vous construisez quelque chose de similaire ?" : "Building something similar?"}
-          </h2>
-          <TrackedLink
-            href={startProjectPath(locale)}
-            event={{
-              ctaId: "case_study_start_project",
-              source: `case_study_${project.key}`,
-              destination: startProjectPath(locale),
-              locale,
-            }}
-            className={cn(
-              "mt-8 inline-flex items-center gap-2 rounded-full px-7 py-3.5 text-base font-semibold transition-colors duration-150",
-              dark
-                ? "bg-rs-fg text-[var(--rs-dark)] hover:bg-rs-accent hover:text-rs-fg"
-                : "bg-rs-fg text-rs-bg hover:bg-rs-accent",
-            )}
-          >
-            {fr ? "Parler de votre projet" : "Start a project"}
-            <ArrowRight aria-hidden className="h-4 w-4" />
-          </TrackedLink>
-        </Container>
+      <section data-case-section="cta">
+        <ClosingCta
+          locale={locale}
+          ctaId="case_study_start_project"
+          source={`case_study_${project.key}`}
+          title={fr ? "Vous construisez quelque chose de similaire ?" : "Building something similar?"}
+        />
       </section>
     </article>
   );

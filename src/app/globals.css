@@ -30,7 +30,7 @@
   --rs-dark-muted: #a2a2aa;
   --rs-container: 86rem;
   --rs-reading: 46rem;
-  --rs-section-space: clamp(4.5rem, 8vw, 7.25rem);
+  --rs-section-space: clamp(3.5rem, 6vw, 5rem);
   --rs-radius-sm: 0.75rem;
   --rs-radius-md: 1.25rem;
   --rs-radius-lg: 2rem;
@@ -236,6 +236,88 @@ section[id] {
   scroll-margin-top: 6.5rem;
 }
 
+/* Inner page heroes: background photo shaded towards the text column. */
+.page-hero-shade {
+  background:
+    linear-gradient(90deg, var(--rs-dark) 0%, rgba(9, 9, 12, 0.88) 40%, rgba(9, 9, 12, 0.45) 100%),
+    linear-gradient(0deg, var(--rs-dark) 0%, rgba(9, 9, 12, 0) 45%);
+}
+
+/* Home hero: animated glow and a wall of real product screens. */
+.hero-glow {
+  background:
+    radial-gradient(42rem 30rem at 12% 18%, rgba(89, 87, 217, 0.22), transparent 70%),
+    radial-gradient(36rem 28rem at 78% 82%, rgba(138, 136, 242, 0.12), transparent 70%);
+  animation: hero-glow-drift 22s ease-in-out infinite alternate;
+}
+
+@keyframes hero-glow-drift {
+  from { transform: translate3d(0, 0, 0) scale(1); }
+  to { transform: translate3d(4%, 3%, 0) scale(1.08); }
+}
+
+.hero-screen-wall {
+  overflow: hidden;
+  -webkit-mask-image: linear-gradient(to right, transparent 0%, #000 42%), linear-gradient(to bottom, transparent 0%, #000 14%, #000 86%, transparent 100%);
+  -webkit-mask-composite: source-in;
+  mask-image: linear-gradient(to right, transparent 0%, #000 42%), linear-gradient(to bottom, transparent 0%, #000 14%, #000 86%, transparent 100%);
+  mask-composite: intersect;
+}
+
+.hero-screen-wall__plane {
+  position: absolute;
+  inset: -18% -12% -18% 0;
+  transform: rotate(-9deg) translateX(4%);
+  opacity: 0.82;
+}
+
+.hero-screen-track {
+  animation: hero-screen-up linear infinite;
+  will-change: transform;
+}
+
+.hero-screen-track--reverse {
+  animation-name: hero-screen-down;
+}
+
+.hero-screen-track--x {
+  animation: hero-screen-left 60s linear infinite;
+  will-change: transform;
+}
+
+.hero-screen-wall:hover .hero-screen-track,
+.hero-screen-row:hover .hero-screen-track--x {
+  animation-play-state: paused;
+}
+
+.hero-screen-row {
+  -webkit-mask-image: linear-gradient(to right, transparent, #000 8%, #000 92%, transparent);
+  mask-image: linear-gradient(to right, transparent, #000 8%, #000 92%, transparent);
+}
+
+@keyframes hero-screen-up {
+  from { transform: translate3d(0, 0, 0); }
+  to { transform: translate3d(0, -50%, 0); }
+}
+
+@keyframes hero-screen-down {
+  from { transform: translate3d(0, -50%, 0); }
+  to { transform: translate3d(0, 0, 0); }
+}
+
+@keyframes hero-screen-left {
+  from { transform: translate3d(0, 0, 0); }
+  to { transform: translate3d(-50%, 0, 0); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hero-glow,
+  .hero-screen-track,
+  .hero-screen-track--x {
+    animation: none !important;
+  }
+}
+
 @media (prefers-reduced-motion: reduce) {
   html {
     scroll-behavior: auto;
@@ -303,6 +385,6 @@ section[id] {
   }
 
   .home-chapter-large {
-    min-height: 56svh;
+    min-height: 62svh;
   }
 }

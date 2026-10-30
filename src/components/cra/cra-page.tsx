@@ -93,7 +93,7 @@ export function CraPage({ locale }: { locale: Locale }) {
           </Container>
         </section>
 
-        <section id="firmware" className="rs-theme-dark bg-rs-bg py-[var(--rs-section-space)] text-rs-fg">
+        <section id="firmware" className="border-t border-[var(--rs-border)] py-[var(--rs-section-space)]">
           <Container>
             <Eyebrow>{firmware.eyebrow}</Eyebrow>
             <h2 className="mt-4 max-w-3xl text-[1.75rem] font-semibold tracking-tight md:text-3xl">{firmware.title}</h2>
@@ -110,7 +110,7 @@ export function CraPage({ locale }: { locale: Locale }) {
           </Container>
         </section>
 
-        <section id="offres" className="py-[var(--rs-section-space)]">
+        <section id="offres" className="border-t border-[var(--rs-border)] py-[var(--rs-section-space)]">
           <Container>
             <Eyebrow>{ui.offersEyebrow}</Eyebrow>
             <h2 className="mt-4 max-w-3xl text-[1.75rem] font-semibold tracking-tight md:text-3xl">{ui.offersTitle}</h2>
@@ -149,7 +149,7 @@ export function CraPage({ locale }: { locale: Locale }) {
           </Container>
         </section>
 
-        <section id="methode" className="bg-rs-surface py-[var(--rs-section-space)]">
+        <section id="methode" className="border-t border-[var(--rs-border)] py-[var(--rs-section-space)]">
           <Container>
             <Eyebrow>{ui.methodEyebrow}</Eyebrow>
             <h2 className="mt-4 max-w-2xl text-[1.75rem] font-semibold tracking-tight md:text-3xl">{ui.methodTitle}</h2>
@@ -165,7 +165,7 @@ export function CraPage({ locale }: { locale: Locale }) {
           </Container>
         </section>
 
-        <section id="intervenant" className="py-[var(--rs-section-space)]">
+        <section id="intervenant" className="border-t border-[var(--rs-border)] py-[var(--rs-section-space)]">
           <Container>
             <Eyebrow>{ui.aboutEyebrow}</Eyebrow>
             <h2 className="mt-4 text-[1.75rem] font-semibold tracking-tight md:text-3xl">{about.title}</h2>
@@ -180,7 +180,7 @@ export function CraPage({ locale }: { locale: Locale }) {
           </Container>
         </section>
 
-        <section id="faq" className="bg-rs-surface py-[var(--rs-section-space)]">
+        <section id="faq" className="border-t border-[var(--rs-border)] py-[var(--rs-section-space)]">
           <Container>
             <Eyebrow>FAQ</Eyebrow>
             <h2 className="mt-4 text-[1.75rem] font-semibold tracking-tight md:text-3xl">{ui.faqTitle}</h2>
@@ -200,9 +200,10 @@ export function CraPage({ locale }: { locale: Locale }) {
           </Container>
         </section>
 
-        <section id="diagnostic" className="rs-theme-dark scroll-mt-6 bg-rs-bg py-[var(--rs-section-space)] text-rs-fg">
+        <section id="diagnostic" className="scroll-mt-6 pb-[var(--rs-section-space)]">
           <Container>
-            <div className="grid gap-12 lg:grid-cols-2">
+            <div className="rs-theme-dark relative isolate grid gap-12 overflow-hidden rounded-[var(--rs-radius-lg)] bg-rs-bg p-6 text-rs-fg md:p-12 lg:grid-cols-2">
+              <div aria-hidden className="hero-glow absolute inset-0 -z-10" />
               <div>
                 <Eyebrow>{ui.diagnosticEyebrow}</Eyebrow>
                 <h2 className="mt-4 max-w-xl text-[1.75rem] font-semibold tracking-tight md:text-3xl">{finalCta.title}</h2>
