@@ -32,7 +32,7 @@ export function CaseStudyHero({ locale, project }: { locale: Locale; project: Pr
           ))}
         </ul>
       ) : null}
-      <div className="mt-12 overflow-hidden rounded-[var(--rs-radius-md)] border border-[var(--rs-border)]">
+      <div className="mt-10 overflow-hidden rounded-[var(--rs-radius-md)] border border-[var(--rs-border)]">
         <Image
           src={project.heroImage}
           alt={fr ? `Interface du produit ${project.title}` : `${project.title} product interface`}

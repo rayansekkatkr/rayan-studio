@@ -21,7 +21,7 @@ export function CaseStudyOverview({ locale, project }: { locale: Locale; project
 
   return (
     <Container>
-      <dl className="grid gap-6 border-t border-[var(--rs-border)] pt-8 sm:grid-cols-2 lg:grid-cols-4">
+      <dl className="grid gap-6 rounded-[var(--rs-radius-md)] border border-[var(--rs-border)] bg-rs-surface p-6 sm:grid-cols-2 md:p-7 lg:grid-cols-[repeat(auto-fit,minmax(11rem,1fr))]">
         {entries.map((entry) => (
           <div key={entry.label}>
             <dt className="text-xs font-semibold uppercase tracking-[0.18em] text-rs-muted">

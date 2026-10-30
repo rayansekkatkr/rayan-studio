@@ -7,6 +7,8 @@ import { TechChips } from "@/components/ui/tech-chips";
 import type { ProjectRecord } from "@/content/projects";
 import type { Locale } from "@/lib/i18n";
 import { startProjectPath, workPath } from "@/lib/site-routes";
+import { cn } from "@/lib/utils";
+import { BALANCED_GRID, balancedSpan } from "@/components/ui/balanced-grid";
 import { KIND_LABELS, projectImageAlt } from "./project-labels";
 
 export function ProjectSummaryPage({ locale, project }: { locale: Locale; project: ProjectRecord }) {
@@ -24,6 +26,10 @@ export function ProjectSummaryPage({ locale, project }: { locale: Locale; projec
           },
         ]
       : [];
+  const cards = [
+    ...project.capabilities.map((capability) => ({ title: capability.title[locale], body: capability.body[locale] })),
+    ...project.engineering[locale],
+  ];
   const hasStory =
     project.challenge[locale].length > 0 || project.solution[locale].length > 0 || project.outcome[locale].length > 0;
 
@@ -91,7 +97,7 @@ export function ProjectSummaryPage({ locale, project }: { locale: Locale; projec
       </div>
 
       {hasStory ? (
-        <div className="bg-rs-bg py-[var(--rs-section-space)]">
+        <div className="bg-rs-bg py-14 md:py-16">
           <Container>
             <div className="grid gap-12 lg:grid-cols-[minmax(0,5fr)_minmax(0,7fr)]">
               {project.challenge[locale].length > 0 ? (
@@ -119,28 +125,28 @@ export function ProjectSummaryPage({ locale, project }: { locale: Locale; projec
               ) : null}
             </div>
 
-            {project.capabilities.length > 0 || project.engineering[locale].length > 0 ? (
-              <div className="mt-16 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
-                {project.capabilities.map((capability) => (
-                  <div key={capability.title[locale]} className="rounded-[var(--rs-radius-md)] border border-[var(--rs-border)] bg-rs-surface p-6">
-                    <p className="text-lg font-semibold">{capability.title[locale]}</p>
-                    <p className="mt-2 text-sm leading-relaxed text-rs-muted">{capability.body[locale]}</p>
-                  </div>
-                ))}
-                {project.engineering[locale].map((item) => (
-                  <div key={item.title} className="rounded-[var(--rs-radius-md)] border border-[var(--rs-border)] bg-rs-surface p-6">
-                    <p className="text-lg font-semibold">{item.title}</p>
-                    <p className="mt-2 text-sm leading-relaxed text-rs-muted">{item.body}</p>
+            {cards.length > 0 ? (
+              <div className={cn("mt-12 grid gap-5 sm:grid-cols-2", BALANCED_GRID)}>
+                {cards.map((card, index) => (
+                  <div
+                    key={card.title}
+                    className={cn(
+                      "rounded-[var(--rs-radius-md)] border border-[var(--rs-border)] bg-rs-surface p-6",
+                      balancedSpan(index, cards.length),
+                    )}
+                  >
+                    <p className="text-lg font-semibold">{card.title}</p>
+                    <p className="mt-2 text-sm leading-relaxed text-rs-muted">{card.body}</p>
                   </div>
                 ))}
               </div>
             ) : null}
 
             {project.outcome[locale].length > 0 ? (
-              <div className="mt-16 max-w-[var(--rs-reading)]">
+              <div className="mt-12 rounded-[var(--rs-radius-md)] border border-[color-mix(in_srgb,var(--rs-accent)_35%,transparent)] bg-[color-mix(in_srgb,var(--rs-accent)_7%,transparent)] p-6 md:p-8">
                 <Eyebrow>{fr ? "Résultat" : "Outcome"}</Eyebrow>
                 {project.outcome[locale].map((item) => (
-                  <p key={item} className="mt-5 text-xl font-medium leading-relaxed">
+                  <p key={item} className="mt-4 text-lg font-medium leading-relaxed md:text-xl">
                     {item}
                   </p>
                 ))}
@@ -150,7 +156,7 @@ export function ProjectSummaryPage({ locale, project }: { locale: Locale; projec
         </div>
       ) : null}
 
-      <div className="bg-rs-bg pb-[var(--rs-section-space)]">
+      <div className="bg-rs-bg pb-16 md:pb-20">
         <Container>
           {project.technologies.length > 0 ? (
             <div className="border-t border-[var(--rs-border)] pt-8">
@@ -159,7 +165,7 @@ export function ProjectSummaryPage({ locale, project }: { locale: Locale; projec
             </div>
           ) : null}
 
-          <div className="mt-16 border-t border-[var(--rs-border)] pt-10 text-center">
+          <div className="mt-12 border-t border-[var(--rs-border)] pt-10 text-center">
             <h2 className="mx-auto max-w-2xl text-xl font-semibold tracking-tight md:text-2xl">
               {fr ? "Vous construisez quelque chose de similaire ?" : "Building something similar?"}
             </h2>

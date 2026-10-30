@@ -26,7 +26,7 @@ export function WorkProjectBlock({
     <div
       data-work-project={project.key}
       className={cn(
-        "py-[var(--rs-section-space)]",
+        "py-14 md:py-20",
         dark ? "rs-theme-dark bg-rs-bg text-rs-fg" : "bg-rs-surface text-rs-fg",
       )}
     >

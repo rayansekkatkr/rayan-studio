@@ -692,3 +692,13 @@ Quand un changement important est fait:
 - **Demarrer un projet / Start a project / Contact** : nouveau `contact/contact-layout.tsx`. Formulaire dans une carte etiree a la hauteur du panneau lateral (grille 3/2), panneau `ContactAside` en une seule carte (reponse 24 h ouvrees, etapes, contact direct) sans la stack : les deux colonnes finissent a la meme hauteur, plus de grand vide sous le formulaire.
 - **Offres** (`studio/offers-page.tsx`) : hero photo (`network-cubes`), cartes avec photo et titre en surimpression (`OFFER_PHOTOS` dans `visuals.ts`, meme ordre que `OFFERS_CONTENT`), liste « Peut inclure » en deux colonnes avec coches.
 - Verification : typecheck, lint, check:copy, vitest 161/161, build 182 pages (polices simulees), Playwright 123/124 puis `project-form.spec.ts` relance seul 6/6 (echec intermittent sur le retry apres erreur simulee), captures desktop et mobile relues.
+
+### 2026-10-30 (densite des pages realisations et services)
+
+- Retour de Rayan : pages realisations trop espacees, zones vides (une carte seule a gauche, colonne droite vide).
+- **Etudes de cas** (`work/case-study-page.tsx`) : meme ordre de sections (test conserve), rythme `py-12 md:py-16` au lieu de `--rs-section-space` par section. Defi et reponse cote a cote en cartes, capacites en cartes numerotees, Product & UX a gauche d'Engineering sur une bande teintee, technos avec logos, resultat en encadre accent, galerie sans repeter l'image du hero (2 colonnes si plusieurs images), CTA en ligne.
+- **Grilles equilibrees** : `src/components/ui/balanced-grid.ts` (`BALANCED_GRID` = `lg:grid-cols-6` + `balancedSpan`). Reste de 2 cartes : la derniere rangee s'etale (span 3) ; reste de 1 : les 4 dernieres passent en 2x2. Utilise dans « Autres projets », index services, ressources, capacites des etudes de cas et cartes des fiches resumees. Les cartes larges passent en `lg:aspect-[2/1]`.
+- **Preuves de service** (`service-proof.tsx`) : un seul projet = carte horizontale pleine largeur (image 7/12, texte 5/12) ; 3 projets = 3 colonnes.
+- **Pages service** : besoin (colonne gauche collante + lien) a cote des cas d'usage en cartes, approche en 4 etapes numerotees, FAQ avec icone plus et carte « Une question qui n'est pas dans la liste ? » (photo du service, lien contact, ctaId `service_faq_contact`), nouveau ctaId `service_need_start_project`. Espacements `py-14 md:py-20`.
+- Blocs projets de la page Realisations et « Autres projets » : `py-14 md:py-20`.
+- Verification : typecheck, lint, check:copy, vitest 161/161, build 182 pages (polices simulees), Playwright complet 124/124, captures desktop relues (Pick4Me, Pont Factur-X, Realisations, service Applications, Services, Ressources, Ops Knowledge Agent).

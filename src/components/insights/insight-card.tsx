@@ -42,10 +42,12 @@ export function InsightCard({
   locale,
   insight,
   featured = false,
+  className,
 }: {
   locale: Locale;
   insight: InsightRecord;
   featured?: boolean;
+  className?: string;
 }) {
   const fr = locale === "fr";
 
@@ -56,6 +58,7 @@ export function InsightCard({
       className={cn(
         "group flex flex-col overflow-hidden rounded-[var(--rs-radius-md)] border bg-rs-surface transition-colors duration-150 hover:border-rs-accent",
         featured ? "border-[var(--rs-border-strong)]" : "border-[var(--rs-border)]",
+        className,
       )}
     >
       <div className={cn("relative overflow-hidden bg-[var(--rs-dark)]", featured ? "aspect-[2/1] lg:aspect-auto lg:min-h-[18rem] lg:flex-1" : "aspect-[3/1]")}>

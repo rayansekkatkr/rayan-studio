@@ -10,20 +10,21 @@ import { PAGE_HERO_PHOTOS, SERVICE_VISUALS } from "@/content/visuals";
 import type { Locale } from "@/lib/i18n";
 import { craPath, servicePath, startProjectPath, type ServiceKey } from "@/lib/site-routes";
 import { cn } from "@/lib/utils";
+import { BALANCED_GRID, balancedSpan } from "@/components/ui/balanced-grid";
 
 const GROUPS: Array<{ id: string; label: Record<Locale, string>; keys: ServiceKey[] }> = [
   { id: "software", label: { fr: "Logiciel", en: "Software" }, keys: ["applications", "mvp", "backends", "automation", "ai"] },
   { id: "web", label: { fr: "Web & infrastructure", en: "Web & infrastructure" }, keys: ["web", "devops"] },
 ];
 
-function Card({ href, title, body, visual }: { href: string; title: string; body: string; visual: string }) {
+function Card({ href, title, body, visual, className }: { href: string; title: string; body: string; visual: string; className?: string }) {
   return (
-    <li>
+    <li className={className}>
       <Link
         href={href}
         className="group flex h-full flex-col overflow-hidden rounded-[var(--rs-radius-md)] border border-[var(--rs-border)] bg-rs-surface transition-colors duration-150 hover:border-[var(--rs-border-strong)]"
       >
-        <div className="relative aspect-[16/9] overflow-hidden bg-[var(--rs-dark)]">
+        <div className={cn("relative aspect-[16/9] overflow-hidden bg-[var(--rs-dark)]", className === "lg:col-span-3" && "lg:aspect-[2/1]")}>
           <Image
             src={visual}
             alt=""
@@ -75,8 +76,8 @@ export function ServicesIndex({ locale }: { locale: Locale }) {
             {GROUPS.map((group) => (
               <div key={group.id}>
                 <p className="text-xs font-semibold uppercase tracking-[0.18em] text-rs-muted">{group.label[locale]}</p>
-                <ul className="mt-5 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
-                  {group.keys.map((key) => {
+                <ul className={cn("mt-5 grid gap-5 sm:grid-cols-2", BALANCED_GRID)}>
+                  {group.keys.map((key, index) => {
                     const service = SERVICES.find((item) => item.key === key);
                     if (!service) return null;
                     return (
@@ -86,11 +87,18 @@ export function ServicesIndex({ locale }: { locale: Locale }) {
                         title={service.eyebrow[locale]}
                         body={service.description[locale]}
                         visual={SERVICE_VISUALS[key]}
+                        className={balancedSpan(index, group.keys.length + (group.id === "web" ? 1 : 0))}
                       />
                     );
                   })}
                   {group.id === "web" ? (
-                    <Card href={craPath(locale)} title={cra.title} body={cra.description} visual={SERVICE_VISUALS.cra} />
+                    <Card
+                      href={craPath(locale)}
+                      title={cra.title}
+                      body={cra.description}
+                      visual={SERVICE_VISUALS.cra}
+                      className={balancedSpan(group.keys.length, group.keys.length + 1)}
+                    />
                   ) : null}
                 </ul>
               </div>

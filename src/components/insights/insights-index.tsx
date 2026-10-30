@@ -7,6 +7,8 @@ import type { Locale } from "@/lib/i18n";
 import { insightPath } from "@/lib/site-routes";
 import { PageHero } from "@/components/ui/page-hero";
 import { PAGE_HERO_PHOTOS } from "@/content/visuals";
+import { BALANCED_GRID, balancedSpan } from "@/components/ui/balanced-grid";
+import { cn } from "@/lib/utils";
 import { InsightCard } from "./insight-card";
 
 export function InsightsIndex({ locale }: { locale: Locale }) {
@@ -15,6 +17,7 @@ export function InsightsIndex({ locale }: { locale: Locale }) {
   const articles = getInsightsByCategory("articles", locale);
   const checklists = getInsightsByCategory("checklists", locale);
   const templates = getInsightsByCategory("templates", locale);
+  const resources = [...checklists, ...templates];
 
   return (
     <div>
@@ -43,9 +46,9 @@ export function InsightsIndex({ locale }: { locale: Locale }) {
           <h2 className="mt-16 text-xs font-semibold uppercase tracking-[0.18em] text-rs-muted">
             {fr ? "Ressources" : "Resources"}
           </h2>
-          <div className="mt-6 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
-            {[...checklists, ...templates].map((insight) => (
-              <InsightCard key={insight.key} locale={locale} insight={insight} />
+          <div className={cn("mt-6 grid gap-6 md:grid-cols-2", BALANCED_GRID)}>
+            {resources.map((insight, index) => (
+              <InsightCard key={insight.key} locale={locale} insight={insight} className={balancedSpan(index, resources.length)} />
             ))}
           </div>
 
