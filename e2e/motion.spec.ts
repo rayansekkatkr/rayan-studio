@@ -42,15 +42,12 @@ test.describe("reduced motion", () => {
 
     if (!isMobile) {
       await page.evaluate(() => window.scrollTo(0, 0));
-      const trigger = page.getByRole("button", { name: "Services", exact: true });
-      await expect(trigger).toBeInViewport();
-      await trigger.click();
-      await expect(
-        page
-          .locator("#mega-menu-services")
-          .getByRole("link", { name: "Applications web & SaaS", exact: true }),
-      ).toBeVisible();
-      await page.keyboard.press("Escape");
+      const navLink = page
+        .getByRole("navigation", { name: "Navigation principale" })
+        .getByRole("link", { name: "Applications", exact: true });
+      await expect(navLink).toBeInViewport();
+      await navLink.click();
+      await expect(page).toHaveURL(/\/fr\/developpement-application-saas$/);
     }
   });
 

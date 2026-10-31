@@ -780,3 +780,10 @@ Quand un changement important est fait:
 - Verification : typecheck, lint, check:copy, vitest 163/163 (test work mis a jour), build 194 pages, Playwright 124/124, captures 1440 et 390 sans debordement.
 - Non verifie : rendu reel des polices serif (le build cloud utilise une police simulee), Safari iOS.
 - A faire si Rayan fournit une vraie photo : remplacer le bandeau Seoul du studio.
+
+### 2026-10-31 (simplification : navbar, echelle 80 %, telephone Manteigaria)
+
+- Navbar : plus de mega-menus. Quatre liens directs (`getPrimaryNav` dans `navigation.ts`) : Sites web, Applications, Realisations, Studio, avec `aria-current` sur la page active, + FR/EN + « Demander un devis gratuit ». Menu mobile : les memes quatre liens en grand. `desktop-mega-menu.tsx` supprime. Le footer garde la carte complete du site (`getNavigation`), y compris Services et Ressources.
+- Echelle : `html { font-size: 80% }` a partir de 1024 px (tout le site est en rem), demande de Rayan d'avoir le rendu « zoom 80 % ». Mobile et tablette restent a 100 %. Les diapositives du carrousel passent a `lg:min-h-[66svh]` pour garder la hierarchie de l'accueil.
+- Landing sites : le telephone du hero affiche une vraie vue mobile du concept Manteigaria (`/realisations/manteigaria-mobile.webp`, composee a partir de la photo et de la typo du concept, car le deploiement Vercel du concept renvoie 404). Bloc « Par activite et par ville » retire de la landing. Point d attention SEO : plus aucun lien interne du site principal vers les 70 landings `/site/[sector]/[city]` (seulement le sitemap et leurs liens croises) ; a reevaluer si leur trafic baisse.
+- Tests : `site-header.test.tsx`, `e2e/navigation.spec.ts`, `e2e/motion.spec.ts` mis a jour (liens directs au lieu des menus). Vitest 163/163, build 194 pages, Playwright 122/122.

@@ -69,6 +69,14 @@ html {
   overflow-x: clip;
 }
 
+/* Desktop density: the whole site is set at 80 % on large screens (everything is in rem).
+   Phones and tablets keep the browser default so text stays readable. */
+@media (min-width: 1024px) {
+  html {
+    font-size: 80%;
+  }
+}
+
 body {
   position: relative;
   margin: 0;

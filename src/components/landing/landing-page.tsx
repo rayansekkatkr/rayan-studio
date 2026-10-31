@@ -12,7 +12,6 @@ import { TechChips } from "@/components/ui/tech-chips";
 import type { LandingContent } from "@/content/landings";
 import { getService } from "@/content/services";
 import type { Locale } from "@/lib/i18n";
-import { localSeoCities, localSeoSectors } from "@/lib/local-seo";
 import { servicePath, startProjectPath } from "@/lib/site-routes";
 import { cn } from "@/lib/utils";
 
@@ -111,8 +110,8 @@ function WarmHero({ locale, content, source }: { locale: Locale; content: Landin
               </div>
             </div>
             <div className="absolute bottom-6 right-0 w-[32%] rounded-[1.6rem] bg-[#111] p-1.5 shadow-[0_40px_80px_-30px_rgba(0,0,0,0.6)]">
-              <div className="relative aspect-[9/18] overflow-hidden rounded-[1.2rem]">
-                <Image src={image} alt="" fill sizes="20vw" className="object-cover object-[30%_top]" />
+              <div className="relative aspect-[390/844] overflow-hidden rounded-[1.2rem]">
+                <Image src="/realisations/manteigaria-mobile.webp" alt="" fill sizes="20vw" className="object-cover object-top" />
               </div>
             </div>
             <p className="absolute right-[6%] top-0 rotate-6 bg-[var(--rs-terra)] px-4 py-3 text-sm font-bold leading-tight text-white shadow-[0_18px_30px_-18px_rgba(0,0,0,0.5)] md:px-5 md:text-base">
@@ -352,37 +351,6 @@ export function LandingPage({ locale, content }: { locale: Locale; content: Land
             </div>
           ) : null}
 
-          {isWebsites && fr ? (
-            <div className="mt-14">
-              <Eyebrow>Par activité et par ville</Eyebrow>
-              <div className="mt-5 grid gap-6 lg:grid-cols-2">
-                <ul className="flex flex-wrap gap-2">
-                  {localSeoSectors.map((sector) => (
-                    <li key={sector.slug}>
-                      <Link
-                        href={`/site/${sector.slug}/paris`}
-                        className="inline-flex bg-[var(--rs-warm)] px-4 py-2 text-sm font-semibold text-[var(--rs-warm-ink)] transition-colors duration-150 hover:bg-[var(--rs-warm-ink)] hover:text-white"
-                      >
-                        {sector.title}
-                      </Link>
-                    </li>
-                  ))}
-                </ul>
-                <ul className="flex flex-wrap gap-2">
-                  {localSeoCities.map((city) => (
-                    <li key={city.slug}>
-                      <Link
-                        href={`/site/commerce-local/${city.slug}`}
-                        className="inline-flex bg-[var(--rs-warm)] px-4 py-2 text-sm font-semibold text-[var(--rs-warm-ink)] transition-colors duration-150 hover:bg-[var(--rs-warm-ink)] hover:text-white"
-                      >
-                        Site internet à {city.label}
-                      </Link>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            </div>
-          ) : null}
         </Container>
       </section>
 

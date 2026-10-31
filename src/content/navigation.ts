@@ -32,6 +32,19 @@ export type NavMenu = {
   featured?: NavFeatured;
 };
 
+export type PrimaryNavLink = NavLink & { key: "websites" | "applications" | "work" | "studio" };
+
+/** Header navigation: four direct links, no dropdowns. The footer keeps the full map of the site. */
+export function getPrimaryNav(locale: Locale): PrimaryNavLink[] {
+  const fr = locale === "fr";
+  return [
+    { key: "websites", label: fr ? "Sites web" : "Websites", href: smbLandingPath(locale) },
+    { key: "applications", label: fr ? "Applications" : "Applications", href: saasLandingPath(locale) },
+    { key: "work", label: fr ? "Réalisations" : "Work", href: workPath(locale) },
+    { key: "studio", label: "Studio", href: studioPath(locale, "studio") },
+  ];
+}
+
 export function getNavigation(locale: Locale): NavMenu[] {
   const fr = locale === "fr";
   const pick4me = getProject("pick4me");

@@ -100,7 +100,7 @@ function ProductSlide({
       aria-roledescription={fr ? "diapositive" : "slide"}
       aria-label={`${p.title}, ${position} / ${total}`}
       className={cn(
-        "group relative grid min-h-[34rem] shrink-0 content-start lg:min-h-[38rem] lg:content-center snap-start overflow-hidden rounded-[var(--rs-radius-lg)] p-6 md:p-10 lg:grid-cols-[minmax(0,4fr)_minmax(0,7fr)] lg:items-center lg:gap-12 lg:p-14",
+        "group relative grid min-h-[34rem] shrink-0 content-start lg:min-h-[66svh] lg:content-center snap-start overflow-hidden rounded-[var(--rs-radius-lg)] p-6 md:p-10 lg:grid-cols-[minmax(0,4fr)_minmax(0,7fr)] lg:items-center lg:gap-12 lg:p-14",
         peek ? "w-[88%] lg:w-[82%]" : "w-full",
         theme.surface === "#ffffff" && "border border-[var(--rs-border)]",
         light ? "text-[#f7f7f4]" : "text-rs-fg",

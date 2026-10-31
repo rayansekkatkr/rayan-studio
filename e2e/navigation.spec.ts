@@ -5,37 +5,23 @@ test.beforeEach(async ({ page }) => {
   await declineAnalytics(page);
 });
 
-test.describe("desktop mega navigation", () => {
-  test.skip(({ isMobile }) => isMobile, "desktop-only mega menu");
+test.describe("desktop navigation", () => {
+  test.skip(({ isMobile }) => isMobile, "desktop-only links");
 
-  test("Services opens with keyboard, closes on Escape and returns focus", async ({ page }) => {
+  test("the header shows four direct links that reach their pages", async ({ page }) => {
     await page.goto("/fr");
-    const trigger = page.getByRole("button", { name: "Services", exact: true });
-    await trigger.focus();
-    await page.keyboard.press("Enter");
-    await expect(trigger).toHaveAttribute("aria-expanded", "true");
-    await expect(
-      page.locator("#mega-menu-services").getByRole("link", { name: "Applications web & SaaS", exact: true }),
-    ).toBeVisible();
-
-    await page.keyboard.press("Escape");
-    await expect(trigger).toHaveAttribute("aria-expanded", "false");
-    await expect(trigger).toBeFocused();
+    const nav = page.getByRole("navigation", { name: "Navigation principale" });
+    await expect(nav.getByRole("link")).toHaveCount(4);
+    await expect(nav.getByRole("button")).toHaveCount(0);
+    await nav.getByRole("link", { name: "Réalisations", exact: true }).click();
+    await expect(page).toHaveURL(/\/fr\/work$/);
+    await expect(nav.getByRole("link", { name: "Réalisations", exact: true })).toHaveAttribute("aria-current", "page");
   });
 
-  test("Work menu navigates to a flagship case study", async ({ page }) => {
+  test("Applications link reaches the applications landing", async ({ page }) => {
     await page.goto("/fr");
-    await page.getByRole("button", { name: "Réalisations", exact: true }).click();
-    await page.locator("#mega-menu-work").getByRole("link", { name: "Pont Factur-X", exact: true }).click();
-    await expect(page).toHaveURL(/\/fr\/work\/pont-facturx$/);
-    await expect(page.getByRole("heading", { level: 1, name: "Pont Factur-X" })).toBeVisible();
-  });
-
-  test("Studio menu navigates to the offers page", async ({ page }) => {
-    await page.goto("/fr");
-    await page.getByRole("button", { name: "Studio", exact: true }).click();
-    await page.locator("#mega-menu-studio").getByRole("link", { name: "Offres", exact: true }).click();
-    await expect(page).toHaveURL(/\/fr\/studio\/offres$/);
+    await page.getByRole("navigation", { name: "Navigation principale" }).getByRole("link", { name: "Applications", exact: true }).click();
+    await expect(page).toHaveURL(/\/fr\/developpement-application-saas$/);
   });
 });
 
@@ -55,11 +41,8 @@ test.describe("mobile navigation", () => {
     );
 
     const menu = page.locator("#mobile-site-menu");
-    await menu.getByRole("button", { name: "Services", exact: true }).click();
-    const serviceLink = menu.getByRole("link", { name: "Applications web & SaaS", exact: true });
-    await expect(serviceLink).toBeVisible();
-    await serviceLink.click();
-    await expect(page).toHaveURL(/\/fr\/services\/applications-web-saas$/);
+    await menu.getByRole("link", { name: "Applications", exact: true }).click();
+    await expect(page).toHaveURL(/\/fr\/developpement-application-saas$/);
 
     const bodyOverflow = await page.evaluate(() => document.body.style.overflow);
     expect(bodyOverflow).not.toBe("hidden");
@@ -86,7 +69,7 @@ test.describe("mobile navigation", () => {
   });
 });
 
-test.describe("header and mega-menu surfaces", () => {
+test.describe("header surfaces", () => {
   test.skip(({ isMobile }) => isMobile, "desktop surface contract");
 
   const TRANSPARENT = new Set(["rgba(0, 0, 0, 0)", "transparent"]);
@@ -118,17 +101,6 @@ test.describe("header and mega-menu surfaces", () => {
     const cm = color.match(/rgba?\((\d+), (\d+), (\d+)/);
     const [cr, cg, cb] = cm!.slice(1, 4).map(Number);
     expect(cr + cg + cb, `dark brand text expected, got ${color}`).toBeLessThan(300);
-  });
-
-  test("open mega-menu panel has a real non-transparent surface", async ({ page }) => {
-    await page.goto("/fr");
-    await page.getByRole("button", { name: "Services", exact: true }).click();
-    const panel = page.locator("#mega-menu-services");
-    await expect(
-      panel.getByRole("link", { name: "Applications web & SaaS", exact: true }),
-    ).toBeVisible();
-    const bg = await panel.evaluate((el) => getComputedStyle(el).backgroundColor);
-    expect(TRANSPARENT.has(bg), `mega panel bg=${bg}`).toBe(false);
   });
 });
 
