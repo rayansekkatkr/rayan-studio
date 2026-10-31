@@ -87,7 +87,7 @@ const WEBSITES: Record<Locale, LandingContent> = {
     workTitle: "Des sites conçus par le studio",
     workLead: "Les sites des produits du studio et un concept de refonte, présenté comme tel.",
     work: [
-      { key: "manteigaria", label: "Concept de refonte, non commandé" },
+      { key: "manteigaria", label: "Site vitrine, avant / après" },
       { key: "pont-facturx", label: "Site du produit" },
       { key: "pick4me", label: "Site du produit" },
       { key: "goodcall", label: "Site du produit" },
@@ -180,7 +180,7 @@ const WEBSITES: Record<Locale, LandingContent> = {
     workTitle: "Websites designed by the studio",
     workLead: "The websites of the studio's products and a redesign concept, presented as such.",
     work: [
-      { key: "manteigaria", label: "Redesign concept, not commissioned" },
+      { key: "manteigaria", label: "Showcase website, before / after" },
       { key: "pont-facturx", label: "Product website" },
       { key: "pick4me", label: "Product website" },
       { key: "goodcall", label: "Product website" },

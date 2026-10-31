@@ -1,89 +1,43 @@
-import Image from "next/image";
 import Link from "next/link";
-import { ArrowUpRight } from "lucide-react";
-import { Reveal } from "@/components/motion/reveal";
+import { ArrowRight } from "lucide-react";
 import { Container } from "@/components/ui/container";
 import { Eyebrow } from "@/components/ui/eyebrow";
 import { FEATURED_PROJECTS } from "@/content/projects";
 import type { Locale } from "@/lib/i18n";
 import { workPath } from "@/lib/site-routes";
-import { cn } from "@/lib/utils";
+import { ProductCarousel } from "@/components/work/product-carousel";
 
+/** Home: the flagship products as a carousel, one product per slide. */
 export function SelectedWork({ locale }: { locale: Locale }) {
   const fr = locale === "fr";
 
   return (
-    <div>
-      <h2 className="sr-only">{fr ? "Nos réalisations" : "Selected work"}</h2>
-      {FEATURED_PROJECTS.map((project, index) => {
-        const wide = project.tone === "energy";
-        // Reversed chapters put the media column first, so the ratio flips with it.
-        const reversed = !wide && index % 2 === 1;
-        return (
-          <div
-            key={project.key}
-            data-featured-project={project.key}
-            className={cn(
-              "py-[var(--rs-section-space)] lg:flex lg:items-center",
-              wide ? "home-chapter-immersive" : "home-chapter-featured",
-              index > 0 && "border-t border-[var(--rs-border)]",
-            )}
-          >
-            <Container>
-              <Reveal>
-                <div
-                  className={cn(
-                    "grid items-center gap-10",
-                    wide && "md:grid-cols-1",
-                    !wide && "md:grid-cols-2",
-                    !wide && (reversed ? "xl:grid-cols-[3fr_2fr]" : "xl:grid-cols-[2fr_3fr]"),
-                  )}
-                >
-                  <div data-project-copy className={cn(reversed && "md:order-2")}>
-                    <Eyebrow>{`0${index + 1}`}</Eyebrow>
-                    <h3 className="mt-3 text-[1.75rem] font-semibold tracking-tight md:text-4xl">
-                      {project.title}
-                    </h3>
-                    <p className="mt-3 text-sm font-medium uppercase tracking-[0.14em] text-rs-muted">
-                      {project.categories[locale].join(" · ")}
-                    </p>
-                    <p className="mt-5 max-w-[var(--rs-reading)] text-lg leading-relaxed text-rs-muted">
-                      {project.summary[locale]}
-                    </p>
-                    <Link
-                      href={workPath(locale, project.slug)}
-                      className="mt-7 inline-flex items-center gap-1.5 text-base font-semibold text-rs-accent-fg transition-colors duration-150 hover:text-rs-fg"
-                    >
-                      {fr ? "Voir l'étude de cas" : "View case study"}
-                      <ArrowUpRight aria-hidden className="h-4 w-4" />
-                    </Link>
-                  </div>
-                  <div data-project-media className={cn(reversed && "md:order-1")}>
-                    <div className="overflow-hidden rounded-[var(--rs-radius-md)] border border-[var(--rs-border)]">
-                      <Image
-                        src={project.heroImage}
-                        alt={
-                          fr
-                            ? `Interface du produit ${project.title}`
-                            : `${project.title} product interface`
-                        }
-                        width={1600}
-                        height={wide ? 900 : 904}
-                        sizes={
-                          wide
-                            ? "100vw"
-                            : "(min-width: 1280px) 60vw, (min-width: 768px) 50vw, 100vw"
-                        }
-                        className="h-auto w-full object-cover"
-                      />
-                    </div>
-                  </div>
-                </div>
-              </Reveal>
-            </Container>
+    <div className="py-[var(--rs-section-space)]">
+      <Container>
+        <div className="flex flex-col gap-4 md:flex-row md:items-end md:justify-between">
+          <div>
+            <Eyebrow>{fr ? "Réalisations" : "Selected work"}</Eyebrow>
+            <h2 className="mt-4 max-w-2xl text-[1.75rem] font-semibold leading-tight tracking-tight md:text-4xl">
+              {fr ? "Des produits en ligne, conçus et exploités par le studio." : "Live products, designed and run by the studio."}
+            </h2>
           </div>
-        );
-      })}
+          <Link
+            href={workPath(locale)}
+            className="inline-flex items-center gap-1.5 text-base font-semibold text-rs-accent-fg transition-colors duration-150 hover:text-rs-fg"
+          >
+            {fr ? "Toutes les réalisations" : "All work"}
+            <ArrowRight aria-hidden className="h-4 w-4" />
+          </Link>
+        </div>
+        <div className="mt-8">
+          <ProductCarousel
+            locale={locale}
+            keys={FEATURED_PROJECTS.map((project) => project.key)}
+            featuredAttr="data-featured-project"
+            ariaLabel={fr ? "Réalisations à la une" : "Featured work"}
+          />
+        </div>
+      </Container>
     </div>
   );
 }

@@ -1,4 +1,3 @@
-import Image from "next/image";
 import Link from "next/link";
 import {
   ArrowRight,
@@ -19,18 +18,15 @@ import { TrackedLink } from "@/components/analytics/tracked-link";
 import { BigSteps } from "@/components/article/article-blocks";
 import { QuickQuoteForm } from "@/components/forms/quick-quote-form";
 import { Reassurance } from "@/components/trust/reassurance";
-import { BALANCED_GRID, balancedSpan } from "@/components/ui/balanced-grid";
+import { ProductCarousel } from "@/components/work/product-carousel";
 import { Container } from "@/components/ui/container";
 import { Eyebrow } from "@/components/ui/eyebrow";
 import { PageHero } from "@/components/ui/page-hero";
-import { projectImageAlt } from "@/components/work/project-labels";
 import type { BenefitIcon, LandingContent } from "@/content/landings";
-import { getProject } from "@/content/projects";
 import { getService } from "@/content/services";
 import type { Locale } from "@/lib/i18n";
 import { localSeoCities, localSeoSectors } from "@/lib/local-seo";
-import { servicePath, startProjectPath, workPath } from "@/lib/site-routes";
-import { cn } from "@/lib/utils";
+import { servicePath, startProjectPath } from "@/lib/site-routes";
 
 const ICONS: Record<BenefitIcon, LucideIcon> = {
   search: Search,
@@ -59,11 +55,6 @@ function SectionTitle({ eyebrow, title, lead }: { eyebrow: string; title?: strin
 export function LandingPage({ locale, content }: { locale: Locale; content: LandingContent }) {
   const fr = locale === "fr";
   const source = `landing_${content.key}`;
-  const projects = content.work
-    .map((item) => ({ item, project: getProject(item.key) }))
-    .filter((entry): entry is { item: (typeof content.work)[number]; project: NonNullable<ReturnType<typeof getProject>> } =>
-      entry.project !== null,
-    );
   const isWebsites = content.key === "websites";
 
   return (
@@ -121,37 +112,14 @@ export function LandingPage({ locale, content }: { locale: Locale; content: Land
       <section id="exemples" className="scroll-mt-24 border-t border-[var(--rs-border)] py-[var(--rs-section-space)]">
         <Container>
           <SectionTitle eyebrow={fr ? "Réalisations" : "Work"} title={content.workTitle} lead={content.workLead} />
-          <ul className={cn("mt-10 grid gap-5 sm:grid-cols-2", BALANCED_GRID)}>
-            {projects.map(({ item, project }, index) => (
-              <li key={project.key} className={balancedSpan(index, projects.length)}>
-                <Link
-                  href={workPath(locale, project.slug)}
-                  className="group flex h-full flex-col overflow-hidden rounded-[var(--rs-radius-md)] border border-[var(--rs-border)] bg-rs-surface transition-colors duration-150 hover:border-[var(--rs-border-strong)]"
-                >
-                  <span className="relative block aspect-[16/9] overflow-hidden border-b border-[var(--rs-border)] bg-[var(--rs-dark)]">
-                    <Image
-                      src={project.heroImage}
-                      alt={projectImageAlt(project, locale)}
-                      fill
-                      sizes="(min-width: 1024px) 45vw, (min-width: 640px) 50vw, 100vw"
-                      className="object-cover object-left-top transition-transform duration-500 ease-out group-hover:scale-[1.03]"
-                    />
-                  </span>
-                  <span className="flex flex-1 flex-col p-6">
-                    <span className="text-xs font-semibold uppercase tracking-[0.16em] text-rs-accent-fg">{item.label}</span>
-                    <span className="mt-2 flex items-center justify-between gap-3 text-xl font-semibold tracking-tight">
-                      {project.title}
-                      <ArrowUpRight
-                        aria-hidden
-                        className="h-5 w-5 shrink-0 text-rs-muted transition-all duration-150 group-hover:-translate-y-0.5 group-hover:translate-x-0.5 group-hover:text-rs-accent-fg"
-                      />
-                    </span>
-                    <span className="mt-2 line-clamp-3 text-sm leading-relaxed text-rs-muted">{project.summary[locale]}</span>
-                  </span>
-                </Link>
-              </li>
-            ))}
-          </ul>
+          <div className="mt-10">
+            <ProductCarousel
+              locale={locale}
+              keys={content.work.map((item) => item.key)}
+              labels={Object.fromEntries(content.work.map((item) => [item.key, item.label]))}
+              ariaLabel={content.workTitle}
+            />
+          </div>
         </Container>
       </section>
 
