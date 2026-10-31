@@ -1,19 +1,16 @@
-import Image from "next/image";
 import Link from "next/link";
 import { ArrowRight, ArrowUpRight } from "lucide-react";
 import { ClosingCta } from "@/components/ui/closing-cta";
 import { Container } from "@/components/ui/container";
 import { Eyebrow } from "@/components/ui/eyebrow";
 import { TechChips } from "@/components/ui/tech-chips";
-import { PROJECTS, type ProjectRecord } from "@/content/projects";
+import type { ProjectRecord } from "@/content/projects";
 import type { Locale } from "@/lib/i18n";
 import { quotePath, smbLandingPath, workPath } from "@/lib/site-routes";
 import { cn } from "@/lib/utils";
 import { CaseStudyGallery } from "./case-study-gallery";
 import { CaseStudyHero } from "./case-study-hero";
 import { CaseStudyOverview } from "./case-study-overview";
-import { projectImageAlt } from "./project-labels";
-import { StatusBadge } from "./status-badge";
 
 const SECTION = "border-t border-rs-fg py-14 md:py-20";
 
@@ -48,7 +45,6 @@ export function CaseStudyPage({ locale, project }: { locale: Locale; project: Pr
     (project.gallery.length > 0
       ? [{ title: { fr: "Le produit", en: "The product" }, items: project.gallery.map((item) => ({ ...item, frame: "browser" as const, width: 1600, height: 1000 })) }]
       : []);
-  const similar = PROJECTS.filter((item) => item.key !== project.key && item.kind === "product" && item.key !== "product-infrastructure").slice(0, 3);
   const isWeb = project.key === "manteigaria";
   let index = 0;
 
@@ -197,38 +193,16 @@ export function CaseStudyPage({ locale, project }: { locale: Locale; project: Pr
           </div>
         </section>
 
-        <section data-case-section="next-project" className={SECTION}>
-          <div className="flex flex-col gap-3 md:flex-row md:items-end md:justify-between">
-            <Heading index={++index} eyebrow={fr ? "Projets similaires" : "Similar projects"} title={fr ? "Continuer à explorer." : "Keep exploring."} />
-            <Link href={workPath(locale)} className="inline-flex items-center gap-1.5 font-semibold text-rs-accent-fg transition-colors duration-150 hover:text-rs-fg">
+        <section data-case-section="next-project" className="border-t border-rs-fg">
+          <Link
+            href={workPath(locale)}
+            className="group flex items-center justify-between gap-6 py-10 transition-colors duration-200 hover:bg-rs-fg hover:text-rs-bg md:px-4"
+          >
+            <span className="text-[2.25rem] font-extrabold leading-[0.95] tracking-[-0.045em] md:text-6xl">
               {fr ? "Toutes les réalisations" : "All work"}
-              <ArrowRight aria-hidden className="h-4 w-4" />
-            </Link>
-          </div>
-          <ul className="mt-8 grid gap-5 md:grid-cols-3">
-            {similar.map((item) => (
-              <li key={item.key}>
-                <Link
-                  href={workPath(locale, item.slug)}
-                  className="group block overflow-hidden rounded-[var(--rs-radius-md)] border border-[var(--rs-border)] bg-rs-surface transition-colors duration-150 hover:border-[var(--rs-border-strong)]"
-                >
-                  <span className="relative block aspect-[16/9] overflow-hidden">
-                    <Image
-                      src={item.heroImage}
-                      alt={projectImageAlt(item, locale)}
-                      fill
-                      sizes="(min-width: 768px) 30vw, 100vw"
-                      className="object-cover object-left-top transition-transform duration-500 ease-out group-hover:scale-[1.04]"
-                    />
-                  </span>
-                  <span className="flex items-center justify-between gap-3 p-5">
-                    <span className="text-lg font-semibold group-hover:text-rs-accent-fg">{item.title}</span>
-                    <StatusBadge project={item} locale={locale} />
-                  </span>
-                </Link>
-              </li>
-            ))}
-          </ul>
+            </span>
+            <ArrowRight aria-hidden className="h-8 w-8 shrink-0 transition-transform duration-200 group-hover:translate-x-2 md:h-12 md:w-12" />
+          </Link>
         </section>
       </Container>
 

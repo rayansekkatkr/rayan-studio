@@ -18,7 +18,7 @@ test.describe("reduced motion", () => {
     const h1Opacity = await h1.evaluate((node) => getComputedStyle(node).opacity);
     expect(Number(h1Opacity)).toBeGreaterThan(0.9);
 
-    const heroMedia = page.getByRole("img", { name: /Pick4Me/i }).first();
+    const heroMedia = page.getByRole("img", { name: /Poste de travail du studio/i }).first();
     await expect(heroMedia).toBeVisible();
     await heroMedia.scrollIntoViewIfNeeded();
     await expect(heroMedia).toBeInViewport();

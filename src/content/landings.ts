@@ -1,4 +1,3 @@
-import type { ProjectKey } from "@/content/projects";
 import type { Locale } from "@/lib/i18n";
 import type { QuoteType, ServiceKey } from "@/lib/site-routes";
 
@@ -19,10 +18,6 @@ export type LandingContent = {
   benefits: Array<{ title: string; body: string }>;
   includedTitle: string;
   included: string[];
-  workTitle: string;
-  workLead: string;
-  /** Projects shown as examples, with an honest label of what each one is. */
-  work: Array<{ key: ProjectKey; label: string }>;
   servicesTitle?: string;
   services?: ServiceKey[];
   processTitle: string;
@@ -32,8 +27,6 @@ export type LandingContent = {
   /** Applications: the layers the studio sets up, with stacks taken from the studio's own projects. */
   architecture?: { title: string; layers: Array<{ label: string; title: string; stack: string[] }> };
   deliverables?: { title: string; items: Array<{ key: string; body: string }> };
-  /** Caption shown under the hero visual, so a concept is never mistaken for a client project. */
-  heroCaption?: string;
   faq: Array<{ question: string; answer: string }>;
   formTitle: string;
   formLead: string;
@@ -43,7 +36,7 @@ const WEBSITES: Record<Locale, LandingContent> = {
   fr: {
     key: "websites",
     quoteType: "site",
-    heroImage: "/services/web.webp",
+    heroImage: "/images/wireframe.webp",
     seo: {
       title: "Création de site internet pour commerces et PME",
       description:
@@ -53,7 +46,7 @@ const WEBSITES: Record<Locale, LandingContent> = {
     title: "Un site internet qui donne envie de vous contacter.",
     lead: "Pour les commerces, restaurants, indépendants et PME : un site clair sur mobile, trouvable sur Google et pensé pour recevoir des demandes. Vous voyez une première maquette avant de vous engager.",
     primaryCta: "Recevoir ma maquette gratuite",
-    secondaryCta: "Voir des exemples",
+    secondaryCta: "Voir les réalisations",
     promises: ["Maquette gratuite sous 24 h ouvrées", "Un seul interlocuteur", "Vous restez propriétaire du site"],
     benefitsTitle: "Ce que votre site doit vous apporter",
     benefits: [
@@ -85,15 +78,6 @@ const WEBSITES: Record<Locale, LandingContent> = {
       "Mesure d'audience respectueuse du consentement",
       "Accompagnement après la mise en ligne",
     ],
-    workTitle: "Des sites conçus par le studio",
-    workLead: "Les sites des produits du studio et un concept de refonte, présenté comme tel.",
-    work: [
-      { key: "manteigaria", label: "Site vitrine, avant / après" },
-      { key: "pont-facturx", label: "Site du produit" },
-      { key: "pick4me", label: "Site du produit" },
-      { key: "goodcall", label: "Site du produit" },
-    ],
-    heroCaption: "Visuel : concept de refonte Manteigaria, non commandé.",
     timeline: {
       title: "De votre message à votre maquette.",
       steps: [
@@ -141,7 +125,7 @@ const WEBSITES: Record<Locale, LandingContent> = {
   en: {
     key: "websites",
     quoteType: "site",
-    heroImage: "/services/web.webp",
+    heroImage: "/images/wireframe.webp",
     seo: {
       title: "Website design for small businesses",
       description:
@@ -151,7 +135,7 @@ const WEBSITES: Record<Locale, LandingContent> = {
     title: "A website that makes people want to contact you.",
     lead: "For shops, restaurants, freelancers and small businesses: a site that is clear on mobile, easy to find on Google and built to receive enquiries. You see a first mockup before committing.",
     primaryCta: "Get my free mockup",
-    secondaryCta: "See examples",
+    secondaryCta: "See the work",
     promises: ["Free mockup within 24 business hours", "One point of contact", "You own the website"],
     benefitsTitle: "What your website should bring you",
     benefits: [
@@ -183,15 +167,6 @@ const WEBSITES: Record<Locale, LandingContent> = {
       "Consent-friendly audience measurement",
       "Support after launch",
     ],
-    workTitle: "Websites designed by the studio",
-    workLead: "The websites of the studio's products and a redesign concept, presented as such.",
-    work: [
-      { key: "manteigaria", label: "Showcase website, before / after" },
-      { key: "pont-facturx", label: "Product website" },
-      { key: "pick4me", label: "Product website" },
-      { key: "goodcall", label: "Product website" },
-    ],
-    heroCaption: "Visual: Manteigaria redesign concept, not commissioned.",
     timeline: {
       title: "From your message to your mockup.",
       steps: [
@@ -242,7 +217,7 @@ const APPLICATIONS: Record<Locale, LandingContent> = {
   fr: {
     key: "applications",
     quoteType: "app",
-    heroImage: "/images/devices.webp",
+    heroImage: "/process/launch.webp",
     seo: {
       title: "Développement d'application web et SaaS sur mesure",
       description:
@@ -252,7 +227,7 @@ const APPLICATIONS: Record<Locale, LandingContent> = {
     title: "Votre application ou votre SaaS, du cadrage à la production.",
     lead: "Pour les startups, entreprises et porteurs de projet : un produit construit autour de votre métier, livré par étapes visibles, par la même personne du premier échange à la mise en production.",
     primaryCta: "Parler de mon projet",
-    secondaryCta: "Voir les études de cas",
+    secondaryCta: "Voir les réalisations",
     promises: ["Réponse sous 24 h ouvrées", "Un seul interlocuteur technique", "Code et données à vous"],
     benefitsTitle: "Ce que vous y gagnez",
     benefits: [
@@ -282,19 +257,8 @@ const APPLICATIONS: Record<Locale, LandingContent> = {
       "Intégration de LLM et automatisation",
       "CI/CD, cloud, supervision et sauvegardes",
     ],
-    workTitle: "Études de cas",
-    workLead: "Des produits conçus, développés et exploités par le studio, et une mission client.",
-    work: [
-      { key: "pick4me", label: "Marketplace et application mobile" },
-      { key: "pont-facturx", label: "SaaS B2B de facturation électronique" },
-      { key: "goodcall", label: "Application grand public" },
-      { key: "ops-knowledge-agent", label: "Démonstrateur IA (RAG, MCP)" },
-      { key: "ci-cd-platform", label: "Mission DevOps, STMicroelectronics" },
-      { key: "docextract", label: "SaaS d'extraction de documents" },
-    ],
     servicesTitle: "Les services derrière l'offre",
     services: ["applications", "mvp", "backends", "automation", "ai", "devops"],
-    heroCaption: "Capture : Pont Factur-X, produit du studio en production.",
     architecture: {
       title: "Ce que le studio met en place, couche par couche.",
       layers: [
@@ -349,7 +313,7 @@ const APPLICATIONS: Record<Locale, LandingContent> = {
   en: {
     key: "applications",
     quoteType: "app",
-    heroImage: "/images/devices.webp",
+    heroImage: "/process/launch.webp",
     seo: {
       title: "Custom web application and SaaS development",
       description:
@@ -359,7 +323,7 @@ const APPLICATIONS: Record<Locale, LandingContent> = {
     title: "Your application or SaaS, from scoping to production.",
     lead: "For startups, companies and founders: a product built around your business, delivered in visible steps, by the same person from the first conversation to production.",
     primaryCta: "Talk about my project",
-    secondaryCta: "See the case studies",
+    secondaryCta: "See the work",
     promises: ["Reply within 24 business hours", "One technical point of contact", "Your code and data"],
     benefitsTitle: "What you get",
     benefits: [
@@ -389,19 +353,8 @@ const APPLICATIONS: Record<Locale, LandingContent> = {
       "LLM integration and automation",
       "CI/CD, cloud, monitoring and backups",
     ],
-    workTitle: "Case studies",
-    workLead: "Products designed, built and run by the studio, and a client engagement.",
-    work: [
-      { key: "pick4me", label: "Marketplace and mobile app" },
-      { key: "pont-facturx", label: "B2B e-invoicing SaaS" },
-      { key: "goodcall", label: "Consumer app" },
-      { key: "ops-knowledge-agent", label: "AI demonstrator (RAG, MCP)" },
-      { key: "ci-cd-platform", label: "DevOps engagement, STMicroelectronics" },
-      { key: "docextract", label: "Document extraction SaaS" },
-    ],
     servicesTitle: "The services behind the offer",
     services: ["applications", "mvp", "backends", "automation", "ai", "devops"],
-    heroCaption: "Screen: Pont Factur-X, a studio product in production.",
     architecture: {
       title: "What the studio sets up, layer by layer.",
       layers: [

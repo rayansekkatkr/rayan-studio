@@ -1,4 +1,3 @@
-import Image from "next/image";
 import Link from "next/link";
 import { ArrowRight, ArrowUpRight } from "lucide-react";
 import { TrackedLink } from "@/components/analytics/tracked-link";
@@ -13,7 +12,7 @@ import { craPath, quotePath, saasLandingPath, servicePath, smbLandingPath, type 
 
 const STACK = ["Next.js", "React", "TypeScript", "Node.js", "NestJS", "Python", "PostgreSQL", "Docker", "Kubernetes", "AWS", "Stripe", "Claude"];
 
-type Row = { key: ServiceKey | "cra"; image: string };
+type Row = { key: ServiceKey | "cra" };
 type Group = {
   id: string;
   label: { fr: string; en: string };
@@ -33,7 +32,7 @@ const GROUPS: Group[] = [
       href: (locale) => quotePath(locale, "site"),
       ctaId: "services_free_mockup",
     },
-    rows: [{ key: "web", image: "/realisations/manteigaria-before.png" }],
+    rows: [{ key: "web" }],
   },
   {
     id: "parcours-applications",
@@ -45,9 +44,9 @@ const GROUPS: Group[] = [
       ctaId: "services_to_saas_landing",
     },
     rows: [
-      { key: "applications", image: "/realisations/pick4me.webp" },
-      { key: "mvp", image: "/realisations/goodcall.webp" },
-      { key: "backends", image: "/realisations/pont-facturx-conversion.webp" },
+      { key: "applications" },
+      { key: "mvp" },
+      { key: "backends" },
     ],
   },
   {
@@ -55,10 +54,10 @@ const GROUPS: Group[] = [
     label: { fr: "Pour vos équipes", en: "For your teams" },
     audience: { fr: "Gagner du temps, fiabiliser l'existant.", en: "Save time, make what exists reliable." },
     rows: [
-      { key: "ai", image: "/realisations/ops-agent.webp" },
-      { key: "automation", image: "/realisations/docextract.png" },
-      { key: "devops", image: "/realisations/ci-cd-platform.webp" },
-      { key: "cra", image: "/services/cra.webp" },
+      { key: "ai" },
+      { key: "automation" },
+      { key: "devops" },
+      { key: "cra" },
     ],
   },
 ];
@@ -82,19 +81,13 @@ function ServiceRow({ locale, row, index }: { locale: Locale; row: Row; index: n
           {String(index).padStart(2, "0")}
         </span>
         <span className="text-2xl font-bold leading-[1.05] tracking-[-0.035em] md:text-[2.25rem]">{title}</span>
-        <span className="col-start-2 line-clamp-2 text-sm leading-relaxed text-rs-muted transition-opacity duration-200 md:col-start-auto md:text-base lg:group-hover:opacity-0 lg:group-focus-visible:opacity-0">
+        <span className="col-start-2 line-clamp-2 text-sm leading-relaxed text-rs-muted transition-opacity duration-200 md:col-start-auto md:text-base ">
           {tagline}
         </span>
         <ArrowRight
           aria-hidden
           className="col-start-3 row-start-1 h-5 w-5 text-rs-muted transition-transform duration-200 group-hover:translate-x-1 group-hover:text-current md:col-start-4"
         />
-        <span
-          aria-hidden
-          className="pointer-events-none absolute right-24 top-1/2 hidden h-36 w-56 -translate-y-1/2 -rotate-3 overflow-hidden border-4 border-white opacity-0 shadow-[0_30px_60px_-20px_rgba(0,0,0,0.6)] transition-opacity duration-200 group-hover:opacity-100 group-focus-visible:opacity-100 lg:block"
-        >
-          <Image src={row.image} alt="" fill sizes="224px" className="object-cover object-left-top" />
-        </span>
       </Link>
     </li>
   );

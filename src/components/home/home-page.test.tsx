@@ -11,14 +11,12 @@ describe("HomePage", () => {
   it("renders the approved homepage section order", () => {
     const { container } = render(<HomePage locale="fr" />);
     const ids = Array.from(container.querySelectorAll("[data-home-section]"), (node) => node.id);
-    expect(ids).toEqual(["hero", "selected-work", "services", "trust", "final-cta"]);
+    expect(ids).toEqual(["hero", "statement", "services", "trust", "final-cta"]);
   });
 
-  it("renders featured projects in the exact approved order", () => {
+  it("names no project: projects live on the work page only", () => {
     const { container } = render(<HomePage locale="fr" />);
-    const projectKeys = Array.from(container.querySelectorAll("[data-featured-project]"), (node) =>
-      node.getAttribute("data-featured-project"),
-    );
-    expect(projectKeys).toEqual(["pick4me", "pont-facturx", "goodcall"]);
+    expect(container.querySelectorAll("[data-featured-project]")).toHaveLength(0);
+    expect(container.textContent).not.toMatch(/Pick4Me|Pont Factur-X|GoodCall|DocExtract|Manteigaria|STMicroelectronics/);
   });
 });

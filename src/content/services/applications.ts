@@ -87,7 +87,6 @@ export const applications: ServiceRecord = {
     ],
   },
   technologies: ["Next.js", "React", "TypeScript", "Node.js", "PostgreSQL"],
-  proofProjects: ["pick4me"],
   faq: {
     fr: [
       {

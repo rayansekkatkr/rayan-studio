@@ -268,7 +268,7 @@ export const RAYAN_CONTENT: Record<
     role: "Software Engineer & Founder",
     overview: [
       "Ingénieur logiciel full-stack, fondateur de Rayan Studio. Conçoit et développe des applications web, des plateformes SaaS et des sites premium de bout en bout : produit, design, développement, déploiement.",
-      "Les produits du studio (Pick4Me, Pont Factur-X, GoodCall, DocExtract) sont conçus, développés et exploités en production par le studio.",
+      "Les produits du studio sont conçus, développés et exploités en production par le studio.",
     ],
     focusTitle: "Domaines",
     focusAreas: [
@@ -294,7 +294,7 @@ export const RAYAN_CONTENT: Record<
     role: "Software Engineer & Founder",
     overview: [
       "Full-stack software engineer, founder of Rayan Studio. Designs and builds web applications, SaaS platforms and premium websites end to end: product, design, development, deployment.",
-      "The studio's products (Pick4Me, Pont Factur-X, GoodCall, DocExtract) are designed, built and operated in production by the studio.",
+      "The studio's products are designed, built and operated in production by the studio.",
     ],
     focusTitle: "Focus areas",
     focusAreas: [

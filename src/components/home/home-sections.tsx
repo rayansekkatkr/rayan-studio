@@ -1,17 +1,13 @@
+import Image from "next/image";
 import Link from "next/link";
 import { ArrowRight } from "lucide-react";
 import { TrackedLink } from "@/components/analytics/tracked-link";
 import { Container } from "@/components/ui/container";
 import { GiantWord } from "@/components/ui/giant-word";
 import { projectStatusBadge } from "@/components/work/project-labels";
-import { FeatureProject, WorkCard } from "@/components/work/work-card";
-import { PROJECTS, getProject, type ProjectKey, type ProjectRecord } from "@/content/projects";
+import { PROJECTS } from "@/content/projects";
 import type { Locale } from "@/lib/i18n";
 import { quotePath, saasLandingPath, servicePath, smbLandingPath, workPath } from "@/lib/site-routes";
-
-function project(key: ProjectKey) {
-  return getProject(key) as ProjectRecord;
-}
 
 export function HomeHeroA({ locale }: { locale: Locale }) {
   const fr = locale === "fr";
@@ -46,9 +42,6 @@ export function HomeHeroA({ locale }: { locale: Locale }) {
                 {fr ? "Demander un devis gratuit" : "Get a free quote"}
                 <ArrowRight aria-hidden className="h-4 w-4" />
               </TrackedLink>
-              <Link href={workPath(locale)} className="text-base font-semibold underline underline-offset-4 hover:text-rs-accent-fg">
-                {fr ? "Voir nos réalisations" : "View our work"}
-              </Link>
             </div>
           </div>
         </div>
@@ -57,13 +50,22 @@ export function HomeHeroA({ locale }: { locale: Locale }) {
   );
 }
 
-export function HomeWorkA({ locale }: { locale: Locale }) {
+/** Atmosphere image, studio statement and a single door to the work page (projects live there only). */
+export function HomeStatementA({ locale }: { locale: Locale }) {
   const fr = locale === "fr";
-  const pick4me = project("pick4me");
   return (
     <div className="pt-8">
       <Container>
-        <FeatureProject p={pick4me} locale={locale} priority />
+        <figure className="relative h-[22rem] overflow-hidden bg-rs-subtle md:h-[38rem]">
+          <Image
+            src="/images/desk-night.webp"
+            alt={fr ? "Poste de travail du studio, le soir" : "Studio workstation in the evening"}
+            fill
+            priority
+            sizes="100vw"
+            className="object-cover"
+          />
+        </figure>
 
         <p className="mx-auto max-w-5xl py-20 text-center font-serif text-[2.5rem] leading-[1.02] md:py-28 md:text-[4.25rem]">
           {fr ? "Un studio indépendant. Pas d'intermédiaire entre " : "An independent studio. No middleman between "}
@@ -71,20 +73,15 @@ export function HomeWorkA({ locale }: { locale: Locale }) {
           {fr ? " et la mise en production." : " and production."}
         </p>
 
-        <div className="flex items-end justify-between gap-6 border-b border-rs-fg pb-5">
-          <h2 className="text-[2.75rem] font-extrabold leading-[0.95] tracking-[-0.045em] md:text-6xl">{fr ? "Réalisations" : "Work"}</h2>
-          <Link href={workPath(locale)} className="text-xs font-semibold uppercase tracking-[0.14em] text-rs-muted hover:text-rs-fg">
-            {fr ? "Tout voir →" : "See all →"}
-          </Link>
-        </div>
-        <div className="mt-6 grid gap-6 lg:grid-cols-[minmax(0,7fr)_minmax(0,5fr)]">
-          <WorkCard p={project("pont-facturx")} locale={locale} featured heightClass="aspect-[16/10] lg:aspect-auto lg:h-[32rem]" />
-          <WorkCard p={project("goodcall")} locale={locale} featured heightClass="aspect-[16/10] lg:aspect-auto lg:h-[32rem]" />
-        </div>
-        <div className="mt-10 grid gap-6 lg:grid-cols-[minmax(0,5fr)_minmax(0,7fr)]">
-          <WorkCard p={project("manteigaria")} locale={locale} heightClass="aspect-[16/10] lg:aspect-auto lg:h-[32rem]" />
-          <WorkCard p={project("docextract")} locale={locale} heightClass="aspect-[16/10] lg:aspect-auto lg:h-[32rem]" />
-        </div>
+        <Link
+          href={workPath(locale)}
+          className="group flex items-center justify-between gap-6 border-y border-rs-fg py-8 transition-colors duration-200 hover:bg-rs-fg hover:text-rs-bg md:px-4"
+        >
+          <span className="text-[2.5rem] font-extrabold leading-[0.95] tracking-[-0.045em] md:text-6xl">
+            {fr ? "Voir les réalisations" : "See the work"}
+          </span>
+          <ArrowRight aria-hidden className="h-8 w-8 shrink-0 transition-transform duration-200 group-hover:translate-x-2 md:h-12 md:w-12" />
+        </Link>
       </Container>
     </div>
   );
@@ -148,10 +145,7 @@ export function HomeProofA({ locale }: { locale: Locale }) {
   const live = PROJECTS.filter((p) => projectStatusBadge(p, locale).tone === "live").length;
   const items = [
     { value: String(live), label: fr ? "produits du studio en production" : "studio products in production" },
-    {
-      value: "170+",
-      label: fr ? "pipelines par jour sur la mission CI/CD STMicroelectronics (2024)" : "pipelines a day on the STMicroelectronics CI/CD engagement (2024)",
-    },
+    { value: "24 h", label: fr ? "pour une première réponse argumentée, en jours ouvrés" : "for a first reasoned reply, in business days" },
     { value: "2020", label: fr ? "développement logiciel depuis, en entreprise puis en studio" : "building software since, in companies then as a studio" },
     { value: "1", label: fr ? "seul interlocuteur, du devis au déploiement" : "single point of contact, from quote to deployment" },
   ];

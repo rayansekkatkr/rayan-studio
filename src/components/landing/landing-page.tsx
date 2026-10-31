@@ -5,8 +5,6 @@ import { TrackedLink } from "@/components/analytics/tracked-link";
 import { BigSteps } from "@/components/article/article-blocks";
 import { QuickQuoteForm } from "@/components/forms/quick-quote-form";
 import { Reassurance } from "@/components/trust/reassurance";
-import { WorkCard } from "@/components/work/work-card";
-import { getProject } from "@/content/projects";
 import { Container } from "@/components/ui/container";
 import { Eyebrow } from "@/components/ui/eyebrow";
 import { GiantWord } from "@/components/ui/giant-word";
@@ -14,7 +12,7 @@ import { TechChips } from "@/components/ui/tech-chips";
 import type { LandingContent } from "@/content/landings";
 import { getService } from "@/content/services";
 import type { Locale } from "@/lib/i18n";
-import { servicePath, startProjectPath } from "@/lib/site-routes";
+import { servicePath, startProjectPath, workPath } from "@/lib/site-routes";
 import { cn } from "@/lib/utils";
 
 function SectionTitle({ eyebrow, title, lead, serif = false }: { eyebrow: string; title?: string; lead?: string; serif?: boolean }) {
@@ -61,9 +59,9 @@ function LandingHeroA({ locale, content, source }: { locale: Locale; content: La
               {content.primaryCta}
               <ArrowRight aria-hidden className="h-4 w-4" />
             </TrackedLink>
-            <a href="#exemples" className="text-base font-semibold underline underline-offset-4 hover:text-rs-accent-fg">
+            <Link href={workPath(locale)} className="text-base font-semibold underline underline-offset-4 hover:text-rs-accent-fg">
               {content.secondaryCta}
-            </a>
+            </Link>
             <ul className="flex flex-col gap-1.5 text-sm text-rs-muted md:items-end">
               {content.promises.map((promise) => (
                 <li key={promise} className="flex items-center gap-2">
@@ -75,37 +73,9 @@ function LandingHeroA({ locale, content, source }: { locale: Locale; content: La
           </div>
         </div>
 
-        {isWebsites ? (
-          <figure className="relative mt-8 h-[22rem] overflow-hidden bg-rs-subtle sm:h-[30rem] lg:h-[38rem]">
-            <div className="absolute left-[4%] top-[8%] w-[70%] bg-white shadow-[0_40px_80px_-30px_rgba(0,0,0,0.4)]">
-              <div className="relative aspect-[16/9]">
-                <Image src="/realisations/manteigaria-before.png" alt="" fill priority sizes="(min-width: 1024px) 60vw, 70vw" className="object-cover object-left-top" />
-              </div>
-            </div>
-            <div className="absolute right-[6%] top-[10%] w-[24%] rounded-[2rem] bg-[#111] p-1.5 shadow-[0_40px_80px_-20px_rgba(0,0,0,0.5)] sm:p-2">
-              <div className="relative aspect-[390/844] overflow-hidden rounded-[1.6rem]">
-                <Image src="/realisations/manteigaria-mobile.webp" alt="" fill sizes="20vw" className="object-cover object-top" />
-              </div>
-            </div>
-            {content.heroCaption ? (
-              <figcaption className="absolute bottom-3 left-3 bg-rs-bg px-3 py-2 text-xs font-semibold md:bottom-5 md:left-5 md:text-sm">{content.heroCaption}</figcaption>
-            ) : null}
-          </figure>
-        ) : (
-          <figure className="relative mt-8 h-[22rem] overflow-hidden bg-rs-subtle sm:h-[30rem] lg:h-[38rem]">
-            <Image
-              src="/realisations/pont-facturx-conversion.webp"
-              alt={fr ? "Écran de conversion de Pont Factur-X" : "Pont Factur-X conversion screen"}
-              fill
-              priority
-              sizes="100vw"
-              className="object-cover object-left-top"
-            />
-            {content.heroCaption ? (
-              <figcaption className="absolute bottom-3 left-3 bg-rs-bg px-3 py-2 text-xs font-semibold md:bottom-5 md:left-5 md:text-sm">{content.heroCaption}</figcaption>
-            ) : null}
-          </figure>
-        )}
+        <figure className="relative mt-8 h-[22rem] overflow-hidden bg-rs-subtle sm:h-[30rem] lg:h-[38rem]">
+          <Image src={content.heroImage} alt="" fill priority sizes="100vw" className="object-cover" />
+        </figure>
       </Container>
     </div>
   );
@@ -213,20 +183,6 @@ export function LandingPage({ locale, content }: { locale: Locale; content: Land
               ))}
             </ol>
           )}
-        </Container>
-      </section>
-
-      <section id="exemples" className="scroll-mt-24 border-t border-[var(--rs-border)] py-[var(--rs-section-space)]">
-        <Container>
-          <SectionTitle eyebrow={fr ? "Réalisations" : "Work"} title={content.workTitle} lead={content.workLead} />
-          <div className="mt-10 grid gap-x-6 gap-y-10 md:grid-cols-2">
-            {content.work.map((item) => {
-              const p = getProject(item.key);
-              return p ? (
-                <WorkCard key={item.key} p={p} locale={locale} label={item.label} heightClass="aspect-[16/10]" />
-              ) : null;
-            })}
-          </div>
         </Container>
       </section>
 

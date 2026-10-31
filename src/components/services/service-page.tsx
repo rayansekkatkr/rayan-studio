@@ -9,7 +9,6 @@ import { SERVICE_HERO_PHOTOS } from "@/content/visuals";
 import { ClosingCta } from "@/components/ui/closing-cta";
 import { ArticleAsideCard, ArticleLayout, AsideLinkLabel } from "@/components/article/article-layout";
 import { ArticleBlock, BigSteps, NumberedGrid, NumberedList, PullQuote } from "@/components/article/article-blocks";
-import { ServiceProof } from "./service-proof";
 
 export function ServicePage({ locale, service }: { locale: Locale; service: ServiceRecord }) {
   const fr = locale === "fr";
@@ -53,7 +52,6 @@ export function ServicePage({ locale, service }: { locale: Locale; service: Serv
           { id: "realisations-type", label: fr ? "Ce que nous construisons" : "What we build" },
           { id: "approche", label: fr ? "Approche" : "Approach" },
           { id: "engineering", label: "Engineering" },
-          { id: "projets", label: fr ? "Projets" : "Work" },
           { id: "faq", label: "FAQ" },
         ]}
         aside={
@@ -123,11 +121,7 @@ export function ServicePage({ locale, service }: { locale: Locale; service: Serv
           ) : null}
         </ArticleBlock>
 
-        <ArticleBlock id="projets" index={6} title={fr ? "Projets" : "Work"} data-service-section="proof">
-          <ServiceProof locale={locale} projectKeys={service.proofProjects} />
-        </ArticleBlock>
-
-        <ArticleBlock id="faq" index={7} title="FAQ" data-service-section="faq">
+        <ArticleBlock id="faq" index={6} title="FAQ" data-service-section="faq">
           <div className="divide-y divide-[var(--rs-border)] border-y border-[var(--rs-border)]">
             {service.faq[locale].map((item) => (
               <details key={item.question} className="group py-5">

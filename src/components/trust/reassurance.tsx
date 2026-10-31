@@ -1,17 +1,15 @@
-import Image from "next/image";
 import Link from "next/link";
 import { ArrowUpRight, Check } from "lucide-react";
 import { Container } from "@/components/ui/container";
 import { Eyebrow } from "@/components/ui/eyebrow";
 import { TechIcon } from "@/components/ui/tech-chips";
-import { getProject, type ProjectKey } from "@/content/projects";
+import { PROJECTS } from "@/content/projects";
 import type { Locale } from "@/lib/i18n";
 import { workPath } from "@/lib/site-routes";
 import { cn } from "@/lib/utils";
 
 // Only verifiable facts: products that are online, the founder's real background,
 // commitments the studio controls. No testimonials, client counts or results.
-const LIVE_PRODUCTS: ProjectKey[] = ["pick4me", "pont-facturx", "goodcall", "docextract"];
 const STACK = ["Next.js", "React", "TypeScript", "Node.js", "NestJS", "Python", "PostgreSQL", "Docker", "Kubernetes", "AWS", "Stripe", "Claude"];
 
 type Variant = "general" | "site" | "app";
@@ -33,9 +31,7 @@ const STEPS: Record<Variant, Record<Locale, string[]>> = {
 
 export function Reassurance({ locale, variant = "general", className }: { locale: Locale; variant?: Variant; className?: string }) {
   const fr = locale === "fr";
-  const products = LIVE_PRODUCTS.map((key) => getProject(key)).filter(
-    (project): project is NonNullable<ReturnType<typeof getProject>> => project !== null,
-  );
+  const live = PROJECTS.filter((project) => project.kind === "product" && project.key !== "product-infrastructure").length;
   const advantages = fr
     ? [
         "La personne qui cadre votre projet est celle qui le développe et le met en ligne.",
@@ -54,7 +50,7 @@ export function Reassurance({ locale, variant = "general", className }: { locale
     <section data-reassurance={variant} className={cn("py-[var(--rs-section-space)]", className)}>
       <Container>
         <Eyebrow>{fr ? "Pourquoi nous faire confiance" : "Why trust the studio"}</Eyebrow>
-        <h2 className="mt-4 max-w-3xl text-[1.75rem] font-semibold leading-tight tracking-tight md:text-4xl">
+        <h2 className="mt-4 max-w-4xl text-[2.25rem] font-extrabold leading-[0.98] tracking-[-0.045em] md:text-6xl">
           {fr ? "Des preuves que vous pouvez vérifier." : "Proof you can check for yourself."}
         </h2>
         <p className="mt-4 max-w-[var(--rs-reading)] text-lg leading-relaxed text-rs-muted">
@@ -69,35 +65,20 @@ export function Reassurance({ locale, variant = "general", className }: { locale
               {fr ? "Réalisations en ligne" : "Live work"}
             </p>
             <p className="mt-2 text-xl font-semibold tracking-tight">
-              {fr ? "4 produits du studio en production" : "4 studio products in production"}
+              {fr ? `${live} produits du studio en production` : `${live} studio products in production`}
             </p>
-            <ul className="mt-5 grid gap-3 sm:grid-cols-2">
-              {products.map((project) => (
-                <li key={project.key}>
-                  <Link
-                    href={workPath(locale, project.slug)}
-                    className="group flex items-center gap-3 rounded-[var(--rs-radius-sm)] border border-[var(--rs-border)] bg-rs-bg p-2.5 pr-3 transition-colors duration-150 hover:border-[var(--rs-border-strong)]"
-                  >
-                    <span className="relative h-12 w-20 shrink-0 overflow-hidden rounded-none bg-[var(--rs-dark)]">
-                      <Image src={project.heroImage} alt="" fill sizes="80px" className="object-cover object-left-top" />
-                    </span>
-                    <span className="min-w-0 flex-1">
-                      <span className="block truncate text-sm font-semibold">{project.title}</span>
-                      <span className="block truncate text-xs text-rs-muted">{project.categories[locale].slice(0, 2).join(" · ")}</span>
-                    </span>
-                    <ArrowUpRight
-                      aria-hidden
-                      className="h-4 w-4 shrink-0 text-rs-muted transition-colors duration-150 group-hover:text-rs-accent-fg"
-                    />
-                  </Link>
-                </li>
-              ))}
-            </ul>
-            <p className="mt-5 text-sm leading-relaxed text-rs-muted">
+            <p className="mt-3 text-base leading-relaxed text-rs-muted">
               {fr
-                ? "Développement logiciel depuis 2020, dont une mission DevOps pour STMicroelectronics en 2024 (plus de 170 pipelines par jour)."
-                : "Building software since 2020, including a DevOps engagement for STMicroelectronics in 2024 (more than 170 pipelines a day)."}
+                ? "Des produits utilisés, conçus, développés et exploités par le studio. Développement logiciel depuis 2020."
+                : "Products in use, designed, built and operated by the studio. Building software since 2020."}
             </p>
+            <Link
+              href={workPath(locale)}
+              className="mt-6 inline-flex items-center gap-2 text-base font-semibold text-rs-accent-fg transition-colors duration-150 hover:text-rs-fg"
+            >
+              {fr ? "Voir les réalisations" : "See the work"}
+              <ArrowUpRight aria-hidden className="h-4 w-4" />
+            </Link>
           </div>
 
           <div className="rs-theme-dark relative isolate overflow-hidden rounded-[var(--rs-radius-md)] bg-rs-bg p-6 text-rs-fg md:p-7 lg:col-span-5">

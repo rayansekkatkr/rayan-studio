@@ -25,7 +25,7 @@ test.describe("homepage", () => {
       "href",
       "/fr/developpement-application-saas",
     );
-    await expect(page.getByRole("link", { name: "Voir nos réalisations" })).toHaveAttribute(
+    await expect(page.getByRole("link", { name: "Voir les réalisations", exact: true })).toHaveAttribute(
       "href",
       "/fr/work",
     );
@@ -42,19 +42,17 @@ test.describe("homepage", () => {
 
     const quoteCta = page.getByRole("link", { name: "Get a free quote" }).first();
     await expect(quoteCta).toHaveAttribute("href", "/en/free-quote");
-    await expect(page.getByRole("link", { name: "View our work" })).toHaveAttribute(
+    await expect(page.getByRole("link", { name: "See the work", exact: true })).toHaveAttribute(
       "href",
       "/en/work",
     );
   });
 
   for (const locale of ["fr", "en"] as const) {
-    test(`${locale} featured work keeps the approved order`, async ({ page }) => {
+    test(`${locale} home names no project and links to the work page once`, async ({ page }) => {
       await page.goto(`/${locale}`);
-      const keys = await page
-        .locator("[data-featured-project]")
-        .evaluateAll((nodes) => nodes.map((node) => node.getAttribute("data-featured-project")));
-      expect(keys).toEqual(["pick4me", "pont-facturx", "goodcall"]);
+      await expect(page.locator("[data-featured-project]")).toHaveCount(0);
+      await expect(page.locator("main")).not.toContainText(/Pick4Me|Pont Factur-X|GoodCall|DocExtract|Manteigaria/);
     });
   }
 
@@ -74,27 +72,10 @@ test.describe("homepage", () => {
     expect(wordWidth, "giant word fills the container").toBeGreaterThan(containerWidth * 0.85);
     expect(wordWidth, "giant word never overflows").toBeLessThanOrEqual(containerWidth + 2);
 
-    // The flagship product right below is large but stays under one screen.
-    const flagship = await page.locator('[data-featured-project="pick4me"]').evaluate((el) => el.getBoundingClientRect().height);
-    expect(flagship).toBeGreaterThan(900 * 0.5);
-    expect(flagship).toBeLessThan(900);
-  });
-
-  test("desktop featured work gives the product visual the dominant space", async ({ page, isMobile }) => {
-    test.skip(isMobile, "desktop-only composition");
-    await page.setViewportSize({ width: 1440, height: 900 });
-    await page.goto("/fr");
-
-    for (const key of ["pick4me", "pont-facturx", "goodcall"]) {
-      const section = page.locator(`[data-featured-project="${key}"]`);
-      const areaOf = (attr: string) =>
-        section.locator(`[${attr}]`).first().evaluate((el) => {
-          const box = el.getBoundingClientRect();
-          return box.width * box.height;
-        });
-      const [copy, media] = await Promise.all([areaOf("data-project-copy"), areaOf("data-project-media")]);
-      expect(media, `${key} media dominates copy`).toBeGreaterThan(copy);
-    }
+    // The atmosphere image right below is large but stays under one screen.
+    const visual = await page.locator("#statement figure").evaluate((el) => el.getBoundingClientRect().height);
+    expect(visual).toBeGreaterThan(900 * 0.5);
+    expect(visual).toBeLessThan(900);
   });
 
   test("mobile homepage sections flow naturally without clipping", async ({ page, isMobile }) => {
@@ -117,7 +98,7 @@ test.describe("homepage", () => {
 
   test("FR work CTA navigates to /fr/work", async ({ page }) => {
     await page.goto("/fr");
-    await page.getByRole("link", { name: "Voir nos réalisations" }).click();
+    await page.getByRole("link", { name: "Voir les réalisations", exact: true }).click();
     await expect(page).toHaveURL(/\/fr\/work$/);
     await expect(
       page.getByRole("heading", { level: 1, name: /Des produits en ligne, pas des promesses/ }),

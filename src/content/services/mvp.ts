@@ -79,7 +79,6 @@ export const mvp: ServiceRecord = {
     ],
   },
   technologies: ["Next.js", "React", "TypeScript", "Node.js", "PostgreSQL"],
-  proofProjects: ["goodcall"],
   faq: {
     fr: [
       {

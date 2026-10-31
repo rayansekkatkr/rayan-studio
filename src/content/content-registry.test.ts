@@ -45,9 +45,6 @@ describe("content registries", () => {
       "web",
       "devops",
     ]);
-    expect(getService("applications").proofProjects).toContain("pick4me");
-    expect(getService("automation").proofProjects).toEqual(["docextract", "pont-facturx", "ops-knowledge-agent"]);
-    expect(getService("devops").proofProjects).toEqual(["ci-cd-platform", "product-infrastructure"]);
   });
 
   it("contains no public em dash copy", () => {

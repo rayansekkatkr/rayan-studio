@@ -6,13 +6,10 @@ import { Container } from "@/components/ui/container";
 import { Eyebrow } from "@/components/ui/eyebrow";
 import { GiantWord } from "@/components/ui/giant-word";
 import { TechStack } from "@/components/ui/tech-stack";
-import { getProject, type ProjectKey } from "@/content/projects";
 import { RAYAN_CONTENT, STUDIO_CONTENT } from "@/content/studio";
 import { PAGE_HERO_PHOTOS } from "@/content/visuals";
 import type { Locale } from "@/lib/i18n";
 import { studioPath, workPath } from "@/lib/site-routes";
-
-const STUDIO_PRODUCTS: ProjectKey[] = ["pick4me", "pont-facturx", "goodcall", "docextract"];
 
 /** Studio page as a magazine spread: serif statement, identity sheet, city band, career line. */
 export function StudioPage({ locale }: { locale: Locale }) {
@@ -35,7 +32,6 @@ export function StudioPage({ locale }: { locale: Locale }) {
       when: fr ? "Aujourd'hui" : "Today",
       title: "Rayan Studio",
       body: fr ? "Produits du studio en production et projets clients." : "Studio products in production and client projects.",
-      now: true,
     },
   ];
 
@@ -83,24 +79,6 @@ export function StudioPage({ locale }: { locale: Locale }) {
                   <p className="text-4xl font-black tracking-[-0.05em] md:text-6xl">{step.when}</p>
                   <h3 className="mt-3 text-xl font-semibold">{step.title}</h3>
                   <p className="mt-2 text-base leading-relaxed text-rs-muted">{step.body}</p>
-                  {step.now ? (
-                    <ul className="mt-4 flex flex-wrap gap-2">
-                      {STUDIO_PRODUCTS.map((key) => {
-                        const project = getProject(key);
-                        if (!project) return null;
-                        return (
-                          <li key={key}>
-                            <Link
-                              href={workPath(locale, project.slug)}
-                              className="inline-flex border border-[var(--rs-border)] bg-rs-surface px-3 py-1.5 text-sm font-medium transition-colors duration-150 hover:border-rs-fg"
-                            >
-                              {project.title}
-                            </Link>
-                          </li>
-                        );
-                      })}
-                    </ul>
-                  ) : null}
                 </li>
               ))}
             </ol>

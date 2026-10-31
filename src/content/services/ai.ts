@@ -133,7 +133,6 @@ export const ai: ServiceRecord = {
     ],
   },
   technologies: ["Claude", "ChatGPT", "Microsoft 365 Copilot", "Copilot Studio", "API", "RAG", "MCP", "SSO"],
-  proofProjects: ["ops-knowledge-agent", "docextract", "pont-facturx"],
   faq: {
     fr: [
       {
