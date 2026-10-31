@@ -34,6 +34,11 @@ export function HomeHero({ locale }: { locale: Locale }) {
       <HeroScreenWall
         className="absolute inset-y-0 right-0 -z-10 hidden w-[50%] lg:block"
       />
+      {/* Melts the glow and the screen wall into the night, so the statement below follows without a seam. */}
+      <div
+        aria-hidden
+        className="pointer-events-none absolute inset-x-0 bottom-0 z-[-5] h-14 bg-gradient-to-b from-transparent to-[var(--rs-dark)] lg:h-64"
+      />
       <Container className="pointer-events-none">
         <div className="flex min-h-0 items-center pb-12 pt-28 md:pb-16 md:pt-32 lg:min-h-[min(54rem,100svh)] lg:pb-24">
           <div className="pointer-events-auto max-w-3xl lg:max-w-[36rem] xl:max-w-[40rem]">
