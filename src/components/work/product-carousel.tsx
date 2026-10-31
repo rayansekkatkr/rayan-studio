@@ -77,6 +77,7 @@ function ProductSlide({
   total,
   label,
   featuredAttr,
+  peek = false,
 }: {
   p: ProjectRecord;
   locale: Locale;
@@ -84,6 +85,7 @@ function ProductSlide({
   total: number;
   label?: string;
   featuredAttr?: "data-work-project" | "data-featured-project";
+  peek?: boolean;
 }) {
   const fr = locale === "fr";
   const theme = WORK_THEMES[p.key] ?? { surface: "#ffffff", ink: "dark" as const };
@@ -98,7 +100,8 @@ function ProductSlide({
       aria-roledescription={fr ? "diapositive" : "slide"}
       aria-label={`${p.title}, ${position} / ${total}`}
       className={cn(
-        "group relative grid min-h-[34rem] w-full shrink-0 content-start lg:min-h-[38rem] lg:content-center snap-start overflow-hidden rounded-[var(--rs-radius-lg)] p-6 md:p-10 lg:grid-cols-[minmax(0,4fr)_minmax(0,7fr)] lg:items-center lg:gap-12 lg:p-14",
+        "group relative grid min-h-[34rem] shrink-0 content-start lg:min-h-[38rem] lg:content-center snap-start overflow-hidden rounded-[var(--rs-radius-lg)] p-6 md:p-10 lg:grid-cols-[minmax(0,4fr)_minmax(0,7fr)] lg:items-center lg:gap-12 lg:p-14",
+        peek ? "w-[88%] lg:w-[82%]" : "w-full",
         theme.surface === "#ffffff" && "border border-[var(--rs-border)]",
         light ? "text-[#f7f7f4]" : "text-rs-fg",
       )}
@@ -163,6 +166,7 @@ export function ProductCarousel({
   labels,
   featuredAttr,
   ariaLabel,
+  peek = false,
 }: {
   locale: Locale;
   keys: ProjectKey[];
@@ -170,6 +174,8 @@ export function ProductCarousel({
   labels?: Partial<Record<ProjectKey, string>>;
   featuredAttr?: "data-work-project" | "data-featured-project";
   ariaLabel?: string;
+  /** Narrower slides so the next product shows at the edge, like a film strip. */
+  peek?: boolean;
 }) {
   const fr = locale === "fr";
   const trackRef = useRef<HTMLDivElement>(null);
@@ -219,7 +225,7 @@ export function ProductCarousel({
         className="flex snap-x snap-mandatory gap-6 overflow-x-auto scroll-smooth rounded-[var(--rs-radius-lg)] outline-none [scrollbar-width:none] focus-visible:ring-2 focus-visible:ring-rs-accent [&::-webkit-scrollbar]:hidden"
       >
         {projects.map((p, index) => (
-          <ProductSlide key={p.key} p={p} locale={locale} position={index + 1} total={projects.length} label={labels?.[p.key]} featuredAttr={featuredAttr} />
+          <ProductSlide key={p.key} p={p} locale={locale} position={index + 1} total={projects.length} label={labels?.[p.key]} featuredAttr={featuredAttr} peek={peek} />
         ))}
       </div>
 

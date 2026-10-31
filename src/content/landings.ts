@@ -27,6 +27,13 @@ export type LandingContent = {
   services?: ServiceKey[];
   processTitle: string;
   process: string[];
+  /** Websites: what happens from the first message to the mockup. */
+  timeline?: { title: string; steps: Array<{ when: string; title: string; body: string }> };
+  /** Applications: the layers the studio sets up, with stacks taken from the studio's own projects. */
+  architecture?: { title: string; layers: Array<{ label: string; title: string; stack: string[] }> };
+  deliverables?: { title: string; items: Array<{ key: string; body: string }> };
+  /** Caption shown under the hero visual, so a concept is never mistaken for a client project. */
+  heroCaption?: string;
   faq: Array<{ question: string; answer: string }>;
   formTitle: string;
   formLead: string;
@@ -86,6 +93,15 @@ const WEBSITES: Record<Locale, LandingContent> = {
       { key: "pick4me", label: "Site du produit" },
       { key: "goodcall", label: "Site du produit" },
     ],
+    heroCaption: "Visuel : concept de refonte Manteigaria, non commandé.",
+    timeline: {
+      title: "De votre message à votre maquette.",
+      steps: [
+        { when: "Jour 0", title: "Vous décrivez votre activité", body: "Deux minutes, un formulaire court. Pas besoin de cahier des charges." },
+        { when: "Sous 24 h", title: "Vous recevez la maquette", body: "La page d'accueil de votre futur site, à votre image, sans engagement." },
+        { when: "Ensuite", title: "Vous décidez", body: "Devis écrit si vous souhaitez continuer. Sinon, rien à payer." },
+      ],
+    },
     processTitle: "Comment ça se passe",
     process: [
       "Vous décrivez votre activité en quelques lignes, sans jargon.",
@@ -175,6 +191,15 @@ const WEBSITES: Record<Locale, LandingContent> = {
       { key: "pick4me", label: "Product website" },
       { key: "goodcall", label: "Product website" },
     ],
+    heroCaption: "Visual: Manteigaria redesign concept, not commissioned.",
+    timeline: {
+      title: "From your message to your mockup.",
+      steps: [
+        { when: "Day 0", title: "You describe your business", body: "Two minutes, a short form. No specification needed." },
+        { when: "Within 24 h", title: "You receive the mockup", body: "The home page of your future website, in your image, with no commitment." },
+        { when: "Then", title: "You decide", body: "A written quote if you want to go ahead. Otherwise, nothing to pay." },
+      ],
+    },
     processTitle: "How it works",
     process: [
       "You describe your business in a few lines, no jargon.",
@@ -269,6 +294,25 @@ const APPLICATIONS: Record<Locale, LandingContent> = {
     ],
     servicesTitle: "Les services derrière l'offre",
     services: ["applications", "mvp", "backends", "automation", "ai", "devops"],
+    heroCaption: "Capture : Pont Factur-X, produit du studio en production.",
+    architecture: {
+      title: "Ce que le studio met en place, couche par couche.",
+      layers: [
+        { label: "01 / Interface", title: "Web et mobile", stack: ["Next.js", "React Native", "Flutter"] },
+        { label: "02 / API", title: "Backend métier", stack: ["NestJS", "FastAPI", "Stripe"] },
+        { label: "03 / Données", title: "Stockage et files", stack: ["PostgreSQL", "Redis", "Celery"] },
+        { label: "04 / Infra", title: "Mise en production", stack: ["Docker", "Kubernetes", "Terraform"] },
+      ],
+    },
+    deliverables: {
+      title: "Ce que vous recevez.",
+      items: [
+        { key: "code_source", body: "Dépôt à votre nom, historique complet" },
+        { key: "acces", body: "Comptes cloud, domaines et services à vous" },
+        { key: "documentation", body: "Pour reprendre ou internaliser" },
+        { key: "mise_en_production", body: "CI/CD, supervision et sauvegardes" },
+      ],
+    },
     processTitle: "Le processus, du cadrage au déploiement",
     process: [
       "Cadrage : utilisateurs, problème, périmètre de la V1 et contraintes.",
@@ -357,6 +401,25 @@ const APPLICATIONS: Record<Locale, LandingContent> = {
     ],
     servicesTitle: "The services behind the offer",
     services: ["applications", "mvp", "backends", "automation", "ai", "devops"],
+    heroCaption: "Screen: Pont Factur-X, a studio product in production.",
+    architecture: {
+      title: "What the studio sets up, layer by layer.",
+      layers: [
+        { label: "01 / Interface", title: "Web and mobile", stack: ["Next.js", "React Native", "Flutter"] },
+        { label: "02 / API", title: "Business backend", stack: ["NestJS", "FastAPI", "Stripe"] },
+        { label: "03 / Data", title: "Storage and queues", stack: ["PostgreSQL", "Redis", "Celery"] },
+        { label: "04 / Infra", title: "Production", stack: ["Docker", "Kubernetes", "Terraform"] },
+      ],
+    },
+    deliverables: {
+      title: "What you receive.",
+      items: [
+        { key: "source_code", body: "A repository in your name, full history" },
+        { key: "access", body: "Cloud accounts, domains and services in your name" },
+        { key: "documentation", body: "To take over or bring in-house" },
+        { key: "production", body: "CI/CD, monitoring and backups" },
+      ],
+    },
     processTitle: "The process, from scoping to deployment",
     process: [
       "Scoping: users, problem, V1 scope and constraints.",

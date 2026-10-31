@@ -1,6 +1,5 @@
 "use client";
 
-import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
 import { ArrowUpRight } from "lucide-react";
@@ -9,7 +8,6 @@ import { WORK_FILTERS, type WorkFilter } from "@/content/visuals";
 import type { Locale } from "@/lib/i18n";
 import { workPath } from "@/lib/site-routes";
 import { cn } from "@/lib/utils";
-import { projectImageAlt } from "./project-labels";
 import { ProductCarousel } from "./product-carousel";
 import { StatusBadge, StatusPill } from "./status-badge";
 
@@ -35,53 +33,16 @@ function project(key: ProjectKey) {
   return getProject(key) as ProjectRecord;
 }
 
-function TechCard({ p, locale }: { p: ProjectRecord; locale: Locale }) {
-  return (
-    <Link
-      href={workPath(locale, p.slug)}
-      className="group flex h-full flex-col overflow-hidden rounded-[var(--rs-radius-md)] border border-[var(--rs-border)] bg-rs-surface transition-colors duration-200 hover:border-[var(--rs-border-strong)]"
-    >
-      <span className="relative block aspect-[16/9] overflow-hidden bg-[var(--rs-dark)]">
-        <Image
-          src={p.heroImage}
-          alt={projectImageAlt(p, locale)}
-          fill
-          sizes="(min-width: 1024px) 30vw, 100vw"
-          className="object-cover transition-transform duration-500 ease-out group-hover:scale-[1.04]"
-        />
-      </span>
-      <span className="flex flex-1 flex-col p-6">
-        <span className="flex items-center gap-2">
-          <StatusBadge project={p} locale={locale} suffix={p.year} />
-        </span>
-        <span className="mt-3 flex items-center justify-between gap-3 text-xl font-semibold tracking-tight transition-colors duration-200 group-hover:text-rs-accent-fg">
-          {p.title}
-          <ArrowUpRight aria-hidden className="h-5 w-5 shrink-0 text-rs-muted transition-all duration-200 group-hover:-translate-y-0.5 group-hover:translate-x-0.5 group-hover:text-rs-accent-fg" />
-        </span>
-        <span className="mt-2 line-clamp-3 text-sm leading-relaxed text-rs-muted">{p.summary[locale]}</span>
-        <span className="mt-3 block text-xs font-medium text-rs-muted">{p.role[locale]}</span>
-        <span className="mt-auto flex flex-wrap gap-1.5 pt-4">
-          {p.technologies.slice(0, 4).map((tech) => (
-            <span key={tech} className="rounded-none bg-rs-bg px-2.5 py-1 text-[11px] font-medium">
-              {tech}
-            </span>
-          ))}
-        </span>
-      </span>
-    </Link>
-  );
-}
-
 export function WorkPortfolio({ locale }: { locale: Locale }) {
   const fr = locale === "fr";
   const [filter, setFilter] = useState<Filter>("all");
   const products = PRODUCTS.filter((key) => matches(key, filter));
-  const technical = TECHNICAL.filter((key) => matches(key, filter)).map(project);
+  const indexed = [...PRODUCTS, ...TECHNICAL].filter((key) => matches(key, filter)).map(project);
 
   return (
     <div>
       <div className="flex flex-col gap-5 lg:flex-row lg:items-center lg:justify-between">
-        <div role="group" aria-label={fr ? "Filtrer les réalisations" : "Filter the work"} className="flex flex-wrap gap-2">
+        <div role="group" aria-label={fr ? "Filtrer les réalisations" : "Filter the work"} className="flex flex-wrap border-b border-rs-fg">
           {FILTERS.map((item) => (
             <button
               key={item.id}
@@ -89,10 +50,8 @@ export function WorkPortfolio({ locale }: { locale: Locale }) {
               aria-pressed={filter === item.id}
               onClick={() => setFilter(item.id)}
               className={cn(
-                "rounded-none px-4 py-2.5 text-sm font-medium transition-colors duration-150",
-                filter === item.id
-                  ? "bg-rs-fg text-rs-bg"
-                  : "border border-[var(--rs-border)] bg-rs-surface hover:border-[var(--rs-border-strong)]",
+                "px-5 py-3 text-sm font-semibold transition-colors duration-150",
+                filter === item.id ? "bg-rs-fg text-rs-bg" : "text-rs-muted hover:text-rs-fg",
               )}
             >
               {item.label[locale]}
@@ -108,32 +67,55 @@ export function WorkPortfolio({ locale }: { locale: Locale }) {
       </div>
 
       <div className="mt-8">
-        <ProductCarousel key={products.join("-")} locale={locale} keys={products} featuredAttr="data-work-project" />
+        <ProductCarousel key={products.join("-")} locale={locale} keys={products} featuredAttr="data-work-project" peek />
       </div>
 
-      {technical.length > 0 ? (
-        <div className="mt-16">
+      {indexed.length > 0 ? (
+        <section className="mt-16" aria-labelledby="index-projets">
           <div className="flex flex-col gap-3 md:flex-row md:items-end md:justify-between">
             <div>
-              <p className="text-xs font-semibold uppercase tracking-[0.18em] text-rs-muted">
-                {fr ? "Projets techniques" : "Technical projects"}
-              </p>
-              <h2 className="mt-3 text-[1.75rem] font-semibold tracking-tight md:text-4xl">
-                {fr ? "Derrière les écrans : IA, DevOps et infrastructure" : "Behind the screens: AI, DevOps and infrastructure"}
+              <p className="text-xs font-semibold uppercase tracking-[0.18em] text-rs-muted">{fr ? "Index des projets" : "Project index"}</p>
+              <h2 id="index-projets" className="mt-3 text-[1.75rem] font-semibold tracking-tight md:text-4xl">
+                {fr ? "Tous les projets, IA, DevOps et infrastructure compris." : "Every project, AI, DevOps and infrastructure included."}
               </h2>
             </div>
             <p className="max-w-md text-base leading-relaxed text-rs-muted">
               {fr
-                ? "IA, CI/CD et infrastructure : les projets qui montrent comment le studio met en production."
-                : "AI, CI/CD and infrastructure: the projects that show how the studio ships to production."}
+                ? "Chaque ligne indique ce que le projet est réellement : produit en ligne, démonstrateur, mission client ou concept."
+                : "Each row states what the project really is: live product, demonstrator, client engagement or concept."}
             </p>
           </div>
-          <div className={cn("mt-8 grid gap-6 md:grid-cols-2", technical.length >= 3 && "lg:grid-cols-3")}>
-            {technical.map((p) => (
-              <TechCard key={p.key} p={p} locale={locale} />
-            ))}
-          </div>
-        </div>
+          <table className="mt-8 w-full border-collapse text-left">
+            <thead>
+              <tr className="border-b border-rs-fg text-xs font-semibold uppercase tracking-[0.16em] text-rs-muted">
+                <th scope="col" className="py-3 pr-4 font-semibold">{fr ? "Projet" : "Project"}</th>
+                <th scope="col" className="hidden py-3 pr-4 font-semibold md:table-cell">Type</th>
+                <th scope="col" className="hidden py-3 pr-4 font-semibold lg:table-cell">Stack</th>
+                <th scope="col" className="py-3 font-semibold">{fr ? "Statut" : "Status"}</th>
+              </tr>
+            </thead>
+            <tbody>
+              {indexed.map((p) => (
+                <tr key={p.key} className="group border-b border-[var(--rs-border)]">
+                  <td className="py-5 pr-4">
+                    <Link
+                      href={workPath(locale, p.slug)}
+                      className="inline-flex items-center gap-2 text-lg font-semibold tracking-tight transition-colors duration-150 group-hover:text-rs-accent-fg md:text-2xl"
+                    >
+                      {p.title}
+                      <ArrowUpRight aria-hidden className="h-4 w-4 shrink-0 text-rs-muted group-hover:text-rs-accent-fg" />
+                    </Link>
+                  </td>
+                  <td className="hidden py-5 pr-4 text-sm text-rs-muted md:table-cell">{p.categories[locale].slice(0, 2).join(" · ")}</td>
+                  <td className="hidden py-5 pr-4 text-sm lg:table-cell">{p.technologies.slice(0, 3).join(" · ")}</td>
+                  <td className="py-5">
+                    <StatusBadge project={p} locale={locale} />
+                  </td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </section>
       ) : null}
     </div>
   );

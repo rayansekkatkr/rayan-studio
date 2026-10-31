@@ -768,3 +768,15 @@ Quand un changement important est fait:
 - Cartes a icone supprimees, mise en forme differente selon la page : landing sites = liste editoriale numerotee (`data-benefits="list"`) ; landing SaaS = colonnes sous filet epais avec compteur 01 / 04 (`data-benefits="columns"`) ; pages service « Ce que vous y gagnez » = affirmations separees par filets verticaux ; studio = principes numerotes sous filet ; accueil offres = index en lignes titre | description. Champ `icon` et type `BenefitIcon` retires de `landings.ts`.
 - Verification : typecheck, lint, check:copy, vitest 163/163, build 194 pages, Playwright 124/124, captures 1440 et 390.
 - Suite : maquettes d'une identite par famille de pages (services, work, landings, studio), a valider avant code.
+
+### 2026-10-31 (une identite par famille de pages)
+
+- Demande de Rayan : les pages se ressemblaient trop (meme bandeau noir photo, meme grille de cartes, meme carte CTA sombre). Cinq maquettes validees (« go pour ca »), puis code. Attribut `data-page-identity` sur chaque page.
+- /services « Sommaire » (`services-index.tsx`) : hero clair et typographique (titre geant, pas de photo, header `light`), deux portes Sites / Applications, sommaire des 8 services groupes par parcours (`#parcours-sites`, `#parcours-applications`, `#parcours-evoluer`, lignes `data-service-row`). Au survol ou au focus clavier, la ligne passe en noir et une vraie capture apparait (desktop). CTA final en ligne, plus de carte sombre.
+- /work « Mur d'ecrans » (`work-index.tsx`) : hero plein ecran de vraies captures + compteurs calcules depuis `projectStatusBadge` (produits en ligne, mission client, concept). Filtres en onglets. Carrousel en bande avec apercu de la diapositive suivante (`ProductCarousel peek`). Index tabulaire de tous les projets (projet, type, stack, statut) a la place des cartes techniques.
+- Landing sites « Chaleureuse » : hero creme (`--rs-warm`, `--rs-warm-ink`, `--rs-terra`), titre serif avec « envie » en italique terre cuite, visuel Manteigaria en navigateur + telephone avec tampon « maquette offerte » et legende concept. Signature : frise Jour 0 / Sous 24 h / Ensuite (`timeline` dans `landings.ts`). Titres serif, puces secteurs creme, panneau formulaire creme. Header `light`.
+- Landing applications « Plan technique » : hero `.blueprint-grid`, libelles mono, capture Pont Factur-X annotee avec sa stack reelle. Signature : architecture en 4 couches avec logos (`architecture`) et fiche livrables (`deliverables`). Process conserve.
+- /studio « Editorial » (`studio-page.tsx`) : citation serif geante, fiche d'identite (faits reels, pas de portrait), bandeau Seoul, texte d'intro, frise UNYC 2020 a 2023 / ST 2024 / Rayan Studio aujourd'hui avec liens produits, citation, principes. Header `light` pour cette seule page studio.
+- Verification : typecheck, lint, check:copy, vitest 163/163 (test work mis a jour), build 194 pages, Playwright 124/124, captures 1440 et 390 sans debordement.
+- Non verifie : rendu reel des polices serif (le build cloud utilise une police simulee), Safari iOS.
+- A faire si Rayan fournit une vraie photo : remplacer le bandeau Seoul du studio.
