@@ -787,3 +787,9 @@ Quand un changement important est fait:
 - Echelle : `html { font-size: 80% }` a partir de 1024 px (tout le site est en rem), demande de Rayan d'avoir le rendu « zoom 80 % ». Mobile et tablette restent a 100 %. Les diapositives du carrousel passent a `lg:min-h-[66svh]` pour garder la hierarchie de l'accueil.
 - Landing sites : le telephone du hero affiche une vraie vue mobile du concept Manteigaria (`/realisations/manteigaria-mobile.webp`, composee a partir de la photo et de la typo du concept, car le deploiement Vercel du concept renvoie 404). Bloc « Par activite et par ville » retire de la landing. Point d attention SEO : plus aucun lien interne du site principal vers les 70 landings `/site/[sector]/[city]` (seulement le sitemap et leurs liens croises) ; a reevaluer si leur trafic baisse.
 - Tests : `site-header.test.tsx`, `e2e/navigation.spec.ts`, `e2e/motion.spec.ts` mis a jour (liens directs au lieu des menus). Vitest 163/163, build 194 pages, Playwright 122/122.
+
+### 2026-10-31 (echelle 90 % et capture Pick4Me detouree)
+
+- Echelle desktop passee de 80 % a 90 % (`html { font-size: 90% }` a partir de 1024 px), a la demande de Rayan.
+- `pick4me-app.webp` : les coins blancs autour du cadre du telephone sont maintenant transparents (ils se voyaient sur le mur d'ecrans sombre de /work). Detourage limite a l'exterieur du cadre, ligne par ligne, le contenu de l'ecran est intact. Penser a vider `.next/cache/images` en local pour voir la nouvelle version.
+- Verification : build 194 pages, Playwright 122/122 a 90 %.
