@@ -1,4 +1,3 @@
-import Image from "next/image";
 import Link from "next/link";
 import { ArrowRight, ArrowUpRight, Check, Plus } from "lucide-react";
 import { TrackedLink } from "@/components/analytics/tracked-link";
@@ -8,6 +7,7 @@ import { Reassurance } from "@/components/trust/reassurance";
 import { Container } from "@/components/ui/container";
 import { Eyebrow } from "@/components/ui/eyebrow";
 import { GiantWord } from "@/components/ui/giant-word";
+import { NightBand } from "@/components/ui/night-band";
 import { TechChips } from "@/components/ui/tech-chips";
 import type { LandingContent } from "@/content/landings";
 import { getService } from "@/content/services";
@@ -34,27 +34,27 @@ function SectionTitle({ eyebrow, title, lead, serif = false }: { eyebrow: string
   );
 }
 
-/** Landing header, direction A: giant page name, a real h1, the offer and a real product visual. */
+/** Landing header: night band with a theme photo faded in, giant page name, a real h1 and the offer. */
 function LandingHeroA({ locale, content, source }: { locale: Locale; content: LandingContent; source: string }) {
   const fr = locale === "fr";
   const isWebsites = content.key === "websites";
   const word = isWebsites ? (fr ? "Sites web" : "Websites") : "Applications";
 
   return (
-    <div className="pt-28 md:pt-36">
+    <NightBand image={content.heroImage} className="pt-28 md:pt-36">
       <Container>
         <Eyebrow>{content.eyebrow}</Eyebrow>
         <div className="mt-3 overflow-x-clip">
           <GiantWord text={word} />
         </div>
-        <div className="mt-7 grid gap-6 border-b border-rs-fg pb-8 md:grid-cols-3 md:gap-8">
+        <div className="mt-8 grid gap-6 md:grid-cols-3 md:gap-8">
           <h1 className="text-xl font-bold leading-snug tracking-tight md:text-2xl">{content.title}</h1>
           <p className="text-lg leading-relaxed text-rs-muted">{content.lead}</p>
           <div className="flex flex-col gap-4 md:items-end">
             <TrackedLink
               href="#devis"
               event={{ ctaId: `${source}_hero_form`, source, destination: "#devis", locale }}
-              className="inline-flex items-center gap-2 bg-rs-accent px-6 py-3.5 text-base font-semibold text-white transition-colors duration-150 hover:bg-rs-fg"
+              className="inline-flex items-center gap-2 bg-rs-accent px-6 py-3.5 text-base font-semibold text-white transition-colors duration-150 hover:bg-rs-fg hover:text-rs-bg"
             >
               {content.primaryCta}
               <ArrowRight aria-hidden className="h-4 w-4" />
@@ -72,12 +72,8 @@ function LandingHeroA({ locale, content, source }: { locale: Locale; content: La
             </ul>
           </div>
         </div>
-
-        <figure className="relative mt-8 h-[22rem] overflow-hidden bg-rs-subtle sm:h-[30rem] lg:h-[38rem]">
-          <Image src={content.heroImage} alt="" fill priority sizes="100vw" className="object-cover" />
-        </figure>
       </Container>
-    </div>
+    </NightBand>
   );
 }
 

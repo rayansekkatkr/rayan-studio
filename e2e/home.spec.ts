@@ -56,23 +56,28 @@ test.describe("homepage", () => {
     });
   }
 
-  test("desktop homepage follows the direction A hierarchy", async ({ page, isMobile }) => {
+  test("desktop homepage opens on the night hero with the product wall", async ({ page, isMobile }) => {
     test.skip(isMobile, "desktop-only layout");
     await page.setViewportSize({ width: 1440, height: 900 });
     await page.goto("/fr");
-    await page.evaluate(() => document.fonts.ready);
 
-    // The studio name is set in giant type across the container.
-    const word = page.locator("#hero [data-giant-word]");
-    await expect(word).toHaveText(/Rayan Studio/i);
-    const [wordWidth, containerWidth] = await word.evaluate((el) => {
-      const parent = el.parentElement as HTMLElement;
-      return [el.getBoundingClientRect().width, parent.getBoundingClientRect().width];
-    });
-    expect(wordWidth, "giant word fills the container").toBeGreaterThan(containerWidth * 0.85);
-    expect(wordWidth, "giant word never overflows").toBeLessThanOrEqual(containerWidth + 2);
+    // Night hero: dark background, light header ink on top of it.
+    const heroBg = await page.locator("#hero > div").first().evaluate((el) => getComputedStyle(el).backgroundColor);
+    const [r, g, b] = heroBg.match(/\d+/g)!.map(Number);
+    expect(r + g + b, `dark hero expected, got ${heroBg}`).toBeLessThan(120);
+    await expect(page.locator("header[data-top-theme='dark']")).toHaveCount(1);
 
-    // The atmosphere image right below is large but stays under one screen.
+    // Decorative wall of product screens on the right, hidden from assistive tech and unnamed.
+    const wall = page.locator("[data-hero-wall]");
+    await expect(wall).toBeVisible();
+    await expect(wall).toHaveAttribute("aria-hidden", "true");
+    const box = await wall.boundingBox();
+    expect(box!.x).toBeGreaterThan(1440 * 0.4);
+
+    // Two doors under the CTAs.
+    await expect(page.getByText("Choisissez votre parcours")).toBeVisible();
+
+    // The atmosphere image further down is large but stays under one screen.
     const visual = await page.locator("#statement figure").evaluate((el) => el.getBoundingClientRect().height);
     expect(visual).toBeGreaterThan(900 * 0.5);
     expect(visual).toBeLessThan(900);

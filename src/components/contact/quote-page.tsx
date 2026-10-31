@@ -5,6 +5,7 @@ import { PageHero } from "@/components/ui/page-hero";
 import type { Locale } from "@/lib/i18n";
 import { startProjectPath } from "@/lib/site-routes";
 import { ContactLayout } from "./contact-layout";
+import { PAGE_HERO_PHOTOS } from "@/content/visuals";
 
 /** Short free-quote page, the destination of every "Demander un devis gratuit" button. */
 export function QuotePage({ locale }: { locale: Locale }) {
@@ -13,6 +14,7 @@ export function QuotePage({ locale }: { locale: Locale }) {
     <>
       <PageHero
         eyebrow={fr ? "Devis gratuit" : "Free quote"}
+        image={PAGE_HERO_PHOTOS.contact}
         title={fr ? "Demander un devis gratuit" : "Get a free quote"}
         lead={
           <p>

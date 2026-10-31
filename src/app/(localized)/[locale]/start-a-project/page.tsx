@@ -6,6 +6,7 @@ import { ContactLayout } from "@/components/contact/contact-layout";
 import { PageHero } from "@/components/ui/page-hero";
 import { normalizeLocale, type Locale } from "@/lib/i18n";
 import { buildLocalizedMetadata } from "@/lib/seo";
+import { PAGE_HERO_PHOTOS } from "@/content/visuals";
 
 export const dynamicParams = false;
 
@@ -33,9 +34,10 @@ export default async function Page({ params }: { params: Promise<{ locale: strin
   }
 
   return (
-    <CommercialPageShell locale="en" headerTopTheme="light">
+    <CommercialPageShell locale="en">
       <PageHero
         eyebrow="Project · Quote"
+        image={PAGE_HERO_PHOTOS.contact}
         title="Start a project"
         lead={
           <p>

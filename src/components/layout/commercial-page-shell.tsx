@@ -14,7 +14,7 @@ export function CommercialPageShell({
   locale,
   children,
   className,
-  headerTopTheme = "light",
+  headerTopTheme = "dark",
 }: CommercialPageShellProps) {
   return (
     <>

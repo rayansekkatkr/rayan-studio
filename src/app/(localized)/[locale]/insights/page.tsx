@@ -31,7 +31,7 @@ export default async function Page({ params }: { params: Promise<{ locale: strin
   const locale = normalizeLocale(p.locale) as Locale;
 
   return (
-    <CommercialPageShell locale={locale} headerTopTheme="light">
+    <CommercialPageShell locale={locale}>
       <InsightsIndex locale={locale} />
     </CommercialPageShell>
   );

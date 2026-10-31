@@ -8,6 +8,7 @@ import { PageHero } from "@/components/ui/page-hero";
 import { quotePath } from "@/lib/site-routes";
 import { isEnglish, normalizeLocale, type Locale } from "@/lib/i18n";
 import { buildLocalizedMetadata } from "@/lib/seo";
+import { PAGE_HERO_PHOTOS } from "@/content/visuals";
 
 export const dynamicParams = false;
 
@@ -37,9 +38,10 @@ export default async function Page({ params }: { params: Promise<{ locale: strin
   const fr = locale === "fr";
 
   return (
-    <CommercialPageShell locale={locale} headerTopTheme="light">
+    <CommercialPageShell locale={locale}>
       <PageHero
         eyebrow="Contact"
+        image={PAGE_HERO_PHOTOS.contact}
         title={fr ? "Une question ? Parlons-en." : "Have a question? Let's talk."}
         lead={
           <p>

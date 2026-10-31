@@ -9,6 +9,7 @@ import { getCraPage } from "@/content/cra";
 import { getService } from "@/content/services";
 import type { Locale } from "@/lib/i18n";
 import { craPath, quotePath, saasLandingPath, servicePath, smbLandingPath, type ServiceKey } from "@/lib/site-routes";
+import { PAGE_HERO_PHOTOS } from "@/content/visuals";
 
 const STACK = ["Next.js", "React", "TypeScript", "Node.js", "NestJS", "Python", "PostgreSQL", "Docker", "Kubernetes", "AWS", "Stripe", "Claude"];
 
@@ -117,6 +118,7 @@ export function ServicesIndex({ locale }: { locale: Locale }) {
       <PageHero
         eyebrow={fr ? `Services · ${total} expertises · 2 parcours` : `Services · ${total} areas · 2 paths`}
         word="Services"
+        image={PAGE_HERO_PHOTOS.services}
         title={fr ? "Ce que le studio construit, du cadrage à la mise en production." : "What the studio builds, from scoping to production."}
         lead={
           <p>

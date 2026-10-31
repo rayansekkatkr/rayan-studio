@@ -4,7 +4,8 @@ import { BRAND, getSiteUrl } from "@/lib/brand";
 import type { Locale } from "@/lib/i18n";
 import { ClosingCta } from "@/components/ui/closing-cta";
 import { quotePath } from "@/lib/site-routes";
-import { HomeHeroA, HomeProofA, HomeServicesA, HomeStatementA } from "./home-sections";
+import { HomeHero } from "./home-hero";
+import { HomeProofA, HomeServicesA, HomeStatementA } from "./home-sections";
 
 function buildHomeJsonLd(locale: Locale) {
   const siteUrl = getSiteUrl();
@@ -58,14 +59,14 @@ function buildHomeJsonLd(locale: Locale) {
 export function HomePage({ locale }: { locale: Locale }) {
   const fr = locale === "fr";
   return (
-    <CommercialPageShell locale={locale} headerTopTheme="light">
+    <CommercialPageShell locale={locale} headerTopTheme="dark">
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(buildHomeJsonLd(locale)) }}
       />
       <FunnelTracking />
       <section id="hero" data-home-section>
-        <HomeHeroA locale={locale} />
+        <HomeHero locale={locale} />
       </section>
       <section id="statement" data-home-section>
         <HomeStatementA locale={locale} />

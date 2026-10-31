@@ -1,10 +1,10 @@
-import Image from "next/image";
 import Link from "next/link";
 import { ArrowRight } from "lucide-react";
 import { ClosingCta } from "@/components/ui/closing-cta";
 import { Container } from "@/components/ui/container";
 import { Eyebrow } from "@/components/ui/eyebrow";
 import { GiantWord } from "@/components/ui/giant-word";
+import { NightBand } from "@/components/ui/night-band";
 import { TechStack } from "@/components/ui/tech-stack";
 import { RAYAN_CONTENT, STUDIO_CONTENT } from "@/content/studio";
 import { PAGE_HERO_PHOTOS } from "@/content/visuals";
@@ -37,13 +37,14 @@ export function StudioPage({ locale }: { locale: Locale }) {
 
   return (
     <article data-page-identity="studio">
-      <section className="pt-28 md:pt-36">
+      <section>
+        <NightBand image={PAGE_HERO_PHOTOS.studio} imagePosition="center 60%" className="pt-28 md:pt-36">
         <Container>
           <Eyebrow>{fr ? "Le studio" : "The studio"}</Eyebrow>
           <div className="mt-3 overflow-x-clip">
             <GiantWord text="Studio" />
           </div>
-          <div className="mt-7 grid gap-6 border-b border-rs-fg pb-8 md:grid-cols-[minmax(0,5fr)_minmax(0,7fr)] md:gap-12">
+          <div className="mt-8 grid gap-6 md:grid-cols-[minmax(0,5fr)_minmax(0,7fr)] md:gap-12">
             <h1 className="text-xl font-bold leading-snug tracking-tight md:text-2xl">{content.hero.title}</h1>
             <dl className="grid grid-cols-2 gap-x-6 gap-y-4 sm:grid-cols-3 lg:grid-cols-5">
               {sheet.map((item) => (
@@ -54,15 +55,12 @@ export function StudioPage({ locale }: { locale: Locale }) {
               ))}
             </dl>
           </div>
+        </Container>
+        </NightBand>
+        <Container>
           <p className="mx-auto max-w-5xl py-16 text-center font-serif text-[2.75rem] leading-[1.02] md:py-24 md:text-[4.5rem]">
             {first}. <em className="text-rs-accent-fg">{second}</em>
           </p>
-          <figure className="relative h-64 overflow-hidden md:h-[30rem]">
-            <Image src={PAGE_HERO_PHOTOS.studio} alt="" fill priority sizes="100vw" className="object-cover object-[center_60%]" />
-            <figcaption className="absolute bottom-4 left-4 bg-rs-bg px-3 py-2 text-xs font-semibold md:bottom-5 md:left-5 md:text-sm">
-              {fr ? "Séoul · collaboration à distance avec la France" : "Seoul · remote collaboration with France"}
-            </figcaption>
-          </figure>
         </Container>
       </section>
 

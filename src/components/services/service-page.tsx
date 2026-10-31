@@ -20,6 +20,7 @@ export function ServicePage({ locale, service }: { locale: Locale; service: Serv
       <section data-service-section="hero">
         <PageHero
           eyebrow={service.eyebrow[locale]}
+          image={SERVICE_HERO_PHOTOS[service.key]}
           title={service.title[locale]}
           lead={<p>{service.description[locale]}</p>}
         >

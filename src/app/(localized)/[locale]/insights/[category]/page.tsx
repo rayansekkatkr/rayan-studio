@@ -8,6 +8,8 @@ import { Eyebrow } from "@/components/ui/eyebrow";
 import { getInsightsByCategory } from "@/content/insights";
 import { SUPPORTED_LOCALES, normalizeLocale, type Locale } from "@/lib/i18n";
 import { buildLocalizedMetadata } from "@/lib/seo";
+import { NightBand } from "@/components/ui/night-band";
+import { PAGE_HERO_PHOTOS } from "@/content/visuals";
 import {
   insightPath,
   resolveInsightCategorySlug,
@@ -81,8 +83,8 @@ export default async function Page({ params }: { params: Promise<{ locale: strin
   const insights = getInsightsByCategory(category, locale);
 
   return (
-    <CommercialPageShell locale={locale} headerTopTheme="light">
-      <div className="pt-28 md:pt-36">
+    <CommercialPageShell locale={locale}>
+      <NightBand image={PAGE_HERO_PHOTOS.insights} className="pt-28 md:pt-36">
         <Container className="page-hero-rule">
           <Eyebrow>{locale === "fr" ? "Ressources" : "Insights"}</Eyebrow>
           <h1 className="mt-5 max-w-5xl text-[2.5rem] font-extrabold leading-[0.98] tracking-[-0.045em] md:text-6xl">
@@ -92,7 +94,7 @@ export default async function Page({ params }: { params: Promise<{ locale: strin
             {meta.description}
           </p>
         </Container>
-      </div>
+      </NightBand>
       <div className="bg-rs-bg py-[var(--rs-section-space)]">
         <Container>
           {category === "tools" ? (

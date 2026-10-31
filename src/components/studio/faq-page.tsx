@@ -5,6 +5,8 @@ import { Eyebrow } from "@/components/ui/eyebrow";
 import { FAQ_CONTENT } from "@/content/studio";
 import type { Locale } from "@/lib/i18n";
 import { startProjectPath } from "@/lib/site-routes";
+import { NightBand } from "@/components/ui/night-band";
+import { PAGE_HERO_PHOTOS } from "@/content/visuals";
 
 export function FaqPage({ locale }: { locale: Locale }) {
   const fr = locale === "fr";
@@ -12,14 +14,14 @@ export function FaqPage({ locale }: { locale: Locale }) {
 
   return (
     <article>
-      <div className="pt-28 md:pt-36">
+      <NightBand image={PAGE_HERO_PHOTOS.faq} className="pt-28 md:pt-36">
         <Container className="page-hero-rule">
           <Eyebrow>FAQ</Eyebrow>
           <h1 className="mt-5 max-w-5xl text-[2.5rem] font-extrabold leading-[0.98] tracking-[-0.045em] md:text-6xl">
             {fr ? "Questions fréquentes" : "Frequently asked questions"}
           </h1>
         </Container>
-      </div>
+      </NightBand>
 
       <div className="bg-rs-bg py-[var(--rs-section-space)]">
         <Container>

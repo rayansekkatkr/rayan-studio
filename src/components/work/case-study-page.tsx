@@ -8,6 +8,7 @@ import type { ProjectRecord } from "@/content/projects";
 import type { Locale } from "@/lib/i18n";
 import { quotePath, smbLandingPath, workPath } from "@/lib/site-routes";
 import { cn } from "@/lib/utils";
+import { NightBand } from "@/components/ui/night-band";
 import { CaseStudyGallery } from "./case-study-gallery";
 import { CaseStudyHero } from "./case-study-hero";
 import { CaseStudyOverview } from "./case-study-overview";
@@ -50,8 +51,10 @@ export function CaseStudyPage({ locale, project }: { locale: Locale; project: Pr
 
   return (
     <article>
-      <section data-case-section="hero" className="pt-28 md:pt-36">
-        <CaseStudyHero locale={locale} project={project} />
+      <section data-case-section="hero">
+        <NightBand image={project.heroImage} dim className="pt-28 md:pt-36">
+          <CaseStudyHero locale={locale} project={project} />
+        </NightBand>
       </section>
 
       <section data-case-section="overview" className="mt-8">

@@ -225,6 +225,41 @@ section[id] {
     linear-gradient(0deg, var(--rs-dark) 0%, rgba(9, 9, 12, 0) 45%);
 }
 
+/* Night page headers: the photo is faded in from the right and towards the bottom. */
+.night-band-image {
+  opacity: 0.78;
+  -webkit-mask-image: linear-gradient(to right, transparent 0%, #000 55%), linear-gradient(to top, transparent 0%, #000 45%);
+  -webkit-mask-composite: source-in;
+  mask-image: linear-gradient(to right, transparent 0%, #000 55%), linear-gradient(to top, transparent 0%, #000 45%);
+  mask-composite: intersect;
+}
+
+.night-band-image--dim {
+  opacity: 0.3;
+}
+
+.night-band-shade {
+  background: linear-gradient(90deg, var(--rs-dark) 0%, rgba(9, 9, 12, 0.55) 45%, rgba(9, 9, 12, 0.15) 100%);
+}
+
+@media (max-width: 767px) {
+  .night-band-image {
+    opacity: 0.45;
+  }
+
+  .night-band-image--dim {
+    opacity: 0.22;
+  }
+}
+
+[data-night-band] .page-hero-rule {
+  padding-bottom: 0;
+}
+
+[data-night-band] .page-hero-rule::after {
+  display: none;
+}
+
 /* Home hero: animated glow and a wall of real product screens. */
 .hero-glow {
   background:

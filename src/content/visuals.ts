@@ -26,10 +26,15 @@ export const SERVICE_HERO_PHOTOS: Record<ServiceKey, string> = {
 
 export const PAGE_HERO_PHOTOS = {
   services: "/images/lines-blue.webp",
+  work: "/images/devices.webp",
   studio: "/images/seoul-night.webp",
-  insights: "/images/notebook.webp",
+  rayan: "/images/desk-night.webp",
+  method: "/images/notebook.webp",
+  faq: "/services/cra.webp",
+  insights: "/images/code.webp",
   contact: "/images/desk-night.webp",
   offers: "/images/network-cubes.webp",
+  legal: "/images/lines-blue.webp",
 } as const;
 
 /** Offer cards, in the order of OFFERS_CONTENT (applications, MVP, websites, ongoing support). */

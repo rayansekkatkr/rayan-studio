@@ -8,6 +8,8 @@ import type { Locale } from "@/lib/i18n";
 import { insightPath, servicePath, startProjectPath } from "@/lib/site-routes";
 import { InsightBlocks } from "./insight-blocks";
 import { InsightCard } from "./insight-card";
+import { NightBand } from "@/components/ui/night-band";
+import { PAGE_HERO_PHOTOS } from "@/content/visuals";
 
 function relatedInsights(current: InsightRecord, locale: Locale): InsightRecord[] {
   const published = INSIGHTS.filter((insight) => isInsightAvailable(insight, locale));
@@ -36,7 +38,7 @@ export function InsightArticle({ locale, insight }: { locale: Locale; insight: I
 
   return (
     <article>
-      <div className="pt-28 md:pt-36">
+      <NightBand image={PAGE_HERO_PHOTOS.insights} className="pt-28 md:pt-36">
         <Container className="page-hero-rule">
           <Eyebrow>{locale === "fr" ? "Ressources" : "Insights"}</Eyebrow>
           <h1 className="mt-5 max-w-5xl text-[2.5rem] font-extrabold leading-[0.98] tracking-[-0.045em] md:text-6xl">
@@ -50,7 +52,7 @@ export function InsightArticle({ locale, insight }: { locale: Locale; insight: I
             {insight.publishedAt}
           </p>
         </Container>
-      </div>
+      </NightBand>
 
       <div className="bg-rs-bg py-[var(--rs-section-space)]">
         <Container>

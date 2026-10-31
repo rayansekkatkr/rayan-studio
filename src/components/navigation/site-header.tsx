@@ -104,7 +104,9 @@ export function SiteHeader({ locale, topTheme = "light" }: SiteHeaderProps) {
                   className={cn(
                     "px-4 py-2 text-sm font-medium transition-colors duration-150",
                     current
-                      ? "text-rs-accent-fg"
+                      ? inverse
+                        ? "text-[#8a88f2]"
+                        : "text-rs-accent-fg"
                       : inverse
                         ? "text-[var(--rs-dark-fg)] hover:text-[var(--rs-dark-muted)]"
                         : "text-rs-fg hover:text-rs-accent-fg",

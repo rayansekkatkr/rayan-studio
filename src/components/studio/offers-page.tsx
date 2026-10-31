@@ -8,6 +8,7 @@ import { OFFERS_CONTENT } from "@/content/studio";
 import { OFFER_PHOTOS } from "@/content/visuals";
 import type { Locale } from "@/lib/i18n";
 import { quotePath } from "@/lib/site-routes";
+import { PAGE_HERO_PHOTOS } from "@/content/visuals";
 
 export function OffersPage({ locale }: { locale: Locale }) {
   const fr = locale === "fr";
@@ -17,6 +18,7 @@ export function OffersPage({ locale }: { locale: Locale }) {
     <article>
       <PageHero
         eyebrow={fr ? "Offres" : "Offers"}
+        image={PAGE_HERO_PHOTOS.offers}
         title={content.title}
         lead={<p>{content.globalStatement}</p>}
       >

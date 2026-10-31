@@ -36,7 +36,7 @@ const WEBSITES: Record<Locale, LandingContent> = {
   fr: {
     key: "websites",
     quoteType: "site",
-    heroImage: "/images/wireframe.webp",
+    heroImage: "/services/web.webp",
     seo: {
       title: "Création de site internet pour commerces et PME",
       description:
@@ -125,7 +125,7 @@ const WEBSITES: Record<Locale, LandingContent> = {
   en: {
     key: "websites",
     quoteType: "site",
-    heroImage: "/images/wireframe.webp",
+    heroImage: "/services/web.webp",
     seo: {
       title: "Website design for small businesses",
       description:
@@ -217,7 +217,7 @@ const APPLICATIONS: Record<Locale, LandingContent> = {
   fr: {
     key: "applications",
     quoteType: "app",
-    heroImage: "/process/launch.webp",
+    heroImage: "/images/code.webp",
     seo: {
       title: "Développement d'application web et SaaS sur mesure",
       description:
@@ -313,7 +313,7 @@ const APPLICATIONS: Record<Locale, LandingContent> = {
   en: {
     key: "applications",
     quoteType: "app",
-    heroImage: "/process/launch.webp",
+    heroImage: "/images/code.webp",
     seo: {
       title: "Custom web application and SaaS development",
       description:

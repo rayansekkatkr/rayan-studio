@@ -1,60 +1,17 @@
 import Image from "next/image";
 import Link from "next/link";
 import { ArrowRight } from "lucide-react";
-import { TrackedLink } from "@/components/analytics/tracked-link";
 import { Container } from "@/components/ui/container";
-import { GiantWord } from "@/components/ui/giant-word";
 import { projectStatusBadge } from "@/components/work/project-labels";
 import { PROJECTS } from "@/content/projects";
 import type { Locale } from "@/lib/i18n";
-import { quotePath, saasLandingPath, servicePath, smbLandingPath, workPath } from "@/lib/site-routes";
-
-export function HomeHeroA({ locale }: { locale: Locale }) {
-  const fr = locale === "fr";
-  return (
-    <div className="pt-24 md:pt-28">
-      <Container>
-        <div className="overflow-x-clip">
-          <GiantWord text="Rayan Studio" maxRem={16} />
-        </div>
-        <div className="mt-8 grid gap-6 border-b border-rs-fg pb-8 md:grid-cols-3 md:gap-8">
-          <h1 className="text-lg font-bold leading-snug">
-            {fr ? "Sites web, applications et logiciels sur mesure." : "Websites, applications and custom software."}
-            <span className="block font-normal text-rs-muted">
-              {fr ? "Conçus, codés et mis en ligne par la même personne." : "Designed, built and shipped by the same person."}
-            </span>
-          </h1>
-          <p className="text-lg leading-snug text-rs-muted">
-            {fr
-              ? "Pour les commerces et PME qui veulent être trouvés, et pour les startups qui veulent un produit en production."
-              : "For small businesses that want to be found, and for startups that want a product in production."}
-          </p>
-          <div className="flex flex-col gap-4 md:items-end">
-            <span className="inline-flex items-center gap-2 text-sm font-semibold text-[#136b33] before:h-1.5 before:w-1.5 before:rounded-full before:bg-[#22a05a] before:content-['']">
-              {fr ? "Réponse sous 24 h ouvrées" : "Reply within 24 business hours"}
-            </span>
-            <div className="flex flex-wrap items-center gap-4 md:justify-end">
-              <TrackedLink
-                href={quotePath(locale)}
-                event={{ ctaId: "home_hero_free_quote", source: "home_hero", destination: quotePath(locale), locale }}
-                className="inline-flex items-center gap-2 bg-rs-fg px-6 py-3.5 text-base font-semibold text-rs-bg transition-colors duration-150 hover:bg-rs-accent hover:text-white"
-              >
-                {fr ? "Demander un devis gratuit" : "Get a free quote"}
-                <ArrowRight aria-hidden className="h-4 w-4" />
-              </TrackedLink>
-            </div>
-          </div>
-        </div>
-      </Container>
-    </div>
-  );
-}
+import { saasLandingPath, servicePath, smbLandingPath, workPath } from "@/lib/site-routes";
 
 /** Atmosphere image, studio statement and a single door to the work page (projects live there only). */
 export function HomeStatementA({ locale }: { locale: Locale }) {
   const fr = locale === "fr";
   return (
-    <div className="pt-8">
+    <div className="pt-16 md:pt-24">
       <Container>
         <figure className="relative h-[22rem] overflow-hidden bg-rs-subtle md:h-[38rem]">
           <Image

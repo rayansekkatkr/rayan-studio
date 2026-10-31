@@ -5,6 +5,7 @@ import type { Locale } from "@/lib/i18n";
 import { quotePath, saasLandingPath } from "@/lib/site-routes";
 import { projectStatusBadge } from "./project-labels";
 import { WorkPortfolio } from "./work-portfolio";
+import { PAGE_HERO_PHOTOS } from "@/content/visuals";
 
 export function WorkIndex({ locale }: { locale: Locale }) {
   const fr = locale === "fr";
@@ -21,6 +22,7 @@ export function WorkIndex({ locale }: { locale: Locale }) {
       <PageHero
         eyebrow={crumb}
         word={fr ? "Réalisations" : "Work"}
+        image={PAGE_HERO_PHOTOS.work}
         title={fr ? "Des produits en ligne, pas des promesses." : "Live products, not promises."}
         lead={
           <p>
