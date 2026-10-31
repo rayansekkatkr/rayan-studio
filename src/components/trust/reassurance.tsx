@@ -78,7 +78,7 @@ export function Reassurance({ locale, variant = "general", className }: { locale
                     href={workPath(locale, project.slug)}
                     className="group flex items-center gap-3 rounded-[var(--rs-radius-sm)] border border-[var(--rs-border)] bg-rs-bg p-2.5 pr-3 transition-colors duration-150 hover:border-[var(--rs-border-strong)]"
                   >
-                    <span className="relative h-12 w-20 shrink-0 overflow-hidden rounded-lg bg-[var(--rs-dark)]">
+                    <span className="relative h-12 w-20 shrink-0 overflow-hidden rounded-none bg-[var(--rs-dark)]">
                       <Image src={project.heroImage} alt="" fill sizes="80px" className="object-cover object-left-top" />
                     </span>
                     <span className="min-w-0 flex-1">
@@ -111,7 +111,7 @@ export function Reassurance({ locale, variant = "general", className }: { locale
             <ul className="mt-5 space-y-3.5">
               {advantages.map((item) => (
                 <li key={item} className="flex gap-3 text-sm leading-relaxed">
-                  <span className="mt-0.5 flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-rs-accent">
+                  <span className="mt-0.5 flex h-5 w-5 shrink-0 items-center justify-center rounded-none bg-rs-accent">
                     <Check aria-hidden className="h-3 w-3 text-white" />
                   </span>
                   {item}

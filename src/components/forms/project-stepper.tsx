@@ -19,7 +19,7 @@ export function ProjectStepper({ currentStep, totalSteps, label }: ProjectSteppe
           <span
             key={index}
             className={cn(
-              "h-1 flex-1 rounded-full transition-colors duration-150",
+              "h-1 flex-1 rounded-none transition-colors duration-150",
               index < currentStep ? "bg-rs-accent" : "bg-[var(--rs-border)]",
             )}
           />

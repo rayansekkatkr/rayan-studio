@@ -69,7 +69,7 @@ export function InsightArticle({ locale, insight }: { locale: Locale; insight: I
               </Link>
               <Link
                 href={cta.primaryHref}
-                className="inline-flex items-center gap-2 rounded-full bg-rs-fg px-6 py-3 text-base font-semibold text-rs-bg transition-colors duration-150 hover:bg-rs-accent"
+                className="inline-flex items-center gap-2 rounded-none bg-rs-fg px-6 py-3 text-base font-semibold text-rs-bg transition-colors duration-150 hover:bg-rs-accent"
               >
                 {cta.primaryLabel}
                 <ArrowRight aria-hidden className="h-4 w-4" />

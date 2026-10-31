@@ -29,17 +29,17 @@ export function OffersPreview({ locale }: { locale: Locale }) {
         <h2 className="mt-4 max-w-2xl text-[1.75rem] font-semibold tracking-tight md:text-3xl">
           {fr ? "Quatre façons de travailler ensemble." : "Four ways to work together."}
         </h2>
-        <div className="mt-10 grid gap-6 sm:grid-cols-2">
+        <ul className="mt-10 border-t border-rs-fg">
           {offers.map((offer) => (
-            <div
+            <li
               key={offer.title}
-              className="rounded-[var(--rs-radius-md)] border border-[var(--rs-border)] bg-rs-surface p-6"
+              className="grid gap-2 border-b border-[var(--rs-border)] py-6 md:grid-cols-[minmax(0,5fr)_minmax(0,7fr)] md:items-baseline md:gap-10"
             >
-              <h3 className="text-xl font-semibold">{offer.title}</h3>
-              <p className="mt-2 text-base leading-relaxed text-rs-muted">{offer.body}</p>
-            </div>
+              <h3 className="text-xl font-semibold tracking-tight md:text-2xl">{offer.title}</h3>
+              <p className="text-base leading-relaxed text-rs-muted">{offer.body}</p>
+            </li>
           ))}
-        </div>
+        </ul>
         <p className="mt-8 text-base font-medium text-rs-fg">
           {fr ? "Première réponse sous 24h ouvrées." : "First response within 24 business hours."}
         </p>

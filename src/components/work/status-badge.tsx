@@ -7,7 +7,7 @@ export function StatusPill({ tone, children, className }: { tone: StatusTone; ch
   return (
     <span
       className={cn(
-        "inline-flex items-center gap-1.5 rounded-full px-3 py-1 text-xs font-semibold before:h-1.5 before:w-1.5 before:rounded-full before:content-['']",
+        "inline-flex items-center gap-1.5 rounded-none px-3 py-1 text-xs font-semibold before:h-1.5 before:w-1.5 before:rounded-full before:content-['']",
         STATUS_TONE_CLASSES[tone],
         className,
       )}

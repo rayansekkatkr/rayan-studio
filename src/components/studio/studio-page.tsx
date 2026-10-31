@@ -57,17 +57,19 @@ export function StudioPage({ locale }: { locale: Locale }) {
             </div>
           </div>
 
-          <div className="mt-14 grid gap-6 sm:grid-cols-2">
-            {content.principles.map((principle) => (
-              <div
-                key={principle.title}
-                className="rounded-[var(--rs-radius-md)] border border-[var(--rs-border)] bg-rs-surface p-6"
-              >
-                <h2 className="text-xl font-semibold">{principle.title}</h2>
-                <p className="mt-2 text-base leading-relaxed text-rs-muted">{principle.body}</p>
-              </div>
+          <ol className="mt-14 grid gap-x-12 sm:grid-cols-2">
+            {content.principles.map((principle, index) => (
+              <li key={principle.title} className="flex gap-5 border-t border-rs-fg py-7">
+                <span aria-hidden className="w-8 shrink-0 pt-1 text-sm font-bold text-rs-accent-fg">
+                  {String(index + 1).padStart(2, "0")}
+                </span>
+                <div>
+                  <h2 className="text-xl font-semibold tracking-tight">{principle.title}</h2>
+                  <p className="mt-2 text-base leading-relaxed text-rs-muted">{principle.body}</p>
+                </div>
+              </li>
             ))}
-          </div>
+          </ol>
 
           <ul className="mt-14 grid gap-6 border-t border-[var(--rs-border)] pt-10 md:grid-cols-3">
             {facts.map((fact) => (

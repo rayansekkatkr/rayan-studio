@@ -19,7 +19,7 @@ export function Browser({ src, alt, sizes, className, dark }: { src: string; alt
   return (
     <span
       className={cn(
-        "block overflow-hidden rounded-2xl border shadow-[0_30px_70px_-40px_rgba(9,9,12,0.6)] transition-transform duration-500 ease-out",
+        "block overflow-hidden rounded-none border shadow-[0_30px_70px_-40px_rgba(9,9,12,0.6)] transition-transform duration-500 ease-out",
         dark ? "border-white/10" : "border-[var(--rs-border)]",
         className,
       )}
@@ -137,7 +137,7 @@ function ProductSlide({
           {p.technologies.slice(0, 5).map((tech) => (
             <span
               key={tech}
-              className={cn("rounded-full px-3 py-1 text-xs font-medium", light ? "border border-white/15 bg-white/5" : "border border-black/10 bg-white/70")}
+              className={cn("rounded-none px-3 py-1 text-xs font-medium", light ? "border border-white/15 bg-white/5" : "border border-black/10 bg-white/70")}
             >
               {tech}
             </span>
@@ -233,7 +233,7 @@ export function ProductCarousel({
                   aria-current={active === index ? "true" : undefined}
                   onClick={() => goTo(index)}
                   className={cn(
-                    "relative overflow-hidden rounded-full px-4 py-2 text-sm font-medium transition-colors duration-150",
+                    "relative overflow-hidden rounded-none px-4 py-2 text-sm font-medium transition-colors duration-150",
                     active === index ? "bg-rs-fg text-rs-bg" : "border border-[var(--rs-border)] bg-rs-surface text-rs-muted hover:text-rs-fg",
                   )}
                 >
@@ -251,7 +251,7 @@ export function ProductCarousel({
               onClick={() => goTo(active - 1)}
               disabled={active === 0}
               aria-label={fr ? "Projet précédent" : "Previous project"}
-              className="flex h-11 w-11 items-center justify-center rounded-full border border-[var(--rs-border)] bg-rs-surface transition-colors duration-150 hover:border-rs-fg disabled:opacity-40"
+              className="flex h-11 w-11 items-center justify-center rounded-none border border-[var(--rs-border)] bg-rs-surface transition-colors duration-150 hover:border-rs-fg disabled:opacity-40"
             >
               <ArrowLeft aria-hidden className="h-4 w-4" />
             </button>
@@ -260,7 +260,7 @@ export function ProductCarousel({
               onClick={() => goTo(active + 1)}
               disabled={active === projects.length - 1}
               aria-label={fr ? "Projet suivant" : "Next project"}
-              className="flex h-11 w-11 items-center justify-center rounded-full bg-rs-fg text-rs-bg transition-colors duration-150 hover:bg-rs-accent disabled:opacity-40"
+              className="flex h-11 w-11 items-center justify-center rounded-none bg-rs-fg text-rs-bg transition-colors duration-150 hover:bg-rs-accent disabled:opacity-40"
             >
               <ArrowRight aria-hidden className="h-4 w-4" />
             </button>

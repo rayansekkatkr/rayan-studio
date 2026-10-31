@@ -31,9 +31,9 @@
   --rs-container: 86rem;
   --rs-reading: 46rem;
   --rs-section-space: clamp(3.5rem, 6vw, 5rem);
-  --rs-radius-sm: 0.75rem;
-  --rs-radius-md: 1.25rem;
-  --rs-radius-lg: 2rem;
+  --rs-radius-sm: 0;
+  --rs-radius-md: 0;
+  --rs-radius-lg: 0;
   --rs-motion-fast: 160ms;
   --rs-motion-medium: 240ms;
   /* Fixed overlay surfaces: explicit rgba because Tailwind cannot derive

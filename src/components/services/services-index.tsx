@@ -100,7 +100,7 @@ function EditorialService({ locale, feature, reverse, index }: { locale: Locale;
         <ul className="mt-6 space-y-3">
           {service.benefits[locale].map((benefit) => (
             <li key={benefit.title} className="flex gap-3 text-base leading-relaxed">
-              <span className="mt-0.5 flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-[color-mix(in_srgb,var(--rs-accent)_14%,transparent)]">
+              <span className="mt-0.5 flex h-6 w-6 shrink-0 items-center justify-center rounded-none bg-[color-mix(in_srgb,var(--rs-accent)_14%,transparent)]">
                 <Check aria-hidden className="h-3.5 w-3.5 text-rs-accent-fg" />
               </span>
               <span>
@@ -125,7 +125,7 @@ function EditorialService({ locale, feature, reverse, index }: { locale: Locale;
           <TrackedLink
             href={quote}
             event={{ ctaId: `services_${feature.key}_free_quote`, source: "services_index", destination: quote, locale }}
-            className="inline-flex items-center gap-2 rounded-full bg-rs-fg px-6 py-3 text-sm font-semibold text-rs-bg transition-colors duration-150 hover:bg-rs-accent"
+            className="inline-flex items-center gap-2 rounded-none bg-rs-fg px-6 py-3 text-sm font-semibold text-rs-bg transition-colors duration-150 hover:bg-rs-accent"
           >
             {fr ? "Devis gratuit" : "Free quote"}
             <ArrowRight aria-hidden className="h-4 w-4" />
@@ -275,7 +275,7 @@ export function ServicesIndex({ locale }: { locale: Locale }) {
               <TrackedLink
                 href={quotePath(locale, "site")}
                 event={{ ctaId: "services_free_mockup", source: "services_index", destination: quotePath(locale, "site"), locale }}
-                className="inline-flex items-center gap-2 rounded-full bg-rs-fg px-6 py-3 text-sm font-semibold text-[var(--rs-dark)] transition-colors duration-150 hover:bg-rs-accent hover:text-rs-fg"
+                className="inline-flex items-center gap-2 rounded-none bg-rs-fg px-6 py-3 text-sm font-semibold text-[var(--rs-dark)] transition-colors duration-150 hover:bg-rs-accent hover:text-rs-fg"
               >
                 {fr ? "Recevoir ma maquette gratuite" : "Get my free mockup"}
                 <ArrowRight aria-hidden className="h-4 w-4" />
@@ -314,7 +314,7 @@ export function ServicesIndex({ locale }: { locale: Locale }) {
                   <Link
                     key={sector.slug}
                     href={`/site/${sector.slug}/paris`}
-                    className="rounded-full border border-[var(--rs-border)] px-3 py-1.5 text-xs font-medium transition-colors duration-150 hover:border-rs-accent hover:text-rs-accent-fg"
+                    className="rounded-none border border-[var(--rs-border)] px-3 py-1.5 text-xs font-medium transition-colors duration-150 hover:border-rs-accent hover:text-rs-accent-fg"
                   >
                     {sector.title}
                   </Link>

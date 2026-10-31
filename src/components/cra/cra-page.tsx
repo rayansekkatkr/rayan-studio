@@ -37,7 +37,7 @@ export function CraPage({ locale }: { locale: Locale }) {
               <TrackedLink
                 href={FORM_ANCHOR}
                 event={{ ctaId: "cra_hero_diagnostic", source: "cra_hero", destination: FORM_ANCHOR, locale }}
-                className="inline-flex items-center gap-2 rounded-full bg-rs-fg px-7 py-3.5 text-base font-semibold text-[var(--rs-dark)] transition-colors duration-150 hover:bg-rs-accent hover:text-rs-fg"
+                className="inline-flex items-center gap-2 rounded-none bg-rs-fg px-7 py-3.5 text-base font-semibold text-[var(--rs-dark)] transition-colors duration-150 hover:bg-rs-accent hover:text-rs-fg"
               >
                 {hero.primaryCta}
                 <ArrowRight aria-hidden className="h-4 w-4" />
@@ -45,7 +45,7 @@ export function CraPage({ locale }: { locale: Locale }) {
               <TrackedLink
                 href={checklistHref}
                 event={{ ctaId: "cra_hero_checklist", source: "cra_hero", destination: checklistHref, locale }}
-                className="inline-flex items-center rounded-full border border-[var(--rs-border-strong)] px-7 py-3.5 text-base font-medium text-rs-fg transition-colors duration-150 hover:border-rs-accent hover:text-rs-accent-fg"
+                className="inline-flex items-center rounded-none border border-[var(--rs-border-strong)] px-7 py-3.5 text-base font-medium text-rs-fg transition-colors duration-150 hover:border-rs-accent hover:text-rs-accent-fg"
               >
                 {hero.secondaryCta}
               </TrackedLink>
@@ -247,7 +247,7 @@ function CraHeader({ locale, content }: ChromeProps) {
             <a
               key={section.id}
               href={`#${section.id}`}
-              className="rounded-full px-4 py-2 text-sm font-medium text-rs-fg transition-colors duration-150 hover:text-rs-accent-fg"
+              className="rounded-none px-4 py-2 text-sm font-medium text-rs-fg transition-colors duration-150 hover:text-rs-accent-fg"
             >
               {section.label}
             </a>
@@ -260,14 +260,14 @@ function CraHeader({ locale, content }: ChromeProps) {
             hrefLang={other}
             lang={other}
             aria-label={ui.languageSwitch.ariaLabel}
-            className="rounded-full px-3 py-2 text-sm font-semibold text-rs-muted transition-colors duration-150 hover:text-rs-fg"
+            className="rounded-none px-3 py-2 text-sm font-semibold text-rs-muted transition-colors duration-150 hover:text-rs-fg"
           >
             {ui.languageSwitch.label}
           </Link>
           <TrackedLink
             href={FORM_ANCHOR}
             event={{ ctaId: "cra_header_diagnostic", source: "cra_header", destination: FORM_ANCHOR, locale }}
-            className="hidden items-center whitespace-nowrap rounded-full bg-rs-fg px-5 py-2.5 text-sm font-semibold text-[var(--rs-dark)] transition-colors duration-150 hover:bg-rs-accent hover:text-rs-fg sm:inline-flex"
+            className="hidden items-center whitespace-nowrap rounded-none bg-rs-fg px-5 py-2.5 text-sm font-semibold text-[var(--rs-dark)] transition-colors duration-150 hover:bg-rs-accent hover:text-rs-fg sm:inline-flex"
           >
             {ui.headerCta}
           </TrackedLink>

@@ -760,3 +760,11 @@ Quand un changement important est fait:
 - Corrections : libelle Manteigaria des landings passe a « Site vitrine, avant / apres » (evite le doublon avec la pastille concept) ; diapositives en `content-start` sur mobile (plus de vide entre texte et visuel) ; degrade vertical plus sombre sur mobile pour la diapositive photo Manteigaria. Imports inutilises retires de `landing-page.tsx`.
 - Verification : typecheck, lint, check:copy, vitest 163/163, build 194 pages, Playwright 124/124 (build avec `NEXT_PUBLIC_GA_ID=G-TEST`, sinon les tests du bandeau cookies echouent en `next start`), captures 1440 et 390 de l'accueil et des deux landings sans debordement horizontal.
 - Non verifie : rendu sur Safari iOS reel (scroll-snap).
+
+### 2026-10-31 (angles droits et fin des cartes a icone)
+
+- Demande de Rayan : les cartes « icone dans un carre + titre + texte » font « genere par IA », et tous les angles arrondis passent en angle droit.
+- Angles : `--rs-radius-sm/md/lg` a 0 dans `globals.css` ; tous les `rounded-full`, `rounded-xl`, `rounded-lg`, `rounded-2xl` des composants passent en `rounded-none` (boutons, pastilles, chips, onglets, header flottant, badges de statut, cadre navigateur du carrousel) ; images OG/Twitter a 0. Exceptions volontaires : petits points de statut (`before:rounded-full`, `h-2 w-2`) et cadres de telephone des mockups (`rounded-[1.5rem]` a `rounded-[2rem]`). `carousel-embla.tsx` et `logos3.tsx` non touches (non utilises). Regle : ne plus introduire d'arrondi hors de ces exceptions.
+- Cartes a icone supprimees, mise en forme differente selon la page : landing sites = liste editoriale numerotee (`data-benefits="list"`) ; landing SaaS = colonnes sous filet epais avec compteur 01 / 04 (`data-benefits="columns"`) ; pages service « Ce que vous y gagnez » = affirmations separees par filets verticaux ; studio = principes numerotes sous filet ; accueil offres = index en lignes titre | description. Champ `icon` et type `BenefitIcon` retires de `landings.ts`.
+- Verification : typecheck, lint, check:copy, vitest 163/163, build 194 pages, Playwright 124/124, captures 1440 et 390.
+- Suite : maquettes d'une identite par famille de pages (services, work, landings, studio), a valider avant code.

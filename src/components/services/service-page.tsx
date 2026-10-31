@@ -1,4 +1,4 @@
-import { ArrowRight, Check, Clock, Plus } from "lucide-react";
+import { ArrowRight, Clock, Plus } from "lucide-react";
 import { TrackedLink } from "@/components/analytics/tracked-link";
 import type { ServiceRecord } from "@/content/services";
 import type { Locale } from "@/lib/i18n";
@@ -35,7 +35,7 @@ export function ServicePage({ locale, service }: { locale: Locale; service: Serv
                 destination: quote,
                 locale,
               }}
-              className="inline-flex items-center gap-2 rounded-full bg-rs-fg px-7 py-3.5 text-base font-semibold text-[var(--rs-dark)] transition-colors duration-150 hover:bg-rs-accent hover:text-rs-fg"
+              className="inline-flex items-center gap-2 rounded-none bg-rs-fg px-7 py-3.5 text-base font-semibold text-[var(--rs-dark)] transition-colors duration-150 hover:bg-rs-accent hover:text-rs-fg"
             >
               {fr ? "Demander un devis gratuit" : "Get a free quote"}
               <ArrowRight aria-hidden className="h-4 w-4" />
@@ -79,17 +79,17 @@ export function ServicePage({ locale, service }: { locale: Locale; service: Serv
         />
 
         <ArticleBlock id="benefices" index={2} title={fr ? "Ce que vous y gagnez" : "What you gain"}>
-          <ul className="grid gap-4 md:grid-cols-3">
-            {service.benefits[locale].map((benefit) => (
+          {/* Statements rather than cards: a short claim, then the detail, separated by vertical rules. */}
+          <ul className="grid border-y border-[var(--rs-border)] md:grid-cols-3 md:divide-x md:divide-[var(--rs-border)]">
+            {service.benefits[locale].map((benefit, index) => (
               <li
                 key={benefit.title}
-                className="rounded-[var(--rs-radius-md)] border border-[var(--rs-border)] bg-rs-surface p-5"
+                className={index > 0 ? "border-t border-[var(--rs-border)] py-6 md:border-t-0 md:px-6" : "py-6 md:pr-6"}
               >
-                <span className="flex h-8 w-8 items-center justify-center rounded-full bg-rs-accent">
-                  <Check aria-hidden className="h-4 w-4 text-white" />
-                </span>
-                <h3 className="mt-4 text-lg font-semibold leading-snug">{benefit.title}</h3>
-                <p className="mt-1.5 text-sm leading-relaxed text-rs-muted">{benefit.body}</p>
+                <h3 className="text-xl font-semibold leading-snug tracking-tight md:text-2xl">
+                  <span className="text-rs-accent-fg">+</span> {benefit.title}
+                </h3>
+                <p className="mt-3 text-sm leading-relaxed text-rs-muted">{benefit.body}</p>
               </li>
             ))}
           </ul>

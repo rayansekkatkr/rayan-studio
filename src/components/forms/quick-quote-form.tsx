@@ -164,7 +164,7 @@ export function QuickQuoteForm({
             <label
               key={item.value}
               className={cn(
-                "cursor-pointer rounded-full border px-4 py-2 text-sm font-medium transition-colors duration-150",
+                "cursor-pointer rounded-none border px-4 py-2 text-sm font-medium transition-colors duration-150",
                 type === item.value
                   ? "border-rs-accent bg-[color-mix(in_srgb,var(--rs-accent)_10%,transparent)] text-rs-accent-fg"
                   : "border-[var(--rs-border)] text-rs-fg hover:border-[var(--rs-border-strong)]",
@@ -252,7 +252,7 @@ export function QuickQuoteForm({
         <button
           type="submit"
           disabled={status === "sending"}
-          className="inline-flex items-center rounded-full bg-rs-fg px-7 py-3.5 text-base font-semibold text-rs-bg transition-colors duration-150 hover:bg-rs-accent disabled:opacity-60"
+          className="inline-flex items-center rounded-none bg-rs-fg px-7 py-3.5 text-base font-semibold text-rs-bg transition-colors duration-150 hover:bg-rs-accent disabled:opacity-60"
         >
           {type === "site"
             ? fr

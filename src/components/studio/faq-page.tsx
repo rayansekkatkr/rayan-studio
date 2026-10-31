@@ -37,7 +37,7 @@ export function FaqPage({ locale }: { locale: Locale }) {
           </div>
           <Link
             href={startProjectPath(locale)}
-            className="mt-12 inline-flex items-center gap-2 rounded-full bg-rs-fg px-7 py-3.5 text-base font-semibold text-rs-bg transition-colors duration-150 hover:bg-rs-accent"
+            className="mt-12 inline-flex items-center gap-2 rounded-none bg-rs-fg px-7 py-3.5 text-base font-semibold text-rs-bg transition-colors duration-150 hover:bg-rs-accent"
           >
             {fr ? "Parler de votre projet" : "Start a project"}
             <ArrowRight aria-hidden className="h-4 w-4" />

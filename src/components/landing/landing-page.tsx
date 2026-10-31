@@ -1,19 +1,5 @@
 import Link from "next/link";
-import {
-  ArrowRight,
-  ArrowUpRight,
-  Check,
-  Gauge,
-  Handshake,
-  Inbox,
-  Layers,
-  Plus,
-  Rocket,
-  Search,
-  ShieldCheck,
-  Smartphone,
-  type LucideIcon,
-} from "lucide-react";
+import { ArrowRight, ArrowUpRight, Check, Plus } from "lucide-react";
 import { TrackedLink } from "@/components/analytics/tracked-link";
 import { BigSteps } from "@/components/article/article-blocks";
 import { QuickQuoteForm } from "@/components/forms/quick-quote-form";
@@ -22,22 +8,11 @@ import { ProductCarousel } from "@/components/work/product-carousel";
 import { Container } from "@/components/ui/container";
 import { Eyebrow } from "@/components/ui/eyebrow";
 import { PageHero } from "@/components/ui/page-hero";
-import type { BenefitIcon, LandingContent } from "@/content/landings";
+import type { LandingContent } from "@/content/landings";
 import { getService } from "@/content/services";
 import type { Locale } from "@/lib/i18n";
 import { localSeoCities, localSeoSectors } from "@/lib/local-seo";
 import { servicePath, startProjectPath } from "@/lib/site-routes";
-
-const ICONS: Record<BenefitIcon, LucideIcon> = {
-  search: Search,
-  smartphone: Smartphone,
-  inbox: Inbox,
-  gauge: Gauge,
-  layers: Layers,
-  shield: ShieldCheck,
-  rocket: Rocket,
-  handshake: Handshake,
-};
 
 function SectionTitle({ eyebrow, title, lead }: { eyebrow: string; title?: string; lead?: string }) {
   return (
@@ -64,14 +39,14 @@ export function LandingPage({ locale, content }: { locale: Locale; content: Land
           <TrackedLink
             href="#devis"
             event={{ ctaId: `${source}_hero_form`, source, destination: "#devis", locale }}
-            className="inline-flex items-center gap-2 rounded-full bg-rs-fg px-7 py-3.5 text-base font-semibold text-[var(--rs-dark)] transition-colors duration-150 hover:bg-rs-accent hover:text-rs-fg"
+            className="inline-flex items-center gap-2 rounded-none bg-rs-fg px-7 py-3.5 text-base font-semibold text-[var(--rs-dark)] transition-colors duration-150 hover:bg-rs-accent hover:text-rs-fg"
           >
             {content.primaryCta}
             <ArrowRight aria-hidden className="h-4 w-4" />
           </TrackedLink>
           <a
             href="#exemples"
-            className="inline-flex items-center rounded-full border border-[var(--rs-border-strong)] px-7 py-3.5 text-base font-medium text-rs-fg transition-colors duration-150 hover:border-rs-accent hover:text-rs-accent-fg"
+            className="inline-flex items-center rounded-none border border-[var(--rs-border-strong)] px-7 py-3.5 text-base font-medium text-rs-fg transition-colors duration-150 hover:border-rs-accent hover:text-rs-accent-fg"
           >
             {content.secondaryCta}
           </a>
@@ -89,23 +64,36 @@ export function LandingPage({ locale, content }: { locale: Locale; content: Land
       <section className="py-[var(--rs-section-space)]">
         <Container>
           <SectionTitle eyebrow={fr ? "Bénéfices" : "Benefits"} title={content.benefitsTitle} />
-          <ul className="mt-10 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
-            {content.benefits.map((benefit) => {
-              const Icon = ICONS[benefit.icon];
-              return (
+          {isWebsites ? (
+            // Websites: an editorial list, read top to bottom like a short brief.
+            <ol data-benefits="list" className="mt-10 border-t border-rs-fg">
+              {content.benefits.map((benefit, index) => (
                 <li
                   key={benefit.title}
-                  className="rounded-[var(--rs-radius-md)] border border-[var(--rs-border)] bg-rs-surface p-6"
+                  className="grid gap-2 border-b border-[var(--rs-border)] py-7 md:grid-cols-[6rem_minmax(0,5fr)_minmax(0,7fr)] md:items-baseline md:gap-8"
                 >
-                  <span className="flex h-11 w-11 items-center justify-center rounded-xl bg-[color-mix(in_srgb,var(--rs-accent)_10%,transparent)] text-rs-accent-fg">
-                    <Icon aria-hidden className="h-5 w-5" />
+                  <span aria-hidden className="num-outline text-5xl font-bold leading-none tracking-tight">
+                    {String(index + 1).padStart(2, "0")}
                   </span>
-                  <h3 className="mt-5 text-lg font-semibold">{benefit.title}</h3>
+                  <h3 className="text-2xl font-semibold tracking-tight">{benefit.title}</h3>
+                  <p className="text-base leading-relaxed text-rs-muted md:text-lg">{benefit.body}</p>
+                </li>
+              ))}
+            </ol>
+          ) : (
+            // Applications: four columns under a heavy rule, closer to a technical spec.
+            <ol data-benefits="columns" className="mt-10 grid gap-x-8 gap-y-10 sm:grid-cols-2 lg:grid-cols-4">
+              {content.benefits.map((benefit, index) => (
+                <li key={benefit.title} className="border-t-[3px] border-rs-fg pt-5">
+                  <span className="font-mono text-xs font-semibold uppercase tracking-[0.18em] text-rs-accent-fg">
+                    {String(index + 1).padStart(2, "0")} / {String(content.benefits.length).padStart(2, "0")}
+                  </span>
+                  <h3 className="mt-4 text-xl font-semibold leading-snug tracking-tight">{benefit.title}</h3>
                   <p className="mt-2 text-sm leading-relaxed text-rs-muted">{benefit.body}</p>
                 </li>
-              );
-            })}
-          </ul>
+              ))}
+            </ol>
+          )}
         </Container>
       </section>
 
@@ -131,7 +119,7 @@ export function LandingPage({ locale, content }: { locale: Locale; content: Land
               <ul className="mt-6 grid gap-x-6 gap-y-3 sm:grid-cols-2">
                 {content.included.map((item) => (
                   <li key={item} className="flex gap-3 text-base leading-relaxed">
-                    <span className="mt-1 flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-[color-mix(in_srgb,var(--rs-accent)_14%,transparent)]">
+                    <span className="mt-1 flex h-5 w-5 shrink-0 items-center justify-center rounded-none bg-[color-mix(in_srgb,var(--rs-accent)_14%,transparent)]">
                       <Check aria-hidden className="h-3 w-3 text-rs-accent-fg" />
                     </span>
                     {item}
@@ -181,7 +169,7 @@ export function LandingPage({ locale, content }: { locale: Locale; content: Land
                     <li key={sector.slug}>
                       <Link
                         href={`/site/${sector.slug}/paris`}
-                        className="inline-flex rounded-full border border-[var(--rs-border)] bg-rs-surface px-4 py-2 text-sm font-medium transition-colors duration-150 hover:border-rs-accent hover:text-rs-accent-fg"
+                        className="inline-flex rounded-none border border-[var(--rs-border)] bg-rs-surface px-4 py-2 text-sm font-medium transition-colors duration-150 hover:border-rs-accent hover:text-rs-accent-fg"
                       >
                         {sector.title}
                       </Link>
@@ -193,7 +181,7 @@ export function LandingPage({ locale, content }: { locale: Locale; content: Land
                     <li key={city.slug}>
                       <Link
                         href={`/site/commerce-local/${city.slug}`}
-                        className="inline-flex rounded-full border border-[var(--rs-border)] bg-rs-surface px-4 py-2 text-sm font-medium transition-colors duration-150 hover:border-rs-accent hover:text-rs-accent-fg"
+                        className="inline-flex rounded-none border border-[var(--rs-border)] bg-rs-surface px-4 py-2 text-sm font-medium transition-colors duration-150 hover:border-rs-accent hover:text-rs-accent-fg"
                       >
                         Site internet à {city.label}
                       </Link>

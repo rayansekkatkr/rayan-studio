@@ -27,7 +27,7 @@ export function CaseStudyHero({ locale, project }: { locale: Locale; project: Pr
           <div className="flex flex-wrap items-center gap-2">
             <StatusBadge project={project} locale={locale} />
             {WORK_PLATFORMS[project.key] ? (
-              <span className="rounded-full border border-[var(--rs-border)] px-3 py-1 text-xs font-medium text-rs-fg">
+              <span className="rounded-none border border-[var(--rs-border)] px-3 py-1 text-xs font-medium text-rs-fg">
                 {WORK_PLATFORMS[project.key][locale]}
               </span>
             ) : null}
@@ -44,7 +44,7 @@ export function CaseStudyHero({ locale, project }: { locale: Locale; project: Pr
                   target="_blank"
                   rel="noopener noreferrer"
                   className={cn(
-                    "inline-flex items-center gap-1.5 rounded-full px-5 py-2.5 text-sm font-semibold transition-colors duration-150",
+                    "inline-flex items-center gap-1.5 rounded-none px-5 py-2.5 text-sm font-semibold transition-colors duration-150",
                     index === 0
                       ? "bg-rs-fg text-[var(--rs-dark)] hover:bg-rs-accent hover:text-rs-fg"
                       : "border border-[var(--rs-border-strong)] text-rs-fg hover:border-rs-fg",

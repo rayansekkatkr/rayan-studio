@@ -67,7 +67,7 @@ export function ProjectReadinessTool({ locale }: { locale: Locale }) {
                     <label
                       key={label}
                       className={cn(
-                        "flex cursor-pointer items-center gap-2 rounded-full border px-5 py-2.5 text-base font-medium transition-colors duration-150",
+                        "flex cursor-pointer items-center gap-2 rounded-none border px-5 py-2.5 text-base font-medium transition-colors duration-150",
                         checked
                           ? "border-rs-accent bg-rs-surface text-rs-fg"
                           : "border-[var(--rs-border)] bg-rs-surface text-rs-muted hover:border-[var(--rs-border-strong)]",
@@ -100,7 +100,7 @@ export function ProjectReadinessTool({ locale }: { locale: Locale }) {
         type="button"
         disabled={!allAnswered}
         onClick={computeResult}
-        className="mt-8 inline-flex items-center rounded-full bg-rs-fg px-7 py-3.5 text-base font-semibold text-rs-bg transition-colors duration-150 hover:bg-rs-accent disabled:opacity-50"
+        className="mt-8 inline-flex items-center rounded-none bg-rs-fg px-7 py-3.5 text-base font-semibold text-rs-bg transition-colors duration-150 hover:bg-rs-accent disabled:opacity-50"
       >
         {fr ? "Voir le résultat" : "See the result"}
       </button>

@@ -53,7 +53,7 @@ export default async function Page({ params }: { params: Promise<{ locale: strin
       >
         <Link
           href={quotePath(locale)}
-          className="mt-8 inline-flex items-center gap-2 rounded-full border border-[var(--rs-border-strong)] px-6 py-3 text-sm font-semibold text-rs-fg transition-colors duration-150 hover:border-rs-accent hover:text-rs-accent-fg"
+          className="mt-8 inline-flex items-center gap-2 rounded-none border border-[var(--rs-border-strong)] px-6 py-3 text-sm font-semibold text-rs-fg transition-colors duration-150 hover:border-rs-accent hover:text-rs-accent-fg"
         >
           {fr ? "Demander un devis gratuit" : "Get a free quote"}
           <ArrowRight aria-hidden className="h-4 w-4" />

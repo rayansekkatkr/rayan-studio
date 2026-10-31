@@ -57,7 +57,7 @@ export function HomeHero({ locale }: { locale: Locale }) {
                   destination: quotePath(locale),
                   locale,
                 }}
-                className="inline-flex items-center gap-2 rounded-full bg-rs-fg px-7 py-3.5 text-base font-semibold text-[var(--rs-dark)] transition-colors duration-150 hover:bg-rs-accent hover:text-rs-fg"
+                className="inline-flex items-center gap-2 rounded-none bg-rs-fg px-7 py-3.5 text-base font-semibold text-[var(--rs-dark)] transition-colors duration-150 hover:bg-rs-accent hover:text-rs-fg"
               >
                 {fr ? "Demander un devis gratuit" : "Get a free quote"}
                 <ArrowRight aria-hidden className="h-4 w-4" />
@@ -70,7 +70,7 @@ export function HomeHero({ locale }: { locale: Locale }) {
                   destination: workPath(locale),
                   locale,
                 }}
-                className="inline-flex items-center rounded-full border border-[var(--rs-border-strong)] bg-rs-bg/40 px-7 py-3.5 text-base font-medium text-rs-fg backdrop-blur-sm transition-colors duration-150 hover:border-rs-accent hover:text-rs-accent-fg"
+                className="inline-flex items-center rounded-none border border-[var(--rs-border-strong)] bg-rs-bg/40 px-7 py-3.5 text-base font-medium text-rs-fg backdrop-blur-sm transition-colors duration-150 hover:border-rs-accent hover:text-rs-accent-fg"
               >
                 {fr ? "Voir nos réalisations" : "View our work"}
               </TrackedLink>

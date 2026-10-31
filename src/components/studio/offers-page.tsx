@@ -21,7 +21,7 @@ export function OffersPage({ locale }: { locale: Locale }) {
         lead={<p>{content.globalStatement}</p>}
         image={PAGE_HERO_PHOTOS.offers}
       >
-        <p className="mt-6 inline-flex items-center gap-2 rounded-full border border-[var(--rs-border)] bg-white/5 px-4 py-2 text-sm font-semibold backdrop-blur">
+        <p className="mt-6 inline-flex items-center gap-2 rounded-none border border-[var(--rs-border)] bg-white/5 px-4 py-2 text-sm font-semibold backdrop-blur">
           <Clock aria-hidden className="h-4 w-4 text-rs-accent-fg" />
           {content.responsePromise}
         </p>
@@ -69,7 +69,7 @@ export function OffersPage({ locale }: { locale: Locale }) {
                   <ul className="mt-3 grid gap-x-6 gap-y-2.5 sm:grid-cols-2">
                     {offer.mayInclude.map((item) => (
                       <li key={item} className="flex items-start gap-2.5 text-sm leading-relaxed text-rs-muted">
-                        <span className="mt-0.5 flex h-4 w-4 shrink-0 items-center justify-center rounded-full bg-[color-mix(in_srgb,var(--rs-accent)_14%,transparent)]">
+                        <span className="mt-0.5 flex h-4 w-4 shrink-0 items-center justify-center rounded-none bg-[color-mix(in_srgb,var(--rs-accent)_14%,transparent)]">
                           <Check aria-hidden className="h-3 w-3 text-rs-accent-fg" />
                         </span>
                         {item}

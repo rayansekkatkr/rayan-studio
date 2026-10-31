@@ -68,7 +68,7 @@ export function ProjectSummaryPage({ locale, project }: { locale: Locale; projec
         <Container>
           <Eyebrow>{project.categories[locale].join(" · ")}</Eyebrow>
           <h1 className="mt-4 text-3xl font-semibold tracking-tight md:text-5xl">{project.title}</h1>
-          <p className="mt-4 inline-flex items-center gap-2 rounded-full border border-[var(--rs-border)] px-3.5 py-1 text-sm font-semibold text-rs-accent-fg">
+          <p className="mt-4 inline-flex items-center gap-2 rounded-none border border-[var(--rs-border)] px-3.5 py-1 text-sm font-semibold text-rs-accent-fg">
             {KIND_LABELS[project.kind][locale]}
             {project.year ? <span className="font-medium text-rs-muted">· {project.year}</span> : null}
           </p>

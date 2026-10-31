@@ -93,7 +93,7 @@ export function SiteHeader({ locale, topTheme = "light" }: SiteHeaderProps) {
         className={cn(
           "relative transition-all duration-300",
           floating
-            ? "mx-auto max-w-[min(var(--rs-container),76rem)] rounded-full border border-[var(--rs-border)] bg-[var(--rs-header-surface)] shadow-[0_16px_40px_-24px_rgba(11,11,14,0.45)] backdrop-blur-md"
+            ? "mx-auto max-w-[min(var(--rs-container),76rem)] rounded-none border border-[var(--rs-border)] bg-[var(--rs-header-surface)] shadow-[0_16px_40px_-24px_rgba(11,11,14,0.45)] backdrop-blur-md"
             : solid
               ? "border-b border-[var(--rs-border)] bg-[var(--rs-header-surface)] backdrop-blur"
               : "bg-transparent",
@@ -134,7 +134,7 @@ export function SiteHeader({ locale, topTheme = "light" }: SiteHeaderProps) {
                     if (openMenu) setOpenMenu(menu.key);
                   }}
                   className={cn(
-                    "rounded-full px-4 py-2 text-sm font-medium transition-colors duration-150",
+                    "rounded-none px-4 py-2 text-sm font-medium transition-colors duration-150",
                     expanded
                       ? "text-rs-accent-fg"
                       : inverse
@@ -160,7 +160,7 @@ export function SiteHeader({ locale, topTheme = "light" }: SiteHeaderProps) {
               }}
               onClick={closeMenus}
               className={cn(
-                "inline-flex items-center rounded-full px-5 py-2.5 text-sm font-semibold transition-colors duration-150",
+                "inline-flex items-center rounded-none px-5 py-2.5 text-sm font-semibold transition-colors duration-150",
                 inverse
                   ? "bg-[var(--rs-dark-fg)] text-[var(--rs-dark)] hover:bg-rs-accent hover:text-[var(--rs-dark-fg)]"
                   : "bg-rs-fg text-rs-bg hover:bg-rs-accent",
@@ -178,7 +178,7 @@ export function SiteHeader({ locale, topTheme = "light" }: SiteHeaderProps) {
             aria-label={mobileOpen ? (fr ? "Fermer le menu" : "Close menu") : fr ? "Ouvrir le menu" : "Open menu"}
             onClick={() => setMobileOpen((open) => !open)}
             className={cn(
-              "inline-flex h-10 w-10 items-center justify-center rounded-full lg:hidden",
+              "inline-flex h-10 w-10 items-center justify-center rounded-none lg:hidden",
               inverse ? "text-[var(--rs-dark-fg)]" : "text-rs-fg",
             )}
           >

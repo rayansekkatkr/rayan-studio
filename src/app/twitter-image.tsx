@@ -29,7 +29,7 @@ export default function TwitterImage() {
           style={{
             position: "absolute",
             inset: "40px",
-            borderRadius: "30px",
+            borderRadius: "0px",
             border: "1px solid rgba(255,255,255,0.9)",
             background: "linear-gradient(145deg, rgba(255,255,255,0.9), rgba(227,240,255,0.7))",
             boxShadow: "0 30px 50px rgba(123,155,206,0.2)",

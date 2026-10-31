@@ -196,7 +196,7 @@ export function ContactForm({
         <button
           type="submit"
           disabled={status === "sending"}
-          className="inline-flex items-center rounded-full bg-rs-fg px-7 py-3.5 text-base font-semibold text-rs-bg transition-colors duration-150 hover:bg-rs-accent disabled:opacity-60"
+          className="inline-flex items-center rounded-none bg-rs-fg px-7 py-3.5 text-base font-semibold text-rs-bg transition-colors duration-150 hover:bg-rs-accent disabled:opacity-60"
         >
           {fr ? "Envoyer" : "Send"}
         </button>

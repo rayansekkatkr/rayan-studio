@@ -62,7 +62,7 @@ function TechCard({ p, locale }: { p: ProjectRecord; locale: Locale }) {
         <span className="mt-3 block text-xs font-medium text-rs-muted">{p.role[locale]}</span>
         <span className="mt-auto flex flex-wrap gap-1.5 pt-4">
           {p.technologies.slice(0, 4).map((tech) => (
-            <span key={tech} className="rounded-full bg-rs-bg px-2.5 py-1 text-[11px] font-medium">
+            <span key={tech} className="rounded-none bg-rs-bg px-2.5 py-1 text-[11px] font-medium">
               {tech}
             </span>
           ))}
@@ -89,7 +89,7 @@ export function WorkPortfolio({ locale }: { locale: Locale }) {
               aria-pressed={filter === item.id}
               onClick={() => setFilter(item.id)}
               className={cn(
-                "rounded-full px-4 py-2.5 text-sm font-medium transition-colors duration-150",
+                "rounded-none px-4 py-2.5 text-sm font-medium transition-colors duration-150",
                 filter === item.id
                   ? "bg-rs-fg text-rs-bg"
                   : "border border-[var(--rs-border)] bg-rs-surface hover:border-[var(--rs-border-strong)]",

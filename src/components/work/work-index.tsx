@@ -30,7 +30,7 @@ export function WorkIndex({ locale }: { locale: Locale }) {
               <TrackedLink
                 href={quotePath(locale)}
                 event={{ ctaId: "work_hero_free_quote", source: "work_index", destination: quotePath(locale), locale }}
-                className="mt-6 inline-flex items-center gap-2 rounded-full bg-rs-fg px-6 py-3 text-sm font-semibold text-[var(--rs-dark)] transition-colors duration-150 hover:bg-rs-accent hover:text-rs-fg"
+                className="mt-6 inline-flex items-center gap-2 rounded-none bg-rs-fg px-6 py-3 text-sm font-semibold text-[var(--rs-dark)] transition-colors duration-150 hover:bg-rs-accent hover:text-rs-fg"
               >
                 {fr ? "Demander un devis gratuit" : "Get a free quote"}
                 <ArrowRight aria-hidden className="h-4 w-4" />

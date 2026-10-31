@@ -16,7 +16,7 @@ export type LandingContent = {
   secondaryCta: string;
   promises: string[];
   benefitsTitle: string;
-  benefits: Array<{ icon: BenefitIcon; title: string; body: string }>;
+  benefits: Array<{ title: string; body: string }>;
   includedTitle: string;
   included: string[];
   workTitle: string;
@@ -31,8 +31,6 @@ export type LandingContent = {
   formTitle: string;
   formLead: string;
 };
-
-export type BenefitIcon = "search" | "smartphone" | "inbox" | "gauge" | "layers" | "shield" | "rocket" | "handshake";
 
 const WEBSITES: Record<Locale, LandingContent> = {
   fr: {
@@ -53,22 +51,18 @@ const WEBSITES: Record<Locale, LandingContent> = {
     benefitsTitle: "Ce que votre site doit vous apporter",
     benefits: [
       {
-        icon: "search",
         title: "Être trouvé localement",
         body: "Des pages structurées pour Google et pour votre fiche d'établissement, avec les informations que vos clients cherchent vraiment.",
       },
       {
-        icon: "smartphone",
         title: "Convaincre sur mobile",
         body: "Une grande partie de vos visiteurs arrive depuis un téléphone : le site est conçu d'abord pour cet écran.",
       },
       {
-        icon: "inbox",
         title: "Recevoir des demandes",
         body: "Appel, WhatsApp, formulaire ou réservation : un chemin court entre l'envie et la prise de contact.",
       },
       {
-        icon: "gauge",
         title: "Rester simple à faire vivre",
         body: "Une technique propre et rapide, sans plugin fragile : le site reste stable dans le temps.",
       },
@@ -146,22 +140,18 @@ const WEBSITES: Record<Locale, LandingContent> = {
     benefitsTitle: "What your website should bring you",
     benefits: [
       {
-        icon: "search",
         title: "Be found locally",
         body: "Pages structured for Google and for your business profile, with the information your clients actually look for.",
       },
       {
-        icon: "smartphone",
         title: "Convince on mobile",
         body: "Many visitors arrive on a phone: the site is designed for that screen first.",
       },
       {
-        icon: "inbox",
         title: "Receive enquiries",
         body: "Call, WhatsApp, form or booking: a short path from interest to contact.",
       },
       {
-        icon: "gauge",
         title: "Stay easy to run",
         body: "Clean, fast technology with no fragile plugins: the site stays stable over time.",
       },
@@ -242,22 +232,18 @@ const APPLICATIONS: Record<Locale, LandingContent> = {
     benefitsTitle: "Ce que vous y gagnez",
     benefits: [
       {
-        icon: "rocket",
         title: "Une V1 en production plus vite",
         body: "Un périmètre tranché dès le cadrage : l'essentiel d'abord, en ligne, puis des évolutions guidées par l'usage réel.",
       },
       {
-        icon: "layers",
         title: "Une base qui tient dans le temps",
         body: "Architecture, modèle de données et intégrations pensés pour évoluer sans réécriture complète.",
       },
       {
-        icon: "handshake",
         title: "Pas de perte d'information",
         body: "La personne qui cadre est celle qui code et déploie : pas de relais entre commercial, chef de projet et développeurs.",
       },
       {
-        icon: "shield",
         title: "Aucune dépendance subie",
         body: "Code, accès, comptes et données vous appartiennent, avec une documentation pour reprendre ou internaliser.",
       },
@@ -334,22 +320,18 @@ const APPLICATIONS: Record<Locale, LandingContent> = {
     benefitsTitle: "What you get",
     benefits: [
       {
-        icon: "rocket",
         title: "A V1 in production sooner",
         body: "A scope decided at the start: the essentials first, live, then changes driven by real usage.",
       },
       {
-        icon: "layers",
         title: "A foundation that lasts",
         body: "Architecture, data model and integrations designed to evolve without a full rewrite.",
       },
       {
-        icon: "handshake",
         title: "No information lost",
         body: "The person who scopes is the one who codes and deploys: no relay between sales, project manager and developers.",
       },
       {
-        icon: "shield",
         title: "No lock-in",
         body: "Code, accounts and data belong to you, with documentation to take over or bring in-house.",
       },

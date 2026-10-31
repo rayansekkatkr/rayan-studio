@@ -399,7 +399,7 @@ export function ProjectForm({ locale }: { locale: Locale }) {
           <button
             type="button"
             onClick={goBack}
-            className="inline-flex items-center rounded-full border border-[var(--rs-border-strong)] px-6 py-3 text-base font-medium text-rs-fg transition-colors duration-150 hover:border-rs-accent hover:text-rs-accent-fg"
+            className="inline-flex items-center rounded-none border border-[var(--rs-border-strong)] px-6 py-3 text-base font-medium text-rs-fg transition-colors duration-150 hover:border-rs-accent hover:text-rs-accent-fg"
           >
             {fr ? "Retour" : "Back"}
           </button>
@@ -408,7 +408,7 @@ export function ProjectForm({ locale }: { locale: Locale }) {
           <button
             type="button"
             onClick={goNext}
-            className="inline-flex items-center rounded-full bg-rs-fg px-7 py-3.5 text-base font-semibold text-rs-bg transition-colors duration-150 hover:bg-rs-accent"
+            className="inline-flex items-center rounded-none bg-rs-fg px-7 py-3.5 text-base font-semibold text-rs-bg transition-colors duration-150 hover:bg-rs-accent"
           >
             {fr ? "Suivant" : "Next"}
           </button>
@@ -416,7 +416,7 @@ export function ProjectForm({ locale }: { locale: Locale }) {
           <button
             type="submit"
             disabled={status === "sending"}
-            className="inline-flex items-center rounded-full bg-rs-fg px-7 py-3.5 text-base font-semibold text-rs-bg transition-colors duration-150 hover:bg-rs-accent disabled:opacity-60"
+            className="inline-flex items-center rounded-none bg-rs-fg px-7 py-3.5 text-base font-semibold text-rs-bg transition-colors duration-150 hover:bg-rs-accent disabled:opacity-60"
           >
             {fr ? "Envoyer" : "Send"}
           </button>

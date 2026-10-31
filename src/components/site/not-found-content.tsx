@@ -26,14 +26,14 @@ export function NotFoundContent() {
         <div className="mt-10 flex flex-wrap items-center gap-4">
           <Link
             href="/fr"
-            className="inline-flex items-center gap-2 rounded-full bg-rs-fg px-7 py-3.5 text-base font-semibold text-[var(--rs-dark)] transition-colors duration-150 hover:bg-rs-accent hover:text-rs-fg"
+            className="inline-flex items-center gap-2 rounded-none bg-rs-fg px-7 py-3.5 text-base font-semibold text-[var(--rs-dark)] transition-colors duration-150 hover:bg-rs-accent hover:text-rs-fg"
           >
             Retour à l&apos;accueil
             <ArrowRight aria-hidden className="h-4 w-4" />
           </Link>
           <Link
             href={workPath("fr")}
-            className="inline-flex items-center rounded-full border border-[var(--rs-border-strong)] px-7 py-3.5 text-base font-medium text-rs-fg transition-colors duration-150 hover:border-rs-accent hover:text-rs-accent-fg"
+            className="inline-flex items-center rounded-none border border-[var(--rs-border-strong)] px-7 py-3.5 text-base font-medium text-rs-fg transition-colors duration-150 hover:border-rs-accent hover:text-rs-accent-fg"
           >
             Voir les réalisations
           </Link>

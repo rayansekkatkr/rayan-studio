@@ -49,7 +49,7 @@ export function CookieConsent() {
       <div className="mt-3 flex flex-wrap gap-2.5">
         <button
           type="button"
-          className="rounded-full bg-rs-fg px-5 py-2.5 text-sm font-semibold text-rs-bg transition-colors duration-150 hover:bg-rs-accent"
+          className="rounded-none bg-rs-fg px-5 py-2.5 text-sm font-semibold text-rs-bg transition-colors duration-150 hover:bg-rs-accent"
           onClick={() => {
             saveConsent("accepted");
             window.dispatchEvent(new Event("rs-consent-granted"));
@@ -62,7 +62,7 @@ export function CookieConsent() {
         </button>
         <button
           type="button"
-          className="rounded-full border border-[var(--rs-border-strong)] bg-rs-surface px-5 py-2.5 text-sm font-semibold text-rs-fg transition-colors duration-150 hover:border-rs-accent"
+          className="rounded-none border border-[var(--rs-border-strong)] bg-rs-surface px-5 py-2.5 text-sm font-semibold text-rs-fg transition-colors duration-150 hover:border-rs-accent"
           onClick={() => {
             saveConsent("declined");
             window.dispatchEvent(new Event("rs-consent-revoked"));

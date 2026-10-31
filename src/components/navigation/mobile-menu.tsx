@@ -118,7 +118,7 @@ export function MobileMenu({ id, locale, menus, onClose }: MobileMenuProps) {
         <Link
           href={quotePath(locale)}
           onClick={onClose}
-          className="mt-6 inline-flex items-center justify-center rounded-full bg-rs-fg px-6 py-3.5 text-base font-semibold text-rs-bg transition-colors duration-150 hover:bg-rs-accent"
+          className="mt-6 inline-flex items-center justify-center rounded-none bg-rs-fg px-6 py-3.5 text-base font-semibold text-rs-bg transition-colors duration-150 hover:bg-rs-accent"
         >
           {fr ? "Demander un devis gratuit" : "Get a free quote"}
         </Link>
