@@ -77,10 +77,12 @@ test.describe("homepage", () => {
     // Two doors under the CTAs.
     await expect(page.getByText("Choisissez votre parcours")).toBeVisible();
 
-    // The atmosphere image further down is large but stays under one screen.
-    const visual = await page.locator("#statement figure").evaluate((el) => el.getBoundingClientRect().height);
+    // The statement continues the night: desk photo blended in, sentence on top.
+    const statementBg = await page.locator("#statement > div").first().evaluate((el) => getComputedStyle(el).backgroundColor);
+    const [sr, sg, sb] = statementBg.match(/\d+/g)!.map(Number);
+    expect(sr + sg + sb, `dark statement expected, got ${statementBg}`).toBeLessThan(120);
+    const visual = await page.locator("#statement img").evaluate((el) => el.getBoundingClientRect().height);
     expect(visual).toBeGreaterThan(900 * 0.5);
-    expect(visual).toBeLessThan(900);
   });
 
   test("mobile homepage sections flow naturally without clipping", async ({ page, isMobile }) => {

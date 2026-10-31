@@ -7,24 +7,25 @@ import { PROJECTS } from "@/content/projects";
 import type { Locale } from "@/lib/i18n";
 import { saasLandingPath, servicePath, smbLandingPath, workPath } from "@/lib/site-routes";
 
-/** Atmosphere image, studio statement and a single door to the work page (projects live there only). */
+/**
+ * Studio statement in the night: the desk photo is blended into the dark background
+ * (continuing the hero), the serif sentence sits over it, then a single door to the
+ * work page (projects live there only).
+ */
 export function HomeStatementA({ locale }: { locale: Locale }) {
   const fr = locale === "fr";
   return (
-    <div className="pt-16 md:pt-24">
-      <Container>
-        <figure className="relative h-[22rem] overflow-hidden bg-rs-subtle md:h-[38rem]">
-          <Image
-            src="/images/desk-night.webp"
-            alt={fr ? "Poste de travail du studio, le soir" : "Studio workstation in the evening"}
-            fill
-            priority
-            sizes="100vw"
-            className="object-cover"
-          />
-        </figure>
-
-        <p className="mx-auto max-w-5xl py-20 text-center font-serif text-[2.5rem] leading-[1.02] md:py-28 md:text-[4.25rem]">
+    <div className="rs-theme-dark relative isolate overflow-hidden bg-rs-bg text-rs-fg">
+      <Image
+        src="/images/desk-night.webp"
+        alt={fr ? "Poste de travail du studio, le soir" : "Studio workstation in the evening"}
+        fill
+        sizes="100vw"
+        className="statement-image -z-20 object-cover object-[70%_center]"
+      />
+      <div aria-hidden className="statement-shade pointer-events-none absolute inset-0 -z-10" />
+      <Container className="flex min-h-[38rem] flex-col justify-end pb-16 pt-32 md:min-h-[50rem] md:pb-20 md:pt-48">
+        <p className="max-w-4xl font-serif text-[2.6rem] leading-[1.02] md:text-[4.75rem]">
           {fr ? "Un studio indépendant. Pas d'intermédiaire entre " : "An independent studio. No middleman between "}
           <em className="text-rs-accent-fg">{fr ? "votre idée" : "your idea"}</em>
           {fr ? " et la mise en production." : " and production."}
@@ -32,7 +33,7 @@ export function HomeStatementA({ locale }: { locale: Locale }) {
 
         <Link
           href={workPath(locale)}
-          className="group flex items-center justify-between gap-6 border-y border-rs-fg py-8 transition-colors duration-200 hover:bg-rs-fg hover:text-rs-bg md:px-4"
+          className="group mt-14 flex items-center justify-between gap-6 border-y border-[var(--rs-border-strong)] py-7 transition-colors duration-200 hover:border-rs-fg hover:bg-rs-fg hover:text-rs-bg md:mt-20 md:px-4"
         >
           <span className="text-[2.5rem] font-extrabold leading-[0.95] tracking-[-0.045em] md:text-6xl">
             {fr ? "Voir les réalisations" : "See the work"}

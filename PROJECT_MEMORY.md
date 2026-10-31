@@ -826,3 +826,4 @@ Quand un changement important est fait:
 - Images par page : `PAGE_HERO_PHOTOS` et `SERVICE_HERO_PHOTOS` dans `src/content/visuals.ts`.
 - Header : `CommercialPageShell` passe par défaut en `headerTopTheme="dark"` ; lien actif en `#8a88f2` sur fond nuit. Les 70 landings locales gardent leur header clair.
 - Tests : e2e home (héros nuit, mur décoratif, portes). Vitest 160/160, build 194 pages, Playwright 121/121.
+- Suite (même jour) : la section `#statement` de l'accueil (photo encadrée + phrase serif sur fond clair) est refaite dans la nuit, dans le prolongement du héros : `/images/desk-night.webp` en plein cadre fondue en haut et en bas (`.statement-image`, `.statement-shade`), phrase serif alignée à gauche en encre claire, grand lien « Voir les réalisations » entre deux filets. Le fond clair reprend à « Ce que je construis ». Test e2e home adapté.
