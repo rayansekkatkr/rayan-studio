@@ -85,7 +85,6 @@ export const backends: ServiceRecord = {
     ],
   },
   technologies: ["Node.js", "NestJS", "TypeScript", "Python", "FastAPI", "PostgreSQL", "Redis", "REST", "Webhooks"],
-  proofProjects: ["pick4me", "pont-facturx"],
   faq: {
     fr: [
       {

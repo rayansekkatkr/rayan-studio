@@ -2,10 +2,10 @@ import Link from "next/link";
 import { ArrowRight } from "lucide-react";
 import { QuickQuoteForm } from "@/components/forms/quick-quote-form";
 import { PageHero } from "@/components/ui/page-hero";
-import { PAGE_HERO_PHOTOS } from "@/content/visuals";
 import type { Locale } from "@/lib/i18n";
 import { startProjectPath } from "@/lib/site-routes";
 import { ContactLayout } from "./contact-layout";
+import { PAGE_HERO_PHOTOS } from "@/content/visuals";
 
 /** Short free-quote page, the destination of every "Demander un devis gratuit" button. */
 export function QuotePage({ locale }: { locale: Locale }) {
@@ -14,6 +14,7 @@ export function QuotePage({ locale }: { locale: Locale }) {
     <>
       <PageHero
         eyebrow={fr ? "Devis gratuit" : "Free quote"}
+        image={PAGE_HERO_PHOTOS.contact}
         title={fr ? "Demander un devis gratuit" : "Get a free quote"}
         lead={
           <p>
@@ -22,7 +23,6 @@ export function QuotePage({ locale }: { locale: Locale }) {
               : "A few lines are enough. For a website, you receive a first free mockup within 24 business hours; for an application, a first reasoned answer within the same time."}
           </p>
         }
-        image={PAGE_HERO_PHOTOS.contact}
       />
       <ContactLayout locale={locale} source="project">
         <QuickQuoteForm locale={locale} source="quote_page" readTypeFromUrl />

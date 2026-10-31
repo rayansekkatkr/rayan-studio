@@ -32,7 +32,6 @@ export function HomeHero({ locale }: { locale: Locale }) {
     <div className="rs-theme-dark relative isolate overflow-hidden bg-rs-bg text-rs-fg">
       <div aria-hidden className="hero-glow pointer-events-none absolute inset-0 -z-10" />
       <HeroScreenWall
-        locale={locale}
         className="absolute inset-y-0 right-0 -z-10 hidden w-[50%] lg:block"
       />
       <Container className="pointer-events-none">
@@ -86,7 +85,7 @@ export function HomeHero({ locale }: { locale: Locale }) {
                     <TrackedLink
                       href={path.href}
                       event={{ ctaId: `hero_path_${path.id}`, source: "home_hero", destination: path.href, locale }}
-                      className="group flex h-full flex-col rounded-[var(--rs-radius-md)] border border-[var(--rs-border)] bg-white/[0.04] p-5 backdrop-blur-sm transition-colors duration-150 hover:border-rs-accent hover:bg-white/[0.07]"
+                      className="group flex h-full flex-col border border-[var(--rs-border)] bg-white/[0.04] p-5 backdrop-blur-sm transition-colors duration-150 hover:border-rs-accent hover:bg-white/[0.07]"
                     >
                       <span className="text-[11px] font-semibold uppercase tracking-[0.16em] text-rs-muted">{path.kicker}</span>
                       <span className="mt-2 flex items-center justify-between gap-3 text-lg font-semibold tracking-tight">
@@ -105,7 +104,7 @@ export function HomeHero({ locale }: { locale: Locale }) {
           </div>
         </div>
       </Container>
-      <HeroScreenRow locale={locale} className="pb-14 lg:hidden" />
+      <HeroScreenRow className="pb-14 lg:hidden" />
     </div>
   );
 }

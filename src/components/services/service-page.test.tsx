@@ -13,7 +13,7 @@ it("renders business need before engineering and technology", () => {
   const sections = Array.from(container.querySelectorAll("[data-service-section]"), (node) =>
     node.getAttribute("data-service-section"),
   );
-  expect(sections).toEqual(["hero", "need", "use-cases", "approach", "engineering", "proof", "faq", "cta"]);
+  expect(sections).toEqual(["hero", "need", "use-cases", "approach", "engineering", "faq", "cta"]);
   expect(screen.getByRole("heading", { level: 1 })).toHaveTextContent(
     /produits web conçus autour de votre métier/i,
   );

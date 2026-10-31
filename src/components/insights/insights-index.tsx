@@ -6,10 +6,10 @@ import { FEATURED_INSIGHT, getInsightsByCategory } from "@/content/insights";
 import type { Locale } from "@/lib/i18n";
 import { insightPath } from "@/lib/site-routes";
 import { PageHero } from "@/components/ui/page-hero";
-import { PAGE_HERO_PHOTOS } from "@/content/visuals";
 import { BALANCED_GRID, balancedSpan } from "@/components/ui/balanced-grid";
 import { cn } from "@/lib/utils";
 import { InsightCard } from "./insight-card";
+import { PAGE_HERO_PHOTOS } from "@/content/visuals";
 
 export function InsightsIndex({ locale }: { locale: Locale }) {
   const fr = locale === "fr";
@@ -23,13 +23,12 @@ export function InsightsIndex({ locale }: { locale: Locale }) {
     <div>
       <PageHero
         eyebrow={fr ? "Ressources" : "Insights"}
+        image={PAGE_HERO_PHOTOS.insights}
         title={
           fr
             ? "Guides, ressources et retours d'expérience pour mieux construire vos produits digitaux."
             : "Guides, resources and practical thinking for building better digital products."
         }
-        image={PAGE_HERO_PHOTOS.insights}
-        titleClassName="lg:text-[2.75rem]"
       />
 
       <div className="bg-rs-bg py-[var(--rs-section-space)]">

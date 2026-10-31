@@ -87,7 +87,6 @@ export const web: ServiceRecord = {
     ],
   },
   technologies: ["Next.js", "React", "TypeScript", "Tailwind CSS"],
-  proofProjects: ["manteigaria"],
   faq: {
     fr: [
       {

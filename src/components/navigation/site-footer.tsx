@@ -17,11 +17,11 @@ export function SiteFooter({ locale }: { locale: Locale }) {
   ];
 
   return (
-    <footer className="border-t border-[var(--rs-border)] bg-rs-bg">
+    <footer className="rs-theme-dark border-t border-[var(--rs-border)] bg-rs-bg text-rs-fg">
       <div className="mx-auto w-full max-w-[var(--rs-container)] px-5 py-14 md:px-8">
         <div className="flex flex-col gap-10 lg:flex-row lg:justify-between">
           <div className="max-w-xs">
-            <p className="text-sm font-bold uppercase tracking-[0.22em] text-rs-fg">RAYAN STUDIO</p>
+            <p className="text-lg font-extrabold tracking-[-0.02em] text-rs-fg">Rayan Studio</p>
             <p className="mt-4 text-sm leading-relaxed text-rs-muted">
               {fr
                 ? "Studio indépendant : applications, plateformes et sites web premium, du cadrage à la mise en production."

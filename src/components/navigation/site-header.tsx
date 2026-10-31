@@ -88,9 +88,9 @@ export function SiteHeader({ locale, topTheme = "light" }: SiteHeaderProps) {
         >
           <Link
             href={`/${locale}`}
-            className={cn("text-sm font-bold uppercase tracking-[0.22em]", inverse ? "text-[var(--rs-dark-fg)]" : "text-rs-fg")}
+            className={cn("text-lg font-extrabold tracking-[-0.02em]", inverse ? "text-[var(--rs-dark-fg)]" : "text-rs-fg")}
           >
-            RAYAN STUDIO
+            Rayan Studio
           </Link>
 
           <nav aria-label={fr ? "Navigation principale" : "Main navigation"} className="hidden items-center gap-1 lg:flex">
@@ -104,7 +104,9 @@ export function SiteHeader({ locale, topTheme = "light" }: SiteHeaderProps) {
                   className={cn(
                     "px-4 py-2 text-sm font-medium transition-colors duration-150",
                     current
-                      ? "text-rs-accent-fg"
+                      ? inverse
+                        ? "text-[#8a88f2]"
+                        : "text-rs-accent-fg"
                       : inverse
                         ? "text-[var(--rs-dark-fg)] hover:text-[var(--rs-dark-muted)]"
                         : "text-rs-fg hover:text-rs-accent-fg",
@@ -122,13 +124,14 @@ export function SiteHeader({ locale, topTheme = "light" }: SiteHeaderProps) {
               href={quotePath(locale)}
               event={{ ctaId: "nav_free_quote", source: "site_header", destination: quotePath(locale), locale }}
               className={cn(
-                "inline-flex items-center px-5 py-2.5 text-sm font-semibold transition-colors duration-150",
+                "inline-flex items-center gap-2 px-5 py-2.5 text-sm font-semibold transition-colors duration-150",
                 inverse
                   ? "bg-[var(--rs-dark-fg)] text-[var(--rs-dark)] hover:bg-rs-accent hover:text-[var(--rs-dark-fg)]"
                   : "bg-rs-fg text-rs-bg hover:bg-rs-accent",
               )}
             >
-              {fr ? "Demander un devis gratuit" : "Get a free quote"}
+              <span aria-hidden className="h-1.5 w-1.5 rounded-full bg-[#3ddc84]" />
+              {fr ? "Devis gratuit" : "Free quote"}
             </TrackedLink>
           </div>
 

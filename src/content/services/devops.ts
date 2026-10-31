@@ -87,7 +87,6 @@ export const devops: ServiceRecord = {
     ],
   },
   technologies: ["GitLab CI", "GitHub Actions", "Docker", "Kubernetes", "Terraform", "Ansible", "AWS", "Prometheus", "Grafana", "Caddy", "Nginx", "Linux"],
-  proofProjects: ["ci-cd-platform", "product-infrastructure"],
   faq: {
     fr: [
       {

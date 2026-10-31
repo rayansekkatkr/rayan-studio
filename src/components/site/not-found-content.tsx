@@ -8,7 +8,8 @@ import { startProjectPath, workPath } from "@/lib/site-routes";
 // request is not known here: French first, with an English way out.
 export function NotFoundContent() {
   return (
-    <main id="main-content" className="rs-theme-dark flex min-h-screen flex-col bg-rs-bg text-rs-fg">
+    <main id="main-content" className="rs-theme-dark relative isolate flex min-h-screen flex-col overflow-hidden bg-rs-bg text-rs-fg">
+      <div aria-hidden className="hero-glow pointer-events-none absolute inset-0 -z-10" />
       <Container className="flex h-16 items-center">
         <Link href="/fr" className="text-sm font-bold uppercase tracking-[0.22em] text-rs-fg">
           {BRAND.name}
@@ -26,7 +27,7 @@ export function NotFoundContent() {
         <div className="mt-10 flex flex-wrap items-center gap-4">
           <Link
             href="/fr"
-            className="inline-flex items-center gap-2 rounded-none bg-rs-fg px-7 py-3.5 text-base font-semibold text-[var(--rs-dark)] transition-colors duration-150 hover:bg-rs-accent hover:text-rs-fg"
+            className="inline-flex items-center gap-2 rounded-none bg-rs-fg px-7 py-3.5 text-base font-semibold text-rs-bg transition-colors duration-150 hover:bg-rs-accent hover:text-white"
           >
             Retour à l&apos;accueil
             <ArrowRight aria-hidden className="h-4 w-4" />

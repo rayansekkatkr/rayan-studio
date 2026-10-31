@@ -5,6 +5,8 @@ import { Eyebrow } from "@/components/ui/eyebrow";
 import { RAYAN_CONTENT } from "@/content/studio";
 import { BRAND } from "@/lib/brand";
 import type { Locale } from "@/lib/i18n";
+import { NightBand } from "@/components/ui/night-band";
+import { PAGE_HERO_PHOTOS } from "@/content/visuals";
 
 export function RayanPage({ locale }: { locale: Locale }) {
   const fr = locale === "fr";
@@ -12,13 +14,13 @@ export function RayanPage({ locale }: { locale: Locale }) {
 
   return (
     <article>
-      <div className="rs-theme-dark bg-rs-bg pb-16 pt-28 text-rs-fg md:pb-20 md:pt-32">
-        <Container>
+      <NightBand image={PAGE_HERO_PHOTOS.rayan} className="pt-28 md:pt-36">
+        <Container className="page-hero-rule">
           <Eyebrow>{fr ? "Fondateur" : "Founder"}</Eyebrow>
-          <h1 className="mt-4 text-3xl font-semibold tracking-tight md:text-5xl">{content.name}</h1>
+          <h1 className="mt-5 text-[2.5rem] font-extrabold leading-[0.98] tracking-[-0.045em] md:text-6xl">{content.name}</h1>
           <p className="mt-3 text-xl font-medium text-rs-muted">{content.role}</p>
         </Container>
-      </div>
+      </NightBand>
 
       <div className="bg-rs-bg py-[var(--rs-section-space)]">
         <Container>

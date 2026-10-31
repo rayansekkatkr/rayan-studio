@@ -1,19 +1,22 @@
 import type { Metadata, Viewport } from "next";
-import { Plus_Jakarta_Sans, Source_Serif_4 } from "next/font/google";
+import { Instrument_Serif, Inter_Tight } from "next/font/google";
 import { AnalyticsLoader } from "@/components/site/AnalyticsLoader";
 import { CookieConsent } from "@/components/site/CookieConsent";
 import { WebVitalsReporter } from "@/components/site/WebVitalsReporter";
 import { BRAND, getSiteUrl } from "@/lib/brand";
 import { getGoogleSiteVerification } from "@/lib/seo-verification";
 
-const sansFont = Plus_Jakarta_Sans({
+// Direction A (2026-10-31): a heavy grotesque for headings and UI, a serif for key sentences.
+const sansFont = Inter_Tight({
   subsets: ["latin"],
   variable: "--font-sans",
   display: "swap",
 });
 
-const serifFont = Source_Serif_4({
+const serifFont = Instrument_Serif({
   subsets: ["latin"],
+  weight: "400",
+  style: ["normal", "italic"],
   variable: "--font-serif",
   display: "swap",
 });

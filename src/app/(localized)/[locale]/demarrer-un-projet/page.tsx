@@ -4,9 +4,9 @@ import { CommercialPageShell } from "@/components/layout/commercial-page-shell";
 import { ProjectForm } from "@/components/forms/project-form";
 import { ContactLayout } from "@/components/contact/contact-layout";
 import { PageHero } from "@/components/ui/page-hero";
-import { PAGE_HERO_PHOTOS } from "@/content/visuals";
 import { normalizeLocale, type Locale } from "@/lib/i18n";
 import { buildLocalizedMetadata } from "@/lib/seo";
+import { PAGE_HERO_PHOTOS } from "@/content/visuals";
 
 export const dynamicParams = false;
 
@@ -34,9 +34,10 @@ export default async function Page({ params }: { params: Promise<{ locale: strin
   }
 
   return (
-    <CommercialPageShell locale="fr" headerTopTheme="dark">
+    <CommercialPageShell locale="fr">
       <PageHero
         eyebrow="Projet · Devis"
+        image={PAGE_HERO_PHOTOS.contact}
         title="Démarrer un projet"
         lead={
           <p>
@@ -44,7 +45,6 @@ export default async function Page({ params }: { params: Promise<{ locale: strin
             charges : décrivez simplement où vous en êtes. Première réponse sous 24 h ouvrées.
           </p>
         }
-        image={PAGE_HERO_PHOTOS.contact}
       />
       <ContactLayout locale="fr" source="project">
         <ProjectForm locale="fr" />

@@ -1,6 +1,5 @@
 import { getCraPage } from "@/content/cra";
 import { FEATURED_INSIGHT } from "@/content/insights";
-import { getProject } from "@/content/projects";
 import type { Locale } from "@/lib/i18n";
 import {
   contactPath,
@@ -47,7 +46,6 @@ export function getPrimaryNav(locale: Locale): PrimaryNavLink[] {
 
 export function getNavigation(locale: Locale): NavMenu[] {
   const fr = locale === "fr";
-  const pick4me = getProject("pick4me");
 
   return [
     {
@@ -81,42 +79,12 @@ export function getNavigation(locale: Locale): NavMenu[] {
           ],
         },
       ],
-      featured: {
-        eyebrow: fr ? "À LA UNE" : "FEATURED",
-        title: "Pick4Me",
-        href: workPath(locale, "pick4me"),
-        image: pick4me?.heroImage,
-        cta: fr ? "Voir le projet" : "View project",
-      },
     },
     {
       key: "work",
       label: fr ? "Réalisations" : "Work",
-      groups: [
-        {
-          label: fr ? "PROJETS PHARES" : "SELECTED WORK",
-          links: [
-            { label: "Pick4Me", href: workPath(locale, "pick4me") },
-            { label: "Pont Factur-X", href: workPath(locale, "pont-facturx") },
-            { label: "GoodCall", href: workPath(locale, "goodcall") },
-          ],
-        },
-        {
-          label: fr ? "IA & DEVOPS" : "AI & DEVOPS",
-          links: [
-            { label: "Ops Knowledge Agent", href: workPath(locale, "ops-knowledge-agent") },
-            { label: fr ? "Plateforme CI/CD" : "CI/CD platform", href: workPath(locale, "plateforme-ci-cd") },
-            { label: fr ? "Tous les projets" : "All projects", href: workPath(locale) },
-          ],
-        },
-      ],
-      featured: {
-        eyebrow: fr ? "À LA UNE" : "FEATURED",
-        title: "Pick4Me",
-        href: workPath(locale, "pick4me"),
-        image: pick4me?.heroImage,
-        cta: fr ? "Découvrir" : "Discover",
-      },
+      // Projects are presented on the work page only, not repeated in menus.
+      groups: [{ label: fr ? "RÉALISATIONS" : "WORK", links: [{ label: fr ? "Toutes les réalisations" : "All work", href: workPath(locale) }] }],
     },
     {
       key: "studio",

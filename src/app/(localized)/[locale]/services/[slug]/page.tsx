@@ -53,7 +53,7 @@ export default async function Page({ params }: { params: Promise<{ locale: strin
   ]);
 
   return (
-    <CommercialPageShell locale={locale} headerTopTheme="dark">
+    <CommercialPageShell locale={locale}>
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{

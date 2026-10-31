@@ -3,19 +3,21 @@ import { Container } from "@/components/ui/container";
 import { Eyebrow } from "@/components/ui/eyebrow";
 import type { LegalDoc } from "@/content/legal";
 import type { Locale } from "@/lib/i18n";
+import { NightBand } from "@/components/ui/night-band";
+import { PAGE_HERO_PHOTOS } from "@/content/visuals";
 
 export function LegalDocument({ locale, doc }: { locale: Locale; doc: LegalDoc }) {
   return (
-    <CommercialPageShell locale={locale} headerTopTheme="dark">
-      <div className="rs-theme-dark bg-rs-bg pb-12 pt-28 text-rs-fg md:pb-16 md:pt-32">
-        <Container>
+    <CommercialPageShell locale={locale}>
+      <NightBand image={PAGE_HERO_PHOTOS.legal} className="pt-28 md:pt-36">
+        <Container className="page-hero-rule">
           <Eyebrow>{doc.eyebrow}</Eyebrow>
-          <h1 className="mt-4 max-w-3xl text-[1.75rem] font-semibold leading-[1.08] tracking-tight md:text-4xl">
+          <h1 className="mt-5 max-w-5xl text-[2.5rem] font-extrabold leading-[0.98] tracking-[-0.045em] md:text-6xl">
             {doc.title}
           </h1>
           <p className="mt-6 text-sm text-rs-muted">{doc.updated}</p>
         </Container>
-      </div>
+      </NightBand>
       <div className="bg-rs-bg py-[var(--rs-section-space)]">
         <Container>
           <div className="max-w-[var(--rs-reading)] space-y-10 text-base leading-relaxed text-rs-muted">
