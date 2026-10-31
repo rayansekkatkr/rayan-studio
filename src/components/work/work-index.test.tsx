@@ -13,10 +13,10 @@ it("renders selected work before secondary work in the exact flagship order", ()
     node.getAttribute("data-work-project"),
   );
   expect(featured).toEqual(["pick4me", "pont-facturx", "goodcall"]);
-  expect(screen.getByText("Autres projets : IA, DevOps et produits")).toBeInTheDocument();
+  expect(screen.getByText("Derrière les écrans : IA, DevOps et infrastructure")).toBeInTheDocument();
 });
 
-it("labels Manteigaria as an uncommissioned concept in More work", () => {
+it("labels Manteigaria as an uncommissioned concept in the portfolio", () => {
   const { container } = render(<WorkIndex locale="fr" />);
   expect(container.textContent).toContain("Concept, refonte non commandée");
 });

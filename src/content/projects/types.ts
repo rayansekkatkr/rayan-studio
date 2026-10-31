@@ -34,7 +34,15 @@ export type ProjectRecord = {
   /** Exact substring of the first challenge paragraph shown in the accent colour. */
   challengeHighlight?: Record<Locale, string>;
   solution: Record<Locale, string[]>;
-  capabilities: Array<{ title: LocalizedText; body: LocalizedText }>;
+  /** `benefit`: what the feature brings to the user, shown under the feature on case studies. */
+  capabilities: Array<{ title: LocalizedText; body: LocalizedText; benefit?: LocalizedText }>;
+  /** Case-study gallery, grouped by journey. Only real screenshots; empty groups are not rendered. */
+  screens?: Array<{
+    title: LocalizedText;
+    items: Array<{ src: string; alt: LocalizedText; frame: "browser" | "phone"; width: number; height: number }>;
+  }>;
+  /** Secondary visual of the opening composition (e.g. a phone screen next to the website). */
+  heroCompanion?: { src: string; alt: LocalizedText; width: number; height: number };
   productUx: Record<Locale, string[]>;
   engineering: Record<Locale, Array<{ title: string; body: string }>>;
   outcome: Record<Locale, string[]>;

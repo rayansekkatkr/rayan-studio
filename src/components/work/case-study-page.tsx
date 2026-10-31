@@ -1,136 +1,256 @@
+import Image from "next/image";
+import Link from "next/link";
+import { ArrowRight, ArrowUpRight } from "lucide-react";
 import { ClosingCta } from "@/components/ui/closing-cta";
+import { Container } from "@/components/ui/container";
+import { Eyebrow } from "@/components/ui/eyebrow";
 import { TechChips } from "@/components/ui/tech-chips";
-import type { ProjectRecord } from "@/content/projects";
+import { PROJECTS, type ProjectRecord } from "@/content/projects";
 import type { Locale } from "@/lib/i18n";
-import { saasLandingPath, smbLandingPath } from "@/lib/site-routes";
-import { ArticleAsideCard, ArticleLayout, AsideLinkLabel } from "@/components/article/article-layout";
-import { ArticleBlock, NumberedGrid, NumberedList, PullQuote } from "@/components/article/article-blocks";
+import { quotePath, smbLandingPath, workPath } from "@/lib/site-routes";
+import { cn } from "@/lib/utils";
+import { CaseStudyGallery } from "./case-study-gallery";
 import { CaseStudyHero } from "./case-study-hero";
 import { CaseStudyOverview } from "./case-study-overview";
-import { NextProject } from "./next-project";
-import { ProjectGallery } from "./project-gallery";
+import { projectImageAlt } from "./project-labels";
+import { StatusBadge } from "./status-badge";
 
-const SECTION = "py-12 md:py-16";
+const SECTION = "border-t border-[var(--rs-border)] py-14 md:py-20";
+
+function Heading({ index, eyebrow, title }: { index: number; eyebrow: string; title?: string }) {
+  return (
+    <div>
+      <Eyebrow>
+        <span className="text-rs-accent-fg">{String(index).padStart(2, "0")}</span> · {eyebrow}
+      </Eyebrow>
+      {title ? <h2 className="mt-3 text-[1.75rem] font-semibold leading-tight tracking-tight md:text-4xl">{title}</h2> : null}
+    </div>
+  );
+}
+
+function Highlighted({ text, highlight }: { text: string; highlight?: string }) {
+  const at = highlight ? text.indexOf(highlight) : -1;
+  if (!highlight || at < 0) return <>{text}</>;
+  return (
+    <>
+      {text.slice(0, at)}
+      <span className="text-rs-accent-fg">{highlight}</span>
+      {text.slice(at + highlight.length)}
+    </>
+  );
+}
 
 export function CaseStudyPage({ locale, project }: { locale: Locale; project: ProjectRecord }) {
   const fr = locale === "fr";
-  const gallery = project.gallery.filter((item) => item.src !== project.heroImage);
   const challenge = project.challenge[locale];
-  const asideLink = project.links?.[0];
+  const groups =
+    project.screens ??
+    (project.gallery.length > 0
+      ? [{ title: { fr: "Le produit", en: "The product" }, items: project.gallery.map((item) => ({ ...item, frame: "browser" as const, width: 1600, height: 1000 })) }]
+      : []);
+  const similar = PROJECTS.filter((item) => item.key !== project.key && item.kind === "product" && item.key !== "product-infrastructure").slice(0, 3);
+  const isWeb = project.key === "manteigaria";
+  let index = 0;
 
   return (
     <article>
       <section
         data-case-section="hero"
-        className="rs-theme-dark relative isolate overflow-hidden bg-rs-bg pb-12 pt-28 text-rs-fg md:pb-16 md:pt-32"
+        className="rs-theme-dark relative isolate overflow-hidden bg-rs-bg pb-20 pt-28 text-rs-fg md:pt-32"
       >
         <div aria-hidden className="hero-glow absolute inset-0 -z-10" />
         <CaseStudyHero locale={locale} project={project} />
       </section>
 
-      <section data-case-section="overview" className="pt-8">
+      <section data-case-section="overview" className="relative -mt-10">
         <CaseStudyOverview locale={locale} project={project} />
       </section>
 
-      <ArticleLayout
-        locale={locale}
-        className="pb-4"
-        toc={[
-          { id: "defi", label: fr ? "Le défi" : "The challenge" },
-          { id: "reponse", label: fr ? "La réponse" : "The solution" },
-          { id: "construit", label: fr ? "Ce que nous avons construit" : "What we built" },
-          { id: "product-ux", label: "Product & UX" },
-          { id: "engineering", label: "Engineering" },
-          { id: "resultat", label: fr ? "Résultat" : "Outcome" },
-        ]}
-        aside={
-          <ArticleAsideCard image={project.heroImage}>
-            {asideLink ? (
-              <a href={asideLink.href} target="_blank" rel="noopener noreferrer" className="hover:underline">
-                <AsideLinkLabel>{asideLink.label[locale]}</AsideLinkLabel>
-              </a>
-            ) : (
-              <span>{project.title}</span>
-            )}
-          </ArticleAsideCard>
-        }
-      >
-        <PullQuote
-          id="defi"
-          data-case-section="challenge"
-          eyebrow={fr ? "01 · Le défi" : "01 · The challenge"}
-          text={challenge[0] ?? ""}
-          highlight={project.challengeHighlight?.[locale]}
-        >
-          {challenge.slice(1).map((paragraph) => (
-            <p key={paragraph} className="mt-5 max-w-[var(--rs-reading)] text-lg leading-relaxed text-rs-muted">
-              {paragraph}
+      <Container>
+        <div className="grid gap-10 py-14 md:py-20 lg:grid-cols-[minmax(0,5fr)_minmax(0,7fr)] lg:gap-16">
+          <section data-case-section="challenge">
+            <Heading index={++index} eyebrow={fr ? "Problématique" : "The problem"} />
+            <p className="mt-5 border-l-4 border-rs-accent pl-6 text-2xl font-medium leading-snug tracking-tight md:text-[1.9rem]">
+              <Highlighted text={challenge[0] ?? ""} highlight={project.challengeHighlight?.[locale]} />
             </p>
-          ))}
-        </PullQuote>
+            {challenge.slice(1).map((paragraph) => (
+              <p key={paragraph} className="mt-5 pl-7 text-base leading-relaxed text-rs-muted">
+                {paragraph}
+              </p>
+            ))}
+          </section>
+          <section data-case-section="solution">
+            <Eyebrow>{fr ? "Objectifs" : "Objectives"}</Eyebrow>
+            <ol className="mt-5 border-t border-[var(--rs-border)]">
+              {project.solution[locale].map((item, position) => (
+                <li
+                  key={item}
+                  className="grid grid-cols-[3rem_minmax(0,1fr)] border-b border-[var(--rs-border)] py-5 text-base leading-relaxed md:text-lg"
+                >
+                  <span className="pt-1 text-sm font-bold text-rs-accent-fg">{String(position + 1).padStart(2, "0")}</span>
+                  {item}
+                </li>
+              ))}
+            </ol>
+          </section>
+        </div>
 
-        <ArticleBlock id="reponse" index={2} title={fr ? "La réponse" : "The solution"} data-case-section="solution">
-          <NumberedList items={project.solution[locale]} />
-        </ArticleBlock>
+        {groups.length > 0 ? (
+          <section data-case-section="gallery" className={SECTION}>
+            <Heading index={++index} eyebrow={fr ? "Galerie" : "Gallery"} title={fr ? "Le produit, écran par écran." : "The product, screen by screen."} />
+            <div className="mt-8">
+              <CaseStudyGallery locale={locale} groups={groups} />
+            </div>
+          </section>
+        ) : null}
 
-        <ArticleBlock id="construit" index={3} title={fr ? "Ce que nous avons construit" : "What we built"} data-case-section="capabilities">
-          <NumberedGrid
-            items={project.capabilities.map((capability) => ({ title: capability.title[locale], body: capability.body[locale] }))}
+        <section data-case-section="capabilities" className={SECTION}>
+          <Heading
+            index={++index}
+            eyebrow={fr ? "Fonctionnalités & choix techniques" : "Features & technical choices"}
+            title={fr ? "Ce que fait le produit, et ce que ça change." : "What the product does, and what it changes."}
           />
-        </ArticleBlock>
-
-        <ArticleBlock id="product-ux" index={4} title="Product & UX" data-case-section="product-ux">
-          <ul className="space-y-4">
-            {project.productUx[locale].map((item) => (
-              <li key={item} className="border-l-2 border-rs-accent pl-5 text-lg leading-relaxed">
-                {item}
+          <ul className="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-6">
+            {project.capabilities.map((capability, position) => (
+              <li
+                key={capability.title.en}
+                className={cn(
+                  "flex flex-col rounded-[var(--rs-radius-md)] border border-[var(--rs-border)] bg-rs-surface p-6",
+                  project.capabilities.length % 3 === 2 && position >= project.capabilities.length - 2 ? "lg:col-span-3" : "lg:col-span-2",
+                )}
+              >
+                <span className="num-outline text-3xl font-bold leading-none tracking-tight">{String(position + 1).padStart(2, "0")}</span>
+                <h3 className="mt-4 text-lg font-semibold">{capability.title[locale]}</h3>
+                <p className="mt-1.5 text-sm leading-relaxed text-rs-muted">{capability.body[locale]}</p>
+                {capability.benefit ? (
+                  <p className="mt-auto flex gap-2 pt-4 text-sm font-medium text-rs-accent-fg">
+                    <ArrowRight aria-hidden className="mt-0.5 h-4 w-4 shrink-0" />
+                    {capability.benefit[locale]}
+                  </p>
+                ) : null}
               </li>
             ))}
           </ul>
-        </ArticleBlock>
-
-        <ArticleBlock id="engineering" index={5} title="Engineering" data-case-section="engineering">
-          <NumberedGrid items={project.engineering[locale]} />
-        </ArticleBlock>
-
-        <section data-case-section="technologies">
-          {project.technologies.length > 0 ? (
-            <div>
-              <p className="text-xs font-semibold uppercase tracking-[0.18em] text-rs-muted">Technologies</p>
-              <TechChips items={project.technologies} className="mt-4" />
-            </div>
-          ) : null}
         </section>
 
-        <ArticleBlock id="resultat" index={6} title={fr ? "Résultat" : "Outcome"} data-case-section="outcome">
-          <div className="space-y-3 rounded-[var(--rs-radius-md)] border border-[color-mix(in_srgb,var(--rs-accent)_35%,transparent)] bg-[color-mix(in_srgb,var(--rs-accent)_7%,transparent)] p-6 md:p-8">
-            {project.outcome[locale].map((item) => (
-              <p key={item} className="text-lg font-medium leading-relaxed md:text-xl">
-                {item}
-              </p>
+        <section data-case-section="engineering" className="pb-6">
+          <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+            {project.engineering[locale].map((item) => (
+              <div key={item.title} className="border-t-2 border-rs-fg pt-4">
+                <p className="font-semibold">{item.title}</p>
+                <p className="mt-1.5 text-sm leading-relaxed text-rs-muted">{item.body}</p>
+              </div>
             ))}
           </div>
-        </ArticleBlock>
-      </ArticleLayout>
+        </section>
 
-      <section data-case-section="gallery" className={gallery.length > 0 ? "pt-12 md:pt-16" : undefined}>
-        <ProjectGallery locale={locale} items={gallery} />
-      </section>
+        <section data-case-section="technologies" className="pb-6 pt-8">
+          {project.technologies.length > 0 ? <TechChips items={project.technologies} /> : null}
+        </section>
 
-      <section data-case-section="next-project" className={SECTION}>
-        <NextProject locale={locale} project={project} />
-      </section>
+        {project.productUx[locale].length > 0 ? (
+          <section data-case-section="product-ux" className="pb-14 pt-8 md:pb-20">
+            <Eyebrow>Product & UX</Eyebrow>
+            <ul className="mt-5 grid gap-4 md:grid-cols-3">
+              {project.productUx[locale].map((item) => (
+                <li key={item} className="border-l-2 border-rs-accent pl-4 text-base leading-relaxed">
+                  {item}
+                </li>
+              ))}
+            </ul>
+          </section>
+        ) : null}
+
+        <section data-case-section="outcome" className={cn(SECTION, "grid gap-10 lg:grid-cols-[minmax(0,5fr)_minmax(0,7fr)] lg:gap-16")}>
+          <div>
+            <Heading index={++index} eyebrow={fr ? "Livrables" : "Deliverables"} title={fr ? "Ce qui est en ligne aujourd'hui." : "What is live today."} />
+            <p className="mt-4 text-base leading-relaxed text-rs-muted">
+              {fr
+                ? "Uniquement des éléments vérifiables : aucun chiffre d'usage n'est affiché tant qu'il n'est pas mesuré et publiable."
+                : "Only verifiable elements: no usage figure is shown until it is measured and publishable."}
+            </p>
+          </div>
+          <div>
+            <div className="space-y-3 rounded-[var(--rs-radius-md)] border border-[color-mix(in_srgb,var(--rs-accent)_35%,transparent)] bg-[color-mix(in_srgb,var(--rs-accent)_7%,transparent)] p-6 md:p-7">
+              {project.outcome[locale].map((item) => (
+                <p key={item} className="text-lg font-medium leading-relaxed">
+                  {item}
+                </p>
+              ))}
+            </div>
+            {project.links?.length ? (
+              <ul className="mt-4 grid gap-3 sm:grid-cols-2">
+                {project.links.map((link) => (
+                  <li key={link.href}>
+                    <a
+                      href={link.href}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="group flex items-center justify-between gap-3 rounded-[var(--rs-radius-md)] border border-[var(--rs-border)] bg-rs-surface p-5 transition-colors duration-150 hover:border-[var(--rs-border-strong)]"
+                    >
+                      <span>
+                        <span className="block text-xs font-semibold uppercase tracking-[0.16em] text-[#17663a]">{fr ? "En ligne" : "Live"}</span>
+                        <span className="mt-1 block font-semibold group-hover:text-rs-accent-fg">{link.label[locale]}</span>
+                      </span>
+                      <ArrowUpRight aria-hidden className="h-4 w-4 text-rs-muted group-hover:text-rs-accent-fg" />
+                    </a>
+                  </li>
+                ))}
+              </ul>
+            ) : null}
+          </div>
+        </section>
+
+        <section data-case-section="next-project" className={SECTION}>
+          <div className="flex flex-col gap-3 md:flex-row md:items-end md:justify-between">
+            <Heading index={++index} eyebrow={fr ? "Projets similaires" : "Similar projects"} title={fr ? "Continuer à explorer." : "Keep exploring."} />
+            <Link href={workPath(locale)} className="inline-flex items-center gap-1.5 font-semibold text-rs-accent-fg transition-colors duration-150 hover:text-rs-fg">
+              {fr ? "Toutes les réalisations" : "All work"}
+              <ArrowRight aria-hidden className="h-4 w-4" />
+            </Link>
+          </div>
+          <ul className="mt-8 grid gap-5 md:grid-cols-3">
+            {similar.map((item) => (
+              <li key={item.key}>
+                <Link
+                  href={workPath(locale, item.slug)}
+                  className="group block overflow-hidden rounded-[var(--rs-radius-md)] border border-[var(--rs-border)] bg-rs-surface transition-colors duration-150 hover:border-[var(--rs-border-strong)]"
+                >
+                  <span className="relative block aspect-[16/9] overflow-hidden">
+                    <Image
+                      src={item.heroImage}
+                      alt={projectImageAlt(item, locale)}
+                      fill
+                      sizes="(min-width: 768px) 30vw, 100vw"
+                      className="object-cover object-left-top transition-transform duration-500 ease-out group-hover:scale-[1.04]"
+                    />
+                  </span>
+                  <span className="flex items-center justify-between gap-3 p-5">
+                    <span className="text-lg font-semibold group-hover:text-rs-accent-fg">{item.title}</span>
+                    <StatusBadge project={item} locale={locale} />
+                  </span>
+                </Link>
+              </li>
+            ))}
+          </ul>
+        </section>
+      </Container>
 
       <section data-case-section="cta">
         <ClosingCta
           locale={locale}
           ctaId="case_study_start_project"
           source={`case_study_${project.key}`}
-          title={fr ? "Vous construisez quelque chose de similaire ?" : "Building something similar?"}
+          title={fr ? `Un projet comme ${project.title} ?` : `A project like ${project.title}?`}
+          body={
+            fr
+              ? "Premier échange gratuit, réponse sous 24 h ouvrées, devis écrit avant tout engagement."
+              : "Free first conversation, reply within 24 business hours, written quote before any commitment."
+          }
           secondary={
-            project.key === "manteigaria"
+            isWeb
               ? { label: fr ? "Voir l'offre sites web" : "See the website offer", href: smbLandingPath(locale), ctaId: "project_to_websites_offer" }
-              : { label: fr ? "Voir l'offre applications & SaaS" : "See the applications & SaaS offer", href: saasLandingPath(locale), ctaId: "project_to_saas_offer" }
+              : { label: fr ? "Devis gratuit" : "Free quote", href: quotePath(locale, "app"), ctaId: "project_free_quote" }
           }
         />
       </section>

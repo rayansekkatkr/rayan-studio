@@ -141,7 +141,7 @@ test.describe("homepage", () => {
     await page.getByRole("link", { name: "Voir nos réalisations" }).click();
     await expect(page).toHaveURL(/\/fr\/work$/);
     await expect(
-      page.getByRole("heading", { level: 1, name: /Des produits conçus pour être utilisés/ }),
+      page.getByRole("heading", { level: 1, name: /Des produits en ligne, pas des promesses/ }),
     ).toBeVisible();
   });
 });
