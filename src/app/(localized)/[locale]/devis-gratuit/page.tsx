@@ -31,7 +31,7 @@ export default async function Page({ params }: { params: Promise<{ locale: strin
   }
 
   return (
-    <CommercialPageShell locale="fr" headerTopTheme="dark">
+    <CommercialPageShell locale="fr" headerTopTheme="light">
       <QuotePage locale="fr" />
     </CommercialPageShell>
   );

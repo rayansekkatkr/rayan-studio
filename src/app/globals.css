@@ -12,11 +12,11 @@
   --text-secondary: #63584d;
   --accent: #d94f2b;
 
-  --rs-bg: #f4f4f1;
+  --rs-bg: #f2f1ed;
   --rs-surface: #ffffff;
-  --rs-surface-subtle: #ecece7;
-  --rs-fg: #0b0b0e;
-  --rs-muted: #696970;
+  --rs-surface-subtle: #ebe9e4;
+  --rs-fg: #0e0e10;
+  --rs-muted: #646469;
   --rs-accent: #5957d9;
   --rs-accent-hover: #4745bd;
   /* Accent used as text or icon colour. Kept separate from --rs-accent so the
@@ -34,11 +34,6 @@
   --rs-radius-sm: 0;
   --rs-radius-md: 0;
   --rs-radius-lg: 0;
-  /* Websites landing only: warm paper, ink and terracotta. */
-  --rs-warm: #efe9df;
-  --rs-warm-ink: #2a2118;
-  --rs-warm-muted: #5d5248;
-  --rs-terra: #b8522f;
   --rs-motion-fast: 160ms;
   --rs-motion-medium: 240ms;
   /* Fixed overlay surfaces: explicit rgba because Tailwind cannot derive
@@ -97,32 +92,6 @@ body {
     auto,
     auto,
     auto;
-}
-
-body::before,
-body::after {
-  content: "";
-  position: absolute;
-  pointer-events: none;
-  z-index: -1;
-  border-radius: 9999px;
-  filter: blur(120px);
-}
-
-body::before {
-  top: -6rem;
-  left: -6rem;
-  height: 20rem;
-  width: 20rem;
-  background: rgba(217, 79, 43, 0.06);
-}
-
-body::after {
-  right: -8rem;
-  bottom: -8rem;
-  height: 22rem;
-  width: 22rem;
-  background: rgba(39, 32, 27, 0.055);
 }
 
 .font-display {
@@ -404,8 +373,8 @@ section[id] {
 
 /* Editorial article layout (services and work pages): numbers as visual anchors. */
 .num-outline {
-  color: transparent;
-  -webkit-text-stroke: 1.2px color-mix(in srgb, var(--rs-accent) 45%, transparent);
+  /* Direction A: solid accent numbers (outlined numbers were too pale for WCAG contrast). */
+  color: var(--rs-accent-fg);
 }
 
 .num-gradient {
@@ -415,16 +384,23 @@ section[id] {
   color: transparent;
 }
 
-/* Page identities (2026-10-31): each page family has its own signature. */
-.num-outline-warm {
-  color: transparent;
-  -webkit-text-stroke: 1.2px color-mix(in srgb, var(--rs-terra) 55%, transparent);
+/* Direction A: heavy rule under a page title, aligned with the container content. */
+.page-hero-rule {
+  position: relative;
+  padding-bottom: 2.25rem;
 }
-
-.blueprint-grid {
-  background-color: #0b0c12;
-  background-image:
-    linear-gradient(rgba(140, 139, 240, 0.09) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(140, 139, 240, 0.09) 1px, transparent 1px);
-  background-size: 48px 48px;
+.page-hero-rule::after {
+  content: "";
+  position: absolute;
+  left: 1.25rem;
+  right: 1.25rem;
+  bottom: 0;
+  height: 1px;
+  background: var(--rs-fg);
+}
+@media (min-width: 768px) {
+  .page-hero-rule::after {
+    left: 2rem;
+    right: 2rem;
+  }
 }

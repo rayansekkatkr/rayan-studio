@@ -96,7 +96,7 @@ test.describe("header surfaces", () => {
     const [r, g, b] = match!.slice(1, 4).map(Number);
     expect(r + g + b, `light surface expected, got ${bg}`).toBeGreaterThan(600);
 
-    const brand = page.getByRole("link", { name: "RAYAN STUDIO", exact: true });
+    const brand = page.getByRole("banner").getByRole("link", { name: "Rayan Studio", exact: true });
     const color = await brand.evaluate((el) => getComputedStyle(el).color);
     const cm = color.match(/rgba?\((\d+), (\d+), (\d+)/);
     const [cr, cg, cb] = cm!.slice(1, 4).map(Number);

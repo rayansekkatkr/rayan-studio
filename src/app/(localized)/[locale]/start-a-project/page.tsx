@@ -4,7 +4,6 @@ import { CommercialPageShell } from "@/components/layout/commercial-page-shell";
 import { ProjectForm } from "@/components/forms/project-form";
 import { ContactLayout } from "@/components/contact/contact-layout";
 import { PageHero } from "@/components/ui/page-hero";
-import { PAGE_HERO_PHOTOS } from "@/content/visuals";
 import { normalizeLocale, type Locale } from "@/lib/i18n";
 import { buildLocalizedMetadata } from "@/lib/seo";
 
@@ -34,7 +33,7 @@ export default async function Page({ params }: { params: Promise<{ locale: strin
   }
 
   return (
-    <CommercialPageShell locale="en" headerTopTheme="dark">
+    <CommercialPageShell locale="en" headerTopTheme="light">
       <PageHero
         eyebrow="Project · Quote"
         title="Start a project"
@@ -44,7 +43,6 @@ export default async function Page({ params }: { params: Promise<{ locale: strin
             describe where you are. First response within 24 business hours.
           </p>
         }
-        image={PAGE_HERO_PHOTOS.contact}
       />
       <ContactLayout locale="en" source="project">
         <ProjectForm locale="en" />

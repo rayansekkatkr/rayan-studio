@@ -18,7 +18,7 @@ describe("SiteHeader", () => {
 
   it("sends the header CTA to the free-quote page", () => {
     render(<SiteHeader locale="en" />);
-    expect(screen.getByRole("link", { name: /Get a free quote/i })).toHaveAttribute("href", "/en/free-quote");
+    expect(screen.getByRole("link", { name: /Free quote/i })).toHaveAttribute("href", "/en/free-quote");
   });
 
   it("exposes a mobile menu button with aria controls", () => {

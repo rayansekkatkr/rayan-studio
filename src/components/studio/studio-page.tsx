@@ -4,6 +4,7 @@ import { ArrowRight } from "lucide-react";
 import { ClosingCta } from "@/components/ui/closing-cta";
 import { Container } from "@/components/ui/container";
 import { Eyebrow } from "@/components/ui/eyebrow";
+import { GiantWord } from "@/components/ui/giant-word";
 import { TechStack } from "@/components/ui/tech-stack";
 import { getProject, type ProjectKey } from "@/content/projects";
 import { RAYAN_CONTENT, STUDIO_CONTENT } from "@/content/studio";
@@ -28,7 +29,7 @@ export function StudioPage({ locale }: { locale: Locale }) {
     { label: fr ? "Réponse" : "Reply", value: fr ? "Sous 24 h ouvrées" : "Within 24 business hours" },
   ];
   const career = [
-    { when: fr ? "2020 à 2023" : "2020 to 2023", title: "UNYC", body: fr ? "Développement logiciel." : "Software development." },
+    { when: "2020", title: "UNYC", body: fr ? "Développement logiciel, 2020 à 2023." : "Software development, 2020 to 2023." },
     { when: "2024", title: "STMicroelectronics", body: fr ? "Ingénierie DevOps, plateforme CI/CD." : "DevOps engineering, CI/CD platform." },
     {
       when: fr ? "Aujourd'hui" : "Today",
@@ -43,35 +44,30 @@ export function StudioPage({ locale }: { locale: Locale }) {
       <section className="pt-28 md:pt-36">
         <Container>
           <Eyebrow>{fr ? "Le studio" : "The studio"}</Eyebrow>
-          <div className="mt-5 grid gap-10 border-t border-rs-fg pt-8 lg:grid-cols-[minmax(0,3fr)_minmax(0,9fr)] lg:gap-16">
-            <dl className="order-2 grid grid-cols-2 gap-x-6 gap-y-5 sm:grid-cols-3 lg:order-1 lg:grid-cols-1 lg:content-start">
+          <div className="mt-3 overflow-x-clip">
+            <GiantWord text="Studio" />
+          </div>
+          <div className="mt-7 grid gap-6 border-b border-rs-fg pb-8 md:grid-cols-[minmax(0,5fr)_minmax(0,7fr)] md:gap-12">
+            <h1 className="text-xl font-bold leading-snug tracking-tight md:text-2xl">{content.hero.title}</h1>
+            <dl className="grid grid-cols-2 gap-x-6 gap-y-4 sm:grid-cols-3 lg:grid-cols-5">
               {sheet.map((item) => (
                 <div key={item.label}>
-                  <dt className="text-[11px] font-semibold uppercase tracking-[0.16em] text-rs-muted">{item.label}</dt>
-                  <dd className="mt-1 text-base font-semibold">{item.value}</dd>
+                  <dt className="text-[11px] font-semibold uppercase tracking-[0.14em] text-rs-muted">{item.label}</dt>
+                  <dd className="mt-1 text-sm font-semibold">{item.value}</dd>
                 </div>
               ))}
             </dl>
-            <div className="order-1 lg:order-2">
-              <h1 className="font-serif text-[3rem] font-normal leading-[1.02] tracking-[-0.02em] md:text-7xl lg:text-[6rem]">
-                {first}.
-                <br />
-                <em className="text-rs-accent-fg">{second}</em>
-              </h1>
-              <p className="mt-8 max-w-3xl text-lg leading-relaxed text-rs-muted md:text-xl">{content.hero.title}</p>
-            </div>
           </div>
+          <p className="mx-auto max-w-5xl py-16 text-center font-serif text-[2.75rem] leading-[1.02] md:py-24 md:text-[4.5rem]">
+            {first}. <em className="text-rs-accent-fg">{second}</em>
+          </p>
+          <figure className="relative h-64 overflow-hidden md:h-[30rem]">
+            <Image src={PAGE_HERO_PHOTOS.studio} alt="" fill priority sizes="100vw" className="object-cover object-[center_60%]" />
+            <figcaption className="absolute bottom-4 left-4 bg-rs-bg px-3 py-2 text-xs font-semibold md:bottom-5 md:left-5 md:text-sm">
+              {fr ? "Séoul · collaboration à distance avec la France" : "Seoul · remote collaboration with France"}
+            </figcaption>
+          </figure>
         </Container>
-        <figure className="relative mt-14 h-64 overflow-hidden md:mt-16 md:h-[22rem]">
-          <Image src={PAGE_HERO_PHOTOS.studio} alt="" fill priority sizes="100vw" className="object-cover object-[center_60%]" />
-          <figcaption className="absolute bottom-5 left-0 right-0">
-            <Container>
-              <span className="text-xs font-semibold uppercase tracking-[0.16em] text-white">
-                {fr ? "Séoul · collaboration à distance avec la France" : "Seoul · remote collaboration with France"}
-              </span>
-            </Container>
-          </figcaption>
-        </figure>
       </section>
 
       <div className="py-[var(--rs-section-space)]">
@@ -80,12 +76,11 @@ export function StudioPage({ locale }: { locale: Locale }) {
 
           <section className="mt-16">
             <Eyebrow>{fr ? "Parcours" : "Background"}</Eyebrow>
-            <h2 className="mt-4 font-serif text-[2rem] font-semibold md:text-5xl">{fr ? "D'où vient le studio." : "Where the studio comes from."}</h2>
-            <ol className="mt-12 grid gap-10 border-t-2 border-rs-fg md:grid-cols-[1fr_1fr_1.6fr] md:gap-0">
+            <h2 className="mt-4 text-[2.25rem] font-extrabold leading-[1] tracking-[-0.045em] md:text-6xl">{fr ? "D'où vient le studio." : "Where the studio comes from."}</h2>
+            <ol className="mt-10 grid gap-10 border-t border-rs-fg md:grid-cols-[1fr_1fr_1.6fr] md:gap-0">
               {career.map((step) => (
-                <li key={step.title} className="relative pt-8 md:pr-10">
-                  <span aria-hidden className={`absolute -top-[8px] left-0 h-3.5 w-3.5 ${step.now ? "bg-rs-accent" : "bg-rs-fg"}`} />
-                  <p className="font-serif text-3xl md:text-[2.1rem]">{step.when}</p>
+                <li key={step.title} className="pt-8 md:border-r md:border-[var(--rs-border)] md:px-8 md:first:pl-0 md:last:border-r-0">
+                  <p className="text-4xl font-black tracking-[-0.05em] md:text-6xl">{step.when}</p>
                   <h3 className="mt-3 text-xl font-semibold">{step.title}</h3>
                   <p className="mt-2 text-base leading-relaxed text-rs-muted">{step.body}</p>
                   {step.now ? (

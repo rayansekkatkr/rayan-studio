@@ -51,7 +51,7 @@ export function LandingRoute({ landingKey, locale }: { landingKey: LandingKey; l
   ];
 
   return (
-    <CommercialPageShell locale={locale} headerTopTheme={landingKey === "websites" ? "light" : "dark"}>
+    <CommercialPageShell locale={locale} headerTopTheme="light">
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
       <LandingPage locale={locale} content={content} />
     </CommercialPageShell>

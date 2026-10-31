@@ -15,7 +15,7 @@ import { CaseStudyOverview } from "./case-study-overview";
 import { projectImageAlt } from "./project-labels";
 import { StatusBadge } from "./status-badge";
 
-const SECTION = "border-t border-[var(--rs-border)] py-14 md:py-20";
+const SECTION = "border-t border-rs-fg py-14 md:py-20";
 
 function Heading({ index, eyebrow, title }: { index: number; eyebrow: string; title?: string }) {
   return (
@@ -23,7 +23,7 @@ function Heading({ index, eyebrow, title }: { index: number; eyebrow: string; ti
       <Eyebrow>
         <span className="text-rs-accent-fg">{String(index).padStart(2, "0")}</span> · {eyebrow}
       </Eyebrow>
-      {title ? <h2 className="mt-3 text-[1.75rem] font-semibold leading-tight tracking-tight md:text-4xl">{title}</h2> : null}
+      {title ? <h2 className="mt-3 text-[2rem] font-extrabold leading-[1] tracking-[-0.04em] md:text-5xl">{title}</h2> : null}
     </div>
   );
 }
@@ -34,7 +34,7 @@ function Highlighted({ text, highlight }: { text: string; highlight?: string }) 
   return (
     <>
       {text.slice(0, at)}
-      <span className="text-rs-accent-fg">{highlight}</span>
+      <em className="text-rs-accent-fg">{highlight}</em>
       {text.slice(at + highlight.length)}
     </>
   );
@@ -54,15 +54,11 @@ export function CaseStudyPage({ locale, project }: { locale: Locale; project: Pr
 
   return (
     <article>
-      <section
-        data-case-section="hero"
-        className="rs-theme-dark relative isolate overflow-hidden bg-rs-bg pb-20 pt-28 text-rs-fg md:pt-32"
-      >
-        <div aria-hidden className="hero-glow absolute inset-0 -z-10" />
+      <section data-case-section="hero" className="pt-28 md:pt-36">
         <CaseStudyHero locale={locale} project={project} />
       </section>
 
-      <section data-case-section="overview" className="relative -mt-10">
+      <section data-case-section="overview" className="mt-8">
         <CaseStudyOverview locale={locale} project={project} />
       </section>
 
@@ -70,11 +66,11 @@ export function CaseStudyPage({ locale, project }: { locale: Locale; project: Pr
         <div className="grid gap-10 py-14 md:py-20 lg:grid-cols-[minmax(0,5fr)_minmax(0,7fr)] lg:gap-16">
           <section data-case-section="challenge">
             <Heading index={++index} eyebrow={fr ? "Problématique" : "The problem"} />
-            <p className="mt-5 border-l-4 border-rs-accent pl-6 text-2xl font-medium leading-snug tracking-tight md:text-[1.9rem]">
+            <p className="mt-5 font-serif text-[2rem] leading-[1.08] md:text-[2.75rem]">
               <Highlighted text={challenge[0] ?? ""} highlight={project.challengeHighlight?.[locale]} />
             </p>
             {challenge.slice(1).map((paragraph) => (
-              <p key={paragraph} className="mt-5 pl-7 text-base leading-relaxed text-rs-muted">
+              <p key={paragraph} className="mt-5 text-base leading-relaxed text-rs-muted">
                 {paragraph}
               </p>
             ))}
@@ -119,7 +115,7 @@ export function CaseStudyPage({ locale, project }: { locale: Locale; project: Pr
                   project.capabilities.length % 3 === 2 && position >= project.capabilities.length - 2 ? "lg:col-span-3" : "lg:col-span-2",
                 )}
               >
-                <span className="num-outline text-3xl font-bold leading-none tracking-tight">{String(position + 1).padStart(2, "0")}</span>
+                <span aria-hidden className="num-outline text-3xl font-bold leading-none tracking-tight">{String(position + 1).padStart(2, "0")}</span>
                 <h3 className="mt-4 text-lg font-semibold">{capability.title[locale]}</h3>
                 <p className="mt-1.5 text-sm leading-relaxed text-rs-muted">{capability.body[locale]}</p>
                 {capability.benefit ? (

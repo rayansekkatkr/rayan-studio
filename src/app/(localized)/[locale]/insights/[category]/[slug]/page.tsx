@@ -75,7 +75,7 @@ export default async function Page({
   };
 
   return (
-    <CommercialPageShell locale={locale} headerTopTheme="dark">
+    <CommercialPageShell locale={locale} headerTopTheme="light">
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumb) }}

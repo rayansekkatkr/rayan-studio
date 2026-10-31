@@ -5,7 +5,7 @@ import { Container } from "@/components/ui/container";
 import { PageHero } from "@/components/ui/page-hero";
 import { ClosingCta } from "@/components/ui/closing-cta";
 import { OFFERS_CONTENT } from "@/content/studio";
-import { OFFER_PHOTOS, PAGE_HERO_PHOTOS } from "@/content/visuals";
+import { OFFER_PHOTOS } from "@/content/visuals";
 import type { Locale } from "@/lib/i18n";
 import { quotePath } from "@/lib/site-routes";
 
@@ -19,9 +19,8 @@ export function OffersPage({ locale }: { locale: Locale }) {
         eyebrow={fr ? "Offres" : "Offers"}
         title={content.title}
         lead={<p>{content.globalStatement}</p>}
-        image={PAGE_HERO_PHOTOS.offers}
       >
-        <p className="mt-6 inline-flex items-center gap-2 rounded-none border border-[var(--rs-border)] bg-white/5 px-4 py-2 text-sm font-semibold backdrop-blur">
+        <p className="mt-6 inline-flex items-center gap-2 rounded-none border border-[var(--rs-border)] bg-rs-surface px-4 py-2 text-sm font-semibold">
           <Clock aria-hidden className="h-4 w-4 text-rs-accent-fg" />
           {content.responsePromise}
         </p>

@@ -33,23 +33,26 @@ export function CookieConsent() {
   if (!visible) return null;
 
   return (
-    <aside className="fixed inset-x-3 bottom-3 z-[80] mx-auto max-w-[calc(100vw-1.5rem)] rounded-[var(--rs-radius-md)] border border-[var(--rs-border)] bg-[var(--rs-mega-surface)] p-4 shadow-[0_16px_40px_-24px_rgba(11,11,14,0.4)] backdrop-blur-xl sm:max-w-4xl">
-      <p className="text-sm text-rs-muted">
+    <aside
+      aria-label={isEnglish ? "Cookie consent" : "Consentement aux cookies"}
+      className="rs-theme-dark fixed inset-x-3 bottom-3 z-[80] bg-rs-bg p-5 text-rs-fg shadow-[0_30px_60px_-30px_rgba(0,0,0,0.6)] sm:inset-x-auto sm:bottom-6 sm:left-6 sm:w-[27rem] sm:p-6"
+    >
+      <p className="text-[2.25rem] font-black leading-[0.9] tracking-[-0.05em]">Cookies</p>
+      <p className="mt-3 text-sm leading-relaxed text-rs-muted">
         {isEnglish
-          ? "We use analytics cookies to improve the website. You can accept or decline these cookies."
-          : "Nous utilisons des cookies de mesure d'audience pour améliorer le site. Vous pouvez accepter ou refuser ces cookies."}
-        {" "}
+          ? "Audience measurement (analytics cookies), only if you accept them. No advertising."
+          : "Des cookies de mesure d'audience, uniquement si vous les acceptez. Aucune publicité."}{" "}
         <Link
           href={legalPath(isEnglish ? "en" : "fr", "privacy")}
-          className="font-semibold text-rs-accent-fg underline underline-offset-2"
+          className="font-semibold text-rs-fg underline underline-offset-4"
         >
           {isEnglish ? "Learn more" : "En savoir plus"}
         </Link>
       </p>
-      <div className="mt-3 flex flex-wrap gap-2.5">
+      <div className="mt-5 grid grid-cols-2 gap-2">
         <button
           type="button"
-          className="rounded-none bg-rs-fg px-5 py-2.5 text-sm font-semibold text-rs-bg transition-colors duration-150 hover:bg-rs-accent"
+          className="bg-rs-fg px-5 py-3 text-sm font-bold text-[var(--rs-dark)] transition-colors duration-150 hover:bg-rs-accent hover:text-white"
           onClick={() => {
             saveConsent("accepted");
             window.dispatchEvent(new Event("rs-consent-granted"));
@@ -62,7 +65,7 @@ export function CookieConsent() {
         </button>
         <button
           type="button"
-          className="rounded-none border border-[var(--rs-border-strong)] bg-rs-surface px-5 py-2.5 text-sm font-semibold text-rs-fg transition-colors duration-150 hover:border-rs-accent"
+          className="border border-rs-fg px-5 py-3 text-sm font-bold text-rs-fg transition-colors duration-150 hover:bg-rs-fg hover:text-[var(--rs-dark)]"
           onClick={() => {
             saveConsent("declined");
             window.dispatchEvent(new Event("rs-consent-revoked"));

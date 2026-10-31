@@ -2,6 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { ArrowUpRight } from "lucide-react";
 import { Container } from "@/components/ui/container";
+import { GiantWord } from "@/components/ui/giant-word";
 import { Eyebrow } from "@/components/ui/eyebrow";
 import { TechChips } from "@/components/ui/tech-chips";
 import { ArticleAsideCard, ArticleLayout, AsideLinkLabel } from "@/components/article/article-layout";
@@ -63,11 +64,13 @@ export function ProjectSummaryPage({ locale, project }: { locale: Locale; projec
 
   return (
     <article>
-      <div className="rs-theme-dark relative isolate overflow-hidden bg-rs-bg pb-12 pt-28 text-rs-fg md:pt-36">
-        <div aria-hidden className="hero-glow absolute inset-0 -z-10" />
-        <Container>
+      <div className="pt-28 md:pt-36">
+        <Container className="page-hero-rule">
           <Eyebrow>{project.categories[locale].join(" · ")}</Eyebrow>
-          <h1 className="mt-4 text-3xl font-semibold tracking-tight md:text-5xl">{project.title}</h1>
+          <h1 className="mt-3 overflow-x-clip">
+            <span className="sr-only">{project.title}</span>
+            <GiantWord text={project.title.split(" · ")[0]} />
+          </h1>
           <p className="mt-4 inline-flex items-center gap-2 rounded-none border border-[var(--rs-border)] px-3.5 py-1 text-sm font-semibold text-rs-accent-fg">
             {KIND_LABELS[project.kind][locale]}
             {project.year ? <span className="font-medium text-rs-muted">· {project.year}</span> : null}

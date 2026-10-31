@@ -20,35 +20,35 @@ type ClosingCtaProps = {
 };
 
 /**
- * End-of-page call to action. A dark card on the light page background, not a
- * full-width dark band: the page keeps one background from the hero to the footer.
+ * End-of-page call to action, direction A: a full-width black band with the
+ * invitation set in giant type, then the reply promise and the buttons on one line.
  */
 export function ClosingCta({ locale, ctaId, source, title, body, label, href, secondary, className }: ClosingCtaProps) {
   const fr = locale === "fr";
   const target = href ?? startProjectPath(locale);
 
   return (
-    <div className={cn("pb-[var(--rs-section-space)]", className)}>
-      <Container>
-        <div className="rs-theme-dark relative isolate overflow-hidden rounded-[var(--rs-radius-lg)] bg-rs-bg px-6 py-10 text-rs-fg md:px-12 md:py-14">
-          <div aria-hidden className="hero-glow absolute inset-0 -z-10" />
-          <div className="flex flex-col items-start justify-between gap-8 md:flex-row md:items-center">
-            <div className="max-w-2xl">
-              <h2 className="text-2xl font-semibold tracking-tight md:text-3xl">
-                {title ?? (fr ? "Parlons de ce que vous cherchez à construire." : "Let's talk about what you want to build.")}
-              </h2>
-              <p className="mt-3 text-base leading-relaxed text-rs-muted">
-                {body ??
-                  (fr
-                    ? "Pas besoin d'avoir déjà un cahier des charges. Réponse sous 24 h ouvrées, devis gratuit après un premier échange."
-                    : "No specification document needed to start. Reply within 24 business hours, free quote after a first conversation.")}
-              </p>
-            </div>
+    <div data-closing-cta className={cn("mt-[var(--rs-section-space)]", className)}>
+      <div className="rs-theme-dark bg-rs-bg text-rs-fg">
+        <Container className="py-16 md:py-24">
+          <h2 className="text-[clamp(2.75rem,6.5vw,7rem)] font-black leading-[0.88] tracking-[-0.06em]">
+            {title ?? (fr ? "Parlons de votre projet" : "Let's talk about your project")}{" "}
+            <span aria-hidden className="text-rs-accent-fg">
+              →
+            </span>
+          </h2>
+          <div className="mt-12 flex flex-col gap-6 border-t border-[var(--rs-border)] pt-7 md:flex-row md:items-center md:justify-between">
+            <p className="max-w-xl text-base leading-relaxed text-rs-muted">
+              {body ??
+                (fr
+                  ? "Pas besoin de cahier des charges. Réponse sous 24 h ouvrées, devis gratuit."
+                  : "No specification needed. Reply within 24 business hours, free quote.")}
+            </p>
             <div className="flex shrink-0 flex-wrap items-center gap-3">
               <TrackedLink
                 href={target}
                 event={{ ctaId, source, destination: target, locale }}
-                className="inline-flex items-center gap-2 rounded-none bg-rs-fg px-7 py-3.5 text-base font-semibold text-[var(--rs-dark)] transition-colors duration-150 hover:bg-rs-accent hover:text-rs-fg"
+                className="inline-flex items-center gap-2 bg-rs-fg px-7 py-3.5 text-base font-semibold text-[var(--rs-dark)] transition-colors duration-150 hover:bg-rs-accent hover:text-white"
               >
                 {label ?? (fr ? "Parler de votre projet" : "Start a project")}
                 <ArrowRight aria-hidden className="h-4 w-4" />
@@ -57,15 +57,15 @@ export function ClosingCta({ locale, ctaId, source, title, body, label, href, se
                 <TrackedLink
                   href={secondary.href}
                   event={{ ctaId: secondary.ctaId, source, destination: secondary.href, locale }}
-                  className="inline-flex items-center gap-2 rounded-none border border-[var(--rs-border-strong)] px-6 py-3.5 text-base font-medium text-rs-fg transition-colors duration-150 hover:border-rs-accent hover:text-rs-accent-fg"
+                  className="inline-flex items-center gap-2 border border-[var(--rs-border-strong)] px-6 py-3.5 text-base font-medium text-rs-fg transition-colors duration-150 hover:border-rs-fg"
                 >
                   {secondary.label}
                 </TrackedLink>
               ) : null}
             </div>
           </div>
-        </div>
-      </Container>
+        </Container>
+      </div>
     </div>
   );
 }

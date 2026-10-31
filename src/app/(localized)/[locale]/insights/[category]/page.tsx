@@ -81,11 +81,11 @@ export default async function Page({ params }: { params: Promise<{ locale: strin
   const insights = getInsightsByCategory(category, locale);
 
   return (
-    <CommercialPageShell locale={locale} headerTopTheme="dark">
-      <div className="rs-theme-dark bg-rs-bg pb-16 pt-28 text-rs-fg md:pb-20 md:pt-32">
-        <Container>
+    <CommercialPageShell locale={locale} headerTopTheme="light">
+      <div className="pt-28 md:pt-36">
+        <Container className="page-hero-rule">
           <Eyebrow>{locale === "fr" ? "Ressources" : "Insights"}</Eyebrow>
-          <h1 className="mt-4 max-w-3xl text-[1.75rem] font-semibold leading-[1.08] tracking-tight md:text-4xl">
+          <h1 className="mt-5 max-w-5xl text-[2.5rem] font-extrabold leading-[0.98] tracking-[-0.045em] md:text-6xl">
             {meta.title}
           </h1>
           <p className="mt-6 max-w-[var(--rs-reading)] text-lg leading-relaxed text-rs-muted">

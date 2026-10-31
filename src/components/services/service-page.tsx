@@ -23,8 +23,6 @@ export function ServicePage({ locale, service }: { locale: Locale; service: Serv
           eyebrow={service.eyebrow[locale]}
           title={service.title[locale]}
           lead={<p>{service.description[locale]}</p>}
-          image={SERVICE_HERO_PHOTOS[service.key]}
-          titleClassName="lg:text-[2.75rem]"
         >
           <div className="mt-10 flex flex-wrap items-center gap-4">
             <TrackedLink
@@ -35,7 +33,7 @@ export function ServicePage({ locale, service }: { locale: Locale; service: Serv
                 destination: quote,
                 locale,
               }}
-              className="inline-flex items-center gap-2 rounded-none bg-rs-fg px-7 py-3.5 text-base font-semibold text-[var(--rs-dark)] transition-colors duration-150 hover:bg-rs-accent hover:text-rs-fg"
+              className="inline-flex items-center gap-2 rounded-none bg-rs-fg px-7 py-3.5 text-base font-semibold text-rs-bg transition-colors duration-150 hover:bg-rs-accent hover:text-white"
             >
               {fr ? "Demander un devis gratuit" : "Get a free quote"}
               <ArrowRight aria-hidden className="h-4 w-4" />

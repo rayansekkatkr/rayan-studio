@@ -36,7 +36,7 @@ describe("LocalSeoLanding studio shell", () => {
 
     expect(container.querySelector('a[href="/fr/demarrer-un-projet"]')).not.toBeNull();
 
-    expect(screen.getAllByText("RAYAN STUDIO").length).toBeGreaterThan(0);
+    expect(screen.getAllByText("Rayan Studio").length).toBeGreaterThan(0);
     expect(container.textContent).not.toMatch(/\bRS\b(?! )/);
 
     const schema = container.querySelector('script[type="application/ld+json"]');

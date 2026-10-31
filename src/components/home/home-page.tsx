@@ -2,16 +2,9 @@ import { CommercialPageShell } from "@/components/layout/commercial-page-shell";
 import { FunnelTracking } from "@/components/site/FunnelTracking";
 import { BRAND, getSiteUrl } from "@/lib/brand";
 import type { Locale } from "@/lib/i18n";
-import { ExpertiseStrip } from "./expertise-strip";
-import { FinalCta } from "./final-cta";
-import { HomeHero } from "./home-hero";
-import { InsightsPreview } from "./insights-preview";
-import { MethodPreview } from "./method-preview";
-import { OffersPreview } from "./offers-preview";
-import { SelectedWork } from "./selected-work";
-import { ServicesOverview } from "./services-overview";
-import { StudioIntro } from "./studio-intro";
-import { Reassurance } from "@/components/trust/reassurance";
+import { ClosingCta } from "@/components/ui/closing-cta";
+import { quotePath } from "@/lib/site-routes";
+import { HomeHeroA, HomeProofA, HomeServicesA, HomeWorkA } from "./home-sections";
 
 function buildHomeJsonLd(locale: Locale) {
   const siteUrl = getSiteUrl();
@@ -63,44 +56,34 @@ function buildHomeJsonLd(locale: Locale) {
 }
 
 export function HomePage({ locale }: { locale: Locale }) {
+  const fr = locale === "fr";
   return (
-    <CommercialPageShell locale={locale} headerTopTheme="dark">
+    <CommercialPageShell locale={locale} headerTopTheme="light">
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(buildHomeJsonLd(locale)) }}
       />
       <FunnelTracking />
       <section id="hero" data-home-section>
-        <HomeHero locale={locale} />
-      </section>
-      <section id="expertise" data-home-section>
-        <ExpertiseStrip locale={locale} />
+        <HomeHeroA locale={locale} />
       </section>
       <section id="selected-work" data-home-section>
-        <SelectedWork locale={locale} />
+        <HomeWorkA locale={locale} />
       </section>
       <section id="services" data-home-section>
-        <ServicesOverview locale={locale} />
-      </section>
-      <section id="studio" data-home-section>
-        <StudioIntro locale={locale} />
-      </section>
-      <section id="method" data-home-section>
-        <MethodPreview locale={locale} />
+        <HomeServicesA locale={locale} />
       </section>
       <section id="trust" data-home-section>
-        <div className="border-t border-[var(--rs-border)]">
-          <Reassurance locale={locale} />
-        </div>
-      </section>
-      <section id="offers" data-home-section>
-        <OffersPreview locale={locale} />
-      </section>
-      <section id="insights" data-home-section>
-        <InsightsPreview locale={locale} />
+        <HomeProofA locale={locale} />
       </section>
       <section id="final-cta" data-home-section>
-        <FinalCta locale={locale} />
+        <ClosingCta
+          locale={locale}
+          ctaId="home_final_cta"
+          source="home_final_cta"
+          href={quotePath(locale)}
+          label={fr ? "Demander un devis gratuit" : "Get a free quote"}
+        />
       </section>
     </CommercialPageShell>
   );

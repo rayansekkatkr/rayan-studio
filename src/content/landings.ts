@@ -307,10 +307,10 @@ const APPLICATIONS: Record<Locale, LandingContent> = {
     deliverables: {
       title: "Ce que vous recevez.",
       items: [
-        { key: "code_source", body: "Dépôt à votre nom, historique complet" },
-        { key: "acces", body: "Comptes cloud, domaines et services à vous" },
-        { key: "documentation", body: "Pour reprendre ou internaliser" },
-        { key: "mise_en_production", body: "CI/CD, supervision et sauvegardes" },
+        { key: "Le code source", body: "Dépôt à votre nom, historique complet" },
+        { key: "Les accès", body: "Comptes cloud, domaines et services à vous" },
+        { key: "La documentation", body: "Pour reprendre ou internaliser" },
+        { key: "La mise en production", body: "CI/CD, supervision et sauvegardes" },
       ],
     },
     processTitle: "Le processus, du cadrage au déploiement",
@@ -414,10 +414,10 @@ const APPLICATIONS: Record<Locale, LandingContent> = {
     deliverables: {
       title: "What you receive.",
       items: [
-        { key: "source_code", body: "A repository in your name, full history" },
-        { key: "access", body: "Cloud accounts, domains and services in your name" },
-        { key: "documentation", body: "To take over or bring in-house" },
-        { key: "production", body: "CI/CD, monitoring and backups" },
+        { key: "The source code", body: "A repository in your name, full history" },
+        { key: "The access", body: "Cloud accounts, domains and services in your name" },
+        { key: "The documentation", body: "To take over or bring in-house" },
+        { key: "Production", body: "CI/CD, monitoring and backups" },
       ],
     },
     processTitle: "The process, from scoping to deployment",

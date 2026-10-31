@@ -11,18 +11,7 @@ describe("HomePage", () => {
   it("renders the approved homepage section order", () => {
     const { container } = render(<HomePage locale="fr" />);
     const ids = Array.from(container.querySelectorAll("[data-home-section]"), (node) => node.id);
-    expect(ids).toEqual([
-      "hero",
-      "expertise",
-      "selected-work",
-      "services",
-      "studio",
-      "method",
-      "trust",
-      "offers",
-      "insights",
-      "final-cta",
-    ]);
+    expect(ids).toEqual(["hero", "selected-work", "services", "trust", "final-cta"]);
   });
 
   it("renders featured projects in the exact approved order", () => {
