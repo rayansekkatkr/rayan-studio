@@ -10,14 +10,16 @@ inspect → change → verify → learn, conditions d'arrêt, gestion du context
 App = **Rayan Studio** (`rayanstudios.com`), site d'un **studio indépendant de Product & Software
 Engineering** : applications web et SaaS, MVP, APIs/backends, automatisation et IA, IA générative
 en entreprise (Claude, ChatGPT, Copilot), DevOps/cloud,
-et en second plan sites web premium et refontes.
+et des sites web pour commerces, restaurants, indépendants et PME.
 
 ## Produit (garde-fou n°1)
 
 Studio **founder-led** (Rayan Sekkat, basé en Corée du Sud) : un interlocuteur unique du cadrage
-à la mise en production. Positionnement validé le 2026-08-12 : environ 70 % software, 30 % web
-premium. Cible : entreprises et équipes qui ont un produit à construire, à reprendre ou à
-automatiser ; la refonte de site reste une porte d'entrée secondaire. Les 70 landings
+à la mise en production. Positionnement mis à jour le 2026-10-31 : **deux parcours à égalité
+sous une même marque**. (1) Sites web pour commerces, restaurants, indépendants et PME
+(`/fr/site-internet-commerces-pme`, maquette gratuite sous 24 h ouvrées). (2) Applications et SaaS
+pour startups et entreprises (`/fr/developpement-application-saas`). CTA principal : « Demander un
+devis gratuit » (`/fr/devis-gratuit`, formulaire court). Les 70 landings
 `/site/[sector]/[city]` gardent leur intention locale/TPE (surface d'acquisition séparée), ne pas
 les réécrire pour coller au positionnement principal.
 

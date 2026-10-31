@@ -88,7 +88,7 @@ export function LocalSeoLanding({ city, citySlug, sector, sectorSlug, content }:
             <span className="text-rs-fg">{city}</span>
           </nav>
 
-          <p className="mt-4 inline-flex rounded-full border border-[var(--rs-border)] bg-rs-surface px-3 py-1 text-xs font-semibold uppercase tracking-[0.12em] text-rs-accent-fg">
+          <p className="mt-4 inline-flex rounded-none border border-[var(--rs-border)] bg-rs-surface px-3 py-1 text-xs font-semibold uppercase tracking-[0.12em] text-rs-accent-fg">
             {city} · {sector}
           </p>
           <h1 className="mt-5 text-3xl font-semibold leading-tight tracking-tight text-rs-fg md:text-4xl">
@@ -172,7 +172,7 @@ export function LocalSeoLanding({ city, citySlug, sector, sectorSlug, content }:
           <div className="mt-8 flex flex-wrap gap-3">
             <a
               href={startProjectPath("fr")}
-              className="inline-flex items-center rounded-full bg-rs-fg px-6 py-3 text-sm font-semibold text-rs-bg transition-colors duration-150 hover:bg-rs-accent"
+              className="inline-flex items-center rounded-none bg-rs-fg px-6 py-3 text-sm font-semibold text-rs-bg transition-colors duration-150 hover:bg-rs-accent"
             >
               Recevoir un diagnostic adapté à mon activité
             </a>
@@ -180,7 +180,7 @@ export function LocalSeoLanding({ city, citySlug, sector, sectorSlug, content }:
               href={BRAND.whatsappUrl}
               target="_blank"
               rel="noreferrer"
-              className="inline-flex items-center rounded-full border border-[var(--rs-border-strong)] px-6 py-3 text-sm font-medium text-rs-fg transition-colors duration-150 hover:border-rs-accent hover:text-rs-accent-fg"
+              className="inline-flex items-center rounded-none border border-[var(--rs-border-strong)] px-6 py-3 text-sm font-medium text-rs-fg transition-colors duration-150 hover:border-rs-accent hover:text-rs-accent-fg"
             >
               Parler sur WhatsApp
             </a>
@@ -211,7 +211,7 @@ export function LocalSeoLanding({ city, citySlug, sector, sectorSlug, content }:
                 <a
                   key={item.slug}
                   href={`/site/${sectorSlug}/${item.slug}`}
-                  className="rounded-full border border-[var(--rs-border)] bg-rs-subtle px-3 py-1.5 text-xs font-semibold text-rs-fg transition-colors duration-150 hover:text-rs-accent-fg"
+                  className="rounded-none border border-[var(--rs-border)] bg-rs-subtle px-3 py-1.5 text-xs font-semibold text-rs-fg transition-colors duration-150 hover:text-rs-accent-fg"
                 >
                   {item.label}
                 </a>
@@ -225,7 +225,7 @@ export function LocalSeoLanding({ city, citySlug, sector, sectorSlug, content }:
                 <a
                   key={item.slug}
                   href={`/site/${item.slug}/${citySlug}`}
-                  className="rounded-full border border-[var(--rs-border)] bg-rs-subtle px-3 py-1.5 text-xs font-semibold text-rs-fg transition-colors duration-150 hover:text-rs-accent-fg"
+                  className="rounded-none border border-[var(--rs-border)] bg-rs-subtle px-3 py-1.5 text-xs font-semibold text-rs-fg transition-colors duration-150 hover:text-rs-accent-fg"
                 >
                   {item.label}
                 </a>

@@ -16,9 +16,29 @@ export const ai: ServiceRecord = {
     fr: "Choix et déploiement de l'assistant IA adapté à vos équipes (Claude, ChatGPT, Microsoft 365 Copilot), assistants sur mesure branchés sur vos documents, cadrage RGPD et formation des équipes.",
     en: "Choosing and rolling out the right AI assistant for your teams (Claude, ChatGPT, Microsoft 365 Copilot), custom assistants connected to your documents, GDPR framing and team training.",
   },
+  seo: {
+    fr: { title: "IA générative en entreprise : Claude, ChatGPT, Copilot", description: "Choix, déploiement et configuration de l'assistant IA adapté à vos équipes (Claude, ChatGPT, Microsoft 365 Copilot), branché sur vos documents, avec cadrage RGPD et formation." },
+    en: { title: "Generative AI for business: Claude, ChatGPT, Copilot", description: "Selection, deployment and configuration of the right AI assistant for your teams (Claude, ChatGPT, Microsoft 365 Copilot), connected to your documents, with GDPR scoping and training." },
+  },
+  benefits: {
+    fr: [
+      { title: "Des usages encadrés", body: "Fin des comptes personnels : un outil validé, avec des règles claires sur les données." },
+      { title: "Des réponses tirées de vos documents", body: "L'assistant cite vos sources internes au lieu d'inventer." },
+      { title: "Des équipes autonomes", body: "Formation sur vos cas d'usage réels, pas une démonstration générique." },
+    ],
+    en: [
+      { title: "Governed usage", body: "No more personal accounts: an approved tool, with clear rules on data." },
+      { title: "Answers drawn from your documents", body: "The assistant cites your internal sources instead of making things up." },
+      { title: "Autonomous teams", body: "Training on your real use cases, not a generic demo." },
+    ],
+  },
   problem: {
     fr: "Vos équipes utilisent déjà l'IA, souvent avec des comptes personnels et sans règle sur les données qu'elles y collent. Les offres se multiplient, et personne n'a le temps de les comparer, de les configurer et de former les équipes.",
     en: "Your teams already use AI, often on personal accounts and with no rule on the data they paste into it. Offers keep multiplying, and nobody has the time to compare them, configure them and train the teams.",
+  },
+  problemHighlight: {
+    fr: "souvent avec des comptes personnels",
+    en: "often on personal accounts",
   },
   useCases: {
     fr: [

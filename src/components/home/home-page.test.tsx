@@ -18,6 +18,7 @@ describe("HomePage", () => {
       "services",
       "studio",
       "method",
+      "trust",
       "offers",
       "insights",
       "final-cta",

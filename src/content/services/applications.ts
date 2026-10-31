@@ -12,9 +12,29 @@ export const applications: ServiceRecord = {
     fr: "Conception et développement d'applications web et de SaaS sur mesure : de la plateforme métier au portail client, avec un interlocuteur unique du cadrage à la mise en production.",
     en: "Design and development of custom web applications and SaaS products: from business platforms to client portals, with a single point of contact from framing to production.",
   },
+  seo: {
+    fr: { title: "Développement d'application web et SaaS sur mesure", description: "Conception et développement d'applications web et de SaaS sur mesure pour entreprises et startups : plateforme métier, portail client, paiements, mise en production. Devis gratuit, réponse sous 24 h ouvrées." },
+    en: { title: "Custom web application and SaaS development", description: "Design and development of custom web applications and SaaS for companies and startups: business platforms, client portals, payments, production. Free quote, reply within 24 business hours." },
+  },
+  benefits: {
+    fr: [
+      { title: "Un outil qui suit votre façon de travailler", body: "Vos processus réels deviennent l'interface, au lieu de les tordre pour rentrer dans un logiciel générique." },
+      { title: "Des données au même endroit", body: "Clients, commandes, documents et paiements réunis, avec les bons accès pour chaque rôle." },
+      { title: "Un produit qui grandit avec vous", body: "Une architecture prévue pour ajouter des fonctions sans tout réécrire." },
+    ],
+    en: [
+      { title: "A tool that follows how you work", body: "Your real processes become the interface, instead of bending them to fit generic software." },
+      { title: "Your data in one place", body: "Clients, orders, documents and payments together, with the right access for each role." },
+      { title: "A product that grows with you", body: "An architecture designed to add features without rewriting everything." },
+    ],
+  },
   problem: {
     fr: "Les outils génériques finissent par contraindre votre fonctionnement : processus tordus pour rentrer dans le logiciel, données éparpillées, fonctionnalités payées mais inutiles.",
     en: "Generic tools end up constraining how you work: processes twisted to fit the software, scattered data, features you pay for but never use.",
+  },
+  problemHighlight: {
+    fr: "processus tordus pour rentrer dans le logiciel",
+    en: "processes twisted to fit the software",
   },
   useCases: {
     fr: [

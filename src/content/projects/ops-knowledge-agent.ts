@@ -42,6 +42,10 @@ export const opsKnowledgeAgent: ProjectRecord = {
       "Show on a realistic case how to make an operations team's documentation answerable by AI: cited answers, and nothing made up when the information is not in the documents.",
     ],
   },
+  challengeHighlight: {
+    fr: "rien d'inventé",
+    en: "nothing made up",
+  },
   solution: {
     fr: [
       "Un agent Copilot Studio en low-code, limité aux documents (recherche web et réponses non sourcées désactivées), qui ouvre un incident via un flux Power Automate.",

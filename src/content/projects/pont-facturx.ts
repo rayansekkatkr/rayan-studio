@@ -38,6 +38,10 @@ export const pontFacturx: ProjectRecord = {
       "Make an electronic-invoicing workflow understandable for business users while handling the constraints of document generation, validation and exchange.",
     ],
   },
+  challengeHighlight: {
+    fr: "compréhensible pour des utilisateurs métier",
+    en: "understandable for business users",
+  },
   solution: {
     fr: [
       "Clarifier les étapes de conversion et de traitement documentaire.",
@@ -57,6 +61,7 @@ export const pontFacturx: ProjectRecord = {
         fr: "Génération de factures électroniques au format Factur-X à partir de documents existants.",
         en: "Generation of Factur-X electronic invoices from existing documents.",
       },
+      benefit: { fr: "Pas besoin de changer de logiciel de facturation.", en: "No need to change invoicing software." },
     },
     {
       title: { fr: "Traitement documentaire", en: "Document processing" },
@@ -64,6 +69,7 @@ export const pontFacturx: ProjectRecord = {
         fr: "Lecture et traitement de documents PDF et de leurs données structurées.",
         en: "Reading and processing PDF documents and their structured data.",
       },
+      benefit: { fr: "Les données de la facture sont lues sans ressaisie.", en: "Invoice data is read without re-typing." },
     },
     {
       title: { fr: "API", en: "API" },
@@ -71,6 +77,7 @@ export const pontFacturx: ProjectRecord = {
         fr: "Intégration du workflow de facturation dans les outils existants via API.",
         en: "Integration of the invoicing workflow into existing tools through an API.",
       },
+      benefit: { fr: "Les éditeurs ajoutent la conversion à leurs propres outils.", en: "Software vendors add conversion to their own tools." },
     },
     {
       title: { fr: "Automatisation", en: "Automation" },
@@ -78,6 +85,7 @@ export const pontFacturx: ProjectRecord = {
         fr: "Traitements asynchrones pour les étapes répétitives du workflow.",
         en: "Asynchronous processing for the repetitive steps of the workflow.",
       },
+      benefit: { fr: "Les tâches longues ne bloquent pas l'utilisateur.", en: "Long tasks never block the user." },
     },
     {
       title: { fr: "Envoi vers Chorus Pro", en: "Chorus Pro submission" },
@@ -85,6 +93,7 @@ export const pontFacturx: ProjectRecord = {
         fr: "Envoi de factures Factur-X vers Chorus Pro via l'API PISTE.",
         en: "Submission of Factur-X invoices to Chorus Pro through the PISTE API.",
       },
+      benefit: { fr: "La facture part vers l'administration sans étape manuelle.", en: "The invoice reaches the administration with no manual step." },
     },
   ],
   productUx: {
@@ -149,6 +158,43 @@ export const pontFacturx: ProjectRecord = {
       "A REST API documented in OpenAPI 3.0, with test and production keys, lets software vendors and integrators plug the conversion into their tools. Hosted in Europe (France), TLS 1.3 encryption.",
     ],
   },
+  screens: [
+    {
+      title: { fr: "Le produit", en: "The product" },
+      items: [
+        {
+          src: "/realisations/pont-facturx.webp",
+          alt: {
+            fr: "Pont Factur-X : page d'accueil et choix entre recevoir et émettre",
+            en: "Pont Factur-X: home page and choice between receiving and issuing",
+          },
+          frame: "browser",
+          width: 2400,
+          height: 1350,
+        },
+        {
+          src: "/realisations/pont-facturx-conversion.webp",
+          alt: {
+            fr: "Pont Factur-X : dépôt d'une facture PDF et conversion en trois étapes",
+            en: "Pont Factur-X: PDF invoice upload and three-step conversion",
+          },
+          frame: "browser",
+          width: 2400,
+          height: 1200,
+        },
+        {
+          src: "/realisations/pont-facturx-format.webp",
+          alt: {
+            fr: "Pont Factur-X : la facture PDF et les données XML CII embarquées, côte à côte",
+            en: "Pont Factur-X: the PDF invoice and its embedded CII XML data, side by side",
+          },
+          frame: "browser",
+          width: 2400,
+          height: 1500,
+        },
+      ],
+    },
+  ],
   gallery: [
     {
       src: "/realisations/pont-facturx-format.webp",

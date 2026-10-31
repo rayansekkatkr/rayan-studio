@@ -12,9 +12,29 @@ export const automation: ServiceRecord = {
     fr: "Automatisation de vos processus répétitifs et IA appliquée à des cas concrets : extraction, classification et analyse de documents, toujours au service d'un gain mesurable de temps.",
     en: "Automation of your repetitive processes and AI applied to concrete cases: document extraction, classification and analysis, always in service of a measurable time gain.",
   },
+  seo: {
+    fr: { title: "Automatisation des processus et intégration d'IA en entreprise", description: "Automatisation de tâches répétitives et IA appliquée à vos documents : extraction, classification, synchronisation entre outils. Un gain de temps mesurable sur vos vrais processus." },
+    en: { title: "Process automation and AI integration for business", description: "Automation of repetitive tasks and AI applied to your documents: extraction, classification, sync between tools. Measurable time savings on your real processes." },
+  },
+  benefits: {
+    fr: [
+      { title: "Du temps rendu à vos équipes", body: "Les saisies et copier-coller répétitifs sont pris en charge par un outil, pas par une personne." },
+      { title: "Moins d'erreurs de ressaisie", body: "Les données passent d'un outil à l'autre sans être retapées." },
+      { title: "Une IA sous contrôle", body: "Validation humaine là où elle compte, et des résultats vérifiables." },
+    ],
+    en: [
+      { title: "Time given back to your teams", body: "Repetitive entry and copy-paste are handled by a tool, not by a person." },
+      { title: "Fewer re-typing errors", body: "Data moves between tools without being typed again." },
+      { title: "AI under control", body: "Human validation where it matters, and verifiable results." },
+    ],
+  },
   problem: {
     fr: "Des heures perdues chaque semaine en saisies, copier-coller et vérifications manuelles, et des promesses d'IA génériques qui ne correspondent pas à vos vrais processus.",
     en: "Hours lost every week on data entry, copy-paste and manual checks, plus generic AI promises that do not match your real processes.",
+  },
+  problemHighlight: {
+    fr: "Des heures perdues chaque semaine",
+    en: "Hours lost every week",
   },
   useCases: {
     fr: [

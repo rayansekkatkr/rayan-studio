@@ -14,6 +14,8 @@ type ClosingCtaProps = {
   body?: string;
   label?: string;
   href?: string;
+  /** Optional second button, for pages that serve both audiences. */
+  secondary?: { label: string; href: string; ctaId: string };
   className?: string;
 };
 
@@ -21,7 +23,7 @@ type ClosingCtaProps = {
  * End-of-page call to action. A dark card on the light page background, not a
  * full-width dark band: the page keeps one background from the hero to the footer.
  */
-export function ClosingCta({ locale, ctaId, source, title, body, label, href, className }: ClosingCtaProps) {
+export function ClosingCta({ locale, ctaId, source, title, body, label, href, secondary, className }: ClosingCtaProps) {
   const fr = locale === "fr";
   const target = href ?? startProjectPath(locale);
 
@@ -42,14 +44,25 @@ export function ClosingCta({ locale, ctaId, source, title, body, label, href, cl
                     : "No specification document needed to start. Reply within 24 business hours, free quote after a first conversation.")}
               </p>
             </div>
-            <TrackedLink
-              href={target}
-              event={{ ctaId, source, destination: target, locale }}
-              className="inline-flex shrink-0 items-center gap-2 rounded-full bg-rs-fg px-7 py-3.5 text-base font-semibold text-[var(--rs-dark)] transition-colors duration-150 hover:bg-rs-accent hover:text-rs-fg"
-            >
-              {label ?? (fr ? "Parler de votre projet" : "Start a project")}
-              <ArrowRight aria-hidden className="h-4 w-4" />
-            </TrackedLink>
+            <div className="flex shrink-0 flex-wrap items-center gap-3">
+              <TrackedLink
+                href={target}
+                event={{ ctaId, source, destination: target, locale }}
+                className="inline-flex items-center gap-2 rounded-none bg-rs-fg px-7 py-3.5 text-base font-semibold text-[var(--rs-dark)] transition-colors duration-150 hover:bg-rs-accent hover:text-rs-fg"
+              >
+                {label ?? (fr ? "Parler de votre projet" : "Start a project")}
+                <ArrowRight aria-hidden className="h-4 w-4" />
+              </TrackedLink>
+              {secondary ? (
+                <TrackedLink
+                  href={secondary.href}
+                  event={{ ctaId: secondary.ctaId, source, destination: secondary.href, locale }}
+                  className="inline-flex items-center gap-2 rounded-none border border-[var(--rs-border-strong)] px-6 py-3.5 text-base font-medium text-rs-fg transition-colors duration-150 hover:border-rs-accent hover:text-rs-accent-fg"
+                >
+                  {secondary.label}
+                </TrackedLink>
+              ) : null}
+            </div>
           </div>
         </div>
       </Container>

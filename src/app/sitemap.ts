@@ -9,7 +9,10 @@ import {
   craPath,
   insightPath,
   legalPath,
+  quotePath,
+  saasLandingPath,
   servicePath,
+  smbLandingPath,
   startProjectPath,
   studioPath,
   workPath,
@@ -68,6 +71,9 @@ export default function sitemap(): MetadataRoute.Sitemap {
         localizedPair(servicePath("fr", service.key), servicePath("en", service.key), 0.9),
       ),
       ...localizedPair(craPath("fr"), craPath("en"), 0.9),
+      // The two commercial landings (historical SEO URLs kept).
+      ...localizedPair(smbLandingPath("fr"), smbLandingPath("en"), 0.95),
+      ...localizedPair(saasLandingPath("fr"), saasLandingPath("en"), 0.95),
     ];
   }
 
@@ -90,6 +96,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     return [
       ...localizedPair(contactPath("fr"), contactPath("en"), 0.8),
       ...localizedPair(startProjectPath("fr"), startProjectPath("en"), 0.9),
+      ...localizedPair(quotePath("fr"), quotePath("en"), 0.9),
     ];
   }
 

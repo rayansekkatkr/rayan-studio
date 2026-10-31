@@ -34,6 +34,10 @@ export const ciCdPlatform: ProjectRecord = {
       "Run more than 170 pipelines a day for the embedded software teams, on infrastructure split between on-premise and AWS, without the CI becoming the bottleneck of every release.",
     ],
   },
+  challengeHighlight: {
+    fr: "plus de 170 pipelines",
+    en: "more than 170 pipelines",
+  },
   solution: {
     fr: [
       "Administration de la plateforme GitLab CI : runners, releases, analyse SonarQube, artefacts Artifactory et jobs de tests automatisés.",

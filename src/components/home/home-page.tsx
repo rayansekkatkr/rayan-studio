@@ -11,6 +11,7 @@ import { OffersPreview } from "./offers-preview";
 import { SelectedWork } from "./selected-work";
 import { ServicesOverview } from "./services-overview";
 import { StudioIntro } from "./studio-intro";
+import { Reassurance } from "@/components/trust/reassurance";
 
 function buildHomeJsonLd(locale: Locale) {
   const siteUrl = getSiteUrl();
@@ -86,6 +87,11 @@ export function HomePage({ locale }: { locale: Locale }) {
       </section>
       <section id="method" data-home-section>
         <MethodPreview locale={locale} />
+      </section>
+      <section id="trust" data-home-section>
+        <div className="border-t border-[var(--rs-border)]">
+          <Reassurance locale={locale} />
+        </div>
       </section>
       <section id="offers" data-home-section>
         <OffersPreview locale={locale} />

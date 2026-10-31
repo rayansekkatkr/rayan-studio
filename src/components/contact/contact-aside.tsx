@@ -39,7 +39,7 @@ export function ContactAside({ locale, source }: { locale: Locale; source: "proj
         <ol className="mt-4 space-y-4">
           {steps.map((step, index) => (
             <li key={step} className="flex gap-3 text-sm leading-relaxed">
-              <span className="flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-rs-accent text-xs font-semibold text-white">
+              <span className="flex h-6 w-6 shrink-0 items-center justify-center rounded-none bg-rs-accent text-xs font-semibold text-white">
                 {index + 1}
               </span>
               {step}

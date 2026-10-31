@@ -7,7 +7,7 @@ import { ClosingCta } from "@/components/ui/closing-cta";
 import { OFFERS_CONTENT } from "@/content/studio";
 import { OFFER_PHOTOS, PAGE_HERO_PHOTOS } from "@/content/visuals";
 import type { Locale } from "@/lib/i18n";
-import { startProjectPath } from "@/lib/site-routes";
+import { quotePath } from "@/lib/site-routes";
 
 export function OffersPage({ locale }: { locale: Locale }) {
   const fr = locale === "fr";
@@ -21,7 +21,7 @@ export function OffersPage({ locale }: { locale: Locale }) {
         lead={<p>{content.globalStatement}</p>}
         image={PAGE_HERO_PHOTOS.offers}
       >
-        <p className="mt-6 inline-flex items-center gap-2 rounded-full border border-[var(--rs-border)] bg-white/5 px-4 py-2 text-sm font-semibold backdrop-blur">
+        <p className="mt-6 inline-flex items-center gap-2 rounded-none border border-[var(--rs-border)] bg-white/5 px-4 py-2 text-sm font-semibold backdrop-blur">
           <Clock aria-hidden className="h-4 w-4 text-rs-accent-fg" />
           {content.responsePromise}
         </p>
@@ -69,7 +69,7 @@ export function OffersPage({ locale }: { locale: Locale }) {
                   <ul className="mt-3 grid gap-x-6 gap-y-2.5 sm:grid-cols-2">
                     {offer.mayInclude.map((item) => (
                       <li key={item} className="flex items-start gap-2.5 text-sm leading-relaxed text-rs-muted">
-                        <span className="mt-0.5 flex h-4 w-4 shrink-0 items-center justify-center rounded-full bg-[color-mix(in_srgb,var(--rs-accent)_14%,transparent)]">
+                        <span className="mt-0.5 flex h-4 w-4 shrink-0 items-center justify-center rounded-none bg-[color-mix(in_srgb,var(--rs-accent)_14%,transparent)]">
                           <Check aria-hidden className="h-3 w-3 text-rs-accent-fg" />
                         </span>
                         {item}
@@ -77,7 +77,7 @@ export function OffersPage({ locale }: { locale: Locale }) {
                     ))}
                   </ul>
                   <Link
-                    href={startProjectPath(locale)}
+                    href={quotePath(locale, index === 1 || index === 0 ? "app" : index === 2 ? "site" : "other")}
                     className="mt-auto inline-flex items-center gap-2 pt-7 text-base font-semibold text-rs-accent-fg transition-colors duration-150 hover:text-rs-fg"
                   >
                     {content.ctaLabel}
@@ -93,7 +93,8 @@ export function OffersPage({ locale }: { locale: Locale }) {
         locale={locale}
         ctaId="offers_start_project"
         source="offers_page"
-        label={fr ? "Demander un devis" : "Request a quote"}
+        href={quotePath(locale)}
+        label={fr ? "Demander un devis gratuit" : "Get a free quote"}
       />
     </article>
   );

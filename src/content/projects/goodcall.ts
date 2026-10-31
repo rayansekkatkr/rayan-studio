@@ -43,6 +43,10 @@ export const goodcall: ProjectRecord = {
       "Present a large amount of information about competitions, predictions and rankings without making the experience hard to read or use on mobile.",
     ],
   },
+  challengeHighlight: {
+    fr: "sans rendre l'expérience difficile à lire",
+    en: "without making the experience hard to read",
+  },
   solution: {
     fr: [
       "Hiérarchiser les informations autour des matchs et pronostics.",
@@ -62,6 +66,7 @@ export const goodcall: ProjectRecord = {
         fr: "Pronostics gratuits sur les matchs de LoL, Valorant et CS2.",
         en: "Free predictions on LoL, Valorant and CS2 matches.",
       },
+      benefit: { fr: "Une prédiction se fait en quelques secondes sur mobile.", en: "A prediction takes seconds on mobile." },
     },
     {
       title: { fr: "Classements", en: "Leaderboards" },
@@ -69,6 +74,7 @@ export const goodcall: ProjectRecord = {
         fr: "Classements construits sur la justesse des pronostics.",
         en: "Rankings built on prediction accuracy.",
       },
+      benefit: { fr: "Chaque joueur voit sa progression au fil de la saison.", en: "Every player sees their progress across the season." },
     },
     {
       title: { fr: "Ligues privées", en: "Private leagues" },
@@ -76,6 +82,7 @@ export const goodcall: ProjectRecord = {
         fr: "Compétitions entre amis dans des ligues privées.",
         en: "Competitions between friends in private leagues.",
       },
+      benefit: { fr: "Les amis jouent entre eux, ce qui fait revenir.", en: "Friends compete together, which brings them back." },
     },
     {
       title: { fr: "Points sociaux", en: "Social points" },
@@ -83,6 +90,7 @@ export const goodcall: ProjectRecord = {
         fr: "Mécanique de points sans argent réel : la compétition reste sociale et gratuite.",
         en: "A points mechanic with no real money: the competition stays social and free.",
       },
+      benefit: { fr: "Aucun argent en jeu : la compétition reste accessible.", en: "No money involved: the competition stays accessible." },
     },
     {
       title: { fr: "Expérience multi-jeux", en: "Multi-game experience" },
@@ -90,6 +98,7 @@ export const goodcall: ProjectRecord = {
         fr: "Une même expérience de pronostic à travers plusieurs jeux esport.",
         en: "One prediction experience across several esports titles.",
       },
+      benefit: { fr: "Un seul compte pour suivre plusieurs jeux.", en: "One account to follow several games." },
     },
   ],
   productUx: {
@@ -154,6 +163,33 @@ export const goodcall: ProjectRecord = {
       "A fixed scoring system for every match (+10 for the right winner, +15 for the exact score), with no stakes or odds, plus global, regional and season leaderboards.",
     ],
   },
+  screens: [
+    {
+      title: { fr: "Le site et l'application", en: "The website and the app" },
+      items: [
+        {
+          src: "/realisations/goodcall.webp",
+          alt: {
+            fr: "GoodCall : page d'accueil avec les écrans de l'application",
+            en: "GoodCall: home page with the app screens",
+          },
+          frame: "browser",
+          width: 2400,
+          height: 1350,
+        },
+        {
+          src: "/realisations/goodcall-classements.webp",
+          alt: {
+            fr: "GoodCall : classements mondial, région et saison dans l'application mobile",
+            en: "GoodCall: global, regional and season leaderboards in the mobile app",
+          },
+          frame: "browser",
+          width: 2400,
+          height: 1500,
+        },
+      ],
+    },
+  ],
   gallery: [
     {
       src: "/realisations/goodcall-classements.webp",

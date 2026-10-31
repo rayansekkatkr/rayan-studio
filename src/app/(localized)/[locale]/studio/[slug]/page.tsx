@@ -141,7 +141,7 @@ export default async function Page({ params }: { params: Promise<{ locale: strin
   ]);
 
   return (
-    <CommercialPageShell locale={locale} headerTopTheme="dark">
+    <CommercialPageShell locale={locale} headerTopTheme={key === "studio" ? "light" : "dark"}>
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumb) }}

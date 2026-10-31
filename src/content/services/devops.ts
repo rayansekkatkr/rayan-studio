@@ -12,9 +12,29 @@ export const devops: ServiceRecord = {
     fr: "Déploiement, CI/CD, supervision et sécurité de vos applications : une infrastructure claire et documentée, pour le studio comme pour votre équipe de développement existante.",
     en: "Deployment, CI/CD, monitoring and security for your applications: a clear, documented infrastructure, for the studio or for your existing development team.",
   },
+  seo: {
+    fr: { title: "DevOps, CI/CD et déploiement cloud", description: "Mise en place de CI/CD, déploiement, supervision et sauvegardes avec GitLab CI, GitHub Actions, Docker, Kubernetes, Terraform et AWS. Des mises en production sereines." },
+    en: { title: "DevOps, CI/CD and cloud deployment", description: "CI/CD, deployment, monitoring and backups with GitLab CI, GitHub Actions, Docker, Kubernetes, Terraform and AWS. Calm, predictable releases." },
+  },
+  benefits: {
+    fr: [
+      { title: "Des mises en production sans stress", body: "Chaque livraison passe par les mêmes tests et la même chaîne, avec retour arrière possible." },
+      { title: "Les incidents vus avant vos utilisateurs", body: "Supervision et alertes utiles, pas du bruit." },
+      { title: "Une infrastructure documentée", body: "Elle ne dépend plus d'une seule personne." },
+    ],
+    en: [
+      { title: "Stress-free releases", body: "Every release goes through the same tests and pipeline, with rollback available." },
+      { title: "Incidents seen before your users", body: "Useful monitoring and alerts, not noise." },
+      { title: "Documented infrastructure", body: "It no longer depends on a single person." },
+    ],
+  },
   problem: {
     fr: "Des mises en production stressantes, des serveurs que personne n'ose toucher et des incidents découverts par les utilisateurs plutôt que par la supervision.",
     en: "Stressful releases, servers nobody dares to touch and incidents discovered by users rather than by monitoring.",
+  },
+  problemHighlight: {
+    fr: "des incidents découverts par les utilisateurs",
+    en: "incidents discovered by users",
   },
   useCases: {
     fr: [

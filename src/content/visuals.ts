@@ -39,3 +39,36 @@ export const OFFER_PHOTOS = [
   "/services/web.webp",
   "/services/devops.webp",
 ] as const;
+
+/** Portfolio filters of the work page. A project can appear under several filters. */
+export type WorkFilter = "apps" | "web" | "ai" | "devops";
+export const WORK_FILTERS: Record<string, WorkFilter[]> = {
+  pick4me: ["apps"],
+  "pont-facturx": ["apps"],
+  goodcall: ["apps"],
+  docextract: ["apps", "ai"],
+  manteigaria: ["web"],
+  "ops-knowledge-agent": ["ai"],
+  "ci-cd-platform": ["devops"],
+  "product-infrastructure": ["devops"],
+};
+
+/**
+ * Portfolio cards take each product's own colours, so the page reads as a collection of
+ * products rather than identical tiles. `ink` is the text colour family on that surface.
+ */
+export const WORK_THEMES: Record<string, { surface: string; ink: "light" | "dark" }> = {
+  pick4me: { surface: "linear-gradient(135deg, #fbe9ec 0%, #fff6ec 60%, #f4f4f1 100%)", ink: "dark" },
+  "pont-facturx": { surface: "#0f1a14", ink: "light" },
+  goodcall: { surface: "#f6e04a", ink: "dark" },
+  docextract: { surface: "#ffffff", ink: "dark" },
+  manteigaria: { surface: "#2a1d14", ink: "light" },
+};
+
+/** Short platform line next to the status badge (facts only: where the product runs). */
+export const WORK_PLATFORMS: Record<string, { fr: string; en: string }> = {
+  pick4me: { fr: "iOS, Android, web", en: "iOS, Android, web" },
+  "pont-facturx": { fr: "SaaS B2B", en: "B2B SaaS" },
+  goodcall: { fr: "Mobile et web", en: "Mobile and web" },
+  docextract: { fr: "SaaS B2B", en: "B2B SaaS" },
+};

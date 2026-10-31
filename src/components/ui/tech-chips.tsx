@@ -64,7 +64,7 @@ export function TechChips({ items, className, inset = false }: { items: string[]
         <li
           key={item}
           className={cn(
-            "inline-flex items-center gap-2 rounded-full border border-[var(--rs-border)] py-1.5 pl-3 pr-3.5 text-sm font-medium text-rs-fg",
+            "inline-flex items-center gap-2 rounded-none border border-[var(--rs-border)] py-1.5 pl-3 pr-3.5 text-sm font-medium text-rs-fg",
             inset ? "bg-rs-bg" : "bg-rs-surface",
           )}
         >

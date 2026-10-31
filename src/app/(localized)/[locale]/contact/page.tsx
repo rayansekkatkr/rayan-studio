@@ -6,7 +6,7 @@ import { ArrowRight } from "lucide-react";
 import { ContactLayout } from "@/components/contact/contact-layout";
 import { PageHero } from "@/components/ui/page-hero";
 import { PAGE_HERO_PHOTOS } from "@/content/visuals";
-import { startProjectPath } from "@/lib/site-routes";
+import { quotePath } from "@/lib/site-routes";
 import { isEnglish, normalizeLocale, type Locale } from "@/lib/i18n";
 import { buildLocalizedMetadata } from "@/lib/seo";
 
@@ -52,10 +52,10 @@ export default async function Page({ params }: { params: Promise<{ locale: strin
         image={PAGE_HERO_PHOTOS.contact}
       >
         <Link
-          href={startProjectPath(locale)}
-          className="mt-8 inline-flex items-center gap-2 rounded-full border border-[var(--rs-border-strong)] px-6 py-3 text-sm font-semibold text-rs-fg transition-colors duration-150 hover:border-rs-accent hover:text-rs-accent-fg"
+          href={quotePath(locale)}
+          className="mt-8 inline-flex items-center gap-2 rounded-none border border-[var(--rs-border-strong)] px-6 py-3 text-sm font-semibold text-rs-fg transition-colors duration-150 hover:border-rs-accent hover:text-rs-accent-fg"
         >
-          {fr ? "Demander un devis" : "Request a quote"}
+          {fr ? "Demander un devis gratuit" : "Get a free quote"}
           <ArrowRight aria-hidden className="h-4 w-4" />
         </Link>
       </PageHero>

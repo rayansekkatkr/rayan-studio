@@ -42,6 +42,10 @@ export const pick4me: ProjectRecord = {
       "The product had to keep an understandable journey despite multiple roles, mission states and business actions.",
     ],
   },
+  challengeHighlight: {
+    fr: "créer, accepter et suivre des missions",
+    en: "create, accept and track missions",
+  },
   solution: {
     fr: [
       "Structurer les parcours autour du cycle de vie d'une mission.",
@@ -61,6 +65,7 @@ export const pick4me: ProjectRecord = {
         fr: "Création, acceptation et suivi de missions entre utilisateurs et commerces.",
         en: "Creation, acceptance and tracking of missions between users and businesses.",
       },
+      benefit: { fr: "Chaque demande trouve un Helper sans échange hors de l'application.", en: "Every request finds a Helper without leaving the app." },
     },
     {
       title: { fr: "Communication en temps réel", en: "Real-time communication" },
@@ -68,6 +73,7 @@ export const pick4me: ProjectRecord = {
         fr: "Messagerie intégrée entre les parties d'une mission, avec mises à jour instantanées.",
         en: "Built-in messaging between mission parties, with instant updates.",
       },
+      benefit: { fr: "Client et Helper suivent la livraison en direct, sans appel.", en: "Client and Helper follow the delivery live, without a call." },
     },
     {
       title: { fr: "Paiements & wallet", en: "Payments & wallet" },
@@ -75,6 +81,7 @@ export const pick4me: ProjectRecord = {
         fr: "Encaissements, portefeuille intégré et flux de paiement sécurisés côté serveur.",
         en: "Charging, an integrated wallet and payment flows secured server side.",
       },
+      benefit: { fr: "Le paiement et la rémunération se règlent dans l'application.", en: "Payment and earnings are settled inside the app." },
     },
     {
       title: { fr: "Notifications", en: "Notifications" },
@@ -82,6 +89,7 @@ export const pick4me: ProjectRecord = {
         fr: "Notifications push qui suivent les étapes clés d'une mission.",
         en: "Push notifications following the key steps of a mission.",
       },
+      benefit: { fr: "Personne ne rate une étape de la mission.", en: "Nobody misses a step of the mission." },
     },
     {
       title: { fr: "Administration", en: "Administration" },
@@ -89,6 +97,7 @@ export const pick4me: ProjectRecord = {
         fr: "Outils d'administration pour superviser missions, utilisateurs et paiements.",
         en: "Administration tools to supervise missions, users and payments.",
       },
+      benefit: { fr: "Les opérations sont supervisées depuis un seul endroit.", en: "Operations are supervised from one place." },
     },
   ],
   productUx: {
@@ -149,6 +158,42 @@ export const pick4me: ProjectRecord = {
       "The platform brings mission management, communication, payment flows, notifications and administration together in one product.",
     ],
   },
+  heroCompanion: {
+    src: "/realisations/pick4me-app.webp",
+    alt: {
+      fr: "Pick4Me : écran d'accueil client de l'application mobile, avec la livraison suivie en direct",
+      en: "Pick4Me: client home screen of the mobile app, with the delivery tracked live",
+    },
+    width: 510,
+    height: 1112,
+  },
+  screens: [
+    {
+      title: { fr: "Vue globale : le site et l'application", en: "Overview: the website and the app" },
+      items: [
+        {
+          src: "/realisations/pick4me.webp",
+          alt: {
+            fr: "Pick4Me : site du produit avec les liens vers les stores",
+            en: "Pick4Me: product website with the store links",
+          },
+          frame: "browser",
+          width: 2400,
+          height: 1350,
+        },
+        {
+          src: "/realisations/pick4me-app.webp",
+          alt: {
+            fr: "Pick4Me : écran d'accueil client, mission en cours et suivi en direct",
+            en: "Pick4Me: client home screen, mission in progress and live tracking",
+          },
+          frame: "phone",
+          width: 510,
+          height: 1112,
+        },
+      ],
+    },
+  ],
   gallery: [
     {
       src: "/realisations/pick4me.webp",

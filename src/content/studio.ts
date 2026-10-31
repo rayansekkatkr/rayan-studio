@@ -89,7 +89,7 @@ export const OFFERS_CONTENT: Record<
     responsePromise: "Première réponse sous 24h ouvrées.",
     idealForLabel: "Idéal pour",
     mayIncludeLabel: "Peut inclure",
-    ctaLabel: "Demander un devis",
+    ctaLabel: "Demander un devis gratuit",
     offers: [
       {
         title: "Applications & plateformes",
@@ -140,7 +140,7 @@ export const OFFERS_CONTENT: Record<
     responsePromise: "First response within 24 business hours.",
     idealForLabel: "Best for",
     mayIncludeLabel: "May include",
-    ctaLabel: "Request a quote",
+    ctaLabel: "Get a free quote",
     offers: [
       {
         title: "Applications & platforms",
