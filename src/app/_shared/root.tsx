@@ -76,7 +76,7 @@ export const sharedMetadata: Metadata = {
     siteName: BRAND.name,
     images: [
       {
-        url: "/og-image",
+        url: "/opengraph-image",
         width: 1200,
         height: 630,
         alt: `${BRAND.name} - Studio software et web`,

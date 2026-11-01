@@ -190,8 +190,8 @@ body {
 }
 
 ::selection {
-  background: rgba(217, 79, 43, 0.24);
-  color: var(--text-primary);
+  background: color-mix(in srgb, var(--rs-accent) 28%, transparent);
+  color: var(--rs-fg);
 }
 
 @layer utilities {
@@ -392,9 +392,8 @@ section[id] {
   left: 1rem;
   z-index: 100;
   padding: 0.75rem 1.25rem;
-  border: 1px solid rgba(42, 35, 29, 0.2);
-  background: #17120f;
-  color: #fffaf0;
+  background: var(--rs-dark);
+  color: var(--rs-dark-fg);
   font-size: 0.875rem;
   font-weight: 700;
   transition: top 0.15s ease;

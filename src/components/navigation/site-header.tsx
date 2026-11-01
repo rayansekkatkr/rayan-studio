@@ -61,6 +61,8 @@ export function SiteHeader({ locale, topTheme = "light" }: SiteHeaderProps) {
 
   return (
     <header
+      // A keyboard user tabbing back into the nav must see it (WCAG 2.4.11).
+      onFocus={() => setHidden(false)}
       data-top-theme={topTheme}
       data-surface={solid ? "solid" : "transparent"}
       data-floating={floating ? "true" : "false"}
