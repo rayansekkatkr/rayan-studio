@@ -49,10 +49,12 @@ test.describe("homepage", () => {
   });
 
   for (const locale of ["fr", "en"] as const) {
-    test(`${locale} home names no project and links to the work page once`, async ({ page }) => {
+    test(`${locale} home names the founder and the four products, nothing else`, async ({ page }) => {
       await page.goto(`/${locale}`);
       await expect(page.locator("[data-featured-project]")).toHaveCount(0);
-      await expect(page.locator("main")).not.toContainText(/Pick4Me|Pont Factur-X|GoodCall|DocExtract|Manteigaria/);
+      await expect(page.getByRole("heading", { level: 2, name: "Rayan Sekkat" })).toBeVisible();
+      await expect(page.locator("[data-home-products] a")).toHaveCount(4);
+      await expect(page.locator("main")).not.toContainText(/Manteigaria|Ops Knowledge|STMicroelectronics/);
     });
   }
 

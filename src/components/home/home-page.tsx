@@ -5,7 +5,7 @@ import type { Locale } from "@/lib/i18n";
 import { ClosingCta } from "@/components/ui/closing-cta";
 import { quotePath } from "@/lib/site-routes";
 import { HomeHero } from "./home-hero";
-import { HomeProofA, HomeServicesA, HomeStatementA } from "./home-sections";
+import { HomeFounderA, HomeProofA, HomeServicesA, HomeStatementA } from "./home-sections";
 
 function buildHomeJsonLd(locale: Locale) {
   const siteUrl = getSiteUrl();
@@ -70,6 +70,9 @@ export function HomePage({ locale }: { locale: Locale }) {
       </section>
       <section id="statement" data-home-section>
         <HomeStatementA locale={locale} />
+      </section>
+      <section id="founder" data-home-section>
+        <HomeFounderA locale={locale} />
       </section>
       <section id="services" data-home-section>
         <HomeServicesA locale={locale} />

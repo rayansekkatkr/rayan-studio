@@ -4,7 +4,7 @@ import { useEffect } from "react";
 import { trackEvent } from "@/lib/analytics";
 
 // Must match the `id`s of the sections rendered by `HomePage`.
-const HOME_SECTION_IDS = ["hero", "statement", "services", "trust", "final-cta"] as const;
+const HOME_SECTION_IDS = ["hero", "statement", "founder", "services", "trust", "final-cta"] as const;
 
 const SCROLL_THRESHOLDS = [25, 50, 75, 90];
 

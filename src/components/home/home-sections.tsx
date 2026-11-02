@@ -5,7 +5,7 @@ import { Container } from "@/components/ui/container";
 import { projectStatusBadge } from "@/components/work/project-labels";
 import { PROJECTS } from "@/content/projects";
 import type { Locale } from "@/lib/i18n";
-import { saasLandingPath, servicePath, smbLandingPath, workPath } from "@/lib/site-routes";
+import { saasLandingPath, servicePath, smbLandingPath, studioPath, workPath } from "@/lib/site-routes";
 
 /**
  * Studio statement in the night: the desk photo is blended into the dark background
@@ -40,6 +40,73 @@ export function HomeStatementA({ locale }: { locale: Locale }) {
           </span>
           <ArrowRight aria-hidden className="h-8 w-8 shrink-0 transition-transform duration-200 group-hover:translate-x-2 md:h-12 md:w-12" />
         </Link>
+      </Container>
+    </div>
+  );
+}
+
+/**
+ * Who builds: the founder in his own words, and the studio's own live products,
+ * each named once and linked to its case study (the only place they are listed on the home).
+ */
+export function HomeFounderA({ locale }: { locale: Locale }) {
+  const fr = locale === "fr";
+  const products = PROJECTS.filter((project) => projectStatusBadge(project, locale).tone === "live");
+  return (
+    <div className="pt-[var(--rs-section-space)]">
+      <Container>
+        <div className="grid gap-12 border-t border-rs-fg pt-10 lg:grid-cols-[minmax(0,6fr)_minmax(0,5fr)] lg:gap-20">
+          <div>
+            <p className="text-xs font-semibold uppercase tracking-[0.18em] text-rs-muted">{fr ? "Qui construit" : "Who builds"}</p>
+            <h2 className="mt-4 text-[2.25rem] font-extrabold leading-none tracking-[-0.045em] md:text-6xl">Rayan Sekkat</h2>
+            <p className="mt-3 text-lg font-semibold">
+              {fr ? "Ingénieur logiciel, fondateur de Rayan Studio" : "Software engineer, founder of Rayan Studio"}
+            </p>
+            <div className="mt-8 max-w-[var(--rs-reading)] space-y-5 text-lg leading-relaxed text-rs-muted">
+              <p>
+                {fr
+                  ? "Je cadre, conçois, développe et mets en production chaque projet du studio moi-même. Vous parlez toujours à la personne qui écrit le code, du premier échange au lancement."
+                  : "I scope, design, build and ship every studio project myself. You always talk to the person who writes the code, from the first conversation to launch."}
+              </p>
+              <p>
+                {fr
+                  ? "Je suis basé à Séoul et je travaille à distance avec des clients en France et en Europe, en français ou en anglais. Les délais annoncés sur ce site comptent en jours ouvrés français."
+                  : "I am based in Seoul and work remotely with clients in France and Europe, in French or English. The response times on this site count French business days."}
+              </p>
+            </div>
+            <Link
+              href={studioPath(locale, "rayan")}
+              className="mt-8 inline-flex items-center gap-2 text-base font-semibold underline underline-offset-4 transition-colors duration-150 hover:text-rs-accent-fg"
+            >
+              {fr ? "Mon parcours" : "My background"}
+              <ArrowRight aria-hidden className="h-4 w-4" />
+            </Link>
+          </div>
+
+          <div>
+            <h3 className="text-xs font-semibold uppercase tracking-[0.18em] text-rs-muted">
+              {fr ? "Mes produits en ligne" : "My live products"}
+            </h3>
+            <ul className="mt-4 border-t border-[var(--rs-border)]" data-home-products>
+              {products.map((project) => (
+                <li key={project.key} className="border-b border-[var(--rs-border)]">
+                  <Link
+                    href={workPath(locale, project.slug)}
+                    className="group grid grid-cols-[minmax(0,1fr)_1.5rem] items-center gap-x-4 py-5 transition-colors duration-150 hover:text-rs-accent-fg"
+                  >
+                    <span>
+                      <span className="block text-2xl font-bold tracking-[-0.03em]">{project.title}</span>
+                      <span className="mt-1 block text-sm text-rs-muted">
+                        {project.categories[locale].slice(0, 2).join(" · ")}
+                      </span>
+                    </span>
+                    <ArrowRight aria-hidden className="h-5 w-5" />
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </div>
+        </div>
       </Container>
     </div>
   );
@@ -103,7 +170,7 @@ export function HomeProofA({ locale }: { locale: Locale }) {
   const live = PROJECTS.filter((p) => projectStatusBadge(p, locale).tone === "live").length;
   const items = [
     { value: String(live), label: fr ? "produits du studio en production" : "studio products in production" },
-    { value: "24 h", label: fr ? "pour une première réponse argumentée, en jours ouvrés" : "for a first reasoned reply, in business days" },
+    { value: "24 h", label: fr ? "pour une première réponse argumentée, en jours ouvrés français" : "for a first reasoned reply, in French business days" },
     { value: "2020", label: fr ? "développement logiciel depuis, en entreprise puis en studio" : "building software since, in companies then as a studio" },
     { value: "1", label: fr ? "seul interlocuteur, du devis au déploiement" : "single point of contact, from quote to deployment" },
   ];
