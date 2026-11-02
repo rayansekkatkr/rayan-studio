@@ -11,7 +11,7 @@ describe("HomePage", () => {
   it("renders the approved homepage section order", () => {
     const { container } = render(<HomePage locale="fr" />);
     const ids = Array.from(container.querySelectorAll("[data-home-section]"), (node) => node.id);
-    expect(ids).toEqual(["hero", "statement", "founder", "services", "trust", "final-cta"]);
+    expect(ids).toEqual(["hero", "statement", "founder", "services", "next-steps", "final-cta"]);
   });
 
   it("names the founder and the four studio products once, each linked to its case study", () => {

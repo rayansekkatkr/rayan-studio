@@ -31,12 +31,13 @@ export function ClosingCta({ locale, ctaId, source, title, body, label, href, se
     <div data-closing-cta className={cn("mt-[var(--rs-section-space)]", className)}>
       <div className="rs-theme-dark bg-rs-bg text-rs-fg">
         <Container className="py-16 md:py-24">
-          <h2 className="text-[clamp(2.75rem,6.5vw,7rem)] font-black leading-[0.88] tracking-[-0.06em]">
-            {title ?? (fr ? "Parlons de votre projet" : "Let's talk about your project")}{" "}
+          {/* The arrow sits outside the h2 so the heading text stays clean for crawlers and readers. */}
+          <div className="text-[clamp(2.75rem,6.5vw,7rem)] font-black leading-[0.88] tracking-[-0.06em]">
+            <h2 className="inline">{title ?? (fr ? "Parlons de votre projet" : "Let's talk about your project")}</h2>{" "}
             <span aria-hidden className="text-rs-accent-fg">
               →
             </span>
-          </h2>
+          </div>
           <div className="mt-12 flex flex-col gap-6 border-t border-[var(--rs-border)] pt-7 md:flex-row md:items-center md:justify-between">
             <p className="max-w-xl text-base leading-relaxed text-rs-muted">
               {body ??
@@ -48,7 +49,7 @@ export function ClosingCta({ locale, ctaId, source, title, body, label, href, se
               <TrackedLink
                 href={target}
                 event={{ ctaId, source, destination: target, locale }}
-                className="inline-flex items-center gap-2 bg-rs-fg px-7 py-3.5 text-base font-semibold text-[var(--rs-dark)] transition-colors duration-150 hover:bg-rs-accent hover:text-white"
+                className="inline-flex items-center gap-2 bg-rs-fg px-7 py-3.5 text-base font-semibold text-[var(--rs-dark)] transition-colors duration-150 hover:bg-rs-accent hover:text-[var(--rs-dark-fg)]"
               >
                 {label ?? (fr ? "Parler de votre projet" : "Start a project")}
                 <ArrowRight aria-hidden className="h-4 w-4" />

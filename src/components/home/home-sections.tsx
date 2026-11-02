@@ -5,7 +5,15 @@ import { Container } from "@/components/ui/container";
 import { projectStatusBadge } from "@/components/work/project-labels";
 import { PROJECTS } from "@/content/projects";
 import type { Locale } from "@/lib/i18n";
-import { saasLandingPath, servicePath, smbLandingPath, studioPath, workPath } from "@/lib/site-routes";
+import { saasLandingPath, servicePath, websitesLandingPath, studioPath, workPath } from "@/lib/site-routes";
+// Real home-page captures of the live product sites (public/realisations/sites), keyed by project slug.
+const SITE_SHOTS: Record<string, string> = {
+  pick4me: "/realisations/sites/pick4me-site.webp",
+  "pont-facturx": "/realisations/sites/pont-facturx-site.webp",
+  goodcall: "/realisations/sites/goodcall-site.webp",
+  docextract: "/realisations/sites/docextract-site.webp",
+};
+
 
 /**
  * Studio statement in the night: the desk photo is blended into the dark background
@@ -24,21 +32,21 @@ export function HomeStatementA({ locale }: { locale: Locale }) {
         className="statement-image -z-20 object-cover object-[70%_center]"
       />
       <div aria-hidden className="statement-shade pointer-events-none absolute inset-0 -z-10" />
-      <Container className="flex min-h-[38rem] flex-col justify-end pb-16 pt-32 md:min-h-[50rem] md:pb-20 md:pt-48">
-        <p className="max-w-4xl font-serif text-[2.6rem] leading-[1.02] md:text-[4.75rem]">
-          {fr ? "Un studio indépendant. Pas d'intermédiaire entre " : "An independent studio. No middleman between "}
-          <em className="text-rs-accent-fg">{fr ? "votre idée" : "your idea"}</em>
-          {fr ? " et la mise en production." : " and production."}
-        </p>
+      <Container className="flex min-h-[36rem] flex-col justify-end pb-16 pt-16 md:min-h-[38rem] md:pb-20 md:pt-20">
+        <h2 className="max-w-4xl font-serif text-[2.6rem] font-normal leading-[1.02] md:text-[4.75rem]">
+          {fr ? "Vous dormez, " : "You sleep, "}
+          <em className="text-rs-accent-fg">{fr ? "j'avance" : "I build"}</em>
+          {fr ? ". Vous vous réveillez avec la suite." : ". You wake up to the next step."}
+        </h2>
 
         <Link
           href={workPath(locale)}
-          className="group mt-14 flex items-center justify-between gap-6 border-y border-[var(--rs-border-strong)] py-7 transition-colors duration-200 hover:border-rs-fg hover:bg-rs-fg hover:text-rs-bg md:mt-20 md:px-4"
+          className="group mt-14 flex items-center justify-between gap-6 border-y border-[var(--rs-border-strong)] py-7 transition-colors duration-200 hover:border-rs-fg hover:bg-rs-fg hover:text-rs-bg focus-visible:bg-rs-fg focus-visible:text-rs-bg md:mt-20 md:px-4"
         >
           <span className="text-[2.5rem] font-extrabold leading-[0.95] tracking-[-0.045em] md:text-6xl">
             {fr ? "Voir les réalisations" : "See the work"}
           </span>
-          <ArrowRight aria-hidden className="h-8 w-8 shrink-0 transition-transform duration-200 group-hover:translate-x-2 md:h-12 md:w-12" />
+          <ArrowRight aria-hidden className="h-8 w-8 shrink-0 md:h-12 md:w-12" />
         </Link>
       </Container>
     </div>
@@ -57,12 +65,11 @@ export function HomeFounderA({ locale }: { locale: Locale }) {
       <Container>
         <div className="grid gap-12 border-t border-rs-fg pt-10 lg:grid-cols-[minmax(0,6fr)_minmax(0,5fr)] lg:gap-20">
           <div>
-            <p className="text-xs font-semibold uppercase tracking-[0.18em] text-rs-muted">{fr ? "Qui construit" : "Who builds"}</p>
-            <h2 className="mt-4 text-[2.25rem] font-extrabold leading-none tracking-[-0.045em] md:text-6xl">Rayan Sekkat</h2>
+            <h2 className="text-[2.25rem] font-extrabold leading-none tracking-[-0.045em] md:text-6xl">Rayan Sekkat</h2>
             <p className="mt-3 text-lg font-semibold">
               {fr ? "Ingénieur logiciel, fondateur de Rayan Studio" : "Software engineer, founder of Rayan Studio"}
             </p>
-            <div className="mt-8 max-w-[var(--rs-reading)] space-y-5 text-lg leading-relaxed text-rs-muted">
+            <div className="mt-8 max-w-[65ch] space-y-5 text-lg leading-relaxed text-rs-muted">
               <p>
                 {fr
                   ? "Je cadre, conçois, développe et mets en production chaque projet du studio moi-même. Vous parlez toujours à la personne qui écrit le code, du premier échange au lancement."
@@ -85,25 +92,41 @@ export function HomeFounderA({ locale }: { locale: Locale }) {
 
           <div>
             <h3 className="text-xs font-semibold uppercase tracking-[0.18em] text-rs-muted">
-              {fr ? "Mes produits en ligne" : "My live products"}
+              {fr ? "Sites conçus et mis en ligne par le studio" : "Websites designed and launched by the studio"}
             </h3>
-            <ul className="mt-4 border-t border-[var(--rs-border)]" data-home-products>
-              {products.map((project) => (
-                <li key={project.key} className="border-b border-[var(--rs-border)]">
-                  <Link
-                    href={workPath(locale, project.slug)}
-                    className="group grid grid-cols-[minmax(0,1fr)_1.5rem] items-center gap-x-4 py-5 transition-colors duration-150 hover:text-rs-accent-fg"
-                  >
-                    <span>
-                      <span className="block text-2xl font-bold tracking-[-0.03em]">{project.title}</span>
-                      <span className="mt-1 block text-sm text-rs-muted">
-                        {project.categories[locale].slice(0, 2).join(" · ")}
+            {/* Each live product's website is itself a site the studio designed and shipped: the visible
+                proof for the websites path. Screens are real home-page captures of the live sites. */}
+            <ul role="list" className="mt-4 grid grid-cols-2 gap-x-4 gap-y-6" data-home-products>
+              {products.map((project) => {
+                const shot = SITE_SHOTS[project.slug];
+                const host = project.liveUrl ? new URL(project.liveUrl).hostname.replace(/^www\./, "") : null;
+                return (
+                  <li key={project.key}>
+                    <Link
+                      href={workPath(locale, project.slug)}
+                      className="group block transition-colors duration-150 hover:text-rs-accent-fg"
+                    >
+                      {shot ? (
+                        <span className="block overflow-hidden border border-[var(--rs-border)] transition-colors duration-150 group-hover:border-rs-accent">
+                          <Image
+                            src={shot}
+                            alt=""
+                            width={1440}
+                            height={900}
+                            sizes="(min-width: 1024px) 17rem, 45vw"
+                            className="h-auto w-full"
+                          />
+                        </span>
+                      ) : null}
+                      <span className="mt-3 flex items-center justify-between gap-2 text-lg font-bold tracking-[-0.025em]">
+                        {project.title}
+                        <ArrowRight aria-hidden className="h-4 w-4 shrink-0" />
                       </span>
-                    </span>
-                    <ArrowRight aria-hidden className="h-5 w-5" />
-                  </Link>
-                </li>
-              ))}
+                      {host ? <span className="mt-0.5 block text-sm text-rs-muted">{host}</span> : null}
+                    </Link>
+                  </li>
+                );
+              })}
             </ul>
           </div>
         </div>
@@ -117,45 +140,45 @@ export function HomeServicesA({ locale }: { locale: Locale }) {
   const rows = [
     {
       title: fr ? "Sites web & refonte" : "Websites & redesign",
-      body: fr ? "Pour être trouvé et contacté. Maquette gratuite sous 24 h ouvrées." : "To be found and contacted. Free mockup within 24 business hours.",
-      href: smbLandingPath(locale),
+      body: fr
+        ? "Site vitrine ou sur mesure, comme ceux de mes produits : design, référencement, mise en ligne et suivi."
+        : "Showcase or custom website, like my own products' sites: design, SEO, launch and follow-up.",
+      href: websitesLandingPath(locale),
     },
     {
       title: fr ? "Applications & SaaS" : "Applications & SaaS",
-      body: fr ? "Du cadrage à la production, livré par étapes visibles." : "From scoping to production, delivered in visible steps.",
+      body: fr
+        ? "MVP, plateforme SaaS, outil interne ou API, livrés par étapes visibles."
+        : "MVP, SaaS platform, internal tool or API, delivered in visible steps.",
       href: saasLandingPath(locale),
     },
     {
       title: fr ? "Automatisation & IA" : "Automation & AI",
-      body: fr ? "Gagner du temps avant d'ajouter de l'IA." : "Save time before adding AI.",
+      body: fr ? "Automatiser les tâches répétitives, puis ajouter l'IA là où elle sert vraiment." : "Automate repetitive tasks, then add AI where it really helps.",
       href: servicePath(locale, "automation"),
     },
     {
       title: fr ? "DevOps & cloud" : "DevOps & cloud",
-      body: fr ? "Mettre en ligne, puis rester fiable." : "Ship, then stay reliable.",
+      body: fr ? "Mise en ligne, hébergement et suivi, pour que tout reste disponible." : "Launch, hosting and monitoring, so everything stays available.",
       href: servicePath(locale, "devops"),
     },
   ];
   return (
     <div className="pt-[var(--rs-section-space)]">
       <Container>
-        <div className="flex items-end justify-between gap-6 border-b border-rs-fg pb-5">
-          <h2 className="text-[2.75rem] font-extrabold leading-[0.95] tracking-[-0.045em] md:text-6xl">
-            {fr ? "Ce que je construis" : "What I build"}
-          </h2>
-          <span className="text-xs font-semibold uppercase tracking-[0.14em] text-rs-muted">Services</span>
-        </div>
+        <h2 className="border-b border-rs-fg pb-5 text-[2.75rem] font-extrabold leading-[0.95] tracking-[-0.045em] md:text-6xl">
+          {fr ? "Ce que je construis" : "What I build"}
+        </h2>
         <ul>
-          {rows.map((row, index) => (
+          {rows.map((row) => (
             <li key={row.href} className="border-b border-[var(--rs-border)]">
               <Link
                 href={row.href}
-                className="group grid grid-cols-[2.5rem_minmax(0,1fr)_1.5rem] items-center gap-x-4 gap-y-1 py-6 transition-colors duration-200 hover:bg-rs-fg hover:text-rs-bg md:grid-cols-[5rem_minmax(0,1fr)_minmax(0,1fr)_2.5rem] md:px-4"
+                className="group grid grid-cols-[minmax(0,1fr)_1.5rem] items-center gap-x-4 gap-y-1 py-6 transition-colors duration-200 hover:bg-rs-fg hover:text-rs-bg focus-visible:bg-rs-fg focus-visible:text-rs-bg md:grid-cols-[minmax(0,1fr)_minmax(0,1fr)_2.5rem] md:px-4"
               >
-                <span className="text-sm text-rs-muted group-hover:text-current">{String(index + 1).padStart(2, "0")}</span>
                 <span className="text-[1.75rem] font-bold leading-tight tracking-[-0.035em] md:text-[2.6rem]">{row.title}</span>
-                <span className="col-start-2 text-base text-rs-muted group-hover:text-current md:col-start-auto">{row.body}</span>
-                <ArrowRight aria-hidden className="col-start-3 row-start-1 h-6 w-6 md:col-start-4" />
+                <span className="text-base text-rs-muted group-hover:text-current group-focus-visible:text-current">{row.body}</span>
+                <ArrowRight aria-hidden className="col-start-2 row-start-1 h-6 w-6 md:col-start-3" />
               </Link>
             </li>
           ))}
@@ -165,26 +188,44 @@ export function HomeServicesA({ locale }: { locale: Locale }) {
   );
 }
 
-export function HomeProofA({ locale }: { locale: Locale }) {
+/**
+ * What happens after a request, right before the closing CTA: answers "what will this cost me
+ * in effort?" and reconciles the two 24 h promises (reply for any project, mockup for a website).
+ * The order carries meaning, so the steps are numbered.
+ */
+export function HomeNextStepsA({ locale }: { locale: Locale }) {
   const fr = locale === "fr";
-  const live = PROJECTS.filter((p) => projectStatusBadge(p, locale).tone === "live").length;
-  const items = [
-    { value: String(live), label: fr ? "produits du studio en production" : "studio products in production" },
-    { value: "24 h", label: fr ? "pour une première réponse argumentée, en jours ouvrés français" : "for a first reasoned reply, in French business days" },
-    { value: "2020", label: fr ? "développement logiciel depuis, en entreprise puis en studio" : "building software since, in companies then as a studio" },
-    { value: "1", label: fr ? "seul interlocuteur, du devis au déploiement" : "single point of contact, from quote to deployment" },
+  const steps = [
+    {
+      title: fr ? "Vous décrivez votre projet" : "You describe your project",
+      body: fr ? "Deux minutes, un formulaire court. Pas besoin de cahier des charges." : "Two minutes, a short form. No specification needed.",
+    },
+    {
+      title: fr ? "Je vous réponds sous 24 h ouvrées" : "I reply within 24 business hours",
+      body: fr
+        ? "Une réponse argumentée, en jours ouvrés français. Pour un site : une maquette gratuite de votre page d'accueil."
+        : "A reasoned reply, in French business days. For a website: a free mockup of your home page.",
+    },
+    {
+      title: fr ? "Vous recevez un devis écrit" : "You receive a written quote",
+      body: fr ? "Gratuit, détaillé, sans engagement. Vous décidez ensuite." : "Free, detailed, no commitment. Then you decide.",
+    },
   ];
   return (
     <div className="pt-[var(--rs-section-space)]">
       <Container>
-        <ul className="grid grid-cols-2 gap-y-10 border-t border-rs-fg lg:grid-cols-4">
-          {items.map((item) => (
-            <li key={item.value} className="pr-6 pt-7">
-              <span className="block text-5xl font-extrabold tracking-[-0.05em] md:text-6xl">{item.value}</span>
-              <span className="mt-2 block max-w-[16rem] text-base leading-snug text-rs-muted">{item.label}</span>
+        <h2 className="border-b border-rs-fg pb-5 text-[2.75rem] font-extrabold leading-[0.95] tracking-[-0.045em] md:text-6xl">
+          {fr ? "Après votre demande" : "After your request"}
+        </h2>
+        <ol role="list" className="grid gap-y-8 pt-8 md:grid-cols-3 md:gap-x-10">
+          {steps.map((step, index) => (
+            <li key={step.title}>
+              <span className="num-outline block text-4xl font-extrabold tracking-[-0.05em]">{index + 1}</span>
+              <span className="mt-3 block text-xl font-bold tracking-[-0.025em]">{step.title}</span>
+              <span className="mt-2 block max-w-[22rem] text-base leading-relaxed text-rs-muted">{step.body}</span>
             </li>
           ))}
-        </ul>
+        </ol>
       </Container>
     </div>
   );
