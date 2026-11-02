@@ -30,7 +30,7 @@
       "title": { "displayName": "Title", "purpose": "Card titles; h1 paired with a giant word." },
       "body-lead": { "displayName": "Body Lead", "purpose": "Intro paragraphs, ink-muted, max 46rem." },
       "body": { "displayName": "Body", "purpose": "Running text, inputs; buttons at 600." },
-      "label": { "displayName": "Label", "purpose": "Uppercase eyebrows and meta." }
+      "label": { "displayName": "Label", "purpose": "Night Band breadcrumb label, labels inside cards, small meta. Never a kicker above a section heading." }
     },
     "shadows": [
       { "name": "floating-header", "value": "0 16px 40px -24px rgba(11,11,14,0.45)", "purpose": "Floating header bar only." },
@@ -138,6 +138,7 @@
       "Don't lift, scale or glow components on hover; the response is a color swap.",
       "Don't round corners on anything but the status dot.",
       "Don't use Instrument Serif for UI, labels or paragraphs.",
+      "Don't put a label above a section heading: the heading carries its own weight. Only the Night Band keeps its label, which reads as a breadcrumb.",
       "Don't frame night-band photos in boxes; mask them into the night."
     ]
   }
