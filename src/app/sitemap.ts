@@ -35,9 +35,9 @@ const LEGAL_DOCS: LegalDocKey[] = ["legal", "privacy", "terms"];
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const baseUrl = getSiteUrl();
-  const lastModified = process.env.NEXT_PUBLIC_SITE_LAST_MODIFIED
-    ? new Date(process.env.NEXT_PUBLIC_SITE_LAST_MODIFIED)
-    : new Date();
+  // The sitemap is generated at build time, so this is the deploy date. A fixed date in an env
+  // var went stale (every URL stuck on 2026-08-09) and Google ignores a lastmod it cannot trust.
+  const lastModified = new Date();
 
   function localizedPair(
     frPath: string,
