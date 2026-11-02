@@ -934,3 +934,13 @@ Quand un changement important est fait:
 - DESIGN.md et sidecar : le rôle Label n'est plus un kicker au-dessus d'un titre de section (choix de Rayan).
 - Contraste de l'intro sur la photo de la bande de nuit : voile `.night-band-shade` plus dense au centre (et sur mobile) ; pixel le plus clair derrière l'intro 5,22:1 à 1440 et 5,69:1 à 390 (avant 4,05 et 3,74). S'applique à toutes les bandes de nuit.
 - Vérification : formulaire vide = 0 requête, 3 champs invalides avec message, focus sur Nom (1440 et 390) ; `npm run verify` OK (160/160, build) ; Playwright complet `--workers=2` 123 passés / 13 ignorés / 0 échec (un premier passage a eu 120 faux échecs, serveur de test tombé, `ERR_CONNECTION_REFUSED`).
+
+### 2026-11-02 (suites de la seconde analyse SEO de l'accueil)
+
+- Seconde analyse `seo page` de l'accueil en production : 63 → 79/100 (on-page 86, contenu 62, technique 85, schema 78, images 88), aucun critique ni haut.
+- Sitemap : `lastmod` seulement là où le contenu a une vraie date (articles : `updatedAt ?? publishedAt`) ; plus de date unique (fixe ou date du déploiement) sur toutes les URL. Build : 16 URL datées sur 162, 2 dates distinctes.
+- x-default aligné sur le middleware : les langues non couvertes sont redirigées vers l'anglais, donc x-default → version EN (`src/lib/seo.ts`, `src/app/sitemap.ts`, tests mis à jour). Sans en-tête de langue (Googlebot), `/` mène toujours à `/fr`.
+- Schema : `ProfilePage` sur la page Rayan (mêmes `@id` que le `Person` de l'accueil) ; `logo` (`/icon.svg`) sur `ProfessionalService` ; `WebPage.about` vers le studio. `portfolioUrl` laissé à la racine (sa redirection dépend probablement de la langue).
+- Accueil : le résumé factuel de chaque produit (`project.summary`, déjà dans les données) s'affiche sous sa vignette ; contenu principal environ 373 mots (seuil 500).
+- Non traité : tuiles du mur à rendre eager (3 premières), contenu encore sous 500 mots.
+- Vérification : `npm run verify` OK (160/160, build), HTML construit inspecté (sitemap, x-default, logo, about, ProfilePage), captures du bloc fondateur à 1440 et 390, Playwright complet `--workers=2` 123 passés / 13 ignorés / 0 échec.
