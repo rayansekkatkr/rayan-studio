@@ -251,7 +251,8 @@ section[id] {
 }
 
 .night-band-shade {
-  background: linear-gradient(90deg, var(--rs-dark) 0%, rgba(9, 9, 12, 0.55) 45%, rgba(9, 9, 12, 0.15) 100%);
+  /* Darker through the middle so muted lead text over the photo stays at 4.5:1 or more. */
+  background: linear-gradient(90deg, var(--rs-dark) 0%, color-mix(in srgb, var(--rs-dark) 72%, transparent) 50%, color-mix(in srgb, var(--rs-dark) 25%, transparent) 100%);
 }
 
 @media (max-width: 767px) {
@@ -261,6 +262,11 @@ section[id] {
 
   .night-band-image--dim {
     opacity: 0.22;
+  }
+
+  /* On phones the lead spans the full width, including the lighter right side of the photo. */
+  .night-band-shade {
+    background: linear-gradient(90deg, color-mix(in srgb, var(--rs-dark) 85%, transparent) 0%, color-mix(in srgb, var(--rs-dark) 55%, transparent) 100%);
   }
 }
 

@@ -183,7 +183,7 @@ Achromatic ink-paper-night system with one indigo signal. Source of truth: `--rs
 - **Title** (700, 1.25rem to 1.5rem, snug): card titles, and the h1 when paired with a giant word.
 - **Body lead** (400, 1.125rem, 1.625, ink-muted): intro paragraphs, max width 46rem.
 - **Body** (400, 1rem, 1.5): running text and inputs; buttons at 600.
-- **Label** (600, 0.75rem, +0.14em to +0.18em, uppercase, ink-muted): eyebrows above headings, small meta.
+- **Label** (600, 0.75rem, +0.14em to +0.18em, uppercase, ink-muted): the Night Band label (read as a breadcrumb), labels inside cards, small meta. Never a kicker above a section heading.
 
 ### Named Rules
 **The One Serif Sentence Rule.** Instrument Serif appears at most once per section, for a sentence or a phrase inside a headline. Never for UI, labels, buttons or body paragraphs.
@@ -269,4 +269,5 @@ Home hero only: a plane rotated -9 degrees holding columns of real product scree
 - **Don't** lift, scale or glow components on hover; the response is a color swap.
 - **Don't** round corners on anything but the status dot.
 - **Don't** use Instrument Serif for UI, labels or paragraphs.
+- **Don't** put a label above a section heading: the heading carries its own weight. Only the Night Band keeps its label, which reads as a breadcrumb.
 - **Don't** frame night-band photos in boxes; mask them into the night.
