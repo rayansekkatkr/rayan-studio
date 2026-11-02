@@ -40,7 +40,7 @@ export function CaseStudyHero({ locale, project }: { locale: Locale; project: Pr
                   rel="noopener noreferrer"
                   className={cn(
                     "inline-flex items-center gap-1.5 px-5 py-3 text-sm font-semibold transition-colors duration-150",
-                    index === 0 ? "bg-rs-fg text-rs-bg hover:bg-rs-accent hover:text-white" : "border border-rs-fg text-rs-fg hover:bg-rs-fg hover:text-rs-bg",
+                    index === 0 ? "bg-rs-fg text-rs-bg hover:bg-rs-accent active:bg-rs-accent-hover active:text-[var(--rs-dark-fg)] active:duration-0 hover:text-white" : "border border-rs-fg text-rs-fg hover:bg-rs-fg hover:text-rs-bg",
                   )}
                 >
                   {link.label[locale]}

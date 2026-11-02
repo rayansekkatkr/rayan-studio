@@ -341,6 +341,8 @@ export function ProjectForm({ locale }: { locale: Locale }) {
                 <input
                   id="project-name"
                   type="text"
+                  autoComplete="name"
+                  enterKeyHint="next"
                   required
                   maxLength={100}
                   value={formState.name}
@@ -355,6 +357,8 @@ export function ProjectForm({ locale }: { locale: Locale }) {
                 <input
                   id="project-company"
                   type="text"
+                  autoComplete="organization"
+                  enterKeyHint="next"
                   required
                   maxLength={160}
                   value={formState.company}
@@ -370,6 +374,7 @@ export function ProjectForm({ locale }: { locale: Locale }) {
               <input
                 id="project-email"
                 type="email"
+                autoComplete="email"
                 required
                 maxLength={160}
                 value={formState.email}
@@ -408,7 +413,7 @@ export function ProjectForm({ locale }: { locale: Locale }) {
           <button
             type="button"
             onClick={goNext}
-            className="inline-flex items-center rounded-none bg-rs-fg px-7 py-3.5 text-base font-semibold text-rs-bg transition-colors duration-150 hover:bg-rs-accent"
+            className="inline-flex items-center rounded-none bg-rs-fg px-7 py-3.5 text-base font-semibold text-rs-bg transition-colors duration-150 hover:bg-rs-accent active:bg-rs-accent-hover active:text-[var(--rs-dark-fg)] active:duration-0"
           >
             {fr ? "Suivant" : "Next"}
           </button>
@@ -416,7 +421,7 @@ export function ProjectForm({ locale }: { locale: Locale }) {
           <button
             type="submit"
             disabled={status === "sending"}
-            className="inline-flex items-center rounded-none bg-rs-fg px-7 py-3.5 text-base font-semibold text-rs-bg transition-colors duration-150 hover:bg-rs-accent disabled:opacity-60"
+            className="inline-flex items-center rounded-none bg-rs-fg px-7 py-3.5 text-base font-semibold text-rs-bg transition-colors duration-150 hover:bg-rs-accent active:bg-rs-accent-hover active:text-[var(--rs-dark-fg)] active:duration-0 disabled:pointer-events-none disabled:opacity-60"
           >
             {fr ? "Envoyer" : "Send"}
           </button>

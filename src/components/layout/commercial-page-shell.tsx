@@ -22,7 +22,7 @@ export function CommercialPageShell({
   return (
     <>
       <SiteHeader locale={locale} topTheme={headerTopTheme} quoteHref={quoteHref} />
-      <main id="main-content" className={cn("min-h-screen bg-rs-bg text-rs-fg", className)}>
+      <main id="main-content" className={cn("min-h-svh bg-rs-bg text-rs-fg", className)}>
         {children}
       </main>
       <SiteFooter locale={locale} />

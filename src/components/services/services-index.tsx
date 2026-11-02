@@ -87,7 +87,7 @@ function ServiceRow({ locale, row, index }: { locale: Locale; row: Row; index: n
         </span>
         <ArrowRight
           aria-hidden
-          className="col-start-3 row-start-1 h-5 w-5 text-rs-muted transition-transform duration-200 group-hover:translate-x-1 group-hover:text-current md:col-start-4"
+          className="col-start-3 row-start-1 h-5 w-5 text-rs-muted transition-colors duration-150 group-hover:text-current md:col-start-4"
         />
       </Link>
     </li>

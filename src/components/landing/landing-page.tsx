@@ -86,7 +86,7 @@ function LandingSitesProof({ locale }: { locale: Locale }) {
                     />
                   </span>
                   <span className="mt-4 flex items-center justify-between gap-3 text-2xl font-bold tracking-[-0.03em]">
-                    {project.title}
+                    <span className="min-w-0 [overflow-wrap:anywhere]">{project.title}</span>
                     <ArrowUpRight aria-hidden className="h-5 w-5 shrink-0" />
                   </span>
                   <span className="mt-1 block text-base text-rs-muted">
@@ -133,7 +133,7 @@ function LandingHeroA({ locale, content, source }: { locale: Locale; content: La
             <TrackedLink
               href="#devis"
               event={{ ctaId: `${source}_hero_form`, source, destination: "#devis", locale }}
-              className="inline-flex items-center gap-2 bg-rs-fg px-6 py-3.5 text-base font-semibold text-[var(--rs-dark)] transition-colors duration-150 hover:bg-rs-accent hover:text-rs-fg"
+              className="inline-flex items-center gap-2 bg-rs-fg px-6 py-3.5 text-base font-semibold text-[var(--rs-dark)] transition-colors duration-150 hover:bg-rs-accent active:bg-rs-accent-hover active:text-[var(--rs-dark-fg)] active:duration-0 hover:text-rs-fg"
             >
               {content.primaryCta}
               <ArrowRight aria-hidden className="h-4 w-4" />
@@ -143,8 +143,8 @@ function LandingHeroA({ locale, content, source }: { locale: Locale; content: La
             </Link>
             <ul className="flex flex-col gap-1.5 text-sm text-rs-muted md:items-end">
               {content.promises.map((promise) => (
-                <li key={promise} className="flex items-center gap-2">
-                  <Check aria-hidden className="h-4 w-4 text-rs-accent-fg" />
+                <li key={promise} className="flex items-start gap-2">
+                  <Check aria-hidden className="mt-0.5 h-4 w-4 shrink-0 text-rs-accent-fg" />
                   {promise}
                 </li>
               ))}
@@ -359,13 +359,13 @@ export function LandingPage({ locale, content }: { locale: Locale; content: Land
 
       <section className="border-t border-[var(--rs-border)] py-[var(--rs-section-space)]">
         <Container>
-          <div className="grid gap-10 lg:grid-cols-[minmax(0,5fr)_minmax(0,7fr)] lg:gap-14">
+          <div className="grid grid-cols-1 gap-10 lg:grid-cols-[minmax(0,5fr)_minmax(0,7fr)] lg:gap-14">
             <SectionTitle title={fr ? "Les questions qu'on nous pose" : "Questions we are asked"} />
             <div className="divide-y divide-[var(--rs-border)] border-y border-[var(--rs-border)]">
               {content.faq.map((item) => (
                 <details key={item.question} className="group py-5">
                   <summary className="flex cursor-pointer list-none items-center justify-between gap-4 text-lg font-semibold text-rs-fg">
-                    {item.question}
+                    <span className="min-w-0 [overflow-wrap:anywhere]">{item.question}</span>
                     <Plus aria-hidden className="h-5 w-5 shrink-0 text-rs-muted transition-transform duration-200 group-open:rotate-45" />
                   </summary>
                   <p className="mt-3 text-base leading-relaxed text-rs-muted">{item.answer}</p>
@@ -378,7 +378,7 @@ export function LandingPage({ locale, content }: { locale: Locale; content: Land
 
       <section id="devis" className="scroll-mt-24 pb-[var(--rs-section-space)]">
         <Container>
-          <div className="grid gap-8 overflow-hidden rounded-[var(--rs-radius-lg)] border border-[var(--rs-border)] bg-rs-surface lg:grid-cols-[minmax(0,5fr)_minmax(0,7fr)]">
+          <div className="grid grid-cols-1 gap-8 overflow-hidden rounded-[var(--rs-radius-lg)] border border-[var(--rs-border)] bg-rs-surface lg:grid-cols-[minmax(0,5fr)_minmax(0,7fr)]">
             <div
               className="rs-theme-dark relative isolate bg-rs-bg p-8 text-rs-fg md:p-10"
             >
@@ -386,8 +386,8 @@ export function LandingPage({ locale, content }: { locale: Locale; content: Land
               <p className="mt-4 text-base leading-relaxed text-rs-muted">{content.formLead}</p>
               <ul className="mt-6 space-y-2.5 text-sm">
                 {content.promises.map((promise) => (
-                  <li key={promise} className="flex items-center gap-2.5">
-                    <Check aria-hidden className="h-4 w-4 text-rs-accent-fg" />
+                  <li key={promise} className="flex items-start gap-2.5">
+                    <Check aria-hidden className="mt-0.5 h-4 w-4 shrink-0 text-rs-accent-fg" />
                     {promise}
                   </li>
                 ))}

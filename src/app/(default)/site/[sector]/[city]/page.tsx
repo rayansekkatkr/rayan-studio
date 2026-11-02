@@ -9,6 +9,10 @@ import {
   type LocalSeoSectorSlug,
 } from "@/lib/local-seo";
 import { buildLocalSeoContent } from "@/lib/local-seo-content";
+import { sharedViewport } from "@/app/_shared/root";
+
+// Local landings open on a light header: the browser bar follows the paper colour.
+export const viewport = { ...sharedViewport, themeColor: "#f2f1ed" };
 
 type Params = {
   sector: LocalSeoSectorSlug;

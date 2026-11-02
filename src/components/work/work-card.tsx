@@ -60,7 +60,7 @@ export function WorkCard({
           alt={projectImageAlt(p, locale)}
           fill
           sizes="(min-width: 1024px) 55vw, 100vw"
-          className="object-cover object-left-top transition-transform duration-700 ease-out group-hover:scale-[1.02]"
+          className="object-cover object-left-top"
         />
       </span>
       <span data-project-copy className="flex flex-wrap items-baseline justify-between gap-3 pt-4">
@@ -112,7 +112,7 @@ export function FeatureProject({
           fill
           priority={priority}
           sizes="100vw"
-          className="object-cover object-left-top transition-transform duration-700 ease-out group-hover:scale-[1.015]"
+          className="object-cover object-left-top"
         />
       </span>
       {p.heroCompanion ? (

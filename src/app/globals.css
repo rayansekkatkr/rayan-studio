@@ -38,8 +38,10 @@
   --rs-radius-sm: 0;
   --rs-radius-md: 0;
   --rs-radius-lg: 0;
-  --rs-motion-fast: 160ms;
+  /* Motion: hovers and colour swaps at 150ms (DESIGN.md), entering/leaving UI on a strong ease-out. */
+  --rs-motion-fast: 150ms;
   --rs-motion-medium: 240ms;
+  --rs-ease-out: cubic-bezier(0.23, 1, 0.32, 1);
   /* Fixed overlay surfaces: explicit rgba because Tailwind cannot derive
      opacity variants from opaque var() color tokens. */
   --rs-header-surface: rgba(255, 255, 255, 0.92);
@@ -81,7 +83,7 @@ html {
 body {
   position: relative;
   margin: 0;
-  min-height: 100vh;
+  min-height: 100svh;
   overflow-x: clip;
   width: 100%;
   font-family: var(--font-sans), sans-serif;
@@ -350,9 +352,12 @@ section[id] {
   animation-play-state: paused;
 }
 
-.hero-screen-wall:hover .hero-screen-track,
-.hero-screen-row:hover .hero-screen-track--x {
-  animation-play-state: paused;
+/* Hover-pause only with a real pointer: a tap on a phone would leave :hover stuck and freeze the row. */
+@media (hover: hover) and (pointer: fine) {
+  .hero-screen-wall:hover .hero-screen-track,
+  .hero-screen-row:hover .hero-screen-track--x {
+    animation-play-state: paused;
+  }
 }
 
 .hero-screen-row {
@@ -393,7 +398,8 @@ section[id] {
   *::after {
     animation-duration: 0.01ms !important;
     animation-iteration-count: 1 !important;
-    transition-duration: 0.01ms !important;
+    /* Less motion, not none: colour and opacity feedback keeps its timing, movement transitions go. */
+    transition-property: color, background-color, border-color, outline-color, text-decoration-color, fill, stroke, opacity !important;
     scroll-behavior: auto !important;
   }
 }
@@ -511,4 +517,35 @@ p {
    not controls: no ring around the whole page. */
 [tabindex="-1"]:focus {
   outline: none;
+}
+
+/* Touch: no double-tap zoom delay on controls, and no text selection on a long press of a button. */
+:where(a, button, [role="button"], label:has(> input[type="radio"])) {
+  touch-action: manipulation;
+}
+
+:where(button, [role="button"], label:has(> input[type="radio"])) {
+  -webkit-user-select: none;
+  user-select: none;
+}
+
+/* Touch screens: 16px fields so iOS/iPadOS never zoom on focus (the 90% desktop root makes them 14.4px). */
+@media (pointer: coarse) {
+  input,
+  textarea,
+  select {
+    font-size: 16px;
+  }
+}
+
+/* FAQ answers fade in instead of popping (browsers without ::details-content keep today's behaviour). */
+details::details-content {
+  opacity: 0;
+  transition:
+    opacity 200ms var(--rs-ease-out),
+    content-visibility 200ms var(--rs-ease-out) allow-discrete;
+}
+
+details[open]::details-content {
+  opacity: 1;
 }

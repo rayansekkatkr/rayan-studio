@@ -100,7 +100,7 @@ export function ProjectReadinessTool({ locale }: { locale: Locale }) {
         type="button"
         disabled={!allAnswered}
         onClick={computeResult}
-        className="mt-8 inline-flex items-center rounded-none bg-rs-fg px-7 py-3.5 text-base font-semibold text-rs-bg transition-colors duration-150 hover:bg-rs-accent disabled:opacity-50"
+        className="mt-8 inline-flex items-center rounded-none bg-rs-fg px-7 py-3.5 text-base font-semibold text-rs-bg transition-colors duration-150 hover:bg-rs-accent active:bg-rs-accent-hover active:text-[var(--rs-dark-fg)] active:duration-0 disabled:opacity-50"
       >
         {fr ? "Voir le résultat" : "See the result"}
       </button>

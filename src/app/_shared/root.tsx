@@ -95,6 +95,8 @@ export const sharedMetadata: Metadata = {
 export const sharedViewport: Viewport = {
   width: "device-width",
   initialScale: 1,
+  // Mobile browser bars match the night page headers. Light-topped routes override it.
+  themeColor: "#09090c",
 };
 
 export function RootBody({ children, locale = "fr" }: { children: React.ReactNode; locale?: "fr" | "en" }) {

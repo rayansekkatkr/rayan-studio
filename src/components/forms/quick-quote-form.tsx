@@ -209,11 +209,14 @@ export function QuickQuoteForm({
         <p className="mt-3 text-base leading-relaxed text-rs-muted">
           {type === "site"
             ? fr
-              ? `Vous recevrez la maquette de votre page d'accueil sous 24 h ouvrées (jours ouvrés français), à l'adresse ${sentTo}.`
-              : `You will receive the mockup of your home page within 24 business hours (French business days), at ${sentTo}.`
+              ? "Vous recevrez la maquette de votre page d'accueil sous 24 h ouvrées (jours ouvrés français), à l'adresse "
+              : "You will receive the mockup of your home page within 24 business hours (French business days), at "
             : fr
-              ? `Je vous réponds sous 24 h ouvrées (jours ouvrés français), à l'adresse ${sentTo}.`
-              : `I will reply within 24 business hours (French business days), at ${sentTo}.`}
+              ? "Je vous réponds sous 24 h ouvrées (jours ouvrés français), à l'adresse "
+              : "I will reply within 24 business hours (French business days), at "}
+          {/* A long address must wrap instead of widening the page (overflow-wrap: anywhere also
+              shrinks the min-content width that grid columns size from). */}
+          <span className="font-medium text-rs-fg [overflow-wrap:anywhere]">{sentTo}</span>.
         </p>
         <button
           type="button"
@@ -287,6 +290,8 @@ export function QuickQuoteForm({
             required
             maxLength={100}
             autoComplete="name"
+            enterKeyHint="next"
+            dir="auto"
             value={name}
             onChange={(event) => {
               started();
@@ -310,6 +315,7 @@ export function QuickQuoteForm({
             required
             maxLength={160}
             autoComplete="email"
+            enterKeyHint="next"
             value={email}
             onChange={(event) => {
               started();
@@ -334,6 +340,7 @@ export function QuickQuoteForm({
           required
           rows={4}
           maxLength={5000}
+          dir="auto"
           placeholder={current.placeholder[locale]}
           value={message}
           onChange={(event) => {
@@ -345,13 +352,19 @@ export function QuickQuoteForm({
           {...fieldProps("message")}
         />
         {fieldError("message")}
+        {message.length > 4000 ? (
+          // Shown near the limit only: maxLength would otherwise cut a long paste silently.
+          <p className="mt-1.5 text-sm text-rs-muted" aria-live="polite">
+            {message.length.toLocaleString(fr ? "fr-FR" : "en-GB")} / 5 000
+          </p>
+        ) : null}
       </div>
 
       <div className="mt-6 flex flex-wrap items-center gap-4">
         <button
           type="submit"
           disabled={status === "sending"}
-          className="inline-flex items-center rounded-none bg-rs-fg px-7 py-3.5 text-base font-semibold text-rs-bg transition-colors duration-150 hover:bg-rs-accent disabled:opacity-60"
+          className="inline-flex items-center rounded-none bg-rs-fg px-7 py-3.5 text-base font-semibold text-rs-bg transition-colors duration-150 hover:bg-rs-accent active:bg-rs-accent-hover active:text-[var(--rs-dark-fg)] active:duration-0 disabled:pointer-events-none disabled:opacity-60"
         >
           {type === "site"
             ? fr

@@ -67,7 +67,7 @@ export function InsightCard({
           alt=""
           fill
           sizes={featured ? "(min-width: 1024px) 55vw, 100vw" : "(min-width: 1024px) 33vw, 100vw"}
-          className="object-cover opacity-90 transition-transform duration-500 ease-out group-hover:scale-[1.04]"
+          className="object-cover opacity-90"
         />
       </div>
       <div className={cn("flex flex-col p-6", !featured && "flex-1")}>
@@ -84,7 +84,7 @@ export function InsightCard({
           {fr ? "Lire" : "Read"}
           <ArrowUpRight
             aria-hidden
-            className="h-4 w-4 transition-transform duration-150 group-hover:-translate-y-0.5 group-hover:translate-x-0.5"
+            className="h-4 w-4"
           />
         </span>
       </div>

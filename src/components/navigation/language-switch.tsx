@@ -77,7 +77,8 @@ export function LanguageSwitch({ locale, className, tone = "default" }: Language
           ) : (
             <Link
               href={equivalentPath(pathname, locale, target)}
-              className={idleClass}
+              // 24px+ hit area around the two-letter label (WCAG 2.5.8) without moving it.
+              className={cn(idleClass, "-mx-2 -my-1.5 px-2 py-1.5")}
               // Label in Name (WCAG 2.5.3): the accessible name starts with the visible "FR"/"EN".
               aria-label={target === "fr" ? "FR, version française" : "EN, English version"}
               hrefLang={target}

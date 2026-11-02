@@ -70,7 +70,7 @@ export function SiteHeader({ locale, topTheme = "light", quoteHref }: SiteHeader
       data-surface={solid ? "solid" : "transparent"}
       data-floating={floating ? "true" : "false"}
       className={cn(
-        "fixed inset-x-0 top-0 z-50 transition-transform duration-300",
+        "fixed inset-x-0 top-0 z-50 transition-transform duration-200 ease-rs",
         floating && "px-3 pt-3",
         hidden && !mobileOpen && "-translate-y-[calc(100%+3rem)]",
       )}
@@ -78,7 +78,7 @@ export function SiteHeader({ locale, topTheme = "light", quoteHref }: SiteHeader
       <div
         className={cn(
           // Only colours transition: height, padding and blur snap instead of animating during scroll.
-          "relative transition-colors duration-300",
+          "relative transition-colors duration-150",
           floating
             ? "mx-auto max-w-[min(var(--rs-container),76rem)] border border-[var(--rs-border)] bg-[var(--rs-header-surface)] shadow-[0_16px_40px_-24px_rgba(11,11,14,0.45)] backdrop-blur-md"
             : solid
@@ -132,8 +132,8 @@ export function SiteHeader({ locale, topTheme = "light", quoteHref }: SiteHeader
               className={cn(
                 "inline-flex items-center gap-2 px-5 py-2.5 text-sm font-semibold transition-colors duration-150",
                 inverse
-                  ? "bg-[var(--rs-dark-fg)] text-[var(--rs-dark)] hover:bg-rs-accent hover:text-[var(--rs-dark-fg)]"
-                  : "bg-rs-fg text-rs-bg hover:bg-rs-accent",
+                  ? "bg-[var(--rs-dark-fg)] text-[var(--rs-dark)] hover:bg-rs-accent active:bg-rs-accent-hover active:text-[var(--rs-dark-fg)] active:duration-0 hover:text-[var(--rs-dark-fg)]"
+                  : "bg-rs-fg text-rs-bg hover:bg-rs-accent active:bg-rs-accent-hover active:text-[var(--rs-dark-fg)] active:duration-0",
               )}
             >
               <span aria-hidden className="h-1.5 w-1.5 rounded-full bg-[var(--rs-live)]" />

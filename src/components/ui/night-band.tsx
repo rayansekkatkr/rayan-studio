@@ -1,4 +1,5 @@
 import Image from "next/image";
+import { OffscreenPause } from "@/components/ui/offscreen-pause";
 import { cn } from "@/lib/utils";
 
 type NightBandProps = {
@@ -35,6 +36,7 @@ export function NightBand({ image, imagePosition = "center", dim = false, childr
         />
       ) : null}
       <div aria-hidden className={cn("pointer-events-none absolute inset-0 -z-10", image ? "night-band-shade" : "hero-glow")} />
+      {image ? null : <OffscreenPause />}
       {children}
     </div>
   );
