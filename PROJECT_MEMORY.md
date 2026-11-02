@@ -915,3 +915,11 @@ Quand un changement important est fait:
 - Restant connu : moitié droite du héros vide entre 1024 et 1279 px (mur à partir de xl), ligne fondateur sous la bannière cookies à 390 au premier chargement, pas de photo du fondateur, Lighthouse SEO à recontrôler après build (meta description dans le body en dev).
 - Vérification avant commit : serveur de dev arrêté, `npm run verify` OK (160/160, build), `.next` vidé, Playwright complet `--workers=2` 123 passés / 13 ignorés / 0 échec.
 - Commits sur `design-seo-pass` : `30215b3` repositionnement sites web, `3b536ed` accueil, `bb63657` accessibilité, puis ce journal + DESIGN.md + sidecar.
+
+### 2026-11-02 (premier écran à 1024 et sur mobile, sitemap, robots)
+
+- Héros : le mur d'écrans revient dès `lg` (1024 px) à 44 % de largeur (50 % dès `xl`), colonne texte à 32rem et titre en `text-5xl` entre 1024 et 1279 px ; la rangée horizontale ne sert plus qu'en dessous de 1024. Mesuré : texte jusqu'à x=490, mur dès x=573 à 1024 ; 14 px d'écart à 1280 et 1440.
+- La ligne fondateur devient l'intro du héros (« Rayan Sekkat, ingénieur logiciel à Séoul. Je réponds moi-même à chaque demande, du premier échange au lancement. »), au-dessus des parcours : elle n'est plus couverte par la bannière cookies sur mobile. Mesuré à 390 : intro jusqu'à y=325, bas du CTA y=703, barre y=719.
+- Carte sites web : le nombre de sites en ligne est calculé depuis `PROJECTS` (statut en ligne + `liveUrl`) au lieu d'un « 4 » en dur.
+- Sitemap : `lastModified` = date du build (le sitemap est statique, donc date du déploiement) ; `NEXT_PUBLIC_SITE_LAST_MODIFIED` n'est plus lue (retirée de `.env.example` et de CLAUDE.md ; la variable encore définie dans Vercel est sans effet). robots.txt : directive `Host` retirée (ignorée par Google).
+- Vérification : `npm run verify` OK (160/160, build ; sitemap 162 URL datées du build, robots sans Host), Playwright complet `--workers=2` 123 passés / 13 ignorés / 0 échec, captures 1024 et 390 relues.
