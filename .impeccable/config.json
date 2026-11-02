@@ -1,0 +1,23 @@
+{
+  "detector": {
+    "ignoreRules": [],
+    "ignoreFiles": [],
+    "ignoreValues": [
+      {
+        "rule": "gradient-text",
+        "value": "*",
+        "files": [
+          "src/app/globals.css"
+        ],
+        "createdAt": "2026-11-02T01:37:19.340Z",
+        "reason": "DESIGN.md sanctioned exception: .num-gradient indigo editorial numbers, incumbent before this session"
+      },
+      {
+        "rule": "design-system-font",
+        "value": "georgia",
+        "createdAt": "2026-11-02T02:18:58.418Z",
+        "reason": "Legacy layer: .brand-wordmark only used by components/site/Navbar.tsx (local landings); DESIGN.md marks this layer legacy, do not extend"
+      }
+    ]
+  }
+}

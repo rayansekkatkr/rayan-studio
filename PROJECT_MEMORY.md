@@ -835,3 +835,83 @@ Quand un changement important est fait:
 - Délais : « 24 h ouvrées » = jours ouvrés français (choix de Rayan), précisé dans le bloc fondateur et la preuve « 24 h ».
 - Reste du plan d'audit : hiérarchie du héros (choix de parcours d'abord, un seul lien réalisations), style de focus dessiné, contrôle de pause du mur, échelle typographique, métadonnées (longueurs titre/description, schema), redirection apex 308 dans Vercel (à faire par Rayan).
 - Tests : home unitaire et e2e (fondateur + 4 liens produits, rien d'autre). Vitest 160/160, build 194 pages, Playwright 121/121.
+
+### 2026-11-02 (parcours sites web élargi, plus de cible commerces/restaurants)
+
+- Décision de Rayan : le parcours sites web n'est plus limité aux cafés, bars, restaurants et commerces. Il se définit par le service (création et refonte), sans public cible nommé. La maquette gratuite sous 24 h ouvrées reste, pour tout projet de site.
+- Landing renommée : `/fr/site-internet-commerces-pme` → `/fr/creation-site-internet`, `/en/websites-small-businesses` → `/en/website-design` (dossiers déplacés, helper `smbLandingPath` → `websitesLandingPath`). Redirections 308 depuis les anciennes URL et chaînes legacy repointées directement (`config/legacy-redirects.mjs`).
+- Copy mise à jour : contenu `WEBSITES` FR/EN (`src/content/landings.ts`), carte héros (« Création, refonte »), groupe sites de `/services`, libellé nav/footer « Création de site internet », meta description de l'accueil, service `web` (description et SEO), `studio.ts` (idealFor), `PRODUCT.md`, `CLAUDE.md`.
+- Image de partage refaite dans l'univers Direction A (nuit, lueur indigo, sans liste « Restaurants • Cafés… ») ; `twitter-image.tsx` réexporte `opengraph-image.tsx`. Piège : satori refuse une couleur unie en dernière couche de `background` (réponse vide du serveur) ; utiliser `backgroundColor` + `backgroundImage`.
+- Landings locales `/site/[secteur]/[ville]` : décision « hors maillage principal ». Constat : elles n'étaient déjà liées ni dans la nav ni dans le footer, seulement dans le sitemap (laissé tel quel). Contenu non modifié.
+- Non modifié volontairement : `src/lib/service-seo.js` et la page `a-propos-methodologie-preuves` (URL legacy redirigées), `components/site/*` (landings locales), `pick4me.ts` et `manteigaria.ts` (contenu factuel), `ui/logos3.tsx` (non importé).
+- Vérification : `npm run verify` OK (Vitest 160/160, build), `git diff --check` OK ; en dev, nouvelles routes 200, anciennes URL 308 vers les nouvelles, canonical/hreflang à jour, `/opengraph-image` et `/twitter-image` 200 image/png (rendu vérifié). Non lancé : Playwright.
+- Suite possible : graisse 800 sur l'image de partage (charger Inter Tight dans `next/og`, aujourd'hui police par défaut).
+
+### 2026-11-02 (accueil : hiérarchie du héros et doublons, étape 3 du plan d'audit)
+
+- Héros : ordre titre → intro → les deux parcours → un seul CTA « Demander un devis gratuit ». Bouton « Voir nos réalisations » retiré (le statement garde le grand lien « Voir les réalisations »). Libellé « Choisissez votre parcours » et kickers des cartes retirés (la liste garde un `aria-label`, attribut `data-hero-paths`). Cartes sur `bg-rs-surface` au lieu du verre `bg-white/[0.04]` + flou ; survol en couleur seule (plus de translation). h1 en 800 et -0.045em (DESIGN.md).
+- Services : lignes 01 et 02 réécrites pour ne plus répéter les cartes du héros (plus de second « Maquette gratuite ») ; numéros 01-04 et libellé « Services » retirés.
+- Statement : hauteur minimale réduite (bureau 50rem → 42rem) pour supprimer la bande vide au premier défilement.
+- Tracking : `hero_view_work` n'existe plus ; `hero_free_quote` et `hero_path_*` restent.
+- Vérification : `detect --scope layout` sans finding, `npm run verify` OK (160/160), Playwright `e2e/home.spec.ts` 12 passés / 2 ignorés (assertion du libellé remplacée par le compte des 2 cartes), captures 1440 et 390 relues.
+- Reste : bannière cookies trop haute qui couvre le héros (étape 4, harden), style de focus, pause du mur, échelle typo, métadonnées.
+
+### 2026-11-02 (bannière cookies compacte et menu mobile en dialogue, étape 4)
+
+- `CookieConsent` : barre pleine largeur en bas (filet haut, plus d'ombre ni de gros titre « Cookies »), texte et boutons sur une ligne dès `sm`, boutons hauts de 44 px. Hauteur mobile environ 130 px au lieu de 250 : les deux cartes de parcours du héros restent visibles. Logique de consentement inchangée (aucune mise à jour de la politique de confidentialité nécessaire).
+- `RootBody` (`src/app/_shared/root.tsx`) : la bannière est rendue juste après le lien d'évitement, donc atteinte tôt au clavier (elle était le dernier des 53 arrêts de tabulation).
+- `MobileMenu` : `role="dialog"`, `aria-modal`, `aria-label="Menu"` ; nouvelle prop `toggleRef` pour inclure le bouton fermer du header dans le piège de focus (il n'était pas atteignable au Tab).
+- Non traité : `aria-controls` pointe vers un id présent seulement menu ouvert (le test unitaire du header l'attend fermé), fond non `inert`.
+- Vérification : lint, typecheck, check:copy, Vitest 160/160 ; Playwright navigation + accueil 23 passés / 13 ignorés ; captures 1440 et 390 relues. Build non relancé dans cette étape (serveur de dev de Rayan en cours, cf. mémoire « no build while dev runs »).
+- Incident : un premier passage E2E a échoué en masse (19 tests) parce que le serveur de dev renvoyait « Internal Server Error » sur toutes les pages ; redémarré, plus reproduit, cause exacte non identifiée.
+
+### 2026-11-02 (pause des animations du héros, étape 5)
+
+- Nouveau `HeroMotionToggle` (`src/components/home/hero-motion-toggle.tsx`, client) : bouton pause/lecture 44 px en bas à droite du héros (`aria-pressed`, libellé FR/EN, masqué sous `prefers-reduced-motion`). Il pose `data-motion-paused` sur la racine `[data-hero-motion]` quand l'utilisateur met en pause ou quand un IntersectionObserver voit le héros sortir de l'écran (WCAG 2.2.2 + coût GPU/batterie).
+- `globals.css` : `animation-play-state: paused` sur les pistes du mur, la rangée mobile et `.hero-glow` sous `[data-motion-paused]` ; `will-change: transform` seulement tant que les boucles tournent. Pause au survol conservée.
+- Détecteur : exclusion `gradient-text` limitée à `src/app/globals.css` (exception `.num-gradient` de DESIGN.md), enregistrée dans `.impeccable/config.json`.
+- Test : nouveau cas E2E « hero motion can be paused, and pauses itself off-screen » dans `e2e/home.spec.ts`.
+- Vérification : lint, typecheck, check:copy, Vitest 160/160 ; Playwright accueil + navigation 24 passés, 1 échec instable (parcours menu mobile, délai de navigation sous charge ; 3/3 en relance isolée) ; captures 1440 et 390 relues. Build non relancé (serveur de dev en cours).
+
+### 2026-11-02 (finitions accueil : focus, tokens, titres, SEO, étape 6)
+
+- Focus clavier dessiné : `:focus-visible` global (2 px `--rs-accent-fg`, décalage 3 px, remappé en indigo clair sur la nuit). Lignes de services et grand lien réalisations : inversion encre au focus comme au survol.
+- Tokens : `--rs-dark-accent-fg` (#8a88f2, réutilisé par `.rs-theme-dark`) et `--rs-live` (#3ddc84) ; le header ne code plus ces couleurs en dur. Tuiles du mur sur `--rs-border` au lieu de `border-white/10`. Labels du footer de 11 px à `text-xs`.
+- SEO accueil : titre FR « Sites web, applications et SaaS sur mesure | Rayan Studio » (57 car.). Statement devenu `h2` (style inchangé), h2 masqué « Le studio en quelques repères » sur les chiffres, flèche « → » sortie du h2 de `ClosingCta` (h2 en `inline`, rendu identique, partagé par 8 pages). JSON-LD : Person `url` vers la page Rayan, `worksFor`, `homeLocation` Séoul, `knowsLanguage` ; ProfessionalService `url` localisée, `image` (`/opengraph-image`), description sans « premium », `areaServed` France/Europe ; WebPage `name` aligné sur le titre.
+- E2E : `routes.spec.ts` attend 19 redirections (15 + 4 du renommage). Piège : la suite complète sur un `.next` vide avec le nombre de workers par défaut corrompt les manifestes du serveur de dev (`SyntaxError ... JSON at position`), d'où 109 faux échecs ; lancer `npx playwright test --workers=2` ou sur un `.next` déjà chaud.
+- Vérification : `npm run verify` OK (160/160, build), HTML construit inspecté (titre, plan h1/h2, JSON-LD), Playwright complet 121 passés + routes 40/40 après correction, 0 échec.
+- Laissé en l'état : `.brand-wordmark` (Georgia, couche legacy), signalé par le détecteur.
+
+### 2026-11-02 (seconde critique/audit puis passe « Tout »)
+
+- Mesures après la première série (dev local) : critique 22 → 24/32, audit 14 → 17/20. Snapshot `.impeccable/critique/2026-11-02T02-07-43Z__…`.
+- Fondateur dans le premier écran : ligne « Rayan Sekkat, ingénieur logiciel à Séoul. Je réponds moi-même à chaque demande. » sous le CTA du héros (lien vers la page Rayan), sans photo (choix de Rayan). Lead du héros sans « interlocuteur unique » ; repère « 1 seul interlocuteur » retiré (grille de 3).
+- Preuve sites web : les 4 produits sont aussi des sites que Rayan a conçus et mis en ligne (pont-facturx.com, pick4me.be, goodcall.gg, getdocextract.com). Le domaine (tiré de `liveUrl`) s'affiche dans la liste « Mes produits en ligne », et la ligne services « Sites web & refonte » dit « comme ceux de mes produits ». Aucune capture ajoutée : le mur montrait déjà ces sites.
+- Bannière cookies : publie sa hauteur dans `--consent-h` (ResizeObserver) ; `html { scroll-padding-bottom }` et `[data-site-footer] { padding-bottom }` l'utilisent, le focus ne passe plus dessous. Plus compacte sur mobile. Mesuré à 390 : bas du CTA à y=700, haut de la barre à y=719.
+- Héros : mur seulement à partir de `xl` (1280 px), rangée en dessous, plus de chevauchement à 1024 ; hauteur mini plus basse et statement moins haut, le vide du bas disparaît (le statement entre dans le premier écran à 1440). Cartes plus serrées sur mobile, flèche → au lieu de ↗.
+- Accessibilité : liens de langue « EN, English version » / « FR, version française » avec `hrefLang`/`lang` (WCAG 2.5.3) ; menu mobile sans `aria-modal`, fond (`#main-content`, footer) rendu `inert` pendant l'ouverture.
+- Finitions : libellé « Qui construit » retiré, paragraphe fondateur à 65ch, `p { text-wrap: pretty }`, flèche du statement sans glissement, `hover:text-white` remplacé par `--rs-dark-fg`, lueur et ombre du statement en `color-mix` sur les tokens, fond de page nuit ou papier sur les pages Direction A (`body:has(#main-content)`), plus de flash beige.
+- Non traité : libellés à 10,8 px sur bureau (spec DESIGN.md 0.75rem × racine 90 %), sens du point vert « disponible ».
+- Vérification : lint, typecheck, check:copy, Vitest 160/160, Playwright accueil + navigation + routes 65 passés / 13 ignorés (2 workers), mesures et captures à 390, 1024 et 1440. Build non relancé (serveur de dev en cours).
+
+### 2026-11-02 (troisième mesure, puis preuve web, étapes et correctifs d'audit)
+
+- Troisième mesure (dev local) : audit 18/20 (14 → 17 → 18, « Excellent ») ; critique 23/32 avec n/a 7 et 9 (non comparable au 24/32 précédent, n/a 7 et 10 ; noyau commun identique, 21/28). Snapshot `.impeccable/critique/2026-11-02T02-28-39Z__…`.
+- Preuve web : captures réelles des pages d'accueil des 4 sites produits (pont-facturx.com, pick4me.be sans bannière cookies, goodcall.gg, getdocextract.com), 1440×900, Playwright, converties en WebP dans `public/realisations/sites/*-site.webp`. Elles remplacent la liste texte du bloc fondateur : grille 2×2 « Mes produits et leurs sites en ligne » (vignette, nom, domaine), liens vers les études de cas. Catégories jargonneuses retirées de cette liste.
+- Repères chiffrés (`HomeProofA`) remplacés par `HomeNextStepsA`, section `#next-steps` « Après votre demande » en 3 étapes (formulaire court, réponse sous 24 h ouvrées + maquette gratuite pour un site, devis écrit). Unifie les deux promesses « 24 h ». `FunnelTracking` et `home-page.test.tsx` mis à jour.
+- Audit : header sans `transition-all` (seuls transform et couleurs animent, hauteur/padding/flou instantanés) ; `scroll-padding-bottom: calc(var(--consent-h) + 0.75rem)` pour ne plus rogner l'anneau ; après Accepter/Refuser, focus sur `#main-content` (`tabindex=-1`, sans anneau via `[tabindex="-1"]:focus`) ; bannière (`data-consent-bar`) rendue inerte quand le menu mobile est ouvert, menu avec padding bas `--consent-h`. Laissé : les 2 ombres (vocabulaire documenté dans DESIGN.md), couche legacy (utilisée par `components/site`).
+- Détecteur : exclusion `design-system-font=georgia` (`.brand-wordmark`, utilisé seulement par `components/site/Navbar.tsx`).
+- En attente de Rayan : choix du nouveau titre H1 (3 propositions).
+- Vérification : lint, typecheck, check:copy, Vitest 160/160, Playwright accueil + navigation + routes 65 passés / 13 ignorés, captures 1440 et 390 relues. Build non relancé (serveur de dev en cours).
+- Titre H1 choisi par Rayan (version A) : « Je conçois et mets en ligne vos sites et applications, sans intermédiaire. » / EN « I design and launch your websites and applications, with no middleman. ». Le title SEO garde « Sites web, applications et SaaS sur mesure ». Specs `e2e/home.spec.ts` et `e2e/motion.spec.ts` mises à jour. Espacements mobiles du héros resserrés (pt-20, intro mt-4, parcours mt-6) pour garder le CTA au-dessus de la bannière à 390 (bas du CTA y=703, barre y=719). Vitest 160/160, Playwright accueil + motion 18 passés / 2 ignorés.
+
+### 2026-11-02 (quatrième mesure, statement Séoul, commits)
+
+- Quatrième mesure (dev local, n/a fixés à 7 et 10) : critique 24/32 (22 → 24 → 24 sur base comparable), audit 20/20. Snapshot `.impeccable/critique/2026-11-02T05-54-31Z__…`.
+- Statement : « Vous dormez, *j'avance*. Vous vous réveillez avec la suite. » (EN « You sleep, *I build*. You wake up to the next step. ») au lieu de répéter le H1.
+- Preuve web : grille renommée « Sites conçus et mis en ligne par le studio » ; carte héros « Un site qui inspire confiance, comme mes 4 sites en ligne » (chiffre écrit en dur, à mettre à jour si le nombre de produits en ligne change).
+- Vocabulaire : « premium » retiré du footer et du menu (« Sites web & refonte ») ; lignes Automatisation et DevOps réécrites en clair.
+- P3 audit : `alt=""` sur les vignettes (le titre nomme déjà le lien), `role="list"` sur les parcours, la grille produits et les étapes (Safari).
+- Restant connu : moitié droite du héros vide entre 1024 et 1279 px (mur à partir de xl), ligne fondateur sous la bannière cookies à 390 au premier chargement, pas de photo du fondateur, Lighthouse SEO à recontrôler après build (meta description dans le body en dev).
+- Vérification avant commit : serveur de dev arrêté, `npm run verify` OK (160/160, build), `.next` vidé, Playwright complet `--workers=2` 123 passés / 13 ignorés / 0 échec.
+- Commits sur `design-seo-pass` : `30215b3` repositionnement sites web, `3b536ed` accueil, `bb63657` accessibilité, puis ce journal + DESIGN.md + sidecar.
