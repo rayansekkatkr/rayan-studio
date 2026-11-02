@@ -7,6 +7,8 @@ export const size = {
 };
 export const contentType = "image/png";
 
+// Share card in the Direction A world (DESIGN.md): night ground, one indigo glow, heavy type.
+// twitter-image.tsx re-exports this file so both cards stay identical.
 export default function OgImage() {
   return new ImageResponse(
     (
@@ -15,36 +17,27 @@ export default function OgImage() {
           height: "100%",
           width: "100%",
           display: "flex",
-          alignItems: "center",
-          justifyContent: "center",
-          background:
-            "radial-gradient(circle at 15% 20%, rgba(165,200,255,0.85), transparent 36%), radial-gradient(circle at 82% 16%, rgba(255,255,255,0.9), transparent 42%), linear-gradient(180deg, #f4f7fc 0%, #ebf2fb 100%)",
-          color: "#0f172a",
-          padding: "56px",
+          flexDirection: "column",
+          justifyContent: "space-between",
+          backgroundColor: "#09090c",
+          backgroundImage:
+            "radial-gradient(circle at 12% 18%, rgba(89,87,217,0.38), transparent 46%), radial-gradient(circle at 88% 92%, rgba(138,136,242,0.16), transparent 42%)",
+          color: "#f7f7f4",
+          padding: "72px 80px",
           fontFamily: "sans-serif",
-          position: "relative",
         }}
       >
-        <div
-          style={{
-            position: "absolute",
-            inset: "40px",
-            borderRadius: "0px",
-            border: "1px solid rgba(255,255,255,0.9)",
-            background: "linear-gradient(145deg, rgba(255,255,255,0.9), rgba(227,240,255,0.7))",
-            boxShadow: "0 30px 50px rgba(123,155,206,0.2)",
-          }}
-        />
-        <div style={{ zIndex: 2, display: "flex", flexDirection: "column", gap: "16px", maxWidth: "900px" }}>
-          <div style={{ fontSize: 26, letterSpacing: 2, textTransform: "uppercase", color: "#2f6dff", fontWeight: 700 }}>
-            Rayan Studio
+        <div style={{ display: "flex", alignItems: "center", gap: "16px", fontSize: 30, fontWeight: 800, letterSpacing: -0.5 }}>
+          <div style={{ width: 12, height: 12, borderRadius: 999, background: "#3ddc84" }} />
+          Rayan Studio
+        </div>
+        <div style={{ display: "flex", flexDirection: "column", gap: "28px" }}>
+          <div style={{ fontSize: 80, lineHeight: 1, fontWeight: 800, letterSpacing: -3, display: "flex", flexDirection: "column" }}>
+            <span>Sites web, applications</span>
+            <span>et SaaS sur mesure.</span>
           </div>
-          <div style={{ fontSize: 72, lineHeight: 1.05, fontWeight: 700, display: "flex", flexDirection: "column" }}>
-            Création et refonte
-            de sites premium
-          </div>
-          <div style={{ fontSize: 30, color: "#475569" }}>
-            Restaurants • Cafés • Hôtels • Boulangeries • Pâtisseries • Bars
+          <div style={{ fontSize: 30, color: "#a2a2aa" }}>
+            Création et refonte de sites · Applications et SaaS · Un seul interlocuteur
           </div>
         </div>
       </div>

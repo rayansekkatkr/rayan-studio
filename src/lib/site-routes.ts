@@ -103,9 +103,9 @@ export function quotePath(locale: Locale, type?: QuoteType) {
 
 export type QuoteType = "site" | "app" | "other";
 
-/** The two commercial landings: websites for small businesses, applications and SaaS. */
-export function smbLandingPath(locale: Locale) {
-  return locale === "fr" ? "/fr/site-internet-commerces-pme" : "/en/websites-small-businesses";
+/** The two commercial landings: website creation and redesign, applications and SaaS. */
+export function websitesLandingPath(locale: Locale) {
+  return locale === "fr" ? "/fr/creation-site-internet" : "/en/website-design";
 }
 
 export function saasLandingPath(locale: Locale) {

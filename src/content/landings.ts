@@ -38,21 +38,21 @@ const WEBSITES: Record<Locale, LandingContent> = {
     quoteType: "site",
     heroImage: "/services/web.webp",
     seo: {
-      title: "Création de site internet pour commerces et PME",
+      title: "Création et refonte de site internet sur mesure",
       description:
-        "Site vitrine ou refonte pour commerces, restaurants, indépendants et PME : design sur mesure, mobile, référencement local et mise en ligne. Maquette gratuite sous 24 h ouvrées.",
+        "Création ou refonte de site internet sur mesure : design, mobile, référencement et mise en ligne, avec un seul interlocuteur. Maquette gratuite sous 24 h ouvrées.",
     },
-    eyebrow: "Sites web · Commerces, restaurants, PME",
+    eyebrow: "Sites web · Création et refonte",
     title: "Un site internet qui donne envie de vous contacter.",
-    lead: "Pour les commerces, restaurants, indépendants et PME : un site clair sur mobile, trouvable sur Google et pensé pour recevoir des demandes. Vous voyez une première maquette avant de vous engager.",
+    lead: "Un nouveau site ou la refonte de l'existant : clair sur mobile, trouvable sur Google et pensé pour recevoir des demandes. Vous voyez une première maquette avant de vous engager.",
     primaryCta: "Recevoir ma maquette gratuite",
     secondaryCta: "Voir les réalisations",
     promises: ["Maquette gratuite sous 24 h ouvrées", "Un seul interlocuteur", "Vous restez propriétaire du site"],
     benefitsTitle: "Ce que votre site doit vous apporter",
     benefits: [
       {
-        title: "Être trouvé localement",
-        body: "Des pages structurées pour Google et pour votre fiche d'établissement, avec les informations que vos clients cherchent vraiment.",
+        title: "Être trouvé",
+        body: "Des pages structurées pour Google, avec les informations que vos visiteurs cherchent vraiment.",
       },
       {
         title: "Convaincre sur mobile",
@@ -72,7 +72,7 @@ const WEBSITES: Record<Locale, LandingContent> = {
       "Design sur mesure, pas un modèle générique",
       "Version mobile soignée en priorité",
       "Textes structurés avec vous à partir de votre activité",
-      "Bases du référencement local (titres, descriptions, données structurées)",
+      "Bases du référencement (titres, descriptions, données structurées)",
       "Formulaire, appel ou WhatsApp en un clic",
       "Nom de domaine, hébergement et mise en ligne",
       "Mesure d'audience respectueuse du consentement",
@@ -81,14 +81,14 @@ const WEBSITES: Record<Locale, LandingContent> = {
     timeline: {
       title: "De votre message à votre maquette.",
       steps: [
-        { when: "Jour 0", title: "Vous décrivez votre activité", body: "Deux minutes, un formulaire court. Pas besoin de cahier des charges." },
+        { when: "Jour 0", title: "Vous décrivez votre projet", body: "Deux minutes, un formulaire court. Pas besoin de cahier des charges." },
         { when: "Sous 24 h", title: "Vous recevez la maquette", body: "La page d'accueil de votre futur site, à votre image, sans engagement." },
         { when: "Ensuite", title: "Vous décidez", body: "Devis écrit si vous souhaitez continuer. Sinon, rien à payer." },
       ],
     },
     processTitle: "Comment ça se passe",
     process: [
-      "Vous décrivez votre activité en quelques lignes, sans jargon.",
+      "Vous décrivez votre projet en quelques lignes, sans jargon.",
       "Vous recevez une maquette gratuite de votre page d'accueil sous 24 h ouvrées.",
       "Le site est développé, relu avec vous, puis ajusté.",
       "Mise en ligne sur votre nom de domaine, puis suivi et évolutions.",
@@ -97,12 +97,12 @@ const WEBSITES: Record<Locale, LandingContent> = {
       {
         question: "La maquette est-elle vraiment gratuite ?",
         answer:
-          "Oui. Vous décrivez votre activité, vous recevez une proposition visuelle de votre page d'accueil sous 24 h ouvrées. Vous décidez ensuite, sans engagement.",
+          "Oui. Vous décrivez votre projet, vous recevez une proposition visuelle de votre page d'accueil sous 24 h ouvrées. Vous décidez ensuite, sans engagement.",
       },
       {
-        question: "Combien coûte un site vitrine ?",
+        question: "Combien coûte un site internet ?",
         answer:
-          "Le prix dépend du nombre de pages et des fonctions (réservation, menu, galerie). Le devis est gratuit, écrit et détaillé avant tout engagement : vous savez exactement ce qui est inclus.",
+          "Le prix dépend du nombre de pages et des fonctions (réservation, espace client, plusieurs langues). Le devis est gratuit, écrit et détaillé avant tout engagement : vous savez exactement ce qui est inclus.",
       },
       {
         question: "Je n'ai ni textes ni photos, est-ce un problème ?",
@@ -120,28 +120,28 @@ const WEBSITES: Record<Locale, LandingContent> = {
       },
     ],
     formTitle: "Recevez votre maquette gratuite",
-    formLead: "Décrivez votre activité en quelques lignes. Première maquette de votre page d'accueil sous 24 h ouvrées, sans engagement.",
+    formLead: "Décrivez votre projet en quelques lignes. Première maquette de votre page d'accueil sous 24 h ouvrées, sans engagement.",
   },
   en: {
     key: "websites",
     quoteType: "site",
     heroImage: "/services/web.webp",
     seo: {
-      title: "Website design for small businesses",
+      title: "Custom website design and redesign",
       description:
-        "New website or redesign for shops, restaurants, freelancers and small businesses: custom design, mobile first, local SEO and launch. Free mockup within 24 business hours.",
+        "New website or redesign of your current one: custom design, mobile first, SEO and launch, with one point of contact. Free mockup within 24 business hours.",
     },
-    eyebrow: "Websites · Shops, restaurants, small businesses",
+    eyebrow: "Websites · Design and redesign",
     title: "A website that makes people want to contact you.",
-    lead: "For shops, restaurants, freelancers and small businesses: a site that is clear on mobile, easy to find on Google and built to receive enquiries. You see a first mockup before committing.",
+    lead: "A new website or a redesign of your current one: clear on mobile, easy to find on Google and built to receive enquiries. You see a first mockup before committing.",
     primaryCta: "Get my free mockup",
     secondaryCta: "See the work",
     promises: ["Free mockup within 24 business hours", "One point of contact", "You own the website"],
     benefitsTitle: "What your website should bring you",
     benefits: [
       {
-        title: "Be found locally",
-        body: "Pages structured for Google and for your business profile, with the information your clients actually look for.",
+        title: "Be found",
+        body: "Pages structured for Google, with the information your visitors actually look for.",
       },
       {
         title: "Convince on mobile",
@@ -161,7 +161,7 @@ const WEBSITES: Record<Locale, LandingContent> = {
       "Custom design, not a generic template",
       "Carefully designed mobile version first",
       "Copy structured with you from your business",
-      "Local SEO basics (titles, descriptions, structured data)",
+      "SEO basics (titles, descriptions, structured data)",
       "Form, call or WhatsApp in one click",
       "Domain name, hosting and launch",
       "Consent-friendly audience measurement",
@@ -170,14 +170,14 @@ const WEBSITES: Record<Locale, LandingContent> = {
     timeline: {
       title: "From your message to your mockup.",
       steps: [
-        { when: "Day 0", title: "You describe your business", body: "Two minutes, a short form. No specification needed." },
+        { when: "Day 0", title: "You describe your project", body: "Two minutes, a short form. No specification needed." },
         { when: "Within 24 h", title: "You receive the mockup", body: "The home page of your future website, in your image, with no commitment." },
         { when: "Then", title: "You decide", body: "A written quote if you want to go ahead. Otherwise, nothing to pay." },
       ],
     },
     processTitle: "How it works",
     process: [
-      "You describe your business in a few lines, no jargon.",
+      "You describe your project in a few lines, no jargon.",
       "You receive a free mockup of your home page within 24 business hours.",
       "The website is built, reviewed with you, then adjusted.",
       "Launch on your domain name, then follow-up and updates.",
@@ -186,12 +186,12 @@ const WEBSITES: Record<Locale, LandingContent> = {
       {
         question: "Is the mockup really free?",
         answer:
-          "Yes. You describe your business and receive a visual proposal of your home page within 24 business hours. Then you decide, with no commitment.",
+          "Yes. You describe your project and receive a visual proposal of your home page within 24 business hours. Then you decide, with no commitment.",
       },
       {
         question: "How much does a website cost?",
         answer:
-          "It depends on the number of pages and features (booking, menu, gallery). The quote is free, written and detailed before any commitment.",
+          "It depends on the number of pages and features (booking, client area, several languages). The quote is free, written and detailed before any commitment.",
       },
       {
         question: "I have no copy or photos, is that a problem?",
@@ -209,7 +209,7 @@ const WEBSITES: Record<Locale, LandingContent> = {
       },
     ],
     formTitle: "Get your free mockup",
-    formLead: "Describe your business in a few lines. First mockup of your home page within 24 business hours, no commitment.",
+    formLead: "Describe your project in a few lines. First mockup of your home page within 24 business hours, no commitment.",
   },
 };
 

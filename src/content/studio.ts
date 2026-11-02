@@ -113,7 +113,7 @@ export const OFFERS_CONTENT: Record<
       },
       {
         title: "Sites premium & refonte",
-        idealFor: "Les entreprises et commerces dont le site ne reflète plus la qualité réelle de leur travail.",
+        idealFor: "Toute structure dont le site ne reflète plus la qualité réelle de son travail, ou qui n'en a pas encore.",
         mayInclude: [
           "Direction visuelle et UX",
           "Développement sur mesure",

@@ -18,10 +18,10 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
     locale,
     title: en
       ? `Websites, web applications and custom SaaS | ${BRAND.name}`
-      : `Création de sites web, applications et SaaS sur mesure | ${BRAND.name}`,
+      : `Sites web, applications et SaaS sur mesure | ${BRAND.name}`,
     description: en
-      ? "Independent studio building websites for small businesses and custom applications and SaaS for startups and companies, with one point of contact. Free quote, reply within 24 business hours."
-      : "Studio indépendant : sites internet pour commerces et PME, applications et SaaS sur mesure pour startups et entreprises, avec un interlocuteur unique. Devis gratuit, réponse sous 24 h ouvrées.",
+      ? "Independent studio: website design and redesign, custom applications and SaaS, with one point of contact. Free quote, reply within 24 business hours."
+      : "Studio indépendant : création et refonte de sites internet, applications et SaaS sur mesure, avec un interlocuteur unique. Devis gratuit sous 24 h ouvrées.",
     path: `/${locale}`,
     alternatePath: en ? "/fr" : "/en",
   });

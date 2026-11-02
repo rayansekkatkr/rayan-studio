@@ -8,7 +8,7 @@ import { TechIcon } from "@/components/ui/tech-chips";
 import { getCraPage } from "@/content/cra";
 import { getService } from "@/content/services";
 import type { Locale } from "@/lib/i18n";
-import { craPath, quotePath, saasLandingPath, servicePath, smbLandingPath, type ServiceKey } from "@/lib/site-routes";
+import { craPath, quotePath, saasLandingPath, servicePath, websitesLandingPath, type ServiceKey } from "@/lib/site-routes";
 import { PAGE_HERO_PHOTOS } from "@/content/visuals";
 
 const STACK = ["Next.js", "React", "TypeScript", "Node.js", "NestJS", "Python", "PostgreSQL", "Docker", "Kubernetes", "AWS", "Stripe", "Claude"];
@@ -27,7 +27,7 @@ const GROUPS: Group[] = [
   {
     id: "parcours-sites",
     label: { fr: "Pour être trouvé", en: "To be found" },
-    audience: { fr: "Commerces, restaurants, indépendants et PME.", en: "Shops, restaurants, freelancers and small businesses." },
+    audience: { fr: "Création d'un nouveau site ou refonte de l'existant.", en: "A new website or a redesign of your current one." },
     cta: {
       label: { fr: "Maquette gratuite sous 24 h ouvrées", en: "Free mockup within 24 business hours" },
       href: (locale) => quotePath(locale, "site"),
@@ -100,9 +100,9 @@ export function ServicesIndex({ locale }: { locale: Locale }) {
   const doors = [
     {
       id: "sites",
-      kicker: fr ? "Commerces, PME" : "Shops, small businesses",
+      kicker: fr ? "Création, refonte" : "New site, redesign",
       title: fr ? "Sites web & refonte" : "Websites & redesign",
-      href: smbLandingPath(locale),
+      href: websitesLandingPath(locale),
     },
     {
       id: "applications",

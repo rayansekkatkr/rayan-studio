@@ -6,7 +6,7 @@ import { Eyebrow } from "@/components/ui/eyebrow";
 import { TechChips } from "@/components/ui/tech-chips";
 import type { ProjectRecord } from "@/content/projects";
 import type { Locale } from "@/lib/i18n";
-import { quotePath, smbLandingPath, workPath } from "@/lib/site-routes";
+import { quotePath, websitesLandingPath, workPath } from "@/lib/site-routes";
 import { cn } from "@/lib/utils";
 import { NightBand } from "@/components/ui/night-band";
 import { CaseStudyGallery } from "./case-study-gallery";
@@ -222,7 +222,7 @@ export function CaseStudyPage({ locale, project }: { locale: Locale; project: Pr
           }
           secondary={
             isWeb
-              ? { label: fr ? "Voir l'offre sites web" : "See the website offer", href: smbLandingPath(locale), ctaId: "project_to_websites_offer" }
+              ? { label: fr ? "Voir l'offre sites web" : "See the website offer", href: websitesLandingPath(locale), ctaId: "project_to_websites_offer" }
               : { label: fr ? "Devis gratuit" : "Free quote", href: quotePath(locale, "app"), ctaId: "project_free_quote" }
           }
         />
