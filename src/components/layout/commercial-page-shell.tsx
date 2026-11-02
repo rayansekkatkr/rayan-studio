@@ -8,6 +8,8 @@ type CommercialPageShellProps = {
   children: React.ReactNode;
   className?: string;
   headerTopTheme?: "light" | "dark";
+  /** Passed to the header quote button, for pages that carry the quote form. */
+  quoteHref?: string;
 };
 
 export function CommercialPageShell({
@@ -15,10 +17,11 @@ export function CommercialPageShell({
   children,
   className,
   headerTopTheme = "dark",
+  quoteHref,
 }: CommercialPageShellProps) {
   return (
     <>
-      <SiteHeader locale={locale} topTheme={headerTopTheme} />
+      <SiteHeader locale={locale} topTheme={headerTopTheme} quoteHref={quoteHref} />
       <main id="main-content" className={cn("min-h-screen bg-rs-bg text-rs-fg", className)}>
         {children}
       </main>

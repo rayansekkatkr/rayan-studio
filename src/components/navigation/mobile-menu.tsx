@@ -15,11 +15,12 @@ type MobileMenuProps = {
   onClose: () => void;
   /** The header toggle (close button) stays reachable inside the focus trap. */
   toggleRef?: React.RefObject<HTMLButtonElement | null>;
+  quoteHref?: string;
 };
 
 const FOCUSABLE = 'a[href], button:not([disabled]), [tabindex]:not([tabindex="-1"])';
 
-export function MobileMenu({ id, locale, links, onClose, toggleRef }: MobileMenuProps) {
+export function MobileMenu({ id, locale, links, onClose, toggleRef, quoteHref }: MobileMenuProps) {
   const fr = locale === "fr";
   const containerRef = useRef<HTMLDivElement>(null);
 
@@ -99,7 +100,7 @@ export function MobileMenu({ id, locale, links, onClose, toggleRef }: MobileMenu
           <LanguageSwitch locale={locale} />
         </div>
         <Link
-          href={quotePath(locale)}
+          href={quoteHref ?? quotePath(locale)}
           onClick={onClose}
           className="mt-6 inline-flex items-center justify-center bg-rs-fg px-6 py-3.5 text-base font-semibold text-rs-bg transition-colors duration-150 hover:bg-rs-accent"
         >

@@ -18,9 +18,12 @@ type SiteHeaderProps = {
   locale: Locale;
   /** Foreground contrast for the transparent top state, set by the page hosting the header. */
   topTheme?: "light" | "dark";
+  /** Where the quote button goes. Pages with the quote form on them point to it (e.g. "#devis"). */
+  quoteHref?: string;
 };
 
-export function SiteHeader({ locale, topTheme = "light" }: SiteHeaderProps) {
+export function SiteHeader({ locale, topTheme = "light", quoteHref }: SiteHeaderProps) {
+  const quoteTarget = quoteHref ?? quotePath(locale);
   const fr = locale === "fr";
   const links = getPrimaryNav(locale);
   const pathname = usePathname() ?? "";
@@ -124,8 +127,8 @@ export function SiteHeader({ locale, topTheme = "light" }: SiteHeaderProps) {
           <div className="hidden items-center gap-5 lg:flex">
             <LanguageSwitch locale={locale} tone={inverse ? "inverse" : "default"} />
             <TrackedLink
-              href={quotePath(locale)}
-              event={{ ctaId: "nav_free_quote", source: "site_header", destination: quotePath(locale), locale }}
+              href={quoteTarget}
+              event={{ ctaId: "nav_free_quote", source: "site_header", destination: quoteTarget, locale }}
               className={cn(
                 "inline-flex items-center gap-2 px-5 py-2.5 text-sm font-semibold transition-colors duration-150",
                 inverse
@@ -159,6 +162,7 @@ export function SiteHeader({ locale, topTheme = "light" }: SiteHeaderProps) {
           links={links}
           onClose={() => setMobileOpen(false)}
           toggleRef={mobileButtonRef}
+          quoteHref={quoteTarget}
         />
       ) : null}
     </header>

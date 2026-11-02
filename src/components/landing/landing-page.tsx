@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 import { ArrowRight, ArrowUpRight, Check, Plus } from "lucide-react";
 import { TrackedLink } from "@/components/analytics/tracked-link";
@@ -10,27 +11,105 @@ import { GiantWord } from "@/components/ui/giant-word";
 import { NightBand } from "@/components/ui/night-band";
 import { TechChips } from "@/components/ui/tech-chips";
 import type { LandingContent } from "@/content/landings";
+import { PROJECTS } from "@/content/projects";
+import { projectStatusBadge } from "@/components/work/project-labels";
 import { getService } from "@/content/services";
 import type { Locale } from "@/lib/i18n";
-import { servicePath, startProjectPath, workPath } from "@/lib/site-routes";
+import { servicePath, startProjectPath, studioPath, workPath } from "@/lib/site-routes";
 import { cn } from "@/lib/utils";
 
-function SectionTitle({ eyebrow, title, lead, serif = false }: { eyebrow: string; title?: string; lead?: string; serif?: boolean }) {
+// Section headings carry their own weight: no kicker above them (only the night-band header keeps
+// its label, which reads as a breadcrumb).
+function SectionTitle({ title, lead, serif = false }: { title: string; lead?: string; serif?: boolean }) {
   return (
     <div>
-      <Eyebrow>{eyebrow}</Eyebrow>
-      {title ? (
-        <h2
-          className={cn(
-            "mt-4 max-w-4xl text-[2.25rem] font-extrabold leading-[0.98] tracking-[-0.045em] md:text-6xl",
-            serif && "font-serif font-normal tracking-[-0.01em]",
-          )}
-        >
-          {title}
-        </h2>
-      ) : null}
+      <h2
+        className={cn(
+          "max-w-4xl text-[2.25rem] font-extrabold leading-[0.98] tracking-[-0.045em] md:text-6xl",
+          serif && "font-serif font-normal tracking-[-0.01em]",
+        )}
+      >
+        {title}
+      </h2>
       {lead ? <p className="mt-4 max-w-[var(--rs-reading)] text-lg leading-relaxed text-rs-muted">{lead}</p> : null}
     </div>
+  );
+}
+
+// Real home-page captures of the studio's live product sites, keyed by project slug.
+const SITE_SHOTS: Record<string, string> = {
+  pick4me: "/realisations/sites/pick4me-site.webp",
+  "pont-facturx": "/realisations/sites/pont-facturx-site.webp",
+  goodcall: "/realisations/sites/goodcall-site.webp",
+  docextract: "/realisations/sites/docextract-site.webp",
+};
+
+/**
+ * Websites landing: the proof is the studio's own live sites, shown, with their real domains.
+ * Replaces the generic trust block (stack grid, product count) on this page.
+ */
+function LandingSitesProof({ locale }: { locale: Locale }) {
+  const fr = locale === "fr";
+  const sites = PROJECTS.filter(
+    (project) => project.liveUrl && SITE_SHOTS[project.slug] && projectStatusBadge(project, locale).tone === "live",
+  );
+  return (
+    <section data-landing-proof className="border-t border-[var(--rs-border)] py-[var(--rs-section-space)]">
+      <Container>
+        <SectionTitle
+          title={fr ? "Des preuves que vous pouvez vérifier." : "Proof you can check for yourself."}
+          lead={
+            fr
+              ? "Les sites de mes propres produits, conçus, développés et mis en ligne par le studio. Ils sont en production : ouvrez-les."
+              : "The websites of my own products, designed, built and launched by the studio. They are live: open them."
+          }
+        />
+        <ul role="list" className="mt-10 grid gap-x-6 gap-y-10 sm:grid-cols-2">
+          {sites.map((project) => {
+            const host = new URL(project.liveUrl as string).hostname.replace(/^www\./, "");
+            return (
+              <li key={project.key}>
+                <a
+                  href={project.liveUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="group block transition-colors duration-150 hover:text-rs-accent-fg"
+                >
+                  <span className="block overflow-hidden border border-[var(--rs-border)] transition-colors duration-150 group-hover:border-rs-accent">
+                    <Image
+                      src={SITE_SHOTS[project.slug]}
+                      alt=""
+                      width={1440}
+                      height={900}
+                      sizes="(min-width: 1280px) 38rem, (min-width: 640px) 46vw, 92vw"
+                      className="h-auto w-full"
+                    />
+                  </span>
+                  <span className="mt-4 flex items-center justify-between gap-3 text-2xl font-bold tracking-[-0.03em]">
+                    {project.title}
+                    <ArrowUpRight aria-hidden className="h-5 w-5 shrink-0" />
+                  </span>
+                  <span className="mt-1 block text-base text-rs-muted">
+                    {host}
+                    <span className="sr-only">{fr ? " (s'ouvre dans un nouvel onglet)" : " (opens in a new tab)"}</span>
+                  </span>
+                </a>
+              </li>
+            );
+          })}
+        </ul>
+        <p className="mt-10 max-w-[var(--rs-reading)] text-lg leading-relaxed text-rs-muted">
+          {fr ? "Votre site sera conçu par la même personne : " : "Your website will be built by the same person: "}
+          <Link
+            href={studioPath(locale, "rayan")}
+            className="font-semibold text-rs-fg underline underline-offset-4 transition-colors duration-150 hover:text-rs-accent-fg"
+          >
+            Rayan Sekkat
+          </Link>
+          {fr ? ", du cadrage à la mise en ligne." : ", from scoping to launch."}
+        </p>
+      </Container>
+    </section>
   );
 }
 
@@ -54,7 +133,7 @@ function LandingHeroA({ locale, content, source }: { locale: Locale; content: La
             <TrackedLink
               href="#devis"
               event={{ ctaId: `${source}_hero_form`, source, destination: "#devis", locale }}
-              className="inline-flex items-center gap-2 bg-rs-accent px-6 py-3.5 text-base font-semibold text-white transition-colors duration-150 hover:bg-rs-fg hover:text-rs-bg"
+              className="inline-flex items-center gap-2 bg-rs-fg px-6 py-3.5 text-base font-semibold text-[var(--rs-dark)] transition-colors duration-150 hover:bg-rs-accent hover:text-rs-fg"
             >
               {content.primaryCta}
               <ArrowRight aria-hidden className="h-4 w-4" />
@@ -90,24 +169,62 @@ export function LandingPage({ locale, content }: { locale: Locale; content: Land
       {content.timeline ? (
         <section data-landing-signature="timeline" className="py-[var(--rs-section-space)]">
           <Container>
-            <SectionTitle eyebrow={content.processTitle} title={content.timeline.title} />
+            <SectionTitle title={content.timeline.title} />
             <ol className="mt-10 grid gap-10 border-t border-rs-fg md:grid-cols-3 md:gap-0">
               {content.timeline.steps.map((step) => (
                 <li key={step.when} className="pt-8 md:border-r md:border-[var(--rs-border)] md:px-8 md:first:pl-0 md:last:border-r-0">
-                  <p className="text-6xl font-black leading-[0.9] tracking-[-0.05em] md:text-7xl">{step.when}</p>
+                  <p className="text-5xl font-black leading-[0.9] tracking-[-0.05em] md:text-6xl">{step.when}</p>
                   <h3 className="mt-3 text-xl font-semibold">{step.title}</h3>
                   <p className="mt-2 text-base leading-relaxed text-rs-muted">{step.body}</p>
                 </li>
               ))}
             </ol>
+            {isWebsites ? (
+              // What "a mockup" looks like: a real concept from the studio, labelled as such.
+              <figure className="mt-14 grid items-center gap-8 border-t border-[var(--rs-border)] pt-10 md:grid-cols-[minmax(0,15rem)_minmax(0,1fr)] md:gap-12">
+                <div className="mx-auto w-full max-w-[15rem] overflow-hidden border border-[var(--rs-border)]">
+                  <Image
+                    src="/realisations/manteigaria-mobile.webp"
+                    alt={
+                      fr
+                        ? "Maquette mobile de la page d'accueil Manteigaria : photo plein écran, titre « L'Art du Goût » et bouton « Découvrir notre histoire »"
+                        : "Mobile mockup of the Manteigaria home page: full-screen photo, the title \u201cL'Art du Go\u00fbt\u201d and a \u201cDiscover our story\u201d button"
+                    }
+                    width={780}
+                    height={1688}
+                    sizes="15rem"
+                    className="h-auto w-full"
+                  />
+                </div>
+                <figcaption>
+                  <p className="text-2xl font-bold tracking-[-0.03em] md:text-3xl">
+                    {fr ? "À quoi ressemble une maquette ?" : "What does a mockup look like?"}
+                  </p>
+                  <p className="mt-3 max-w-[var(--rs-reading)] text-lg leading-relaxed text-rs-muted">
+                    {fr
+                      ? "La page d'accueil de votre futur site, à votre image, prête à être discutée. Ci-contre : une refonte concept du site d'une pâtisserie artisanale, réalisée par le studio et non commandée."
+                      : "The home page of your future website, in your image, ready to discuss. Shown here: a concept redesign of an artisan bakery website, made by the studio and not commissioned."}
+                  </p>
+                  <Link
+                    href={workPath(locale, "manteigaria")}
+                    className="mt-5 inline-flex items-center gap-2 text-base font-semibold underline underline-offset-4 transition-colors duration-150 hover:text-rs-accent-fg"
+                  >
+                    {fr ? "Voir le concept en avant / après" : "See the concept before / after"}
+                    <ArrowRight aria-hidden className="h-4 w-4" />
+                  </Link>
+                </figcaption>
+              </figure>
+            ) : null}
           </Container>
         </section>
       ) : null}
 
+      {isWebsites ? <LandingSitesProof locale={locale} /> : null}
+
       {content.architecture ? (
         <section data-landing-signature="architecture" className="py-[var(--rs-section-space)]">
           <Container>
-            <SectionTitle eyebrow={fr ? "Architecture type" : "Typical architecture"} title={content.architecture.title} />
+            <SectionTitle title={content.architecture.title} />
             <ol className="mt-10 grid border border-rs-fg sm:grid-cols-2 lg:grid-cols-4">
               {content.architecture.layers.map((layer, index) => (
                 <li
@@ -148,7 +265,7 @@ export function LandingPage({ locale, content }: { locale: Locale; content: Land
 
       <section className="border-t border-[var(--rs-border)] py-[var(--rs-section-space)]">
         <Container>
-          <SectionTitle eyebrow={fr ? "Bénéfices" : "Benefits"} title={content.benefitsTitle} />
+          <SectionTitle title={content.benefitsTitle} />
           {isWebsites ? (
             // Websites: an editorial list, read top to bottom like a short brief.
             <ol data-benefits="list" className="mt-10 border-t border-rs-fg">
@@ -186,7 +303,7 @@ export function LandingPage({ locale, content }: { locale: Locale; content: Land
         <Container>
           <div className={cn("grid gap-10 lg:gap-14", !isWebsites && "lg:grid-cols-2")}>
             <div>
-              <SectionTitle eyebrow={content.includedTitle} />
+              <SectionTitle title={content.includedTitle} />
               <ul className={cn("mt-6 grid gap-x-6 gap-y-3 sm:grid-cols-2", isWebsites && "lg:grid-cols-4")}>
                 {content.included.map((item) => (
                   <li key={item} className="flex gap-3 text-base leading-relaxed">
@@ -198,7 +315,7 @@ export function LandingPage({ locale, content }: { locale: Locale; content: Land
             </div>
             {isWebsites ? null : (
               <div>
-                <SectionTitle eyebrow={content.processTitle} />
+                <SectionTitle title={content.processTitle} />
                 <div className="mt-6">
                   <BigSteps steps={content.process} />
                 </div>
@@ -234,14 +351,16 @@ export function LandingPage({ locale, content }: { locale: Locale; content: Land
         </Container>
       </section>
 
-      <div className="border-t border-[var(--rs-border)]">
-        <Reassurance locale={locale} variant={isWebsites ? "site" : "app"} />
-      </div>
+      {isWebsites ? null : (
+        <div className="border-t border-[var(--rs-border)]">
+          <Reassurance locale={locale} variant="app" />
+        </div>
+      )}
 
       <section className="border-t border-[var(--rs-border)] py-[var(--rs-section-space)]">
         <Container>
           <div className="grid gap-10 lg:grid-cols-[minmax(0,5fr)_minmax(0,7fr)] lg:gap-14">
-            <SectionTitle eyebrow="FAQ" title={fr ? "Les questions qu'on nous pose" : "Questions we are asked"} />
+            <SectionTitle title={fr ? "Les questions qu'on nous pose" : "Questions we are asked"} />
             <div className="divide-y divide-[var(--rs-border)] border-y border-[var(--rs-border)]">
               {content.faq.map((item) => (
                 <details key={item.question} className="group py-5">
@@ -263,8 +382,7 @@ export function LandingPage({ locale, content }: { locale: Locale; content: Land
             <div
               className="rs-theme-dark relative isolate bg-rs-bg p-8 text-rs-fg md:p-10"
             >
-              <Eyebrow>{fr ? "Devis gratuit" : "Free quote"}</Eyebrow>
-              <h2 className="mt-4 text-[2rem] font-extrabold leading-[1] tracking-[-0.04em] md:text-[2.6rem]">{content.formTitle}</h2>
+              <h2 className="text-[2rem] font-extrabold leading-[1] tracking-[-0.04em] md:text-[2.6rem]">{content.formTitle}</h2>
               <p className="mt-4 text-base leading-relaxed text-rs-muted">{content.formLead}</p>
               <ul className="mt-6 space-y-2.5 text-sm">
                 {content.promises.map((promise) => (

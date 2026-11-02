@@ -1,7 +1,6 @@
 import Link from "next/link";
 import { ArrowUpRight, Check } from "lucide-react";
 import { Container } from "@/components/ui/container";
-import { Eyebrow } from "@/components/ui/eyebrow";
 import { TechIcon } from "@/components/ui/tech-chips";
 import { PROJECTS } from "@/content/projects";
 import type { Locale } from "@/lib/i18n";
@@ -49,8 +48,7 @@ export function Reassurance({ locale, variant = "general", className }: { locale
   return (
     <section data-reassurance={variant} className={cn("py-[var(--rs-section-space)]", className)}>
       <Container>
-        <Eyebrow>{fr ? "Pourquoi nous faire confiance" : "Why trust the studio"}</Eyebrow>
-        <h2 className="mt-4 max-w-4xl text-[2.25rem] font-extrabold leading-[0.98] tracking-[-0.045em] md:text-6xl">
+        <h2 className="max-w-4xl text-[2.25rem] font-extrabold leading-[0.98] tracking-[-0.045em] md:text-6xl">
           {fr ? "Des preuves que vous pouvez vérifier." : "Proof you can check for yourself."}
         </h2>
         <p className="mt-4 max-w-[var(--rs-reading)] text-lg leading-relaxed text-rs-muted">
