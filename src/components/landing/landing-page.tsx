@@ -2,6 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { ArrowRight, ArrowUpRight, Check, Plus } from "lucide-react";
 import { TrackedLink } from "@/components/analytics/tracked-link";
+import { ConceptGallery } from "@/components/landing/concept-gallery";
 import { LandingStickyCta } from "@/components/landing/landing-sticky-cta";
 import { BigSteps } from "@/components/article/article-blocks";
 import { QuickQuoteForm } from "@/components/forms/quick-quote-form";
@@ -65,66 +66,18 @@ function LandingSitesProof({ locale }: { locale: Locale }) {
               : "The kind of website you get, then the websites I ship for my own products."
           }
         />
-        {/* The kind of site a business gets: the same concept home page on desktop and mobile, exactly what the 24-hour mockup covers. */}
-        <figure className="mt-10 border-t border-rs-fg pt-8">
-          <figcaption className="max-w-[60ch]">
-            <h3 className="text-2xl font-bold tracking-[-0.03em] md:text-3xl">
-              {fr ? "À quoi ressemble votre maquette" : "What your mockup looks like"}
-            </h3>
-            <p className="mt-3 text-lg leading-relaxed text-rs-muted">
-              {fr
-                ? "La maquette des 24 h : la page d'accueil de votre futur site, en version bureau et mobile, à vos couleurs et avec vos textes."
-                : "The 24-hour mockup: the home page of your future website, desktop and mobile, in your colours and with your copy."}
-            </p>
-            <p className="mt-2 text-base leading-relaxed text-rs-muted">
-              {fr
-                ? "Exemple : refonte concept du site de la pâtisserie Manteigaria, réalisée par le studio et non commandée."
-                : "Example: a concept redesign of the Manteigaria bakery website, made by the studio and not commissioned."}{" "}
-              <Link
-                href={workPath(locale, "manteigaria")}
-                className="font-semibold text-rs-fg underline underline-offset-4 transition-colors duration-150 hover:text-rs-accent-fg"
-              >
-                {fr ? "Voir l'étude de cas" : "See the case study"}
-              </Link>
-            </p>
-          </figcaption>
-          <div className="mt-8 grid items-end gap-6 md:grid-cols-[minmax(0,1fr)_minmax(0,16rem)] md:gap-10">
-            <div>
-              <p className="text-sm font-semibold text-rs-muted">{fr ? "Version bureau" : "Desktop view"}</p>
-              <div className="mt-2 overflow-hidden border border-[var(--rs-border)]">
-                <Image
-                  src="/realisations/manteigaria-before.png"
-                  alt={
-                    fr
-                      ? "Maquette bureau de la page d'accueil Manteigaria : photo plein écran, titre « L'Art du Goût » et bouton « Découvrir notre histoire »"
-                      : "Desktop mockup of the Manteigaria home page: full-screen photo, the title \u201cL'Art du Go\u00fbt\u201d and a \u201cDiscover our story\u201d button"
-                  }
-                  width={1600}
-                  height={827}
-                  sizes="(min-width: 768px) 46rem, 92vw"
-                  className="h-auto w-full"
-                />
-              </div>
-            </div>
-            <div className="mx-auto w-full max-w-[16rem]">
-              <p className="text-sm font-semibold text-rs-muted">{fr ? "Version mobile" : "Mobile view"}</p>
-              <div className="mt-2 overflow-hidden border border-[var(--rs-border)]">
-                <Image
-                  src="/realisations/manteigaria-mobile.webp"
-                  alt={
-                    fr
-                      ? "Maquette mobile de la page d'accueil Manteigaria : photo plein écran, titre « L'Art du Goût » et bouton « Découvrir notre histoire »"
-                      : "Mobile mockup of the Manteigaria home page: full-screen photo, the title \u201cL'Art du Go\u00fbt\u201d and a \u201cDiscover our story\u201d button"
-                  }
-                  width={780}
-                  height={1688}
-                  sizes="16rem"
-                  className="h-auto w-full"
-                />
-              </div>
-            </div>
-          </div>
-        </figure>
+        {/* The kind of site a business gets: real live home pages beside the studio's concept mockups (src/content/concepts.ts). */}
+        <div className="mt-10 border-t border-rs-fg pt-8">
+          <h3 className="text-2xl font-bold tracking-[-0.03em] md:text-3xl">
+            {fr ? "À quoi ressemble votre maquette" : "What your mockup looks like"}
+          </h3>
+          <p className="mt-3 max-w-[60ch] text-lg leading-relaxed text-rs-muted">
+            {fr
+              ? "La maquette des 24 h : la page d'accueil de votre futur site, en version bureau et mobile, à vos couleurs et avec vos textes. Quatre refontes concept de sites existants : faites glisser pour comparer."
+              : "The 24-hour mockup: the home page of your future website, desktop and mobile, in your colours and with your copy. Four concept redesigns of existing websites: drag to compare."}
+          </p>
+          <ConceptGallery locale={locale} />
+        </div>
         <h3 className="mt-16 text-2xl font-bold tracking-[-0.03em] md:text-3xl">
           {fr ? "Et les sites de mes propres produits" : "And the websites of my own products"}
         </h3>

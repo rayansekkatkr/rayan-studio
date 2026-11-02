@@ -69,3 +69,16 @@ describe("accent highlights", () => {
     }
   });
 });
+
+describe("concept before / after", () => {
+  it("ships the before and after image of every concept", async () => {
+    const { existsSync } = await import("node:fs");
+    const { CONCEPTS } = await import("@/content/concepts");
+    expect(CONCEPTS.length).toBeGreaterThan(0);
+    for (const concept of CONCEPTS) {
+      for (const variant of ["before", "after"]) {
+        expect(existsSync(`public/realisations/concepts/${concept.slug}-${variant}.webp`), `${concept.slug}-${variant}`).toBe(true);
+      }
+    }
+  });
+});
