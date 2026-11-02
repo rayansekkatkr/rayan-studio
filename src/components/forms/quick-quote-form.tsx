@@ -254,7 +254,7 @@ export function QuickQuoteForm({
             <label
               key={item.value}
               className={cn(
-                "cursor-pointer rounded-none border px-4 py-2 text-sm font-medium transition-colors duration-150 has-[:focus-visible]:outline has-[:focus-visible]:outline-2 has-[:focus-visible]:outline-offset-2 has-[:focus-visible]:outline-[var(--rs-accent-fg)]",
+                "cursor-pointer rounded-none border px-4 py-2 text-sm font-medium transition-colors duration-150 has-[:focus-visible]:[outline:2px_solid_var(--rs-accent-fg)] has-[:focus-visible]:[outline-offset:2px]",
                 type === item.value
                   ? "border-rs-accent bg-[color-mix(in_srgb,var(--rs-accent)_10%,transparent)] text-rs-accent-fg"
                   : "border-[var(--rs-border)] text-rs-fg hover:border-[var(--rs-border-strong)]",

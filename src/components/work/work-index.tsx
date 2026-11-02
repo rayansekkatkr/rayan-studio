@@ -1,4 +1,6 @@
+import { ConceptGallery } from "@/components/landing/concept-gallery";
 import { ClosingCta } from "@/components/ui/closing-cta";
+import { Container } from "@/components/ui/container";
 import { PageHero } from "@/components/ui/page-hero";
 import { PROJECTS } from "@/content/projects";
 import type { Locale } from "@/lib/i18n";
@@ -36,6 +38,20 @@ export function WorkIndex({ locale }: { locale: Locale }) {
       <div className="pt-8">
         <WorkPortfolio locale={locale} />
       </div>
+
+      <section id="refontes-concept" data-work-concepts className="scroll-mt-24 border-t border-[var(--rs-border)] py-[var(--rs-section-space)]">
+        <Container>
+          <h2 className="max-w-[18ch] text-[2.25rem] font-extrabold leading-[1] tracking-[-0.04em] md:text-[3rem]">
+            {fr ? "Refontes concept, avant / après." : "Concept redesigns, before / after."}
+          </h2>
+          <p className="mt-4 max-w-[60ch] text-lg leading-relaxed text-rs-muted">
+            {fr
+              ? "Quatre sites existants de petits commerces, repensés par le studio sans commande : un commerce, un artisan, un restaurant et des chambres d'hôtes."
+              : "Four existing small-business websites, redesigned by the studio without a commission: a shop, a craftsman, a restaurant and a guest house."}
+          </p>
+          <ConceptGallery locale={locale} />
+        </Container>
+      </section>
 
       <ClosingCta
         locale={locale}

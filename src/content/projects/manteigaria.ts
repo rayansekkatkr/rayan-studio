@@ -5,7 +5,6 @@ export const manteigaria: ProjectRecord = {
   slug: "manteigaria",
   title: "Manteigaria",
   kind: "concept",
-  liveUrl: "https://manteigaria-redesign.vercel.app/",
   beforeUrl: "https://manteigaria.com/fr/",
   heroImage: "/realisations/manteigaria-before.png",
   tone: "light",

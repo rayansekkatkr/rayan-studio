@@ -2,6 +2,8 @@ import Image from "next/image";
 import Link from "next/link";
 import { ArrowRight, ArrowUpRight, Check, Plus } from "lucide-react";
 import { TrackedLink } from "@/components/analytics/tracked-link";
+import { ConceptGallery } from "@/components/landing/concept-gallery";
+import { LandingStickyCta } from "@/components/landing/landing-sticky-cta";
 import { BigSteps } from "@/components/article/article-blocks";
 import { QuickQuoteForm } from "@/components/forms/quick-quote-form";
 import { Reassurance } from "@/components/trust/reassurance";
@@ -54,17 +56,32 @@ function LandingSitesProof({ locale }: { locale: Locale }) {
     (project) => project.liveUrl && SITE_SHOTS[project.slug] && projectStatusBadge(project, locale).tone === "live",
   );
   return (
-    <section data-landing-proof className="border-t border-[var(--rs-border)] py-[var(--rs-section-space)]">
+    <section id="exemples" data-landing-proof className="scroll-mt-24 border-t border-[var(--rs-border)] py-[var(--rs-section-space)]">
       <Container>
         <SectionTitle
           title={fr ? "Des preuves que vous pouvez vérifier." : "Proof you can check for yourself."}
           lead={
             fr
-              ? "Les sites de mes propres produits, conçus, développés et mis en ligne par le studio. Ils sont en production : ouvrez-les."
-              : "The websites of my own products, designed, built and launched by the studio. They are live: open them."
+              ? "Le type de site que vous recevez, puis les sites que je mets en ligne pour mes propres produits."
+              : "The kind of website you get, then the websites I ship for my own products."
           }
         />
-        <ul role="list" className="mt-10 grid gap-x-6 gap-y-10 sm:grid-cols-2">
+        {/* The kind of site a business gets: real live home pages beside the studio's concept mockups (src/content/concepts.ts). */}
+        <div className="mt-10 border-t border-rs-fg pt-8">
+          <h3 className="text-2xl font-bold tracking-[-0.03em] md:text-3xl">
+            {fr ? "À quoi ressemble votre maquette" : "What your mockup looks like"}
+          </h3>
+          <p className="mt-3 max-w-[60ch] text-lg leading-relaxed text-rs-muted">
+            {fr
+              ? "La maquette des 24 h : la page d'accueil de votre futur site, en version bureau et mobile, à vos couleurs et avec vos textes. Quatre refontes concept de sites existants : faites glisser pour comparer."
+              : "The 24-hour mockup: the home page of your future website, desktop and mobile, in your colours and with your copy. Four concept redesigns of existing websites: drag to compare."}
+          </p>
+          <ConceptGallery locale={locale} />
+        </div>
+        <h3 className="mt-16 text-2xl font-bold tracking-[-0.03em] md:text-3xl">
+          {fr ? "Et les sites de mes propres produits" : "And the websites of my own products"}
+        </h3>
+        <ul role="list" className="mt-8 grid gap-x-6 gap-y-10 sm:grid-cols-2">
           {sites.map((project) => {
             const host = new URL(project.liveUrl as string).hostname.replace(/^www\./, "");
             return (
@@ -93,6 +110,7 @@ function LandingSitesProof({ locale }: { locale: Locale }) {
                     {host}
                     <span className="sr-only">{fr ? " (s'ouvre dans un nouvel onglet)" : " (opens in a new tab)"}</span>
                   </span>
+                  <span className="mt-2 block text-base leading-relaxed text-rs-muted">{project.summary[locale]}</span>
                 </a>
               </li>
             );
@@ -126,10 +144,12 @@ function LandingHeroA({ locale, content, source }: { locale: Locale; content: La
         <div className="mt-3 overflow-x-clip">
           <GiantWord text={word} />
         </div>
-        <div className="mt-8 grid gap-6 md:grid-cols-3 md:gap-8">
+        {/* 5/7 like every night header with a giant word (DESIGN.md): promise left, lead and action right. */}
+        <div className="mt-8 grid gap-6 lg:grid-cols-[minmax(0,5fr)_minmax(0,7fr)] lg:gap-16">
           <h1 className="text-xl font-bold leading-snug tracking-tight md:text-2xl">{content.title}</h1>
-          <p className="text-lg leading-relaxed text-rs-muted">{content.lead}</p>
-          <div className="flex flex-col gap-4 md:items-end">
+          <div>
+          <p className="max-w-[var(--rs-reading)] text-lg leading-relaxed text-rs-muted">{content.lead}</p>
+          <div className="mt-6 flex flex-wrap items-center gap-x-6 gap-y-3">
             <TrackedLink
               href="#devis"
               event={{ ctaId: `${source}_hero_form`, source, destination: "#devis", locale }}
@@ -138,10 +158,14 @@ function LandingHeroA({ locale, content, source }: { locale: Locale; content: La
               {content.primaryCta}
               <ArrowRight aria-hidden className="h-4 w-4" />
             </TrackedLink>
-            <Link href={workPath(locale)} className="text-base font-semibold underline underline-offset-4 hover:text-rs-accent-fg">
+            <Link
+              href={isWebsites ? "#exemples" : workPath(locale)}
+              className="text-base font-semibold underline underline-offset-4 hover:text-rs-accent-fg"
+            >
               {content.secondaryCta}
             </Link>
-            <ul className="flex flex-col gap-1.5 text-sm text-rs-muted md:items-end">
+          </div>
+            <ul className="mt-5 flex flex-wrap gap-x-5 gap-y-1.5 text-sm text-rs-muted">
               {content.promises.map((promise) => (
                 <li key={promise} className="flex items-start gap-2">
                   <Check aria-hidden className="mt-0.5 h-4 w-4 shrink-0 text-rs-accent-fg" />
@@ -179,42 +203,6 @@ export function LandingPage({ locale, content }: { locale: Locale; content: Land
                 </li>
               ))}
             </ol>
-            {isWebsites ? (
-              // What "a mockup" looks like: a real concept from the studio, labelled as such.
-              <figure className="mt-14 grid items-center gap-8 border-t border-[var(--rs-border)] pt-10 md:grid-cols-[minmax(0,15rem)_minmax(0,1fr)] md:gap-12">
-                <div className="mx-auto w-full max-w-[15rem] overflow-hidden border border-[var(--rs-border)]">
-                  <Image
-                    src="/realisations/manteigaria-mobile.webp"
-                    alt={
-                      fr
-                        ? "Maquette mobile de la page d'accueil Manteigaria : photo plein écran, titre « L'Art du Goût » et bouton « Découvrir notre histoire »"
-                        : "Mobile mockup of the Manteigaria home page: full-screen photo, the title \u201cL'Art du Go\u00fbt\u201d and a \u201cDiscover our story\u201d button"
-                    }
-                    width={780}
-                    height={1688}
-                    sizes="15rem"
-                    className="h-auto w-full"
-                  />
-                </div>
-                <figcaption>
-                  <p className="text-2xl font-bold tracking-[-0.03em] md:text-3xl">
-                    {fr ? "À quoi ressemble une maquette ?" : "What does a mockup look like?"}
-                  </p>
-                  <p className="mt-3 max-w-[var(--rs-reading)] text-lg leading-relaxed text-rs-muted">
-                    {fr
-                      ? "La page d'accueil de votre futur site, à votre image, prête à être discutée. Ci-contre : une refonte concept du site d'une pâtisserie artisanale, réalisée par le studio et non commandée."
-                      : "The home page of your future website, in your image, ready to discuss. Shown here: a concept redesign of an artisan bakery website, made by the studio and not commissioned."}
-                  </p>
-                  <Link
-                    href={workPath(locale, "manteigaria")}
-                    className="mt-5 inline-flex items-center gap-2 text-base font-semibold underline underline-offset-4 transition-colors duration-150 hover:text-rs-accent-fg"
-                  >
-                    {fr ? "Voir le concept en avant / après" : "See the concept before / after"}
-                    <ArrowRight aria-hidden className="h-4 w-4" />
-                  </Link>
-                </figcaption>
-              </figure>
-            ) : null}
           </Container>
         </section>
       ) : null}
@@ -304,7 +292,7 @@ export function LandingPage({ locale, content }: { locale: Locale; content: Land
           <div className={cn("grid gap-10 lg:gap-14", !isWebsites && "lg:grid-cols-2")}>
             <div>
               <SectionTitle title={content.includedTitle} />
-              <ul className={cn("mt-6 grid gap-x-6 gap-y-3 sm:grid-cols-2", isWebsites && "lg:grid-cols-4")}>
+              <ul className={cn("mt-6 grid gap-x-6 gap-y-3 sm:grid-cols-2", isWebsites && "lg:grid-cols-2")}>
                 {content.included.map((item) => (
                   <li key={item} className="flex gap-3 text-base leading-relaxed">
                     <Check aria-hidden className="mt-1 h-4 w-4 shrink-0 text-rs-accent-fg" />
@@ -382,16 +370,13 @@ export function LandingPage({ locale, content }: { locale: Locale; content: Land
             <div
               className="rs-theme-dark relative isolate bg-rs-bg p-8 text-rs-fg md:p-10"
             >
-              <h2 className="text-[2rem] font-extrabold leading-[1] tracking-[-0.04em] md:text-[2.6rem]">{content.formTitle}</h2>
+              <h2 className="text-[2.25rem] font-extrabold leading-[1] tracking-[-0.04em] md:text-[2.6rem]">{content.formTitle}</h2>
               <p className="mt-4 text-base leading-relaxed text-rs-muted">{content.formLead}</p>
-              <ul className="mt-6 space-y-2.5 text-sm">
-                {content.promises.map((promise) => (
-                  <li key={promise} className="flex items-start gap-2.5">
-                    <Check aria-hidden className="mt-0.5 h-4 w-4 shrink-0 text-rs-accent-fg" />
-                    {promise}
-                  </li>
-                ))}
-              </ul>
+              <p className="mt-5 text-sm leading-relaxed text-rs-muted">
+                {fr
+                  ? "Je suis basé à Séoul et je travaille avec des clients en France et en Europe : les 24 h comptent en jours ouvrés français."
+                  : "I am based in Seoul and work with clients in France and Europe: the 24 hours count French business days."}
+              </p>
             </div>
             <div className="p-6 md:p-10 lg:pl-2">
               <QuickQuoteForm locale={locale} defaultType={content.quoteType} source={source} />
@@ -411,6 +396,7 @@ export function LandingPage({ locale, content }: { locale: Locale; content: Land
           </div>
         </Container>
       </section>
+      {isWebsites ? <LandingStickyCta label={content.primaryCta} source={source} locale={locale} /> : null}
     </article>
   );
 }
