@@ -1,9 +1,10 @@
 import Image from "next/image";
 import { cn } from "@/lib/utils";
 
-// Real screens of the studio's own products, scrolling slowly behind the hero.
-// Purely decorative: no names and no alt text (projects are presented on the work
-// page only). Each track is rendered twice so the CSS loop (translate -50%) is seamless.
+// Real screens of the studio's own products only (kind: product: Pick4Me, Pont Factur-X,
+// GoodCall, DocExtract), scrolling slowly behind the hero. Demos and client missions stay
+// off the wall so it never presents them as studio products. Purely decorative: no names
+// and no alt text. Each track is rendered twice so the CSS loop (translate -50%) is seamless.
 
 type Screen = { src: string; width: number; height: number };
 
@@ -43,14 +44,12 @@ const SCREENS: Record<string, Screen> = {
     width: 1600,
     height: 904,
   },
-  opsAgent: { src: "/realisations/ops-agent.webp", width: 2400, height: 1350 },
-  ciCd: { src: "/realisations/ci-cd-platform.webp", width: 2400, height: 1350 },
 };
 
 const COLUMNS: Array<{ keys: Array<keyof typeof SCREENS>; reverse: boolean; duration: string }> = [
   { keys: ["pick4me", "pontFacturxFormat", "docextract"], reverse: false, duration: "62s" },
   { keys: ["goodcall", "pontFacturx", "goodcallRankings"], reverse: true, duration: "74s" },
-  { keys: ["pontFacturxConversion", "opsAgent", "ciCd"], reverse: false, duration: "68s" },
+  { keys: ["pontFacturxConversion", "goodcall", "pick4me"], reverse: false, duration: "68s" },
 ];
 
 const ROW: Array<keyof typeof SCREENS> = [
@@ -60,13 +59,12 @@ const ROW: Array<keyof typeof SCREENS> = [
   "docextract",
   "pontFacturxConversion",
   "goodcallRankings",
-  "opsAgent",
-  "ciCd",
+  "pontFacturxFormat",
 ];
 
 function Tile({ screen, sizes }: { screen: Screen; sizes: string }) {
   return (
-    <div className="overflow-hidden border border-white/10 bg-rs-surface shadow-[0_24px_60px_-28px_rgba(0,0,0,0.8)]">
+    <div className="overflow-hidden border border-[var(--rs-border)] bg-rs-surface shadow-[0_24px_60px_-28px_rgba(0,0,0,0.8)]">
       <Image
         src={screen.src}
         alt=""
@@ -93,7 +91,7 @@ export function HeroScreenWall({ className }: { className?: string }) {
               {[0, 1].map((copy) => (
                 <div key={copy} className="flex flex-col gap-5 pb-5">
                   {column.keys.map((key) => (
-                    <Tile key={`${copy}-${key}`} screen={SCREENS[key]} sizes="(min-width: 1024px) 18vw, 0px" />
+                    <Tile key={`${copy}-${key}`} screen={SCREENS[key]} sizes="(min-width: 1280px) 18vw, 0px" />
                   ))}
                 </div>
               ))}

@@ -12,7 +12,7 @@ import { LanguageSwitch } from "@/components/navigation/language-switch";
 function enHrefFor(pathname: string): string | null {
   usePathname.mockReturnValue(pathname);
   const { container, unmount } = render(<LanguageSwitch locale="fr" />);
-  const href = container.querySelector('a[aria-label="English version"]')?.getAttribute("href") ?? null;
+  const href = container.querySelector('a[hreflang="en"]')?.getAttribute("href") ?? null;
   unmount();
   return href;
 }

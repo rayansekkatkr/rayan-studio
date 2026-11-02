@@ -1,8 +1,10 @@
-import { ArrowRight, ArrowUpRight } from "lucide-react";
+import { ArrowRight } from "lucide-react";
+import Link from "next/link";
 import { TrackedLink } from "@/components/analytics/tracked-link";
 import { Container } from "@/components/ui/container";
 import type { Locale } from "@/lib/i18n";
-import { quotePath, saasLandingPath, smbLandingPath, workPath } from "@/lib/site-routes";
+import { quotePath, saasLandingPath, studioPath, websitesLandingPath } from "@/lib/site-routes";
+import { HeroMotionToggle } from "./hero-motion-toggle";
 import { HeroScreenRow, HeroScreenWall } from "./hero-screen-wall";
 
 export function HomeHero({ locale }: { locale: Locale }) {
@@ -10,17 +12,15 @@ export function HomeHero({ locale }: { locale: Locale }) {
   const paths = [
     {
       id: "websites",
-      href: smbLandingPath(locale),
-      kicker: fr ? "Commerces, restaurants, PME" : "Shops, restaurants, small businesses",
+      href: websitesLandingPath(locale),
       title: fr ? "Sites web & refonte" : "Websites & redesign",
       body: fr
-        ? "Un site qui inspire confiance et vous apporte des demandes. Maquette gratuite sous 24 h ouvrées."
-        : "A website that builds trust and brings you enquiries. Free mockup within 24 business hours.",
+        ? "Un site qui inspire confiance, comme mes 4 sites en ligne. Maquette gratuite sous 24 h ouvrées."
+        : "A website that builds trust, like my 4 live sites. Free mockup within 24 business hours.",
     },
     {
       id: "applications",
       href: saasLandingPath(locale),
-      kicker: fr ? "Startups, entreprises" : "Startups, companies",
       title: fr ? "Applications & SaaS" : "Applications & SaaS",
       body: fr
         ? "Un produit construit autour de votre métier, du cadrage à la mise en production."
@@ -29,87 +29,80 @@ export function HomeHero({ locale }: { locale: Locale }) {
   ];
 
   return (
-    <div className="rs-theme-dark relative isolate overflow-hidden bg-rs-bg text-rs-fg">
+    <div className="rs-theme-dark relative isolate overflow-hidden bg-rs-bg text-rs-fg" data-hero-motion>
       <div aria-hidden className="hero-glow pointer-events-none absolute inset-0 -z-10" />
       <HeroScreenWall
-        className="absolute inset-y-0 right-0 -z-10 hidden w-[50%] lg:block"
+        className="absolute inset-y-0 right-0 -z-10 hidden w-[50%] xl:block"
       />
       {/* Melts the glow and the screen wall into the night, so the statement below follows without a seam. */}
       <div
         aria-hidden
-        className="pointer-events-none absolute inset-x-0 bottom-0 z-[-5] h-14 bg-gradient-to-b from-transparent to-[var(--rs-dark)] lg:h-64"
+        className="pointer-events-none absolute inset-x-0 bottom-0 z-[-5] h-14 bg-gradient-to-b from-transparent to-[var(--rs-dark)] xl:h-48"
       />
       <Container className="pointer-events-none">
-        <div className="flex min-h-0 items-center pb-12 pt-28 md:pb-16 md:pt-32 lg:min-h-[min(54rem,100svh)] lg:pb-24">
+        <div className="flex min-h-0 items-center pb-10 pt-20 md:pb-16 md:pt-32 xl:min-h-[min(50rem,100svh)] xl:pb-16">
           <div className="pointer-events-auto max-w-3xl lg:max-w-[36rem] xl:max-w-[40rem]">
-            <h1 className="text-[2rem] font-semibold leading-[1.06] tracking-tight md:text-5xl lg:text-[3.5rem]">
+            <h1 className="text-[2.25rem] font-extrabold leading-[0.98] tracking-[-0.045em] md:text-5xl lg:text-[3.75rem]">
               {fr
-                ? "Sites web, applications et logiciels sur mesure."
-                : "Websites, applications and custom software."}
+                ? "Je conçois et mets en ligne vos sites et applications, sans intermédiaire."
+                : "I design and launch your websites and applications, with no middleman."}
             </h1>
-            <p className="mt-6 max-w-[var(--rs-reading)] text-lg leading-relaxed text-rs-muted">
+            <p className="mt-4 max-w-[var(--rs-reading)] text-lg leading-relaxed text-rs-muted md:mt-6">
               {fr
-                ? "Un studio indépendant qui conçoit, développe et met en ligne votre projet, avec un interlocuteur unique du premier échange au lancement."
-                : "An independent studio that designs, builds and launches your project, with one point of contact from the first conversation to launch."}
+                ? "Un studio indépendant qui conçoit, développe et met en ligne votre projet, du premier échange au lancement."
+                : "An independent studio that designs, builds and launches your project, from the first conversation to launch."}
             </p>
-            <div className="mt-10 flex flex-wrap items-center gap-4">
-              <TrackedLink
-                href={quotePath(locale)}
-                event={{
-                  ctaId: "hero_free_quote",
-                  source: "home_hero",
-                  destination: quotePath(locale),
-                  locale,
-                }}
-                className="inline-flex items-center gap-2 rounded-none bg-rs-fg px-7 py-3.5 text-base font-semibold text-[var(--rs-dark)] transition-colors duration-150 hover:bg-rs-accent hover:text-rs-fg"
-              >
-                {fr ? "Demander un devis gratuit" : "Get a free quote"}
-                <ArrowRight aria-hidden className="h-4 w-4" />
-              </TrackedLink>
-              <TrackedLink
-                href={workPath(locale)}
-                event={{
-                  ctaId: "hero_view_work",
-                  source: "home_hero",
-                  destination: workPath(locale),
-                  locale,
-                }}
-                className="inline-flex items-center rounded-none border border-[var(--rs-border-strong)] bg-rs-bg/40 px-7 py-3.5 text-base font-medium text-rs-fg backdrop-blur-sm transition-colors duration-150 hover:border-rs-accent hover:text-rs-accent-fg"
-              >
-                {fr ? "Voir nos réalisations" : "View our work"}
-              </TrackedLink>
-            </div>
+            {/* The visitor picks a path first; the quote stays one click away for anyone undecided. */}
+            <ul role="list" aria-label={fr ? "Choisissez votre projet" : "Choose your project"} className="mt-6 grid gap-3 sm:grid-cols-2 md:mt-8" data-hero-paths>
+              {paths.map((path) => (
+                <li key={path.id}>
+                  <TrackedLink
+                    href={path.href}
+                    event={{ ctaId: `hero_path_${path.id}`, source: "home_hero", destination: path.href, locale }}
+                    className="group flex h-full flex-col border border-[var(--rs-border)] bg-rs-surface p-4 transition-colors duration-150 hover:border-rs-accent sm:p-5"
+                  >
+                    <span className="flex items-center justify-between gap-3 text-xl font-bold tracking-[-0.025em]">
+                      {path.title}
+                      <ArrowRight
+                        aria-hidden
+                        className="h-5 w-5 shrink-0 text-rs-muted transition-colors duration-150 group-hover:text-rs-accent-fg"
+                      />
+                    </span>
+                    <span className="mt-2 text-base leading-relaxed text-rs-muted">{path.body}</span>
+                  </TrackedLink>
+                </li>
+              ))}
+            </ul>
 
-            <div className="mt-10">
-              <p className="text-xs font-semibold uppercase tracking-[0.18em] text-rs-muted">
-                {fr ? "Choisissez votre parcours" : "Choose your path"}
-              </p>
-              <ul className="mt-4 grid gap-3 sm:grid-cols-2">
-                {paths.map((path) => (
-                  <li key={path.id}>
-                    <TrackedLink
-                      href={path.href}
-                      event={{ ctaId: `hero_path_${path.id}`, source: "home_hero", destination: path.href, locale }}
-                      className="group flex h-full flex-col border border-[var(--rs-border)] bg-white/[0.04] p-5 backdrop-blur-sm transition-colors duration-150 hover:border-rs-accent hover:bg-white/[0.07]"
-                    >
-                      <span className="text-[11px] font-semibold uppercase tracking-[0.16em] text-rs-muted">{path.kicker}</span>
-                      <span className="mt-2 flex items-center justify-between gap-3 text-lg font-semibold tracking-tight">
-                        {path.title}
-                        <ArrowUpRight
-                          aria-hidden
-                          className="h-4 w-4 shrink-0 text-rs-muted transition-all duration-150 group-hover:-translate-y-0.5 group-hover:translate-x-0.5 group-hover:text-rs-accent-fg"
-                        />
-                      </span>
-                      <span className="mt-1.5 text-sm leading-relaxed text-rs-muted">{path.body}</span>
-                    </TrackedLink>
-                  </li>
-                ))}
-              </ul>
-            </div>
+            <TrackedLink
+              href={quotePath(locale)}
+              event={{
+                ctaId: "hero_free_quote",
+                source: "home_hero",
+                destination: quotePath(locale),
+                locale,
+              }}
+              className="mt-5 inline-flex items-center gap-2 rounded-none bg-rs-fg px-7 py-3.5 text-base font-semibold text-[var(--rs-dark)] transition-colors duration-150 hover:bg-rs-accent hover:text-rs-fg"
+            >
+              {fr ? "Demander un devis gratuit" : "Get a free quote"}
+              <ArrowRight aria-hidden className="h-4 w-4" />
+            </TrackedLink>
+
+            {/* Founder-led, visible in the first screen: the person who answers the quote. */}
+            <p className="mt-5 text-sm text-rs-muted">
+              <Link
+                href={studioPath(locale, "rayan")}
+                className="font-semibold text-rs-fg underline underline-offset-4 transition-colors duration-150 hover:text-rs-accent-fg"
+              >
+                Rayan Sekkat
+              </Link>
+              {fr ? ", ingénieur logiciel à Séoul. Je réponds moi-même à chaque demande." : ", software engineer in Seoul. I answer every request myself."}
+            </p>
           </div>
         </div>
       </Container>
-      <HeroScreenRow className="pb-14 lg:hidden" />
+      <HeroScreenRow className="pb-14 xl:hidden" />
+      <HeroMotionToggle locale={locale} className="absolute bottom-3 right-5 z-10 md:right-8" />
     </div>
   );
 }

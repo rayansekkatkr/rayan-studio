@@ -2,7 +2,7 @@ import { ArrowRight, Clock, Plus } from "lucide-react";
 import { TrackedLink } from "@/components/analytics/tracked-link";
 import type { ServiceRecord } from "@/content/services";
 import type { Locale } from "@/lib/i18n";
-import { contactPath, quotePath, saasLandingPath, smbLandingPath } from "@/lib/site-routes";
+import { contactPath, quotePath, saasLandingPath, websitesLandingPath } from "@/lib/site-routes";
 import { PageHero } from "@/components/ui/page-hero";
 import { TechChips } from "@/components/ui/tech-chips";
 import { SERVICE_HERO_PHOTOS } from "@/content/visuals";
@@ -167,7 +167,7 @@ export function ServicePage({ locale, service }: { locale: Locale; service: Serv
               : fr
                 ? "Voir l'offre applications & SaaS"
                 : "See the applications & SaaS offer",
-            href: isWeb ? smbLandingPath(locale) : saasLandingPath(locale),
+            href: isWeb ? websitesLandingPath(locale) : saasLandingPath(locale),
             ctaId: isWeb ? "service_to_websites_offer" : "service_to_saas_offer",
           }}
         />

@@ -33,10 +33,11 @@ test.describe("local SEO routes", () => {
 });
 
 test.describe("legacy redirects", () => {
-  test("all 15 sources return 308 to their exact destination", async ({ request }) => {
-    expect(redirects).toHaveLength(15);
+  test("all 19 sources return 308 to their exact destination", async ({ request }) => {
+    // 15 historical sources + 4 for the websites landing renamed on 2026-11-02.
+    expect(redirects).toHaveLength(19);
     const sources = redirects.map((redirect) => redirect.source);
-    expect(new Set(sources).size).toBe(15);
+    expect(new Set(sources).size).toBe(19);
 
     for (const redirect of redirects) {
       expect(redirect.source.startsWith("/site/"), redirect.source).toBe(false);

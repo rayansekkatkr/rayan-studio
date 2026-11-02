@@ -9,12 +9,12 @@ export const web: ServiceRecord = {
     en: "Your website is often the first contact with your company. It should match the quality of what you actually do.",
   },
   description: {
-    fr: "Création et refonte de sites premium pour entreprises et commerces : direction visuelle, développement, performance et SEO, avec une mise en ligne accompagnée de bout en bout.",
-    en: "Creation and redesign of premium websites for companies and local businesses: visual direction, development, performance and SEO, with launch support end to end.",
+    fr: "Création et refonte de sites premium : direction visuelle, développement, performance et SEO, avec une mise en ligne accompagnée de bout en bout.",
+    en: "Creation and redesign of premium websites: visual direction, development, performance and SEO, with launch support end to end.",
   },
   seo: {
-    fr: { title: "Création et refonte de site internet premium", description: "Création et refonte de sites internet pour entreprises, commerces et restaurants : design sur mesure, mobile, performance et référencement local. Maquette gratuite sous 24 h ouvrées." },
-    en: { title: "Premium website design and redesign", description: "Website design and redesign for companies, shops and restaurants: custom design, mobile, performance and local SEO. Free mockup within 24 business hours." },
+    fr: { title: "Création et refonte de site internet premium", description: "Création et refonte de sites internet : design sur mesure, mobile, performance et référencement. Maquette gratuite sous 24 h ouvrées." },
+    en: { title: "Premium website design and redesign", description: "Website design and redesign: custom design, mobile, performance and SEO. Free mockup within 24 business hours." },
   },
   benefits: {
     fr: [

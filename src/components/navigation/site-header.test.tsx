@@ -8,7 +8,7 @@ describe("SiteHeader", () => {
     const nav = screen.getByRole("navigation", { name: "Navigation principale" });
     const links = Array.from(nav.querySelectorAll("a"), (link) => [link.textContent, link.getAttribute("href")]);
     expect(links).toEqual([
-      ["Sites web", "/fr/site-internet-commerces-pme"],
+      ["Sites web", "/fr/creation-site-internet"],
       ["Applications", "/fr/developpement-application-saas"],
       ["Réalisations", "/fr/work"],
       ["Studio", "/fr/studio/rayan-studio"],

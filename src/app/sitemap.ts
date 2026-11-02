@@ -12,7 +12,7 @@ import {
   quotePath,
   saasLandingPath,
   servicePath,
-  smbLandingPath,
+  websitesLandingPath,
   startProjectPath,
   studioPath,
   workPath,
@@ -72,7 +72,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
       ),
       ...localizedPair(craPath("fr"), craPath("en"), 0.9),
       // The two commercial landings (historical SEO URLs kept).
-      ...localizedPair(smbLandingPath("fr"), smbLandingPath("en"), 0.95),
+      ...localizedPair(websitesLandingPath("fr"), websitesLandingPath("en"), 0.95),
       ...localizedPair(saasLandingPath("fr"), saasLandingPath("en"), 0.95),
     ];
   }

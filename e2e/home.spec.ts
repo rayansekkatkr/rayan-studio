@@ -11,7 +11,7 @@ test.describe("homepage", () => {
     await expect(
       page.getByRole("heading", {
         level: 1,
-        name: "Sites web, applications et logiciels sur mesure.",
+        name: "Je conçois et mets en ligne vos sites et applications, sans intermédiaire.",
       }),
     ).toBeVisible();
 
@@ -19,7 +19,7 @@ test.describe("homepage", () => {
     await expect(quoteCta).toHaveAttribute("href", "/fr/devis-gratuit");
     await expect(page.getByRole("link", { name: /Sites web & refonte/ }).first()).toHaveAttribute(
       "href",
-      "/fr/site-internet-commerces-pme",
+      "/fr/creation-site-internet",
     );
     await expect(page.getByRole("link", { name: /Applications & SaaS/ }).first()).toHaveAttribute(
       "href",
@@ -36,7 +36,7 @@ test.describe("homepage", () => {
     await expect(
       page.getByRole("heading", {
         level: 1,
-        name: "Websites, applications and custom software.",
+        name: "I design and launch your websites and applications, with no middleman.",
       }),
     ).toBeVisible();
 
@@ -49,10 +49,12 @@ test.describe("homepage", () => {
   });
 
   for (const locale of ["fr", "en"] as const) {
-    test(`${locale} home names no project and links to the work page once`, async ({ page }) => {
+    test(`${locale} home names the founder and the four products, nothing else`, async ({ page }) => {
       await page.goto(`/${locale}`);
       await expect(page.locator("[data-featured-project]")).toHaveCount(0);
-      await expect(page.locator("main")).not.toContainText(/Pick4Me|Pont Factur-X|GoodCall|DocExtract|Manteigaria/);
+      await expect(page.getByRole("heading", { level: 2, name: "Rayan Sekkat" })).toBeVisible();
+      await expect(page.locator("[data-home-products] a")).toHaveCount(4);
+      await expect(page.locator("main")).not.toContainText(/Manteigaria|Ops Knowledge|STMicroelectronics/);
     });
   }
 
@@ -74,8 +76,10 @@ test.describe("homepage", () => {
     const box = await wall.boundingBox();
     expect(box!.x).toBeGreaterThan(1440 * 0.4);
 
-    // Two doors under the CTAs.
-    await expect(page.getByText("Choisissez votre parcours")).toBeVisible();
+    // Two path doors first, then the single quote CTA.
+    const paths = page.locator("[data-hero-paths] a");
+    await expect(paths).toHaveCount(2);
+    await expect(paths.first()).toBeVisible();
 
     // The statement continues the night: desk photo blended in, sentence on top.
     const statementBg = await page.locator("#statement > div").first().evaluate((el) => getComputedStyle(el).backgroundColor);
@@ -83,6 +87,22 @@ test.describe("homepage", () => {
     expect(sr + sg + sb, `dark statement expected, got ${statementBg}`).toBeLessThan(120);
     const visual = await page.locator("#statement img").evaluate((el) => el.getBoundingClientRect().height);
     expect(visual).toBeGreaterThan(900 * 0.5);
+  });
+
+  test("hero motion can be paused, and pauses itself off-screen", async ({ page }) => {
+    await page.goto("/fr");
+    const hero = page.locator("[data-hero-motion]");
+    const toggle = page.getByRole("button", { name: "Mettre l'animation en pause" });
+
+    await expect(hero).not.toHaveAttribute("data-motion-paused", /.*/);
+    await toggle.click();
+    await expect(hero).toHaveAttribute("data-motion-paused", "");
+    await expect(page.getByRole("button", { name: "Relancer l'animation" })).toHaveAttribute("aria-pressed", "true");
+    await page.getByRole("button", { name: "Relancer l'animation" }).click();
+    await expect(hero).not.toHaveAttribute("data-motion-paused", /.*/);
+
+    await page.locator("#final-cta").scrollIntoViewIfNeeded();
+    await expect(hero).toHaveAttribute("data-motion-paused", "");
   });
 
   test("mobile homepage sections flow naturally without clipping", async ({ page, isMobile }) => {

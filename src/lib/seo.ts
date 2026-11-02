@@ -16,7 +16,7 @@ export function buildLocalizedMetadata(input: LocalizedMetadataInput): Metadata 
   const { locale, title, description, path, alternatePath, image } = input;
   const frPath = locale === "fr" ? path : alternatePath;
   const enPath = locale === "en" ? path : alternatePath;
-  const ogImage = image ?? "/og-image";
+  const ogImage = image ?? "/opengraph-image";
   const languages: Record<string, string> = {};
   if (frPath) languages.fr = frPath;
   if (enPath) languages.en = enPath;

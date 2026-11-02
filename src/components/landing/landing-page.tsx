@@ -77,7 +77,7 @@ function LandingHeroA({ locale, content, source }: { locale: Locale; content: La
   );
 }
 
-/** Commercial landing for one audience: websites for small businesses, or applications and SaaS. */
+/** Commercial landing for one path: website creation and redesign, or applications and SaaS. */
 export function LandingPage({ locale, content }: { locale: Locale; content: LandingContent }) {
   const fr = locale === "fr";
   const source = `landing_${content.key}`;

@@ -4,11 +4,11 @@ import { LANDINGS, type LandingKey } from "@/content/landings";
 import { getSiteUrl } from "@/lib/brand";
 import type { Locale } from "@/lib/i18n";
 import { buildBreadcrumbJsonLd, buildFaqJsonLd, buildLocalizedMetadata, buildServiceJsonLd } from "@/lib/seo";
-import { saasLandingPath, smbLandingPath } from "@/lib/site-routes";
+import { saasLandingPath, websitesLandingPath } from "@/lib/site-routes";
 import { LandingPage } from "./landing-page";
 
 function pathFor(key: LandingKey) {
-  return key === "websites" ? smbLandingPath : saasLandingPath;
+  return key === "websites" ? websitesLandingPath : saasLandingPath;
 }
 
 export function landingMetadata(key: LandingKey, locale: Locale): Metadata {

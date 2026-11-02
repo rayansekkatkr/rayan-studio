@@ -1,0 +1,144 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-11-02T08:30:00+09:00",
+  "title": "Design System: Rayan Studio",
+  "extensions": {
+    "colorMeta": {
+      "indigo-signal": { "role": "primary", "displayName": "Indigo Signal", "canonical": "#5957d9", "tonalRamp": ["#1c1b4a", "#2b2a70", "#3b3996", "#4745bd", "#5957d9", "#8a88f2", "#b9b8f7", "#e6e6fc"] },
+      "indigo-signal-deep": { "role": "primary", "displayName": "Indigo Signal Deep", "canonical": "#4745bd" },
+      "indigo-signal-night": { "role": "primary", "displayName": "Indigo Signal Night", "canonical": "#8a88f2" },
+      "live-green": { "role": "tertiary", "displayName": "Live Green", "canonical": "#3ddc84", "tonalRamp": ["#0d3b22", "#145a33", "#1c7a45", "#279c58", "#3ddc84", "#74e7a7", "#aaf0c9", "#e0faec"] },
+      "paper": { "role": "neutral", "displayName": "Paper", "canonical": "#f2f1ed" },
+      "paper-white": { "role": "neutral", "displayName": "Paper White", "canonical": "#ffffff" },
+      "paper-shade": { "role": "neutral", "displayName": "Paper Shade", "canonical": "#ebe9e4" },
+      "ink": { "role": "neutral", "displayName": "Ink", "canonical": "#0e0e10", "tonalRamp": ["#0e0e10", "#1e1e22", "#36363c", "#4e4e55", "#646469", "#8e8e94", "#c4c4c8", "#f2f1ed"] },
+      "ink-muted": { "role": "neutral", "displayName": "Ink Muted", "canonical": "#646469" },
+      "hairline": { "role": "neutral", "displayName": "Hairline", "canonical": "rgba(11, 11, 14, 0.14)" },
+      "hairline-strong": { "role": "neutral", "displayName": "Hairline Strong", "canonical": "rgba(11, 11, 14, 0.28)" },
+      "night": { "role": "neutral", "displayName": "Night", "canonical": "#09090c", "tonalRamp": ["#09090c", "#121218", "#1a1a21", "#2a2a33", "#4a4a55", "#a2a2aa", "#d6d6da", "#f7f7f4"] },
+      "night-surface": { "role": "neutral", "displayName": "Night Surface", "canonical": "#121218" },
+      "night-shade": { "role": "neutral", "displayName": "Night Shade", "canonical": "#1a1a21" },
+      "night-ink": { "role": "neutral", "displayName": "Night Ink", "canonical": "#f7f7f4" },
+      "night-ink-muted": { "role": "neutral", "displayName": "Night Ink Muted", "canonical": "#a2a2aa" },
+      "night-hairline": { "role": "neutral", "displayName": "Night Hairline", "canonical": "rgba(247, 247, 244, 0.14)" }
+    },
+    "typographyMeta": {
+      "giant": { "displayName": "Giant", "purpose": "Page name in night headers, fitted to container width, aria-hidden." },
+      "display": { "displayName": "Display", "purpose": "h1 on pages without a giant word." },
+      "headline": { "displayName": "Headline", "purpose": "Section h2." },
+      "pull": { "displayName": "Pull", "purpose": "Instrument Serif statement sentence or inline italic accent; once per section." },
+      "title": { "displayName": "Title", "purpose": "Card titles; h1 paired with a giant word." },
+      "body-lead": { "displayName": "Body Lead", "purpose": "Intro paragraphs, ink-muted, max 46rem." },
+      "body": { "displayName": "Body", "purpose": "Running text, inputs; buttons at 600." },
+      "label": { "displayName": "Label", "purpose": "Uppercase eyebrows and meta." }
+    },
+    "shadows": [
+      { "name": "floating-header", "value": "0 16px 40px -24px rgba(11,11,14,0.45)", "purpose": "Floating header bar only." },
+      { "name": "product-screen", "value": "0 24px 60px -28px rgba(0,0,0,0.8)", "purpose": "Real product screenshots on night only." }
+    ],
+    "motion": [
+      { "name": "motion-fast", "value": "150ms ease", "purpose": "Color swaps on buttons, links, card borders, input focus (--rs-motion-fast is 160ms)." },
+      { "name": "motion-medium", "value": "240ms", "purpose": "--rs-motion-medium; accordion close." },
+      { "name": "header-shift", "value": "300ms", "purpose": "Header hide/show and solid/floating transitions." },
+      { "name": "hero-glow-drift", "value": "22s ease-in-out infinite alternate", "purpose": "Indigo glow in night bands without a photo; off under reduced motion." },
+      { "name": "screen-wall", "value": "linear infinite (60s horizontal)", "purpose": "Home product screen wall; paused on hover, off under reduced motion." }
+    ],
+    "breakpoints": [
+      { "name": "md", "value": "768px" },
+      { "name": "lg", "value": "1024px" }
+    ]
+  },
+  "components": [
+    {
+      "name": "Primary Button",
+      "kind": "button",
+      "refersTo": "button-primary",
+      "description": "Ink block that turns indigo; every primary action and quote CTA.",
+      "html": "<a class=\"ds-btn-primary\" href=\"#\">Demander un devis gratuit <svg width=\"16\" height=\"16\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><path d=\"M5 12h14\"/><path d=\"m12 5 7 7-7 7\"/></svg></a>",
+      "css": ".ds-btn-primary { display: inline-flex; align-items: center; gap: 8px; background: var(--rs-fg, #0e0e10); color: var(--rs-bg, #f2f1ed); padding: 14px 28px; font-family: 'Inter Tight', sans-serif; font-size: 1rem; font-weight: 600; border: 0; border-radius: 0; text-decoration: none; transition: background-color 150ms, color 150ms; } .ds-btn-primary:hover { background: var(--rs-accent, #5957d9); color: #fff; } .ds-btn-primary:focus-visible { outline: 2px solid var(--rs-accent, #5957d9); outline-offset: 2px; }"
+    },
+    {
+      "name": "Outline Button",
+      "kind": "button",
+      "refersTo": "button-outline",
+      "description": "Secondary action beside a primary CTA.",
+      "html": "<a class=\"ds-btn-outline\" href=\"#\">Voir les réalisations</a>",
+      "css": ".ds-btn-outline { display: inline-flex; align-items: center; background: transparent; color: #0e0e10; padding: 12px 24px; font-family: 'Inter Tight', sans-serif; font-size: 1rem; font-weight: 500; border: 1px solid rgba(11,11,14,0.28); border-radius: 0; text-decoration: none; transition: border-color 150ms, color 150ms; } .ds-btn-outline:hover { border-color: #5957d9; color: #5957d9; } .ds-btn-outline:focus-visible { outline: 2px solid #5957d9; outline-offset: 2px; }"
+    },
+    {
+      "name": "Text Input",
+      "kind": "input",
+      "refersTo": "input",
+      "description": "Quote and project form field.",
+      "html": "<label class=\"ds-field\"><span class=\"ds-field-label\">Email</span><input class=\"ds-input\" type=\"email\" placeholder=\"vous@entreprise.fr\"></label>",
+      "css": ".ds-field { display: block; font-family: 'Inter Tight', sans-serif; } .ds-field-label { font-size: 0.875rem; font-weight: 600; color: #0e0e10; } .ds-input { display: block; margin-top: 6px; width: 100%; background: #f2f1ed; color: #0e0e10; padding: 12px 16px; font: inherit; font-size: 1rem; border: 1px solid rgba(11,11,14,0.14); border-radius: 0; outline: none; transition: border-color 150ms; } .ds-input:focus { border-color: #5957d9; }"
+    },
+    {
+      "name": "Header Navigation",
+      "kind": "nav",
+      "refersTo": "nav-quote",
+      "description": "Solid header state: wordmark, links with indigo current item, quote CTA with live dot.",
+      "html": "<nav class=\"ds-nav\"><span class=\"ds-nav-mark\">Rayan Studio</span><span class=\"ds-nav-links\"><a href=\"#\" aria-current=\"page\">Services</a><a href=\"#\">Réalisations</a><a href=\"#\">Studio</a></span><a class=\"ds-nav-cta\" href=\"#\"><span class=\"ds-nav-dot\"></span>Devis gratuit</a></nav>",
+      "css": ".ds-nav { display: flex; align-items: center; justify-content: space-between; gap: 24px; height: 64px; padding: 0 32px; background: rgba(255,255,255,0.92); border-bottom: 1px solid rgba(11,11,14,0.14); font-family: 'Inter Tight', sans-serif; } .ds-nav-mark { font-size: 1.125rem; font-weight: 800; letter-spacing: -0.02em; color: #0e0e10; } .ds-nav-links { display: flex; gap: 4px; } .ds-nav-links a { padding: 8px 16px; font-size: 0.875rem; font-weight: 500; color: #0e0e10; text-decoration: none; transition: color 150ms; } .ds-nav-links a:hover, .ds-nav-links a[aria-current=page] { color: #5957d9; } .ds-nav-cta { display: inline-flex; align-items: center; gap: 8px; padding: 10px 20px; background: #0e0e10; color: #f2f1ed; font-size: 0.875rem; font-weight: 600; text-decoration: none; transition: background-color 150ms; } .ds-nav-cta:hover { background: #5957d9; } .ds-nav-dot { width: 6px; height: 6px; border-radius: 999px; background: #3ddc84; }"
+    },
+    {
+      "name": "Tech Chip",
+      "kind": "chip",
+      "refersTo": "tech-chip",
+      "description": "Static stack label with a 16px icon.",
+      "html": "<ul class=\"ds-chips\"><li class=\"ds-chip\"><svg width=\"16\" height=\"16\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"#5957d9\" stroke-width=\"2\" aria-hidden=\"true\"><path d=\"m16 18 6-6-6-6\"/><path d=\"m8 6-6 6 6 6\"/></svg>Next.js</li><li class=\"ds-chip\"><svg width=\"16\" height=\"16\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"#5957d9\" stroke-width=\"2\" aria-hidden=\"true\"><path d=\"M8 3H7a2 2 0 0 0-2 2v5a2 2 0 0 1-2 2 2 2 0 0 1 2 2v5a2 2 0 0 0 2 2h1\"/><path d=\"M16 21h1a2 2 0 0 0 2-2v-5a2 2 0 0 1 2-2 2 2 0 0 1-2-2V5a2 2 0 0 0-2-2h-1\"/></svg>API</li></ul>",
+      "css": ".ds-chips { display: flex; flex-wrap: wrap; gap: 8px; margin: 0; padding: 0; list-style: none; } .ds-chip { display: inline-flex; align-items: center; gap: 8px; padding: 6px 14px 6px 12px; background: #ffffff; color: #0e0e10; border: 1px solid rgba(11,11,14,0.14); border-radius: 0; font-family: 'Inter Tight', sans-serif; font-size: 0.875rem; font-weight: 500; }"
+    },
+    {
+      "name": "Link Card",
+      "kind": "card",
+      "refersTo": "card",
+      "description": "Hairline card whose only hover is a stronger border.",
+      "html": "<a class=\"ds-card\" href=\"#\"><span><span class=\"ds-card-eyebrow\">Produit</span><span class=\"ds-card-title\">Pont Factur-X</span></span><svg width=\"20\" height=\"20\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" aria-hidden=\"true\"><path d=\"M7 17 17 7\"/><path d=\"M7 7h10v10\"/></svg></a>",
+      "css": ".ds-card { display: flex; align-items: center; justify-content: space-between; gap: 12px; padding: 20px; background: #ffffff; color: #0e0e10; border: 1px solid rgba(11,11,14,0.14); border-radius: 0; text-decoration: none; font-family: 'Inter Tight', sans-serif; transition: border-color 150ms; } .ds-card:hover { border-color: rgba(11,11,14,0.28); } .ds-card:focus-visible { outline: 2px solid #5957d9; outline-offset: 2px; } .ds-card-eyebrow { display: block; font-size: 0.75rem; font-weight: 600; letter-spacing: 0.18em; text-transform: uppercase; color: #646469; } .ds-card-title { display: block; margin-top: 4px; font-size: 1.25rem; font-weight: 700; letter-spacing: -0.025em; }"
+    },
+    {
+      "name": "Night Band Header",
+      "kind": "custom",
+      "refersTo": "eyebrow",
+      "description": "Signature inner-page header: night ground, indigo glow, giant word, real h1 and lead.",
+      "html": "<header class=\"ds-night\"><div class=\"ds-night-glow\"></div><p class=\"ds-night-eyebrow\">Services</p><span class=\"ds-night-giant\" aria-hidden=\"true\">SERVICES</span><h1 class=\"ds-night-title\">Applications, SaaS et sites web, du cadrage à la production.</h1><p class=\"ds-night-lead\">Un seul interlocuteur, de la première question à la mise en ligne.</p></header>",
+      "css": ".ds-night { position: relative; isolation: isolate; overflow: hidden; padding: 56px 32px 64px; background: #09090c; color: #f7f7f4; font-family: 'Inter Tight', sans-serif; } .ds-night-glow { position: absolute; inset: 0; z-index: -1; background: radial-gradient(42rem 30rem at 12% 18%, rgba(89,87,217,0.22), transparent 70%), radial-gradient(36rem 28rem at 78% 82%, rgba(138,136,242,0.12), transparent 70%); } .ds-night-eyebrow { margin: 0; font-size: 0.75rem; font-weight: 600; letter-spacing: 0.18em; text-transform: uppercase; color: #a2a2aa; } .ds-night-giant { display: block; margin-top: 12px; font-size: 5.5rem; font-weight: 900; line-height: 0.8; letter-spacing: -0.06em; padding-top: 0.14em; } .ds-night-title { margin: 32px 0 0; max-width: 32rem; font-size: 1.5rem; font-weight: 700; line-height: 1.35; letter-spacing: -0.025em; } .ds-night-lead { margin: 16px 0 0; max-width: 46rem; font-size: 1.125rem; line-height: 1.625; color: #a2a2aa; }"
+    }
+  ],
+  "narrative": {
+    "northStar": "The Night Workshop",
+    "overview": "One person building real software through the Korean night for clients waking up in Europe. Every inner page opens on a night band: near-black ground, a theme photo or a slow indigo glow melting in from the right, a page name set in giant black type across the full container. Below the band the page turns to paper: off-white ground, ink text, hairline rules. The home hero carries the same night with a tilted wall of the studio's real product screens drifting past.\n\nThe system is reductive by conviction. One sans family carries everything from the giant word to the form label; a single serif italic is reserved for the sentence that matters. One chromatic accent, indigo, signals action and current state; everything else is ink, paper or night. Corners are square without exception. Depth comes from the paper/night contrast and from photos dissolving into black, not from shadows.\n\nComponents are blunt and exact: square, flat, hairline-bordered, and they answer interaction with a color swap, never a lift or glow.",
+    "keyCharacteristics": [
+      "Paper by day, night for page headers, the home hero and statements.",
+      "Inter Tight from weight 400 to 900; Instrument Serif italic as the only second voice.",
+      "One accent (indigo) for action and state; a tiny green dot as the \"available\" signal.",
+      "Zero radius on every surface, control and chip.",
+      "Photos and product screens fade into the night through masks, never framed boxes.",
+      "Desktop root font set to 90% at 1024px and up for density; phones keep 100%."
+    ],
+    "rules": [
+      { "name": "The One Signal Rule", "body": "Indigo is the only chromatic color in the interface. It marks action (hover), place (current nav) and focus. If two things on a screen are indigo at rest, one of them is wrong.", "section": "colors" },
+      { "name": "The Theme-Scope Rule", "body": "Night is applied by wrapping a region in `.rs-theme-dark`, which remaps the `--rs-*` variables. Never hard-code night hexes inside a component that also renders on paper.", "section": "colors" },
+      { "name": "The One Serif Sentence Rule", "body": "Instrument Serif appears at most once per section, for a sentence or a phrase inside a headline. Never for UI, labels, buttons or body paragraphs.", "section": "typography" },
+      { "name": "The Negative Tracking Rule", "body": "Anything at 2rem or above tracks between -0.035em and -0.06em; small uppercase tracks +0.14em to +0.18em. Nothing sits at default tracking at display sizes.", "section": "typography" },
+      { "name": "The Dissolve, Don't Frame Rule", "body": "Photos in night bands and statements dissolve into the night through masks and shade gradients. They are never set in a bordered box with a drop shadow.", "section": "elevation" }
+    ],
+    "dos": [
+      "Do open every inner page with the Night Band and a real h1; add a Giant Word when the page has a short name.",
+      "Do use ink fill turning indigo on hover for every primary action, with a 150ms color transition.",
+      "Do reference `--rs-*` variables (via the `rs-*` Tailwind colors) so `.rs-theme-dark` can remap them.",
+      "Do keep radius at 0 through `--rs-radius-*`, and borders at 1px hairline.",
+      "Do show real product screens, not illustrations, when a page needs imagery of the work.",
+      "Do stop every looping animation under `prefers-reduced-motion`."
+    ],
+    "donts": [
+      "Don't extend the legacy warm-paper layer (`--background`, `--accent` orange `#d94f2b`, `.glass-panel`, `.shimmer-btn`, offset shadows, `ui/button`, `ui/card`, `ui/input`, `ui/badge`). It survives only in `components/site/` for the local `/site/[sector]/[city]` landings and older pages; new work uses Direction A tokens.",
+      "Don't add a second chromatic accent or colored section grounds. Gradient text is limited to the indigo-to-white editorial numbers (`.num-gradient`).",
+      "Don't lift, scale or glow components on hover; the response is a color swap.",
+      "Don't round corners on anything but the status dot.",
+      "Don't use Instrument Serif for UI, labels or paragraphs.",
+      "Don't frame night-band photos in boxes; mask them into the night."
+    ]
+  }
+}

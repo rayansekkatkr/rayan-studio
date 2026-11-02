@@ -76,7 +76,7 @@ export const sharedMetadata: Metadata = {
     siteName: BRAND.name,
     images: [
       {
-        url: "/og-image",
+        url: "/opengraph-image",
         width: 1200,
         height: 630,
         alt: `${BRAND.name} - Studio software et web`,
@@ -105,10 +105,11 @@ export function RootBody({ children, locale = "fr" }: { children: React.ReactNod
       <a href="#main-content" className="skip-link">
         {locale === "en" ? "Skip to main content" : "Aller au contenu principal"}
       </a>
+      {/* Early in the DOM so keyboard users reach the consent choice right after the skip link. */}
+      {gaId ? <CookieConsent /> : null}
       {gaId ? <AnalyticsLoader gaId={gaId} /> : null}
       {gaId ? <WebVitalsReporter /> : null}
       {children}
-      {gaId ? <CookieConsent /> : null}
     </body>
   );
 }

@@ -3,9 +3,9 @@ import { FunnelTracking } from "@/components/site/FunnelTracking";
 import { BRAND, getSiteUrl } from "@/lib/brand";
 import type { Locale } from "@/lib/i18n";
 import { ClosingCta } from "@/components/ui/closing-cta";
-import { quotePath } from "@/lib/site-routes";
+import { quotePath, studioPath } from "@/lib/site-routes";
 import { HomeHero } from "./home-hero";
-import { HomeProofA, HomeServicesA, HomeStatementA } from "./home-sections";
+import { HomeFounderA, HomeNextStepsA, HomeServicesA, HomeStatementA } from "./home-sections";
 
 function buildHomeJsonLd(locale: Locale) {
   const siteUrl = getSiteUrl();
@@ -19,19 +19,24 @@ function buildHomeJsonLd(locale: Locale) {
         "@id": `${siteUrl}/#founder`,
         name: BRAND.founder,
         jobTitle: "Software Engineer & Founder",
-        url: siteUrl,
+        url: `${siteUrl}${studioPath(locale, "rayan")}`,
+        worksFor: { "@id": `${siteUrl}/#studio` },
+        homeLocation: { "@type": "City", name: "Seoul" },
+        knowsLanguage: ["fr", "en"],
         sameAs: [BRAND.linkedinUrl, BRAND.portfolioUrl],
       },
       {
         "@type": "ProfessionalService",
         "@id": `${siteUrl}/#studio`,
         name: BRAND.name,
-        url: siteUrl,
+        url: `${siteUrl}/${locale}`,
+        image: `${siteUrl}/opengraph-image`,
         founder: { "@id": `${siteUrl}/#founder` },
         description: fr
-          ? "Studio indépendant de conception et développement d'applications, de plateformes SaaS et de sites web premium."
-          : "Independent studio designing and building applications, SaaS platforms and premium websites.",
+          ? "Studio indépendant : création et refonte de sites web, applications et SaaS sur mesure, du cadrage à la mise en production."
+          : "Independent studio: website design and redesign, custom applications and SaaS, from scoping to production.",
         email: BRAND.email,
+        areaServed: ["France", "Europe"],
         knowsLanguage: ["fr", "en"],
       },
       {
@@ -47,8 +52,8 @@ function buildHomeJsonLd(locale: Locale) {
         "@id": `${siteUrl}/${locale}#webpage`,
         url: `${siteUrl}/${locale}`,
         name: fr
-          ? "Rayan Studio, studio software, SaaS et expériences web sur mesure"
-          : "Rayan Studio, software studio for SaaS, web applications and digital products",
+          ? "Sites web, applications et SaaS sur mesure | Rayan Studio"
+          : "Websites, web applications and custom SaaS | Rayan Studio",
         isPartOf: { "@id": `${siteUrl}/#website` },
         inLanguage: fr ? "fr-FR" : "en-US",
       },
@@ -71,11 +76,14 @@ export function HomePage({ locale }: { locale: Locale }) {
       <section id="statement" data-home-section>
         <HomeStatementA locale={locale} />
       </section>
+      <section id="founder" data-home-section>
+        <HomeFounderA locale={locale} />
+      </section>
       <section id="services" data-home-section>
         <HomeServicesA locale={locale} />
       </section>
-      <section id="trust" data-home-section>
-        <HomeProofA locale={locale} />
+      <section id="next-steps" data-home-section>
+        <HomeNextStepsA locale={locale} />
       </section>
       <section id="final-cta" data-home-section>
         <ClosingCta

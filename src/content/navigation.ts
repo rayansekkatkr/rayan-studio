@@ -8,7 +8,7 @@ import {
   quotePath,
   saasLandingPath,
   servicePath,
-  smbLandingPath,
+  websitesLandingPath,
   startProjectPath,
   studioPath,
   workPath,
@@ -37,7 +37,7 @@ export type PrimaryNavLink = NavLink & { key: "websites" | "applications" | "wor
 export function getPrimaryNav(locale: Locale): PrimaryNavLink[] {
   const fr = locale === "fr";
   return [
-    { key: "websites", label: fr ? "Sites web" : "Websites", href: smbLandingPath(locale) },
+    { key: "websites", label: fr ? "Sites web" : "Websites", href: websitesLandingPath(locale) },
     { key: "applications", label: fr ? "Applications" : "Applications", href: saasLandingPath(locale) },
     { key: "work", label: fr ? "Réalisations" : "Work", href: workPath(locale) },
     { key: "studio", label: "Studio", href: studioPath(locale, "studio") },
@@ -55,7 +55,7 @@ export function getNavigation(locale: Locale): NavMenu[] {
         {
           label: fr ? "PAR BESOIN" : "BY NEED",
           links: [
-            { label: fr ? "Sites web pour commerces & PME" : "Websites for small businesses", href: smbLandingPath(locale) },
+            { label: fr ? "Création de site internet" : "Website design", href: websitesLandingPath(locale) },
             { label: fr ? "Applications & SaaS sur mesure" : "Custom applications & SaaS", href: saasLandingPath(locale) },
             { label: fr ? "Demander un devis gratuit" : "Get a free quote", href: quotePath(locale) },
           ],
@@ -66,7 +66,7 @@ export function getNavigation(locale: Locale): NavMenu[] {
             { label: fr ? "Applications web & SaaS" : "Web applications & SaaS", href: servicePath(locale, "applications") },
             { label: fr ? "MVP & produits digitaux" : "MVP & digital products", href: servicePath(locale, "mvp") },
             { label: "APIs & backends", href: servicePath(locale, "backends") },
-            { label: fr ? "Sites premium & refonte" : "Premium websites & redesign", href: servicePath(locale, "web") },
+            { label: fr ? "Sites web & refonte" : "Websites & redesign", href: servicePath(locale, "web") },
           ],
         },
         {

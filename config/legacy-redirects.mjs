@@ -6,14 +6,20 @@ export const LEGACY_REDIRECTS = [
   { source: "/fr/refonte-site-internet", destination: "/fr/services/sites-web-refonte", permanent: true },
   { source: "/fr/cout-refonte-site-internet-petite-entreprise", destination: "/fr/studio/offres", permanent: true },
   { source: "/fr/checklist-refonte-site-internet", destination: "/fr/insights/checklists/checklist-refonte-site-internet", permanent: true },
-  { source: "/fr/creation-site-vitrine", destination: "/fr/site-internet-commerces-pme", permanent: true },
-  { source: "/fr/site-internet-petite-entreprise", destination: "/fr/site-internet-commerces-pme", permanent: true },
+  { source: "/fr/creation-site-vitrine", destination: "/fr/creation-site-internet", permanent: true },
+  { source: "/fr/site-internet-petite-entreprise", destination: "/fr/creation-site-internet", permanent: true },
   { source: "/fr/application-web-sur-mesure", destination: "/fr/developpement-application-saas", permanent: true },
 
   { source: "/en/website-redesign", destination: "/en/services/premium-websites-redesign", permanent: true },
   { source: "/en/small-business-website-redesign-cost", destination: "/en/studio/offers", permanent: true },
-  { source: "/en/small-business-website", destination: "/en/websites-small-businesses", permanent: true },
+  { source: "/en/small-business-website", destination: "/en/website-design", permanent: true },
   { source: "/en/custom-web-application", destination: "/en/application-saas-development", permanent: true },
+
+  // 2026-11-02: the websites landing is no longer scoped to small businesses.
+  { source: "/fr/site-internet-commerces-pme", destination: "/fr/creation-site-internet", permanent: true },
+  { source: "/en/websites-small-businesses", destination: "/en/website-design", permanent: true },
+  { source: "/en/site-internet-commerces-pme", destination: "/en/website-design", permanent: true },
+  { source: "/fr/websites-small-businesses", destination: "/fr/creation-site-internet", permanent: true },
 
   { source: "/fr/start-a-project", destination: "/fr/demarrer-un-projet", permanent: true },
   { source: "/en/demarrer-un-projet", destination: "/en/start-a-project", permanent: true },

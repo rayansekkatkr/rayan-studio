@@ -78,7 +78,10 @@ export function LanguageSwitch({ locale, className, tone = "default" }: Language
             <Link
               href={equivalentPath(pathname, locale, target)}
               className={idleClass}
-              aria-label={target === "fr" ? "Version française" : "English version"}
+              // Label in Name (WCAG 2.5.3): the accessible name starts with the visible "FR"/"EN".
+              aria-label={target === "fr" ? "FR, version française" : "EN, English version"}
+              hrefLang={target}
+              lang={target}
             >
               {target.toUpperCase()}
             </Link>
