@@ -20,7 +20,10 @@ export function buildLocalizedMetadata(input: LocalizedMetadataInput): Metadata 
   const languages: Record<string, string> = {};
   if (frPath) languages.fr = frPath;
   if (enPath) languages.en = enPath;
-  if (frPath) languages["x-default"] = frPath;
+  // Unmatched languages are redirected to English by the middleware (preferredLocaleFromHeader),
+  // so x-default points there; French stays the default only for visitors without a language.
+  if (enPath) languages["x-default"] = enPath;
+  else if (frPath) languages["x-default"] = frPath;
 
   return {
     title,
