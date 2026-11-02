@@ -20,7 +20,7 @@ export function ContactLayout({
     <div className="bg-rs-bg py-16 md:py-20">
       <Container>
         <div className="grid gap-6 lg:grid-cols-[minmax(0,3fr)_minmax(0,2fr)] lg:gap-8">
-          <div className="rounded-[var(--rs-radius-md)] border border-[var(--rs-border)] bg-rs-surface p-6 shadow-[0_24px_60px_-40px_rgba(9,9,12,0.35)] md:p-10">
+          <div className="rounded-(--rs-radius-md) border border-(--rs-border) bg-rs-surface p-6 shadow-[0_24px_60px_-40px_rgba(9,9,12,0.35)] md:p-10">
             {children}
           </div>
           <ContactAside locale={locale} source={source} />

@@ -305,7 +305,7 @@ export function Showcase({ locale = "fr" }: { locale?: Locale }) {
                       exit={{ opacity: 0, y: -40 }}
                       transition={{ type: "spring", duration: 0.58, bounce: 0 }}
                     />
-                    <span className="inline-flex rounded-none border border-[#2a231d]/14 bg-[#f5f1e8] px-2 py-0.5 text-[10px] font-black uppercase tracking-[0.1em] text-[#c2461f]">
+                    <span className="inline-flex rounded-none border border-[#2a231d]/14 bg-[#f5f1e8] px-2 py-0.5 text-[10px] font-black uppercase tracking-widest text-[#c2461f]">
                       {activeProject.segment}
                     </span>
                   </div>
@@ -360,7 +360,7 @@ export function Showcase({ locale = "fr" }: { locale?: Locale }) {
                   <p className="text-[11px] font-black uppercase tracking-[0.14em] text-[#6f6355]">
                     {en ? "Visual selection" : "Sélection visuelle"}
                   </p>
-                  <span className="inline-flex items-center gap-1 text-[11px] font-black uppercase tracking-[0.1em] text-[#c2461f]">
+                  <span className="inline-flex items-center gap-1 text-[11px] font-black uppercase tracking-widest text-[#c2461f]">
                     {en ? "Click to switch" : "Cliquer pour changer"}
                     <ArrowUpRight size={12} />
                   </span>

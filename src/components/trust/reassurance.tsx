@@ -46,19 +46,19 @@ export function Reassurance({ locale, variant = "general", className }: { locale
       ];
 
   return (
-    <section data-reassurance={variant} className={cn("py-[var(--rs-section-space)]", className)}>
+    <section data-reassurance={variant} className={cn("py-(--rs-section-space)", className)}>
       <Container>
         <h2 className="max-w-4xl text-[2.25rem] font-extrabold leading-[0.98] tracking-[-0.045em] md:text-6xl">
           {fr ? "Des preuves que vous pouvez vérifier." : "Proof you can check for yourself."}
         </h2>
-        <p className="mt-4 max-w-[var(--rs-reading)] text-lg leading-relaxed text-rs-muted">
+        <p className="mt-4 max-w-(--rs-reading) text-lg leading-relaxed text-rs-muted">
           {fr
             ? "Pas de témoignages ni de chiffres de façade : des produits en ligne, une stack éprouvée et une seule personne responsable de votre projet."
             : "No staged testimonials or vanity numbers: products that are online, a proven stack and one person accountable for your project."}
         </p>
 
         <div className="mt-10 grid gap-5 lg:grid-cols-12">
-          <div className="rounded-[var(--rs-radius-md)] border border-[var(--rs-border)] bg-rs-surface p-6 md:p-7 lg:col-span-7">
+          <div className="rounded-(--rs-radius-md) border border-(--rs-border) bg-rs-surface p-6 md:p-7 lg:col-span-7">
             <p className="text-xs font-semibold uppercase tracking-[0.18em] text-rs-muted">
               {fr ? "Réalisations en ligne" : "Live work"}
             </p>
@@ -79,7 +79,7 @@ export function Reassurance({ locale, variant = "general", className }: { locale
             </Link>
           </div>
 
-          <div className="rs-theme-dark relative isolate overflow-hidden rounded-[var(--rs-radius-md)] bg-rs-bg p-6 text-rs-fg md:p-7 lg:col-span-5">
+          <div className="rs-theme-dark relative isolate overflow-hidden rounded-(--rs-radius-md) bg-rs-bg p-6 text-rs-fg md:p-7 lg:col-span-5">
             <div aria-hidden className="hero-glow absolute inset-0 -z-10" />
             <p className="text-xs font-semibold uppercase tracking-[0.18em] text-rs-muted">
               {fr ? "Un seul interlocuteur" : "One point of contact"}
@@ -99,7 +99,7 @@ export function Reassurance({ locale, variant = "general", className }: { locale
             </ul>
           </div>
 
-          <div className="rounded-[var(--rs-radius-md)] border border-[var(--rs-border)] bg-rs-surface p-6 md:p-7 lg:col-span-7">
+          <div className="rounded-(--rs-radius-md) border border-(--rs-border) bg-rs-surface p-6 md:p-7 lg:col-span-7">
             <p className="text-xs font-semibold uppercase tracking-[0.18em] text-rs-muted">
               {fr ? "Processus de travail" : "How we work"}
             </p>
@@ -115,7 +115,7 @@ export function Reassurance({ locale, variant = "general", className }: { locale
             </ol>
           </div>
 
-          <div className="rounded-[var(--rs-radius-md)] border border-[var(--rs-border)] bg-rs-surface p-6 md:p-7 lg:col-span-5">
+          <div className="rounded-(--rs-radius-md) border border-(--rs-border) bg-rs-surface p-6 md:p-7 lg:col-span-5">
             <p className="text-xs font-semibold uppercase tracking-[0.18em] text-rs-muted">
               {fr ? "Technologies maîtrisées" : "Technologies we master"}
             </p>

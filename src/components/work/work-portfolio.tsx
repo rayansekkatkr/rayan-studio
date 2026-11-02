@@ -84,7 +84,7 @@ export function WorkPortfolio({ locale }: { locale: Locale }) {
               locale={locale}
               featured={FEATURED.includes(p.key)}
               featuredAttr="data-work-project"
-              heightClass="aspect-[16/10] lg:aspect-auto lg:h-[32rem]"
+              heightClass="aspect-16/10 lg:aspect-auto lg:h-128"
             />
           ))}
         </div>
@@ -95,7 +95,7 @@ export function WorkPortfolio({ locale }: { locale: Locale }) {
           <div className="flex flex-col gap-3 md:flex-row md:items-end md:justify-between">
             <div>
               <p className="text-xs font-semibold uppercase tracking-[0.18em] text-rs-muted">{fr ? "Index des projets" : "Project index"}</p>
-              <h2 id="index-projets" className="mt-3 text-[2rem] font-extrabold leading-[1] tracking-[-0.04em] md:text-5xl">
+              <h2 id="index-projets" className="mt-3 text-[2rem] font-extrabold leading-none tracking-[-0.04em] md:text-5xl">
                 {fr ? "Tous les projets, IA, DevOps et infrastructure compris." : "Every project, AI, DevOps and infrastructure included."}
               </h2>
             </div>
@@ -116,7 +116,7 @@ export function WorkPortfolio({ locale }: { locale: Locale }) {
             </thead>
             <tbody>
               {indexed.map((p) => (
-                <tr key={p.key} className="group border-b border-[var(--rs-border)]">
+                <tr key={p.key} className="group border-b border-(--rs-border)">
                   <td className="py-5 pr-4">
                     <Link
                       href={workPath(locale, p.slug)}

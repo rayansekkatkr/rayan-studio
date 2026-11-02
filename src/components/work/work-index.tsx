@@ -39,9 +39,9 @@ export function WorkIndex({ locale }: { locale: Locale }) {
         <WorkPortfolio locale={locale} />
       </div>
 
-      <section id="refontes-concept" data-work-concepts className="scroll-mt-24 border-t border-[var(--rs-border)] py-[var(--rs-section-space)]">
+      <section id="refontes-concept" data-work-concepts className="scroll-mt-24 border-t border-(--rs-border) py-(--rs-section-space)">
         <Container>
-          <h2 className="max-w-[18ch] text-[2.25rem] font-extrabold leading-[1] tracking-[-0.04em] md:text-[3rem]">
+          <h2 className="max-w-[18ch] text-[2.25rem] font-extrabold leading-none tracking-[-0.04em] md:text-[3rem]">
             {fr ? "Refontes concept, avant / après." : "Concept redesigns, before / after."}
           </h2>
           <p className="mt-4 max-w-[60ch] text-lg leading-relaxed text-rs-muted">

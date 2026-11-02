@@ -44,7 +44,7 @@ export function InsightArticle({ locale, insight }: { locale: Locale; insight: I
           <h1 className="mt-5 max-w-5xl text-[2.5rem] font-extrabold leading-[0.98] tracking-[-0.045em] md:text-6xl">
             {insight.title[locale]}
           </h1>
-          <p className="mt-5 max-w-[var(--rs-reading)] text-lg leading-relaxed text-rs-muted">
+          <p className="mt-5 max-w-(--rs-reading) text-lg leading-relaxed text-rs-muted">
             {insight.description[locale]}
           </p>
           <p className="mt-4 text-sm text-rs-muted">
@@ -54,13 +54,13 @@ export function InsightArticle({ locale, insight }: { locale: Locale; insight: I
         </Container>
       </NightBand>
 
-      <div className="bg-rs-bg py-[var(--rs-section-space)]">
+      <div className="bg-rs-bg py-(--rs-section-space)">
         <Container>
-          <div className="max-w-[var(--rs-reading)]">
+          <div className="max-w-(--rs-reading)">
             <InsightBlocks blocks={insight.blocks[locale]} />
           </div>
 
-          <footer className="mt-16 border-t border-[var(--rs-border)] pt-10">
+          <footer className="mt-16 border-t border-(--rs-border) pt-10">
             <div className="flex flex-wrap items-center gap-6">
               <Link
                 href={cta.serviceHref}
@@ -71,7 +71,7 @@ export function InsightArticle({ locale, insight }: { locale: Locale; insight: I
               </Link>
               <Link
                 href={cta.primaryHref}
-                className="inline-flex items-center gap-2 rounded-none bg-rs-fg px-6 py-3 text-base font-semibold text-rs-bg transition-colors duration-150 hover:bg-rs-accent active:bg-rs-accent-hover active:text-[var(--rs-dark-fg)] active:duration-0"
+                className="inline-flex items-center gap-2 rounded-none bg-rs-fg px-6 py-3 text-base font-semibold text-rs-bg transition-colors duration-150 hover:bg-rs-accent active:bg-rs-accent-hover active:text-(--rs-dark-fg) active:duration-0"
               >
                 {cta.primaryLabel}
                 <ArrowRight aria-hidden className="h-4 w-4" />

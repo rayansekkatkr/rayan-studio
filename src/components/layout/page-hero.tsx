@@ -25,7 +25,7 @@ export function PageHero({ eyebrow, title, description, theme = "light", childre
         <h1 className="mt-4 max-w-4xl text-3xl font-semibold leading-[1.05] tracking-tight md:text-5xl">
           {title}
         </h1>
-        <p className="mt-6 max-w-[var(--rs-reading)] text-lg leading-relaxed text-rs-muted">
+        <p className="mt-6 max-w-(--rs-reading) text-lg leading-relaxed text-rs-muted">
           {description}
         </p>
         {children}

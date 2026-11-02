@@ -90,19 +90,19 @@ export default async function Page({ params }: { params: Promise<{ locale: strin
           <h1 className="mt-5 max-w-5xl text-[2.5rem] font-extrabold leading-[0.98] tracking-[-0.045em] md:text-6xl">
             {meta.title}
           </h1>
-          <p className="mt-6 max-w-[var(--rs-reading)] text-lg leading-relaxed text-rs-muted">
+          <p className="mt-6 max-w-(--rs-reading) text-lg leading-relaxed text-rs-muted">
             {meta.description}
           </p>
         </Container>
       </NightBand>
-      <div className="bg-rs-bg py-[var(--rs-section-space)]">
+      <div className="bg-rs-bg py-(--rs-section-space)">
         <Container>
           {category === "tools" ? (
             <div>
               <h2 className="text-2xl font-semibold tracking-tight">
                 {fr ? "Votre projet est-il prêt ?" : "Is your project ready?"}
               </h2>
-              <p className="mt-2 max-w-[var(--rs-reading)] text-base leading-relaxed text-rs-muted">
+              <p className="mt-2 max-w-(--rs-reading) text-base leading-relaxed text-rs-muted">
                 {fr
                   ? "Répondez à cinq questions pour situer la préparation de votre projet. Rien n'est enregistré."
                   : "Answer five questions to see how prepared your project is. Nothing is stored."}

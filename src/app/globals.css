@@ -1,558 +1,684 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import 'tailwindcss';
 
-:root {
-  --background: #f5f1e8;
-  --background-soft: #e8e0d2;
-  --surface: rgba(255, 252, 246, 0.86);
-  --surface-strong: rgba(255, 252, 246, 0.95);
-  --border: rgba(42, 35, 29, 0.14);
-  --text-primary: #17120f;
-  --text-secondary: #63584d;
-  --accent: #d94f2b;
+/* Hover only on devices that hover with a fine pointer (was future.hoverOnlyWhenSupported in v3): no sticky hover after a tap. */
+@custom-variant hover (@media (hover: hover) and (pointer: fine) { &:hover });
 
-  --rs-bg: #f2f1ed;
-  --rs-surface: #ffffff;
-  --rs-surface-subtle: #ebe9e4;
-  --rs-fg: #0e0e10;
-  --rs-muted: #646469;
-  --rs-accent: #5957d9;
-  --rs-accent-hover: #4745bd;
-  /* Accent used as text or icon colour. Kept separate from --rs-accent so the
-     dark theme can lighten text without lowering contrast on accent fills. */
-  --rs-accent-fg: var(--rs-accent);
-  --rs-border: rgba(11, 11, 14, 0.14);
-  --rs-border-strong: rgba(11, 11, 14, 0.28);
-  --rs-dark: #09090c;
-  --rs-dark-surface: #121218;
-  --rs-dark-fg: #f7f7f4;
-  --rs-dark-muted: #a2a2aa;
-  /* Indigo as text on night (6.5:1 on --rs-dark). Also used by the header over a night hero. */
-  --rs-dark-accent-fg: #8a88f2;
-  /* "Available" status dot, never text. */
-  --rs-live: #3ddc84;
-  --rs-container: 86rem;
-  --rs-reading: 46rem;
-  --rs-section-space: clamp(3.5rem, 6vw, 5rem);
-  --rs-radius-sm: 0;
-  --rs-radius-md: 0;
-  --rs-radius-lg: 0;
-  /* Motion: hovers and colour swaps at 150ms (DESIGN.md), entering/leaving UI on a strong ease-out. */
-  --rs-motion-fast: 150ms;
-  --rs-motion-medium: 240ms;
-  --rs-ease-out: cubic-bezier(0.23, 1, 0.32, 1);
-  /* Fixed overlay surfaces: explicit rgba because Tailwind cannot derive
-     opacity variants from opaque var() color tokens. */
-  --rs-header-surface: rgba(255, 255, 255, 0.92);
-  --rs-mega-surface: rgba(255, 255, 255, 0.96);
-}
+@theme inline {
+  --color-rs-bg: var(--rs-bg);
+  --color-rs-surface: var(--rs-surface);
+  --color-rs-subtle: var(--rs-surface-subtle);
+  --color-rs-fg: var(--rs-fg);
+  --color-rs-muted: var(--rs-muted);
+  --color-rs-accent: var(--rs-accent);
+  --color-rs-accent-fg: var(--rs-accent-fg);
+  --color-rs-accent-hover: var(--rs-accent-hover);
+  --color-rs-border: var(--rs-border);
+  --color-rs-dark: var(--rs-dark);
 
-.rs-theme-dark {
-  --rs-bg: var(--rs-dark);
-  --rs-surface: var(--rs-dark-surface);
-  --rs-surface-subtle: #1a1a21;
-  --rs-fg: var(--rs-dark-fg);
-  --rs-muted: var(--rs-dark-muted);
-  /* 6.5:1 on --rs-dark, 5.7:1 on #1a1a21 (WCAG AA). */
-  --rs-accent-fg: var(--rs-dark-accent-fg);
-  --rs-border: rgba(247, 247, 244, 0.14);
-  --rs-border-strong: rgba(247, 247, 244, 0.28);
-}
+  --font-sans: var(--rs-font-sans), sans-serif;
+  --font-serif: var(--rs-font-serif), serif;
 
-* {
-  box-sizing: border-box;
-}
+  --ease-rs: var(--rs-ease-out);
 
-html {
-  scroll-behavior: smooth;
-  scroll-padding-top: 6.5rem;
-  /* Space taken by the cookie bar while it is shown (set by CookieConsent). */
-  scroll-padding-bottom: calc(var(--consent-h, 0px) + 0.75rem);
-  overflow-x: clip;
-}
+  --animate-accordion-down: accordion-down 0.28s ease-out;
+  --animate-accordion-up: accordion-up 0.24s ease-out;
+  --animate-shimmer: shimmer 2.6s ease-in-out infinite;
 
-/* Desktop density: the whole site is set at 90 % on large screens (everything is in rem).
-   Phones and tablets keep the browser default so text stays readable. */
-@media (min-width: 1024px) {
-  html {
-    font-size: 90%;
-  }
-}
-
-body {
-  position: relative;
-  margin: 0;
-  min-height: 100svh;
-  overflow-x: clip;
-  width: 100%;
-  font-family: var(--font-sans), sans-serif;
-  color: var(--text-primary);
-  background:
-    linear-gradient(rgba(23, 18, 15, 0.01) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(23, 18, 15, 0.008) 1px, transparent 1px),
-    radial-gradient(circle at 18% 10%, rgba(217, 79, 43, 0.045), transparent 28%),
-    radial-gradient(circle at 90% 8%, rgba(255, 252, 246, 0.72), transparent 34%),
-    linear-gradient(180deg, #f8f5ee 0%, #efe7d9 100%);
-  background-size:
-    96px 96px,
-    96px 96px,
-    auto,
-    auto,
-    auto;
-}
-
-.font-display {
-  font-family: var(--font-sans), sans-serif;
-}
-
-.brand-wordmark {
-  font-family: Georgia, "Times New Roman", serif;
-  font-style: italic;
-  letter-spacing: 0.01em;
-}
-
-.glass-panel {
-  background:
-    linear-gradient(142deg, rgba(255, 252, 246, 0.93) 0%, rgba(250, 244, 234, 0.74) 44%, rgba(232, 224, 211, 0.62) 100%),
-    var(--surface);
-  border: 1px solid var(--border);
-  backdrop-filter: blur(10px) saturate(108%);
-  box-shadow:
-    inset 0 1px 0 rgba(255, 252, 246, 0.9),
-    0 18px 38px rgba(42, 35, 29, 0.1);
-}
-
-.glass-panel-strong {
-  background:
-    linear-gradient(145deg, rgba(255, 252, 246, 0.96) 0%, rgba(247, 239, 226, 0.86) 48%, rgba(232, 224, 211, 0.74) 100%),
-    var(--surface-strong);
-  border: 1px solid var(--border);
-  backdrop-filter: blur(12px) saturate(108%);
-  box-shadow:
-    inset 0 1px 0 rgba(255, 252, 246, 0.94),
-    0 26px 48px rgba(42, 35, 29, 0.14);
-}
-
-.hero-aurora {
-  background:
-    linear-gradient(rgba(23, 18, 15, 0.01) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(23, 18, 15, 0.008) 1px, transparent 1px),
-    radial-gradient(circle at 14% 22%, rgba(217, 79, 43, 0.04), transparent 32%),
-    linear-gradient(180deg, rgba(248, 245, 238, 0.96), rgba(239, 231, 217, 0.48));
-  background-size: 96px 96px, 96px 96px, auto, auto;
-  transform: translateZ(0);
-}
-
-.hero-vignette {
-  background:
-    radial-gradient(circle at 50% 26%, rgba(255, 252, 246, 0.3), transparent 54%),
-    linear-gradient(180deg, rgba(255, 252, 246, 0) 34%, rgba(239, 231, 217, 0.46) 100%);
-  transform: translateZ(0);
-}
-
-.shimmer-btn {
-  isolation: isolate;
-}
-
-.shimmer-btn::before {
-  content: "";
-  position: absolute;
-  top: -20%;
-  left: -40%;
-  height: 140%;
-  width: 36%;
-  background: linear-gradient(
-    120deg,
-    rgba(255, 255, 255, 0) 0%,
-    rgba(255, 255, 255, 0.65) 48%,
-    rgba(255, 255, 255, 0) 100%
+  --background-image-gradient-radial: radial-gradient(var(--tw-gradient-stops));
+  --background-image-gradient-conic: conic-gradient(
+    from 180deg at 50% 50%,
+    var(--tw-gradient-stops)
   );
-  pointer-events: none;
-  z-index: -1;
-  animation: shimmer-slide 2.8s ease-in-out infinite;
-}
 
-.shine-border::after {
-  content: "";
-  position: absolute;
-  inset: 0;
-  border-radius: inherit;
-  padding: 1px;
-  background: linear-gradient(130deg, rgba(255, 252, 246, 0.8), rgba(217, 79, 43, 0.34), rgba(23, 18, 15, 0.16));
-  -webkit-mask:
-    linear-gradient(#fff 0 0) content-box,
-    linear-gradient(#fff 0 0);
-  -webkit-mask-composite: xor;
-  mask-composite: exclude;
-  pointer-events: none;
-}
-
-@keyframes shimmer-slide {
-  0% {
-    transform: translateX(-140%) skewX(-22deg);
+  @keyframes accordion-down {
+    from {
+      height: 0;
+    }
+    to {
+      height: var(--radix-accordion-content-height);
+    }
   }
-  100% {
-    transform: translateX(360%) skewX(-22deg);
+  @keyframes accordion-up {
+    from {
+      height: var(--radix-accordion-content-height);
+    }
+    to {
+      height: 0;
+    }
+  }
+  @keyframes shimmer {
+    0% {
+      transform: translateX(-150%) skewX(-22deg);
+    }
+    100% {
+      transform: translateX(220%) skewX(-22deg);
+    }
   }
 }
 
-/* Designed keyboard focus (DESIGN.md: indigo marks focus). --rs-accent-fg is remapped on night. */
-:focus-visible {
-  outline: 2px solid var(--rs-accent-fg);
-  outline-offset: 3px;
+/*
+  The default border color has changed to `currentcolor` in Tailwind CSS v4,
+  so we've added these compatibility styles to make sure everything still
+  looks the same as it did with Tailwind CSS v3.
+
+  If we ever want to remove these styles, we need to add an explicit border
+  color utility to any element that depends on these defaults.
+*/
+@layer base {
+  *,
+  ::after,
+  ::before,
+  ::backdrop,
+  ::file-selector-button {
+    border-color: var(--color-gray-200, currentcolor);
+  }
+
+  /* Tailwind v3 preflight behaviour kept after the v4 upgrade. */
+  button:not(:disabled),
+  [role="button"]:not(:disabled) {
+    cursor: pointer;
+  }
+  input::placeholder,
+  textarea::placeholder {
+    color: var(--color-gray-400);
+  }
 }
 
-::selection {
-  background: color-mix(in srgb, var(--rs-accent) 28%, transparent);
-  color: var(--rs-fg);
+@utility text-balance {
+  text-wrap: balance;
+}
+
+@utility section-screen {
+  min-height: auto;
+  display: flex;
+  align-items: flex-start;
+  padding-top: clamp(5.75rem, 8vh, 6.75rem);
+  padding-bottom: clamp(4.25rem, 7vh, 5.75rem);
+}
+
+@utility section-fit {
+  /* Sections that should fill exactly one viewport (no scroll) on desktop. */
+  min-height: 100svh;
+  align-items: center;
 }
 
 @layer utilities {
-  .text-balance {
-    text-wrap: balance;
+  :root {
+    --background: #f5f1e8;
+    --background-soft: #e8e0d2;
+    --surface: rgba(255, 252, 246, 0.86);
+    --surface-strong: rgba(255, 252, 246, 0.95);
+    --border: rgba(42, 35, 29, 0.14);
+    --text-primary: #17120f;
+    --text-secondary: #63584d;
+    --accent: #d94f2b;
+
+    --rs-bg: #f2f1ed;
+    --rs-surface: #ffffff;
+    --rs-surface-subtle: #ebe9e4;
+    --rs-fg: #0e0e10;
+    --rs-muted: #646469;
+    --rs-accent: #5957d9;
+    --rs-accent-hover: #4745bd;
+    /* Accent used as text or icon colour. Kept separate from --rs-accent so the
+     dark theme can lighten text without lowering contrast on accent fills. */
+    --rs-accent-fg: var(--rs-accent);
+    --rs-border: rgba(11, 11, 14, 0.14);
+    --rs-border-strong: rgba(11, 11, 14, 0.28);
+    --rs-dark: #09090c;
+    --rs-dark-surface: #121218;
+    --rs-dark-fg: #f7f7f4;
+    --rs-dark-muted: #a2a2aa;
+    /* Indigo as text on night (6.5:1 on --rs-dark). Also used by the header over a night hero. */
+    --rs-dark-accent-fg: #8a88f2;
+    /* "Available" status dot, never text. */
+    --rs-live: #3ddc84;
+    --rs-container: 86rem;
+    --rs-reading: 46rem;
+    --rs-section-space: clamp(3.5rem, 6vw, 5rem);
+    --rs-radius-sm: 0;
+    --rs-radius-md: 0;
+    --rs-radius-lg: 0;
+    /* Motion: hovers and colour swaps at 150ms (DESIGN.md), entering/leaving UI on a strong ease-out. */
+    --rs-motion-fast: 150ms;
+    --rs-motion-medium: 240ms;
+    --rs-ease-out: cubic-bezier(0.23, 1, 0.32, 1);
+    /* Fixed overlay surfaces: explicit rgba because Tailwind cannot derive
+     opacity variants from opaque var() color tokens. */
+    --rs-header-surface: rgba(255, 255, 255, 0.92);
+    --rs-mega-surface: rgba(255, 255, 255, 0.96);
   }
 
-  .section-screen {
-    min-height: auto;
-    display: flex;
-    align-items: flex-start;
-    padding-top: clamp(5.75rem, 8vh, 6.75rem);
-    padding-bottom: clamp(4.25rem, 7vh, 5.75rem);
+  .rs-theme-dark {
+    --rs-bg: var(--rs-dark);
+    --rs-surface: var(--rs-dark-surface);
+    --rs-surface-subtle: #1a1a21;
+    --rs-fg: var(--rs-dark-fg);
+    --rs-muted: var(--rs-dark-muted);
+    /* 6.5:1 on --rs-dark, 5.7:1 on #1a1a21 (WCAG AA). */
+    --rs-accent-fg: var(--rs-dark-accent-fg);
+    --rs-border: rgba(247, 247, 244, 0.14);
+    --rs-border-strong: rgba(247, 247, 244, 0.28);
   }
 
-  /* Sections that should fill exactly one viewport (no scroll) on desktop. */
-  .section-fit {
+  * {
+    box-sizing: border-box;
+  }
+
+  html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 6.5rem;
+    /* Space taken by the cookie bar while it is shown (set by CookieConsent). */
+    scroll-padding-bottom: calc(var(--consent-h, 0px) + 0.75rem);
+    overflow-x: clip;
+  }
+
+  /* Desktop density: the whole site is set at 90 % on large screens (everything is in rem).
+   Phones and tablets keep the browser default so text stays readable. */
+  @media (min-width: 1024px) {
+    html {
+      font-size: 90%;
+    }
+  }
+
+  body {
+    position: relative;
+    margin: 0;
     min-height: 100svh;
-    align-items: center;
+    overflow-x: clip;
+    width: 100%;
+    font-family: var(--rs-font-sans), sans-serif;
+    color: var(--text-primary);
+    background:
+      linear-gradient(rgba(23, 18, 15, 0.01) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(23, 18, 15, 0.008) 1px, transparent 1px),
+      radial-gradient(
+        circle at 18% 10%,
+        rgba(217, 79, 43, 0.045),
+        transparent 28%
+      ),
+      radial-gradient(
+        circle at 90% 8%,
+        rgba(255, 252, 246, 0.72),
+        transparent 34%
+      ),
+      linear-gradient(180deg, #f8f5ee 0%, #efe7d9 100%);
+    background-size:
+      96px 96px,
+      96px 96px,
+      auto,
+      auto,
+      auto;
   }
-}
 
-section[id] {
-  scroll-margin-top: 6.5rem;
-}
+  .font-display {
+    font-family: var(--rs-font-sans), sans-serif;
+  }
 
-/* Inner page heroes: background photo shaded towards the text column. */
-.page-hero-shade {
-  background:
-    linear-gradient(90deg, var(--rs-dark) 0%, rgba(9, 9, 12, 0.88) 40%, rgba(9, 9, 12, 0.45) 100%),
-    linear-gradient(0deg, var(--rs-dark) 0%, rgba(9, 9, 12, 0) 45%);
-}
+  .brand-wordmark {
+    font-family: Georgia, 'Times New Roman', serif;
+    font-style: italic;
+    letter-spacing: 0.01em;
+  }
 
-/* Night page headers: the photo is faded in from the right and towards the bottom. */
-.night-band-image {
-  opacity: 0.78;
-  -webkit-mask-image: linear-gradient(to right, transparent 0%, #000 55%), linear-gradient(to top, transparent 0%, #000 45%);
-  -webkit-mask-composite: source-in;
-  mask-image: linear-gradient(to right, transparent 0%, #000 55%), linear-gradient(to top, transparent 0%, #000 45%);
-  mask-composite: intersect;
-}
+  .glass-panel {
+    background:
+      linear-gradient(
+        142deg,
+        rgba(255, 252, 246, 0.93) 0%,
+        rgba(250, 244, 234, 0.74) 44%,
+        rgba(232, 224, 211, 0.62) 100%
+      ),
+      var(--surface);
+    border: 1px solid var(--border);
+    backdrop-filter: blur(10px) saturate(108%);
+    box-shadow:
+      inset 0 1px 0 rgba(255, 252, 246, 0.9),
+      0 18px 38px rgba(42, 35, 29, 0.1);
+  }
 
-.night-band-image--dim {
-  opacity: 0.3;
-}
+  .glass-panel-strong {
+    background:
+      linear-gradient(
+        145deg,
+        rgba(255, 252, 246, 0.96) 0%,
+        rgba(247, 239, 226, 0.86) 48%,
+        rgba(232, 224, 211, 0.74) 100%
+      ),
+      var(--surface-strong);
+    border: 1px solid var(--border);
+    backdrop-filter: blur(12px) saturate(108%);
+    box-shadow:
+      inset 0 1px 0 rgba(255, 252, 246, 0.94),
+      0 26px 48px rgba(42, 35, 29, 0.14);
+  }
 
-.night-band-shade {
-  /* Darker through the middle so muted lead text over the photo stays at 4.5:1 or more. */
-  background: linear-gradient(90deg, var(--rs-dark) 0%, color-mix(in srgb, var(--rs-dark) 72%, transparent) 50%, color-mix(in srgb, var(--rs-dark) 25%, transparent) 100%);
-}
+  .hero-aurora {
+    background:
+      linear-gradient(rgba(23, 18, 15, 0.01) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(23, 18, 15, 0.008) 1px, transparent 1px),
+      radial-gradient(
+        circle at 14% 22%,
+        rgba(217, 79, 43, 0.04),
+        transparent 32%
+      ),
+      linear-gradient(
+        180deg,
+        rgba(248, 245, 238, 0.96),
+        rgba(239, 231, 217, 0.48)
+      );
+    background-size:
+      96px 96px,
+      96px 96px,
+      auto,
+      auto;
+    transform: translateZ(0);
+  }
 
-@media (max-width: 767px) {
+  .hero-vignette {
+    background:
+      radial-gradient(
+        circle at 50% 26%,
+        rgba(255, 252, 246, 0.3),
+        transparent 54%
+      ),
+      linear-gradient(
+        180deg,
+        rgba(255, 252, 246, 0) 34%,
+        rgba(239, 231, 217, 0.46) 100%
+      );
+    transform: translateZ(0);
+  }
+
+  .shimmer-btn {
+    isolation: isolate;
+  }
+
+  .shimmer-btn::before {
+    content: '';
+    position: absolute;
+    top: -20%;
+    left: -40%;
+    height: 140%;
+    width: 36%;
+    background: linear-gradient(
+      120deg,
+      rgba(255, 255, 255, 0) 0%,
+      rgba(255, 255, 255, 0.65) 48%,
+      rgba(255, 255, 255, 0) 100%
+    );
+    pointer-events: none;
+    z-index: -1;
+    animation: shimmer-slide 2.8s ease-in-out infinite;
+  }
+
+  .shine-border::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    border-radius: inherit;
+    padding: 1px;
+    background: linear-gradient(
+      130deg,
+      rgba(255, 252, 246, 0.8),
+      rgba(217, 79, 43, 0.34),
+      rgba(23, 18, 15, 0.16)
+    );
+    -webkit-mask:
+      linear-gradient(#fff 0 0) content-box,
+      linear-gradient(#fff 0 0);
+    -webkit-mask-composite: xor;
+    mask-composite: exclude;
+    pointer-events: none;
+  }
+
+  @keyframes shimmer-slide {
+    0% {
+      transform: translateX(-140%) skewX(-22deg);
+    }
+    100% {
+      transform: translateX(360%) skewX(-22deg);
+    }
+  }
+
+  /* Designed keyboard focus (DESIGN.md: indigo marks focus). --rs-accent-fg is remapped on night. */
+  :focus-visible {
+    outline: 2px solid var(--rs-accent-fg);
+    outline-offset: 3px;
+  }
+
+  ::selection {
+    background: color-mix(in srgb, var(--rs-accent) 28%, transparent);
+    color: var(--rs-fg);
+  }
+
+  /* Custom rules stay after the generated utilities, as in v3 (unlayered CSS would beat every utility in v4). */
+  section[id] {
+    scroll-margin-top: 6.5rem;
+  }
+
+  /* Inner page heroes: background photo shaded towards the text column. */
+  .page-hero-shade {
+    background:
+      linear-gradient(90deg, var(--rs-dark) 0%, rgba(9, 9, 12, 0.88) 40%, rgba(9, 9, 12, 0.45) 100%),
+      linear-gradient(0deg, var(--rs-dark) 0%, rgba(9, 9, 12, 0) 45%);
+  }
+
+  /* Night page headers: the photo is faded in from the right and towards the bottom. */
   .night-band-image {
-    opacity: 0.45;
+    opacity: 0.78;
+    -webkit-mask-image: linear-gradient(to right, transparent 0%, #000 55%), linear-gradient(to top, transparent 0%, #000 45%);
+    -webkit-mask-composite: source-in;
+    mask-image: linear-gradient(to right, transparent 0%, #000 55%), linear-gradient(to top, transparent 0%, #000 45%);
+    mask-composite: intersect;
   }
 
   .night-band-image--dim {
-    opacity: 0.22;
+    opacity: 0.3;
   }
 
-  /* On phones the lead spans the full width, including the lighter right side of the photo. */
   .night-band-shade {
-    background: linear-gradient(90deg, color-mix(in srgb, var(--rs-dark) 85%, transparent) 0%, color-mix(in srgb, var(--rs-dark) 55%, transparent) 100%);
+    /* Darker through the middle so muted lead text over the photo stays at 4.5:1 or more. */
+    background: linear-gradient(90deg, var(--rs-dark) 0%, color-mix(in srgb, var(--rs-dark) 72%, transparent) 50%, color-mix(in srgb, var(--rs-dark) 25%, transparent) 100%);
   }
-}
 
-[data-night-band] .page-hero-rule {
-  padding-bottom: 0;
-}
+  @media (max-width: 767px) {
+    .night-band-image {
+      opacity: 0.45;
+    }
 
-[data-night-band] .page-hero-rule::after {
-  display: none;
-}
+    .night-band-image--dim {
+      opacity: 0.22;
+    }
 
-/* Home statement: desk photo melting into the night, top (from the hero) and bottom. */
-.statement-image {
-  opacity: 0.9;
-  -webkit-mask-image: linear-gradient(to bottom, transparent 0%, #000 30%, #000 65%, transparent 100%);
-  mask-image: linear-gradient(to bottom, transparent 0%, #000 30%, #000 65%, transparent 100%);
-}
+    /* On phones the lead spans the full width, including the lighter right side of the photo. */
+    .night-band-shade {
+      background: linear-gradient(90deg, color-mix(in srgb, var(--rs-dark) 85%, transparent) 0%, color-mix(in srgb, var(--rs-dark) 55%, transparent) 100%);
+    }
+  }
 
-.statement-shade {
-  background:
-    linear-gradient(90deg, var(--rs-dark) 0%, color-mix(in srgb, var(--rs-dark) 72%, transparent) 38%, color-mix(in srgb, var(--rs-dark) 8%, transparent) 75%),
-    linear-gradient(0deg, var(--rs-dark) 0%, transparent 40%);
-}
+  [data-night-band] .page-hero-rule {
+    padding-bottom: 0;
+  }
 
-@media (max-width: 767px) {
+  [data-night-band] .page-hero-rule::after {
+    display: none;
+  }
+
+  /* Home statement: desk photo melting into the night, top (from the hero) and bottom. */
   .statement-image {
-    opacity: 0.55;
+    opacity: 0.9;
+    -webkit-mask-image: linear-gradient(to bottom, transparent 0%, #000 30%, #000 65%, transparent 100%);
+    mask-image: linear-gradient(to bottom, transparent 0%, #000 30%, #000 65%, transparent 100%);
   }
-}
 
-/* Home hero: animated glow and a wall of real product screens. */
-.hero-glow {
-  background:
-    radial-gradient(42rem 30rem at 12% 18%, color-mix(in srgb, var(--rs-accent) 22%, transparent), transparent 70%),
-    radial-gradient(36rem 28rem at 78% 82%, color-mix(in srgb, var(--rs-dark-accent-fg) 12%, transparent), transparent 70%);
-  animation: hero-glow-drift 22s ease-in-out infinite alternate;
-}
+  .statement-shade {
+    background:
+      linear-gradient(90deg, var(--rs-dark) 0%, color-mix(in srgb, var(--rs-dark) 72%, transparent) 38%, color-mix(in srgb, var(--rs-dark) 8%, transparent) 75%),
+      linear-gradient(0deg, var(--rs-dark) 0%, transparent 40%);
+  }
 
-@keyframes hero-glow-drift {
-  from { transform: translate3d(0, 0, 0) scale(1); }
-  to { transform: translate3d(4%, 3%, 0) scale(1.08); }
-}
+  @media (max-width: 767px) {
+    .statement-image {
+      opacity: 0.55;
+    }
+  }
 
-.hero-screen-wall {
-  overflow: hidden;
-  -webkit-mask-image: linear-gradient(to right, transparent 0%, #000 42%), linear-gradient(to bottom, transparent 0%, #000 14%, #000 86%, transparent 100%);
-  -webkit-mask-composite: source-in;
-  mask-image: linear-gradient(to right, transparent 0%, #000 42%), linear-gradient(to bottom, transparent 0%, #000 14%, #000 86%, transparent 100%);
-  mask-composite: intersect;
-}
+  /* Home hero: animated glow and a wall of real product screens. */
+  .hero-glow {
+    background:
+      radial-gradient(42rem 30rem at 12% 18%, color-mix(in srgb, var(--rs-accent) 22%, transparent), transparent 70%),
+      radial-gradient(36rem 28rem at 78% 82%, color-mix(in srgb, var(--rs-dark-accent-fg) 12%, transparent), transparent 70%);
+    animation: hero-glow-drift 22s ease-in-out infinite alternate;
+  }
 
-.hero-screen-wall__plane {
-  position: absolute;
-  inset: -18% -12% -18% 0;
-  transform: rotate(-9deg) translateX(4%);
-  opacity: 0.82;
-}
+  @keyframes hero-glow-drift {
+    from { transform: translate3d(0, 0, 0) scale(1); }
+    to { transform: translate3d(4%, 3%, 0) scale(1.08); }
+  }
 
-.hero-screen-track {
-  animation: hero-screen-up linear infinite;
-}
+  .hero-screen-wall {
+    overflow: hidden;
+    -webkit-mask-image: linear-gradient(to right, transparent 0%, #000 42%), linear-gradient(to bottom, transparent 0%, #000 14%, #000 86%, transparent 100%);
+    -webkit-mask-composite: source-in;
+    mask-image: linear-gradient(to right, transparent 0%, #000 42%), linear-gradient(to bottom, transparent 0%, #000 14%, #000 86%, transparent 100%);
+    mask-composite: intersect;
+  }
 
-.hero-screen-track--reverse {
-  animation-name: hero-screen-down;
-}
+  .hero-screen-wall__plane {
+    position: absolute;
+    inset: -18% -12% -18% 0;
+    transform: rotate(-9deg) translateX(4%);
+    opacity: 0.82;
+  }
 
-.hero-screen-track--x {
-  animation: hero-screen-left 60s linear infinite;
-}
+  .hero-screen-track {
+    animation: hero-screen-up linear infinite;
+  }
 
-/* Compositor hint only while the loops actually run. */
-[data-hero-motion]:not([data-motion-paused]) .hero-screen-track,
-[data-hero-motion]:not([data-motion-paused]) .hero-screen-track--x {
-  will-change: transform;
-}
+  .hero-screen-track--reverse {
+    animation-name: hero-screen-down;
+  }
 
-/* Paused by the visitor (HeroMotionToggle) or because the hero is off-screen. */
-[data-motion-paused] .hero-screen-track,
-[data-motion-paused] .hero-screen-track--x,
-[data-motion-paused] .hero-glow {
-  animation-play-state: paused;
-}
+  .hero-screen-track--x {
+    animation: hero-screen-left 60s linear infinite;
+  }
 
-/* Hover-pause only with a real pointer: a tap on a phone would leave :hover stuck and freeze the row. */
-@media (hover: hover) and (pointer: fine) {
-  .hero-screen-wall:hover .hero-screen-track,
-  .hero-screen-row:hover .hero-screen-track--x {
+  /* Compositor hint only while the loops actually run. */
+  [data-hero-motion]:not([data-motion-paused]) .hero-screen-track,
+  [data-hero-motion]:not([data-motion-paused]) .hero-screen-track--x {
+    will-change: transform;
+  }
+
+  /* Paused by the visitor (HeroMotionToggle) or because the hero is off-screen. */
+  [data-motion-paused] .hero-screen-track,
+  [data-motion-paused] .hero-screen-track--x,
+  [data-motion-paused] .hero-glow {
     animation-play-state: paused;
   }
-}
 
-.hero-screen-row {
-  -webkit-mask-image: linear-gradient(to right, transparent, #000 8%, #000 92%, transparent);
-  mask-image: linear-gradient(to right, transparent, #000 8%, #000 92%, transparent);
-}
-
-@keyframes hero-screen-up {
-  from { transform: translate3d(0, 0, 0); }
-  to { transform: translate3d(0, -50%, 0); }
-}
-
-@keyframes hero-screen-down {
-  from { transform: translate3d(0, -50%, 0); }
-  to { transform: translate3d(0, 0, 0); }
-}
-
-@keyframes hero-screen-left {
-  from { transform: translate3d(0, 0, 0); }
-  to { transform: translate3d(-50%, 0, 0); }
-}
-
-@media (prefers-reduced-motion: reduce) {
-  .hero-glow,
-  .hero-screen-track,
-  .hero-screen-track--x {
-    animation: none !important;
-  }
-}
-
-@media (prefers-reduced-motion: reduce) {
-  html {
-    scroll-behavior: auto;
+  /* Hover-pause only with a real pointer: a tap on a phone would leave :hover stuck and freeze the row. */
+  @media (hover: hover) and (pointer: fine) {
+    .hero-screen-wall:hover .hero-screen-track,
+    .hero-screen-row:hover .hero-screen-track--x {
+      animation-play-state: paused;
+    }
   }
 
-  *,
-  *::before,
-  *::after {
-    animation-duration: 0.01ms !important;
-    animation-iteration-count: 1 !important;
-    /* Less motion, not none: colour and opacity feedback keeps its timing, movement transitions go. */
-    transition-property: color, background-color, border-color, outline-color, text-decoration-color, fill, stroke, opacity !important;
-    scroll-behavior: auto !important;
-  }
-}
-
-@media (max-width: 1023px) {
-  html {
-    scroll-padding-top: 5.75rem;
+  .hero-screen-row {
+    -webkit-mask-image: linear-gradient(to right, transparent, #000 8%, #000 92%, transparent);
+    mask-image: linear-gradient(to right, transparent, #000 8%, #000 92%, transparent);
   }
 
-  .section-screen {
-    padding-top: 5.75rem;
-    padding-bottom: 2.75rem;
+  @keyframes hero-screen-up {
+    from { transform: translate3d(0, 0, 0); }
+    to { transform: translate3d(0, -50%, 0); }
   }
 
-  /* On mobile, content stacks tall: let it flow instead of forcing one screen. */
-  .section-fit {
-    min-height: auto;
-    align-items: flex-start;
-  }
-}
-
-.skip-link {
-  position: fixed;
-  top: -100px;
-  left: 1rem;
-  z-index: 100;
-  padding: 0.75rem 1.25rem;
-  background: var(--rs-dark);
-  color: var(--rs-dark-fg);
-  font-size: 0.875rem;
-  font-weight: 700;
-  transition: top 0.15s ease;
-}
-
-.skip-link:focus-visible {
-  top: 1rem;
-}
-
-/* Below-the-fold sections: skip rendering cost until scrolled near. */
-.cv-auto {
-  content-visibility: auto;
-  contain-intrinsic-size: auto 900px;
-}
-
-/* Homepage chapter rhythm (desktop only): flagships immersive, supporting chapters large. */
-@media (min-width: 1024px) {
-  .home-chapter-immersive {
-    min-height: 76svh;
+  @keyframes hero-screen-down {
+    from { transform: translate3d(0, -50%, 0); }
+    to { transform: translate3d(0, 0, 0); }
   }
 
-  .home-chapter-featured {
-    min-height: 64svh;
+  @keyframes hero-screen-left {
+    from { transform: translate3d(0, 0, 0); }
+    to { transform: translate3d(-50%, 0, 0); }
   }
 
-  .home-chapter-large {
-    min-height: 62svh;
+  @media (prefers-reduced-motion: reduce) {
+    .hero-glow,
+    .hero-screen-track,
+    .hero-screen-track--x {
+      animation: none !important;
+    }
   }
-}
 
-/* Editorial article layout (services and work pages): numbers as visual anchors. */
-.num-outline {
-  /* Direction A: solid accent numbers (outlined numbers were too pale for WCAG contrast). */
-  color: var(--rs-accent-fg);
-}
+  @media (prefers-reduced-motion: reduce) {
+    html {
+      scroll-behavior: auto;
+    }
 
-.num-gradient {
-  background: linear-gradient(180deg, var(--rs-accent) 30%, color-mix(in srgb, var(--rs-accent) 25%, white));
-  -webkit-background-clip: text;
-  background-clip: text;
-  color: transparent;
-}
+    *,
+    *::before,
+    *::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      /* Less motion, not none: colour and opacity feedback keeps its timing, movement transitions go. */
+      transition-property: color, background-color, border-color, outline-color, text-decoration-color, fill, stroke, opacity !important;
+      scroll-behavior: auto !important;
+    }
+  }
 
-/* Direction A: heavy rule under a page title, aligned with the container content. */
-.page-hero-rule {
-  position: relative;
-  padding-bottom: 2.25rem;
-}
-.page-hero-rule::after {
-  content: "";
-  position: absolute;
-  left: 1.25rem;
-  right: 1.25rem;
-  bottom: 0;
-  height: 1px;
-  background: var(--rs-fg);
-}
-@media (min-width: 768px) {
+  @media (max-width: 1023px) {
+    html {
+      scroll-padding-top: 5.75rem;
+    }
+
+    .section-screen {
+      padding-top: 5.75rem;
+      padding-bottom: 2.75rem;
+    }
+
+    /* On mobile, content stacks tall: let it flow instead of forcing one screen. */
+    .section-fit {
+      min-height: auto;
+      align-items: flex-start;
+    }
+  }
+
+  .skip-link {
+    position: fixed;
+    top: -100px;
+    left: 1rem;
+    z-index: 100;
+    padding: 0.75rem 1.25rem;
+    background: var(--rs-dark);
+    color: var(--rs-dark-fg);
+    font-size: 0.875rem;
+    font-weight: 700;
+    transition: top 0.15s ease;
+  }
+
+  .skip-link:focus-visible {
+    top: 1rem;
+  }
+
+  /* Below-the-fold sections: skip rendering cost until scrolled near. */
+  .cv-auto {
+    content-visibility: auto;
+    contain-intrinsic-size: auto 900px;
+  }
+
+  /* Homepage chapter rhythm (desktop only): flagships immersive, supporting chapters large. */
+  @media (min-width: 1024px) {
+    .home-chapter-immersive {
+      min-height: 76svh;
+    }
+
+    .home-chapter-featured {
+      min-height: 64svh;
+    }
+
+    .home-chapter-large {
+      min-height: 62svh;
+    }
+  }
+
+  /* Editorial article layout (services and work pages): numbers as visual anchors. */
+  .num-outline {
+    /* Direction A: solid accent numbers (outlined numbers were too pale for WCAG contrast). */
+    color: var(--rs-accent-fg);
+  }
+
+  .num-gradient {
+    background: linear-gradient(180deg, var(--rs-accent) 30%, color-mix(in srgb, var(--rs-accent) 25%, white));
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+  }
+
+  /* Direction A: heavy rule under a page title, aligned with the container content. */
+  .page-hero-rule {
+    position: relative;
+    padding-bottom: 2.25rem;
+  }
   .page-hero-rule::after {
-    left: 2rem;
-    right: 2rem;
+    content: "";
+    position: absolute;
+    left: 1.25rem;
+    right: 1.25rem;
+    bottom: 0;
+    height: 1px;
+    background: var(--rs-fg);
   }
-}
-
-/* Direction A pages (CommercialPageShell): the legacy warm body background must not flash on
-   overscroll. Night-topped pages get night, paper pages get paper. */
-body:has(#main-content) {
-  background: var(--rs-bg);
-}
-
-body:has(#main-content):has(header[data-top-theme="dark"]) {
-  background: var(--rs-dark);
-}
-
-/* Keep the last footer row reachable above the cookie bar. */
-[data-site-footer] {
-  padding-bottom: var(--consent-h, 0px);
-}
-
-/* No lone last word on running text. */
-p {
-  text-wrap: pretty;
-}
-
-/* Programmatic focus targets (skip link, focus return after the cookie choice) are regions,
-   not controls: no ring around the whole page. */
-[tabindex="-1"]:focus {
-  outline: none;
-}
-
-/* Touch: no double-tap zoom delay on controls, and no text selection on a long press of a button. */
-:where(a, button, [role="button"], label:has(> input[type="radio"])) {
-  touch-action: manipulation;
-}
-
-:where(button, [role="button"], label:has(> input[type="radio"])) {
-  -webkit-user-select: none;
-  user-select: none;
-}
-
-/* Touch screens: 16px fields so iOS/iPadOS never zoom on focus (the 90% desktop root makes them 14.4px). */
-@media (pointer: coarse) {
-  input,
-  textarea,
-  select {
-    font-size: 16px;
+  @media (min-width: 768px) {
+    .page-hero-rule::after {
+      left: 2rem;
+      right: 2rem;
+    }
   }
-}
 
-/* FAQ answers fade in instead of popping (browsers without ::details-content keep today's behaviour). */
-details::details-content {
-  opacity: 0;
-  transition:
-    opacity 200ms var(--rs-ease-out),
-    content-visibility 200ms var(--rs-ease-out) allow-discrete;
-}
+  /* Direction A pages (CommercialPageShell): the legacy warm body background must not flash on
+     overscroll. Night-topped pages get night, paper pages get paper. */
+  body:has(#main-content) {
+    background: var(--rs-bg);
+  }
 
-details[open]::details-content {
-  opacity: 1;
-}
+  body:has(#main-content):has(header[data-top-theme="dark"]) {
+    background: var(--rs-dark);
+  }
 
-/* Balanced headings: no lone short last line (detector: unbalanced-heading). */
-h1,
-h2,
-h3 {
-  text-wrap: balance;
+  /* Keep the last footer row reachable above the cookie bar. */
+  [data-site-footer] {
+    padding-bottom: var(--consent-h, 0px);
+  }
+
+  /* No lone last word on running text. */
+  p {
+    text-wrap: pretty;
+  }
+
+  /* Programmatic focus targets (skip link, focus return after the cookie choice) are regions,
+     not controls: no ring around the whole page. */
+  [tabindex="-1"]:focus {
+    outline: none;
+  }
+
+  /* Touch: no double-tap zoom delay on controls, and no text selection on a long press of a button. */
+  :where(a, button, [role="button"], label:has(> input[type="radio"])) {
+    touch-action: manipulation;
+  }
+
+  :where(button, [role="button"], label:has(> input[type="radio"])) {
+    -webkit-user-select: none;
+    user-select: none;
+  }
+
+  /* Touch screens: 16px fields so iOS/iPadOS never zoom on focus (the 90% desktop root makes them 14.4px). */
+  @media (pointer: coarse) {
+    input,
+    textarea,
+    select {
+      font-size: 16px;
+    }
+  }
+
+  /* FAQ answers fade in instead of popping (browsers without ::details-content keep today's behaviour). */
+  details::details-content {
+    opacity: 0;
+    transition:
+      opacity 200ms var(--rs-ease-out),
+      content-visibility 200ms var(--rs-ease-out) allow-discrete;
+  }
+
+  details[open]::details-content {
+    opacity: 1;
+  }
+
+  /* Balanced headings: no lone short last line (detector: unbalanced-heading). */
+  h1,
+  h2,
+  h3 {
+    text-wrap: balance;
+  }
 }

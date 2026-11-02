@@ -42,7 +42,7 @@ export function HeroMotionToggle({ locale, className }: { locale: Locale; classN
       title={label}
       onClick={() => setPaused((value) => !value)}
       className={cn(
-        "inline-flex h-11 w-11 items-center justify-center border border-[var(--rs-border-strong)] bg-rs-surface text-rs-muted transition-colors duration-150 hover:border-rs-accent hover:text-rs-fg motion-reduce:hidden",
+        "inline-flex h-11 w-11 items-center justify-center border border-(--rs-border-strong) bg-rs-surface text-rs-muted transition-colors duration-150 hover:border-rs-accent hover:text-rs-fg motion-reduce:hidden",
         className,
       )}
     >

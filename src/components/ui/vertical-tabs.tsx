@@ -235,7 +235,7 @@ export function VerticalTabs({ locale = "fr", items }: { locale?: Locale; items?
             onMouseEnter={() => setIsPaused(true)}
             onMouseLeave={() => setIsPaused(false)}
           >
-            <div className="relative aspect-[4/3] h-full min-h-[280px] overflow-hidden rounded-none border border-[#2a231d]/14 bg-[#fffaf0]/70 shadow-[8px_8px_0_rgba(42,35,29,0.08)] lg:aspect-auto">
+            <div className="relative aspect-4/3 h-full min-h-[280px] overflow-hidden rounded-none border border-[#2a231d]/14 bg-[#fffaf0]/70 shadow-[8px_8px_0_rgba(42,35,29,0.08)] lg:aspect-auto">
               <AnimatePresence initial={false} custom={direction} mode="popLayout">
                 <motion.div
                   key={activeIndex}
@@ -258,13 +258,13 @@ export function VerticalTabs({ locale = "fr", items }: { locale?: Locale; items?
                     sizes="(max-width: 1024px) 100vw, 58vw"
                     className="block h-full w-full object-cover transition-transform duration-700 hover:scale-105"
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/55 via-black/5 to-transparent" />
+                  <div className="absolute inset-0 bg-linear-to-t from-black/55 via-black/5 to-transparent" />
                 </motion.div>
               </AnimatePresence>
 
               {/* Caption */}
               <div className="pointer-events-none absolute inset-x-5 bottom-5 z-20 md:inset-x-7 md:bottom-7">
-                <span className="inline-flex items-center gap-2 border border-white/20 bg-black/35 px-3 py-1 text-[10px] font-black uppercase tracking-[0.16em] text-white backdrop-blur-sm">
+                <span className="inline-flex items-center gap-2 border border-white/20 bg-black/35 px-3 py-1 text-[10px] font-black uppercase tracking-[0.16em] text-white backdrop-blur-xs">
                   <span className="text-[#ff9b76]">{activeItem.id}</span>
                   {activeItem.title}
                 </span>

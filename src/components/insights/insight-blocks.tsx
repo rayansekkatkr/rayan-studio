@@ -47,7 +47,7 @@ export function InsightBlocks({ blocks }: { blocks: InsightBlock[] }) {
             return (
               <aside
                 key={index}
-                className="rounded-[var(--rs-radius-md)] border border-[var(--rs-border-strong)] bg-rs-subtle p-6"
+                className="rounded-(--rs-radius-md) border border-(--rs-border-strong) bg-rs-subtle p-6"
               >
                 <p className="text-base font-semibold text-rs-fg">{block.title}</p>
                 <p className="mt-2 text-base leading-relaxed text-rs-muted">{block.body}</p>

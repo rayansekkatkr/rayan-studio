@@ -19,7 +19,7 @@ export function ContactAside({ locale, source }: { locale: Locale; source: "proj
       ];
 
   return (
-    <aside className="flex flex-col divide-y divide-[var(--rs-border)] rounded-[var(--rs-radius-md)] border border-[var(--rs-border)] bg-rs-surface">
+    <aside className="flex flex-col divide-y divide-(--rs-border) rounded-(--rs-radius-md) border border-(--rs-border) bg-rs-surface">
       <div className="p-6 md:p-7">
         <p className="flex items-center gap-2 text-lg font-semibold">
           <Clock aria-hidden className="h-5 w-5 text-rs-accent-fg" />

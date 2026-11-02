@@ -5,5 +5,5 @@ type SectionProps = React.HTMLAttributes<HTMLElement> & {
 };
 
 export function Section({ as: Tag = "section", className, ...props }: SectionProps) {
-  return <Tag className={cn("py-[var(--rs-section-space)]", className)} {...props} />;
+  return <Tag className={cn("py-(--rs-section-space)", className)} {...props} />;
 }

@@ -106,7 +106,7 @@ export function Navbar({ locale = "fr" }: { locale?: Locale }) {
   };
 
   return (
-    <header className="fixed inset-x-0 top-4 z-[80] px-4 md:px-8">
+    <header className="fixed inset-x-0 top-4 z-80 px-4 md:px-8">
       <nav className="relative mx-auto flex w-full min-w-0 max-w-7xl items-center justify-between rounded-none border border-[#2a231d]/20 bg-[#fffaf0] px-4 py-3 shadow-[7px_7px_0_rgba(42,35,29,0.12)] md:px-6">
         <Link
           href={`/${locale}#hero`}
@@ -185,7 +185,7 @@ export function Navbar({ locale = "fr" }: { locale?: Locale }) {
                 animate={{ opacity: 1, y: 0 }}
                 exit={{ opacity: 0, y: -8 }}
                 transition={{ duration: 0.2, ease: [0.22, 1, 0.36, 1] }}
-                className="fixed inset-x-4 top-[6.2rem] z-[70] max-h-[72svh] overflow-y-auto rounded-none border border-[#2a231d]/14 bg-[#fffaf0] p-3 shadow-[10px_10px_0_rgba(42,35,29,0.12)] lg:hidden"
+                className="fixed inset-x-4 top-[6.2rem] z-70 max-h-[72svh] overflow-y-auto rounded-none border border-[#2a231d]/14 bg-[#fffaf0] p-3 shadow-[10px_10px_0_rgba(42,35,29,0.12)] lg:hidden"
               >
                 <ul className="space-y-1.5">
                   {links.map((link) => (

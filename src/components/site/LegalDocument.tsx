@@ -18,9 +18,9 @@ export function LegalDocument({ locale, doc }: { locale: Locale; doc: LegalDoc }
           <p className="mt-6 text-sm text-rs-muted">{doc.updated}</p>
         </Container>
       </NightBand>
-      <div className="bg-rs-bg py-[var(--rs-section-space)]">
+      <div className="bg-rs-bg py-(--rs-section-space)">
         <Container>
-          <div className="max-w-[var(--rs-reading)] space-y-10 text-base leading-relaxed text-rs-muted">
+          <div className="max-w-(--rs-reading) space-y-10 text-base leading-relaxed text-rs-muted">
             {doc.sections.map((section) => (
               <section key={section.heading}>
                 <h2 className="text-xl font-semibold text-rs-fg">{section.heading}</h2>

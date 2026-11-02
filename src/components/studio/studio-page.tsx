@@ -64,17 +64,17 @@ export function StudioPage({ locale }: { locale: Locale }) {
         </Container>
       </section>
 
-      <div className="py-[var(--rs-section-space)]">
+      <div className="py-(--rs-section-space)">
         <Container>
           <p className="max-w-4xl text-xl leading-relaxed md:text-2xl">{content.hero.body}</p>
 
           <section className="mt-16">
             <Eyebrow>{fr ? "Parcours" : "Background"}</Eyebrow>
-            <h2 className="mt-4 text-[2.25rem] font-extrabold leading-[1] tracking-[-0.045em] md:text-6xl">{fr ? "D'où vient le studio." : "Where the studio comes from."}</h2>
+            <h2 className="mt-4 text-[2.25rem] font-extrabold leading-none tracking-[-0.045em] md:text-6xl">{fr ? "D'où vient le studio." : "Where the studio comes from."}</h2>
             <ol className="mt-10 grid gap-10 border-t border-rs-fg md:grid-cols-[1fr_1fr_1.6fr] md:gap-0">
               {career.map((step) => (
-                <li key={step.title} className="pt-8 md:border-r md:border-[var(--rs-border)] md:px-8 md:first:pl-0 md:last:border-r-0">
-                  <p className="text-4xl font-black tracking-[-0.05em] md:text-6xl">{step.when}</p>
+                <li key={step.title} className="pt-8 md:border-r md:border-(--rs-border) md:px-8 md:first:pl-0 md:last:border-r-0">
+                  <p className="text-4xl font-black tracking-tighter md:text-6xl">{step.when}</p>
                   <h3 className="mt-3 text-xl font-semibold">{step.title}</h3>
                   <p className="mt-2 text-base leading-relaxed text-rs-muted">{step.body}</p>
                 </li>
@@ -105,7 +105,7 @@ export function StudioPage({ locale }: { locale: Locale }) {
         </Container>
       </div>
 
-      <div className="border-t border-[var(--rs-border)] py-[var(--rs-section-space)]">
+      <div className="border-t border-(--rs-border) py-(--rs-section-space)">
         <Container>
           <TechStack locale={locale} />
           <div className="mt-10 flex flex-wrap gap-x-8 gap-y-4">

@@ -20,21 +20,21 @@ export function NotFoundContent() {
         <h1 className="mt-4 max-w-3xl text-3xl font-semibold leading-[1.04] tracking-tight md:text-5xl">
           Cette page n&apos;existe pas.
         </h1>
-        <p className="mt-6 max-w-[var(--rs-reading)] text-lg leading-relaxed text-rs-muted">
+        <p className="mt-6 max-w-(--rs-reading) text-lg leading-relaxed text-rs-muted">
           Le lien est peut-être ancien ou mal saisi. Les pages principales du studio restent accessibles
           ci-dessous.
         </p>
         <div className="mt-10 flex flex-wrap items-center gap-4">
           <Link
             href="/fr"
-            className="inline-flex items-center gap-2 rounded-none bg-rs-fg px-7 py-3.5 text-base font-semibold text-rs-bg transition-colors duration-150 hover:bg-rs-accent active:bg-rs-accent-hover active:text-[var(--rs-dark-fg)] active:duration-0 hover:text-white"
+            className="inline-flex items-center gap-2 rounded-none bg-rs-fg px-7 py-3.5 text-base font-semibold text-rs-bg transition-colors duration-150 hover:bg-rs-accent active:bg-rs-accent-hover active:text-(--rs-dark-fg) active:duration-0 hover:text-white"
           >
             Retour à l&apos;accueil
             <ArrowRight aria-hidden className="h-4 w-4" />
           </Link>
           <Link
             href={workPath("fr")}
-            className="inline-flex items-center rounded-none border border-[var(--rs-border-strong)] px-7 py-3.5 text-base font-medium text-rs-fg transition-colors duration-150 hover:border-rs-accent hover:text-rs-accent-fg"
+            className="inline-flex items-center rounded-none border border-(--rs-border-strong) px-7 py-3.5 text-base font-medium text-rs-fg transition-colors duration-150 hover:border-rs-accent hover:text-rs-accent-fg"
           >
             Voir les réalisations
           </Link>
@@ -46,7 +46,7 @@ export function NotFoundContent() {
             <ArrowRight aria-hidden className="h-4 w-4" />
           </Link>
         </div>
-        <p lang="en" className="mt-14 border-t border-[var(--rs-border)] pt-6 text-sm text-rs-muted">
+        <p lang="en" className="mt-14 border-t border-(--rs-border) pt-6 text-sm text-rs-muted">
           This page does not exist.{" "}
           <Link
             href="/en"

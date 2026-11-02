@@ -13,7 +13,7 @@ export function FormStatus({ state, message }: FormStatusProps) {
       role="status"
       aria-live="polite"
       className={cn(
-        "min-h-[1.5rem] text-sm font-medium",
+        "min-h-6 text-sm font-medium",
         state === "error" && "text-red-700",
         state === "success" && "text-emerald-700",
         state === "sending" && "text-rs-muted",

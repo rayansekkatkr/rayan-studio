@@ -33,7 +33,7 @@ function SectionTitle({ title, lead, serif = false }: { title: string; lead?: st
       >
         {title}
       </h2>
-      {lead ? <p className="mt-4 max-w-[var(--rs-reading)] text-lg leading-relaxed text-rs-muted">{lead}</p> : null}
+      {lead ? <p className="mt-4 max-w-(--rs-reading) text-lg leading-relaxed text-rs-muted">{lead}</p> : null}
     </div>
   );
 }
@@ -56,7 +56,7 @@ function LandingSitesProof({ locale }: { locale: Locale }) {
     (project) => project.liveUrl && SITE_SHOTS[project.slug] && projectStatusBadge(project, locale).tone === "live",
   );
   return (
-    <section id="exemples" data-landing-proof className="scroll-mt-24 border-t border-[var(--rs-border)] py-[var(--rs-section-space)]">
+    <section id="exemples" data-landing-proof className="scroll-mt-24 border-t border-(--rs-border) py-(--rs-section-space)">
       <Container>
         <SectionTitle
           title={fr ? "Des preuves que vous pouvez vérifier." : "Proof you can check for yourself."}
@@ -92,7 +92,7 @@ function LandingSitesProof({ locale }: { locale: Locale }) {
                   rel="noopener noreferrer"
                   className="group block transition-colors duration-150 hover:text-rs-accent-fg"
                 >
-                  <span className="block overflow-hidden border border-[var(--rs-border)] transition-colors duration-150 group-hover:border-rs-accent">
+                  <span className="block overflow-hidden border border-(--rs-border) transition-colors duration-150 group-hover:border-rs-accent">
                     <Image
                       src={SITE_SHOTS[project.slug]}
                       alt=""
@@ -103,7 +103,7 @@ function LandingSitesProof({ locale }: { locale: Locale }) {
                     />
                   </span>
                   <span className="mt-4 flex items-center justify-between gap-3 text-2xl font-bold tracking-[-0.03em]">
-                    <span className="min-w-0 [overflow-wrap:anywhere]">{project.title}</span>
+                    <span className="min-w-0 wrap-anywhere">{project.title}</span>
                     <ArrowUpRight aria-hidden className="h-5 w-5 shrink-0" />
                   </span>
                   <span className="mt-1 block text-base text-rs-muted">
@@ -116,7 +116,7 @@ function LandingSitesProof({ locale }: { locale: Locale }) {
             );
           })}
         </ul>
-        <p className="mt-10 max-w-[var(--rs-reading)] text-lg leading-relaxed text-rs-muted">
+        <p className="mt-10 max-w-(--rs-reading) text-lg leading-relaxed text-rs-muted">
           {fr ? "Votre site sera conçu par la même personne : " : "Your website will be built by the same person: "}
           <Link
             href={studioPath(locale, "rayan")}
@@ -148,12 +148,12 @@ function LandingHeroA({ locale, content, source }: { locale: Locale; content: La
         <div className="mt-8 grid gap-6 lg:grid-cols-[minmax(0,5fr)_minmax(0,7fr)] lg:gap-16">
           <h1 className="text-xl font-bold leading-snug tracking-tight md:text-2xl">{content.title}</h1>
           <div>
-          <p className="max-w-[var(--rs-reading)] text-lg leading-relaxed text-rs-muted">{content.lead}</p>
+          <p className="max-w-(--rs-reading) text-lg leading-relaxed text-rs-muted">{content.lead}</p>
           <div className="mt-6 flex flex-wrap items-center gap-x-6 gap-y-3">
             <TrackedLink
               href="#devis"
               event={{ ctaId: `${source}_hero_form`, source, destination: "#devis", locale }}
-              className="inline-flex items-center gap-2 bg-rs-fg px-6 py-3.5 text-base font-semibold text-[var(--rs-dark)] transition-colors duration-150 hover:bg-rs-accent active:bg-rs-accent-hover active:text-[var(--rs-dark-fg)] active:duration-0 hover:text-rs-fg"
+              className="inline-flex items-center gap-2 bg-rs-fg px-6 py-3.5 text-base font-semibold text-(--rs-dark) transition-colors duration-150 hover:bg-rs-accent active:bg-rs-accent-hover active:text-(--rs-dark-fg) active:duration-0 hover:text-rs-fg"
             >
               {content.primaryCta}
               <ArrowRight aria-hidden className="h-4 w-4" />
@@ -191,13 +191,13 @@ export function LandingPage({ locale, content }: { locale: Locale; content: Land
       <LandingHeroA locale={locale} content={content} source={source} />
 
       {content.timeline ? (
-        <section data-landing-signature="timeline" className="py-[var(--rs-section-space)]">
+        <section data-landing-signature="timeline" className="py-(--rs-section-space)">
           <Container>
             <SectionTitle title={content.timeline.title} />
             <ol className="mt-10 grid gap-10 border-t border-rs-fg md:grid-cols-3 md:gap-0">
               {content.timeline.steps.map((step) => (
-                <li key={step.when} className="pt-8 md:border-r md:border-[var(--rs-border)] md:px-8 md:first:pl-0 md:last:border-r-0">
-                  <p className="text-5xl font-black leading-[0.9] tracking-[-0.05em] md:text-6xl">{step.when}</p>
+                <li key={step.when} className="pt-8 md:border-r md:border-(--rs-border) md:px-8 md:first:pl-0 md:last:border-r-0">
+                  <p className="text-5xl font-black leading-[0.9] tracking-tighter md:text-6xl">{step.when}</p>
                   <h3 className="mt-3 text-xl font-semibold">{step.title}</h3>
                   <p className="mt-2 text-base leading-relaxed text-rs-muted">{step.body}</p>
                 </li>
@@ -210,7 +210,7 @@ export function LandingPage({ locale, content }: { locale: Locale; content: Land
       {isWebsites ? <LandingSitesProof locale={locale} /> : null}
 
       {content.architecture ? (
-        <section data-landing-signature="architecture" className="py-[var(--rs-section-space)]">
+        <section data-landing-signature="architecture" className="py-(--rs-section-space)">
           <Container>
             <SectionTitle title={content.architecture.title} />
             <ol className="mt-10 grid border border-rs-fg sm:grid-cols-2 lg:grid-cols-4">
@@ -232,14 +232,14 @@ export function LandingPage({ locale, content }: { locale: Locale; content: Land
               ))}
             </ol>
             {content.deliverables ? (
-              <div className="mt-14 grid gap-8 border-t border-[var(--rs-border)] pt-12 lg:grid-cols-[minmax(0,4fr)_minmax(0,8fr)] lg:gap-12">
+              <div className="mt-14 grid gap-8 border-t border-(--rs-border) pt-12 lg:grid-cols-[minmax(0,4fr)_minmax(0,8fr)] lg:gap-12">
                 <div>
                   <p className="text-xs font-semibold uppercase tracking-[0.14em] text-rs-muted">{fr ? "Livrables" : "Deliverables"}</p>
                   <h3 className="mt-3 text-[2rem] font-extrabold tracking-[-0.04em] md:text-[2.6rem]">{content.deliverables.title}</h3>
                 </div>
                 <dl className="border-t border-rs-fg">
                   {content.deliverables.items.map((item) => (
-                    <div key={item.key} className="grid gap-1 border-b border-[var(--rs-border)] py-5 sm:grid-cols-2 sm:items-baseline sm:gap-6">
+                    <div key={item.key} className="grid gap-1 border-b border-(--rs-border) py-5 sm:grid-cols-2 sm:items-baseline sm:gap-6">
                       <dt className="text-xl font-semibold tracking-tight">{item.key}</dt>
                       <dd className="text-base text-rs-muted sm:text-right">{item.body}</dd>
                     </div>
@@ -251,7 +251,7 @@ export function LandingPage({ locale, content }: { locale: Locale; content: Land
         </section>
       ) : null}
 
-      <section className="border-t border-[var(--rs-border)] py-[var(--rs-section-space)]">
+      <section className="border-t border-(--rs-border) py-(--rs-section-space)">
         <Container>
           <SectionTitle title={content.benefitsTitle} />
           {isWebsites ? (
@@ -260,7 +260,7 @@ export function LandingPage({ locale, content }: { locale: Locale; content: Land
               {content.benefits.map((benefit, index) => (
                 <li
                   key={benefit.title}
-                  className="grid gap-2 border-b border-[var(--rs-border)] py-7 md:grid-cols-[6rem_minmax(0,5fr)_minmax(0,7fr)] md:items-baseline md:gap-8"
+                  className="grid gap-2 border-b border-(--rs-border) py-7 md:grid-cols-[6rem_minmax(0,5fr)_minmax(0,7fr)] md:items-baseline md:gap-8"
                 >
                   <span aria-hidden className="num-outline text-5xl font-bold leading-none tracking-tight">
                     {String(index + 1).padStart(2, "0")}
@@ -287,7 +287,7 @@ export function LandingPage({ locale, content }: { locale: Locale; content: Land
         </Container>
       </section>
 
-      <section className="border-t border-[var(--rs-border)] py-[var(--rs-section-space)]">
+      <section className="border-t border-(--rs-border) py-(--rs-section-space)">
         <Container>
           <div className={cn("grid gap-10 lg:gap-14", !isWebsites && "lg:grid-cols-2")}>
             <div>
@@ -321,7 +321,7 @@ export function LandingPage({ locale, content }: { locale: Locale; content: Land
                     <li key={key}>
                       <Link
                         href={servicePath(locale, key)}
-                        className="group flex h-full items-start justify-between gap-4 rounded-[var(--rs-radius-md)] border border-[var(--rs-border)] bg-rs-surface p-5 transition-colors duration-150 hover:border-[var(--rs-border-strong)]"
+                        className="group flex h-full items-start justify-between gap-4 rounded-(--rs-radius-md) border border-(--rs-border) bg-rs-surface p-5 transition-colors duration-150 hover:border-(--rs-border-strong)"
                       >
                         <span>
                           <span className="block text-base font-semibold group-hover:text-rs-accent-fg">{service.eyebrow[locale]}</span>
@@ -340,20 +340,20 @@ export function LandingPage({ locale, content }: { locale: Locale; content: Land
       </section>
 
       {isWebsites ? null : (
-        <div className="border-t border-[var(--rs-border)]">
+        <div className="border-t border-(--rs-border)">
           <Reassurance locale={locale} variant="app" />
         </div>
       )}
 
-      <section className="border-t border-[var(--rs-border)] py-[var(--rs-section-space)]">
+      <section className="border-t border-(--rs-border) py-(--rs-section-space)">
         <Container>
           <div className="grid grid-cols-1 gap-10 lg:grid-cols-[minmax(0,5fr)_minmax(0,7fr)] lg:gap-14">
             <SectionTitle title={fr ? "Les questions qu'on nous pose" : "Questions we are asked"} />
-            <div className="divide-y divide-[var(--rs-border)] border-y border-[var(--rs-border)]">
+            <div className="divide-y divide-(--rs-border) border-y border-(--rs-border)">
               {content.faq.map((item) => (
                 <details key={item.question} className="group py-5">
                   <summary className="flex cursor-pointer list-none items-center justify-between gap-4 text-lg font-semibold text-rs-fg">
-                    <span className="min-w-0 [overflow-wrap:anywhere]">{item.question}</span>
+                    <span className="min-w-0 wrap-anywhere">{item.question}</span>
                     <Plus aria-hidden className="h-5 w-5 shrink-0 text-rs-muted transition-transform duration-200 group-open:rotate-45" />
                   </summary>
                   <p className="mt-3 text-base leading-relaxed text-rs-muted">{item.answer}</p>
@@ -364,13 +364,13 @@ export function LandingPage({ locale, content }: { locale: Locale; content: Land
         </Container>
       </section>
 
-      <section id="devis" className="scroll-mt-24 pb-[var(--rs-section-space)]">
+      <section id="devis" className="scroll-mt-24 pb-(--rs-section-space)">
         <Container>
-          <div className="grid grid-cols-1 gap-8 overflow-hidden rounded-[var(--rs-radius-lg)] border border-[var(--rs-border)] bg-rs-surface lg:grid-cols-[minmax(0,5fr)_minmax(0,7fr)]">
+          <div className="grid grid-cols-1 gap-8 overflow-hidden rounded-(--rs-radius-lg) border border-(--rs-border) bg-rs-surface lg:grid-cols-[minmax(0,5fr)_minmax(0,7fr)]">
             <div
               className="rs-theme-dark relative isolate bg-rs-bg p-8 text-rs-fg md:p-10"
             >
-              <h2 className="text-[2.25rem] font-extrabold leading-[1] tracking-[-0.04em] md:text-[2.6rem]">{content.formTitle}</h2>
+              <h2 className="text-[2.25rem] font-extrabold leading-none tracking-[-0.04em] md:text-[2.6rem]">{content.formTitle}</h2>
               <p className="mt-4 text-base leading-relaxed text-rs-muted">{content.formLead}</p>
               <p className="mt-5 text-sm leading-relaxed text-rs-muted">
                 {fr
@@ -381,7 +381,7 @@ export function LandingPage({ locale, content }: { locale: Locale; content: Land
             <div className="p-6 md:p-10 lg:pl-2">
               <QuickQuoteForm locale={locale} defaultType={content.quoteType} source={source} />
               {!isWebsites ? (
-                <p className="mt-6 border-t border-[var(--rs-border)] pt-5 text-sm text-rs-muted">
+                <p className="mt-6 border-t border-(--rs-border) pt-5 text-sm text-rs-muted">
                   {fr ? "Cahier des charges déjà prêt ?" : "Specification already written?"}{" "}
                   <Link
                     href={startProjectPath(locale)}

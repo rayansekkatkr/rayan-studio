@@ -430,7 +430,7 @@ export function Pricing({ locale = "fr" }: { locale?: Locale }) {
       </div>
 
       {isModalOpen && formData ? (
-        <div className="fixed inset-0 z-50 flex items-end justify-center bg-[#17120f]/70 px-3 py-3 backdrop-blur-sm sm:items-center sm:px-6 sm:py-8">
+        <div className="fixed inset-0 z-50 flex items-end justify-center bg-[#17120f]/70 px-3 py-3 backdrop-blur-xs sm:items-center sm:px-6 sm:py-8">
           <button
             type="button"
             aria-label={en ? "Close quote form" : "Fermer le formulaire"}

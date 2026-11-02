@@ -14,7 +14,7 @@ export function ArticleBlock({
 }: { id: string; index: number; title: string; children: ReactNode } & SectionProps) {
   return (
     <section id={id} className={cn("scroll-mt-28", className)} {...rest}>
-      <h2 className="flex items-center gap-3 text-xs font-semibold uppercase tracking-[0.18em] text-rs-muted after:h-px after:flex-1 after:bg-[var(--rs-border)]">
+      <h2 className="flex items-center gap-3 text-xs font-semibold uppercase tracking-[0.18em] text-rs-muted after:h-px after:flex-1 after:bg-(--rs-border)">
         <span className="text-rs-accent-fg">{String(index).padStart(2, "0")}</span>
         {title}
       </h2>
@@ -63,12 +63,12 @@ export function NumberedGrid({
 }) {
   const odd = items.length % 2 === 1;
   return (
-    <div className="grid border-t border-[var(--rs-border)] sm:grid-cols-2">
+    <div className="grid border-t border-(--rs-border) sm:grid-cols-2">
       {items.map((item, index) => (
         <div
           key={item.title}
           className={cn(
-            "grid grid-cols-[3.25rem_minmax(0,1fr)] gap-3 border-b border-[var(--rs-border)] py-6 sm:pr-7",
+            "grid grid-cols-[3.25rem_minmax(0,1fr)] gap-3 border-b border-(--rs-border) py-6 sm:pr-7",
             index % 2 === 1 && "sm:border-l sm:pl-7",
             // An odd list without a trailing cell: the last item takes the full row.
             odd && !trailing && index === items.length - 1 && "sm:col-span-2",
@@ -84,7 +84,7 @@ export function NumberedGrid({
         </div>
       ))}
       {odd && trailing ? (
-        <div className="flex items-center border-b border-[var(--rs-border)] py-6 sm:border-l sm:pl-7">{trailing}</div>
+        <div className="flex items-center border-b border-(--rs-border) py-6 sm:border-l sm:pl-7">{trailing}</div>
       ) : null}
     </div>
   );
@@ -93,11 +93,11 @@ export function NumberedGrid({
 /** Vertical steps with large gradient numerals. */
 export function BigSteps({ steps }: { steps: string[] }) {
   return (
-    <ol className="border-t border-[var(--rs-border)]">
+    <ol className="border-t border-(--rs-border)">
       {steps.map((step, index) => (
         <li
           key={step}
-          className="grid grid-cols-[4rem_minmax(0,1fr)] items-center gap-6 border-b border-[var(--rs-border)] py-5 md:grid-cols-[6rem_minmax(0,1fr)]"
+          className="grid grid-cols-[4rem_minmax(0,1fr)] items-center gap-6 border-b border-(--rs-border) py-5 md:grid-cols-[6rem_minmax(0,1fr)]"
         >
           <span aria-hidden className="num-gradient text-6xl font-bold leading-none tracking-tighter md:text-7xl">
             {index + 1}
@@ -112,11 +112,11 @@ export function BigSteps({ steps }: { steps: string[] }) {
 /** Simple numbered rows (solution points, engineering principles). */
 export function NumberedList({ items }: { items: string[] }) {
   return (
-    <ol className="border-t border-[var(--rs-border)]">
+    <ol className="border-t border-(--rs-border)">
       {items.map((item, index) => (
         <li
           key={item}
-          className="grid grid-cols-[3.25rem_minmax(0,1fr)] gap-3 border-b border-[var(--rs-border)] py-5 text-base leading-relaxed md:text-lg"
+          className="grid grid-cols-[3.25rem_minmax(0,1fr)] gap-3 border-b border-(--rs-border) py-5 text-base leading-relaxed md:text-lg"
         >
           <span className="pt-1 text-sm font-bold text-rs-accent-fg">{String(index + 1).padStart(2, "0")}</span>
           {item}

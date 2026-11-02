@@ -72,11 +72,11 @@ function ServiceRow({ locale, row, index }: { locale: Locale; row: Row; index: n
   const tagline = isCra ? cra.description : service!.title[locale];
 
   return (
-    <li className="border-b border-[var(--rs-border)] last:border-b-0">
+    <li className="border-b border-(--rs-border) last:border-b-0">
       <Link
         href={href}
         data-service-row={row.key}
-        className="group relative grid grid-cols-[3.5rem_minmax(0,1fr)_1.5rem] items-center gap-x-4 gap-y-2 py-6 outline-none transition-colors duration-200 hover:bg-[var(--rs-dark)] hover:text-[#f7f7f4] focus-visible:bg-[var(--rs-dark)] focus-visible:text-[#f7f7f4] md:grid-cols-[3rem_minmax(0,1.35fr)_minmax(0,1fr)_2rem] md:gap-x-6 md:px-6"
+        className="group relative grid grid-cols-[3.5rem_minmax(0,1fr)_1.5rem] items-center gap-x-4 gap-y-2 py-6 outline-hidden transition-colors duration-200 hover:bg-(--rs-dark) hover:text-[#f7f7f4] focus-visible:bg-(--rs-dark) focus-visible:text-[#f7f7f4] md:grid-cols-[3rem_minmax(0,1.35fr)_minmax(0,1fr)_2rem] md:gap-x-6 md:px-6"
       >
         <span aria-hidden className="text-sm text-rs-muted group-hover:text-current group-focus-visible:text-current">
           {String(index).padStart(2, "0")}
@@ -154,7 +154,7 @@ export function ServicesIndex({ locale }: { locale: Locale }) {
               id={group.id}
               className="grid scroll-mt-24 border-b border-rs-fg md:grid-cols-[13rem_minmax(0,1fr)]"
             >
-              <div className="border-[var(--rs-border)] pb-2 pt-8 md:border-r md:py-8 md:pr-7">
+              <div className="border-(--rs-border) pb-2 pt-8 md:border-r md:py-8 md:pr-7">
                 <h2 className="text-xs font-bold uppercase tracking-[0.16em]">{group.label[locale]}</h2>
                 <p className="mt-2 text-sm leading-relaxed text-rs-muted">{group.audience[locale]}</p>
                 {group.cta ? (
@@ -177,7 +177,7 @@ export function ServicesIndex({ locale }: { locale: Locale }) {
           ))}
         </nav>
 
-        <div className="flex flex-col gap-5 border-b border-[var(--rs-border)] py-7 md:flex-row md:items-center">
+        <div className="flex flex-col gap-5 border-b border-(--rs-border) py-7 md:flex-row md:items-center">
           <span className="shrink-0 text-xs font-semibold uppercase tracking-[0.18em] text-rs-muted">
             {fr ? "Stack éprouvée" : "Proven stack"}
           </span>

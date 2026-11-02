@@ -21,7 +21,7 @@ function Heading({ index, eyebrow, title }: { index: number; eyebrow: string; ti
       <Eyebrow>
         <span className="text-rs-accent-fg">{String(index).padStart(2, "0")}</span> · {eyebrow}
       </Eyebrow>
-      {title ? <h2 className="mt-3 text-[2rem] font-extrabold leading-[1] tracking-[-0.04em] md:text-5xl">{title}</h2> : null}
+      {title ? <h2 className="mt-3 text-[2rem] font-extrabold leading-none tracking-[-0.04em] md:text-5xl">{title}</h2> : null}
     </div>
   );
 }
@@ -76,11 +76,11 @@ export function CaseStudyPage({ locale, project }: { locale: Locale; project: Pr
           </section>
           <section data-case-section="solution">
             <Eyebrow>{fr ? "Objectifs" : "Objectives"}</Eyebrow>
-            <ol className="mt-5 border-t border-[var(--rs-border)]">
+            <ol className="mt-5 border-t border-(--rs-border)">
               {project.solution[locale].map((item, position) => (
                 <li
                   key={item}
-                  className="grid grid-cols-[3rem_minmax(0,1fr)] border-b border-[var(--rs-border)] py-5 text-base leading-relaxed md:text-lg"
+                  className="grid grid-cols-[3rem_minmax(0,1fr)] border-b border-(--rs-border) py-5 text-base leading-relaxed md:text-lg"
                 >
                   <span className="pt-1 text-sm font-bold text-rs-accent-fg">{String(position + 1).padStart(2, "0")}</span>
                   {item}
@@ -110,7 +110,7 @@ export function CaseStudyPage({ locale, project }: { locale: Locale; project: Pr
               <li
                 key={capability.title.en}
                 className={cn(
-                  "flex flex-col rounded-[var(--rs-radius-md)] border border-[var(--rs-border)] bg-rs-surface p-6",
+                  "flex flex-col rounded-(--rs-radius-md) border border-(--rs-border) bg-rs-surface p-6",
                   project.capabilities.length % 3 === 2 && position >= project.capabilities.length - 2 ? "lg:col-span-3" : "lg:col-span-2",
                 )}
               >
@@ -166,7 +166,7 @@ export function CaseStudyPage({ locale, project }: { locale: Locale; project: Pr
             </p>
           </div>
           <div>
-            <div className="space-y-3 rounded-[var(--rs-radius-md)] border border-[color-mix(in_srgb,var(--rs-accent)_35%,transparent)] bg-[color-mix(in_srgb,var(--rs-accent)_7%,transparent)] p-6 md:p-7">
+            <div className="space-y-3 rounded-(--rs-radius-md) border border-[color-mix(in_srgb,var(--rs-accent)_35%,transparent)] bg-[color-mix(in_srgb,var(--rs-accent)_7%,transparent)] p-6 md:p-7">
               {project.outcome[locale].map((item) => (
                 <p key={item} className="text-lg font-medium leading-relaxed">
                   {item}
@@ -181,7 +181,7 @@ export function CaseStudyPage({ locale, project }: { locale: Locale; project: Pr
                       href={link.href}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="group flex items-center justify-between gap-3 rounded-[var(--rs-radius-md)] border border-[var(--rs-border)] bg-rs-surface p-5 transition-colors duration-150 hover:border-[var(--rs-border-strong)]"
+                      className="group flex items-center justify-between gap-3 rounded-(--rs-radius-md) border border-(--rs-border) bg-rs-surface p-5 transition-colors duration-150 hover:border-(--rs-border-strong)"
                     >
                       <span>
                         <span className="block text-xs font-semibold uppercase tracking-[0.16em] text-[#17663a]">{fr ? "En ligne" : "Live"}</span>

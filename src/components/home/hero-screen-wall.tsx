@@ -64,7 +64,7 @@ const ROW: Array<keyof typeof SCREENS> = [
 
 function Tile({ screen, sizes }: { screen: Screen; sizes: string }) {
   return (
-    <div className="overflow-hidden border border-[var(--rs-border)] bg-rs-surface shadow-[0_24px_60px_-28px_rgba(0,0,0,0.8)]">
+    <div className="overflow-hidden border border-(--rs-border) bg-rs-surface shadow-[0_24px_60px_-28px_rgba(0,0,0,0.8)]">
       <Image
         src={screen.src}
         alt=""
@@ -111,7 +111,7 @@ export function HeroScreenRow({ className }: { className?: string }) {
         {[0, 1].map((copy) => (
           <div key={copy} className="flex gap-4 pr-4">
             {ROW.map((key) => (
-              <div key={`${copy}-${key}`} className="w-[17rem] shrink-0 sm:w-[22rem]">
+              <div key={`${copy}-${key}`} className="w-68 shrink-0 sm:w-88">
                 <Tile screen={SCREENS[key]} sizes="(min-width: 640px) 352px, 272px" />
               </div>
             ))}

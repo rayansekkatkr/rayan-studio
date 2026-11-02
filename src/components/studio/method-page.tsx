@@ -20,29 +20,29 @@ export function MethodPage({ locale }: { locale: Locale }) {
           <h1 className="mt-5 max-w-5xl text-[2.5rem] font-extrabold leading-[0.98] tracking-[-0.045em] md:text-6xl">
             {content.title}
           </h1>
-          <p className="mt-6 max-w-[var(--rs-reading)] text-lg leading-relaxed text-rs-muted">
+          <p className="mt-6 max-w-(--rs-reading) text-lg leading-relaxed text-rs-muted">
             {content.intro}
           </p>
         </Container>
       </NightBand>
 
-      <div className="bg-rs-bg py-[var(--rs-section-space)]">
+      <div className="bg-rs-bg py-(--rs-section-space)">
         <Container>
           <ol className="space-y-10">
             {content.stages.map((stage) => (
-              <li key={stage.number} className="grid gap-3 border-t border-[var(--rs-border)] pt-6 md:grid-cols-[8rem_1fr]">
+              <li key={stage.number} className="grid gap-3 border-t border-(--rs-border) pt-6 md:grid-cols-[8rem_1fr]">
                 <div>
                   <p className="text-sm font-semibold text-rs-accent-fg">{stage.number}</p>
                   <p className="mt-1 text-2xl font-semibold">{stage.name}</p>
                 </div>
-                <p className="max-w-[var(--rs-reading)] text-lg leading-relaxed text-rs-muted">
+                <p className="max-w-(--rs-reading) text-lg leading-relaxed text-rs-muted">
                   {stage.body}
                 </p>
               </li>
             ))}
           </ol>
 
-          <div className="mt-16 rounded-[var(--rs-radius-md)] border border-[var(--rs-border)] bg-rs-surface p-8">
+          <div className="mt-16 rounded-(--rs-radius-md) border border-(--rs-border) bg-rs-surface p-8">
             <p className="text-xl font-semibold">{content.reassurance}</p>
             <Link
               href={startProjectPath(locale)}

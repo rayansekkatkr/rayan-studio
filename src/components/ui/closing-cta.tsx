@@ -28,7 +28,7 @@ export function ClosingCta({ locale, ctaId, source, title, body, label, href, se
   const target = href ?? startProjectPath(locale);
 
   return (
-    <div data-closing-cta className={cn("mt-[var(--rs-section-space)]", className)}>
+    <div data-closing-cta className={cn("mt-(--rs-section-space)", className)}>
       <div className="rs-theme-dark bg-rs-bg text-rs-fg">
         <Container className="py-16 md:py-24">
           {/* The arrow sits outside the h2 so the heading text stays clean for crawlers and readers. */}
@@ -38,7 +38,7 @@ export function ClosingCta({ locale, ctaId, source, title, body, label, href, se
               →
             </span>
           </div>
-          <div className="mt-12 flex flex-col gap-6 border-t border-[var(--rs-border)] pt-7 md:flex-row md:items-center md:justify-between">
+          <div className="mt-12 flex flex-col gap-6 border-t border-(--rs-border) pt-7 md:flex-row md:items-center md:justify-between">
             <p className="max-w-xl text-base leading-relaxed text-rs-muted">
               {body ??
                 (fr
@@ -49,7 +49,7 @@ export function ClosingCta({ locale, ctaId, source, title, body, label, href, se
               <TrackedLink
                 href={target}
                 event={{ ctaId, source, destination: target, locale }}
-                className="inline-flex items-center gap-2 bg-rs-fg px-7 py-3.5 text-base font-semibold text-[var(--rs-dark)] transition-colors duration-150 hover:bg-rs-accent active:bg-rs-accent-hover active:text-[var(--rs-dark-fg)] active:duration-0 hover:text-[var(--rs-dark-fg)]"
+                className="inline-flex items-center gap-2 bg-rs-fg px-7 py-3.5 text-base font-semibold text-(--rs-dark) transition-colors duration-150 hover:bg-rs-accent active:bg-rs-accent-hover active:text-(--rs-dark-fg) active:duration-0 hover:text-(--rs-dark-fg)"
               >
                 {label ?? (fr ? "Parler de votre projet" : "Start a project")}
                 <ArrowRight aria-hidden className="h-4 w-4" />
@@ -58,7 +58,7 @@ export function ClosingCta({ locale, ctaId, source, title, body, label, href, se
                 <TrackedLink
                   href={secondary.href}
                   event={{ ctaId: secondary.ctaId, source, destination: secondary.href, locale }}
-                  className="inline-flex items-center gap-2 border border-[var(--rs-border-strong)] px-6 py-3.5 text-base font-medium text-rs-fg transition-colors duration-150 hover:border-rs-fg"
+                  className="inline-flex items-center gap-2 border border-(--rs-border-strong) px-6 py-3.5 text-base font-medium text-rs-fg transition-colors duration-150 hover:border-rs-fg"
                 >
                   {secondary.label}
                 </TrackedLink>

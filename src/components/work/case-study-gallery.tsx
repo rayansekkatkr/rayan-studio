@@ -8,15 +8,15 @@ type Screen = NonNullable<ProjectRecord["screens"]>[number]["items"][number];
 function Shot({ screen, locale, className, sizes }: { screen: Screen; locale: Locale; className?: string; sizes: string }) {
   if (screen.frame === "phone") {
     return (
-      <div className={cn("flex items-center justify-center rounded-[var(--rs-radius-md)] border border-[var(--rs-border)] bg-[color-mix(in_srgb,var(--rs-accent)_6%,var(--rs-surface))] p-6", className)}>
-        <div className="w-[62%] max-w-[15rem] overflow-hidden rounded-[1.75rem] shadow-[0_30px_60px_-30px_rgba(9,9,12,0.55)]">
+      <div className={cn("flex items-center justify-center rounded-(--rs-radius-md) border border-(--rs-border) bg-[color-mix(in_srgb,var(--rs-accent)_6%,var(--rs-surface))] p-6", className)}>
+        <div className="w-[62%] max-w-60 overflow-hidden rounded-[1.75rem] shadow-[0_30px_60px_-30px_rgba(9,9,12,0.55)]">
           <Image src={screen.src} alt={screen.alt[locale]} width={screen.width} height={screen.height} sizes="20vw" className="block h-auto w-full" />
         </div>
       </div>
     );
   }
   return (
-    <div className={cn("overflow-hidden rounded-[var(--rs-radius-md)] border border-[var(--rs-border)] bg-rs-surface shadow-[0_30px_70px_-45px_rgba(9,9,12,0.5)]", className)}>
+    <div className={cn("overflow-hidden rounded-(--rs-radius-md) border border-(--rs-border) bg-rs-surface shadow-[0_30px_70px_-45px_rgba(9,9,12,0.5)]", className)}>
       <Image src={screen.src} alt={screen.alt[locale]} width={screen.width} height={screen.height} sizes={sizes} className="block h-auto w-full" />
     </div>
   );

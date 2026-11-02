@@ -112,9 +112,9 @@ export function Services({ locale = "fr" }: { locale?: Locale }) {
               <motion.div
                 whileHover={reducedMotion ? undefined : { y: -9, rotateX: 0.8, rotateY: index === 0 ? -0.8 : 0.8 }}
                 transition={{ duration: 0.45, ease: [0.22, 1, 0.36, 1] }}
-                className="h-full [perspective:1400px]"
+                className="h-full perspective-[1400px]"
               >
-                <Card className="relative h-full overflow-hidden rounded-none border-[#2a231d]/14 ![background:linear-gradient(145deg,rgba(255,250,240,0.98),rgba(241,232,217,0.92))] p-6 shadow-[8px_8px_0_rgba(42,35,29,0.08)] md:p-7">
+                <Card className="relative h-full overflow-hidden rounded-none border-[#2a231d]/14 [background:linear-gradient(145deg,rgba(255,250,240,0.98),rgba(241,232,217,0.92))]! p-6 shadow-[8px_8px_0_rgba(42,35,29,0.08)] md:p-7">
                   <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_18%_14%,rgba(217,79,43,0.08),transparent_30%),linear-gradient(180deg,rgba(255,252,246,0.52),rgba(255,252,246,0)_48%)]" />
                   <div className="pointer-events-none absolute inset-x-0 top-0 h-1 bg-[#d94f2b]" />
 

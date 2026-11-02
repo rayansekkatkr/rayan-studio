@@ -116,10 +116,10 @@ function OptionGroup<T extends string>({
             <label
               key={option.value}
               className={cn(
-                "flex cursor-pointer items-center gap-3 rounded-[var(--rs-radius-sm)] border px-4 py-3.5 text-base font-medium transition-colors duration-150",
+                "flex cursor-pointer items-center gap-3 rounded-(--rs-radius-sm) border px-4 py-3.5 text-base font-medium transition-colors duration-150",
                 checked
                   ? "border-rs-accent bg-rs-surface text-rs-fg"
-                  : "border-[var(--rs-border)] bg-rs-surface text-rs-fg hover:border-[var(--rs-border-strong)]",
+                  : "border-(--rs-border) bg-rs-surface text-rs-fg hover:border-(--rs-border-strong)",
               )}
             >
               <input
@@ -128,7 +128,7 @@ function OptionGroup<T extends string>({
                 value={option.value}
                 checked={checked}
                 onChange={() => onChange(option.value)}
-                className="h-4 w-4 accent-[var(--rs-accent)]"
+                className="h-4 w-4 accent-(--rs-accent)"
               />
               {locale === "fr" ? option.fr : option.en}
             </label>
@@ -252,17 +252,17 @@ export function ProjectForm({ locale }: { locale: Locale }) {
   }
 
   const inputClass =
-    "mt-1.5 w-full rounded-[var(--rs-radius-sm)] border border-[var(--rs-border)] bg-rs-surface px-4 py-3 text-base text-rs-fg outline-none transition-colors duration-150 focus:border-rs-accent";
+    "mt-1.5 w-full rounded-(--rs-radius-sm) border border-(--rs-border) bg-rs-surface px-4 py-3 text-base text-rs-fg outline-hidden transition-colors duration-150 focus:border-rs-accent";
 
   return (
     <form onSubmit={handleSubmit} noValidate>
       <ProjectStepper currentStep={step} totalSteps={5} label={stepLabel} />
 
-      <h2 ref={headingRef} tabIndex={-1} className="mt-6 outline-none sr-only">
+      <h2 ref={headingRef} tabIndex={-1} className="mt-6 outline-hidden sr-only">
         {STEP_TITLES[locale][step - 1]}
       </h2>
 
-      <div aria-hidden="true" className="absolute -left-[9999px] top-auto h-px w-px overflow-hidden">
+      <div aria-hidden="true" className="absolute left-[-9999px] top-auto h-px w-px overflow-hidden">
         <label htmlFor="project-company-website">Company website</label>
         <input
           id="project-company-website"
@@ -404,7 +404,7 @@ export function ProjectForm({ locale }: { locale: Locale }) {
           <button
             type="button"
             onClick={goBack}
-            className="inline-flex items-center rounded-none border border-[var(--rs-border-strong)] px-6 py-3 text-base font-medium text-rs-fg transition-colors duration-150 hover:border-rs-accent hover:text-rs-accent-fg"
+            className="inline-flex items-center rounded-none border border-(--rs-border-strong) px-6 py-3 text-base font-medium text-rs-fg transition-colors duration-150 hover:border-rs-accent hover:text-rs-accent-fg"
           >
             {fr ? "Retour" : "Back"}
           </button>
@@ -413,7 +413,7 @@ export function ProjectForm({ locale }: { locale: Locale }) {
           <button
             type="button"
             onClick={goNext}
-            className="inline-flex items-center rounded-none bg-rs-fg px-7 py-3.5 text-base font-semibold text-rs-bg transition-colors duration-150 hover:bg-rs-accent active:bg-rs-accent-hover active:text-[var(--rs-dark-fg)] active:duration-0"
+            className="inline-flex items-center rounded-none bg-rs-fg px-7 py-3.5 text-base font-semibold text-rs-bg transition-colors duration-150 hover:bg-rs-accent active:bg-rs-accent-hover active:text-(--rs-dark-fg) active:duration-0"
           >
             {fr ? "Suivant" : "Next"}
           </button>
@@ -421,7 +421,7 @@ export function ProjectForm({ locale }: { locale: Locale }) {
           <button
             type="submit"
             disabled={status === "sending"}
-            className="inline-flex items-center rounded-none bg-rs-fg px-7 py-3.5 text-base font-semibold text-rs-bg transition-colors duration-150 hover:bg-rs-accent active:bg-rs-accent-hover active:text-[var(--rs-dark-fg)] active:duration-0 disabled:pointer-events-none disabled:opacity-60"
+            className="inline-flex items-center rounded-none bg-rs-fg px-7 py-3.5 text-base font-semibold text-rs-bg transition-colors duration-150 hover:bg-rs-accent active:bg-rs-accent-hover active:text-(--rs-dark-fg) active:duration-0 disabled:pointer-events-none disabled:opacity-60"
           >
             {fr ? "Envoyer" : "Send"}
           </button>
