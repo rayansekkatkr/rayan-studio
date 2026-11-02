@@ -46,7 +46,7 @@ const WEBSITES: Record<Locale, LandingContent> = {
     title: "Un site internet qui donne envie de vous contacter.",
     lead: "Un nouveau site ou la refonte de l'existant : clair sur mobile, trouvable sur Google et pensé pour recevoir des demandes. Vous voyez une première maquette avant de vous engager.",
     primaryCta: "Recevoir ma maquette gratuite",
-    secondaryCta: "Voir les réalisations",
+    secondaryCta: "Voir des exemples",
     promises: ["Maquette gratuite sous 24 h ouvrées", "Un seul interlocuteur", "Vous restez propriétaire du site"],
     benefitsTitle: "Ce que votre site doit vous apporter",
     benefits: [
@@ -135,7 +135,7 @@ const WEBSITES: Record<Locale, LandingContent> = {
     title: "A website that makes people want to contact you.",
     lead: "A new website or a redesign of your current one: clear on mobile, easy to find on Google and built to receive enquiries. You see a first mockup before committing.",
     primaryCta: "Get my free mockup",
-    secondaryCta: "See the work",
+    secondaryCta: "See examples",
     promises: ["Free mockup within 24 business hours", "One point of contact", "You own the website"],
     benefitsTitle: "What your website should bring you",
     benefits: [

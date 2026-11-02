@@ -549,3 +549,10 @@ details::details-content {
 details[open]::details-content {
   opacity: 1;
 }
+
+/* Balanced headings: no lone short last line (detector: unbalanced-heading). */
+h1,
+h2,
+h3 {
+  text-wrap: balance;
+}
