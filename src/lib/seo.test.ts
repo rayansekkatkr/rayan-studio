@@ -15,7 +15,7 @@ describe("buildLocalizedMetadata", () => {
     expect(metadata.alternates?.languages).toEqual({
       fr: "/fr/services/applications-web-saas",
       en: "/en/services/web-applications-saas",
-      "x-default": "/fr/services/applications-web-saas",
+      "x-default": "/en/services/web-applications-saas",
     });
     expect(metadata.openGraph).toMatchObject({
       locale: "en_US",

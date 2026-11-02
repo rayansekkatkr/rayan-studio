@@ -75,7 +75,7 @@ export function LocalSeoLanding({ city, citySlug, sector, sectorSlug, content }:
   return (
     <>
       <SiteHeader locale="fr" topTheme="light" />
-      <main id="main-content" className="min-h-screen bg-rs-bg px-4 pb-16 pt-28 text-rs-fg md:px-8 md:pt-32">
+      <main id="main-content" className="min-h-svh bg-rs-bg px-4 pb-16 pt-28 text-rs-fg md:px-8 md:pt-32">
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }} />
         <div className="mx-auto max-w-5xl">
           <nav aria-label="Fil d'Ariane" className="text-xs font-semibold uppercase tracking-[0.12em] text-rs-muted">
@@ -172,7 +172,7 @@ export function LocalSeoLanding({ city, citySlug, sector, sectorSlug, content }:
           <div className="mt-8 flex flex-wrap gap-3">
             <a
               href={startProjectPath("fr")}
-              className="inline-flex items-center rounded-none bg-rs-fg px-6 py-3 text-sm font-semibold text-rs-bg transition-colors duration-150 hover:bg-rs-accent"
+              className="inline-flex items-center rounded-none bg-rs-fg px-6 py-3 text-sm font-semibold text-rs-bg transition-colors duration-150 hover:bg-rs-accent active:bg-rs-accent-hover active:text-[var(--rs-dark-fg)] active:duration-0"
             >
               Recevoir un diagnostic adapté à mon activité
             </a>

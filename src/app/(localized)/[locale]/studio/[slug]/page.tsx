@@ -7,7 +7,7 @@ import { OffersPage } from "@/components/studio/offers-page";
 import { RayanPage } from "@/components/studio/rayan-page";
 import { StudioPage } from "@/components/studio/studio-page";
 import { FAQ_CONTENT } from "@/content/studio";
-import { getSiteUrl } from "@/lib/brand";
+import { BRAND, getSiteUrl } from "@/lib/brand";
 import { SUPPORTED_LOCALES, normalizeLocale, type Locale } from "@/lib/i18n";
 import { buildBreadcrumbJsonLd, buildLocalizedMetadata } from "@/lib/seo";
 import { resolveStudioSlug, studioPath, type StudioPageKey } from "@/lib/site-routes";
@@ -140,12 +140,38 @@ export default async function Page({ params }: { params: Promise<{ locale: strin
     { name: PAGE_META[key][locale].title, path: `${siteUrl}${studioPath(locale, key)}` },
   ]);
 
+  // The founder page backs up the home's Person node: same @ids, so search engines join the two.
+  const profile =
+    key === "rayan"
+      ? {
+          "@context": "https://schema.org",
+          "@type": "ProfilePage",
+          "@id": `${siteUrl}${studioPath(locale, "rayan")}#profile`,
+          url: `${siteUrl}${studioPath(locale, "rayan")}`,
+          inLanguage: fr ? "fr-FR" : "en-US",
+          isPartOf: { "@id": `${siteUrl}/#website` },
+          mainEntity: {
+            "@type": "Person",
+            "@id": `${siteUrl}/#founder`,
+            name: BRAND.founder,
+            jobTitle: "Software Engineer & Founder",
+            worksFor: { "@id": `${siteUrl}/#studio` },
+            homeLocation: { "@type": "City", name: "Seoul" },
+            knowsLanguage: ["fr", "en"],
+            sameAs: [BRAND.linkedinUrl, BRAND.portfolioUrl],
+          },
+        }
+      : null;
+
   return (
     <CommercialPageShell locale={locale}>
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumb) }}
       />
+      {profile ? (
+        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(profile) }} />
+      ) : null}
       {key === "faq" ? (
         <script
           type="application/ld+json"

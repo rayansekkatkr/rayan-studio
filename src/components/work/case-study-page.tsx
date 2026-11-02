@@ -204,7 +204,7 @@ export function CaseStudyPage({ locale, project }: { locale: Locale; project: Pr
             <span className="text-[2.25rem] font-extrabold leading-[0.95] tracking-[-0.045em] md:text-6xl">
               {fr ? "Toutes les réalisations" : "All work"}
             </span>
-            <ArrowRight aria-hidden className="h-8 w-8 shrink-0 transition-transform duration-200 group-hover:translate-x-2 md:h-12 md:w-12" />
+            <ArrowRight aria-hidden className="h-8 w-8 shrink-0 md:h-12 md:w-12" />
           </Link>
         </section>
       </Container>

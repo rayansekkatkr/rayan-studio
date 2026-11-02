@@ -125,7 +125,7 @@ export default async function AboutMethodPage({ params }: { params: Promise<{ lo
   return (
     <>
       <Navbar locale={locale} />
-      <main id="main-content" className="min-h-screen px-4 pb-14 pt-28 md:px-8">
+      <main id="main-content" className="min-h-svh px-4 pb-14 pt-28 md:px-8">
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }} />
       <div className="mx-auto max-w-5xl">
         <p className="inline-flex rounded-none border border-[#2a231d]/14 bg-[#fffaf0] px-3 py-1 text-xs font-black uppercase tracking-[0.12em] text-[#c2461f] shadow-[3px_3px_0_rgba(42,35,29,0.08)]">

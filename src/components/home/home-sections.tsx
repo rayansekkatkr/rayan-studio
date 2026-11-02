@@ -119,10 +119,12 @@ export function HomeFounderA({ locale }: { locale: Locale }) {
                         </span>
                       ) : null}
                       <span className="mt-3 flex items-center justify-between gap-2 text-lg font-bold tracking-[-0.025em]">
-                        {project.title}
+                        <span className="min-w-0 [overflow-wrap:anywhere]">{project.title}</span>
                         <ArrowRight aria-hidden className="h-4 w-4 shrink-0" />
                       </span>
                       {host ? <span className="mt-0.5 block text-sm text-rs-muted">{host}</span> : null}
+                      {/* What the product is, from the project record: real scope, nothing added. */}
+                      <span className="mt-2 line-clamp-3 text-sm leading-relaxed text-rs-muted">{project.summary[locale]}</span>
                     </Link>
                   </li>
                 );

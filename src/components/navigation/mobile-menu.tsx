@@ -76,7 +76,7 @@ export function MobileMenu({ id, locale, links, onClose, toggleRef, quoteHref }:
       id={id}
       role="dialog"
       aria-label="Menu"
-      className="fixed inset-0 top-16 z-40 overflow-y-auto bg-rs-bg lg:hidden"
+      className="fixed inset-0 top-16 z-40 overflow-y-auto overscroll-contain bg-rs-bg lg:hidden"
     >
       <nav
         aria-label={fr ? "Navigation mobile" : "Mobile navigation"}
@@ -102,7 +102,7 @@ export function MobileMenu({ id, locale, links, onClose, toggleRef, quoteHref }:
         <Link
           href={quoteHref ?? quotePath(locale)}
           onClick={onClose}
-          className="mt-6 inline-flex items-center justify-center bg-rs-fg px-6 py-3.5 text-base font-semibold text-rs-bg transition-colors duration-150 hover:bg-rs-accent"
+          className="mt-6 inline-flex items-center justify-center bg-rs-fg px-6 py-3.5 text-base font-semibold text-rs-bg transition-colors duration-150 hover:bg-rs-accent active:bg-rs-accent-hover active:text-[var(--rs-dark-fg)] active:duration-0"
         >
           {fr ? "Demander un devis gratuit" : "Get a free quote"}
         </Link>

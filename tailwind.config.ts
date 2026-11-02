@@ -1,6 +1,8 @@
 import type { Config } from "tailwindcss";
 
 const config: Config = {
+  // Hover styles only on devices that can hover: no sticky hover after a tap on phones.
+  future: { hoverOnlyWhenSupported: true },
   content: [
     "./src/pages/**/*.{js,ts,jsx,tsx,mdx}",
     "./src/components/**/*.{js,ts,jsx,tsx,mdx}",
@@ -25,6 +27,10 @@ const config: Config = {
       fontFamily: {
         sans: ["var(--font-sans)", "sans-serif"],
         serif: ["var(--font-serif)", "serif"],
+      },
+      // Strong ease-out for UI that enters or leaves (Emil Kowalski); see --rs-ease-out.
+      transitionTimingFunction: {
+        rs: "var(--rs-ease-out)",
       },
       keyframes: {
         "accordion-down": {

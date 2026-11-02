@@ -88,7 +88,7 @@ export function CookieConsent() {
       <div className="flex shrink-0 gap-2">
         <button
           type="button"
-          className="min-h-11 flex-1 bg-rs-fg px-5 text-sm font-bold text-[var(--rs-dark)] transition-colors duration-150 hover:bg-rs-accent hover:text-[var(--rs-dark-fg)] sm:flex-none"
+          className="min-h-11 flex-1 bg-rs-fg px-5 text-sm font-bold text-[var(--rs-dark)] transition-colors duration-150 hover:bg-rs-accent active:bg-rs-accent-hover active:text-[var(--rs-dark-fg)] active:duration-0 hover:text-[var(--rs-dark-fg)] sm:flex-none"
           onClick={() => {
             saveConsent("accepted");
             window.dispatchEvent(new Event("rs-consent-granted"));

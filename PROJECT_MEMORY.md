@@ -934,3 +934,24 @@ Quand un changement important est fait:
 - DESIGN.md et sidecar : le rôle Label n'est plus un kicker au-dessus d'un titre de section (choix de Rayan).
 - Contraste de l'intro sur la photo de la bande de nuit : voile `.night-band-shade` plus dense au centre (et sur mobile) ; pixel le plus clair derrière l'intro 5,22:1 à 1440 et 5,69:1 à 390 (avant 4,05 et 3,74). S'applique à toutes les bandes de nuit.
 - Vérification : formulaire vide = 0 requête, 3 champs invalides avec message, focus sur Nom (1440 et 390) ; `npm run verify` OK (160/160, build) ; Playwright complet `--workers=2` 123 passés / 13 ignorés / 0 échec (un premier passage a eu 120 faux échecs, serveur de test tombé, `ERR_CONNECTION_REFUSED`).
+
+### 2026-11-02 (suites de la seconde analyse SEO de l'accueil)
+
+- Seconde analyse `seo page` de l'accueil en production : 63 → 79/100 (on-page 86, contenu 62, technique 85, schema 78, images 88), aucun critique ni haut.
+- Sitemap : `lastmod` seulement là où le contenu a une vraie date (articles : `updatedAt ?? publishedAt`) ; plus de date unique (fixe ou date du déploiement) sur toutes les URL. Build : 16 URL datées sur 162, 2 dates distinctes.
+- x-default aligné sur le middleware : les langues non couvertes sont redirigées vers l'anglais, donc x-default → version EN (`src/lib/seo.ts`, `src/app/sitemap.ts`, tests mis à jour). Sans en-tête de langue (Googlebot), `/` mène toujours à `/fr`.
+- Schema : `ProfilePage` sur la page Rayan (mêmes `@id` que le `Person` de l'accueil) ; `logo` (`/icon.svg`) sur `ProfessionalService` ; `WebPage.about` vers le studio. `portfolioUrl` laissé à la racine (sa redirection dépend probablement de la langue).
+- Accueil : le résumé factuel de chaque produit (`project.summary`, déjà dans les données) s'affiche sous sa vignette ; contenu principal environ 373 mots (seuil 500).
+- Non traité : tuiles du mur à rendre eager (3 premières), contenu encore sous 500 mots.
+- Vérification : `npm run verify` OK (160/160, build), HTML construit inspecté (sitemap, x-default, logo, about, ProfilePage), captures du bloc fondateur à 1440 et 390, Playwright complet `--workers=2` 123 passés / 13 ignorés / 0 échec.
+
+### 2026-11-02 (skills d'Emil Kowalski : installation et audit global appliqué)
+
+- Installés en global (`npx skills add emilkowalski/skills -g -a claude-code`) : emil-design-eng, animate, review-animations, improve-animations, find-animation-opportunities, animation-performance, animation-vocabulary, apple-design, pick-ui-library, prototype (break-ui, mobile-native, remove-animations déjà présents). Relus : texte seul, aucun script.
+- Audit en 4 volets (emil-design-eng, improve-animations, mobile-native, break-ui), lecture seule, puis lots A à D appliqués (choix de Rayan) :
+  - A : `future.hoverOnlyWhenSupported` (33 règles :hover toutes sous `(hover: hover) and (pointer: fine)`, plus de survol collant au toucher) ; pause au survol du mur réservée aux pointeurs fins ; retour à l'appui sur les 17 fichiers de CTA principaux (`active:bg-rs-accent-hover active:text-[var(--rs-dark-fg)] active:duration-0`, changement de couleur conforme à DESIGN.md, mesuré #4745bd / #f7f7f4 au toucher et à la souris) ; zoom et décalages au survol retirés (cartes réalisations, insights, offres, flèches, puce ServiceSeoPage) ; header 200 ms `ease-rs` et couleurs 150 ms ; tokens `--rs-motion-fast: 150ms`, `--rs-ease-out: cubic-bezier(0.23, 1, 0.32, 1)` (classe Tailwind `ease-rs`) ; `touch-action: manipulation` et pas de sélection sur les boutons.
+  - B (ciblé) : e-mail de confirmation dans un span `[overflow-wrap:anywhere]` + `grid-cols-1` sur la carte du formulaire (160 caractères mesurés sans débordement à 390) ; coches des promesses `shrink-0` ; FAQ, titres de carte et de produit, footer en `min-w-0 [overflow-wrap:anywhere]` ; pluriel du nombre de sites (0 = clause masquée, 1 = singulier) ; compteur de caractères au-delà de 4000 ; `dir="auto"` sur nom et message ; résumés produits en `line-clamp-3`.
+  - C : `themeColor` #09090c (landings locales #f2f1ed) ; `100svh` / `min-h-svh` ; `overscroll-contain` sur le menu mobile ; champs à 16 px sous `pointer: coarse` ; `enterKeyHint` et autocomplete (formulaire projet).
+  - D : mouvement réduit = transitions limitées aux couleurs et à l'opacité (plus de coupure totale) ; interlettrage du H1 mobile à -0.035em ; boutons désactivés sans survol ; zone de clic du lien de langue agrandie ; fondu des réponses FAQ (`::details-content`) ; lueur des bandes de nuit en pause hors écran (`OffscreenPause`).
+- Non traités (décision de Rayan requise) : composants morts animés dans `components/site/` et `ui/`, entrée animée du menu mobile.
+- Vérification : typecheck, lint, check:copy, Vitest 160/160, contrôles navigateur (theme-color, courbe du header, survols gated, appui, e-mail long, coches à 320), `npm run verify` OK (build), Playwright complet `--workers=2` 123 passés / 13 ignorés / 0 échec.

@@ -37,7 +37,7 @@ export function CraPage({ locale }: { locale: Locale }) {
               <TrackedLink
                 href={FORM_ANCHOR}
                 event={{ ctaId: "cra_hero_diagnostic", source: "cra_hero", destination: FORM_ANCHOR, locale }}
-                className="inline-flex items-center gap-2 rounded-none bg-rs-fg px-7 py-3.5 text-base font-semibold text-[var(--rs-dark)] transition-colors duration-150 hover:bg-rs-accent hover:text-rs-fg"
+                className="inline-flex items-center gap-2 rounded-none bg-rs-fg px-7 py-3.5 text-base font-semibold text-[var(--rs-dark)] transition-colors duration-150 hover:bg-rs-accent active:bg-rs-accent-hover active:text-[var(--rs-dark-fg)] active:duration-0 hover:text-rs-fg"
               >
                 {hero.primaryCta}
                 <ArrowRight aria-hidden className="h-4 w-4" />
@@ -267,7 +267,7 @@ function CraHeader({ locale, content }: ChromeProps) {
           <TrackedLink
             href={FORM_ANCHOR}
             event={{ ctaId: "cra_header_diagnostic", source: "cra_header", destination: FORM_ANCHOR, locale }}
-            className="hidden items-center whitespace-nowrap rounded-none bg-rs-fg px-5 py-2.5 text-sm font-semibold text-[var(--rs-dark)] transition-colors duration-150 hover:bg-rs-accent hover:text-rs-fg sm:inline-flex"
+            className="hidden items-center whitespace-nowrap rounded-none bg-rs-fg px-5 py-2.5 text-sm font-semibold text-[var(--rs-dark)] transition-colors duration-150 hover:bg-rs-accent active:bg-rs-accent-hover active:text-[var(--rs-dark-fg)] active:duration-0 hover:text-rs-fg sm:inline-flex"
           >
             {ui.headerCta}
           </TrackedLink>

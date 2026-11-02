@@ -13,14 +13,25 @@ export function HomeHero({ locale }: { locale: Locale }) {
   const fr = locale === "fr";
   // Live product sites the studio designed and shipped (shown in the founder block).
   const liveSites = PROJECTS.filter((project) => project.liveUrl && projectStatusBadge(project, locale).tone === "live").length;
+  // Singular and zero cases: never "mes 1 sites" or "mes 0 sites".
+  const sitesClause =
+    liveSites === 0
+      ? ""
+      : liveSites === 1
+        ? fr
+          ? ", comme mon site en ligne"
+          : ", like my live site"
+        : fr
+          ? `, comme mes ${liveSites} sites en ligne`
+          : `, like my ${liveSites} live sites`;
   const paths = [
     {
       id: "websites",
       href: websitesLandingPath(locale),
       title: fr ? "Sites web & refonte" : "Websites & redesign",
       body: fr
-        ? `Un site qui inspire confiance, comme mes ${liveSites} sites en ligne. Maquette gratuite sous 24 h ouvrées.`
-        : `A website that builds trust, like my ${liveSites} live sites. Free mockup within 24 business hours.`,
+        ? `Un site qui inspire confiance${sitesClause}. Maquette gratuite sous 24 h ouvrées.`
+        : `A website that builds trust${sitesClause}. Free mockup within 24 business hours.`,
     },
     {
       id: "applications",
@@ -45,8 +56,8 @@ export function HomeHero({ locale }: { locale: Locale }) {
       />
       <Container className="pointer-events-none">
         <div className="flex min-h-0 items-center pb-10 pt-20 md:pb-16 md:pt-32 lg:min-h-[min(50rem,100svh)] lg:pb-16">
-          <div className="pointer-events-auto max-w-3xl lg:max-w-[32rem] xl:max-w-[40rem]">
-            <h1 className="text-[2.25rem] font-extrabold leading-[0.98] tracking-[-0.045em] md:text-5xl xl:text-[3.75rem]">
+          <div className="pointer-events-auto min-w-0 max-w-3xl lg:max-w-[32rem] xl:max-w-[40rem]">
+            <h1 className="text-[2.25rem] font-extrabold leading-[0.98] tracking-[-0.035em] md:text-5xl md:tracking-[-0.045em] xl:text-[3.75rem]">
               {fr
                 ? "Je conçois et mets en ligne vos sites et applications, sans intermédiaire."
                 : "I design and launch your websites and applications, with no middleman."}
@@ -74,7 +85,7 @@ export function HomeHero({ locale }: { locale: Locale }) {
                     className="group flex h-full flex-col border border-[var(--rs-border)] bg-rs-surface p-4 transition-colors duration-150 hover:border-rs-accent sm:p-5"
                   >
                     <span className="flex items-center justify-between gap-3 text-xl font-bold tracking-[-0.025em]">
-                      {path.title}
+                      <span className="min-w-0 [overflow-wrap:anywhere]">{path.title}</span>
                       <ArrowRight
                         aria-hidden
                         className="h-5 w-5 shrink-0 text-rs-muted transition-colors duration-150 group-hover:text-rs-accent-fg"
@@ -94,7 +105,7 @@ export function HomeHero({ locale }: { locale: Locale }) {
                 destination: quotePath(locale),
                 locale,
               }}
-              className="mt-5 inline-flex items-center gap-2 rounded-none bg-rs-fg px-7 py-3.5 text-base font-semibold text-[var(--rs-dark)] transition-colors duration-150 hover:bg-rs-accent hover:text-rs-fg"
+              className="mt-5 inline-flex items-center gap-2 rounded-none bg-rs-fg px-7 py-3.5 text-base font-semibold text-[var(--rs-dark)] transition-colors duration-150 hover:bg-rs-accent active:bg-rs-accent-hover active:text-[var(--rs-dark-fg)] active:duration-0 hover:text-rs-fg"
             >
               {fr ? "Demander un devis gratuit" : "Get a free quote"}
               <ArrowRight aria-hidden className="h-4 w-4" />

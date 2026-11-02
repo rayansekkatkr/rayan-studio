@@ -76,7 +76,7 @@ describe("canonical sitemap", () => {
     expect(cra?.alternates?.languages).toMatchObject({
       fr: `${base}/fr/cyber-resilience-act`,
       en: `${base}/en/cyber-resilience-act`,
-      "x-default": `${base}/fr/cyber-resilience-act`,
+      "x-default": `${base}/en/cyber-resilience-act`,
     });
     expectUrl("/fr/cyber-resilience-act");
   });
@@ -92,7 +92,7 @@ describe("canonical sitemap", () => {
     expect(home?.alternates?.languages).toMatchObject({
       fr: `${base}/fr`,
       en: `${base}/en`,
-      "x-default": `${base}/fr`,
+      "x-default": `${base}/en`,
     });
 
     const localEntry = entries.find((entry) => entry.url.startsWith(`${base}/site/`));

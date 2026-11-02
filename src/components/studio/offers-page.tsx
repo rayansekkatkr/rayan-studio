@@ -43,7 +43,7 @@ export function OffersPage({ locale }: { locale: Locale }) {
                     alt=""
                     fill
                     sizes="(min-width: 768px) 45vw, 100vw"
-                    className="object-cover opacity-80 transition-transform duration-500 ease-out group-hover:scale-[1.04]"
+                    className="object-cover opacity-80"
                   />
                   <div
                     aria-hidden
@@ -82,7 +82,7 @@ export function OffersPage({ locale }: { locale: Locale }) {
                     className="mt-auto inline-flex items-center gap-2 pt-7 text-base font-semibold text-rs-accent-fg transition-colors duration-150 hover:text-rs-fg"
                   >
                     {content.ctaLabel}
-                    <ArrowRight aria-hidden className="h-4 w-4 transition-transform duration-150 group-hover:translate-x-0.5" />
+                    <ArrowRight aria-hidden className="h-4 w-4" />
                   </Link>
                 </div>
               </div>

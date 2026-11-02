@@ -35,24 +35,25 @@ const LEGAL_DOCS: LegalDocKey[] = ["legal", "privacy", "terms"];
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const baseUrl = getSiteUrl();
-  // The sitemap is generated at build time, so this is the deploy date. A fixed date in an env
-  // var went stale (every URL stuck on 2026-08-09) and Google ignores a lastmod it cannot trust.
-  const lastModified = new Date();
+  // lastmod only where the content carries a real date (insights: updatedAt or publishedAt).
+  // A single date for every URL (fixed, or the deploy time) tells Google nothing and gets ignored.
 
   function localizedPair(
     frPath: string,
     enPath: string,
     priority: number,
     changeFrequency: ChangeFrequency = "monthly",
+    lastModified?: Date,
   ): MetadataRoute.Sitemap {
     const languages = {
       fr: `${baseUrl}${frPath}`,
       en: `${baseUrl}${enPath}`,
-      "x-default": `${baseUrl}${frPath}`,
+      // Same fallback as the middleware: unmatched languages get English.
+      "x-default": `${baseUrl}${enPath}`,
     };
     return [frPath, enPath].map((path) => ({
       url: `${baseUrl}${path}`,
-      lastModified,
+      ...(lastModified ? { lastModified } : {}),
       changeFrequency,
       priority,
       alternates: { languages },
@@ -60,8 +61,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
   }
 
   // A page published in a single locale: no hreflang alternates.
-  function singleLocale(path: string, priority: number): MetadataRoute.Sitemap {
-    return [{ url: `${baseUrl}${path}`, lastModified, changeFrequency: "monthly", priority }];
+  function singleLocale(path: string, priority: number, lastModified?: Date): MetadataRoute.Sitemap {
+    return [{ url: `${baseUrl}${path}`, ...(lastModified ? { lastModified } : {}), changeFrequency: "monthly", priority }];
   }
 
   function serviceEntries(): MetadataRoute.Sitemap {
@@ -111,9 +112,10 @@ export default function sitemap(): MetadataRoute.Sitemap {
         const en = isInsightAvailable(insight, "en");
         const frPath = insightPath("fr", insight.category, insight.slug.fr);
         const enPath = insightPath("en", insight.category, insight.slug.en);
-        if (fr && en) return localizedPair(frPath, enPath, 0.7);
-        if (fr) return singleLocale(frPath, 0.7);
-        return en ? singleLocale(enPath, 0.7) : [];
+        const modified = new Date(insight.updatedAt ?? insight.publishedAt);
+        if (fr && en) return localizedPair(frPath, enPath, 0.7, "monthly", modified);
+        if (fr) return singleLocale(frPath, 0.7, modified);
+        return en ? singleLocale(enPath, 0.7, modified) : [];
       }),
     ];
   }
@@ -121,7 +123,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
   function localSeoEntries(): MetadataRoute.Sitemap {
     return getAllLocalSeoCombos().map(({ sector, city }) => ({
       url: `${baseUrl}/site/${sector.slug}/${city.slug}`,
-      lastModified,
       changeFrequency: "monthly" as const,
       priority: 0.7,
     }));

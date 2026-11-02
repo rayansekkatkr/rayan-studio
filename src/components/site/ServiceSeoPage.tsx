@@ -71,7 +71,7 @@ export function ServiceSeoPage({ page }: { page: ServiceSeoPageData }) {
   return (
     <>
       <Navbar locale={page.locale} />
-      <main id="main-content" className="relative min-h-screen overflow-hidden px-4 pb-16 pt-28 md:px-8">
+      <main id="main-content" className="relative min-h-svh overflow-hidden px-4 pb-16 pt-28 md:px-8">
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }} />
       <div className="pointer-events-none fixed inset-0 -z-20 hero-aurora" />
       <div className="pointer-events-none fixed inset-0 -z-10 hero-vignette" />
@@ -81,7 +81,7 @@ export function ServiceSeoPage({ page }: { page: ServiceSeoPageData }) {
           <div>
             <a
               href={`/${page.locale}`}
-              className="inline-flex rounded-none border border-[#2a231d]/14 bg-[#fffaf0]/84 px-3 py-1 text-xs font-black uppercase tracking-[0.12em] text-[#c2461f] transition hover:-translate-y-0.5"
+              className="inline-flex rounded-none border border-[#2a231d]/14 bg-[#fffaf0]/84 px-3 py-1 text-xs font-black uppercase tracking-[0.12em] text-[#c2461f]"
             >
               {page.eyebrow}
             </a>

@@ -31,6 +31,7 @@ function buildHomeJsonLd(locale: Locale) {
         name: BRAND.name,
         url: `${siteUrl}/${locale}`,
         image: `${siteUrl}/opengraph-image`,
+        logo: `${siteUrl}/icon.svg`,
         founder: { "@id": `${siteUrl}/#founder` },
         description: fr
           ? "Studio indépendant : création et refonte de sites web, applications et SaaS sur mesure, du cadrage à la mise en production."
@@ -50,6 +51,7 @@ function buildHomeJsonLd(locale: Locale) {
       {
         "@type": "WebPage",
         "@id": `${siteUrl}/${locale}#webpage`,
+        about: { "@id": `${siteUrl}/#studio` },
         url: `${siteUrl}/${locale}`,
         name: fr
           ? "Sites web, applications et SaaS sur mesure | Rayan Studio"
