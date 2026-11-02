@@ -17,8 +17,8 @@ export function SiteFooter({ locale }: { locale: Locale }) {
   ];
 
   return (
-    <footer data-site-footer className="rs-theme-dark border-t border-[var(--rs-border)] bg-rs-bg text-rs-fg">
-      <div className="mx-auto w-full max-w-[var(--rs-container)] px-5 py-14 md:px-8">
+    <footer data-site-footer className="rs-theme-dark border-t border-(--rs-border) bg-rs-bg text-rs-fg">
+      <div className="mx-auto w-full max-w-(--rs-container) px-5 py-14 md:px-8">
         <div className="flex flex-col gap-10 lg:flex-row lg:justify-between">
           <div className="max-w-xs">
             <p className="text-lg font-extrabold tracking-[-0.02em] text-rs-fg">Rayan Studio</p>
@@ -39,7 +39,7 @@ export function SiteFooter({ locale }: { locale: Locale }) {
                     <li key={`${link.href}-${link.label}`}>
                       <Link
                         href={link.href}
-                        className="text-sm text-rs-fg transition-colors duration-150 [overflow-wrap:anywhere] hover:text-rs-accent-fg"
+                        className="text-sm text-rs-fg transition-colors duration-150 wrap-anywhere hover:text-rs-accent-fg"
                       >
                         {link.label}
                       </Link>
@@ -51,7 +51,7 @@ export function SiteFooter({ locale }: { locale: Locale }) {
           </div>
         </div>
 
-        <div className="mt-10 flex flex-col gap-4 border-t border-[var(--rs-border)] pt-6 text-sm text-rs-muted sm:flex-row sm:items-center sm:justify-between">
+        <div className="mt-10 flex flex-col gap-4 border-t border-(--rs-border) pt-6 text-sm text-rs-muted sm:flex-row sm:items-center sm:justify-between">
           <div className="flex flex-wrap items-center gap-4">
             <Link href={startProjectPath(locale)} className="transition-colors duration-150 hover:text-rs-fg">
               {fr ? "Démarrer un projet" : "Start a project"}

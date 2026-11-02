@@ -33,7 +33,7 @@ export function ServicePage({ locale, service }: { locale: Locale; service: Serv
                 destination: quote,
                 locale,
               }}
-              className="inline-flex items-center gap-2 rounded-none bg-rs-fg px-7 py-3.5 text-base font-semibold text-rs-bg transition-colors duration-150 hover:bg-rs-accent active:bg-rs-accent-hover active:text-[var(--rs-dark-fg)] active:duration-0 hover:text-white"
+              className="inline-flex items-center gap-2 rounded-none bg-rs-fg px-7 py-3.5 text-base font-semibold text-rs-bg transition-colors duration-150 hover:bg-rs-accent active:bg-rs-accent-hover active:text-(--rs-dark-fg) active:duration-0 hover:text-white"
             >
               {fr ? "Demander un devis gratuit" : "Get a free quote"}
               <ArrowRight aria-hidden className="h-4 w-4" />
@@ -77,11 +77,11 @@ export function ServicePage({ locale, service }: { locale: Locale; service: Serv
 
         <ArticleBlock id="benefices" index={2} title={fr ? "Ce que vous y gagnez" : "What you gain"}>
           {/* Statements rather than cards: a short claim, then the detail, separated by vertical rules. */}
-          <ul className="grid border-y border-[var(--rs-border)] md:grid-cols-3 md:divide-x md:divide-[var(--rs-border)]">
+          <ul className="grid border-y border-(--rs-border) md:grid-cols-3 md:divide-x md:divide-(--rs-border)">
             {service.benefits[locale].map((benefit, index) => (
               <li
                 key={benefit.title}
-                className={index > 0 ? "border-t border-[var(--rs-border)] py-6 md:border-t-0 md:px-6" : "py-6 md:pr-6"}
+                className={index > 0 ? "border-t border-(--rs-border) py-6 md:border-t-0 md:px-6" : "py-6 md:pr-6"}
               >
                 <h3 className="text-xl font-semibold leading-snug tracking-tight md:text-2xl">
                   <span className="text-rs-accent-fg">+</span> {benefit.title}
@@ -123,7 +123,7 @@ export function ServicePage({ locale, service }: { locale: Locale; service: Serv
         </ArticleBlock>
 
         <ArticleBlock id="faq" index={6} title="FAQ" data-service-section="faq">
-          <div className="divide-y divide-[var(--rs-border)] border-y border-[var(--rs-border)]">
+          <div className="divide-y divide-(--rs-border) border-y border-(--rs-border)">
             {service.faq[locale].map((item) => (
               <details key={item.question} className="group py-5">
                 <summary className="flex cursor-pointer list-none items-center justify-between gap-4 text-lg font-semibold text-rs-fg">

@@ -31,7 +31,7 @@ export function InsightsIndex({ locale }: { locale: Locale }) {
         }
       />
 
-      <div className="bg-rs-bg py-[var(--rs-section-space)]">
+      <div className="bg-rs-bg py-(--rs-section-space)">
         <Container>
           <div className="grid gap-6 lg:grid-cols-[3fr_2fr]">
             <InsightCard locale={locale} insight={FEATURED_INSIGHT} featured />
@@ -51,12 +51,12 @@ export function InsightsIndex({ locale }: { locale: Locale }) {
             ))}
           </div>
 
-          <div className="mt-16 rounded-[var(--rs-radius-lg)] border border-[var(--rs-border)] bg-rs-surface p-8">
+          <div className="mt-16 rounded-(--rs-radius-lg) border border-(--rs-border) bg-rs-surface p-8">
             <Eyebrow>{fr ? "Outils" : "Tools"}</Eyebrow>
             <p className="mt-3 text-2xl font-semibold tracking-tight">
               {fr ? "Votre projet est-il prêt ?" : "Is your project ready?"}
             </p>
-            <p className="mt-2 max-w-[var(--rs-reading)] text-base leading-relaxed text-rs-muted">
+            <p className="mt-2 max-w-(--rs-reading) text-base leading-relaxed text-rs-muted">
               {fr
                 ? "Cinq questions rapides pour savoir si votre projet est prêt pour une discussion produit et technique."
                 : "Five quick questions to see whether your project is ready for a product and technical conversation."}

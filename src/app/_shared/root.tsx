@@ -9,7 +9,7 @@ import { getGoogleSiteVerification } from "@/lib/seo-verification";
 // Direction A (2026-10-31): a heavy grotesque for headings and UI, a serif for key sentences.
 const sansFont = Inter_Tight({
   subsets: ["latin"],
-  variable: "--font-sans",
+  variable: "--rs-font-sans",
   display: "swap",
 });
 
@@ -17,7 +17,7 @@ const serifFont = Instrument_Serif({
   subsets: ["latin"],
   weight: "400",
   style: ["normal", "italic"],
-  variable: "--font-serif",
+  variable: "--rs-font-serif",
   display: "swap",
 });
 

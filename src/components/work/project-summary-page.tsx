@@ -49,7 +49,7 @@ export function ProjectSummaryPage({ locale, project }: { locale: Locale; projec
       id: "resultat",
       label: fr ? "Résultat" : "Outcome",
       content: (
-        <div className="space-y-3 rounded-[var(--rs-radius-md)] border border-[color-mix(in_srgb,var(--rs-accent)_35%,transparent)] bg-[color-mix(in_srgb,var(--rs-accent)_7%,transparent)] p-6 md:p-8">
+        <div className="space-y-3 rounded-(--rs-radius-md) border border-[color-mix(in_srgb,var(--rs-accent)_35%,transparent)] bg-[color-mix(in_srgb,var(--rs-accent)_7%,transparent)] p-6 md:p-8">
           {project.outcome[locale].map((item) => (
             <p key={item} className="text-lg font-medium leading-relaxed md:text-xl">
               {item}
@@ -72,14 +72,14 @@ export function ProjectSummaryPage({ locale, project }: { locale: Locale; projec
             <span className="sr-only">{project.title}</span>
             <GiantWord text={project.title.split(" · ")[0]} />
           </h1>
-          <p className="mt-4 inline-flex items-center gap-2 rounded-none border border-[var(--rs-border)] px-3.5 py-1 text-sm font-semibold text-rs-accent-fg">
+          <p className="mt-4 inline-flex items-center gap-2 rounded-none border border-(--rs-border) px-3.5 py-1 text-sm font-semibold text-rs-accent-fg">
             {KIND_LABELS[project.kind][locale]}
             {project.year ? <span className="font-medium text-rs-muted">· {project.year}</span> : null}
           </p>
           {project.status ? (
             <p className="mt-4 text-base font-medium text-rs-muted">{project.status[locale]}</p>
           ) : null}
-          <p className="mt-5 max-w-[var(--rs-reading)] text-lg leading-relaxed text-rs-muted">
+          <p className="mt-5 max-w-(--rs-reading) text-lg leading-relaxed text-rs-muted">
             {project.summary[locale]}
           </p>
           <p className="mt-3 text-sm font-medium text-rs-muted">{project.role[locale]}</p>
@@ -114,7 +114,7 @@ export function ProjectSummaryPage({ locale, project }: { locale: Locale; projec
               {fr ? "Tous les projets" : "All projects"}
             </Link>
           </div>
-          <div className="mt-12 overflow-hidden rounded-[var(--rs-radius-md)] border border-[var(--rs-border)]">
+          <div className="mt-12 overflow-hidden rounded-(--rs-radius-md) border border-(--rs-border)">
             <Image
               src={project.heroImage}
               alt={projectImageAlt(project, locale)}
@@ -154,7 +154,7 @@ export function ProjectSummaryPage({ locale, project }: { locale: Locale; projec
                 highlight={project.challengeHighlight?.[locale]}
               >
                 {challenge.slice(1).map((paragraph) => (
-                  <p key={paragraph} className="mt-5 max-w-[var(--rs-reading)] text-lg leading-relaxed text-rs-muted">
+                  <p key={paragraph} className="mt-5 max-w-(--rs-reading) text-lg leading-relaxed text-rs-muted">
                     {paragraph}
                   </p>
                 ))}

@@ -101,12 +101,12 @@ export function ProblemSolution({ locale = "fr" }: { locale?: Locale }) {
         </Reveal>
 
         <div className="relative mt-8">
-          <div className="pointer-events-none absolute left-1/2 top-1/2 hidden h-px w-[72%] -translate-x-1/2 -translate-y-1/2 bg-gradient-to-r from-transparent via-[#2a231d]/18 to-transparent lg:block" />
+          <div className="pointer-events-none absolute left-1/2 top-1/2 hidden h-px w-[72%] -translate-x-1/2 -translate-y-1/2 bg-linear-to-r from-transparent via-[#2a231d]/18 to-transparent lg:block" />
 
           <div className="grid items-center gap-4 lg:grid-cols-[1fr_0.58fr_1fr]">
             <Reveal>
               <motion.div whileHover={{ y: -6 }} transition={{ duration: 0.3, ease: [0.22, 1, 0.36, 1] }}>
-                <Card className="relative overflow-hidden rounded-none border-[#17120f] ![background:#17120f] text-[#fffaf0] shadow-[8px_8px_0_rgba(217,79,43,0.26)]">
+                <Card className="relative overflow-hidden rounded-none border-[#17120f] [background:#17120f]! text-[#fffaf0] shadow-[8px_8px_0_rgba(217,79,43,0.26)]">
                   <CardHeader className="pb-3">
                     <CardTitle className="flex items-center gap-2 text-lg text-[#fffaf0] md:text-xl">
                       <AlertTriangle size={17} className="text-[#f0a064]" />

@@ -70,9 +70,9 @@ export function CookieConsent() {
       ref={barRef}
       data-consent-bar
       aria-label={isEnglish ? "Cookie consent" : "Consentement aux cookies"}
-      className="rs-theme-dark fixed inset-x-0 bottom-0 z-[80] border-t border-[var(--rs-border)] bg-rs-bg text-rs-fg"
+      className="rs-theme-dark fixed inset-x-0 bottom-0 z-80 border-t border-(--rs-border) bg-rs-bg text-rs-fg"
     >
-      <div className="mx-auto flex max-w-[var(--rs-container)] flex-col gap-2.5 px-5 py-3 sm:flex-row sm:items-center sm:justify-between sm:gap-8 sm:py-3.5 md:px-8">
+      <div className="mx-auto flex max-w-(--rs-container) flex-col gap-2.5 px-5 py-3 sm:flex-row sm:items-center sm:justify-between sm:gap-8 sm:py-3.5 md:px-8">
       <p className="text-sm leading-snug text-rs-muted">
         <span className="font-semibold text-rs-fg">Cookies.</span>{" "}
         {isEnglish
@@ -88,7 +88,7 @@ export function CookieConsent() {
       <div className="flex shrink-0 gap-2">
         <button
           type="button"
-          className="min-h-11 flex-1 bg-rs-fg px-5 text-sm font-bold text-[var(--rs-dark)] transition-colors duration-150 hover:bg-rs-accent active:bg-rs-accent-hover active:text-[var(--rs-dark-fg)] active:duration-0 hover:text-[var(--rs-dark-fg)] sm:flex-none"
+          className="min-h-11 flex-1 bg-rs-fg px-5 text-sm font-bold text-(--rs-dark) transition-colors duration-150 hover:bg-rs-accent active:bg-rs-accent-hover active:text-(--rs-dark-fg) active:duration-0 hover:text-(--rs-dark-fg) sm:flex-none"
           onClick={() => {
             saveConsent("accepted");
             window.dispatchEvent(new Event("rs-consent-granted"));
@@ -101,7 +101,7 @@ export function CookieConsent() {
         </button>
         <button
           type="button"
-          className="min-h-11 flex-1 border border-rs-fg px-5 text-sm font-bold text-rs-fg transition-colors duration-150 hover:bg-rs-fg hover:text-[var(--rs-dark)] sm:flex-none"
+          className="min-h-11 flex-1 border border-rs-fg px-5 text-sm font-bold text-rs-fg transition-colors duration-150 hover:bg-rs-fg hover:text-(--rs-dark) sm:flex-none"
           onClick={() => {
             saveConsent("declined");
             window.dispatchEvent(new Event("rs-consent-revoked"));

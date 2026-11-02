@@ -88,7 +88,7 @@ export function LocalSeoLanding({ city, citySlug, sector, sectorSlug, content }:
             <span className="text-rs-fg">{city}</span>
           </nav>
 
-          <p className="mt-4 inline-flex rounded-none border border-[var(--rs-border)] bg-rs-surface px-3 py-1 text-xs font-semibold uppercase tracking-[0.12em] text-rs-accent-fg">
+          <p className="mt-4 inline-flex rounded-none border border-(--rs-border) bg-rs-surface px-3 py-1 text-xs font-semibold uppercase tracking-[0.12em] text-rs-accent-fg">
             {city} · {sector}
           </p>
           <h1 className="mt-5 text-3xl font-semibold leading-tight tracking-tight text-rs-fg md:text-4xl">
@@ -99,7 +99,7 @@ export function LocalSeoLanding({ city, citySlug, sector, sectorSlug, content }:
             <p className="mt-4 max-w-3xl text-sm leading-7 text-rs-muted">{content.districtsLine}</p>
           ) : null}
 
-          <div className="mt-8 grid gap-4 rounded-[var(--rs-radius-md)] border border-[var(--rs-border)] bg-rs-surface p-5 md:grid-cols-3">
+          <div className="mt-8 grid gap-4 rounded-(--rs-radius-md) border border-(--rs-border) bg-rs-surface p-5 md:grid-cols-3">
             <div>
               <p className="text-[11px] font-semibold uppercase tracking-[0.12em] text-rs-muted">Objectif</p>
               <p className="mt-2 text-sm font-semibold text-rs-fg">Plus de demandes locales qualifiées</p>
@@ -115,7 +115,7 @@ export function LocalSeoLanding({ city, citySlug, sector, sectorSlug, content }:
           </div>
 
           <div className="mt-8 grid gap-4 md:grid-cols-[1.08fr_0.92fr]">
-            <section className="rounded-[var(--rs-radius-md)] border border-[var(--rs-border)] bg-rs-surface p-5">
+            <section className="rounded-(--rs-radius-md) border border-(--rs-border) bg-rs-surface p-5">
               <h2 className="text-[11px] font-semibold uppercase tracking-[0.12em] text-rs-accent-fg">
                 Contexte local à {city}
               </h2>
@@ -123,7 +123,7 @@ export function LocalSeoLanding({ city, citySlug, sector, sectorSlug, content }:
               <p className="mt-4 text-sm font-semibold leading-7 text-rs-fg">{content.sectorIntent}</p>
             </section>
 
-            <section className="rs-theme-dark rounded-[var(--rs-radius-md)] border border-[var(--rs-border)] bg-rs-bg p-5 text-rs-fg">
+            <section className="rs-theme-dark rounded-(--rs-radius-md) border border-(--rs-border) bg-rs-bg p-5 text-rs-fg">
               <h2 className="text-[11px] font-semibold uppercase tracking-[0.12em] text-rs-accent-fg">
                 Points à corriger
               </h2>
@@ -137,13 +137,13 @@ export function LocalSeoLanding({ city, citySlug, sector, sectorSlug, content }:
             </section>
           </div>
 
-          <section className="mt-8 rounded-[var(--rs-radius-md)] border border-[var(--rs-border)] bg-rs-surface p-5">
+          <section className="mt-8 rounded-(--rs-radius-md) border border-(--rs-border) bg-rs-surface p-5">
             <h2 className="text-[11px] font-semibold uppercase tracking-[0.12em] text-rs-muted">
               Checklist de page locale
             </h2>
             <div className="mt-4 grid gap-3 md:grid-cols-4">
               {content.checklist.map((item, index) => (
-                <div key={item} className="rounded-[var(--rs-radius-sm)] border border-[var(--rs-border)] bg-rs-subtle px-3 py-3">
+                <div key={item} className="rounded-(--rs-radius-sm) border border-(--rs-border) bg-rs-subtle px-3 py-3">
                   <p className="text-[10px] font-semibold uppercase tracking-[0.14em] text-rs-accent-fg">
                     {String(index + 1).padStart(2, "0")}
                   </p>
@@ -154,13 +154,13 @@ export function LocalSeoLanding({ city, citySlug, sector, sectorSlug, content }:
           </section>
 
           {content.faq.length > 0 ? (
-            <section className="mt-8 rounded-[var(--rs-radius-md)] border border-[var(--rs-border)] bg-rs-surface p-5">
+            <section className="mt-8 rounded-(--rs-radius-md) border border-(--rs-border) bg-rs-surface p-5">
               <h2 className="text-2xl font-semibold tracking-tight text-rs-fg">
                 Questions fréquentes : {sector.toLowerCase()} à {city}
               </h2>
               <div className="mt-4 space-y-3">
                 {content.faq.map((entry) => (
-                  <article key={entry.question} className="rounded-[var(--rs-radius-sm)] border border-[var(--rs-border)] bg-rs-subtle p-4">
+                  <article key={entry.question} className="rounded-(--rs-radius-sm) border border-(--rs-border) bg-rs-subtle p-4">
                     <h3 className="text-sm font-semibold text-rs-fg">{entry.question}</h3>
                     <p className="mt-2 text-sm leading-6 text-rs-muted">{entry.answer}</p>
                   </article>
@@ -172,7 +172,7 @@ export function LocalSeoLanding({ city, citySlug, sector, sectorSlug, content }:
           <div className="mt-8 flex flex-wrap gap-3">
             <a
               href={startProjectPath("fr")}
-              className="inline-flex items-center rounded-none bg-rs-fg px-6 py-3 text-sm font-semibold text-rs-bg transition-colors duration-150 hover:bg-rs-accent active:bg-rs-accent-hover active:text-[var(--rs-dark-fg)] active:duration-0"
+              className="inline-flex items-center rounded-none bg-rs-fg px-6 py-3 text-sm font-semibold text-rs-bg transition-colors duration-150 hover:bg-rs-accent active:bg-rs-accent-hover active:text-(--rs-dark-fg) active:duration-0"
             >
               Recevoir un diagnostic adapté à mon activité
             </a>
@@ -180,21 +180,21 @@ export function LocalSeoLanding({ city, citySlug, sector, sectorSlug, content }:
               href={BRAND.whatsappUrl}
               target="_blank"
               rel="noreferrer"
-              className="inline-flex items-center rounded-none border border-[var(--rs-border-strong)] px-6 py-3 text-sm font-medium text-rs-fg transition-colors duration-150 hover:border-rs-accent hover:text-rs-accent-fg"
+              className="inline-flex items-center rounded-none border border-(--rs-border-strong) px-6 py-3 text-sm font-medium text-rs-fg transition-colors duration-150 hover:border-rs-accent hover:text-rs-accent-fg"
             >
               Parler sur WhatsApp
             </a>
           </div>
           <p className="mt-4 max-w-2xl text-sm font-medium text-rs-muted">{content.ctaIntro}</p>
 
-          <section className="mt-10 rounded-[var(--rs-radius-md)] border border-[var(--rs-border)] bg-rs-surface p-4">
+          <section className="mt-10 rounded-(--rs-radius-md) border border-(--rs-border) bg-rs-surface p-4">
             <h2 className="text-[11px] font-semibold uppercase tracking-[0.12em] text-rs-muted">Services liés</h2>
             <div className="mt-3 grid gap-3 md:grid-cols-3">
               {relatedServices.map((link) => (
                 <a
                   key={link.href}
                   href={link.href}
-                  className="rounded-[var(--rs-radius-sm)] border border-[var(--rs-border)] bg-rs-subtle px-3 py-3 text-sm font-semibold text-rs-fg transition-colors duration-150 hover:text-rs-accent-fg"
+                  className="rounded-(--rs-radius-sm) border border-(--rs-border) bg-rs-subtle px-3 py-3 text-sm font-semibold text-rs-fg transition-colors duration-150 hover:text-rs-accent-fg"
                 >
                   {link.label}
                 </a>
@@ -202,7 +202,7 @@ export function LocalSeoLanding({ city, citySlug, sector, sectorSlug, content }:
             </div>
           </section>
 
-          <section className="mt-6 rounded-[var(--rs-radius-md)] border border-[var(--rs-border)] bg-rs-surface p-4">
+          <section className="mt-6 rounded-(--rs-radius-md) border border-(--rs-border) bg-rs-surface p-4">
             <h2 className="text-[11px] font-semibold uppercase tracking-[0.12em] text-rs-muted">
               Site {sector.toLowerCase()} dans d&apos;autres villes
             </h2>
@@ -211,7 +211,7 @@ export function LocalSeoLanding({ city, citySlug, sector, sectorSlug, content }:
                 <a
                   key={item.slug}
                   href={`/site/${sectorSlug}/${item.slug}`}
-                  className="rounded-none border border-[var(--rs-border)] bg-rs-subtle px-3 py-1.5 text-xs font-semibold text-rs-fg transition-colors duration-150 hover:text-rs-accent-fg"
+                  className="rounded-none border border-(--rs-border) bg-rs-subtle px-3 py-1.5 text-xs font-semibold text-rs-fg transition-colors duration-150 hover:text-rs-accent-fg"
                 >
                   {item.label}
                 </a>
@@ -225,7 +225,7 @@ export function LocalSeoLanding({ city, citySlug, sector, sectorSlug, content }:
                 <a
                   key={item.slug}
                   href={`/site/${item.slug}/${citySlug}`}
-                  className="rounded-none border border-[var(--rs-border)] bg-rs-subtle px-3 py-1.5 text-xs font-semibold text-rs-fg transition-colors duration-150 hover:text-rs-accent-fg"
+                  className="rounded-none border border-(--rs-border) bg-rs-subtle px-3 py-1.5 text-xs font-semibold text-rs-fg transition-colors duration-150 hover:text-rs-accent-fg"
                 >
                   {item.label}
                 </a>

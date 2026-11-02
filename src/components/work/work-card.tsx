@@ -60,7 +60,7 @@ export function WorkCard({
           alt={projectImageAlt(p, locale)}
           fill
           sizes="(min-width: 1024px) 55vw, 100vw"
-          className="object-cover object-left-top"
+          className="object-cover object-top-left"
         />
       </span>
       <span data-project-copy className="flex flex-wrap items-baseline justify-between gap-3 pt-4">
@@ -69,7 +69,7 @@ export function WorkCard({
           <ArrowUpRight aria-hidden className="h-5 w-5 opacity-40 transition-opacity group-hover:opacity-100" />
         </span>
         <span className="flex flex-wrap items-center gap-2">
-          <span className="border border-[var(--rs-border)] px-2.5 py-1 text-[13px] font-medium">{label ?? p.categories[locale][0]}</span>
+          <span className="border border-(--rs-border) px-2.5 py-1 text-[13px] font-medium">{label ?? p.categories[locale][0]}</span>
           <StatusDot project={p} locale={locale} long />
         </span>
       </span>
@@ -103,7 +103,7 @@ export function FeatureProject({
     <Link
       href={workPath(locale, p.slug)}
       {...(featured ? { [featuredAttr]: p.key } : {})}
-      className="group relative block h-[26rem] overflow-hidden bg-rs-subtle md:h-[40rem]"
+      className="group relative block h-104 overflow-hidden bg-rs-subtle md:h-160"
     >
       <span data-project-media className="absolute inset-0">
         <Image
@@ -112,7 +112,7 @@ export function FeatureProject({
           fill
           priority={priority}
           sizes="100vw"
-          className="object-cover object-left-top"
+          className="object-cover object-top-left"
         />
       </span>
       {p.heroCompanion ? (

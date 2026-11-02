@@ -108,11 +108,11 @@ export function ContactForm({
   }
 
   const inputClass =
-    "mt-1.5 w-full rounded-[var(--rs-radius-sm)] border border-[var(--rs-border)] bg-rs-surface px-4 py-3 text-base text-rs-fg outline-none transition-colors duration-150 focus:border-rs-accent";
+    "mt-1.5 w-full rounded-(--rs-radius-sm) border border-(--rs-border) bg-rs-surface px-4 py-3 text-base text-rs-fg outline-hidden transition-colors duration-150 focus:border-rs-accent";
 
   return (
     <form onSubmit={handleSubmit} noValidate>
-      <div aria-hidden="true" className="absolute -left-[9999px] top-auto h-px w-px overflow-hidden">
+      <div aria-hidden="true" className="absolute left-[-9999px] top-auto h-px w-px overflow-hidden">
         <label htmlFor="contact-company-website">Company website</label>
         <input
           id="contact-company-website"
@@ -196,7 +196,7 @@ export function ContactForm({
         <button
           type="submit"
           disabled={status === "sending"}
-          className="inline-flex items-center rounded-none bg-rs-fg px-7 py-3.5 text-base font-semibold text-rs-bg transition-colors duration-150 hover:bg-rs-accent active:bg-rs-accent-hover active:text-[var(--rs-dark-fg)] active:duration-0 disabled:pointer-events-none disabled:opacity-60"
+          className="inline-flex items-center rounded-none bg-rs-fg px-7 py-3.5 text-base font-semibold text-rs-bg transition-colors duration-150 hover:bg-rs-accent active:bg-rs-accent-hover active:text-(--rs-dark-fg) active:duration-0 disabled:pointer-events-none disabled:opacity-60"
         >
           {fr ? "Envoyer" : "Send"}
         </button>

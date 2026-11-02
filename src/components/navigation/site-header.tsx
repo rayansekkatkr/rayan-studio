@@ -80,21 +80,21 @@ export function SiteHeader({ locale, topTheme = "light", quoteHref }: SiteHeader
           // Only colours transition: height, padding and blur snap instead of animating during scroll.
           "relative transition-colors duration-150",
           floating
-            ? "mx-auto max-w-[min(var(--rs-container),76rem)] border border-[var(--rs-border)] bg-[var(--rs-header-surface)] shadow-[0_16px_40px_-24px_rgba(11,11,14,0.45)] backdrop-blur-md"
+            ? "mx-auto max-w-[min(var(--rs-container),76rem)] border border-(--rs-border) bg-(--rs-header-surface) shadow-[0_16px_40px_-24px_rgba(11,11,14,0.45)] backdrop-blur-md"
             : solid
-              ? "border-b border-[var(--rs-border)] bg-[var(--rs-header-surface)] backdrop-blur"
+              ? "border-b border-(--rs-border) bg-(--rs-header-surface) backdrop-blur-sm"
               : "bg-transparent",
         )}
       >
         <div
           className={cn(
-            "mx-auto flex w-full max-w-[var(--rs-container)] items-center justify-between",
+            "mx-auto flex w-full max-w-(--rs-container) items-center justify-between",
             floating ? "h-14 pl-6 pr-2.5" : "h-16 px-5 md:px-8",
           )}
         >
           <Link
             href={`/${locale}`}
-            className={cn("text-lg font-extrabold tracking-[-0.02em]", inverse ? "text-[var(--rs-dark-fg)]" : "text-rs-fg")}
+            className={cn("text-lg font-extrabold tracking-[-0.02em]", inverse ? "text-(--rs-dark-fg)" : "text-rs-fg")}
           >
             Rayan Studio
           </Link>
@@ -111,10 +111,10 @@ export function SiteHeader({ locale, topTheme = "light", quoteHref }: SiteHeader
                     "px-4 py-2 text-sm font-medium transition-colors duration-150",
                     current
                       ? inverse
-                        ? "text-[var(--rs-dark-accent-fg)]"
+                        ? "text-(--rs-dark-accent-fg)"
                         : "text-rs-accent-fg"
                       : inverse
-                        ? "text-[var(--rs-dark-fg)] hover:text-[var(--rs-dark-muted)]"
+                        ? "text-(--rs-dark-fg) hover:text-(--rs-dark-muted)"
                         : "text-rs-fg hover:text-rs-accent-fg",
                   )}
                 >
@@ -132,11 +132,11 @@ export function SiteHeader({ locale, topTheme = "light", quoteHref }: SiteHeader
               className={cn(
                 "inline-flex items-center gap-2 px-5 py-2.5 text-sm font-semibold transition-colors duration-150",
                 inverse
-                  ? "bg-[var(--rs-dark-fg)] text-[var(--rs-dark)] hover:bg-rs-accent active:bg-rs-accent-hover active:text-[var(--rs-dark-fg)] active:duration-0 hover:text-[var(--rs-dark-fg)]"
-                  : "bg-rs-fg text-rs-bg hover:bg-rs-accent active:bg-rs-accent-hover active:text-[var(--rs-dark-fg)] active:duration-0",
+                  ? "bg-(--rs-dark-fg) text-(--rs-dark) hover:bg-rs-accent active:bg-rs-accent-hover active:text-(--rs-dark-fg) active:duration-0 hover:text-(--rs-dark-fg)"
+                  : "bg-rs-fg text-rs-bg hover:bg-rs-accent active:bg-rs-accent-hover active:text-(--rs-dark-fg) active:duration-0",
               )}
             >
-              <span aria-hidden className="h-1.5 w-1.5 rounded-full bg-[var(--rs-live)]" />
+              <span aria-hidden className="h-1.5 w-1.5 rounded-full bg-(--rs-live)" />
               {fr ? "Devis gratuit" : "Free quote"}
             </TrackedLink>
           </div>
@@ -148,7 +148,7 @@ export function SiteHeader({ locale, topTheme = "light", quoteHref }: SiteHeader
             aria-controls={MOBILE_MENU_ID}
             aria-label={mobileOpen ? (fr ? "Fermer le menu" : "Close menu") : fr ? "Ouvrir le menu" : "Open menu"}
             onClick={() => setMobileOpen((open) => !open)}
-            className={cn("inline-flex h-10 w-10 items-center justify-center lg:hidden", inverse ? "text-[var(--rs-dark-fg)]" : "text-rs-fg")}
+            className={cn("inline-flex h-10 w-10 items-center justify-center lg:hidden", inverse ? "text-(--rs-dark-fg)" : "text-rs-fg")}
           >
             {mobileOpen ? <X aria-hidden className="h-5 w-5" /> : <Menu aria-hidden className="h-5 w-5" />}
           </button>

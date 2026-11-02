@@ -75,8 +75,8 @@ const Logos3 = ({
               ))}
             </CarouselContent>
           </Carousel>
-          <div className="absolute inset-y-0 left-0 w-14 bg-gradient-to-r from-[#eef4ff] to-transparent" />
-          <div className="absolute inset-y-0 right-0 w-14 bg-gradient-to-l from-[#eef4ff] to-transparent" />
+          <div className="absolute inset-y-0 left-0 w-14 bg-linear-to-r from-[#eef4ff] to-transparent" />
+          <div className="absolute inset-y-0 right-0 w-14 bg-linear-to-l from-[#eef4ff] to-transparent" />
         </div>
       </div>
     </section>

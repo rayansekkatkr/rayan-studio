@@ -43,7 +43,7 @@ export function PageHero({ eyebrow, title, lead, word, image, imagePosition, chi
             </h1>
             <div>
               {lead ? (
-                <div className={cn("max-w-[var(--rs-reading)] text-lg leading-relaxed text-rs-muted", !word && "mt-6")}>{lead}</div>
+                <div className={cn("max-w-(--rs-reading) text-lg leading-relaxed text-rs-muted", !word && "mt-6")}>{lead}</div>
               ) : null}
               {children}
             </div>

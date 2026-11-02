@@ -15,7 +15,7 @@ export function TechStack({ locale }: { locale: Locale }) {
         {TECH_STACK.map((group) => (
           <div
             key={group.label.en}
-            className="rounded-[var(--rs-radius-md)] border border-[var(--rs-border)] bg-rs-surface p-5"
+            className="rounded-(--rs-radius-md) border border-(--rs-border) bg-rs-surface p-5"
           >
             <p className="text-sm font-semibold text-rs-fg">{group.label[locale]}</p>
             <TechChips items={group.items} inset className="mt-4" />

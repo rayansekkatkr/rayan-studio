@@ -22,22 +22,22 @@ export function OffersPage({ locale }: { locale: Locale }) {
         title={content.title}
         lead={<p>{content.globalStatement}</p>}
       >
-        <p className="mt-6 inline-flex items-center gap-2 rounded-none border border-[var(--rs-border)] bg-rs-surface px-4 py-2 text-sm font-semibold">
+        <p className="mt-6 inline-flex items-center gap-2 rounded-none border border-(--rs-border) bg-rs-surface px-4 py-2 text-sm font-semibold">
           <Clock aria-hidden className="h-4 w-4 text-rs-accent-fg" />
           {content.responsePromise}
         </p>
       </PageHero>
 
-      <div className="py-[var(--rs-section-space)]">
+      <div className="py-(--rs-section-space)">
         <Container>
           <div className="grid gap-6 md:grid-cols-2">
             {content.offers.map((offer, index) => (
               <div
                 key={offer.title}
                 data-offer={offer.title}
-                className="group flex flex-col overflow-hidden rounded-[var(--rs-radius-md)] border border-[var(--rs-border)] bg-rs-surface transition-colors duration-150 hover:border-[var(--rs-border-strong)]"
+                className="group flex flex-col overflow-hidden rounded-(--rs-radius-md) border border-(--rs-border) bg-rs-surface transition-colors duration-150 hover:border-(--rs-border-strong)"
               >
-                <div className="relative aspect-[16/7] overflow-hidden bg-[var(--rs-dark)]">
+                <div className="relative aspect-16/7 overflow-hidden bg-(--rs-dark)">
                   <Image
                     src={OFFER_PHOTOS[index % OFFER_PHOTOS.length]}
                     alt=""
@@ -47,7 +47,7 @@ export function OffersPage({ locale }: { locale: Locale }) {
                   />
                   <div
                     aria-hidden
-                    className="absolute inset-0 bg-gradient-to-t from-[var(--rs-dark)] via-[rgba(9,9,12,0.45)] to-transparent"
+                    className="absolute inset-0 bg-linear-to-t from-(--rs-dark) via-[rgba(9,9,12,0.45)] to-transparent"
                   />
                   <div className="absolute inset-x-0 bottom-0 p-6 md:p-7">
                     <p className="text-xs font-semibold tracking-[0.18em] text-white/70">

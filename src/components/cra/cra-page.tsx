@@ -32,12 +32,12 @@ export function CraPage({ locale }: { locale: Locale }) {
             <h1 className="mt-4 max-w-3xl text-[2rem] font-semibold leading-[1.06] tracking-tight md:text-5xl">
               {hero.title}
             </h1>
-            <p className="mt-6 max-w-[var(--rs-reading)] text-lg leading-relaxed text-rs-muted">{hero.lead}</p>
+            <p className="mt-6 max-w-(--rs-reading) text-lg leading-relaxed text-rs-muted">{hero.lead}</p>
             <div className="mt-10 flex flex-wrap items-center gap-4">
               <TrackedLink
                 href={FORM_ANCHOR}
                 event={{ ctaId: "cra_hero_diagnostic", source: "cra_hero", destination: FORM_ANCHOR, locale }}
-                className="inline-flex items-center gap-2 rounded-none bg-rs-fg px-7 py-3.5 text-base font-semibold text-[var(--rs-dark)] transition-colors duration-150 hover:bg-rs-accent active:bg-rs-accent-hover active:text-[var(--rs-dark-fg)] active:duration-0 hover:text-rs-fg"
+                className="inline-flex items-center gap-2 rounded-none bg-rs-fg px-7 py-3.5 text-base font-semibold text-(--rs-dark) transition-colors duration-150 hover:bg-rs-accent active:bg-rs-accent-hover active:text-(--rs-dark-fg) active:duration-0 hover:text-rs-fg"
               >
                 {hero.primaryCta}
                 <ArrowRight aria-hidden className="h-4 w-4" />
@@ -45,27 +45,27 @@ export function CraPage({ locale }: { locale: Locale }) {
               <TrackedLink
                 href={checklistHref}
                 event={{ ctaId: "cra_hero_checklist", source: "cra_hero", destination: checklistHref, locale }}
-                className="inline-flex items-center rounded-none border border-[var(--rs-border-strong)] px-7 py-3.5 text-base font-medium text-rs-fg transition-colors duration-150 hover:border-rs-accent hover:text-rs-accent-fg"
+                className="inline-flex items-center rounded-none border border-(--rs-border-strong) px-7 py-3.5 text-base font-medium text-rs-fg transition-colors duration-150 hover:border-rs-accent hover:text-rs-accent-fg"
               >
                 {hero.secondaryCta}
               </TrackedLink>
             </div>
-            <p className="mt-8 max-w-[var(--rs-reading)] text-sm leading-relaxed text-rs-muted">{hero.note}</p>
+            <p className="mt-8 max-w-(--rs-reading) text-sm leading-relaxed text-rs-muted">{hero.note}</p>
           </Container>
         </section>
 
-        <section id="obligations" className="py-[var(--rs-section-space)]">
+        <section id="obligations" className="py-(--rs-section-space)">
           <Container>
             <Eyebrow>{reporting.eyebrow}</Eyebrow>
             <h2 className="mt-4 max-w-3xl text-[1.75rem] font-semibold tracking-tight md:text-3xl">
               {reporting.title}
             </h2>
-            <p className="mt-5 max-w-[var(--rs-reading)] text-lg leading-relaxed text-rs-muted">{reporting.lead}</p>
+            <p className="mt-5 max-w-(--rs-reading) text-lg leading-relaxed text-rs-muted">{reporting.lead}</p>
             <div className="mt-10">
               <table className="w-full border-collapse text-left text-sm md:text-base">
                 <caption className="sr-only">{ui.tableCaption}</caption>
                 <thead>
-                  <tr className="border-b border-[var(--rs-border-strong)] text-xs font-semibold uppercase tracking-[0.14em] text-rs-muted">
+                  <tr className="border-b border-(--rs-border-strong) text-xs font-semibold uppercase tracking-[0.14em] text-rs-muted">
                     <th scope="col" className="py-3 pr-3 md:pr-6">{ui.tableHeaders[0]}</th>
                     <th scope="col" className="py-3 pr-3 md:pr-6">{ui.tableHeaders[1]}</th>
                     <th scope="col" className="py-3">{ui.tableHeaders[2]}</th>
@@ -73,7 +73,7 @@ export function CraPage({ locale }: { locale: Locale }) {
                 </thead>
                 <tbody>
                   {reporting.steps.map((row) => (
-                    <tr key={row.step} className="border-b border-[var(--rs-border)] align-top">
+                    <tr key={row.step} className="border-b border-(--rs-border) align-top">
                       <th scope="row" className="py-4 pr-3 font-semibold md:pr-6">{row.step}</th>
                       <td className="py-4 pr-3 md:pr-6">{row.deadline}</td>
                       <td className="py-4 text-rs-muted">{row.content}</td>
@@ -82,10 +82,10 @@ export function CraPage({ locale }: { locale: Locale }) {
                 </tbody>
               </table>
             </div>
-            <p className="mt-5 max-w-[var(--rs-reading)] text-base leading-relaxed text-rs-muted">{reporting.incidentNote}</p>
+            <p className="mt-5 max-w-(--rs-reading) text-base leading-relaxed text-rs-muted">{reporting.incidentNote}</p>
             <ul className="mt-10 grid gap-6 md:grid-cols-3">
               {reporting.facts.map((fact) => (
-                <li key={fact.title} className="border-t border-[var(--rs-border)] pt-4 text-base leading-relaxed">
+                <li key={fact.title} className="border-t border-(--rs-border) pt-4 text-base leading-relaxed">
                   <strong className="font-semibold">{fact.title}</strong> <span className="text-rs-muted">{fact.body}</span>
                 </li>
               ))}
@@ -93,24 +93,24 @@ export function CraPage({ locale }: { locale: Locale }) {
           </Container>
         </section>
 
-        <section id="firmware" className="border-t border-[var(--rs-border)] py-[var(--rs-section-space)]">
+        <section id="firmware" className="border-t border-(--rs-border) py-(--rs-section-space)">
           <Container>
             <Eyebrow>{firmware.eyebrow}</Eyebrow>
             <h2 className="mt-4 max-w-3xl text-[1.75rem] font-semibold tracking-tight md:text-3xl">{firmware.title}</h2>
-            <p className="mt-5 max-w-[var(--rs-reading)] text-lg leading-relaxed text-rs-muted">{firmware.lead}</p>
+            <p className="mt-5 max-w-(--rs-reading) text-lg leading-relaxed text-rs-muted">{firmware.lead}</p>
             <ul className="mt-10 grid gap-8 md:grid-cols-2">
               {firmware.points.map((point) => (
-                <li key={point.title} className="border-t border-[var(--rs-border)] pt-4">
+                <li key={point.title} className="border-t border-(--rs-border) pt-4">
                   <p className="text-lg font-semibold">{point.title}</p>
                   <p className="mt-2 text-base leading-relaxed text-rs-muted">{point.body}</p>
                 </li>
               ))}
             </ul>
-            <p className="mt-10 max-w-[var(--rs-reading)] text-lg leading-relaxed">{firmware.conclusion}</p>
+            <p className="mt-10 max-w-(--rs-reading) text-lg leading-relaxed">{firmware.conclusion}</p>
           </Container>
         </section>
 
-        <section id="offres" className="border-t border-[var(--rs-border)] py-[var(--rs-section-space)]">
+        <section id="offres" className="border-t border-(--rs-border) py-(--rs-section-space)">
           <Container>
             <Eyebrow>{ui.offersEyebrow}</Eyebrow>
             <h2 className="mt-4 max-w-3xl text-[1.75rem] font-semibold tracking-tight md:text-3xl">{ui.offersTitle}</h2>
@@ -121,7 +121,7 @@ export function CraPage({ locale }: { locale: Locale }) {
                   <article
                     key={offer.id}
                     data-cra-offer={offer.id}
-                    className="rounded-[var(--rs-radius-md)] border border-[var(--rs-border)] bg-rs-surface p-6 md:p-8"
+                    className="rounded-(--rs-radius-md) border border-(--rs-border) bg-rs-surface p-6 md:p-8"
                   >
                     <h3 className="text-xl font-semibold tracking-tight">{offer.name}</h3>
                     <p className="mt-2 text-sm leading-relaxed text-rs-muted">{offer.terms}</p>
@@ -141,7 +141,7 @@ export function CraPage({ locale }: { locale: Locale }) {
             <h3 className="mt-16 text-xl font-semibold tracking-tight">{ui.notDoneTitle}</h3>
             <ul className="mt-6 grid gap-x-8 gap-y-5 md:grid-cols-2">
               {notDone.map((item) => (
-                <li key={item.title} className="border-t border-[var(--rs-border)] pt-4 text-base leading-relaxed">
+                <li key={item.title} className="border-t border-(--rs-border) pt-4 text-base leading-relaxed">
                   <strong className="font-semibold">{item.title}</strong> <span className="text-rs-muted">{item.body}</span>
                 </li>
               ))}
@@ -149,13 +149,13 @@ export function CraPage({ locale }: { locale: Locale }) {
           </Container>
         </section>
 
-        <section id="methode" className="border-t border-[var(--rs-border)] py-[var(--rs-section-space)]">
+        <section id="methode" className="border-t border-(--rs-border) py-(--rs-section-space)">
           <Container>
             <Eyebrow>{ui.methodEyebrow}</Eyebrow>
             <h2 className="mt-4 max-w-2xl text-[1.75rem] font-semibold tracking-tight md:text-3xl">{ui.methodTitle}</h2>
             <ol className="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
               {method.map((step, index) => (
-                <li key={step.title} className="border-t border-[var(--rs-border)] pt-4">
+                <li key={step.title} className="border-t border-(--rs-border) pt-4">
                   <p className="text-sm font-semibold text-rs-accent-fg">{`0${index + 1}`}</p>
                   <p className="mt-2 text-lg font-semibold">{step.title}</p>
                   <p className="mt-2 text-sm leading-relaxed text-rs-muted">{step.body}</p>
@@ -165,14 +165,14 @@ export function CraPage({ locale }: { locale: Locale }) {
           </Container>
         </section>
 
-        <section id="intervenant" className="border-t border-[var(--rs-border)] py-[var(--rs-section-space)]">
+        <section id="intervenant" className="border-t border-(--rs-border) py-(--rs-section-space)">
           <Container>
             <Eyebrow>{ui.aboutEyebrow}</Eyebrow>
             <h2 className="mt-4 text-[1.75rem] font-semibold tracking-tight md:text-3xl">{about.title}</h2>
-            <p className="mt-5 max-w-[var(--rs-reading)] text-lg leading-relaxed text-rs-muted">{about.lead}</p>
-            <ul className="mt-8 max-w-[var(--rs-reading)] space-y-4">
+            <p className="mt-5 max-w-(--rs-reading) text-lg leading-relaxed text-rs-muted">{about.lead}</p>
+            <ul className="mt-8 max-w-(--rs-reading) space-y-4">
               {about.items.map((item) => (
-                <li key={item.title} className="border-t border-[var(--rs-border)] pt-4 text-base leading-relaxed">
+                <li key={item.title} className="border-t border-(--rs-border) pt-4 text-base leading-relaxed">
                   <strong className="font-semibold">{item.title}</strong> <span className="text-rs-muted">{item.body}</span>
                 </li>
               ))}
@@ -180,11 +180,11 @@ export function CraPage({ locale }: { locale: Locale }) {
           </Container>
         </section>
 
-        <section id="faq" className="border-t border-[var(--rs-border)] py-[var(--rs-section-space)]">
+        <section id="faq" className="border-t border-(--rs-border) py-(--rs-section-space)">
           <Container>
             <Eyebrow>FAQ</Eyebrow>
             <h2 className="mt-4 text-[1.75rem] font-semibold tracking-tight md:text-3xl">{ui.faqTitle}</h2>
-            <div className="mt-8 max-w-3xl divide-y divide-[var(--rs-border)] border-y border-[var(--rs-border)]">
+            <div className="mt-8 max-w-3xl divide-y divide-(--rs-border) border-y border-(--rs-border)">
               {faq.map((item) => (
                 <details key={item.question} className="group py-5">
                   <summary className="cursor-pointer list-none text-lg font-semibold marker:hidden">
@@ -200,15 +200,15 @@ export function CraPage({ locale }: { locale: Locale }) {
           </Container>
         </section>
 
-        <section id="diagnostic" className="scroll-mt-6 pb-[var(--rs-section-space)]">
+        <section id="diagnostic" className="scroll-mt-6 pb-(--rs-section-space)">
           <Container>
-            <div className="rs-theme-dark relative isolate grid gap-12 overflow-hidden rounded-[var(--rs-radius-lg)] bg-rs-bg p-6 text-rs-fg md:p-12 lg:grid-cols-2">
+            <div className="rs-theme-dark relative isolate grid gap-12 overflow-hidden rounded-(--rs-radius-lg) bg-rs-bg p-6 text-rs-fg md:p-12 lg:grid-cols-2">
               <div aria-hidden className="hero-glow absolute inset-0 -z-10" />
               <div>
                 <Eyebrow>{ui.diagnosticEyebrow}</Eyebrow>
                 <h2 className="mt-4 max-w-xl text-[1.75rem] font-semibold tracking-tight md:text-3xl">{finalCta.title}</h2>
                 <p className="mt-5 max-w-xl text-lg leading-relaxed text-rs-muted">{finalCta.body}</p>
-                <div className="mt-10 max-w-xl rounded-[var(--rs-radius-md)] border border-[var(--rs-border)] p-6">
+                <div className="mt-10 max-w-xl rounded-(--rs-radius-md) border border-(--rs-border) p-6">
                   <p className="text-base font-semibold">{content.checklist.title}</p>
                   <p className="mt-2 text-sm leading-relaxed text-rs-muted">{content.checklist.body}</p>
                   <TrackedLink
@@ -237,8 +237,8 @@ function CraHeader({ locale, content }: ChromeProps) {
   const { ui } = content;
   const other: Locale = locale === "fr" ? "en" : "fr";
   return (
-    <header className="rs-theme-dark border-b border-[var(--rs-border)] bg-rs-bg text-rs-fg">
-      <div className="mx-auto flex h-16 w-full max-w-[var(--rs-container)] items-center justify-between gap-6 px-5 md:px-8">
+    <header className="rs-theme-dark border-b border-(--rs-border) bg-rs-bg text-rs-fg">
+      <div className="mx-auto flex h-16 w-full max-w-(--rs-container) items-center justify-between gap-6 px-5 md:px-8">
         <a href="#hero" className="whitespace-nowrap text-sm font-bold uppercase tracking-[0.22em] text-rs-fg">
           {BRAND.name}
         </a>
@@ -267,7 +267,7 @@ function CraHeader({ locale, content }: ChromeProps) {
           <TrackedLink
             href={FORM_ANCHOR}
             event={{ ctaId: "cra_header_diagnostic", source: "cra_header", destination: FORM_ANCHOR, locale }}
-            className="hidden items-center whitespace-nowrap rounded-none bg-rs-fg px-5 py-2.5 text-sm font-semibold text-[var(--rs-dark)] transition-colors duration-150 hover:bg-rs-accent active:bg-rs-accent-hover active:text-[var(--rs-dark-fg)] active:duration-0 hover:text-rs-fg sm:inline-flex"
+            className="hidden items-center whitespace-nowrap rounded-none bg-rs-fg px-5 py-2.5 text-sm font-semibold text-(--rs-dark) transition-colors duration-150 hover:bg-rs-accent active:bg-rs-accent-hover active:text-(--rs-dark-fg) active:duration-0 hover:text-rs-fg sm:inline-flex"
           >
             {ui.headerCta}
           </TrackedLink>
@@ -287,8 +287,8 @@ function CraFooter({ locale, content }: ChromeProps) {
   ];
 
   return (
-    <footer className="border-t border-[var(--rs-border)] bg-rs-bg">
-      <div className="mx-auto flex w-full max-w-[var(--rs-container)] flex-col gap-4 px-5 py-8 text-sm text-rs-muted md:flex-row md:items-center md:justify-between md:px-8">
+    <footer className="border-t border-(--rs-border) bg-rs-bg">
+      <div className="mx-auto flex w-full max-w-(--rs-container) flex-col gap-4 px-5 py-8 text-sm text-rs-muted md:flex-row md:items-center md:justify-between md:px-8">
         <p>{`© ${year} ${BRAND.name}`}</p>
         <ul className="flex flex-wrap items-center gap-x-5 gap-y-2">
           {links.map((link) => (

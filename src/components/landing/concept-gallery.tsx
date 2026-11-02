@@ -33,7 +33,7 @@ export function ConceptGallery({ locale }: { locale: Locale }) {
               "border px-4 py-2.5 text-left text-sm transition-colors duration-150",
               i === index
                 ? "border-rs-fg bg-rs-fg text-rs-bg"
-                : "border-[var(--rs-border)] hover:border-rs-fg active:bg-[var(--rs-border)]",
+                : "border-(--rs-border) hover:border-rs-fg active:bg-(--rs-border)",
             )}
           >
             <span className="block font-semibold">{item.name}</span>
@@ -44,7 +44,7 @@ export function ConceptGallery({ locale }: { locale: Locale }) {
         ))}
       </div>
 
-      <div className="relative mt-6 aspect-[8/5] select-none overflow-hidden border border-[var(--rs-border)] bg-[var(--rs-border)]">
+      <div className="relative mt-6 aspect-8/5 select-none overflow-hidden border border-(--rs-border) bg-(--rs-border)">
         <Image
           key={`${concept.slug}-before`}
           src={src("before")}
@@ -91,7 +91,7 @@ export function ConceptGallery({ locale }: { locale: Locale }) {
           aria-valuetext={fr ? `${100 - split} % de la maquette visible` : `${100 - split}% of the mockup visible`}
           className="peer absolute inset-0 h-full w-full cursor-ew-resize opacity-0"
         />
-        <span aria-hidden className="pointer-events-none absolute inset-0 hidden outline outline-2 -outline-offset-2 outline-[var(--rs-accent-fg)] peer-focus-visible:block" />
+        <span aria-hidden className="pointer-events-none absolute inset-0 hidden outline-solid outline-2 -outline-offset-2 outline-(--rs-accent-fg) peer-focus-visible:block" />
       </div>
       <p className="mt-3 max-w-[70ch] text-sm leading-relaxed text-rs-muted">
         {fr

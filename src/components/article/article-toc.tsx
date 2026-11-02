@@ -31,7 +31,7 @@ export function ArticleToc({ items, title }: { items: TocItem[]; title: string }
   return (
     <nav aria-label={title}>
       <p className="text-xs font-semibold uppercase tracking-[0.18em] text-rs-muted">{title}</p>
-      <ol className="mt-4 border-l-2 border-[var(--rs-border)]">
+      <ol className="mt-4 border-l-2 border-(--rs-border)">
         {items.map((item, index) => (
           <li key={item.id} className="-ml-0.5">
             <a

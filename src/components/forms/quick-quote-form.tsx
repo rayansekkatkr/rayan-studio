@@ -179,7 +179,7 @@ export function QuickQuoteForm({
   }
 
   const inputClass =
-    "mt-1.5 w-full rounded-[var(--rs-radius-sm)] border border-[var(--rs-border)] bg-rs-bg px-4 py-3 text-base text-rs-fg outline-none transition-colors duration-150 placeholder:text-rs-muted focus:border-rs-accent aria-[invalid=true]:border-red-700";
+    "mt-1.5 w-full rounded-(--rs-radius-sm) border border-(--rs-border) bg-rs-bg px-4 py-3 text-base text-rs-fg outline-hidden transition-colors duration-150 placeholder:text-rs-muted focus:border-rs-accent aria-invalid:border-red-700";
   const id = (field: string) => `quote-${source}-${field}`;
   const errorId = (field: Field) => `${id(field)}-error`;
   const fieldProps = (field: Field) => ({
@@ -216,7 +216,7 @@ export function QuickQuoteForm({
               : "I will reply within 24 business hours (French business days), at "}
           {/* A long address must wrap instead of widening the page (overflow-wrap: anywhere also
               shrinks the min-content width that grid columns size from). */}
-          <span className="font-medium text-rs-fg [overflow-wrap:anywhere]">{sentTo}</span>.
+          <span className="font-medium text-rs-fg wrap-anywhere">{sentTo}</span>.
         </p>
         <button
           type="button"
@@ -234,7 +234,7 @@ export function QuickQuoteForm({
 
   return (
     <form onSubmit={handleSubmit} noValidate data-quote-form={source}>
-      <div aria-hidden="true" className="absolute -left-[9999px] top-auto h-px w-px overflow-hidden">
+      <div aria-hidden="true" className="absolute left-[-9999px] top-auto h-px w-px overflow-hidden">
         <label htmlFor={id("company-website")}>Company website</label>
         <input
           id={id("company-website")}
@@ -254,10 +254,10 @@ export function QuickQuoteForm({
             <label
               key={item.value}
               className={cn(
-                "cursor-pointer rounded-none border px-4 py-2 text-sm font-medium transition-colors duration-150 has-[:focus-visible]:[outline:2px_solid_var(--rs-accent-fg)] has-[:focus-visible]:[outline-offset:2px]",
+                "cursor-pointer rounded-none border px-4 py-2 text-sm font-medium transition-colors duration-150 has-focus-visible:outline-2 has-focus-visible:outline-offset-2 has-focus-visible:outline-(--rs-accent-fg)",
                 type === item.value
                   ? "border-rs-accent bg-[color-mix(in_srgb,var(--rs-accent)_10%,transparent)] text-rs-accent-fg"
-                  : "border-[var(--rs-border)] text-rs-fg hover:border-[var(--rs-border-strong)]",
+                  : "border-(--rs-border) text-rs-fg hover:border-(--rs-border-strong)",
               )}
             >
               <input
@@ -364,7 +364,7 @@ export function QuickQuoteForm({
         <button
           type="submit"
           disabled={status === "sending"}
-          className="inline-flex items-center rounded-none bg-rs-fg px-7 py-3.5 text-base font-semibold text-rs-bg transition-colors duration-150 hover:bg-rs-accent active:bg-rs-accent-hover active:text-[var(--rs-dark-fg)] active:duration-0 disabled:pointer-events-none disabled:opacity-60"
+          className="inline-flex items-center rounded-none bg-rs-fg px-7 py-3.5 text-base font-semibold text-rs-bg transition-colors duration-150 hover:bg-rs-accent active:bg-rs-accent-hover active:text-(--rs-dark-fg) active:duration-0 disabled:pointer-events-none disabled:opacity-60"
         >
           {type === "site"
             ? fr

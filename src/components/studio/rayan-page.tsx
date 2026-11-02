@@ -22,9 +22,9 @@ export function RayanPage({ locale }: { locale: Locale }) {
         </Container>
       </NightBand>
 
-      <div className="bg-rs-bg py-[var(--rs-section-space)]">
+      <div className="bg-rs-bg py-(--rs-section-space)">
         <Container>
-          <div className="max-w-[var(--rs-reading)] space-y-5">
+          <div className="max-w-(--rs-reading) space-y-5">
             {content.overview.map((paragraph) => (
               <p key={paragraph} className="text-lg leading-relaxed text-rs-fg">
                 {paragraph}
@@ -39,7 +39,7 @@ export function RayanPage({ locale }: { locale: Locale }) {
               </h2>
               <ul className="mt-4 space-y-3">
                 {content.focusAreas.map((area) => (
-                  <li key={area} className="border-t border-[var(--rs-border)] pt-3 text-base text-rs-fg">
+                  <li key={area} className="border-t border-(--rs-border) pt-3 text-base text-rs-fg">
                     {area}
                   </li>
                 ))}
@@ -51,7 +51,7 @@ export function RayanPage({ locale }: { locale: Locale }) {
               </h2>
               <ul className="mt-4 space-y-3">
                 {content.experience.map((item) => (
-                  <li key={item.title} className="border-t border-[var(--rs-border)] pt-3">
+                  <li key={item.title} className="border-t border-(--rs-border) pt-3">
                     <p className="text-base font-semibold text-rs-fg">{item.title}</p>
                     <p className="mt-1 text-sm text-rs-muted">{item.body}</p>
                   </li>

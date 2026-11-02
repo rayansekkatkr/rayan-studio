@@ -23,15 +23,15 @@ export function FaqPage({ locale }: { locale: Locale }) {
         </Container>
       </NightBand>
 
-      <div className="bg-rs-bg py-[var(--rs-section-space)]">
+      <div className="bg-rs-bg py-(--rs-section-space)">
         <Container>
-          <div className="max-w-3xl divide-y divide-[var(--rs-border)]">
+          <div className="max-w-3xl divide-y divide-(--rs-border)">
             {items.map((item) => (
               <details key={item.question} data-faq-item className="group py-6">
                 <summary className="cursor-pointer list-none text-xl font-semibold text-rs-fg">
                   {item.question}
                 </summary>
-                <p className="mt-3 max-w-[var(--rs-reading)] text-base leading-relaxed text-rs-muted">
+                <p className="mt-3 max-w-(--rs-reading) text-base leading-relaxed text-rs-muted">
                   {item.answer}
                 </p>
               </details>
@@ -39,7 +39,7 @@ export function FaqPage({ locale }: { locale: Locale }) {
           </div>
           <Link
             href={startProjectPath(locale)}
-            className="mt-12 inline-flex items-center gap-2 rounded-none bg-rs-fg px-7 py-3.5 text-base font-semibold text-rs-bg transition-colors duration-150 hover:bg-rs-accent active:bg-rs-accent-hover active:text-[var(--rs-dark-fg)] active:duration-0"
+            className="mt-12 inline-flex items-center gap-2 rounded-none bg-rs-fg px-7 py-3.5 text-base font-semibold text-rs-bg transition-colors duration-150 hover:bg-rs-accent active:bg-rs-accent-hover active:text-(--rs-dark-fg) active:duration-0"
           >
             {fr ? "Parler de votre projet" : "Start a project"}
             <ArrowRight aria-hidden className="h-4 w-4" />

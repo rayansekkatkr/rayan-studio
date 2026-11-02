@@ -59,10 +59,10 @@ type LanguageSwitchProps = {
 export function LanguageSwitch({ locale, className, tone = "default" }: LanguageSwitchProps) {
   const pathname = usePathname();
   const inverse = tone === "inverse";
-  const activeClass = inverse ? "text-[var(--rs-dark-fg)]" : "text-rs-fg";
-  const mutedClass = inverse ? "text-[var(--rs-dark-muted)]" : "text-rs-muted";
+  const activeClass = inverse ? "text-(--rs-dark-fg)" : "text-rs-fg";
+  const mutedClass = inverse ? "text-(--rs-dark-muted)" : "text-rs-muted";
   const idleClass = inverse
-    ? "text-[var(--rs-dark-muted)] transition-colors duration-150 hover:text-[var(--rs-dark-fg)]"
+    ? "text-(--rs-dark-muted) transition-colors duration-150 hover:text-(--rs-dark-fg)"
     : "text-rs-muted transition-colors duration-150 hover:text-rs-fg";
 
   return (

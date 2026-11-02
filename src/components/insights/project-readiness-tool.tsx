@@ -70,7 +70,7 @@ export function ProjectReadinessTool({ locale }: { locale: Locale }) {
                         "flex cursor-pointer items-center gap-2 rounded-none border px-5 py-2.5 text-base font-medium transition-colors duration-150",
                         checked
                           ? "border-rs-accent bg-rs-surface text-rs-fg"
-                          : "border-[var(--rs-border)] bg-rs-surface text-rs-muted hover:border-[var(--rs-border-strong)]",
+                          : "border-(--rs-border) bg-rs-surface text-rs-muted hover:border-(--rs-border-strong)",
                       )}
                     >
                       <input
@@ -84,7 +84,7 @@ export function ProjectReadinessTool({ locale }: { locale: Locale }) {
                             return next;
                           })
                         }
-                        className="h-4 w-4 accent-[var(--rs-accent)]"
+                        className="h-4 w-4 accent-(--rs-accent)"
                       />
                       {label}
                     </label>
@@ -100,14 +100,14 @@ export function ProjectReadinessTool({ locale }: { locale: Locale }) {
         type="button"
         disabled={!allAnswered}
         onClick={computeResult}
-        className="mt-8 inline-flex items-center rounded-none bg-rs-fg px-7 py-3.5 text-base font-semibold text-rs-bg transition-colors duration-150 hover:bg-rs-accent active:bg-rs-accent-hover active:text-[var(--rs-dark-fg)] active:duration-0 disabled:opacity-50"
+        className="mt-8 inline-flex items-center rounded-none bg-rs-fg px-7 py-3.5 text-base font-semibold text-rs-bg transition-colors duration-150 hover:bg-rs-accent active:bg-rs-accent-hover active:text-(--rs-dark-fg) active:duration-0 disabled:opacity-50"
       >
         {fr ? "Voir le résultat" : "See the result"}
       </button>
 
-      <div role="status" aria-live="polite" className="mt-6 min-h-[2rem]">
+      <div role="status" aria-live="polite" className="mt-6 min-h-8">
         {result ? (
-          <div className="rounded-[var(--rs-radius-md)] border border-[var(--rs-border-strong)] bg-rs-subtle p-6">
+          <div className="rounded-(--rs-radius-md) border border-(--rs-border-strong) bg-rs-subtle p-6">
             <p className="text-base leading-relaxed text-rs-fg">{result}</p>
             <Link
               href={startProjectPath(locale)}

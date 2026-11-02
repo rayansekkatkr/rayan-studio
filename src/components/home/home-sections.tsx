@@ -32,7 +32,7 @@ export function HomeStatementA({ locale }: { locale: Locale }) {
         className="statement-image -z-20 object-cover object-[70%_center]"
       />
       <div aria-hidden className="statement-shade pointer-events-none absolute inset-0 -z-10" />
-      <Container className="flex min-h-[36rem] flex-col justify-end pb-16 pt-16 md:min-h-[38rem] md:pb-20 md:pt-20">
+      <Container className="flex min-h-144 flex-col justify-end pb-16 pt-16 md:min-h-152 md:pb-20 md:pt-20">
         <h2 className="max-w-4xl font-serif text-[2.6rem] font-normal leading-[1.02] md:text-[4.75rem]">
           {fr ? "Vous dormez, " : "You sleep, "}
           <em className="text-rs-accent-fg">{fr ? "j'avance" : "I build"}</em>
@@ -41,7 +41,7 @@ export function HomeStatementA({ locale }: { locale: Locale }) {
 
         <Link
           href={workPath(locale)}
-          className="group mt-14 flex items-center justify-between gap-6 border-y border-[var(--rs-border-strong)] py-7 transition-colors duration-200 hover:border-rs-fg hover:bg-rs-fg hover:text-rs-bg focus-visible:bg-rs-fg focus-visible:text-rs-bg md:mt-20 md:px-4"
+          className="group mt-14 flex items-center justify-between gap-6 border-y border-(--rs-border-strong) py-7 transition-colors duration-200 hover:border-rs-fg hover:bg-rs-fg hover:text-rs-bg focus-visible:bg-rs-fg focus-visible:text-rs-bg md:mt-20 md:px-4"
         >
           <span className="text-[2.5rem] font-extrabold leading-[0.95] tracking-[-0.045em] md:text-6xl">
             {fr ? "Voir les réalisations" : "See the work"}
@@ -61,7 +61,7 @@ export function HomeFounderA({ locale }: { locale: Locale }) {
   const fr = locale === "fr";
   const products = PROJECTS.filter((project) => projectStatusBadge(project, locale).tone === "live");
   return (
-    <div className="pt-[var(--rs-section-space)]">
+    <div className="pt-(--rs-section-space)">
       <Container>
         <div className="grid gap-12 border-t border-rs-fg pt-10 lg:grid-cols-[minmax(0,6fr)_minmax(0,5fr)] lg:gap-20">
           <div>
@@ -107,7 +107,7 @@ export function HomeFounderA({ locale }: { locale: Locale }) {
                       className="group block transition-colors duration-150 hover:text-rs-accent-fg"
                     >
                       {shot ? (
-                        <span className="block overflow-hidden border border-[var(--rs-border)] transition-colors duration-150 group-hover:border-rs-accent">
+                        <span className="block overflow-hidden border border-(--rs-border) transition-colors duration-150 group-hover:border-rs-accent">
                           <Image
                             src={shot}
                             alt=""
@@ -118,8 +118,8 @@ export function HomeFounderA({ locale }: { locale: Locale }) {
                           />
                         </span>
                       ) : null}
-                      <span className="mt-3 flex items-center justify-between gap-2 text-lg font-bold tracking-[-0.025em]">
-                        <span className="min-w-0 [overflow-wrap:anywhere]">{project.title}</span>
+                      <span className="mt-3 flex items-center justify-between gap-2 text-lg font-bold tracking-tight">
+                        <span className="min-w-0 wrap-anywhere">{project.title}</span>
                         <ArrowRight aria-hidden className="h-4 w-4 shrink-0" />
                       </span>
                       {host ? <span className="mt-0.5 block text-sm text-rs-muted">{host}</span> : null}
@@ -166,14 +166,14 @@ export function HomeServicesA({ locale }: { locale: Locale }) {
     },
   ];
   return (
-    <div className="pt-[var(--rs-section-space)]">
+    <div className="pt-(--rs-section-space)">
       <Container>
         <h2 className="border-b border-rs-fg pb-5 text-[2.75rem] font-extrabold leading-[0.95] tracking-[-0.045em] md:text-6xl">
           {fr ? "Ce que je construis" : "What I build"}
         </h2>
         <ul>
           {rows.map((row) => (
-            <li key={row.href} className="border-b border-[var(--rs-border)]">
+            <li key={row.href} className="border-b border-(--rs-border)">
               <Link
                 href={row.href}
                 className="group grid grid-cols-[minmax(0,1fr)_1.5rem] items-center gap-x-4 gap-y-1 py-6 transition-colors duration-200 hover:bg-rs-fg hover:text-rs-bg focus-visible:bg-rs-fg focus-visible:text-rs-bg md:grid-cols-[minmax(0,1fr)_minmax(0,1fr)_2.5rem] md:px-4"
@@ -214,7 +214,7 @@ export function HomeNextStepsA({ locale }: { locale: Locale }) {
     },
   ];
   return (
-    <div className="pt-[var(--rs-section-space)]">
+    <div className="pt-(--rs-section-space)">
       <Container>
         <h2 className="border-b border-rs-fg pb-5 text-[2.75rem] font-extrabold leading-[0.95] tracking-[-0.045em] md:text-6xl">
           {fr ? "Après votre demande" : "After your request"}
@@ -222,9 +222,9 @@ export function HomeNextStepsA({ locale }: { locale: Locale }) {
         <ol role="list" className="grid gap-y-8 pt-8 md:grid-cols-3 md:gap-x-10">
           {steps.map((step, index) => (
             <li key={step.title}>
-              <span className="num-outline block text-4xl font-extrabold tracking-[-0.05em]">{index + 1}</span>
-              <span className="mt-3 block text-xl font-bold tracking-[-0.025em]">{step.title}</span>
-              <span className="mt-2 block max-w-[22rem] text-base leading-relaxed text-rs-muted">{step.body}</span>
+              <span className="num-outline block text-4xl font-extrabold tracking-tighter">{index + 1}</span>
+              <span className="mt-3 block text-xl font-bold tracking-tight">{step.title}</span>
+              <span className="mt-2 block max-w-88 text-base leading-relaxed text-rs-muted">{step.body}</span>
             </li>
           ))}
         </ol>

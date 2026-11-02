@@ -26,7 +26,7 @@ export function QuotePage({ locale }: { locale: Locale }) {
       />
       <ContactLayout locale={locale} source="project">
         <QuickQuoteForm locale={locale} source="quote_page" readTypeFromUrl />
-        <p className="mt-8 border-t border-[var(--rs-border)] pt-6 text-sm text-rs-muted">
+        <p className="mt-8 border-t border-(--rs-border) pt-6 text-sm text-rs-muted">
           {fr ? "Projet complexe ou cahier des charges déjà prêt ?" : "Complex project or specification already written?"}{" "}
           <Link
             href={startProjectPath(locale)}

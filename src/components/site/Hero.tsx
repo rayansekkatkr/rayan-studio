@@ -65,7 +65,7 @@ export function Hero({ locale = "fr" }: { locale?: Locale }) {
       <div className="absolute inset-0 -z-20 bg-[linear-gradient(120deg,rgba(245,241,232,0.96)_0%,rgba(232,224,210,0.9)_52%,rgba(247,238,224,0.96)_100%)]" />
       <div
         aria-hidden="true"
-        className="absolute inset-0 -z-10 bg-[linear-gradient(rgba(23,18,15,0.01)_1px,transparent_1px),linear-gradient(90deg,rgba(23,18,15,0.008)_1px,transparent_1px)] bg-[size:96px_96px]"
+        className="absolute inset-0 -z-10 bg-[linear-gradient(rgba(23,18,15,0.01)_1px,transparent_1px),linear-gradient(90deg,rgba(23,18,15,0.008)_1px,transparent_1px)] bg-size-[96px_96px]"
       />
       <div
         aria-hidden="true"
@@ -100,7 +100,7 @@ export function Hero({ locale = "fr" }: { locale?: Locale }) {
             <a
               href={`/${locale}#contact`}
               onClick={() => trackEvent("cta_click", { location: "hero", cta: "free_diagnosis", locale })}
-              className="inline-flex min-h-12 w-full items-center justify-center border border-[#17120f] bg-[#17120f] px-5 text-center text-sm font-black text-[#fffaf0] shadow-[6px_6px_0_rgba(217,79,43,0.72)] transition duration-300 hover:-translate-y-0.5 hover:shadow-[8px_8px_0_rgba(217,79,43,0.72)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#d94f2b] focus-visible:ring-offset-2 focus-visible:ring-offset-[#f5f1e8] sm:w-auto sm:px-6"
+              className="inline-flex min-h-12 w-full items-center justify-center border border-[#17120f] bg-[#17120f] px-5 text-center text-sm font-black text-[#fffaf0] shadow-[6px_6px_0_rgba(217,79,43,0.72)] transition duration-300 hover:-translate-y-0.5 hover:shadow-[8px_8px_0_rgba(217,79,43,0.72)] focus-visible:outline-hidden focus-visible:ring-2 focus-visible:ring-[#d94f2b] focus-visible:ring-offset-2 focus-visible:ring-offset-[#f5f1e8] sm:w-auto sm:px-6"
             >
               <span className="sm:hidden">{t.mobilePrimaryCta}</span>
               <span className="hidden sm:inline">{t.primaryCta}</span>
@@ -109,7 +109,7 @@ export function Hero({ locale = "fr" }: { locale?: Locale }) {
             <a
               href={`/${locale}#realisations`}
               onClick={() => trackEvent("cta_click", { location: "hero", cta: "view_transformations", locale })}
-              className="inline-flex min-h-12 w-full items-center justify-center border border-[#2a231d]/22 bg-[#fffaf0]/74 px-5 text-sm font-black text-[#17120f] transition duration-300 hover:-translate-y-0.5 hover:bg-[#fffaf0] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#d94f2b] focus-visible:ring-offset-2 focus-visible:ring-offset-[#f5f1e8] sm:w-auto sm:px-6"
+              className="inline-flex min-h-12 w-full items-center justify-center border border-[#2a231d]/22 bg-[#fffaf0]/74 px-5 text-sm font-black text-[#17120f] transition duration-300 hover:-translate-y-0.5 hover:bg-[#fffaf0] focus-visible:outline-hidden focus-visible:ring-2 focus-visible:ring-[#d94f2b] focus-visible:ring-offset-2 focus-visible:ring-offset-[#f5f1e8] sm:w-auto sm:px-6"
             >
               {t.secondaryCta}
             </a>

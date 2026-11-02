@@ -82,7 +82,7 @@ export function MobileMenu({ id, locale, links, onClose, toggleRef, quoteHref }:
         aria-label={fr ? "Navigation mobile" : "Mobile navigation"}
         className="flex min-h-full flex-col px-5 pb-[calc(1.5rem+var(--consent-h,0px))] pt-6"
       >
-        <ul className="divide-y divide-[var(--rs-border)] border-y border-[var(--rs-border)]">
+        <ul className="divide-y divide-(--rs-border) border-y border-(--rs-border)">
           {links.map((link) => (
             <li key={link.key}>
               <Link
@@ -102,7 +102,7 @@ export function MobileMenu({ id, locale, links, onClose, toggleRef, quoteHref }:
         <Link
           href={quoteHref ?? quotePath(locale)}
           onClick={onClose}
-          className="mt-6 inline-flex items-center justify-center bg-rs-fg px-6 py-3.5 text-base font-semibold text-rs-bg transition-colors duration-150 hover:bg-rs-accent active:bg-rs-accent-hover active:text-[var(--rs-dark-fg)] active:duration-0"
+          className="mt-6 inline-flex items-center justify-center bg-rs-fg px-6 py-3.5 text-base font-semibold text-rs-bg transition-colors duration-150 hover:bg-rs-accent active:bg-rs-accent-hover active:text-(--rs-dark-fg) active:duration-0"
         >
           {fr ? "Demander un devis gratuit" : "Get a free quote"}
         </Link>

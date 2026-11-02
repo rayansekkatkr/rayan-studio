@@ -52,17 +52,17 @@ export function HomeHero({ locale }: { locale: Locale }) {
       {/* Melts the glow and the screen wall into the night, so the statement below follows without a seam. */}
       <div
         aria-hidden
-        className="pointer-events-none absolute inset-x-0 bottom-0 z-[-5] h-14 bg-gradient-to-b from-transparent to-[var(--rs-dark)] lg:h-48"
+        className="pointer-events-none absolute inset-x-0 bottom-0 z-[-5] h-14 bg-linear-to-b from-transparent to-(--rs-dark) lg:h-48"
       />
       <Container className="pointer-events-none">
         <div className="flex min-h-0 items-center pb-10 pt-20 md:pb-16 md:pt-32 lg:min-h-[min(50rem,100svh)] lg:pb-16">
-          <div className="pointer-events-auto min-w-0 max-w-3xl lg:max-w-[32rem] xl:max-w-[40rem]">
+          <div className="pointer-events-auto min-w-0 max-w-3xl lg:max-w-lg xl:max-w-160">
             <h1 className="text-[2.25rem] font-extrabold leading-[0.98] tracking-[-0.035em] md:text-5xl md:tracking-[-0.045em] xl:text-[3.75rem]">
               {fr
                 ? "Je conçois et mets en ligne vos sites et applications, sans intermédiaire."
                 : "I design and launch your websites and applications, with no middleman."}
             </h1>
-            <p className="mt-4 max-w-[var(--rs-reading)] text-lg leading-relaxed text-rs-muted md:mt-6">
+            <p className="mt-4 max-w-(--rs-reading) text-lg leading-relaxed text-rs-muted md:mt-6">
               {/* Founder-led, visible above the paths on every screen (it used to sit under the
                   CTA, where the cookie bar covered it on phones). */}
               <Link
@@ -82,10 +82,10 @@ export function HomeHero({ locale }: { locale: Locale }) {
                   <TrackedLink
                     href={path.href}
                     event={{ ctaId: `hero_path_${path.id}`, source: "home_hero", destination: path.href, locale }}
-                    className="group flex h-full flex-col border border-[var(--rs-border)] bg-rs-surface p-4 transition-colors duration-150 hover:border-rs-accent sm:p-5"
+                    className="group flex h-full flex-col border border-(--rs-border) bg-rs-surface p-4 transition-colors duration-150 hover:border-rs-accent sm:p-5"
                   >
-                    <span className="flex items-center justify-between gap-3 text-xl font-bold tracking-[-0.025em]">
-                      <span className="min-w-0 [overflow-wrap:anywhere]">{path.title}</span>
+                    <span className="flex items-center justify-between gap-3 text-xl font-bold tracking-tight">
+                      <span className="min-w-0 wrap-anywhere">{path.title}</span>
                       <ArrowRight
                         aria-hidden
                         className="h-5 w-5 shrink-0 text-rs-muted transition-colors duration-150 group-hover:text-rs-accent-fg"
@@ -105,7 +105,7 @@ export function HomeHero({ locale }: { locale: Locale }) {
                 destination: quotePath(locale),
                 locale,
               }}
-              className="mt-5 inline-flex items-center gap-2 rounded-none bg-rs-fg px-7 py-3.5 text-base font-semibold text-[var(--rs-dark)] transition-colors duration-150 hover:bg-rs-accent active:bg-rs-accent-hover active:text-[var(--rs-dark-fg)] active:duration-0 hover:text-rs-fg"
+              className="mt-5 inline-flex items-center gap-2 rounded-none bg-rs-fg px-7 py-3.5 text-base font-semibold text-(--rs-dark) transition-colors duration-150 hover:bg-rs-accent active:bg-rs-accent-hover active:text-(--rs-dark-fg) active:duration-0 hover:text-rs-fg"
             >
               {fr ? "Demander un devis gratuit" : "Get a free quote"}
               <ArrowRight aria-hidden className="h-4 w-4" />

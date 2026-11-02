@@ -27,18 +27,18 @@ export function CaseStudyOverview({ locale, project }: { locale: Locale; project
         ))}
       </dl>
       <div className={project.heroCompanion ? "mt-8 grid gap-6 lg:grid-cols-[minmax(0,8fr)_minmax(0,4fr)]" : "mt-8"}>
-        <div className="relative aspect-[16/10] overflow-hidden bg-rs-subtle lg:aspect-auto lg:h-[38rem]">
+        <div className="relative aspect-16/10 overflow-hidden bg-rs-subtle lg:aspect-auto lg:h-152">
           <Image
             src={project.heroImage}
             alt={fr ? `Interface du produit ${project.title}` : `${project.title} product interface`}
             fill
             priority
             sizes="(min-width: 1024px) 66vw, 100vw"
-            className="object-cover object-left-top"
+            className="object-cover object-top-left"
           />
         </div>
         {project.heroCompanion ? (
-          <div className="relative hidden bg-rs-subtle lg:block lg:h-[38rem]">
+          <div className="relative hidden bg-rs-subtle lg:block lg:h-152">
             <Image
               src={project.heroCompanion.src}
               alt={project.heroCompanion.alt[locale]}
