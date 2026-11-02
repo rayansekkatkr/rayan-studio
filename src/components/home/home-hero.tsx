@@ -2,6 +2,8 @@ import { ArrowRight } from "lucide-react";
 import Link from "next/link";
 import { TrackedLink } from "@/components/analytics/tracked-link";
 import { Container } from "@/components/ui/container";
+import { projectStatusBadge } from "@/components/work/project-labels";
+import { PROJECTS } from "@/content/projects";
 import type { Locale } from "@/lib/i18n";
 import { quotePath, saasLandingPath, studioPath, websitesLandingPath } from "@/lib/site-routes";
 import { HeroMotionToggle } from "./hero-motion-toggle";
@@ -9,14 +11,16 @@ import { HeroScreenRow, HeroScreenWall } from "./hero-screen-wall";
 
 export function HomeHero({ locale }: { locale: Locale }) {
   const fr = locale === "fr";
+  // Live product sites the studio designed and shipped (shown in the founder block).
+  const liveSites = PROJECTS.filter((project) => project.liveUrl && projectStatusBadge(project, locale).tone === "live").length;
   const paths = [
     {
       id: "websites",
       href: websitesLandingPath(locale),
       title: fr ? "Sites web & refonte" : "Websites & redesign",
       body: fr
-        ? "Un site qui inspire confiance, comme mes 4 sites en ligne. Maquette gratuite sous 24 h ouvrées."
-        : "A website that builds trust, like my 4 live sites. Free mockup within 24 business hours.",
+        ? `Un site qui inspire confiance, comme mes ${liveSites} sites en ligne. Maquette gratuite sous 24 h ouvrées.`
+        : `A website that builds trust, like my ${liveSites} live sites. Free mockup within 24 business hours.`,
     },
     {
       id: "applications",
@@ -32,25 +36,33 @@ export function HomeHero({ locale }: { locale: Locale }) {
     <div className="rs-theme-dark relative isolate overflow-hidden bg-rs-bg text-rs-fg" data-hero-motion>
       <div aria-hidden className="hero-glow pointer-events-none absolute inset-0 -z-10" />
       <HeroScreenWall
-        className="absolute inset-y-0 right-0 -z-10 hidden w-[50%] xl:block"
+        className="absolute inset-y-0 right-0 -z-10 hidden w-[44%] lg:block xl:w-[50%]"
       />
       {/* Melts the glow and the screen wall into the night, so the statement below follows without a seam. */}
       <div
         aria-hidden
-        className="pointer-events-none absolute inset-x-0 bottom-0 z-[-5] h-14 bg-gradient-to-b from-transparent to-[var(--rs-dark)] xl:h-48"
+        className="pointer-events-none absolute inset-x-0 bottom-0 z-[-5] h-14 bg-gradient-to-b from-transparent to-[var(--rs-dark)] lg:h-48"
       />
       <Container className="pointer-events-none">
-        <div className="flex min-h-0 items-center pb-10 pt-20 md:pb-16 md:pt-32 xl:min-h-[min(50rem,100svh)] xl:pb-16">
-          <div className="pointer-events-auto max-w-3xl lg:max-w-[36rem] xl:max-w-[40rem]">
-            <h1 className="text-[2.25rem] font-extrabold leading-[0.98] tracking-[-0.045em] md:text-5xl lg:text-[3.75rem]">
+        <div className="flex min-h-0 items-center pb-10 pt-20 md:pb-16 md:pt-32 lg:min-h-[min(50rem,100svh)] lg:pb-16">
+          <div className="pointer-events-auto max-w-3xl lg:max-w-[32rem] xl:max-w-[40rem]">
+            <h1 className="text-[2.25rem] font-extrabold leading-[0.98] tracking-[-0.045em] md:text-5xl xl:text-[3.75rem]">
               {fr
                 ? "Je conçois et mets en ligne vos sites et applications, sans intermédiaire."
                 : "I design and launch your websites and applications, with no middleman."}
             </h1>
             <p className="mt-4 max-w-[var(--rs-reading)] text-lg leading-relaxed text-rs-muted md:mt-6">
+              {/* Founder-led, visible above the paths on every screen (it used to sit under the
+                  CTA, where the cookie bar covered it on phones). */}
+              <Link
+                href={studioPath(locale, "rayan")}
+                className="font-semibold text-rs-fg underline underline-offset-4 transition-colors duration-150 hover:text-rs-accent-fg"
+              >
+                Rayan Sekkat
+              </Link>
               {fr
-                ? "Un studio indépendant qui conçoit, développe et met en ligne votre projet, du premier échange au lancement."
-                : "An independent studio that designs, builds and launches your project, from the first conversation to launch."}
+                ? ", ingénieur logiciel à Séoul. Je réponds moi-même à chaque demande, du premier échange au lancement."
+                : ", software engineer in Seoul. I answer every request myself, from the first conversation to launch."}
             </p>
             {/* The visitor picks a path first; the quote stays one click away for anyone undecided. */}
             <ul role="list" aria-label={fr ? "Choisissez votre projet" : "Choose your project"} className="mt-6 grid gap-3 sm:grid-cols-2 md:mt-8" data-hero-paths>
@@ -88,20 +100,10 @@ export function HomeHero({ locale }: { locale: Locale }) {
               <ArrowRight aria-hidden className="h-4 w-4" />
             </TrackedLink>
 
-            {/* Founder-led, visible in the first screen: the person who answers the quote. */}
-            <p className="mt-5 text-sm text-rs-muted">
-              <Link
-                href={studioPath(locale, "rayan")}
-                className="font-semibold text-rs-fg underline underline-offset-4 transition-colors duration-150 hover:text-rs-accent-fg"
-              >
-                Rayan Sekkat
-              </Link>
-              {fr ? ", ingénieur logiciel à Séoul. Je réponds moi-même à chaque demande." : ", software engineer in Seoul. I answer every request myself."}
-            </p>
           </div>
         </div>
       </Container>
-      <HeroScreenRow className="pb-14 xl:hidden" />
+      <HeroScreenRow className="pb-14 lg:hidden" />
       <HeroMotionToggle locale={locale} className="absolute bottom-3 right-5 z-10 md:right-8" />
     </div>
   );

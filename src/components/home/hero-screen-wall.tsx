@@ -91,7 +91,7 @@ export function HeroScreenWall({ className }: { className?: string }) {
               {[0, 1].map((copy) => (
                 <div key={copy} className="flex flex-col gap-5 pb-5">
                   {column.keys.map((key) => (
-                    <Tile key={`${copy}-${key}`} screen={SCREENS[key]} sizes="(min-width: 1280px) 18vw, 0px" />
+                    <Tile key={`${copy}-${key}`} screen={SCREENS[key]} sizes="(min-width: 1024px) 18vw, 0px" />
                   ))}
                 </div>
               ))}
