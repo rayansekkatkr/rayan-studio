@@ -36,7 +36,8 @@ const PROJECT_STAGES: readonly ProjectStage[] = [
 ];
 const PROJECT_TIMINGS: readonly ProjectTiming[] = ["asap", "1-3-months", "3-6-months", "undefined"];
 
-const EMAIL_RE = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+// Shared with the quick quote form, which checks the same rule before sending.
+export const EMAIL_RE = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
 export function sanitizeText(input: unknown, maxLength: number): string {
   if (typeof input !== "string") return "";
