@@ -13,19 +13,30 @@ type MobileMenuProps = {
   locale: Locale;
   links: PrimaryNavLink[];
   onClose: () => void;
+  /** The header toggle (close button) stays reachable inside the focus trap. */
+  toggleRef?: React.RefObject<HTMLButtonElement | null>;
 };
 
 const FOCUSABLE = 'a[href], button:not([disabled]), [tabindex]:not([tabindex="-1"])';
 
-export function MobileMenu({ id, locale, links, onClose }: MobileMenuProps) {
+export function MobileMenu({ id, locale, links, onClose, toggleRef }: MobileMenuProps) {
   const fr = locale === "fr";
   const containerRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     const previousOverflow = document.body.style.overflow;
     document.body.style.overflow = "hidden";
+    // The page behind the menu is inert instead of using aria-modal: the close button lives in
+    // the header, outside this dialog, and must stay reachable for screen readers.
+    const background = Array.from(document.querySelectorAll<HTMLElement>("#main-content, [data-site-footer], [data-consent-bar]"));
+    background.forEach((element) => {
+      element.inert = true;
+    });
     return () => {
       document.body.style.overflow = previousOverflow;
+      background.forEach((element) => {
+        element.inert = false;
+      });
     };
   }, []);
 
@@ -37,7 +48,11 @@ export function MobileMenu({ id, locale, links, onClose }: MobileMenuProps) {
 
     function handleKeyDown(event: KeyboardEvent) {
       if (event.key !== "Tab" || !container) return;
-      const focusable = Array.from(container.querySelectorAll<HTMLElement>(FOCUSABLE));
+      const toggle = toggleRef?.current;
+      const focusable = [
+        ...(toggle ? [toggle] : []),
+        ...Array.from(container.querySelectorAll<HTMLElement>(FOCUSABLE)),
+      ];
       if (focusable.length === 0) return;
       const firstElement = focusable[0];
       const lastElement = focusable[focusable.length - 1];
@@ -52,17 +67,19 @@ export function MobileMenu({ id, locale, links, onClose }: MobileMenuProps) {
 
     document.addEventListener("keydown", handleKeyDown);
     return () => document.removeEventListener("keydown", handleKeyDown);
-  }, []);
+  }, [toggleRef]);
 
   return (
     <div
       ref={containerRef}
       id={id}
+      role="dialog"
+      aria-label="Menu"
       className="fixed inset-0 top-16 z-40 overflow-y-auto bg-rs-bg lg:hidden"
     >
       <nav
         aria-label={fr ? "Navigation mobile" : "Mobile navigation"}
-        className="flex min-h-full flex-col px-5 py-6"
+        className="flex min-h-full flex-col px-5 pb-[calc(1.5rem+var(--consent-h,0px))] pt-6"
       >
         <ul className="divide-y divide-[var(--rs-border)] border-y border-[var(--rs-border)]">
           {links.map((link) => (

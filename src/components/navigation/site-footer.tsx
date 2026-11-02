@@ -17,21 +17,21 @@ export function SiteFooter({ locale }: { locale: Locale }) {
   ];
 
   return (
-    <footer className="rs-theme-dark border-t border-[var(--rs-border)] bg-rs-bg text-rs-fg">
+    <footer data-site-footer className="rs-theme-dark border-t border-[var(--rs-border)] bg-rs-bg text-rs-fg">
       <div className="mx-auto w-full max-w-[var(--rs-container)] px-5 py-14 md:px-8">
         <div className="flex flex-col gap-10 lg:flex-row lg:justify-between">
           <div className="max-w-xs">
             <p className="text-lg font-extrabold tracking-[-0.02em] text-rs-fg">Rayan Studio</p>
             <p className="mt-4 text-sm leading-relaxed text-rs-muted">
               {fr
-                ? "Studio indépendant : applications, plateformes et sites web premium, du cadrage à la mise en production."
-                : "Independent studio: applications, platforms and premium websites, from framing to production."}
+                ? "Studio indépendant : sites web, applications et plateformes sur mesure, du cadrage à la mise en production."
+                : "Independent studio: custom websites, applications and platforms, from framing to production."}
             </p>
           </div>
           <div className="grid grid-cols-2 gap-8 sm:grid-cols-4">
             {menus.map((menu) => (
               <div key={menu.key}>
-                <p className="text-[11px] font-semibold uppercase tracking-[0.18em] text-rs-muted">
+                <p className="text-xs font-semibold uppercase tracking-[0.18em] text-rs-muted">
                   {menu.label}
                 </p>
                 <ul className="mt-3 space-y-2">

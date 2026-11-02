@@ -105,10 +105,11 @@ export function RootBody({ children, locale = "fr" }: { children: React.ReactNod
       <a href="#main-content" className="skip-link">
         {locale === "en" ? "Skip to main content" : "Aller au contenu principal"}
       </a>
+      {/* Early in the DOM so keyboard users reach the consent choice right after the skip link. */}
+      {gaId ? <CookieConsent /> : null}
       {gaId ? <AnalyticsLoader gaId={gaId} /> : null}
       {gaId ? <WebVitalsReporter /> : null}
       {children}
-      {gaId ? <CookieConsent /> : null}
     </body>
   );
 }

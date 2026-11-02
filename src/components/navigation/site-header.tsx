@@ -67,14 +67,15 @@ export function SiteHeader({ locale, topTheme = "light" }: SiteHeaderProps) {
       data-surface={solid ? "solid" : "transparent"}
       data-floating={floating ? "true" : "false"}
       className={cn(
-        "fixed inset-x-0 top-0 z-50 transition-[transform,padding] duration-300",
+        "fixed inset-x-0 top-0 z-50 transition-transform duration-300",
         floating && "px-3 pt-3",
         hidden && !mobileOpen && "-translate-y-[calc(100%+3rem)]",
       )}
     >
       <div
         className={cn(
-          "relative transition-all duration-300",
+          // Only colours transition: height, padding and blur snap instead of animating during scroll.
+          "relative transition-colors duration-300",
           floating
             ? "mx-auto max-w-[min(var(--rs-container),76rem)] border border-[var(--rs-border)] bg-[var(--rs-header-surface)] shadow-[0_16px_40px_-24px_rgba(11,11,14,0.45)] backdrop-blur-md"
             : solid
@@ -84,7 +85,7 @@ export function SiteHeader({ locale, topTheme = "light" }: SiteHeaderProps) {
       >
         <div
           className={cn(
-            "mx-auto flex w-full max-w-[var(--rs-container)] items-center justify-between transition-all duration-300",
+            "mx-auto flex w-full max-w-[var(--rs-container)] items-center justify-between",
             floating ? "h-14 pl-6 pr-2.5" : "h-16 px-5 md:px-8",
           )}
         >
@@ -107,7 +108,7 @@ export function SiteHeader({ locale, topTheme = "light" }: SiteHeaderProps) {
                     "px-4 py-2 text-sm font-medium transition-colors duration-150",
                     current
                       ? inverse
-                        ? "text-[#8a88f2]"
+                        ? "text-[var(--rs-dark-accent-fg)]"
                         : "text-rs-accent-fg"
                       : inverse
                         ? "text-[var(--rs-dark-fg)] hover:text-[var(--rs-dark-muted)]"
@@ -132,7 +133,7 @@ export function SiteHeader({ locale, topTheme = "light" }: SiteHeaderProps) {
                   : "bg-rs-fg text-rs-bg hover:bg-rs-accent",
               )}
             >
-              <span aria-hidden className="h-1.5 w-1.5 rounded-full bg-[#3ddc84]" />
+              <span aria-hidden className="h-1.5 w-1.5 rounded-full bg-[var(--rs-live)]" />
               {fr ? "Devis gratuit" : "Free quote"}
             </TrackedLink>
           </div>
@@ -151,7 +152,15 @@ export function SiteHeader({ locale, topTheme = "light" }: SiteHeaderProps) {
         </div>
       </div>
 
-      {mobileOpen ? <MobileMenu id={MOBILE_MENU_ID} locale={locale} links={links} onClose={() => setMobileOpen(false)} /> : null}
+      {mobileOpen ? (
+        <MobileMenu
+          id={MOBILE_MENU_ID}
+          locale={locale}
+          links={links}
+          onClose={() => setMobileOpen(false)}
+          toggleRef={mobileButtonRef}
+        />
+      ) : null}
     </header>
   );
 }
