@@ -1,5 +1,5 @@
 {
-  "runAt": "2026-11-04T16:09:13.470Z",
+  "runAt": "2026-11-05T16:23:21.456Z",
   "status": "ready",
   "sourceMode": "default_platforms",
   "sourceCount": 18,
@@ -149,13 +149,13 @@
       "autoDiscovered": true
     }
   ],
-  "scannedOpportunities": 212,
-  "scoredCandidateCount": 56,
+  "scannedOpportunities": 222,
+  "scoredCandidateCount": 66,
   "remotePolicy": "explicit_remote_only",
-  "remoteRejectedCount": 54,
+  "remoteRejectedCount": 64,
   "remoteRejected": [
     {
-      "title": "Mentor expert en Data Engineering, Cloud et Intelligence Artificielle Il y a 2 heures Ouvert 200 à 500 €/jour 11 Offres 740 Vues Nous recherchons un mentor expérimenté pour accompagner nos apprenants dans la conception et l'industrialisation de solutions Data et IA. Les interventions pourront porter sur : - Python, FastAPI et architecture microservices. - Pipelines ETL, Sp... Formation Machine Learning Big Data +6 Herve Bansay Akli Lacene Freelance-Website Websource Fabien Déchery",
+      "title": "Mentor expert en Data Engineering, Cloud et Intelligence Artificielle Il y a 1 jour Ouvert 200 à 500 €/jour 16 Offres 3829 Vues Nous recherchons un mentor expérimenté pour accompagner nos apprenants dans la conception et l'industrialisation de solutions Data et IA. Les interventions pourront porter sur : - Python, FastAPI et architecture microservices. - Pipelines ETL, Sp... Formation Machine Learning Big Data +11 Herve Bansay Akli Lacene Freelance-Website Websource EncureIT_Systems",
       "url": "https://www.codeur.com/projects/492361-mentor-expert-en-data-engineering-cloud-et-intelligence-artificielle",
       "platform": "codeur",
       "source": "Codeur - remote full stack web developer",
@@ -164,7 +164,7 @@
       "remoteReason": "teletravail non mentionne"
     },
     {
-      "title": "Création site Shopify – 150 produits, caisse POS, SolPay et formation Il y a 5 heures Ouvert 1 000 € à 10 000 € 92 Offres 1481 Vues Bonjour, Nous sommes une parfumerie indépendante située à Paris et recherchons un freelance ou une petite agence pour créer notre boutique Shopify de parfums, avec vente en France et dans certains pays de l’Union européenne. Nous souhaitons une ... Shopify Site E-commerce Création de site internet +87 Quentin Pollet Louis Jodon De Villeroché Thibaud Lescroart Yanis Bouchfira Hugo Battoue",
+      "title": "Création site Shopify – 150 produits, caisse POS, SolPay et formation Il y a 1 jour Ouvert 1 000 € à 10 000 € 113 Offres 4772 Vues Bonjour, Nous sommes une parfumerie indépendante située à Paris et recherchons un freelance ou une petite agence pour créer notre boutique Shopify de parfums, avec vente en France et dans certains pays de l’Union européenne. Nous souhaitons une ... Shopify Site E-commerce Création de site internet +108 Quentin Pollet Louis Jodon De Villeroché Thibaud Lescroart Yanis Bouchfira Hugo Battoue",
       "url": "https://www.codeur.com/projects/492346-creation-site-shopify-150-produits-caisse-pos-solpay-et-formation",
       "platform": "codeur",
       "source": "Codeur - remote full stack web developer",
@@ -173,7 +173,7 @@
       "remoteReason": "mention sur site ou presentiel"
     },
     {
-      "title": "E-commerce et site web vitrine Il y a 24 heures Ouvert Moins de 500 € 37 Offres 3996 Vues Nous recherchons un freelance pour animer les réseaux sociaux de Secteur 72, un projet de terrain d'airsoft en Sarthe réservé aux joueurs majeurs, avec boutique en ligne d'équipement et une chaîne YouTube. Notre besoin porte principalement sur la... Community management Communication Audio, Video, Multimedia +32 Fabien Berthelet Websource Nolwenn Drai--Laguens Advency_Media Adam Rotard",
+      "title": "E-commerce et site web vitrine Il y a 2 jours Ouvert Moins de 500 € 42 Offres 5634 Vues Nous recherchons un freelance pour animer les réseaux sociaux de Secteur 72, un projet de terrain d'airsoft en Sarthe réservé aux joueurs majeurs, avec boutique en ligne d'équipement et une chaîne YouTube. Notre besoin porte principalement sur la... Community management Communication Audio, Video, Multimedia +37 Fabien Berthelet Websource Nolwenn Drai--Laguens Advency_Media Adam Rotard",
       "url": "https://www.codeur.com/projects/492309-e-commerce-et-site-web-vitrine",
       "platform": "codeur",
       "source": "Codeur - remote full stack web developer",
@@ -182,11 +182,11 @@
       "remoteReason": "teletravail non mentionne"
     },
     {
-      "title": "Site internet e-commerce Il y a 2 jours Ouvert 1 000 € à 10 000 € 165 Offres 6192 Vues Bonjour, Je recherche un développeur WordPress / WooCommerce expérimenté pour concevoir l'intégralité d’un site internet qui conçoit et fabrique des sacs à dos sur mesure. Voir le site https://atompacks.co.uk qui correspond exactement à ce que je ... WooCommerce WordPress Site E-commerce +160 Louis Jodon De Villeroché Dan Salczer Yanis Bouchfira Enzo Foulquier Hugo Battoue",
-      "url": "https://www.codeur.com/projects/492260-site-internet-e-commerce",
-      "platform": "codeur",
-      "source": "Codeur - remote full stack web developer",
-      "score": 100,
+      "title": "Web & E-commerce Specialist - own website, shop, checkout and white-label storefronts (ongoing)",
+      "url": "https://www.freelancer.com/projects/ecommerce/web-commerce-specialist-own-website",
+      "platform": "freelancer",
+      "source": "Freelancer - remote full stack web developer",
+      "score": 95,
       "remoteStatus": "unknown",
       "remoteReason": "teletravail non mentionne"
     },
@@ -200,7 +200,7 @@
       "remoteReason": "teletravail non mentionne"
     },
     {
-      "title": "Recherche développeur web back end Il y a plus d'un an Ouvert 500 € à 1 000 € 100 Offres 36547 Vues Bonjour, Je m'appelle Johanna, et je suis co-directrice d'un projet ambitieux visant à lancer une nouvelle plateforme de contenu pour adultes. Le développement de ce projet est déjà bien avancé, nos développeurs actuels sont 3 il y en 1 qui doit p... Back-end Python Cloud computing +95 soqabee MAETVIN Sebastien Escudero Ali Benmerad Fabien Berthelet",
+      "title": "Recherche développeur web back end Il y a plus d'un an Ouvert 500 € à 1 000 € 101 Offres 38266 Vues Bonjour, Je m'appelle Johanna, et je suis co-directrice d'un projet ambitieux visant à lancer une nouvelle plateforme de contenu pour adultes. Le développement de ce projet est déjà bien avancé, nos développeurs actuels sont 3 il y en 1 qui doit p... Back-end Python Cloud computing +96 soqabee MAETVIN Sebastien Escudero Ali Benmerad Fabien Berthelet",
       "url": "https://www.codeur.com/projects/458629-recherche-developpeur-web-back-end",
       "platform": "codeur",
       "source": "Codeur - remote full stack web developer",
@@ -209,7 +209,7 @@
       "remoteReason": "teletravail non mentionne"
     },
     {
-      "title": "Nous ouvrons un restaurant traditionnel sur les quais de Quimper Il y a 4 heures Ouvert 500 € à 1 000 € 158 Offres 2168 Vues Nous ouvrons un restaurant traditionnel sur les Quais de Quimper, nous aurions besoin d'un site internet qui fiat \"vitrine\" du restaurant, avec les cartes (plats, boissons, brunch et coktail), les horaires, le numéro de téléphon et contact, des ph... Création de site internet Site clé en main Web design +153 Quentin Pollet Chakib Zeraia Yanis Bouchfira Gregory Younes Mirai-Tech",
+      "title": "Nous ouvrons un restaurant traditionnel sur les quais de Quimper Il y a 1 jour Ouvert 500 € à 1 000 € 194 Offres 6410 Vues Nous ouvrons un restaurant traditionnel sur les Quais de Quimper, nous aurions besoin d'un site internet qui fiat \"vitrine\" du restaurant, avec les cartes (plats, boissons, brunch et coktail), les horaires, le numéro de téléphon et contact, des ph... Création de site internet Site clé en main Web design +189 Quentin Pollet Chakib Zeraia Yanis Bouchfira Gregory Younes Mirai-Tech",
       "url": "https://www.codeur.com/projects/492351-nous-ouvrons-un-restaurant-traditionnel-sur-les-quais-de-quimper",
       "platform": "codeur",
       "source": "Codeur - remote full stack web developer",
@@ -236,7 +236,25 @@
       "remoteReason": "teletravail non mentionne"
     },
     {
-      "title": "Application de relance prospects par sms et message vocaux IA Il y a 2 heures Ouvert 500 € à 1 000 € 92 Offres 1114 Vues Bonjour, Je recherche un prestataire pour développer une application mobile ou un logiciel informatique permettant d’automatiser la relance de mes prospects. Je dirige un organisme de formation et je commercialise également des produits profess... Développement spécifique Logiciel Téléphonie et Télécom +87 Adrien Korbendau Freelance-Website Thibaud Lescroart Yanis Bouchfira Mirai-Tech",
+      "title": "Site internet Il y a 7 heures Ouvert Moins de 500 € 171 Offres 2212 Vues Bonjour, Je recherche un développeur web freelance pour la création de mon site de plombier . Je souhaite un site comprenant : * Une présentation de mon activité et de mon parcours * Une présentation de mes prestations et de mes tarifs. * Un s... Création de site internet Site clé en main +166 Dan Salczer Chakib Zeraia Mathis Dufour Olivier Padacht Pour Mirai-Tech",
+      "url": "https://www.codeur.com/projects/492398-site-internet",
+      "platform": "codeur",
+      "source": "Codeur - remote full stack web developer",
+      "score": 75,
+      "remoteStatus": "onsite",
+      "remoteReason": "mention sur site ou presentiel"
+    },
+    {
+      "title": "Recherche un développeur Il y a 24 heures Ouvert Moins de 500 € 131 Offres 4515 Vues **Recherche développeur freelance – Projet OPTIC PARTNER** Bonjour, Je développe OPTIC PARTNER, un projet de solutions d'automatisation et d'intelligence artificielle destiné aux opticiens indépendants en France. Je recherche un développeur fre... Développement spécifique API Chatbot +126 Thibault Collard-Bovy Joan Rodriguez Thibaud Lescroart Pierre Baroni Mirai-Tech",
+      "url": "https://www.codeur.com/projects/492379-recherche-un-developpeur",
+      "platform": "codeur",
+      "source": "Codeur - remote full stack web developer",
+      "score": 75,
+      "remoteStatus": "unknown",
+      "remoteReason": "teletravail non mentionne"
+    },
+    {
+      "title": "Application de relance prospects par sms et message vocaux IA Il y a 1 jour Ouvert 500 € à 1 000 € 123 Offres 5294 Vues Bonjour, Je recherche un prestataire pour développer une application mobile ou un logiciel informatique permettant d’automatiser la relance de mes prospects. Je dirige un organisme de formation et je commercialise également des produits profess... Développement spécifique Logiciel Téléphonie et Télécom +118 Adrien Korbendau Freelance-Website Thibaud Lescroart Yanis Bouchfira Mirai-Tech",
       "url": "https://www.codeur.com/projects/492349-application-de-relance-prospects-par-sms-et-message-vocaux-ia",
       "platform": "codeur",
       "source": "Codeur - remote full stack web developer",
@@ -254,7 +272,34 @@
       "remoteReason": "teletravail non mentionne"
     },
     {
-      "title": "Recherche développeur sécurité web Il y a un an Ouvert Moins de 500 € 40 Offres 13158 Vues Bonjour, Je m'appelle Johanna, et je suis co-directrice d'un projet ambitieux visant à lancer une nouvelle plateforme de contenu pour adultes. Le développement de ce projet est déjà bien avancé, nos développeurs actuels sont 3 il y en 1 qui doit p... Sécurité Python React +35 Thibault Collard-Bovy Websource Codes Castle Nolwenn Drai--Laguens Samuel Chesnel",
+      "title": "Création d’un site WordPress pour le lancement d’une activité de massa Il y a 3 heures Ouvert Moins de 500 € 109 Offres 1141 Vues Bonjour, Dans le cadre du lancement de mon activité de massage à Rodez, je recherche un freelance pour créer un site WordPress professionnel, accueillant et facile à gérer. L’objectif est de présenter mon activité, mettre en valeur les prestatio... WordPress Création de site internet Site clé en main +104 Dan Salczer Christiane Cicatello Denis Noel Françols Jean Alexandre Castellani Mirai-Tech",
+      "url": "https://www.codeur.com/projects/492418-creation-d-un-site-wordpress-pour-le-lancement-d-une-activite-de-massa",
+      "platform": "codeur",
+      "source": "Codeur - remote full stack web developer",
+      "score": 70,
+      "remoteStatus": "unknown",
+      "remoteReason": "teletravail non mentionne"
+    },
+    {
+      "title": "WordPress Paid Course Website",
+      "url": "https://www.freelancer.com/projects/woocommerce/wordpress-paid-course-website",
+      "platform": "freelancer",
+      "source": "Freelancer - remote full stack web developer",
+      "score": 65,
+      "remoteStatus": "unknown",
+      "remoteReason": "teletravail non mentionne"
+    },
+    {
+      "title": "Mise à jour d'un site internet Wordpress Il y a un mois En cours Moins de 500 € 95 Offres 7493 Vues ### Mise à jour site WordPress et passage sous Elementor Nous recherchons un prestataire WordPress expérimenté pour intervenir sur notre site existant. L’objectif principal est de **moderniser la gestion du site et de nous permettre d’être autonom... WordPress Migration ou refonte de site Gestion site web +90 Dan Salczer 4gency_ Besayfall Ngoc-An Vu Quentin Pollet",
+      "url": "https://www.codeur.com/projects/490233-mise-a-jour-d-un-site-internet-wordpress",
+      "platform": "codeur",
+      "source": "Codeur - remote full stack web developer",
+      "score": 60,
+      "remoteStatus": "onsite",
+      "remoteReason": "mention sur site ou presentiel"
+    },
+    {
+      "title": "Recherche développeur sécurité web Il y a un an Ouvert Moins de 500 € 44 Offres 14596 Vues Bonjour, Je m'appelle Johanna, et je suis co-directrice d'un projet ambitieux visant à lancer une nouvelle plateforme de contenu pour adultes. Le développement de ce projet est déjà bien avancé, nos développeurs actuels sont 3 il y en 1 qui doit p... Sécurité Python React +39 Thibault Collard-Bovy Websource Codes Castle Nolwenn Drai--Laguens Samuel Chesnel",
       "url": "https://www.codeur.com/projects/463576-recherche-developpeur-securite-web",
       "platform": "codeur",
       "source": "Codeur - remote full stack web developer",
@@ -263,7 +308,7 @@
       "remoteReason": "teletravail non mentionne"
     },
     {
-      "title": "Déblocage compte publicitaire méta Il y a 24 heures Ouvert Moins de 500 € 30 Offres 3815 Vues Pour une de nos cliente qui traite de la libido féminine et dont le pixel publicitaire méta a été bloqué pour allégations santé, nous recherchons un freelance qui pourrait revoir le site web afin de supprimer toute allégation santé et demander une... Application Meta Marketing Web Analytics +25 Advency_Media Valentine Beaumont Nolwenn Drai--Laguens Jaroslaw Chmielewski MVaertan",
+      "title": "Déblocage compte publicitaire méta Il y a 2 jours Ouvert Moins de 500 € 30 Offres 5561 Vues Pour une de nos cliente qui traite de la libido féminine et dont le pixel publicitaire méta a été bloqué pour allégations santé, nous recherchons un freelance qui pourrait revoir le site web afin de supprimer toute allégation santé et demander une... Application Meta Marketing Web Analytics +25 Advency_Media Valentine Beaumont Nolwenn Drai--Laguens Jaroslaw Chmielewski MVaertan",
       "url": "https://www.codeur.com/projects/492312-deblocage-compte-publicitaire-meta",
       "platform": "codeur",
       "source": "Codeur - remote full stack web developer",
@@ -272,7 +317,7 @@
       "remoteReason": "teletravail non mentionne"
     },
     {
-      "title": "Création d’une IA de recherche et d’automatisation Vinted Il y a 24 heures Ouvert 500 € à 1 000 € 96 Offres 5024 Vues Bonjour, Je suis à la recherche d’un développeur spécialisé en intelligence artificielle, automatisation et développement web afin de créer un outil personnalisé pour gérer une activité de revente sur Vinted. Mon objectif est de développer un si... Développement spécifique ChatGPT API +91 Dan Salczer Herve Bansay Adrien Korbendau Yanis Bouchfira Mirai-Tech",
+      "title": "Création d’une IA de recherche et d’automatisation Vinted Il y a 2 jours Ouvert 500 € à 1 000 € 105 Offres 7225 Vues Bonjour, Je suis à la recherche d’un développeur spécialisé en intelligence artificielle, automatisation et développement web afin de créer un outil personnalisé pour gérer une activité de revente sur Vinted. Mon objectif est de développer un si... Développement spécifique ChatGPT API +100 Dan Salczer Herve Bansay Adrien Korbendau Yanis Bouchfira Mirai-Tech",
       "url": "https://www.codeur.com/projects/492308-creation-d-une-ia-de-recherche-et-d-automatisation-vinted",
       "platform": "codeur",
       "source": "Codeur - remote full stack web developer",
@@ -281,56 +326,11 @@
       "remoteReason": "teletravail non mentionne"
     },
     {
-      "title": "Recherche Designer UI/UX — Création de maquettes graphiques Il y a 1 jour Ouvert Moins de 500 € 42 Offres 4095 Vues Nous développons une nouvelle plateforme SaaS innovante axée sur la visualisation de données, l'analyse prévisionnelle et l'aide à la décision (secteur FinTech). Nous recherchons un Designer UI/UX freelance pour concevoir l'identité visuelle et l'... Experience utilisateur Web design SaaS +37 Ambre Gravot 4gency_ labelleapp Mathis Dufour Mirai-Tech",
+      "title": "Recherche Designer UI/UX — Création de maquettes graphiques Il y a 2 jours Ouvert Moins de 500 € 44 Offres 5521 Vues Nous développons une nouvelle plateforme SaaS innovante axée sur la visualisation de données, l'analyse prévisionnelle et l'aide à la décision (secteur FinTech). Nous recherchons un Designer UI/UX freelance pour concevoir l'identité visuelle et l'... Experience utilisateur Web design SaaS +39 Ambre Gravot 4gency_ labelleapp Mathis Dufour Mirai-Tech",
       "url": "https://www.codeur.com/projects/492279-recherche-designer-ui-ux-creation-de-maquettes-graphiques",
       "platform": "codeur",
       "source": "Codeur - remote full stack web developer",
       "score": 60,
-      "remoteStatus": "unknown",
-      "remoteReason": "teletravail non mentionne"
-    },
-    {
-      "title": "Partager recettes de cuisine en ligne de particulier a professionnel Il y a 2 jours Ouvert Moins de 500 € 134 Offres 6011 Vues je souhaite partager quelques milliers de recette de cuisine, avec sommaire et pouvoir effectuer un petit gain en proposant un abonnement annuel. Je continue a mettre a jour les recettes lors de mes temps libre. J'ai actuellement environ 2000 rece... Création de site internet CMS Site clé en main +129 Thibault Collard-Bovy Ali Boutaleb Elisabeth Crubillé Françols Jean Alexandre Castellani Mirai-Tech",
-      "url": "https://www.codeur.com/projects/492259-partager-recettes-de-cuisine-en-ligne-de-particulier-a-professionnel",
-      "platform": "codeur",
-      "source": "Codeur - remote full stack web developer",
-      "score": 60,
-      "remoteStatus": "unknown",
-      "remoteReason": "teletravail non mentionne"
-    },
-    {
-      "title": "I am looking for a website expert to examine my site, specifically from countries in Europe or the United States.",
-      "url": "https://www.freelancer.com/projects/website-development/looking-for-website-expert-examine",
-      "platform": "freelancer",
-      "source": "Freelancer - remote full stack web developer",
-      "score": 60,
-      "remoteStatus": "unknown",
-      "remoteReason": "teletravail non mentionne"
-    },
-    {
-      "title": "Monteur vidéo IA pour pubs Meta verticales (mission récurrente) Il y a 6 heures Ouvert 200 à 500 €/jour 24 Offres 1520 Vues Bonjour, Je développe une marque e-commerce française (vêtement féminin) et je cherche un monteur vidéo à l’aise avec les outils IA, pour une collaboration régulière. La mission : adapter en français des pubs vidéo verticales (Reels, Stories) qu... Vidéo IA Audio, Video, Multimedia Publicité +19 Thibaut Cohen Magali Velten Sommetdigital Mathis Dufour Nolwenn Drai--Laguens",
-      "url": "https://www.codeur.com/projects/492337-monteur-video-ia-pour-pubs-meta-verticales-mission-recurrente",
-      "platform": "codeur",
-      "source": "Codeur - remote full stack web developer",
-      "score": 55,
-      "remoteStatus": "unknown",
-      "remoteReason": "teletravail non mentionne"
-    },
-    {
-      "title": "Augmenter les ventes d'un site e-commerce Il y a 1 jour Ouvert 500 € à 1 000 € 44 Offres 4613 Vues Nous recherchons un/une freelance ou une société spécialisée pour nous aider à augmenter de manière significative et rapide les ventes internet de notre site www.inebios.eu par une gestion effective des campagnes Meta ads et notre présence activ... Community management Marketing Publicité +39 Websource Nolwenn Drai--Laguens Fabrice Rousseau Advency_Media Yatma Gueye",
-      "url": "https://www.codeur.com/projects/492295-augmenter-les-ventes-d-un-site-e-commerce",
-      "platform": "codeur",
-      "source": "Codeur - remote full stack web developer",
-      "score": 55,
-      "remoteStatus": "unknown",
-      "remoteReason": "teletravail non mentionne"
-    },
-    {
-      "title": "Recherche d'un CTO expert en IA pour une startup développant des agent Il y a 1 jour Ouvert 1 000 € à 10 000 € 64 Offres 4627 Vues 🚀 Recherche CTO / Cofondateur technique – Startup IA ambitieuse Nous recherchons un CTO passionné par l’intelligence artificielle pour rejoindre le lancement d’une startup à fort potentiel. 🎯 Le projet Développer une nouvelle génération d’agent... ChatGPT Machine Learning SaaS +59 WebAndRoll SOKEO Julien Moulin Yanis Bouchfira Websource",
-      "url": "https://www.codeur.com/projects/492278-recherche-d-un-cto-expert-en-ia-pour-une-startup-developpant-des-agent",
-      "platform": "codeur",
-      "source": "Codeur - remote full stack web developer",
-      "score": 55,
       "remoteStatus": "unknown",
       "remoteReason": "teletravail non mentionne"
     }
@@ -369,22 +369,22 @@
       "platform": "codeur",
       "searchQuery": "remote full stack web developer",
       "remoteGuaranteed": false,
-      "title": "Cherche accompagnement demi-jour wp extensions media library et revela Il y a 2 jours En cours Moins de 500 € 48 Offres 5221 Vues Je cherche un accompagnement individuel d’une demi-journée, à distance avec partage d’écran, pour comprendre le parcours suivant: - Identifier les champs de métadonnées utiles dans un JPEG test. - Configurer leur correspondance dans Media Library ... WordPress Formation Modules et composants +43 akata_goavana Thibault Collard-Bovy Websource Jayan Grondin Nolwenn Drai--Laguens",
+      "title": "J’ai un logiciel de gestion de planning de stock pour des artisan Il y a 8 heures Ouvert Moins de 500 € 110 Offres 2177 Vues Donc j’ai tout le visuel et fonctionnalités mais faudrait le mettre en format utilisable donc créer un logiciel ou une appli pour que plusieur personnes puisse se connecter à distance et sans connexion et que si un utilisateur change qql chose sa ... Développement spécifique Logiciel SaaS +105 Jean Sébastien Techer Reda Aourag Thibault Collard-Bovy Eric Ayivor Mirai-Tech",
       "description": "",
       "sourceDescription": "Découvrez les derniers projets disponibles sur Codeur.com et trouvez plus de cent nouvelles missions en freelance chaque jour.",
-      "url": "https://www.codeur.com/projects/492246-cherche-accompagnement-demi-jour-wp-extensions-media-library-et-revela",
+      "url": "https://www.codeur.com/projects/492397-j-ai-un-logiciel-de-gestion-de-planning-de-stock-pour-des-artisan",
       "extractionMethod": "anchor",
-      "score": 75,
-      "fit": "high",
+      "score": 55,
+      "fit": "medium",
       "reasons": [
-        "besoin site/refonte",
-        "UX, mobile ou conversion",
+        "profil full-stack/platform",
+        "profil TPE/local",
         "budget mentionne"
       ],
       "remoteOnly": true,
       "remoteStatus": "remote",
       "remoteReason": "teletravail explicite dans la mission",
-      "proposalDraft": "Hi,\n\nI saw your project \"Cherche accompagnement demi-jour wp extensions media library et revela En cours Moins de 500 €\" and it looks close to the kind of full-stack/platform work I handle.\n\nMy strongest fit here is turning the business goal into a clean, responsive implementation with the technical setup around launch handled properly.\n\nI can help clarify the scope, then take care of the implementation, API/backend work, responsive front-end, deployment details, and clean handover.\n\nPortfolio: https://www.rayanstudios.com/fr\n\nIf you can share the current stack, priority features and timeline, I can reply with a concrete scope and estimate.\n\nBest,\nRayan\nMission: https://www.codeur.com/projects/492246-cherche-accompagnement-demi-jour-wp-extensions-media-library-et-revela"
+      "proposalDraft": "Hi,\n\nI saw your project \"J’ai un logiciel de gestion de planning de stock pour des artisan\" and it looks close to the kind of full-stack/platform work I handle.\n\nMy strongest fit here is taking a web product from a clear scope to a working, maintainable implementation.\n\nI can help clarify the scope, then take care of the implementation, API/backend work, responsive front-end, deployment details, and clean handover.\n\nPortfolio: https://www.rayanstudios.com/fr\n\nIf you can share the current stack, priority features and timeline, I can reply with a concrete scope and estimate.\n\nBest,\nRayan\nMission: https://www.codeur.com/projects/492397-j-ai-un-logiciel-de-gestion-de-planning-de-stock-pour-des-artisan"
     },
     {
       "source": "404Works - remote full stack web developer",
@@ -415,7 +415,7 @@
       "platform": "codeur",
       "searchQuery": "remote full stack web developer",
       "remoteGuaranteed": false,
-      "title": "Mentor expert en Data Engineering, Cloud et Intelligence Artificielle Il y a 2 heures Ouvert 200 à 500 €/jour 11 Offres 740 Vues Nous recherchons un mentor expérimenté pour accompagner nos apprenants dans la conception et l'industrialisation de solutions Data et IA. Les interventions pourront porter sur : - Python, FastAPI et architecture microservices. - Pipelines ETL, Sp... Formation Machine Learning Big Data +6 Herve Bansay Akli Lacene Freelance-Website Websource Fabien Déchery",
+      "title": "Mentor expert en Data Engineering, Cloud et Intelligence Artificielle Il y a 1 jour Ouvert 200 à 500 €/jour 16 Offres 3829 Vues Nous recherchons un mentor expérimenté pour accompagner nos apprenants dans la conception et l'industrialisation de solutions Data et IA. Les interventions pourront porter sur : - Python, FastAPI et architecture microservices. - Pipelines ETL, Sp... Formation Machine Learning Big Data +11 Herve Bansay Akli Lacene Freelance-Website Websource EncureIT_Systems",
       "description": "",
       "sourceDescription": "Découvrez les derniers projets disponibles sur Codeur.com et trouvez plus de cent nouvelles missions en freelance chaque jour.",
       "url": "https://www.codeur.com/projects/492361-mentor-expert-en-data-engineering-cloud-et-intelligence-artificielle",
@@ -439,7 +439,7 @@
       "platform": "codeur",
       "searchQuery": "remote full stack web developer",
       "remoteGuaranteed": false,
-      "title": "E-commerce et site web vitrine Il y a 24 heures Ouvert Moins de 500 € 37 Offres 3996 Vues Nous recherchons un freelance pour animer les réseaux sociaux de Secteur 72, un projet de terrain d'airsoft en Sarthe réservé aux joueurs majeurs, avec boutique en ligne d'équipement et une chaîne YouTube. Notre besoin porte principalement sur la... Community management Communication Audio, Video, Multimedia +32 Fabien Berthelet Websource Nolwenn Drai--Laguens Advency_Media Adam Rotard",
+      "title": "E-commerce et site web vitrine Il y a 2 jours Ouvert Moins de 500 € 42 Offres 5634 Vues Nous recherchons un freelance pour animer les réseaux sociaux de Secteur 72, un projet de terrain d'airsoft en Sarthe réservé aux joueurs majeurs, avec boutique en ligne d'équipement et une chaîne YouTube. Notre besoin porte principalement sur la... Community management Communication Audio, Video, Multimedia +37 Fabien Berthelet Websource Nolwenn Drai--Laguens Advency_Media Adam Rotard",
       "description": "",
       "sourceDescription": "Découvrez les derniers projets disponibles sur Codeur.com et trouvez plus de cent nouvelles missions en freelance chaque jour.",
       "url": "https://www.codeur.com/projects/492309-e-commerce-et-site-web-vitrine",
@@ -459,28 +459,27 @@
       "proposalDraft": "Bonjour,\n\nJ'ai vu votre mission \"E-commerce et site web vitrine\". Je peux vous aider sur la partie site.\n\nJe commencerais par clarifier la structure et les priorites, puis je peux prendre en charge la maquette, le developpement, le responsive, le SEO de depart, le domaine/DNS et la mise en ligne.\n\nQuelques exemples de mon travail: https://www.rayanstudios.com/fr\n\nSi vous avez l'URL actuelle, 2-3 references ou une contrainte de delai/budget, je peux vous repondre avec un perimetre concret et une estimation plus precise.\n\nBonne journee,\nRayan\nMission: https://www.codeur.com/projects/492309-e-commerce-et-site-web-vitrine"
     },
     {
-      "source": "Codeur - remote full stack web developer",
-      "sourceUrl": "https://www.codeur.com/projects?keywords=remote%20full%20stack%20web%20developer",
-      "platform": "codeur",
+      "source": "Freelancer - remote full stack web developer",
+      "sourceUrl": "https://www.freelancer.com/jobs/website-development",
+      "platform": "freelancer",
       "searchQuery": "remote full stack web developer",
       "remoteGuaranteed": false,
-      "title": "Site internet e-commerce Il y a 2 jours Ouvert 1 000 € à 10 000 € 165 Offres 6192 Vues Bonjour, Je recherche un développeur WordPress / WooCommerce expérimenté pour concevoir l'intégralité d’un site internet qui conçoit et fabrique des sacs à dos sur mesure. Voir le site https://atompacks.co.uk qui correspond exactement à ce que je ... WooCommerce WordPress Site E-commerce +160 Louis Jodon De Villeroché Dan Salczer Yanis Bouchfira Enzo Foulquier Hugo Battoue",
+      "title": "Web & E-commerce Specialist - own website, shop, checkout and white-label storefronts (ongoing)",
       "description": "",
-      "sourceDescription": "Découvrez les derniers projets disponibles sur Codeur.com et trouvez plus de cent nouvelles missions en freelance chaque jour.",
-      "url": "https://www.codeur.com/projects/492260-site-internet-e-commerce",
+      "sourceDescription": "World's largest website for Website Development Jobs. Find $$$ Website Development Jobs or hire a Website Developer to bid on your Website Development Job at Freelancer. 12m+ Jobs!",
+      "url": "https://www.freelancer.com/projects/ecommerce/web-commerce-specialist-own-website",
       "extractionMethod": "anchor",
-      "score": 100,
+      "score": 95,
       "fit": "high",
       "reasons": [
         "besoin site/refonte",
         "profil full-stack/platform",
-        "profil TPE/local",
-        "budget mentionne"
+        "profil TPE/local"
       ],
       "remoteOnly": false,
       "remoteStatus": "unknown",
       "remoteReason": "teletravail non mentionne",
-      "proposalDraft": "Bonjour,\n\nJ'ai vu votre mission \"Site internet e-commerce\". Je peux vous aider sur la partie site.\n\nJe commencerais par clarifier la structure et les priorites, puis je peux prendre en charge la maquette, le developpement, le responsive, le SEO de depart, le domaine/DNS et la mise en ligne.\n\nQuelques exemples de mon travail: https://www.rayanstudios.com/fr\n\nSi vous avez l'URL actuelle, 2-3 references ou une contrainte de delai/budget, je peux vous repondre avec un perimetre concret et une estimation plus precise.\n\nBonne journee,\nRayan\nMission: https://www.codeur.com/projects/492260-site-internet-e-commerce"
+      "proposalDraft": "Hi,\n\nI saw your project \"Web & E-commerce Specialist - own website, shop, checkout and white-label storefronts (ongoing)\" and it looks close to the kind of full-stack/platform work I handle.\n\nMy strongest fit here is turning the business goal into a clean, responsive implementation with the technical setup around launch handled properly.\n\nI can help clarify the scope, then take care of the implementation, API/backend work, responsive front-end, deployment details, and clean handover.\n\nPortfolio: https://www.rayanstudios.com/fr\n\nIf you can share the current stack, priority features and timeline, I can reply with a concrete scope and estimate.\n\nBest,\nRayan\nMission: https://www.freelancer.com/projects/ecommerce/web-commerce-specialist-own-website"
     },
     {
       "source": "Freelancer - remote full stack web developer",
@@ -511,7 +510,7 @@
       "platform": "codeur",
       "searchQuery": "remote full stack web developer",
       "remoteGuaranteed": false,
-      "title": "Recherche développeur web back end Il y a plus d'un an Ouvert 500 € à 1 000 € 100 Offres 36547 Vues Bonjour, Je m'appelle Johanna, et je suis co-directrice d'un projet ambitieux visant à lancer une nouvelle plateforme de contenu pour adultes. Le développement de ce projet est déjà bien avancé, nos développeurs actuels sont 3 il y en 1 qui doit p... Back-end Python Cloud computing +95 soqabee MAETVIN Sebastien Escudero Ali Benmerad Fabien Berthelet",
+      "title": "Recherche développeur web back end Il y a plus d'un an Ouvert 500 € à 1 000 € 101 Offres 38266 Vues Bonjour, Je m'appelle Johanna, et je suis co-directrice d'un projet ambitieux visant à lancer une nouvelle plateforme de contenu pour adultes. Le développement de ce projet est déjà bien avancé, nos développeurs actuels sont 3 il y en 1 qui doit p... Back-end Python Cloud computing +96 soqabee MAETVIN Sebastien Escudero Ali Benmerad Fabien Berthelet",
       "description": "",
       "sourceDescription": "Découvrez les derniers projets disponibles sur Codeur.com et trouvez plus de cent nouvelles missions en freelance chaque jour.",
       "url": "https://www.codeur.com/projects/458629-recherche-developpeur-web-back-end",
@@ -535,7 +534,7 @@
       "platform": "codeur",
       "searchQuery": "remote full stack web developer",
       "remoteGuaranteed": false,
-      "title": "Nous ouvrons un restaurant traditionnel sur les quais de Quimper Il y a 4 heures Ouvert 500 € à 1 000 € 158 Offres 2168 Vues Nous ouvrons un restaurant traditionnel sur les Quais de Quimper, nous aurions besoin d'un site internet qui fiat \"vitrine\" du restaurant, avec les cartes (plats, boissons, brunch et coktail), les horaires, le numéro de téléphon et contact, des ph... Création de site internet Site clé en main Web design +153 Quentin Pollet Chakib Zeraia Yanis Bouchfira Gregory Younes Mirai-Tech",
+      "title": "Nous ouvrons un restaurant traditionnel sur les quais de Quimper Il y a 1 jour Ouvert 500 € à 1 000 € 194 Offres 6410 Vues Nous ouvrons un restaurant traditionnel sur les Quais de Quimper, nous aurions besoin d'un site internet qui fiat \"vitrine\" du restaurant, avec les cartes (plats, boissons, brunch et coktail), les horaires, le numéro de téléphon et contact, des ph... Création de site internet Site clé en main Web design +189 Quentin Pollet Chakib Zeraia Yanis Bouchfira Gregory Younes Mirai-Tech",
       "description": "",
       "sourceDescription": "Découvrez les derniers projets disponibles sur Codeur.com et trouvez plus de cent nouvelles missions en freelance chaque jour.",
       "url": "https://www.codeur.com/projects/492351-nous-ouvrons-un-restaurant-traditionnel-sur-les-quais-de-quimper",
@@ -603,7 +602,31 @@
       "platform": "codeur",
       "searchQuery": "remote full stack web developer",
       "remoteGuaranteed": false,
-      "title": "Application de relance prospects par sms et message vocaux IA Il y a 2 heures Ouvert 500 € à 1 000 € 92 Offres 1114 Vues Bonjour, Je recherche un prestataire pour développer une application mobile ou un logiciel informatique permettant d’automatiser la relance de mes prospects. Je dirige un organisme de formation et je commercialise également des produits profess... Développement spécifique Logiciel Téléphonie et Télécom +87 Adrien Korbendau Freelance-Website Thibaud Lescroart Yanis Bouchfira Mirai-Tech",
+      "title": "Recherche un développeur Il y a 24 heures Ouvert Moins de 500 € 131 Offres 4515 Vues **Recherche développeur freelance – Projet OPTIC PARTNER** Bonjour, Je développe OPTIC PARTNER, un projet de solutions d'automatisation et d'intelligence artificielle destiné aux opticiens indépendants en France. Je recherche un développeur fre... Développement spécifique API Chatbot +126 Thibault Collard-Bovy Joan Rodriguez Thibaud Lescroart Pierre Baroni Mirai-Tech",
+      "description": "",
+      "sourceDescription": "Découvrez les derniers projets disponibles sur Codeur.com et trouvez plus de cent nouvelles missions en freelance chaque jour.",
+      "url": "https://www.codeur.com/projects/492379-recherche-un-developpeur",
+      "extractionMethod": "anchor",
+      "score": 75,
+      "fit": "high",
+      "reasons": [
+        "profil full-stack/platform",
+        "automation, paiement ou integration",
+        "UX, mobile ou conversion",
+        "budget mentionne"
+      ],
+      "remoteOnly": false,
+      "remoteStatus": "unknown",
+      "remoteReason": "teletravail non mentionne",
+      "proposalDraft": "Bonjour,\n\nJ'ai vu votre mission \"Recherche un développeur\". Je peux vous aider sur la partie site.\n\nJe commencerais par clarifier la structure et les priorites, puis je peux prendre en charge la maquette, le developpement, le responsive, le SEO de depart, le domaine/DNS et la mise en ligne.\n\nQuelques exemples de mon travail: https://www.rayanstudios.com/fr\n\nSi vous avez l'URL actuelle, 2-3 references ou une contrainte de delai/budget, je peux vous repondre avec un perimetre concret et une estimation plus precise.\n\nBonne journee,\nRayan\nMission: https://www.codeur.com/projects/492379-recherche-un-developpeur"
+    },
+    {
+      "source": "Codeur - remote full stack web developer",
+      "sourceUrl": "https://www.codeur.com/projects?keywords=remote%20full%20stack%20web%20developer",
+      "platform": "codeur",
+      "searchQuery": "remote full stack web developer",
+      "remoteGuaranteed": false,
+      "title": "Application de relance prospects par sms et message vocaux IA Il y a 1 jour Ouvert 500 € à 1 000 € 123 Offres 5294 Vues Bonjour, Je recherche un prestataire pour développer une application mobile ou un logiciel informatique permettant d’automatiser la relance de mes prospects. Je dirige un organisme de formation et je commercialise également des produits profess... Développement spécifique Logiciel Téléphonie et Télécom +118 Adrien Korbendau Freelance-Website Thibaud Lescroart Yanis Bouchfira Mirai-Tech",
       "description": "",
       "sourceDescription": "Découvrez les derniers projets disponibles sur Codeur.com et trouvez plus de cent nouvelles missions en freelance chaque jour.",
       "url": "https://www.codeur.com/projects/492349-application-de-relance-prospects-par-sms-et-message-vocaux-ia",
@@ -619,28 +642,6 @@
       "remoteStatus": "unknown",
       "remoteReason": "teletravail non mentionne",
       "proposalDraft": "Bonjour,\n\nJ'ai vu votre mission \"Application de relance prospects par sms et message vocaux IA\". Je peux vous aider sur la partie site.\n\nJe commencerais par clarifier la structure et les priorites, puis je peux prendre en charge la maquette, le developpement, le responsive, le SEO de depart, le domaine/DNS et la mise en ligne.\n\nQuelques exemples de mon travail: https://www.rayanstudios.com/fr\n\nSi vous avez l'URL actuelle, 2-3 references ou une contrainte de delai/budget, je peux vous repondre avec un perimetre concret et une estimation plus precise.\n\nBonne journee,\nRayan\nMission: https://www.codeur.com/projects/492349-application-de-relance-prospects-par-sms-et-message-vocaux-ia"
-    },
-    {
-      "source": "Freelancer - remote devops deployment",
-      "sourceUrl": "https://www.freelancer.com/jobs/website-management",
-      "platform": "freelancer",
-      "searchQuery": "remote devops deployment",
-      "remoteGuaranteed": false,
-      "title": "Website SEO & Speed Optimization",
-      "description": "",
-      "sourceDescription": "World's largest website for Website Management Jobs. Find $$$ Website Management Jobs or hire a Website Manager to bid on your Website Management Job at Freelancer. 12m+ Jobs!",
-      "url": "https://www.freelancer.com/projects/google-website-optimizer/website-seo-speed-optimization",
-      "extractionMethod": "anchor",
-      "score": 75,
-      "fit": "high",
-      "reasons": [
-        "besoin site/refonte",
-        "SEO ou visibilite locale"
-      ],
-      "remoteOnly": false,
-      "remoteStatus": "unknown",
-      "remoteReason": "teletravail non mentionne",
-      "proposalDraft": "Hi,\n\nI saw your project \"Website SEO & Speed Optimization\" and it looks close to the kind of full-stack/platform work I handle.\n\nMy strongest fit here is taking a web product from a clear scope to a working, maintainable implementation.\n\nI can help clarify the scope, then take care of the implementation, API/backend work, responsive front-end, deployment details, and clean handover.\n\nPortfolio: https://www.rayanstudios.com/fr\n\nIf you can share the current stack, priority features and timeline, I can reply with a concrete scope and estimate.\n\nBest,\nRayan\nMission: https://www.freelancer.com/projects/google-website-optimizer/website-seo-speed-optimization"
     }
   ],
   "errors": []
