@@ -1,5 +1,5 @@
 {
-  "runAt": "2026-11-16T18:20:28.143Z",
+  "runAt": "2026-11-17T17:32:25.961Z",
   "status": "ready",
   "sourceMode": "default_platforms",
   "sourceCount": 18,
@@ -149,17 +149,44 @@
       "autoDiscovered": true
     }
   ],
-  "scannedOpportunities": 228,
+  "scannedOpportunities": 218,
   "scoredCandidateCount": 63,
   "remotePolicy": "explicit_remote_only",
-  "remoteRejectedCount": 61,
+  "remoteRejectedCount": 62,
   "remoteRejected": [
+    {
+      "title": "Intégration Web API Avantio pour un moteur de réservation de villas Il y a 7 heures Ouvert 500 € à 1 000 € 76 Offres 1908 Vues Garamonds est une marque d'hôtellerie en villas privées en Italie (lac de Côme, Portofino, Pouilles). Nous cherchons un développeur pour connecter notre moteur de réservation sur mesure (maquette HTML prête, site WordPress) à notre PMS, Avantio, v... API Développement spécifique WordPress +71 Dan Salczer Simon Cambier Galo Paco Sodez Mirai-Tech",
+      "url": "https://www.codeur.com/projects/493044-integration-web-api-avantio-pour-un-moteur-de-reservation-de-villas",
+      "platform": "codeur",
+      "source": "Codeur - remote full stack web developer",
+      "score": 100,
+      "remoteStatus": "unknown",
+      "remoteReason": "teletravail non mentionne"
+    },
     {
       "title": "E-Commerce Website Development",
       "url": "https://www.freelancer.com/projects/payment-gateway-integration/commerce-website-development-40815365",
       "platform": "freelancer",
       "source": "Freelancer - remote full stack web developer",
       "score": 100,
+      "remoteStatus": "unknown",
+      "remoteReason": "teletravail non mentionne"
+    },
+    {
+      "title": "CREATION SITE VITRINE PRO SECRETAIRE ASSISTANTE MEDICO ADMINISTRATIVE Il y a 7 heures Ouvert Moins de 500 € 140 Offres 2336 Vues Je suis secrétaire assistante médico- administrative en micro entreprise. Je souhaite un site vitrine pro de 5 pages. j' ai déjà tous les textes et photos, j ai besoin de la mise en page, du formulaire de contact et du référencement de base sur g... Création de site internet Site clé en main +135 Quentin Pollet Dan Salczer LaFactoryInc Titouan Renard Mirai-Tech",
+      "url": "https://www.codeur.com/projects/493034-creation-site-vitrine-pro-secretaire-assistante-medico-administrative",
+      "platform": "codeur",
+      "source": "Codeur - remote full stack web developer",
+      "score": 95,
+      "remoteStatus": "onsite",
+      "remoteReason": "mention sur site ou presentiel"
+    },
+    {
+      "title": "Finaliser site WordPress Il y a 23 heures Ouvert 500 € à 1 000 € 122 Offres 6015 Vues Suite à une surcharge d'activité, nous recherchons un freelance pour finaliser un site vitrine sous WordPress (design déjà réalisé mais ouvert à des propositions d'amélioration, thème Astra + WPBakery) : - Quelques pages à intégrer (contact, galer... WordPress Création de site internet SEO / GEO +117 Benziane Youcef Thibault Monteiro easyweb-app Adrien Lopez Websource",
+      "url": "https://www.codeur.com/projects/493013-finaliser-site-wordpress",
+      "platform": "codeur",
+      "source": "Codeur - remote full stack web developer",
+      "score": 95,
       "remoteStatus": "unknown",
       "remoteReason": "teletravail non mentionne"
     },
@@ -191,31 +218,13 @@
       "remoteReason": "teletravail non mentionne"
     },
     {
-      "title": "Modernisation d’un SaaS B2B immobilier — migration .NET, React et clou Il y a un mois En cours 500 à 800 €/jour 121 Offres 13705 Vues Je recherche un prestataire pour moderniser un SaaS B2B dans le secteur de l’immobilier et l’accompagner dans la durée. La base technique actuelle est vieillissante et montre ses limites. Je souhaite la faire évoluer pour disposer d’un socle pére... SaaS Migration ou refonte de site .NET +116 Pierre Vaussanvin Mohamed Khlifi Studio_Bidibou MAETVIN Officentrale - Spécialistes Ms Office",
+      "title": "Modernisation d’un SaaS B2B immobilier — migration .NET, React et clou Il y a un mois En cours 500 à 800 €/jour 121 Offres 15038 Vues Je recherche un prestataire pour moderniser un SaaS B2B dans le secteur de l’immobilier et l’accompagner dans la durée. La base technique actuelle est vieillissante et montre ses limites. Je souhaite la faire évoluer pour disposer d’un socle pére... SaaS Migration ou refonte de site .NET +116 Pierre Vaussanvin Mohamed Khlifi Studio_Bidibou MAETVIN Officentrale - Spécialistes Ms Office",
       "url": "https://www.codeur.com/projects/491121-modernisation-d-un-saas-b2b-immobilier-migration-net-react-et-clou",
       "platform": "codeur",
       "source": "Codeur - remote full stack web developer",
       "score": 90,
       "remoteStatus": "onsite",
       "remoteReason": "mention sur site ou presentiel"
-    },
-    {
-      "title": "Construction d'un site web pour biotech en biologie moléculaire Il y a 2 jours En cours 500 € à 1 000 € 83 Offres 7311 Vues Brief pour la création du site 4BBIOSEARCH – Hzymes Biotech Nous souhaitons créer un site web professionnel pour présenter 4BBIOSEARCH et mettre en avant les solutions de Hzymes Biotech, notamment ses réactifs et produits destinés à la recherche, ... Création de site internet Web design Site clé en main +78 Florent Bach Dan Salczer LaFactoryInc Karl Lameynardie Marina Bassano",
-      "url": "https://www.codeur.com/projects/492914-construction-d-un-site-web-pour-biotech-en-biologie-moleculaire",
-      "platform": "codeur",
-      "source": "Codeur - remote full stack web developer",
-      "score": 90,
-      "remoteStatus": "unknown",
-      "remoteReason": "teletravail non mentionne"
-    },
-    {
-      "title": "Migrate Emergent Website to AWS on a Sydney Server",
-      "url": "https://www.freelancer.com/projects/cloud-computing/migrate-emergent-website-aws-sydney",
-      "platform": "freelancer",
-      "source": "Freelancer - remote full stack web developer",
-      "score": 85,
-      "remoteStatus": "unknown",
-      "remoteReason": "teletravail non mentionne"
     },
     {
       "title": "Development of a Stock Market Trading & Simulation Website",
@@ -236,40 +245,22 @@
       "remoteReason": "teletravail non mentionne"
     },
     {
-      "title": "Migration de mon blog overblog vers wordpress plus monétisation. Il y a 2 jours Ouvert Moins de 500 € 84 Offres 6282 Vues Bonjour, j'ai un blog OVERBLOG en formule business (23,99 par mois) (pronostiques hippiques gratuit) je publie un pronostic tous les jours depuis 2012 avec plus de 5000 pages d'archives , j'ai une audience de 44000 visiteurs par mois et plus 12000... Migration ou refonte de site WordPress SEO / GEO +79 Quentin Pollet LaFactoryInc Hervé Yvis Galo Websource",
-      "url": "https://www.codeur.com/projects/492905-migration-de-mon-blog-overblog-vers-wordpress-plus-monetisation",
+      "title": "Site pour une commune Il y a 9 heures Ouvert Moins de 500 € 117 Offres 2165 Vues besoin d agence de dev pour un site internet dans le rhone alpes, pour un devis gratuit a titre indicatif, prospectif pour avoir une idee du cout de la creation d un site/page internet La commune veut un site unique avec deux espaces : une vitrin... Création de site internet Site clé en main +112 Eric Theret LaFactoryInc Christiane Cicatello easyweb-app Mirai-Tech",
+      "url": "https://www.codeur.com/projects/493019-site-pour-une-commune",
       "platform": "codeur",
       "source": "Codeur - remote full stack web developer",
-      "score": 80,
+      "score": 75,
       "remoteStatus": "unknown",
       "remoteReason": "teletravail non mentionne"
     },
     {
-      "title": "Recherche développeur WordPress freelance – R...",
-      "url": "https://www.404works.com/fr/project/recherche-developpeur-wordpress-freelance-refonte-sur-mesure-seo-et-affiliation",
-      "platform": "404works",
-      "source": "404Works - remote full stack web developer",
-      "score": 80,
-      "remoteStatus": "unknown",
-      "remoteReason": "teletravail non mentionne"
-    },
-    {
-      "title": "MVP Application Mobile Déco & Seconde Main (IA Générative / Spatial AI Il y a 5 heures Ouvert 500 € à 1 000 € 93 Offres 1742 Vues 1. Présentation du concept Je suis décoratrice d'intérieur et personal chineuse. Je souhaite développer la première version (MVP) d'une application mobile (iOS/Android ou Web App responsive PWA) permettant aux utilisateurs de projeter en quelques ... Application mobile Développement spécifique +88 Dan Salczer easyweb-app Karl Lameynardie Damien Gros Mirai-Tech",
+      "title": "MVP Application Mobile Déco & Seconde Main (IA Générative / Spatial AI Il y a 1 jour Ouvert 500 € à 1 000 € 108 Offres 6145 Vues 1. Présentation du concept Je suis décoratrice d'intérieur et personal chineuse. Je souhaite développer la première version (MVP) d'une application mobile (iOS/Android ou Web App responsive PWA) permettant aux utilisateurs de projeter en quelques ... Application mobile Développement spécifique +103 Dan Salczer easyweb-app Damien Gros Karl Lameynardie Mirai-Tech",
       "url": "https://www.codeur.com/projects/492992-mvp-application-mobile-deco-seconde-main-ia-generative-spatial-ai",
       "platform": "codeur",
       "source": "Codeur - remote full stack web developer",
       "score": 75,
       "remoteStatus": "unknown",
       "remoteReason": "teletravail non mentionne"
-    },
-    {
-      "title": "Refonte graphique et restructuration du parcours - site sel-tech.fr Il y a 2 jours En cours 500 € à 1 000 € 110 Offres 9412 Vues Bonjour, ​Je souhaite faire évoluer mon site actuel sel-tech.fr (spécialisé dans les solutions d’étanchéité) avec deux objectifs principaux : restructurer totalement l’accueil et l'arborescence autour de mes 2 pôles d’activité et moderniser le des... Migration ou refonte de site Web design Experience utilisateur +105 LaFactoryInc Dan Salczer Joffrey Klepman Karl Lameynardie Quentin Pollet",
-      "url": "https://www.codeur.com/projects/492916-refonte-graphique-et-restructuration-du-parcours-site-sel-tech-fr",
-      "platform": "codeur",
-      "source": "Codeur - remote full stack web developer",
-      "score": 75,
-      "remoteStatus": "onsite",
-      "remoteReason": "mention sur site ou presentiel"
     },
     {
       "title": "Modern WordPress Site & SEO -- 3",
@@ -281,16 +272,7 @@
       "remoteReason": "teletravail non mentionne"
     },
     {
-      "title": "MedAlign UX, SEO & Conversion Upgrade",
-      "url": "https://www.freelancer.com/projects/react-js/medalign-seo-conversion-upgrade",
-      "platform": "freelancer",
-      "source": "Freelancer - remote full stack web developer",
-      "score": 75,
-      "remoteStatus": "unknown",
-      "remoteReason": "teletravail non mentionne"
-    },
-    {
-      "title": "Igration e-commerce Shopify & ERP (Odoo) avec spécificités métier Il y a 8 heures Ouvert 10 000 € et plus 105 Offres 3276 Vues À propos de nous : acteur de la vente en circuit court de produits frais et locaux (paniers de fruits/légumes et épicerie fine, 180 points relais et 450 entreprises), nous préparons notre migration de Sylius vers Shopify (Shopify plus) , couplée à... Shopify Site E-commerce ERP +100 Louis Jodon De Villeroché Dan Salczer Thibaud Lescroart Karl Lameynardie Websource",
+      "title": "Igration e-commerce Shopify & ERP (Odoo) avec spécificités métier Il y a 1 jour Ouvert 10 000 € et plus 115 Offres 8657 Vues À propos de nous : acteur de la vente en circuit court de produits frais et locaux (paniers de fruits/légumes et épicerie fine, 180 points relais et 450 entreprises), nous préparons notre migration de Sylius vers Shopify (Shopify plus) , couplée à... Shopify Site E-commerce ERP +110 Louis Jodon De Villeroché Dan Salczer Thibaud Lescroart Karl Lameynardie Websource",
       "url": "https://www.codeur.com/projects/492986-igration-e-commerce-shopify-erp-odoo-avec-specificites-metier",
       "platform": "codeur",
       "source": "Codeur - remote full stack web developer",
@@ -299,19 +281,19 @@
       "remoteReason": "teletravail non mentionne"
     },
     {
-      "title": "Sourcing en Chine et intégration PrestaShop Il y a 9 heures Ouvert Moins de 500 € 13 Offres 2098 Vues Nous recherchons un freelance expérimenté en sourcing en Chine et en intégration PrestaShop, disposant idéalement d’un réseau de fournisseurs directs et fiables. La mission consiste à trouver de nouveaux fabricants et fournisseurs, négocier les m... Prestashop Site E-commerce API +8 Websource Jaroslaw Chmielewski Magicien Duweb oxton-digital centoria_services",
-      "url": "https://www.codeur.com/projects/492977-sourcing-en-chine-et-integration-prestashop",
-      "platform": "codeur",
-      "source": "Codeur - remote full stack web developer",
+      "title": "Modern Responsive Business Website",
+      "url": "https://www.freelancer.com/projects/css/modern-responsive-business-website-40822307",
+      "platform": "freelancer",
+      "source": "Freelancer - remote full stack web developer",
       "score": 70,
       "remoteStatus": "unknown",
       "remoteReason": "teletravail non mentionne"
     },
     {
-      "title": "Site d’impression en ligne : paiement, fichiers, commandes Il y a 3 jours Ouvert 500 € à 1 000 € 134 Offres 7670 Vues Titre : Finaliser un site d’impression en ligne (paiement, fichiers, commandes) Bonjour, Je lance TI’PRINT, un service d’impression en ligne pour toute la Guadeloupe (photocopies, couleur, reliure). J’ai déjà la partie visible du site (accueil, ... Développement spécifique Système de paiement Site E-commerce +129 Dan Salczer Adrien Korbendau Galo Aymeric Guerchon Mirai-Tech",
-      "url": "https://www.codeur.com/projects/492900-site-d-impression-en-ligne-paiement-fichiers-commandes",
-      "platform": "codeur",
-      "source": "Codeur - remote full stack web developer",
+      "title": "Comprehensive Marketplace Website Development",
+      "url": "https://www.freelancer.com/projects/payment-gateway-integration/comprehensive-marketplace-website",
+      "platform": "freelancer",
+      "source": "Freelancer - remote full stack web developer",
       "score": 70,
       "remoteStatus": "unknown",
       "remoteReason": "teletravail non mentionne"
@@ -326,16 +308,34 @@
       "remoteReason": "teletravail non mentionne"
     },
     {
-      "title": "WooCommerce Redesign & Speed Boost",
-      "url": "https://www.freelancer.com/projects/css/woocommerce-redesign-speed-boost",
+      "title": "Recherche développeur mobile Il y a 2 heures Ouvert 1 000 € à 10 000 € 43 Offres 1205 Vues Détails du projet : besoin d'un développeur pour faire une application de rencontres avec une géolocalisation, des partages de photos et videos, des publications d'albums et une partie payants Application de rencontres Détails des prestatio... Système de paiement Application mobile Développement spécifique +38 JUNR ipstand Geoffrey Davoine Florent Neyret Quentin Pollet",
+      "url": "https://www.codeur.com/projects/493032-recherche-developpeur-mobile",
+      "platform": "codeur",
+      "source": "Codeur - remote full stack web developer",
+      "score": 65,
+      "remoteStatus": "unknown",
+      "remoteReason": "teletravail non mentionne"
+    },
+    {
+      "title": "Gyors WordPress Webshop Be&aacute;ll&iacute;t&aacute;s",
+      "url": "https://www.freelancer.com/projects/woocommerce/gyors-wordpress-webshop",
       "platform": "freelancer",
       "source": "Freelancer - remote full stack web developer",
       "score": 65,
       "remoteStatus": "unknown",
       "remoteReason": "teletravail non mentionne"
+    },
+    {
+      "title": "Weekly WordPress Content Updates",
+      "url": "https://www.freelancer.com/projects/woocommerce/weekly-wordpress-content-updates",
+      "platform": "freelancer",
+      "source": "Freelancer - remote devops deployment",
+      "score": 65,
+      "remoteStatus": "unknown",
+      "remoteReason": "teletravail non mentionne"
     }
   ],
-  "candidateCount": 2,
+  "candidateCount": 1,
   "toVerifyCount": 10,
   "maxOpportunities": 30,
   "minScore": 35,
@@ -364,33 +364,12 @@
   ],
   "candidates": [
     {
-      "source": "404Works - remote full stack web developer",
-      "sourceUrl": "https://www.404works.com/fr/projects?search=remote%20full%20stack%20web%20developer",
-      "platform": "404works",
-      "searchQuery": "remote full stack web developer",
-      "remoteGuaranteed": false,
-      "title": "Animation d'une formation formation WordPress...",
-      "description": "",
-      "sourceDescription": "Missions freelance publiées par des entreprises. Projets disponibles, échanges directs, sans commission ni frais cachés.",
-      "url": "https://www.404works.com/fr/project/animation-d-une-formation-formation-wordpress-en-distanciel",
-      "extractionMethod": "anchor",
-      "score": 55,
-      "fit": "medium",
-      "reasons": [
-        "besoin site/refonte"
-      ],
-      "remoteOnly": true,
-      "remoteStatus": "remote",
-      "remoteReason": "teletravail explicite dans la mission",
-      "proposalDraft": "Hi,\n\nI saw your project \"Animation d'une formation formation WordPress...\" and it looks close to the kind of full-stack/platform work I handle.\n\nMy strongest fit here is turning the business goal into a clean, responsive implementation with the technical setup around launch handled properly.\n\nI can help clarify the scope, then take care of the implementation, API/backend work, responsive front-end, deployment details, and clean handover.\n\nPortfolio: https://www.rayanstudios.com/fr\n\nIf you can share the current stack, priority features and timeline, I can reply with a concrete scope and estimate.\n\nBest,\nRayan\nMission: https://www.404works.com/fr/project/animation-d-une-formation-formation-wordpress-en-distanciel"
-    },
-    {
       "source": "Codeur - remote full stack web developer",
       "sourceUrl": "https://www.codeur.com/projects?keywords=remote%20full%20stack%20web%20developer",
       "platform": "codeur",
       "searchQuery": "remote full stack web developer",
       "remoteGuaranteed": false,
-      "title": "Ghostcreator UGC SaaS B2B Il y a 9 heures Ouvert 500 € à 1 000 € 10 Offres 2300 Vues La mission : - Publier au moins 5 vidéos par semaine, sur un compte dédié - Tourner à partir de nos scripts et formats : tout est fourni, il n’y a rien à inventer - Mission à distance, sur la durée Le profil : - À l’aise face caméra, avec un to... Audio, Video, Multimedia Communication Marketing +5 Thierry Daudier YMHB_web_dijon TaskHub Maxence D’Abreu Romain Mention",
+      "title": "Ghostcreator UGC SaaS B2B Il y a 1 jour Ouvert 500 € à 1 000 € 12 Offres 2759 Vues La mission : - Publier au moins 5 vidéos par semaine, sur un compte dédié - Tourner à partir de nos scripts et formats : tout est fourni, il n’y a rien à inventer - Mission à distance, sur la durée Le profil : - À l’aise face caméra, avec un to... Audio, Video, Multimedia Communication Marketing +7 Thierry Daudier YMHB_web_dijon TaskHub Maxence D’Abreu Romain Mention",
       "description": "",
       "sourceDescription": "Découvrez les derniers projets disponibles sur Codeur.com et trouvez plus de cent nouvelles missions en freelance chaque jour.",
       "url": "https://www.codeur.com/projects/492982-ghostcreator-ugc-saas-b2b",
@@ -408,6 +387,30 @@
     }
   ],
   "toVerify": [
+    {
+      "source": "Codeur - remote full stack web developer",
+      "sourceUrl": "https://www.codeur.com/projects?keywords=remote%20full%20stack%20web%20developer",
+      "platform": "codeur",
+      "searchQuery": "remote full stack web developer",
+      "remoteGuaranteed": false,
+      "title": "Intégration Web API Avantio pour un moteur de réservation de villas Il y a 7 heures Ouvert 500 € à 1 000 € 76 Offres 1908 Vues Garamonds est une marque d'hôtellerie en villas privées en Italie (lac de Côme, Portofino, Pouilles). Nous cherchons un développeur pour connecter notre moteur de réservation sur mesure (maquette HTML prête, site WordPress) à notre PMS, Avantio, v... API Développement spécifique WordPress +71 Dan Salczer Simon Cambier Galo Paco Sodez Mirai-Tech",
+      "description": "",
+      "sourceDescription": "Découvrez les derniers projets disponibles sur Codeur.com et trouvez plus de cent nouvelles missions en freelance chaque jour.",
+      "url": "https://www.codeur.com/projects/493044-integration-web-api-avantio-pour-un-moteur-de-reservation-de-villas",
+      "extractionMethod": "anchor",
+      "score": 100,
+      "fit": "high",
+      "reasons": [
+        "besoin site/refonte",
+        "profil full-stack/platform",
+        "profil TPE/local",
+        "budget mentionne"
+      ],
+      "remoteOnly": false,
+      "remoteStatus": "unknown",
+      "remoteReason": "teletravail non mentionne",
+      "proposalDraft": "Bonjour,\n\nJ'ai vu votre mission \"Intégration Web API Avantio pour un moteur de réservation de villas\". Je peux vous aider sur la partie site.\n\nJe commencerais par clarifier la structure et les priorites, puis je peux prendre en charge la maquette, le developpement, le responsive, le SEO de depart, le domaine/DNS et la mise en ligne.\n\nQuelques exemples de mon travail: https://www.rayanstudios.com/fr\n\nSi vous avez l'URL actuelle, 2-3 references ou une contrainte de delai/budget, je peux vous repondre avec un perimetre concret et une estimation plus precise.\n\nBonne journee,\nRayan\nMission: https://www.codeur.com/projects/493044-integration-web-api-avantio-pour-un-moteur-de-reservation-de-villas"
+    },
     {
       "source": "Freelancer - remote full stack web developer",
       "sourceUrl": "https://www.freelancer.com/jobs/website-development",
@@ -431,6 +434,30 @@
       "remoteStatus": "unknown",
       "remoteReason": "teletravail non mentionne",
       "proposalDraft": "Hi,\n\nI saw your project \"E-Commerce Website Development\" and it looks close to the kind of full-stack/platform work I handle.\n\nMy strongest fit here is turning the business goal into a clean, responsive implementation with the technical setup around launch handled properly.\n\nI can help clarify the scope, then take care of the implementation, API/backend work, responsive front-end, deployment details, and clean handover.\n\nPortfolio: https://www.rayanstudios.com/fr\n\nIf you can share the current stack, priority features and timeline, I can reply with a concrete scope and estimate.\n\nBest,\nRayan\nMission: https://www.freelancer.com/projects/payment-gateway-integration/commerce-website-development-40815365"
+    },
+    {
+      "source": "Codeur - remote full stack web developer",
+      "sourceUrl": "https://www.codeur.com/projects?keywords=remote%20full%20stack%20web%20developer",
+      "platform": "codeur",
+      "searchQuery": "remote full stack web developer",
+      "remoteGuaranteed": false,
+      "title": "Finaliser site WordPress Il y a 23 heures Ouvert 500 € à 1 000 € 122 Offres 6015 Vues Suite à une surcharge d'activité, nous recherchons un freelance pour finaliser un site vitrine sous WordPress (design déjà réalisé mais ouvert à des propositions d'amélioration, thème Astra + WPBakery) : - Quelques pages à intégrer (contact, galer... WordPress Création de site internet SEO / GEO +117 Benziane Youcef Thibault Monteiro easyweb-app Adrien Lopez Websource",
+      "description": "",
+      "sourceDescription": "Découvrez les derniers projets disponibles sur Codeur.com et trouvez plus de cent nouvelles missions en freelance chaque jour.",
+      "url": "https://www.codeur.com/projects/493013-finaliser-site-wordpress",
+      "extractionMethod": "anchor",
+      "score": 95,
+      "fit": "high",
+      "reasons": [
+        "besoin site/refonte",
+        "SEO ou visibilite locale",
+        "UX, mobile ou conversion",
+        "budget mentionne"
+      ],
+      "remoteOnly": false,
+      "remoteStatus": "unknown",
+      "remoteReason": "teletravail non mentionne",
+      "proposalDraft": "Bonjour,\n\nJ'ai vu votre mission \"Finaliser site WordPress\". Je peux vous aider sur la partie site.\n\nJe commencerais par clarifier la structure et les priorites, puis je peux prendre en charge la maquette, le developpement, le responsive, le SEO de depart, le domaine/DNS et la mise en ligne.\n\nQuelques exemples de mon travail: https://www.rayanstudios.com/fr\n\nSi vous avez l'URL actuelle, 2-3 references ou une contrainte de delai/budget, je peux vous repondre avec un perimetre concret et une estimation plus precise.\n\nBonne journee,\nRayan\nMission: https://www.codeur.com/projects/493013-finaliser-site-wordpress"
     },
     {
       "source": "Freelancer - remote full stack web developer",
@@ -502,51 +529,6 @@
       "proposalDraft": "Hi,\n\nI saw your project \"WordPress E-Commerce Store Setup\" and it looks close to the kind of full-stack/platform work I handle.\n\nMy strongest fit here is turning the business goal into a clean, responsive implementation with the technical setup around launch handled properly.\n\nI can help clarify the scope, then take care of the implementation, API/backend work, responsive front-end, deployment details, and clean handover.\n\nPortfolio: https://www.rayanstudios.com/fr\n\nIf you can share the current stack, priority features and timeline, I can reply with a concrete scope and estimate.\n\nBest,\nRayan\nMission: https://www.freelancer.com/projects/woocommerce/wordpress-commerce-store-setup-40813537"
     },
     {
-      "source": "Codeur - remote full stack web developer",
-      "sourceUrl": "https://www.codeur.com/projects?keywords=remote%20full%20stack%20web%20developer",
-      "platform": "codeur",
-      "searchQuery": "remote full stack web developer",
-      "remoteGuaranteed": false,
-      "title": "Construction d'un site web pour biotech en biologie moléculaire Il y a 2 jours En cours 500 € à 1 000 € 83 Offres 7311 Vues Brief pour la création du site 4BBIOSEARCH – Hzymes Biotech Nous souhaitons créer un site web professionnel pour présenter 4BBIOSEARCH et mettre en avant les solutions de Hzymes Biotech, notamment ses réactifs et produits destinés à la recherche, ... Création de site internet Web design Site clé en main +78 Florent Bach Dan Salczer LaFactoryInc Karl Lameynardie Marina Bassano",
-      "description": "",
-      "sourceDescription": "Découvrez les derniers projets disponibles sur Codeur.com et trouvez plus de cent nouvelles missions en freelance chaque jour.",
-      "url": "https://www.codeur.com/projects/492914-construction-d-un-site-web-pour-biotech-en-biologie-moleculaire",
-      "extractionMethod": "anchor",
-      "score": 90,
-      "fit": "high",
-      "reasons": [
-        "besoin site/refonte",
-        "profil full-stack/platform",
-        "budget mentionne"
-      ],
-      "remoteOnly": false,
-      "remoteStatus": "unknown",
-      "remoteReason": "teletravail non mentionne",
-      "proposalDraft": "Bonjour,\n\nJ'ai vu votre mission \"Construction d'un site web pour biotech en biologie moléculaire En cours 500 € à 1 000 €\". Je peux vous aider sur la partie site.\n\nJe commencerais par clarifier la structure et les priorites, puis je peux prendre en charge la maquette, le developpement, le responsive, le SEO de depart, le domaine/DNS et la mise en ligne.\n\nQuelques exemples de mon travail: https://www.rayanstudios.com/fr\n\nSi vous avez l'URL actuelle, 2-3 references ou une contrainte de delai/budget, je peux vous repondre avec un perimetre concret et une estimation plus precise.\n\nBonne journee,\nRayan\nMission: https://www.codeur.com/projects/492914-construction-d-un-site-web-pour-biotech-en-biologie-moleculaire"
-    },
-    {
-      "source": "Freelancer - remote full stack web developer",
-      "sourceUrl": "https://www.freelancer.com/jobs/website-development",
-      "platform": "freelancer",
-      "searchQuery": "remote full stack web developer",
-      "remoteGuaranteed": false,
-      "title": "Migrate Emergent Website to AWS on a Sydney Server",
-      "description": "",
-      "sourceDescription": "World's largest website for Website Development Jobs. Find $$$ Website Development Jobs or hire a Website Developer to bid on your Website Development Job at Freelancer. 12m+ Jobs!",
-      "url": "https://www.freelancer.com/projects/cloud-computing/migrate-emergent-website-aws-sydney",
-      "extractionMethod": "anchor",
-      "score": 85,
-      "fit": "high",
-      "reasons": [
-        "besoin site/refonte",
-        "DevOps, CI/CD ou deploiement"
-      ],
-      "remoteOnly": false,
-      "remoteStatus": "unknown",
-      "remoteReason": "teletravail non mentionne",
-      "proposalDraft": "Hi,\n\nI saw your project \"Migrate Emergent Website to AWS on a Sydney Server\" and it looks close to the kind of full-stack/platform work I handle.\n\nMy strongest fit here is taking a web product from a clear scope to a working, maintainable implementation.\n\nI can help clarify the scope, then take care of the implementation, API/backend work, responsive front-end, deployment details, and clean handover.\n\nPortfolio: https://www.rayanstudios.com/fr\n\nIf you can share the current stack, priority features and timeline, I can reply with a concrete scope and estimate.\n\nBest,\nRayan\nMission: https://www.freelancer.com/projects/cloud-computing/migrate-emergent-website-aws-sydney"
-    },
-    {
       "source": "Freelancer - remote full stack web developer",
       "sourceUrl": "https://www.freelancer.com/jobs/website-development",
       "platform": "freelancer",
@@ -596,45 +578,45 @@
       "platform": "codeur",
       "searchQuery": "remote full stack web developer",
       "remoteGuaranteed": false,
-      "title": "Migration de mon blog overblog vers wordpress plus monétisation. Il y a 2 jours Ouvert Moins de 500 € 84 Offres 6282 Vues Bonjour, j'ai un blog OVERBLOG en formule business (23,99 par mois) (pronostiques hippiques gratuit) je publie un pronostic tous les jours depuis 2012 avec plus de 5000 pages d'archives , j'ai une audience de 44000 visiteurs par mois et plus 12000... Migration ou refonte de site WordPress SEO / GEO +79 Quentin Pollet LaFactoryInc Hervé Yvis Galo Websource",
+      "title": "Site pour une commune Il y a 9 heures Ouvert Moins de 500 € 117 Offres 2165 Vues besoin d agence de dev pour un site internet dans le rhone alpes, pour un devis gratuit a titre indicatif, prospectif pour avoir une idee du cout de la creation d un site/page internet La commune veut un site unique avec deux espaces : une vitrin... Création de site internet Site clé en main +112 Eric Theret LaFactoryInc Christiane Cicatello easyweb-app Mirai-Tech",
       "description": "",
       "sourceDescription": "Découvrez les derniers projets disponibles sur Codeur.com et trouvez plus de cent nouvelles missions en freelance chaque jour.",
-      "url": "https://www.codeur.com/projects/492905-migration-de-mon-blog-overblog-vers-wordpress-plus-monetisation",
+      "url": "https://www.codeur.com/projects/493019-site-pour-une-commune",
       "extractionMethod": "anchor",
-      "score": 80,
+      "score": 75,
       "fit": "high",
       "reasons": [
         "besoin site/refonte",
-        "SEO ou visibilite locale",
+        "UX, mobile ou conversion",
         "budget mentionne"
       ],
       "remoteOnly": false,
       "remoteStatus": "unknown",
       "remoteReason": "teletravail non mentionne",
-      "proposalDraft": "Bonjour,\n\nJ'ai vu votre mission \"Migration de mon blog overblog vers wordpress plus monétisation.\". Je peux vous aider sur la partie site.\n\nJe commencerais par clarifier la structure et les priorites, puis je peux prendre en charge la maquette, le developpement, le responsive, le SEO de depart, le domaine/DNS et la mise en ligne.\n\nQuelques exemples de mon travail: https://www.rayanstudios.com/fr\n\nSi vous avez l'URL actuelle, 2-3 references ou une contrainte de delai/budget, je peux vous repondre avec un perimetre concret et une estimation plus precise.\n\nBonne journee,\nRayan\nMission: https://www.codeur.com/projects/492905-migration-de-mon-blog-overblog-vers-wordpress-plus-monetisation"
+      "proposalDraft": "Bonjour,\n\nJ'ai vu votre mission \"Site pour une commune\". Je peux vous aider sur la partie site.\n\nJe commencerais par clarifier la structure et les priorites, puis je peux prendre en charge la maquette, le developpement, le responsive, le SEO de depart, le domaine/DNS et la mise en ligne.\n\nQuelques exemples de mon travail: https://www.rayanstudios.com/fr\n\nSi vous avez l'URL actuelle, 2-3 references ou une contrainte de delai/budget, je peux vous repondre avec un perimetre concret et une estimation plus precise.\n\nBonne journee,\nRayan\nMission: https://www.codeur.com/projects/493019-site-pour-une-commune"
     },
     {
-      "source": "404Works - remote full stack web developer",
-      "sourceUrl": "https://www.404works.com/fr/projects?search=remote%20full%20stack%20web%20developer",
-      "platform": "404works",
+      "source": "Codeur - remote full stack web developer",
+      "sourceUrl": "https://www.codeur.com/projects?keywords=remote%20full%20stack%20web%20developer",
+      "platform": "codeur",
       "searchQuery": "remote full stack web developer",
       "remoteGuaranteed": false,
-      "title": "Recherche développeur WordPress freelance – R...",
+      "title": "MVP Application Mobile Déco & Seconde Main (IA Générative / Spatial AI Il y a 1 jour Ouvert 500 € à 1 000 € 108 Offres 6145 Vues 1. Présentation du concept Je suis décoratrice d'intérieur et personal chineuse. Je souhaite développer la première version (MVP) d'une application mobile (iOS/Android ou Web App responsive PWA) permettant aux utilisateurs de projeter en quelques ... Application mobile Développement spécifique +103 Dan Salczer easyweb-app Damien Gros Karl Lameynardie Mirai-Tech",
       "description": "",
-      "sourceDescription": "Missions freelance publiées par des entreprises. Projets disponibles, échanges directs, sans commission ni frais cachés.",
-      "url": "https://www.404works.com/fr/project/recherche-developpeur-wordpress-freelance-refonte-sur-mesure-seo-et-affiliation",
+      "sourceDescription": "Découvrez les derniers projets disponibles sur Codeur.com et trouvez plus de cent nouvelles missions en freelance chaque jour.",
+      "url": "https://www.codeur.com/projects/492992-mvp-application-mobile-deco-seconde-main-ia-generative-spatial-ai",
       "extractionMethod": "anchor",
-      "score": 80,
+      "score": 75,
       "fit": "high",
       "reasons": [
         "besoin site/refonte",
-        "SEO ou visibilite locale",
+        "UX, mobile ou conversion",
         "budget mentionne"
       ],
       "remoteOnly": false,
       "remoteStatus": "unknown",
       "remoteReason": "teletravail non mentionne",
-      "proposalDraft": "Bonjour,\n\nJ'ai vu votre mission \"Recherche développeur WordPress freelance – R...\". Je peux vous aider sur la partie site.\n\nJe commencerais par clarifier la structure et les priorites, puis je peux prendre en charge la maquette, le developpement, le responsive, le SEO de depart, le domaine/DNS et la mise en ligne.\n\nQuelques exemples de mon travail: https://www.rayanstudios.com/fr\n\nSi vous avez l'URL actuelle, 2-3 references ou une contrainte de delai/budget, je peux vous repondre avec un perimetre concret et une estimation plus precise.\n\nBonne journee,\nRayan\nMission: https://www.404works.com/fr/project/recherche-developpeur-wordpress-freelance-refonte-sur-mesure-seo-et-affiliation"
+      "proposalDraft": "Hi,\n\nI saw your project \"MVP Application Mobile Déco & Seconde Main (IA Générative / Spatial AI\" and it looks close to the kind of full-stack/platform work I handle.\n\nMy strongest fit here is taking a web product from a clear scope to a working, maintainable implementation.\n\nI can help clarify the scope, then take care of the implementation, API/backend work, responsive front-end, deployment details, and clean handover.\n\nPortfolio: https://www.rayanstudios.com/fr\n\nIf you can share the current stack, priority features and timeline, I can reply with a concrete scope and estimate.\n\nBest,\nRayan\nMission: https://www.codeur.com/projects/492992-mvp-application-mobile-deco-seconde-main-ia-generative-spatial-ai"
     }
   ],
   "errors": []
