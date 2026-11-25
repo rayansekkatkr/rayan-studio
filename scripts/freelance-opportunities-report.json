@@ -1,5 +1,5 @@
 {
-  "runAt": "2026-11-24T19:28:23.686Z",
+  "runAt": "2026-11-25T18:36:16.032Z",
   "status": "no_candidates",
   "sourceMode": "default_platforms",
   "sourceCount": 18,
@@ -149,13 +149,13 @@
       "autoDiscovered": true
     }
   ],
-  "scannedOpportunities": 224,
-  "scoredCandidateCount": 65,
+  "scannedOpportunities": 230,
+  "scoredCandidateCount": 66,
   "remotePolicy": "explicit_remote_only",
-  "remoteRejectedCount": 65,
+  "remoteRejectedCount": 66,
   "remoteRejected": [
     {
-      "title": "Site web shopify Il y a 13 heures Ouvert 500 € à 1 000 € 81 Offres 2945 Vues RECHERCHE DÉVELOPPEUR SHOPIFY – SITE E-COMMERCE COSMÉTIQUE Je cherche un développeur Shopify pour créer le site de ma marque Smooth Swap (crème dépilatoire + galet en silicone). MISSION - Thème Dawn personnalisé (Liquid, CSS, JS natif), 100 % mo... Shopify Site E-commerce Création de site internet +76 LaFactoryInc ceciliadp Christophe Teissier Théo Coll Websource",
+      "title": "Site web shopify Il y a 1 jour Ouvert 500 € à 1 000 € 89 Offres 5335 Vues RECHERCHE DÉVELOPPEUR SHOPIFY – SITE E-COMMERCE COSMÉTIQUE Je cherche un développeur Shopify pour créer le site de ma marque Smooth Swap (crème dépilatoire + galet en silicone). MISSION - Thème Dawn personnalisé (Liquid, CSS, JS natif), 100 % mo... Shopify Site E-commerce Création de site internet +84 LaFactoryInc ceciliadp Christophe Teissier Théo Coll Websource",
       "url": "https://www.codeur.com/projects/493391-site-web-shopify",
       "platform": "codeur",
       "source": "Codeur - remote full stack web developer",
@@ -164,28 +164,28 @@
       "remoteReason": "teletravail non mentionne"
     },
     {
-      "title": "Création d'une boutique e-commerce professionnelle Il y a 1 jour Ouvert 500 € à 1 000 € 114 Offres 6007 Vues Bonjour, Je recherche un développeur freelance pour créer une boutique en ligne professionnelle appelée FORTUNE SHOP. Le site permettra de vendre des produits aux clients, principalement aux États-Unis et en Europe. Je souhaite avoir : - Une p... Site E-commerce Création de site internet Système de paiement +109 Yatma Gueye LaFactoryInc Pikali Christophe Teissier Fabien Berthelet",
-      "url": "https://www.codeur.com/projects/493332-creation-d-une-boutique-e-commerce-professionnelle",
+      "title": "Création d'un site internet pour une entreprise de vente automobile Il y a 7 heures Ouvert 500 € à 1 000 € 179 Offres 2825 Vues Bonjour, Nous recherchons un développeur web freelance pour la création d'un site internet professionnel spécialisé dans la vente de véhicules neufs et d'occasion. Notre objectif est de développer notre visibilité sur Internet, de présenter les ... Création de site internet Site clé en main Développement spécifique +174 Younicom Codes Castle Thierry Daudier LaFactoryInc Thibault Monteiro",
+      "url": "https://www.codeur.com/projects/493471-creation-d-un-site-internet-pour-une-entreprise-de-vente-automobile",
       "platform": "codeur",
       "source": "Codeur - remote full stack web developer",
-      "score": 100,
+      "score": 95,
       "remoteStatus": "unknown",
       "remoteReason": "teletravail non mentionne"
     },
     {
-      "title": "Site . E-commerce Il y a 1 jour Ouvert Moins de 500 € 64 Offres 4476 Vues Bonjour, Je souhaite créer un site e-commerce professionnel, moderne et attractif pour ma boutique en ligne FORTUNE SHOP. Le site devra permettre aux clients de : - Consulter facilement les différents produits. - Acheter des produits directemen... Site E-commerce Création de site internet Système de paiement +59 Quentin Pollet LaFactoryInc Thibault Monteiro Pikali Mirai-Tech",
-      "url": "https://www.codeur.com/projects/493331-site-e-commerce",
-      "platform": "codeur",
-      "source": "Codeur - remote full stack web developer",
-      "score": 100,
-      "remoteStatus": "unknown",
-      "remoteReason": "teletravail non mentionne"
-    },
-    {
-      "title": "Site vitrine 5 pages + SEO local + connexion à un ERP Il y a 5 heures Ouvert 500 € à 1 000 € 121 Offres 2190 Vues Nous cherchons un freelance pour un projet client : une entreprise de peinture en bâtiment qui vient de se lancer à Lyon. Ce qu'il faut faire : - Concevoir et intégrer un site vitrine de 5 pages, responsive et optimisé pour la performance. - Mett... Création de site internet SEO / GEO Référencement, liens +116 Anthony Da Cruz Stéphane Bieber Ambre Gravot Dan Salczer 4gency_",
+      "title": "Site vitrine 5 pages + SEO local + connexion à un ERP Il y a 1 jour Ouvert 500 € à 1 000 € 139 Offres 6182 Vues Nous cherchons un freelance pour un projet client : une entreprise de peinture en bâtiment qui vient de se lancer à Lyon. Ce qu'il faut faire : - Concevoir et intégrer un site vitrine de 5 pages, responsive et optimisé pour la performance. - Mett... Création de site internet SEO / GEO Référencement, liens +134 Anthony Da Cruz Stéphane Bieber Ambre Gravot Dan Salczer 4gency_",
       "url": "https://www.codeur.com/projects/493420-site-vitrine-5-pages-seo-local-connexion-a-un-erp",
       "platform": "codeur",
       "source": "Codeur - remote full stack web developer",
+      "score": 95,
+      "remoteStatus": "unknown",
+      "remoteReason": "teletravail non mentionne"
+    },
+    {
+      "title": "HVAC Parts E-Commerce Website Build -- 2",
+      "url": "https://www.freelancer.com/projects/php/hvac-parts-commerce-website-build",
+      "platform": "freelancer",
+      "source": "Freelancer - remote full stack web developer",
       "score": 95,
       "remoteStatus": "unknown",
       "remoteReason": "teletravail non mentionne"
@@ -209,7 +209,16 @@
       "remoteReason": "teletravail non mentionne"
     },
     {
-      "title": "Je souhaite créer une plateforme de rencontres en ligne multilingue, a Il y a 3 heures Ouvert 500 € à 1 000 € 59 Offres 1145 Vues Je souhaite créer une plateforme de rencontres en ligne multilingue, avec inscription, profils, messagerie, traduction automatique en temps réel y compris pendant la visio, et visio en direct. Merci de proposer un devis et un délai. Attention, la ... Développement spécifique Création de site internet Full-stack +54 Tom Wemmert SEREVIA Louis Schinkler Florent Neyret Karl Lameynardie",
+      "title": "Brief migration IONOS → OVHcloud Il y a 3 heures Ouvert Moins de 500 € 67 Offres 1014 Vues 1. Objectif Migrer l'ensemble de mes noms de domaine et hébergements actuellement chez IONOS vers OVHcloud, avec pour objectifs : • réduire les coûts annuels ; • centraliser les sites sur un même hébergement ; • conserver tous les sites WordPress ... Migration Migration ou refonte de site WordPress +62 Fabien Berthelet Samuel Chesnel Jaroslaw Chmielewski Titouan Renard Karl Lameynardie",
+      "url": "https://www.codeur.com/projects/493484-brief-migration-ionos-ovhcloud",
+      "platform": "codeur",
+      "source": "Codeur - remote full stack web developer",
+      "score": 90,
+      "remoteStatus": "unknown",
+      "remoteReason": "teletravail non mentionne"
+    },
+    {
+      "title": "Je souhaite créer une plateforme de rencontres en ligne multilingue, a Il y a 1 jour Ouvert 500 € à 1 000 € 81 Offres 3870 Vues Je souhaite créer une plateforme de rencontres en ligne multilingue, avec inscription, profils, messagerie, traduction automatique en temps réel y compris pendant la visio, et visio en direct. Merci de proposer un devis et un délai. Attention, la ... Développement spécifique Création de site internet Full-stack +76 Codes Castle Gabriel Genoni Tom Wemmert SEREVIA Alexandre Nicoloso",
       "url": "https://www.codeur.com/projects/493427-je-souhaite-creer-une-plateforme-de-rencontres-en-ligne-multilingue-a",
       "platform": "codeur",
       "source": "Codeur - remote full stack web developer",
@@ -218,7 +227,52 @@
       "remoteReason": "teletravail non mentionne"
     },
     {
-      "title": "Accompagnement conception site et production audio Il y a 30 minutes Ouvert Moins de 500 € 24 Offres 525 Vues Titre : Création site vitrine simple + accompagnement enregistrement et montage audio (à distance) Description : Bonjour, Je recherche un prestataire (freelance polyvalent ou binôme) pour m'accompagner à distance sur deux volets : 1. Création du s... Création de site internet Site clé en main WordPress +19 LaFactoryInc Pikali Quentin Pollet centoria_services Axel Gouet",
+      "title": "Website Refresh & Sales-Driven SEO",
+      "url": "https://www.freelancer.com/projects/conversion-rate-optimization/website-refresh-sales-driven-seo",
+      "platform": "freelancer",
+      "source": "Freelancer - remote full stack web developer",
+      "score": 90,
+      "remoteStatus": "unknown",
+      "remoteReason": "teletravail non mentionne"
+    },
+    {
+      "title": "Automate Three Business Websites",
+      "url": "https://www.freelancer.com/projects/full-stack-development/automate-three-business-websites",
+      "platform": "freelancer",
+      "source": "Freelancer - remote api integration",
+      "score": 85,
+      "remoteStatus": "unknown",
+      "remoteReason": "teletravail non mentionne"
+    },
+    {
+      "title": "Refonte complète d'un site WordPress associatif avec optimisation SEO Il y a 9 heures En cours Moins de 500 € 126 Offres 2357 Vues Description du projet Bonjour, Nous recherchons un développeur WordPress expérimenté pour la refonte complète de notre site internet associatif. L'objectif est de moderniser son design, améliorer l'expérience utilisateur et optimiser sa visibili... WordPress Migration ou refonte de site SEO / GEO +121 Websource Mohamed Khlifi LaFactoryInc akata_goavana Olivier Dury",
+      "url": "https://www.codeur.com/projects/493460-refonte-complete-d-un-site-wordpress-associatif-avec-optimisation-seo",
+      "platform": "codeur",
+      "source": "Codeur - remote full stack web developer",
+      "score": 80,
+      "remoteStatus": "unknown",
+      "remoteReason": "teletravail non mentionne"
+    },
+    {
+      "title": "Création de site web Il y a 10 heures Ouvert Moins de 500 € 170 Offres 2904 Vues Bonjour, je suis à la recherche d'une personne. Pouvez-vous me faire un site pour mon entreprise de maçonnerie ? Ce que j'aimerais, c'est un site one page avec un référencement sur ma ville. Vous vous occupez du copywriting, et je m'occupe de vou... Création de site internet +165 ERALION Websource Quentin Pollet LaFactoryInc Olivier Dury",
+      "url": "https://www.codeur.com/projects/493459-creation-de-site-web",
+      "platform": "codeur",
+      "source": "Codeur - remote full stack web developer",
+      "score": 80,
+      "remoteStatus": "unknown",
+      "remoteReason": "teletravail non mentionne"
+    },
+    {
+      "title": "Web app de mise en relation Pro BTP & Particuliers Il y a un mois Ouvert 1 000 € à 10 000 € 209 Offres 20111 Vues J'ai un projet entrepreneurial de mise en relation de professionnels du BTP/réparation/rénovation et de particuliers à Mayotte. Mon objectif est d'en développer la Web app, qui permettrait de réceptionner les demandes de \"travaux\" des particuliers... Marketplace Développement spécifique Création de site internet +204 Dan Salczer centoria_services JUNR Akrem Baroudi Sanchuthan Jeyarajah",
+      "url": "https://www.codeur.com/projects/491361-web-app-de-mise-en-relation-pro-btp-particuliers",
+      "platform": "codeur",
+      "source": "Codeur - remote full stack web developer",
+      "score": 75,
+      "remoteStatus": "unknown",
+      "remoteReason": "teletravail non mentionne"
+    },
+    {
+      "title": "Accompagnement conception site et production audio Il y a 24 heures Ouvert Moins de 500 € 60 Offres 4540 Vues Titre : Création site vitrine simple + accompagnement enregistrement et montage audio (à distance) Description : Bonjour, Je recherche un prestataire (freelance polyvalent ou binôme) pour m'accompagner à distance sur deux volets : 1. Création du s... Création de site internet Site clé en main WordPress +55 LaFactoryInc Pikali Mirai-Tech Websource Quentin Pollet",
       "url": "https://www.codeur.com/projects/493441-accompagnement-conception-site-et-production-audio",
       "platform": "codeur",
       "source": "Codeur - remote full stack web developer",
@@ -227,31 +281,13 @@
       "remoteReason": "mention sur site ou presentiel"
     },
     {
-      "title": "Webdesigner pour activité architecture d'interieur Il y a 3 heures Ouvert 500 € à 1 000 € 80 Offres 1281 Vues Je suis à la recherche d'un webdesigner freelance pour la création complète de mon site internet dédié à mon activité d'architecture intérieure. Je souhaite créer un site WordPress avec un univers visuel chaleureux, naturel, élégant et authentique... Web design WordPress Création de site internet +75 Ambre Gravot Paul Martinez LaFactoryInc Tom Wemmert Arvan Tadevossian",
+      "title": "Webdesigner pour activité architecture d'interieur Il y a 1 jour Ouvert 500 € à 1 000 € 120 Offres 4919 Vues Je suis à la recherche d'un webdesigner freelance pour la création complète de mon site internet dédié à mon activité d'architecture intérieure. Je souhaite créer un site WordPress avec un univers visuel chaleureux, naturel, élégant et authentique... Web design WordPress Création de site internet +115 Codes Castle Fabrice Rousseau Ambre Gravot Paul Martinez LaFactoryInc",
       "url": "https://www.codeur.com/projects/493430-webdesigner-pour-activite-architecture-d-interieur",
       "platform": "codeur",
       "source": "Codeur - remote full stack web developer",
       "score": 75,
       "remoteStatus": "onsite",
       "remoteReason": "mention sur site ou presentiel"
-    },
-    {
-      "title": "Création d'un site vitrine Il y a 1 jour Ouvert Moins de 500 € 178 Offres 4793 Vues Bonjour, Je cherche un prestataire pour la création d'un site vitrine pour mon activité de location de logement je veux pas de reservation en ligne je prend les reservations en direct, je veux juste un site qui présente mon hébergmeent et affich... Création de site internet Site clé en main Landing page +173 Eric Theret LaFactoryInc SolutionsDev Boris Delprat Mirai-Tech",
-      "url": "https://www.codeur.com/projects/493365-makenna-kihn-abs-lat",
-      "platform": "codeur",
-      "source": "Codeur - remote full stack web developer",
-      "score": 75,
-      "remoteStatus": "unknown",
-      "remoteReason": "teletravail non mentionne"
-    },
-    {
-      "title": "Création d'un site internet pour une boutique de cosmétiques à Paris Il y a 1 jour Ouvert 500 € à 1 000 € 178 Offres 5396 Vues Bonjour, Nous recherchons un développeur web ou une agence pour la création d'un site internet professionnel destiné à notre boutique physique de produits cosmétiques située à Paris. L'objectif est de développer notre présence en ligne, de mettr... Création de site internet Web design Site clé en main +173 Germain Fardoux Thierry Daudier Dan Salczer LaFactoryInc Mirai-Tech",
-      "url": "https://www.codeur.com/projects/493346-creation-d-un-site-internet-pour-une-boutique-de-cosmetiques-a-paris",
-      "platform": "codeur",
-      "source": "Codeur - remote full stack web developer",
-      "score": 75,
-      "remoteStatus": "unknown",
-      "remoteReason": "teletravail non mentionne"
     },
     {
       "title": "SEO & Growth Marketing Specialist &ndash; North American Matchmaking Website",
@@ -281,56 +317,20 @@
       "remoteReason": "teletravail non mentionne"
     },
     {
+      "title": "Implement G-SEO on Your Website",
+      "url": "https://www.freelancer.com/projects/web-development/implement-seo-your-website",
+      "platform": "freelancer",
+      "source": "Freelancer - remote devops deployment",
+      "score": 75,
+      "remoteStatus": "unknown",
+      "remoteReason": "teletravail non mentionne"
+    },
+    {
       "title": "WordPress Site Management & SEO",
       "url": "https://www.freelancer.com/projects/website-management/wordpress-site-management-seo",
       "platform": "freelancer",
       "source": "Freelancer - remote devops deployment",
       "score": 75,
-      "remoteStatus": "unknown",
-      "remoteReason": "teletravail non mentionne"
-    },
-    {
-      "title": "WordPress Speed Optimization",
-      "url": "https://www.freelancer.com/projects/google-website-optimizer/wordpress-speed-optimization-40824795",
-      "platform": "freelancer",
-      "source": "Freelancer - remote devops deployment",
-      "score": 75,
-      "remoteStatus": "unknown",
-      "remoteReason": "teletravail non mentionne"
-    },
-    {
-      "title": "Template to WordPress Conversion",
-      "url": "https://www.freelancer.com/projects/elementor/template-wordpress-conversion",
-      "platform": "freelancer",
-      "source": "Freelancer - remote full stack web developer",
-      "score": 70,
-      "remoteStatus": "unknown",
-      "remoteReason": "teletravail non mentionne"
-    },
-    {
-      "title": "Responsive Business Website Design Build",
-      "url": "https://www.freelancer.com/projects/web-development/responsive-business-website-design-build",
-      "platform": "freelancer",
-      "source": "Freelancer - remote devops deployment",
-      "score": 70,
-      "remoteStatus": "unknown",
-      "remoteReason": "teletravail non mentionne"
-    },
-    {
-      "title": "Website and WooCommerce help.",
-      "url": "https://www.freelancer.com/projects/website-development/website-woocommerce-help",
-      "platform": "freelancer",
-      "source": "Freelancer - remote full stack web developer",
-      "score": 65,
-      "remoteStatus": "unknown",
-      "remoteReason": "teletravail non mentionne"
-    },
-    {
-      "title": "Urgent Website Error Fix",
-      "url": "https://www.freelancer.com/projects/website-development/urgent-website-error-fix",
-      "platform": "freelancer",
-      "source": "Freelancer - remote full stack web developer",
-      "score": 65,
       "remoteStatus": "unknown",
       "remoteReason": "teletravail non mentionne"
     }
@@ -370,7 +370,7 @@
       "platform": "codeur",
       "searchQuery": "remote full stack web developer",
       "remoteGuaranteed": false,
-      "title": "Site web shopify Il y a 13 heures Ouvert 500 € à 1 000 € 81 Offres 2945 Vues RECHERCHE DÉVELOPPEUR SHOPIFY – SITE E-COMMERCE COSMÉTIQUE Je cherche un développeur Shopify pour créer le site de ma marque Smooth Swap (crème dépilatoire + galet en silicone). MISSION - Thème Dawn personnalisé (Liquid, CSS, JS natif), 100 % mo... Shopify Site E-commerce Création de site internet +76 LaFactoryInc ceciliadp Christophe Teissier Théo Coll Websource",
+      "title": "Site web shopify Il y a 1 jour Ouvert 500 € à 1 000 € 89 Offres 5335 Vues RECHERCHE DÉVELOPPEUR SHOPIFY – SITE E-COMMERCE COSMÉTIQUE Je cherche un développeur Shopify pour créer le site de ma marque Smooth Swap (crème dépilatoire + galet en silicone). MISSION - Thème Dawn personnalisé (Liquid, CSS, JS natif), 100 % mo... Shopify Site E-commerce Création de site internet +84 LaFactoryInc ceciliadp Christophe Teissier Théo Coll Websource",
       "description": "",
       "sourceDescription": "Découvrez les derniers projets disponibles sur Codeur.com et trouvez plus de cent nouvelles missions en freelance chaque jour.",
       "url": "https://www.codeur.com/projects/493391-site-web-shopify",
@@ -394,25 +394,23 @@
       "platform": "codeur",
       "searchQuery": "remote full stack web developer",
       "remoteGuaranteed": false,
-      "title": "Création d'une boutique e-commerce professionnelle Il y a 1 jour Ouvert 500 € à 1 000 € 114 Offres 6007 Vues Bonjour, Je recherche un développeur freelance pour créer une boutique en ligne professionnelle appelée FORTUNE SHOP. Le site permettra de vendre des produits aux clients, principalement aux États-Unis et en Europe. Je souhaite avoir : - Une p... Site E-commerce Création de site internet Système de paiement +109 Yatma Gueye LaFactoryInc Pikali Christophe Teissier Fabien Berthelet",
+      "title": "Création d'un site internet pour une entreprise de vente automobile Il y a 7 heures Ouvert 500 € à 1 000 € 179 Offres 2825 Vues Bonjour, Nous recherchons un développeur web freelance pour la création d'un site internet professionnel spécialisé dans la vente de véhicules neufs et d'occasion. Notre objectif est de développer notre visibilité sur Internet, de présenter les ... Création de site internet Site clé en main Développement spécifique +174 Younicom Codes Castle Thierry Daudier LaFactoryInc Thibault Monteiro",
       "description": "",
       "sourceDescription": "Découvrez les derniers projets disponibles sur Codeur.com et trouvez plus de cent nouvelles missions en freelance chaque jour.",
-      "url": "https://www.codeur.com/projects/493332-creation-d-une-boutique-e-commerce-professionnelle",
+      "url": "https://www.codeur.com/projects/493471-creation-d-un-site-internet-pour-une-entreprise-de-vente-automobile",
       "extractionMethod": "anchor",
-      "score": 100,
+      "score": 95,
       "fit": "high",
       "reasons": [
         "besoin site/refonte",
-        "profil full-stack/platform",
-        "automation, paiement ou integration",
+        "SEO ou visibilite locale",
         "UX, mobile ou conversion",
-        "profil TPE/local",
         "budget mentionne"
       ],
       "remoteOnly": false,
       "remoteStatus": "unknown",
       "remoteReason": "teletravail non mentionne",
-      "proposalDraft": "Bonjour,\n\nJ'ai vu votre mission \"Création d'une boutique e-commerce professionnelle\". Je peux vous aider sur la partie site.\n\nJe commencerais par clarifier la structure et les priorites, puis je peux prendre en charge la maquette, le developpement, le responsive, le SEO de depart, le domaine/DNS et la mise en ligne.\n\nQuelques exemples de mon travail: https://www.rayanstudios.com/fr\n\nSi vous avez l'URL actuelle, 2-3 references ou une contrainte de delai/budget, je peux vous repondre avec un perimetre concret et une estimation plus precise.\n\nBonne journee,\nRayan\nMission: https://www.codeur.com/projects/493332-creation-d-une-boutique-e-commerce-professionnelle"
+      "proposalDraft": "Bonjour,\n\nJ'ai vu votre mission \"Création d'un site internet pour une entreprise de vente automobile\". Je peux vous aider sur la partie site.\n\nJe commencerais par clarifier la structure et les priorites, puis je peux prendre en charge la maquette, le developpement, le responsive, le SEO de depart, le domaine/DNS et la mise en ligne.\n\nQuelques exemples de mon travail: https://www.rayanstudios.com/fr\n\nSi vous avez l'URL actuelle, 2-3 references ou une contrainte de delai/budget, je peux vous repondre avec un perimetre concret et une estimation plus precise.\n\nBonne journee,\nRayan\nMission: https://www.codeur.com/projects/493471-creation-d-un-site-internet-pour-une-entreprise-de-vente-automobile"
     },
     {
       "source": "Codeur - remote full stack web developer",
@@ -420,33 +418,7 @@
       "platform": "codeur",
       "searchQuery": "remote full stack web developer",
       "remoteGuaranteed": false,
-      "title": "Site . E-commerce Il y a 1 jour Ouvert Moins de 500 € 64 Offres 4476 Vues Bonjour, Je souhaite créer un site e-commerce professionnel, moderne et attractif pour ma boutique en ligne FORTUNE SHOP. Le site devra permettre aux clients de : - Consulter facilement les différents produits. - Acheter des produits directemen... Site E-commerce Création de site internet Système de paiement +59 Quentin Pollet LaFactoryInc Thibault Monteiro Pikali Mirai-Tech",
-      "description": "",
-      "sourceDescription": "Découvrez les derniers projets disponibles sur Codeur.com et trouvez plus de cent nouvelles missions en freelance chaque jour.",
-      "url": "https://www.codeur.com/projects/493331-site-e-commerce",
-      "extractionMethod": "anchor",
-      "score": 100,
-      "fit": "high",
-      "reasons": [
-        "besoin site/refonte",
-        "profil full-stack/platform",
-        "automation, paiement ou integration",
-        "UX, mobile ou conversion",
-        "profil TPE/local",
-        "budget mentionne"
-      ],
-      "remoteOnly": false,
-      "remoteStatus": "unknown",
-      "remoteReason": "teletravail non mentionne",
-      "proposalDraft": "Bonjour,\n\nJ'ai vu votre mission \"Site . E-commerce\". Je peux vous aider sur la partie site.\n\nJe commencerais par clarifier la structure et les priorites, puis je peux prendre en charge la maquette, le developpement, le responsive, le SEO de depart, le domaine/DNS et la mise en ligne.\n\nQuelques exemples de mon travail: https://www.rayanstudios.com/fr\n\nSi vous avez l'URL actuelle, 2-3 references ou une contrainte de delai/budget, je peux vous repondre avec un perimetre concret et une estimation plus precise.\n\nBonne journee,\nRayan\nMission: https://www.codeur.com/projects/493331-site-e-commerce"
-    },
-    {
-      "source": "Codeur - remote full stack web developer",
-      "sourceUrl": "https://www.codeur.com/projects?keywords=remote%20full%20stack%20web%20developer",
-      "platform": "codeur",
-      "searchQuery": "remote full stack web developer",
-      "remoteGuaranteed": false,
-      "title": "Site vitrine 5 pages + SEO local + connexion à un ERP Il y a 5 heures Ouvert 500 € à 1 000 € 121 Offres 2190 Vues Nous cherchons un freelance pour un projet client : une entreprise de peinture en bâtiment qui vient de se lancer à Lyon. Ce qu'il faut faire : - Concevoir et intégrer un site vitrine de 5 pages, responsive et optimisé pour la performance. - Mett... Création de site internet SEO / GEO Référencement, liens +116 Anthony Da Cruz Stéphane Bieber Ambre Gravot Dan Salczer 4gency_",
+      "title": "Site vitrine 5 pages + SEO local + connexion à un ERP Il y a 1 jour Ouvert 500 € à 1 000 € 139 Offres 6182 Vues Nous cherchons un freelance pour un projet client : une entreprise de peinture en bâtiment qui vient de se lancer à Lyon. Ce qu'il faut faire : - Concevoir et intégrer un site vitrine de 5 pages, responsive et optimisé pour la performance. - Mett... Création de site internet SEO / GEO Référencement, liens +134 Anthony Da Cruz Stéphane Bieber Ambre Gravot Dan Salczer 4gency_",
       "description": "",
       "sourceDescription": "Découvrez les derniers projets disponibles sur Codeur.com et trouvez plus de cent nouvelles missions en freelance chaque jour.",
       "url": "https://www.codeur.com/projects/493420-site-vitrine-5-pages-seo-local-connexion-a-un-erp",
@@ -463,6 +435,29 @@
       "remoteStatus": "unknown",
       "remoteReason": "teletravail non mentionne",
       "proposalDraft": "Bonjour,\n\nJ'ai vu votre mission \"Site vitrine 5 pages + SEO local + connexion à un ERP\". Je peux vous aider sur la partie site.\n\nJe commencerais par clarifier la structure et les priorites, puis je peux prendre en charge la maquette, le developpement, le responsive, le SEO de depart, le domaine/DNS et la mise en ligne.\n\nQuelques exemples de mon travail: https://www.rayanstudios.com/fr\n\nSi vous avez l'URL actuelle, 2-3 references ou une contrainte de delai/budget, je peux vous repondre avec un perimetre concret et une estimation plus precise.\n\nBonne journee,\nRayan\nMission: https://www.codeur.com/projects/493420-site-vitrine-5-pages-seo-local-connexion-a-un-erp"
+    },
+    {
+      "source": "Freelancer - remote full stack web developer",
+      "sourceUrl": "https://www.freelancer.com/jobs/website-development",
+      "platform": "freelancer",
+      "searchQuery": "remote full stack web developer",
+      "remoteGuaranteed": false,
+      "title": "HVAC Parts E-Commerce Website Build -- 2",
+      "description": "",
+      "sourceDescription": "World's largest website for Website Development Jobs. Find $$$ Website Development Jobs or hire a Website Developer to bid on your Website Development Job at Freelancer. 12m+ Jobs!",
+      "url": "https://www.freelancer.com/projects/php/hvac-parts-commerce-website-build",
+      "extractionMethod": "anchor",
+      "score": 95,
+      "fit": "high",
+      "reasons": [
+        "besoin site/refonte",
+        "profil full-stack/platform",
+        "profil TPE/local"
+      ],
+      "remoteOnly": false,
+      "remoteStatus": "unknown",
+      "remoteReason": "teletravail non mentionne",
+      "proposalDraft": "Hi,\n\nI saw your project \"HVAC Parts E-Commerce Website Build -- 2\" and it looks close to the kind of full-stack/platform work I handle.\n\nMy strongest fit here is turning the business goal into a clean, responsive implementation with the technical setup around launch handled properly.\n\nI can help clarify the scope, then take care of the implementation, API/backend work, responsive front-end, deployment details, and clean handover.\n\nPortfolio: https://www.rayanstudios.com/fr\n\nIf you can share the current stack, priority features and timeline, I can reply with a concrete scope and estimate.\n\nBest,\nRayan\nMission: https://www.freelancer.com/projects/php/hvac-parts-commerce-website-build"
     },
     {
       "source": "Freelancer - remote full stack web developer",
@@ -516,7 +511,30 @@
       "platform": "codeur",
       "searchQuery": "remote full stack web developer",
       "remoteGuaranteed": false,
-      "title": "Je souhaite créer une plateforme de rencontres en ligne multilingue, a Il y a 3 heures Ouvert 500 € à 1 000 € 59 Offres 1145 Vues Je souhaite créer une plateforme de rencontres en ligne multilingue, avec inscription, profils, messagerie, traduction automatique en temps réel y compris pendant la visio, et visio en direct. Merci de proposer un devis et un délai. Attention, la ... Développement spécifique Création de site internet Full-stack +54 Tom Wemmert SEREVIA Louis Schinkler Florent Neyret Karl Lameynardie",
+      "title": "Brief migration IONOS → OVHcloud Il y a 3 heures Ouvert Moins de 500 € 67 Offres 1014 Vues 1. Objectif Migrer l'ensemble de mes noms de domaine et hébergements actuellement chez IONOS vers OVHcloud, avec pour objectifs : • réduire les coûts annuels ; • centraliser les sites sur un même hébergement ; • conserver tous les sites WordPress ... Migration Migration ou refonte de site WordPress +62 Fabien Berthelet Samuel Chesnel Jaroslaw Chmielewski Titouan Renard Karl Lameynardie",
+      "description": "",
+      "sourceDescription": "Découvrez les derniers projets disponibles sur Codeur.com et trouvez plus de cent nouvelles missions en freelance chaque jour.",
+      "url": "https://www.codeur.com/projects/493484-brief-migration-ionos-ovhcloud",
+      "extractionMethod": "anchor",
+      "score": 90,
+      "fit": "high",
+      "reasons": [
+        "besoin site/refonte",
+        "DevOps, CI/CD ou deploiement",
+        "budget mentionne"
+      ],
+      "remoteOnly": false,
+      "remoteStatus": "unknown",
+      "remoteReason": "teletravail non mentionne",
+      "proposalDraft": "Bonjour,\n\nJ'ai vu votre mission \"Brief migration IONOS → OVHcloud\". Je peux vous aider sur la partie site.\n\nJe commencerais par clarifier la structure et les priorites, puis je peux prendre en charge la maquette, le developpement, le responsive, le SEO de depart, le domaine/DNS et la mise en ligne.\n\nQuelques exemples de mon travail: https://www.rayanstudios.com/fr\n\nSi vous avez l'URL actuelle, 2-3 references ou une contrainte de delai/budget, je peux vous repondre avec un perimetre concret et une estimation plus precise.\n\nBonne journee,\nRayan\nMission: https://www.codeur.com/projects/493484-brief-migration-ionos-ovhcloud"
+    },
+    {
+      "source": "Codeur - remote full stack web developer",
+      "sourceUrl": "https://www.codeur.com/projects?keywords=remote%20full%20stack%20web%20developer",
+      "platform": "codeur",
+      "searchQuery": "remote full stack web developer",
+      "remoteGuaranteed": false,
+      "title": "Je souhaite créer une plateforme de rencontres en ligne multilingue, a Il y a 1 jour Ouvert 500 € à 1 000 € 81 Offres 3870 Vues Je souhaite créer une plateforme de rencontres en ligne multilingue, avec inscription, profils, messagerie, traduction automatique en temps réel y compris pendant la visio, et visio en direct. Merci de proposer un devis et un délai. Attention, la ... Développement spécifique Création de site internet Full-stack +76 Codes Castle Gabriel Genoni Tom Wemmert SEREVIA Alexandre Nicoloso",
       "description": "",
       "sourceDescription": "Découvrez les derniers projets disponibles sur Codeur.com et trouvez plus de cent nouvelles missions en freelance chaque jour.",
       "url": "https://www.codeur.com/projects/493427-je-souhaite-creer-une-plateforme-de-rencontres-en-ligne-multilingue-a",
@@ -534,72 +552,49 @@
       "proposalDraft": "Bonjour,\n\nJ'ai vu votre mission \"Je souhaite créer une plateforme de rencontres en ligne multilingue, a\". Je peux vous aider sur la partie site.\n\nJe commencerais par clarifier la structure et les priorites, puis je peux prendre en charge la maquette, le developpement, le responsive, le SEO de depart, le domaine/DNS et la mise en ligne.\n\nQuelques exemples de mon travail: https://www.rayanstudios.com/fr\n\nSi vous avez l'URL actuelle, 2-3 references ou une contrainte de delai/budget, je peux vous repondre avec un perimetre concret et une estimation plus precise.\n\nBonne journee,\nRayan\nMission: https://www.codeur.com/projects/493427-je-souhaite-creer-une-plateforme-de-rencontres-en-ligne-multilingue-a"
     },
     {
-      "source": "Codeur - remote full stack web developer",
-      "sourceUrl": "https://www.codeur.com/projects?keywords=remote%20full%20stack%20web%20developer",
-      "platform": "codeur",
-      "searchQuery": "remote full stack web developer",
-      "remoteGuaranteed": false,
-      "title": "Création d'un site vitrine Il y a 1 jour Ouvert Moins de 500 € 178 Offres 4793 Vues Bonjour, Je cherche un prestataire pour la création d'un site vitrine pour mon activité de location de logement je veux pas de reservation en ligne je prend les reservations en direct, je veux juste un site qui présente mon hébergmeent et affich... Création de site internet Site clé en main Landing page +173 Eric Theret LaFactoryInc SolutionsDev Boris Delprat Mirai-Tech",
-      "description": "",
-      "sourceDescription": "Découvrez les derniers projets disponibles sur Codeur.com et trouvez plus de cent nouvelles missions en freelance chaque jour.",
-      "url": "https://www.codeur.com/projects/493365-makenna-kihn-abs-lat",
-      "extractionMethod": "anchor",
-      "score": 75,
-      "fit": "high",
-      "reasons": [
-        "besoin site/refonte",
-        "UX, mobile ou conversion",
-        "budget mentionne"
-      ],
-      "remoteOnly": false,
-      "remoteStatus": "unknown",
-      "remoteReason": "teletravail non mentionne",
-      "proposalDraft": "Bonjour,\n\nJ'ai vu votre mission \"Création d'un site vitrine\". Je peux vous aider sur la partie site.\n\nJe commencerais par clarifier la structure et les priorites, puis je peux prendre en charge la maquette, le developpement, le responsive, le SEO de depart, le domaine/DNS et la mise en ligne.\n\nQuelques exemples de mon travail: https://www.rayanstudios.com/fr\n\nSi vous avez l'URL actuelle, 2-3 references ou une contrainte de delai/budget, je peux vous repondre avec un perimetre concret et une estimation plus precise.\n\nBonne journee,\nRayan\nMission: https://www.codeur.com/projects/493365-makenna-kihn-abs-lat"
-    },
-    {
-      "source": "Codeur - remote full stack web developer",
-      "sourceUrl": "https://www.codeur.com/projects?keywords=remote%20full%20stack%20web%20developer",
-      "platform": "codeur",
-      "searchQuery": "remote full stack web developer",
-      "remoteGuaranteed": false,
-      "title": "Création d'un site internet pour une boutique de cosmétiques à Paris Il y a 1 jour Ouvert 500 € à 1 000 € 178 Offres 5396 Vues Bonjour, Nous recherchons un développeur web ou une agence pour la création d'un site internet professionnel destiné à notre boutique physique de produits cosmétiques située à Paris. L'objectif est de développer notre présence en ligne, de mettr... Création de site internet Web design Site clé en main +173 Germain Fardoux Thierry Daudier Dan Salczer LaFactoryInc Mirai-Tech",
-      "description": "",
-      "sourceDescription": "Découvrez les derniers projets disponibles sur Codeur.com et trouvez plus de cent nouvelles missions en freelance chaque jour.",
-      "url": "https://www.codeur.com/projects/493346-creation-d-un-site-internet-pour-une-boutique-de-cosmetiques-a-paris",
-      "extractionMethod": "anchor",
-      "score": 75,
-      "fit": "high",
-      "reasons": [
-        "besoin site/refonte",
-        "UX, mobile ou conversion",
-        "budget mentionne"
-      ],
-      "remoteOnly": false,
-      "remoteStatus": "unknown",
-      "remoteReason": "teletravail non mentionne",
-      "proposalDraft": "Bonjour,\n\nJ'ai vu votre mission \"Création d'un site internet pour une boutique de cosmétiques à Paris\". Je peux vous aider sur la partie site.\n\nJe commencerais par clarifier la structure et les priorites, puis je peux prendre en charge la maquette, le developpement, le responsive, le SEO de depart, le domaine/DNS et la mise en ligne.\n\nQuelques exemples de mon travail: https://www.rayanstudios.com/fr\n\nSi vous avez l'URL actuelle, 2-3 references ou une contrainte de delai/budget, je peux vous repondre avec un perimetre concret et une estimation plus precise.\n\nBonne journee,\nRayan\nMission: https://www.codeur.com/projects/493346-creation-d-un-site-internet-pour-une-boutique-de-cosmetiques-a-paris"
-    },
-    {
       "source": "Freelancer - remote full stack web developer",
       "sourceUrl": "https://www.freelancer.com/jobs/website-development",
       "platform": "freelancer",
       "searchQuery": "remote full stack web developer",
       "remoteGuaranteed": false,
-      "title": "SEO & Growth Marketing Specialist &ndash; North American Matchmaking Website",
+      "title": "Website Refresh & Sales-Driven SEO",
       "description": "",
       "sourceDescription": "World's largest website for Website Development Jobs. Find $$$ Website Development Jobs or hire a Website Developer to bid on your Website Development Job at Freelancer. 12m+ Jobs!",
-      "url": "https://www.freelancer.com/projects/seo/seo-growth-marketing-specialist-north",
+      "url": "https://www.freelancer.com/projects/conversion-rate-optimization/website-refresh-sales-driven-seo",
       "extractionMethod": "anchor",
-      "score": 75,
+      "score": 90,
       "fit": "high",
       "reasons": [
         "besoin site/refonte",
-        "SEO ou visibilite locale"
+        "SEO ou visibilite locale",
+        "UX, mobile ou conversion"
       ],
       "remoteOnly": false,
       "remoteStatus": "unknown",
       "remoteReason": "teletravail non mentionne",
-      "proposalDraft": "Hi,\n\nI saw your project \"SEO & Growth Marketing Specialist &ndash; North American Matchmaking Website\" and it looks close to the kind of full-stack/platform work I handle.\n\nMy strongest fit here is taking a web product from a clear scope to a working, maintainable implementation.\n\nI can help clarify the scope, then take care of the implementation, API/backend work, responsive front-end, deployment details, and clean handover.\n\nPortfolio: https://www.rayanstudios.com/fr\n\nIf you can share the current stack, priority features and timeline, I can reply with a concrete scope and estimate.\n\nBest,\nRayan\nMission: https://www.freelancer.com/projects/seo/seo-growth-marketing-specialist-north"
+      "proposalDraft": "Hi,\n\nI saw your project \"Website Refresh & Sales-Driven SEO\" and it looks close to the kind of full-stack/platform work I handle.\n\nMy strongest fit here is taking a web product from a clear scope to a working, maintainable implementation.\n\nI can help clarify the scope, then take care of the implementation, API/backend work, responsive front-end, deployment details, and clean handover.\n\nPortfolio: https://www.rayanstudios.com/fr\n\nIf you can share the current stack, priority features and timeline, I can reply with a concrete scope and estimate.\n\nBest,\nRayan\nMission: https://www.freelancer.com/projects/conversion-rate-optimization/website-refresh-sales-driven-seo"
+    },
+    {
+      "source": "Freelancer - remote api integration",
+      "sourceUrl": "https://www.freelancer.com/jobs/website-development",
+      "platform": "freelancer",
+      "searchQuery": "remote api integration",
+      "remoteGuaranteed": false,
+      "title": "Automate Three Business Websites",
+      "description": "",
+      "sourceDescription": "World's largest website for Website Development Jobs. Find $$$ Website Development Jobs or hire a Website Developer to bid on your Website Development Job at Freelancer. 12m+ Jobs!",
+      "url": "https://www.freelancer.com/projects/full-stack-development/automate-three-business-websites",
+      "extractionMethod": "anchor",
+      "score": 85,
+      "fit": "high",
+      "reasons": [
+        "besoin site/refonte",
+        "profil full-stack/platform"
+      ],
+      "remoteOnly": false,
+      "remoteStatus": "unknown",
+      "remoteReason": "teletravail non mentionne",
+      "proposalDraft": "Hi,\n\nI saw your project \"Automate Three Business Websites\" and it looks close to the kind of full-stack/platform work I handle.\n\nMy strongest fit here is taking a web product from a clear scope to a working, maintainable implementation.\n\nI can help clarify the scope, then take care of the implementation, API/backend work, responsive front-end, deployment details, and clean handover.\n\nPortfolio: https://www.rayanstudios.com/fr\n\nIf you can share the current stack, priority features and timeline, I can reply with a concrete scope and estimate.\n\nBest,\nRayan\nMission: https://www.freelancer.com/projects/full-stack-development/automate-three-business-websites"
     }
   ],
   "errors": []
